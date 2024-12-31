@@ -1,20 +1,20 @@
 PODS:
   - iOS-Slide-Menu (1.5)
-  - TTTAttributedLabel (1.13.4)
+  - TTTAttributedLabel (2.0.0)
 
 DEPENDENCIES:
   - iOS-Slide-Menu (= 1.5)
-  - TTTAttributedLabel (= 1.13.4)
+  - TTTAttributedLabel (= 2.0.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - iOS-Slide-Menu
     - TTTAttributedLabel
 
 SPEC CHECKSUMS:
   iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
-  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: a96e117e1aaa391f610246538f50bb4b001f09d0
+PODFILE CHECKSUM: e3a9e8d7f41ba6e52963b114f410b302309e0142
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.15.2

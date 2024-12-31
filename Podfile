@@ -1,6 +1,6 @@
-platform :ios, "8.0"
+platform :ios, "12.0"
 use_frameworks!
 
 target 'PoshReVo'
 pod 'iOS-Slide-Menu', '= 1.5'
-pod 'TTTAttributedLabel', '= 1.13.4'
+pod 'TTTAttributedLabel', '= 2.0.0'

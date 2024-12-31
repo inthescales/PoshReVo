@@ -1,5 +1,4 @@
-ruby '2.5.0'
+ruby '3.4.1'
 
 source 'https://rubygems.org'
-gem 'nokogiri', '~> 1.10.9'
 gem 'fastlane'
