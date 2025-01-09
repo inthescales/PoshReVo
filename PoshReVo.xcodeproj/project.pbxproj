@@ -86,6 +86,13 @@
 			remoteGlobalIDString = 000985961C31F0CB0083DE24;
 			remoteInfo = PoshReVo;
 		};
+		0049F3372D2F4A8F002ABBFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0049F3332D2F4A8F002ABBFE /* DatumbazFarilo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00BE1AD42D24B7450027BC22;
+			remoteInfo = DatumbazFarilo;
+		};
 		00A2522524606724000759B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0009858F1C31F0CB0083DE24 /* Project object */;
@@ -123,6 +130,7 @@
 		0041F8BC245CC86300254EA0 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		00477A6F227654B700515416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 		0049B22824B160B000B81E15 /* ReVoModeloj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModeloj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0049F3332D2F4A8F002ABBFE /* DatumbazFarilo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DatumbazFarilo.xcodeproj; path = DatumbazFarilo/DatumbazFarilo.xcodeproj; sourceTree = "<group>"; };
 		00700AD4231C59150075A077 /* FakVortoListoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakVortoListoTableViewController.swift; sourceTree = "<group>"; };
 		00848910226385200071CEC2 /* UzantDatumaro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UzantDatumaro.swift; sourceTree = "<group>"; };
 		00848911226385200071CEC2 /* Stiloj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stiloj.swift; sourceTree = "<group>"; };
@@ -272,6 +280,7 @@
 		0009858E1C31F0CB0083DE24 = {
 			isa = PBXGroup;
 			children = (
+				0049F3332D2F4A8F002ABBFE /* DatumbazFarilo.xcodeproj */,
 				0084890D226385200071CEC2 /* PoshReVo */,
 				00A2522124606724000759B9 /* PoshReVoUnuopTestoj */,
 				0041F8B3245CC81A00254EA0 /* PoshReVoEkranKopiilo */,
@@ -322,6 +331,14 @@
 				00848930226385200071CEC2 /* Assets.xcassets */,
 			);
 			path = Risurcoj;
+			sourceTree = "<group>";
+		};
+		0049F3342D2F4A8F002ABBFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0049F3382D2F4A8F002ABBFE /* DatumbazFarilo */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		0084890D226385200071CEC2 /* PoshReVo */ = {
@@ -605,6 +622,12 @@
 			mainGroup = 0009858E1C31F0CB0083DE24;
 			productRefGroup = 000985981C31F0CB0083DE24 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0049F3342D2F4A8F002ABBFE /* Products */;
+					ProjectRef = 0049F3332D2F4A8F002ABBFE /* DatumbazFarilo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				000985961C31F0CB0083DE24 /* PoshReVo */,
@@ -613,6 +636,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0049F3382D2F4A8F002ABBFE /* DatumbazFarilo */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = DatumbazFarilo;
+			remoteRef = 0049F3372D2F4A8F002ABBFE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		000985951C31F0CB0083DE24 /* Resources */ = {

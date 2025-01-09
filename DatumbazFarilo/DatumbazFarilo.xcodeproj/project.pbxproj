@@ -13,10 +13,28 @@
 		0049F32E2D2DBDB7002ABBFE /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */; };
 		0049F3302D2DE65A002ABBFE /* LegiXMLon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32F2D2DE65A002ABBFE /* LegiXMLon.swift */; };
 		0049F3322D2F489A002ABBFE /* StiloAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3312D2F489A002ABBFE /* StiloAnalizilo.swift */; };
+		0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo2.swift */; };
+		0049F3432D2F5317002ABBFE /* ReVoModelojOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */; };
+		0049F3442D2F5317002ABBFE /* ReVoModelojOSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0049F34B2D302E93002ABBFE /* FakoAnalizilo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34A2D302E93002ABBFE /* FakoAnalizilo2.swift */; };
+		0049F34D2D3030B9002ABBFE /* MallongigoAnalizilo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34C2D3030B9002ABBFE /* MallongigoAnalizilo2.swift */; };
+		0049F34F2D30316E002ABBFE /* StiloAnalizilo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34E2D30316E002ABBFE /* StiloAnalizilo2.swift */; };
+		0049F3512D303383002ABBFE /* OficialecoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3502D303383002ABBFE /* OficialecoAnalizilo.swift */; };
 		00BE1AD82D24B7450027BC22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE1AD72D24B7450027BC22 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0049F3452D2F5318002ABBFE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0049F3442D2F5317002ABBFE /* ReVoModelojOSX.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00BE1AD22D24B7450027BC22 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,6 +53,12 @@
 		0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteroAnalizilo.swift; sourceTree = "<group>"; };
 		0049F32F2D2DE65A002ABBFE /* LegiXMLon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegiXMLon.swift; sourceTree = "<group>"; };
 		0049F3312D2F489A002ABBFE /* StiloAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloAnalizilo.swift; sourceTree = "<group>"; };
+		0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoAnalizilo2.swift; sourceTree = "<group>"; };
+		0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModelojOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0049F34A2D302E93002ABBFE /* FakoAnalizilo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakoAnalizilo2.swift; sourceTree = "<group>"; };
+		0049F34C2D3030B9002ABBFE /* MallongigoAnalizilo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoAnalizilo2.swift; sourceTree = "<group>"; };
+		0049F34E2D30316E002ABBFE /* StiloAnalizilo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloAnalizilo2.swift; sourceTree = "<group>"; };
+		0049F3502D303383002ABBFE /* OficialecoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OficialecoAnalizilo.swift; sourceTree = "<group>"; };
 		00BE1AD42D24B7450027BC22 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE1AD72D24B7450027BC22 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,17 +68,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0049F3432D2F5317002ABBFE /* ReVoModelojOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0049F3392D2F4B99002ABBFE /* Analiziloj 2 */ = {
+			isa = PBXGroup;
+			children = (
+				0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo2.swift */,
+				0049F34A2D302E93002ABBFE /* FakoAnalizilo2.swift */,
+				0049F34C2D3030B9002ABBFE /* MallongigoAnalizilo2.swift */,
+				0049F34E2D30316E002ABBFE /* StiloAnalizilo2.swift */,
+				0049F3502D303383002ABBFE /* OficialecoAnalizilo.swift */,
+			);
+			path = "Analiziloj 2";
+			sourceTree = "<group>";
+		};
+		0049F3412D2F5317002ABBFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		00BE1ACB2D24B7450027BC22 = {
 			isa = PBXGroup;
 			children = (
 				00BE1AD62D24B7450027BC22 /* DatumbazFarilo */,
 				00BE1AD52D24B7450027BC22 /* Products */,
+				0049F3412D2F5317002ABBFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				00BE1ADF2D24B7B60027BC22 /* Analiziloj */,
+				0049F3392D2F4B99002ABBFE /* Analiziloj 2 */,
 				00BE1ADE2D24B7570027BC22 /* Modeloj */,
 				0049F32F2D2DE65A002ABBFE /* LegiXMLon.swift */,
 				00BE1AD72D24B7450027BC22 /* main.swift */,
@@ -106,6 +153,7 @@
 				00BE1AD02D24B7450027BC22 /* Sources */,
 				00BE1AD12D24B7450027BC22 /* Frameworks */,
 				00BE1AD22D24B7450027BC22 /* CopyFiles */,
+				0049F3452D2F5318002ABBFE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,12 +203,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0049F32E2D2DBDB7002ABBFE /* LiteroAnalizilo.swift in Sources */,
+				0049F3512D303383002ABBFE /* OficialecoAnalizilo.swift in Sources */,
 				0049F3302D2DE65A002ABBFE /* LegiXMLon.swift in Sources */,
 				0049F32A2D2DBA23002ABBFE /* FakoAnalizilo.swift in Sources */,
+				0049F34B2D302E93002ABBFE /* FakoAnalizilo2.swift in Sources */,
 				0049F3322D2F489A002ABBFE /* StiloAnalizilo.swift in Sources */,
+				0049F34F2D30316E002ABBFE /* StiloAnalizilo2.swift in Sources */,
 				0049F3282D2DB9E0002ABBFE /* LingvoAnalizilo.swift in Sources */,
+				0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo2.swift in Sources */,
 				00BE1AD82D24B7450027BC22 /* main.swift in Sources */,
 				0049F32C2D2DBB67002ABBFE /* MallongogijAnalizilo.swift in Sources */,
+				0049F34D2D3030B9002ABBFE /* MallongigoAnalizilo2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,9 +341,11 @@
 		00BE1ADC2D24B7450027BC22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZ3WYZWA8F;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = inthescales.DatumbazFarilo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -299,9 +354,11 @@
 		00BE1ADD2D24B7450027BC22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZ3WYZWA8F;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = inthescales.DatumbazFarilo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

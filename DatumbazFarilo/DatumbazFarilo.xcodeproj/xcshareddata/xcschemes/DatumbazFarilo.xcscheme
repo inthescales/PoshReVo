@@ -21,6 +21,34 @@
                ReferencedContainer = "container:DatumbazFarilo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "005270D924E998CB009E17AA"
+               BuildableName = "ReVoModelojOSX.framework"
+               BlueprintName = "ReVoModelojOSX"
+               ReferencedContainer = "container:../ReVoModeloj/ReVoModeloj.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "003656FD2309C78F0028C21F"
+               BuildableName = "ReVoDatumbazoOSX.framework"
+               BlueprintName = "ReVoDatumbazoOSX"
+               ReferencedContainer = "container:../ReVoDatumbazo/ReVoDatumbazo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

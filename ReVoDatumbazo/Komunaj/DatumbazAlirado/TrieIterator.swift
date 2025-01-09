@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 final class TrieIterator {
-    
+	
     var nodStaplo = [(String, NSManagedObject)]()
     var destinojRestantaj = [(String, [NSManagedObject])]()
     let locale: Locale
