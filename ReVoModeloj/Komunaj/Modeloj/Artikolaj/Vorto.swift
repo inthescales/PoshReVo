@@ -9,7 +9,7 @@
 import Foundation
 
 /*
-    Reprezentas unu aŭ pluraj vortoj havanta unu saman difinon.
+    Reprezentas unu aŭ plurajn vortojn havantajn unu saman difinon.
 */
 public struct Vorto {
     public let titolo: String

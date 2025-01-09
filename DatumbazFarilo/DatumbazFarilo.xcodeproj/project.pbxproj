@@ -12,6 +12,7 @@
 		0049F32C2D2DBB67002ABBFE /* MallongogijAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32B2D2DBB67002ABBFE /* MallongogijAnalizilo.swift */; };
 		0049F32E2D2DBDB7002ABBFE /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */; };
 		0049F3302D2DE65A002ABBFE /* LegiXMLon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32F2D2DE65A002ABBFE /* LegiXMLon.swift */; };
+		0049F3322D2F489A002ABBFE /* StiloAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3312D2F489A002ABBFE /* StiloAnalizilo.swift */; };
 		00BE1AD82D24B7450027BC22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE1AD72D24B7450027BC22 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		0049F32B2D2DBB67002ABBFE /* MallongogijAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongogijAnalizilo.swift; sourceTree = "<group>"; };
 		0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteroAnalizilo.swift; sourceTree = "<group>"; };
 		0049F32F2D2DE65A002ABBFE /* LegiXMLon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegiXMLon.swift; sourceTree = "<group>"; };
+		0049F3312D2F489A002ABBFE /* StiloAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloAnalizilo.swift; sourceTree = "<group>"; };
 		00BE1AD42D24B7450027BC22 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE1AD72D24B7450027BC22 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				0049F3292D2DBA23002ABBFE /* FakoAnalizilo.swift */,
 				0049F32B2D2DBB67002ABBFE /* MallongogijAnalizilo.swift */,
 				0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */,
+				0049F3312D2F489A002ABBFE /* StiloAnalizilo.swift */,
 			);
 			path = Analiziloj;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				0049F32E2D2DBDB7002ABBFE /* LiteroAnalizilo.swift in Sources */,
 				0049F3302D2DE65A002ABBFE /* LegiXMLon.swift in Sources */,
 				0049F32A2D2DBA23002ABBFE /* FakoAnalizilo.swift in Sources */,
+				0049F3322D2F489A002ABBFE /* StiloAnalizilo.swift in Sources */,
 				0049F3282D2DB9E0002ABBFE /* LingvoAnalizilo.swift in Sources */,
 				00BE1AD82D24B7450027BC22 /* main.swift in Sources */,
 				0049F32C2D2DBB67002ABBFE /* MallongogijAnalizilo.swift in Sources */,

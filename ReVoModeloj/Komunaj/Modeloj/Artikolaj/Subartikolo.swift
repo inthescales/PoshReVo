@@ -9,7 +9,7 @@
 import Foundation
 
 /*
-    Parto de artikolo havanta sian propran tekstoj supre de listo da vortoj.
+    Parto de artikolo havanta sian propran tekstojn supre de listo da vortoj.
 */
 public struct Subartikolo {
     public let teksto: String
