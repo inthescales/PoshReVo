@@ -20,6 +20,7 @@
 		0049F34D2D3030B9002ABBFE /* MallongigoAnalizilo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34C2D3030B9002ABBFE /* MallongigoAnalizilo2.swift */; };
 		0049F34F2D30316E002ABBFE /* StiloAnalizilo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34E2D30316E002ABBFE /* StiloAnalizilo2.swift */; };
 		0049F3512D303383002ABBFE /* OficialecoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3502D303383002ABBFE /* OficialecoAnalizilo.swift */; };
+		0049F3532D303970002ABBFE /* KreiDatumbazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3522D303970002ABBFE /* KreiDatumbazon.swift */; };
 		00BE1AD82D24B7450027BC22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE1AD72D24B7450027BC22 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		0049F34C2D3030B9002ABBFE /* MallongigoAnalizilo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoAnalizilo2.swift; sourceTree = "<group>"; };
 		0049F34E2D30316E002ABBFE /* StiloAnalizilo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloAnalizilo2.swift; sourceTree = "<group>"; };
 		0049F3502D303383002ABBFE /* OficialecoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OficialecoAnalizilo.swift; sourceTree = "<group>"; };
+		0049F3522D303970002ABBFE /* KreiDatumbazon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KreiDatumbazon.swift; sourceTree = "<group>"; };
 		00BE1AD42D24B7450027BC22 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE1AD72D24B7450027BC22 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +121,7 @@
 				0049F3392D2F4B99002ABBFE /* Analiziloj 2 */,
 				00BE1ADE2D24B7570027BC22 /* Modeloj */,
 				0049F32F2D2DE65A002ABBFE /* LegiXMLon.swift */,
+				0049F3522D303970002ABBFE /* KreiDatumbazon.swift */,
 				00BE1AD72D24B7450027BC22 /* main.swift */,
 			);
 			path = DatumbazFarilo;
@@ -208,6 +211,7 @@
 				0049F32A2D2DBA23002ABBFE /* FakoAnalizilo.swift in Sources */,
 				0049F34B2D302E93002ABBFE /* FakoAnalizilo2.swift in Sources */,
 				0049F3322D2F489A002ABBFE /* StiloAnalizilo.swift in Sources */,
+				0049F3532D303970002ABBFE /* KreiDatumbazon.swift in Sources */,
 				0049F34F2D30316E002ABBFE /* StiloAnalizilo2.swift in Sources */,
 				0049F3282D2DB9E0002ABBFE /* LingvoAnalizilo.swift in Sources */,
 				0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo2.swift in Sources */,
