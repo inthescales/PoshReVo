@@ -1,109 +1,5 @@
 import ReVoModelojOSX
 
-// MARK: - Modeloj
-
-struct SubartikoloFabriko {
-	var teksto = ""
-	var vortoj: [Vorto] = []
-	
-	func fabriki() -> Subartikolo? {
-		if !vortoj.isEmpty {
-			return Subartikolo(
-				teksto: teksto,
-				vortoj: vortoj
-			)
-		}
-		
-		return nil
-	}
-}
-
-struct VortoFabriko {
-	var titolo: String?
-	var teksto: String?
-	var marko: String?
-	var ofc: String?
-	
-	func fabriki() -> Vorto? {
-		if let titolo = titolo,
-		   let teksto = teksto {
-			return Vorto(
-				titolo: titolo,
-				teksto: teksto,
-				marko: marko,
-				ofc: ofc
-			)
-		}
-		
-		return nil
-	}
-}
-
-struct ArtikolFabriko {
-	var titolo: String?
-	var radiko: String?
-	var indekso: String?
-	var ofc: String?
-	var subartikoloj: [Subartikolo] = []
-	var tradukoj: [Traduko]?
-	
-	func fabriki() -> Artikolo? {
-		if let titolo = titolo,
-		   let radiko = radiko,
-		   let indekso = indekso,
-		   !subartikoloj.isEmpty {
-			return Artikolo(
-				titolo: titolo,
-				radiko: radiko,
-				indekso: indekso,
-				ofc: ofc,
-				subartikoloj: subartikoloj,
-				tradukoj: tradukoj ?? []
-			)
-		} else {
-			assert(false, "Ni vidu ĉu ĉi tio okazos")
-		}
-	}
-}
-
-class Stato {
-	var artikolFabriko = ArtikolFabriko()
-	var subartikoloFabriko: SubartikoloFabriko?
-	var vortoFabriko: VortoFabriko?
-	
-	var bufro: String = ""
-	var cheno: [NodTipo] = []
-	
-	func nuligiBufron() {
-		bufro = ""
-	}
-	
-	func konsumiBufron() {
-		if vortoFabriko != nil {
-			if vortoFabriko?.teksto == nil {
-				vortoFabriko?.teksto = ""
-			}
-			vortoFabriko?.teksto? += bufro.kunpremi(" ")
-		} else if subartikoloFabriko != nil {
-			subartikoloFabriko?.teksto += bufro.kunpremi(" ")
-		}
-		
-		nuligiBufron()
-	}
-	
-	func spaciBufron() {
-		let krampoj = ["(", "{", "[", "<"]
-		let spacoj = [" "]
-		if !bufro.isEmpty
-			&& !krampoj.contains(String(bufro.last!))
-			&& !spacoj.contains(String(bufro.last!)) {
-			bufro += " "
-		}
-	}
-}
-
-// MARK: - Nod-traktado
-
 func kreiArtikolon(el arbo: ArtikolNodo, indekso: String) -> Artikolo {
 	let stato = Stato()
 	stato.artikolFabriko.indekso = indekso
@@ -113,7 +9,7 @@ func kreiArtikolon(el arbo: ArtikolNodo, indekso: String) -> Artikolo {
 	return stato.artikolFabriko.fabriki()!
 }
 
-func trakti(nodon nodo: ArtikolNodo, stato: Stato) {
+func trakti(nodon nodo: ArtikolNodo, stato: Stato) -> String? {
 	switch nodo.tipo {
 	case .radiko:
 		break
@@ -128,23 +24,21 @@ func trakti(nodon nodo: ArtikolNodo, stato: Stato) {
 	case .drv(mrk: let mrk):
 		trakti(derivajhon: nodo, stato: stato)
 	case .tld:
-		traktiTildon(stato: stato)
+		return traktiTildon(stato: stato)
 	case .snc:
-		trakti(sencon: nodo, stato: stato)
+		return trakti(sencon: nodo, stato: stato)
 	case .uzo(tip: let tip):
-		trakti(uzon: nodo, stato: stato)
+		return trakti(uzon: nodo, stato: stato)
 	case .dif:
-		trakti(difinon: nodo, stato: stato)
+		return trakti(difinon: nodo, stato: stato)
 	case .ekz:
-		trakti(ekzemplon: nodo, stato: stato)
+		return trakti(ekzemplon: nodo, stato: stato)
 	case .fnt, .bib, .lok, .vrk:
-		// Forigas spacojn ĉirkaŭ nevideblaj elementoj
-		stato.bufro = stato.bufro.tondi()
 		break
 	case .klr(tip: let tip):
 		break
 	case .ref(tip: let tip, cel: let cel):
-		trakti(referencon: nodo, tipo: tip, celo: cel, stato: stato)
+		return trakti(referencon: nodo, tipo: tip, celo: cel, stato: stato)
 	case .trd(lng: let lng):
 		break
 	case .trdgrp(lng: let lng):
@@ -154,32 +48,39 @@ func trakti(nodon nodo: ArtikolNodo, stato: Stato) {
 	case .ind:
 		break
 	case .url(ref: let ref):
-		trakti(URLon: nodo, stato: stato)
+		return trakti(URLon: nodo, stato: stato)
 	case .teksto(let teksto):
-		let preparita = prepari(tekston: teksto)
-		
-		if !preparita.isEmpty {
-			stato.bufro += preparita
-		}
+		return prepari(tekston: teksto)
 	}
+	
+	return nil
 }
 
-func traktiFilojn(de nodo: ArtikolNodo, stato: Stato) {
+func traktiFilojn(de nodo: ArtikolNodo, stato: Stato) -> String {
 	stato.cheno.append(nodo.tipo)
 	
+	var teksto = ""
+	
 	for filo in nodo.filoj {
-		trakti(nodon: filo, stato: stato)
+		switch filo.tipo {
+		case .fnt:
+			// <fnt> ofte enkondukas nenecesajn spacojn - jen ni forigas ilin
+			teksto = teksto.tondi()
+		default:
+			teksto += trakti(nodon: filo, stato: stato) ?? ""
+		}
 	}
 	
 	_ = stato.cheno.popLast()
+	return teksto
 }
 
 func trakti(vortaron vortaro: ArtikolNodo, stato: Stato) {
-	traktiFilojn(de: vortaro, stato: stato)
+	_ = traktiFilojn(de: vortaro, stato: stato)
 }
 
 func trakti(artikolon artikolo: ArtikolNodo, stato: Stato) {
-	traktiFilojn(de: artikolo, stato: stato)
+	_ = traktiFilojn(de: artikolo, stato: stato)
 	
 	if stato.subartikoloFabriko != nil {
 		let novaSubartikolo = stato.subartikoloFabriko?.fabriki()
@@ -188,13 +89,13 @@ func trakti(artikolon artikolo: ArtikolNodo, stato: Stato) {
 }
 
 func trakti(kapon kapo: ArtikolNodo, stato: Stato) {
-	traktiFilojn(de: kapo, stato: stato)
+	let teksto = traktiFilojn(de: kapo, stato: stato)
 	
 	switch stato.cheno.last {
 	case .art:
-		stato.artikolFabriko.titolo = stato.bufro
+		stato.artikolFabriko.titolo = teksto
 	case .drv:
-		stato.vortoFabriko?.titolo = stato.bufro
+		stato.vortoFabriko?.titolo = teksto
 	default:
 		break
 	}
@@ -203,9 +104,9 @@ func trakti(kapon kapo: ArtikolNodo, stato: Stato) {
 }
 
 func trakti(radikon radiko: ArtikolNodo, stato: Stato) {
-	traktiFilojn(de: radiko, stato: stato)
+	let teksto = traktiFilojn(de: radiko, stato: stato)
 	
-	stato.artikolFabriko.radiko = stato.bufro.tondi()
+	stato.artikolFabriko.radiko = teksto
 }
 
 func trakti(derivajhon derivajho: ArtikolNodo, stato: Stato) {
@@ -214,7 +115,26 @@ func trakti(derivajhon derivajho: ArtikolNodo, stato: Stato) {
 		stato.vortoFabriko?.marko = marko
 	}
 	
-	traktiFilojn(de: derivajho, stato: stato)
+	var teksto = ""
+	var sencoj = 0
+	let sencKvanto = derivajho.filoj.map { if case .snc = $0.tipo { return 1 } else { return 0 }}.reduce(0, +)
+	
+	stato.cheno.append(derivajho.tipo)
+	for filo in derivajho.filoj {
+		if case .snc = filo.tipo, sencKvanto > 1 {
+			sencoj += 1
+			if sencoj > 1 {
+				teksto += "\n\n"
+			}
+			teksto += String(sencoj) + ". "
+		}
+		
+		teksto += trakti(nodon: filo, stato: stato) ?? ""
+	}
+	_ = stato.cheno.popLast()
+	
+	// let teksto = traktiFilojn(de: derivajho, stato: stato)
+	stato.vortoFabriko?.teksto = teksto.tondi()
 	
 	if stato.subartikoloFabriko == nil {
 		stato.subartikoloFabriko = SubartikoloFabriko()
@@ -224,116 +144,77 @@ func trakti(derivajhon derivajho: ArtikolNodo, stato: Stato) {
 	stato.subartikoloFabriko?.vortoj.append(novaVorto!)
 }
 
-func trakti(sencon senco: ArtikolNodo, stato: Stato) {
-	if !(stato.vortoFabriko?.teksto?.isEmpty ?? false) {
-		stato.bufro = "\n\n" + stato.bufro
+func trakti(sencon senco: ArtikolNodo, stato: Stato) -> String {
+	return traktiFilojn(de: senco, stato: stato).kunpremi(" ").tondi()
+}
+
+func trakti(difinon difino: ArtikolNodo, stato: Stato) -> String {
+	return traktiFilojn(de: difino, stato: stato).kunpremi(" ")
+}
+
+func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: Stato) -> String {
+	let teksto = "<i>" + traktiFilojn(de: ekzemplo, stato: stato).tondi() + "</i>"
+	return teksto.kunpremi(" ").tondi()
+}
+
+func trakti(referencon referenco: ArtikolNodo, tipo: String, celo: String, stato: Stato) -> String {
+	var teksto = ""
+	
+	if case .dif = stato.cheno.last {} else {
+		teksto += "\n"
+		if let simbolo = refSimbolo(tipo: tipo) {
+			teksto += simbolo + " "
+		}
 	}
-	
-	traktiFilojn(de: senco, stato: stato)
 
-	stato.bufro = stato.bufro.tondi()
-	stato.konsumiBufron()
+	teksto += "<a href=\"\(celo)\">"
+	teksto += traktiFilojn(de: referenco, stato: stato)
+	teksto += "</a>"
+	
+	return teksto
 }
 
-func trakti(difinon difino: ArtikolNodo, stato: Stato) {
-	traktiFilojn(de: difino, stato: stato)
-}
-
-func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: Stato) {
-	stato.spaciBufron()
-	stato.bufro += "<i>"
-	stato.konsumiBufron()
-	
-	traktiFilojn(de: ekzemplo, stato: stato)
-	
-	stato.bufro = stato.bufro.tondi()
-	stato.bufro += "</i>"
-}
-
-func trakti(referencon referenco: ArtikolNodo, tipo: String, celo: String, stato: Stato) {
-	// FARENDA: Aldoni simbolojn
-	// TODO: Add symbols
-	if case .dif = stato.cheno.last {} else { stato.bufro += "\n" }
-	
-	stato.bufro += "<a href=\"\(celo)\">"
-	traktiFilojn(de: referenco, stato: stato)
-	stato.bufro += "</a>"
-}
-
-func traktiTildon(stato: Stato) {
+func traktiTildon(stato: Stato) -> String {
+	var teksto = ""
 	if case .ekz = stato.cheno.last {
 		stato.spaciBufron()
-		stato.bufro += "<b>"
+		teksto += "<b>"
 	}
 	
 	if let radiko = stato.artikolFabriko.radiko {
-		stato.bufro += radiko
+		teksto += radiko
 	}
 	
 	if case .ekz = stato.cheno.last {
-		stato.bufro += "</b>"
+		teksto += "</b>"
 	}
 	
+	return teksto
 }
 
-func trakti(uzon uzo: ArtikolNodo, stato: Stato) {
+func trakti(uzon uzo: ArtikolNodo, stato: Stato) -> String {
+	var teksto = ""
 	if case .uzo(let tipo) = uzo.tipo {
 		if tipo == "fak" {
-			stato.spaciBufron()
-			stato.bufro += "["
+			teksto += "["
 		}
 	}
 	
-	traktiFilojn(de: uzo, stato: stato)
+	teksto += traktiFilojn(de: uzo, stato: stato)
 	
 	if case .uzo(let tipo) = uzo.tipo {
 		if tipo == "fak" {
-			stato.bufro += "] "
+			teksto += "] "
 		}
 	}
+	
+	return teksto
 }
 
-func trakti(URLon url: ArtikolNodo, stato: Stato) {
+func trakti(URLon url: ArtikolNodo, stato: Stato) -> String {
 	if case .url(let ref) = url.tipo {
-		stato.spaciBufron()
-		stato.bufro += "<a href=\(ref)>"
-		traktiFilojn(de: url, stato: stato)
-	}
-}
-
-// MARK: - Tekstaj helpiloj
-
-func prepari(tekston teksto: String) -> String {
-	var rezulto = teksto.replacingOccurrences(of: "\n", with: " ")
-	rezulto = rezulto.replacingOccurrences(of: "\r", with: " ")
-	rezulto = rezulto.replacingOccurrences(of: "\t", with: "")
-	rezulto = rezulto.replacingOccurrences(of: "<em>", with: "<b>")
-	rezulto = rezulto.replacingOccurrences(of: "</em>", with: "</b>")
-	rezulto = rezulto.replacingOccurrences(of: "...", with: "…")
-	
-	return rezulto
-}
-
-extension String {
-	func tondi() -> String {
-		return self.trimmingCharacters(in: .whitespacesAndNewlines)
+		return "<a href=\(ref)>" + traktiFilojn(de: url, stato: stato)
 	}
 	
-	func kunpremi(_ simbolo: Character) -> String {
-		var rezulto = ""
-		
-		var lasta: Character? = nil
-		for char in self {
-			if char == simbolo,
-			   char == lasta {
-				continue
-			} else {
-				rezulto += String(char)
-				lasta = char
-			}
-		}
-		
-		return rezulto
-	}
+	return ""
 }
-
