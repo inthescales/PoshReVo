@@ -1,8 +1,10 @@
 import Foundation
 
+/// Kolektas literojn kaj siajn kodojn el la XMLa dosiero
+/// Collects letters and their codes from the XML file
 class LiteroAnalizilo : NSObject, XMLParserDelegate {
 	var literoj: [String: String] = [:]
-	var atendas: [String: [String]] = [:]
+	private var atendas: [String: [String]] = [:]
 	
 	func parserDidStartDocument(_ parser: XMLParser) {
 		print("Eklegas literojn")
@@ -83,6 +85,8 @@ class LiteroAnalizilo : NSObject, XMLParserDelegate {
 		}
 	}
 	
+	// MARK: - Helpiloj
+	
 	/// Vokota post ĉiu nova liter-aldono. Traktas ajnajn literojn kiuj atendas tiu litero.
 	/// Called after each new letter. Handles any letters that were waiting for that letter.
 	private func trovis(litero: String, signo: String) {
@@ -99,5 +103,22 @@ class LiteroAnalizilo : NSObject, XMLParserDelegate {
 		// TODO: Check whether a correction is needed on the ReVo side (whether adding letters or correcting usage)
 		literoj["a_a"] = literoj["a_A"]
 		literoj["a_fatha_a"] = literoj["a_fatha_A"]
+	}
+}
+
+// MARK: - Vokilo
+
+extension LiteroAnalizilo {
+	/// Legas literojn el la donata indikilo kaj liveras ilin kun siaj kodoj
+	/// Reads abbreviations from the given file path and returns them with their codes
+	public static func legi(el indikilo: String) -> [String: String] {
+				
+		let literoAnalizilo = LiteroAnalizilo()
+		let datumoj = try! Data(contentsOf: URL(fileURLWithPath: indikilo))
+		let analizilo = XMLParser(data: datumoj)
+		analizilo.delegate = literoAnalizilo
+		analizilo.parse()
+		
+		return literoAnalizilo.literoj
 	}
 }
