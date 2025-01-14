@@ -1,7 +1,7 @@
 enum NodTipo {
 	case radiko
 	case vortaro
-	case art
+	case art(mrk: String)
 	case kap
 	case rad
 	case drv(mrk: String)
@@ -28,7 +28,7 @@ enum NodTipo {
 		case "vortaro":
 			return .vortaro
 		case "art":
-			return .art
+			return .art(mrk: ecoj["mrk"]!)
 		case "kap":
 			return .kap
 		case "rad":

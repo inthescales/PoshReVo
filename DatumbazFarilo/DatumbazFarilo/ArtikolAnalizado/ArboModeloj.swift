@@ -1,6 +1,24 @@
 import Foundation
 import ReVoModelojOSX
 
+/// Traduko tiel kiel ĝi aperos en artikolo
+struct ArtikolTraduko {
+	let nomo: String
+	let teksto: String
+	let marko: String
+	let senco: Int?
+}
+
+/// Traduko kiu estos serĉebla
+struct SerchTraduko {
+	let videblaNomo: String // Search key, and what is shown
+	let nomo: String // Detail label of search cell (esperanto derivaĵo)
+	let teksto: String // Search key (name in search language)
+	let indekso: String // Used to create the article reference
+	let marko: String // Used to navigate within article
+	let senco: Int? // Creates superscript
+}
+
 struct SubartikoloFabriko {
 	var teksto = ""
 	var vortoj: [Vorto] = []
@@ -44,9 +62,15 @@ struct ArtikolFabriko {
 	var indekso: String?
 	var ofc: String?
 	var subartikoloj: [Subartikolo] = []
-	var tradukoj: [Traduko]?
+	var tradukoj: [String: [ArtikolTraduko]] = [:]
 	
 	func fabriki() -> Artikolo? {
+		
+		for (lingvo, trdoj) in tradukoj {
+			let teksto = prepariTradukTekstojn(tradukoj: trdoj)
+			print(lingvo + "\n" + teksto + "\n\n")
+		}
+		
 		if let titolo = titolo,
 		   let radiko = radiko,
 		   let indekso = indekso,
@@ -57,10 +81,10 @@ struct ArtikolFabriko {
 				indekso: indekso,
 				ofc: ofc,
 				subartikoloj: subartikoloj,
-				tradukoj: tradukoj ?? []
+				tradukoj: [] // TODO: Konverti ArtikolTradukojn en tekstojn
 			)
 		} else {
-			assert(false, "Ni vidu ĉu ĉi tio okazos")
+			assert(false, "Ia eraro okazis en artikol-legado")
 		}
 	}
 }
@@ -70,33 +94,60 @@ class Stato {
 	var subartikoloFabriko: SubartikoloFabriko?
 	var vortoFabriko: VortoFabriko?
 	
-	var bufro: String = ""
+	// MARK: Artikol-informoj
+	
+	var artikolNomo: String? {
+		artikolFabriko.titolo
+	}
+	
+	var artikolIndekso: String? {
+		artikolFabriko.indekso
+	}
+	
+	// MARK: Arbo-tradirada stato
+	
 	var cheno: [NodTipo] = []
 	
-	func nuligiBufron() {
-		bufro = ""
-	}
+	/// Titolo de nuna derivaĵo, plenteksta, kiel ĝi aperu en serĉrezultoj
+	var derivajhNomo: String?
 	
-	func konsumiBufron() {
-		if vortoFabriko != nil {
-			if vortoFabriko?.teksto == nil {
-				vortoFabriko?.teksto = ""
+	/// Titolo de nuna derivaĵo, kun ~-oj, kiel ĝi aperu en tradukoj
+	var derivajhTildo: String?
+	
+	/// Numero de la lasta senco traktita en la derivaĵo (eĉ si la procezo jam eliris el ĉiuj sencoj)
+	/// Necesas por nombri la sencojn (endas scii la lastan senc-numeron).
+	var lastaSenco: Int?
+	
+	/// Numero de la *nuna* senco en sia derivaĵo. Havas valoron nur se la procezo estas nun ene de iu senco.
+	/// Necesas por ke ni sciu ĉu la procezo ankoraŭ estas ene de senco, aŭ ĉu ĝi jam eliras (ekz. kiam ni renkontas tradukon post ĉiuj sencoj en derivaĵo)
+	var nunaSenco: Int?
+	
+	var marko: String? {
+		for tipo in cheno.reversed() {
+			switch tipo {
+			case .art(let mrk):
+				return mrk
+			case .drv(let mrk):
+				return mrk
+			default:
+				continue
 			}
-			vortoFabriko?.teksto? += bufro.kunpremi(" ")
-		} else if subartikoloFabriko != nil {
-			subartikoloFabriko?.teksto += bufro.kunpremi(" ")
 		}
 		
-		nuligiBufron()
+		return nil
 	}
 	
-	func spaciBufron() {
-		let krampoj = ["(", "{", "[", "<"]
-		let spacoj = [" "]
-		if !bufro.isEmpty
-			&& !krampoj.contains(String(bufro.last!))
-			&& !spacoj.contains(String(bufro.last!)) {
-			bufro += " "
-		}
+	// MARK: Tradukoj
+	
+	var serchTradukoj: [String: [SerchTraduko]] = [:]
+	
+	func aldoni(artikolTradukon traduko: ArtikolTraduko, lingvo: String) {
+		if artikolFabriko.tradukoj[lingvo] == nil { artikolFabriko.tradukoj[lingvo] = [] }
+		artikolFabriko.tradukoj[lingvo]?.append(traduko)
+	}
+	
+	func aldoni(serchTradukon traduko: SerchTraduko, lingvo: String) {
+		if serchTradukoj[lingvo] == nil { serchTradukoj[lingvo] = [] }
+		serchTradukoj[lingvo]?.append(traduko)
 	}
 }

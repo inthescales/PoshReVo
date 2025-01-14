@@ -3,7 +3,7 @@ import CoreData
 import ReVoDatumbazoOSX
 
 print(FileManager.default.currentDirectoryPath)
-let radiko = "/Users/robin/Desktop"
+let radiko = ""
 var revoIndiko: String = radiko + "/fontoj/revo"
 var grundIndiko: String = radiko + "/fontoj/grundo"
 

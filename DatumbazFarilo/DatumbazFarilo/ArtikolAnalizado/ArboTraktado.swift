@@ -4,59 +4,69 @@ func kreiArtikolon(el arbo: ArtikolNodo, indekso: String) -> Artikolo {
 	let stato = Stato()
 	stato.artikolFabriko.indekso = indekso
 	
-	traktiFilojn(de: arbo, stato: stato)
+	_ = traktiFilojn(de: arbo, stato: stato)
 	
 	return stato.artikolFabriko.fabriki()!
 }
 
-func trakti(nodon nodo: ArtikolNodo, stato: Stato) -> String? {
+func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) -> String? {
 	switch nodo.tipo {
 	case .radiko:
 		break
 	case .vortaro:
 		trakti(vortaron: nodo, stato: stato)
-	case .art:
-		trakti(artikolon: nodo, stato: stato)
+	case .art(let mrk):
+		trakti(artikolon: nodo, marko: mrk, stato: stato)
 	case .kap:
 		trakti(kapon: nodo, stato: stato)
 	case .rad:
 		trakti(radikon: nodo, stato: stato)
-	case .drv(mrk: let mrk):
-		trakti(derivajhon: nodo, stato: stato)
+	case .drv(let mrk):
+		trakti(derivajhon: nodo, marko: mrk, stato: stato)
 	case .tld:
-		return traktiTildon(stato: stato)
+		if ampligiTildojn {
+			return traktiTildon(stato: stato)
+		} else {
+			return "~"
+		}
 	case .snc:
 		return trakti(sencon: nodo, stato: stato)
-	case .uzo(tip: let tip):
-		return trakti(uzon: nodo, stato: stato)
+	case .uzo(let tip):
+		return trakti(uzon: nodo, tipo: tip, stato: stato)
 	case .dif:
 		return trakti(difinon: nodo, stato: stato)
 	case .ekz:
 		return trakti(ekzemplon: nodo, stato: stato)
 	case .fnt, .bib, .lok, .vrk:
 		break
-	case .klr(tip: let tip):
-		break
-	case .ref(tip: let tip, cel: let cel):
+	case .klr(_):
+		return trakti(klarigon: nodo, stato: stato)
+	case .ref(let tip, let cel):
 		return trakti(referencon: nodo, tipo: tip, celo: cel, stato: stato)
-	case .trd(lng: let lng):
-		break
-	case .trdgrp(lng: let lng):
-		break
+	case .trd(let lng):
+		// Traktas sendependajn tradukojn. Tiuj ene de 'trdgrp' estos traktataj
+		// ene de `trakti(tradukGrupon:...)`
+		if let lingvo = lng {
+			trakti(tradukon: nodo, lingvo: lingvo, stato: stato)
+		}
+		return nil
+	case .trdgrp(let lng):
+		trakti(tradukGrupon: nodo, lingvo: lng, stato: stato)
+		return nil
 	case .pr:
-		break
+		return trakti(prononcon: nodo, stato: stato)
 	case .ind:
-		break
-	case .url(ref: let ref):
-		return trakti(URLon: nodo, stato: stato)
+		return trakti(indekson: nodo, stato: stato)
+	case .url(let ref):
+		return trakti(URLon: nodo, referenco: ref, stato: stato)
 	case .teksto(let teksto):
-		return prepari(tekston: teksto)
+		return teksto.prepari()
 	}
 	
 	return nil
 }
 
-func traktiFilojn(de nodo: ArtikolNodo, stato: Stato) -> String {
+func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) -> String {
 	stato.cheno.append(nodo.tipo)
 	
 	var teksto = ""
@@ -67,7 +77,7 @@ func traktiFilojn(de nodo: ArtikolNodo, stato: Stato) -> String {
 			// <fnt> ofte enkondukas nenecesajn spacojn - jen ni forigas ilin
 			teksto = teksto.tondi()
 		default:
-			teksto += trakti(nodon: filo, stato: stato) ?? ""
+			teksto += trakti(nodon: filo, stato: stato, ampligiTildojn: ampligiTildojn) ?? ""
 		}
 	}
 	
@@ -75,11 +85,21 @@ func traktiFilojn(de nodo: ArtikolNodo, stato: Stato) -> String {
 	return teksto
 }
 
+func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, farotajh: (ArtikolNodo) -> Void) {
+	stato.cheno.append(nodo.tipo)
+	
+	for filo in nodo.filoj {
+		farotajh(filo)
+	}
+	
+	_ = stato.cheno.popLast()
+}
+
 func trakti(vortaron vortaro: ArtikolNodo, stato: Stato) {
 	_ = traktiFilojn(de: vortaro, stato: stato)
 }
 
-func trakti(artikolon artikolo: ArtikolNodo, stato: Stato) {
+func trakti(artikolon artikolo: ArtikolNodo, marko: String?, stato: Stato) {
 	_ = traktiFilojn(de: artikolo, stato: stato)
 	
 	if stato.subartikoloFabriko != nil {
@@ -99,8 +119,9 @@ func trakti(kapon kapo: ArtikolNodo, stato: Stato) {
 	default:
 		break
 	}
-	
-	stato.nuligiBufron()
+
+	stato.derivajhNomo = traktiFilojn(de: kapo, stato: stato, ampligiTildojn: true)
+	stato.derivajhTildo = traktiFilojn(de: kapo, stato: stato, ampligiTildojn: false)
 }
 
 func trakti(radikon radiko: ArtikolNodo, stato: Stato) {
@@ -109,30 +130,27 @@ func trakti(radikon radiko: ArtikolNodo, stato: Stato) {
 	stato.artikolFabriko.radiko = teksto
 }
 
-func trakti(derivajhon derivajho: ArtikolNodo, stato: Stato) {
+func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: Stato) {
 	stato.vortoFabriko = VortoFabriko()
-	if case .drv(let marko) = derivajho.tipo {
-		stato.vortoFabriko?.marko = marko
-	}
+	stato.vortoFabriko?.marko = marko
 	
 	var teksto = ""
-	var sencoj = 0
 	let sencKvanto = derivajho.filoj.map { if case .snc = $0.tipo { return 1 } else { return 0 }}.reduce(0, +)
 	
-	stato.cheno.append(derivajho.tipo)
-	for filo in derivajho.filoj {
-		if case .snc = filo.tipo, sencKvanto > 1 {
-			sencoj += 1
-			if sencoj > 1 {
+	traktiFilojn(de: derivajho, stato: stato) { filo in
+		let filTeksto = trakti(nodon: filo, stato: stato) ?? ""
+		
+		if case .snc = filo.tipo, sencKvanto > 1,
+		   let sencNombro = stato.lastaSenco {
+			if sencNombro > 1 {
 				teksto += "\n\n"
 			}
-			teksto += String(sencoj) + ". "
+			teksto += String(sencNombro) + ". "
 		}
 		
-		teksto += trakti(nodon: filo, stato: stato) ?? ""
+		teksto += filTeksto
 	}
-	_ = stato.cheno.popLast()
-	
+
 	// let teksto = traktiFilojn(de: derivajho, stato: stato)
 	stato.vortoFabriko?.teksto = teksto.tondi()
 	
@@ -142,10 +160,26 @@ func trakti(derivajhon derivajho: ArtikolNodo, stato: Stato) {
 	
 	let novaVorto = stato.vortoFabriko?.fabriki()
 	stato.subartikoloFabriko?.vortoj.append(novaVorto!)
+	
+	// Eliras derivaĵon
+	stato.derivajhNomo = nil
+	stato.derivajhTildo = nil
+	stato.lastaSenco = nil
 }
 
 func trakti(sencon senco: ArtikolNodo, stato: Stato) -> String {
-	return traktiFilojn(de: senco, stato: stato).kunpremi(" ").tondi()
+	if stato.lastaSenco == nil {
+		stato.lastaSenco = 0
+	}
+	
+	stato.lastaSenco? += 1
+	stato.nunaSenco = stato.lastaSenco
+	
+	let filTeksto = traktiFilojn(de: senco, stato: stato).kunpremi(" ").tondi()
+	
+	stato.nunaSenco = nil
+	
+	return filTeksto
 }
 
 func trakti(difinon difino: ArtikolNodo, stato: Stato) -> String {
@@ -177,7 +211,6 @@ func trakti(referencon referenco: ArtikolNodo, tipo: String, celo: String, stato
 func traktiTildon(stato: Stato) -> String {
 	var teksto = ""
 	if case .ekz = stato.cheno.last {
-		stato.spaciBufron()
 		teksto += "<b>"
 	}
 	
@@ -192,29 +225,111 @@ func traktiTildon(stato: Stato) -> String {
 	return teksto
 }
 
-func trakti(uzon uzo: ArtikolNodo, stato: Stato) -> String {
+func trakti(uzon uzo: ArtikolNodo, tipo: String, stato: Stato) -> String {
 	var teksto = ""
-	if case .uzo(let tipo) = uzo.tipo {
-		if tipo == "fak" {
+	if tipo == "fak" {
 			teksto += "["
-		}
 	}
 	
 	teksto += traktiFilojn(de: uzo, stato: stato)
 	
-	if case .uzo(let tipo) = uzo.tipo {
-		if tipo == "fak" {
-			teksto += "] "
-		}
+	if tipo == "fak" {
+		teksto += "] "
 	}
 	
 	return teksto
 }
 
-func trakti(URLon url: ArtikolNodo, stato: Stato) -> String {
-	if case .url(let ref) = url.tipo {
-		return "<a href=\(ref)>" + traktiFilojn(de: url, stato: stato)
+func trakti(URLon url: ArtikolNodo, referenco: String, stato: Stato) -> String {
+	return "<a href=\(referenco)>" + traktiFilojn(de: url, stato: stato)
+}
+
+// MARK: - Tradukoj
+
+func trakti(tradukon traduko: ArtikolNodo, lingvo: String, stato: Stato) {
+	guard let marko = stato.marko else {
+		return
 	}
 	
-	return ""
+	var serchNomo: String?
+	var teksto = ""
+	
+	traktiFilojn(de: traduko, stato: stato) { filo in
+		let filTeksto = trakti(nodon: filo, stato: stato)
+		
+		switch filo.tipo {
+		case .ind:
+			serchNomo = filTeksto
+		default:
+			break
+		}
+		teksto += filTeksto ?? ""
+	}
+	
+	teksto = teksto.kunpremi(" ")
+	
+	if false {
+		// Tradukoj en ekzemploj
+//		let artikolTraduko = ArtikolTraduko(
+//			nomo: indekso,
+//			teksto: teksto,
+//			marko: marko,
+//			senco: stato.sncNombro
+//		)
+//		stato.aldoni(artikolTradukon: artikolTraduko, lingvo: lingvo)
+	} else if let nomo = stato.derivajhNomo,
+			  let tildo = stato.derivajhTildo,
+			  let indekso = stato.artikolIndekso {
+		let artikolTraduko = ArtikolTraduko(
+			nomo: tildo,
+			teksto: teksto,
+			marko: marko,
+			senco: stato.nunaSenco
+		)
+		stato.aldoni(artikolTradukon: artikolTraduko, lingvo: lingvo)
+		
+		let serchTraduko = SerchTraduko(
+			videblaNomo: serchNomo ?? teksto,
+			nomo: nomo,
+			teksto: teksto,
+			indekso: indekso,
+			marko: marko,
+			senco: stato.nunaSenco
+		)
+		stato.aldoni(serchTradukon: serchTraduko, lingvo: lingvo)
+	}
 }
+
+func trakti(tradukGrupon tradukGrupo: ArtikolNodo, lingvo: String, stato: Stato) {
+	traktiFilojn(de: tradukGrupo, stato: stato) { filo in
+		switch filo.tipo {
+		case .trd(_):
+			trakti(tradukon: filo, lingvo: lingvo, stato: stato)
+		default:
+			break
+		}
+	}
+}
+
+func trakti(indekson indekso: ArtikolNodo, stato: Stato) -> String {
+	return traktiFilojn(de: indekso, stato: stato)
+}
+
+func trakti(klarigon klarigo: ArtikolNodo, stato: Stato) -> String {
+	var teksto = traktiFilojn(de: klarigo, stato: stato)
+	
+	// Liveri tekston, sen emfazoj (ekz. "Banderolo" en)
+	teksto = teksto.replacingOccurrences(of: "<em>", with: "")
+	teksto = teksto.replacingOccurrences(of: "</em>", with: "")
+	
+	return teksto
+}
+
+func trakti(prononcon prononco: ArtikolNodo, stato: Stato) -> String {
+	let teksto = traktiFilojn(de: prononco, stato: stato)
+	return "[" + teksto + "]"
+}
+
+// ATENTU
+// En 'provludi' - tradukoj ekzistas por 'prov~o', kiu NE APERAS KIEL DERIVAĴO
+
