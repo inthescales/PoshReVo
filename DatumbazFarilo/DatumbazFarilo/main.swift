@@ -65,6 +65,12 @@ for artikolo in artikoloj {
 try! konteksto.save()
 
 // Generi tekstojn
+
 TekstFarilo.generiTekstojn(fakoj: fakoj, mallongigoj: mallongigoj, destinIndiko: produktajhIndiko)
+
+// Fari trie-on
+
+let trieFarilo = TrieFarilo(konteksto: konteksto, tradukaro: serchTradukoj)
+trieFarilo.konstruiChiuTrie(kodoj: lingvoj.map { $0.kodo })
 
 print("All done :)")

@@ -84,18 +84,17 @@ extension Artikolo {
            return nil
         }
 
-        var trovOfc: String? = nil
+		let trovOfc = objekto.value(forKey: "ofc") as? String
+		
         var novajSubartikoloj: [Subartikolo]? = [Subartikolo]()
         var novajTradukoj: [Traduko] = [Traduko]()
         do {
            
            if let vortoDatumoj = objekto.value(forKey: "vortoj") as? NSData {
                let vortoJ = try JSONSerialization.jsonObject(with: vortoDatumoj as Data, options: JSONSerialization.ReadingOptions())
-               if let vortoDict = vortoJ as? NSDictionary {
-                   
-                   trovOfc = vortoDict["ofc"] as? String
-                   
-                   for subartikoloj in (vortoDict["grupoj"] as? [[String: Any]]) ?? [[:]] {
+			   
+			   if let subartArr = vortoJ as? [[String: Any]] {
+                   for subartikoloj in subartArr {
                        var novajVortoj = [Vorto]()
                        for vorto in (subartikoloj["vortoj"] as? [[String: Any]]) ?? [[:]] {
                            if let titolo = vorto["titolo"] as? String,
@@ -118,7 +117,6 @@ extension Artikolo {
            }
            
            // Prepari la tradukojn
-			var novajTradukoj = [Traduko]()
 			if let tradukDatumoj = objekto.value(forKey: "tradukoj") as? NSData {
 				let tradukJSON = try JSONSerialization.jsonObject(with: tradukDatumoj as Data, options: JSONSerialization.ReadingOptions())
 				if let tradukDict = tradukJSON as? [String: String] {
