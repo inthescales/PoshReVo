@@ -69,15 +69,13 @@ struct ArtikolFabriko {
 	var subartikoloj: [Subartikolo] = []
 	var tradukoj: [String: [ArtikolTraduko]] = [:]
 	
-	func fabriki(lingvoj: [String: String]) -> Artikolo? {
+	func fabriki(lingvoj: [String: Lingvo]) -> Artikolo? {
 		var tekstTradukoj: [Traduko] = []
 		
 		for (lingvoKodo, trdoj) in tradukoj {
-			let lingvoNomo = lingvoj[lingvoKodo]!
-			
 			let teksto = prepariTradukTekstojn(tradukoj: trdoj)
 			let trd = Traduko(
-				lingvo: Lingvo(kodo: lingvoKodo, nomo: lingvoNomo),
+				lingvo: lingvoj[lingvoKodo]!,
 				teksto: teksto
 			)
 			tekstTradukoj.append(trd)
@@ -165,7 +163,7 @@ class Stato {
 	
 	// MARK: Rezultoj
 	
-	func rezultoj(lingvoj: [String: String]) -> ArtikolAnalizRezulto? {
+	func rezultoj(lingvoj: [String: Lingvo]) -> ArtikolAnalizRezulto? {
 		guard let artikolo = artikolFabriko.fabriki(lingvoj: lingvoj) else {
 			return nil
 		}

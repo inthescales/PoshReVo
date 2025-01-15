@@ -1,6 +1,6 @@
 import ReVoModelojOSX
 
-func analizi(arbon arbo: ArtikolNodo, indekso: String, lingvoj: [String: String]) -> ArtikolAnalizRezulto? {
+func analizi(arbon arbo: ArtikolNodo, indekso: String, lingvoj: [String: Lingvo]) -> ArtikolAnalizRezulto? {
 	let stato = Stato()
 	stato.artikolFabriko.indekso = indekso
 	
@@ -20,7 +20,7 @@ func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) 
 	case .kap:
 		trakti(kapon: nodo, stato: stato)
 	case .rad:
-		trakti(radikon: nodo, stato: stato)
+		return trakti(radikon: nodo, stato: stato)
 	case .drv(let mrk):
 		trakti(derivajhon: nodo, marko: mrk, stato: stato)
 	case .tld:
@@ -113,9 +113,9 @@ func trakti(kapon kapo: ArtikolNodo, stato: Stato) {
 	
 	switch stato.cheno.last {
 	case .art:
-		stato.artikolFabriko.titolo = teksto
+		stato.artikolFabriko.titolo = teksto.tondi()
 	case .drv:
-		stato.vortoFabriko?.titolo = teksto
+		stato.vortoFabriko?.titolo = teksto.tondi()
 	default:
 		break
 	}
@@ -124,10 +124,12 @@ func trakti(kapon kapo: ArtikolNodo, stato: Stato) {
 	stato.derivajhTildo = traktiFilojn(de: kapo, stato: stato, ampligiTildojn: false)
 }
 
-func trakti(radikon radiko: ArtikolNodo, stato: Stato) {
+func trakti(radikon radiko: ArtikolNodo, stato: Stato) -> String {
 	let teksto = traktiFilojn(de: radiko, stato: stato)
 	
 	stato.artikolFabriko.radiko = teksto
+	
+	return teksto
 }
 
 func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: Stato) {

@@ -1,23 +1,24 @@
 import Foundation
 import CoreData
 
+import ReVoModelojOSX
+import ReVoDatumbazoOSX
+
 /// Analizas XMLan dosieron enhavantan liston da mallongigoj, kaj aldonas ilin al la datumbazo
 /// Parses the XML file containing the list of abbreviations, and adds them to the database
-class MallongigoAnalizilo2: NSObject, XMLParserDelegate {
-	private let konteksto: NSManagedObjectContext
+class MallongigoAnalizilo: NSObject, XMLParserDelegate {
+	var mallongigoj: [Mallongigo] = []
 	
-	private var nunaMallongigo: NSManagedObject?
+	private var nunaMallongigo: String?
 	private var teksto: String = ""
-	private var kvanto = 0
 	
-	init(_ konteksto: NSManagedObjectContext) {
-		self.konteksto = konteksto
+	override init() {
+		super.init()
 		print("Legas mallingigojn")
 	}
 	
 	func parserDidEndDocument(_ parser: XMLParser) {
-		try! konteksto.save()
-		print("Legis \(kvanto) mallongigojn")
+		print("Legis \(mallongigoj.count) mallongigojn")
 	}
 	
 	func parser(
@@ -29,8 +30,7 @@ class MallongigoAnalizilo2: NSObject, XMLParserDelegate {
 	) {
 		if elementName == "mallongigo",
 			let mll = attributeDict["mll"] {
-			nunaMallongigo = NSEntityDescription.insertNewObject(forEntityName: "Mallongigo", into: konteksto)
-			nunaMallongigo?.setValue(mll, forKey: "kodo")
+			nunaMallongigo = mll
 			teksto = ""
 		}
 	}
@@ -42,23 +42,33 @@ class MallongigoAnalizilo2: NSObject, XMLParserDelegate {
 	func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
 		if elementName == "mallongigo",
 		   let nunaMallongigo = nunaMallongigo {
-			nunaMallongigo.setValue(teksto, forKey: "nomo")
-			kvanto += 1
+			mallongigoj.append(Mallongigo(kodo: nunaMallongigo, nomo: teksto))
 		}
 	}
 }
 
 // MARK: - Vokilo
 
-extension MallongigoAnalizilo2 {
+extension MallongigoAnalizilo {
+	public static func registri(
+		mallongigojn mallongigoj: [Mallongigo],
+		en konteksto: NSManagedObjectContext) {
+		for mallongigo in mallongigoj {
+			mallongigo.skribi(en: konteksto)
+		}
+		
+		try! konteksto.save()
+	}
+	
 	/// Legas mallongigojn el la donata indikilo, en la donatan datumbaz-kontekston
 	/// Reads abbreviations from the given file path, into the given database context
-	public static func legi(el indikilo: String, en konteksto: NSManagedObjectContext) {
-				
-		let mallongigoAnalizilo = MallongigoAnalizilo2(konteksto)
+	public static func legi(el indikilo: String) -> [Mallongigo] {
+		let mallongigoAnalizilo = MallongigoAnalizilo()
 		let datumoj = try! Data(contentsOf: URL(fileURLWithPath: indikilo))
 		let analizilo = XMLParser(data: datumoj)
 		analizilo.delegate = mallongigoAnalizilo
 		analizilo.parse()
+		
+		return mallongigoAnalizilo.mallongigoj
 	}
 }

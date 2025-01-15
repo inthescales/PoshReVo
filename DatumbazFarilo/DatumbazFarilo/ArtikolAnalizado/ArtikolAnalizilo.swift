@@ -74,7 +74,7 @@ extension ArtikolAnalizilo {
 	public static func legi(
 		el indikilo: String,
 		en konteksto: NSManagedObjectContext,
-		lingvoj: [String: String],
+		lingvoj: [String: Lingvo],
 		literoj: [String: String]
 	) -> ArtikolAnalizRezulto? {
 		let artikolAnalizilo = ArtikolAnalizilo(konteksto, literoj: literoj)
