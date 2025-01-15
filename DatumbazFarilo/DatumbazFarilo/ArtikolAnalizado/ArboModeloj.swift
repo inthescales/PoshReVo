@@ -1,6 +1,11 @@
 import Foundation
 import ReVoModelojOSX
 
+struct ArtikolAnalizRezulto {
+	let artikolo: Artikolo
+	let serchTradukoj: [String: [SerchTraduko]]
+}
+
 /// Traduko tiel kiel ĝi aperos en artikolo
 struct ArtikolTraduko {
 	let nomo: String
@@ -64,11 +69,18 @@ struct ArtikolFabriko {
 	var subartikoloj: [Subartikolo] = []
 	var tradukoj: [String: [ArtikolTraduko]] = [:]
 	
-	func fabriki() -> Artikolo? {
+	func fabriki(lingvoj: [String: String]) -> Artikolo? {
+		var tekstTradukoj: [Traduko] = []
 		
-		for (lingvo, trdoj) in tradukoj {
+		for (lingvoKodo, trdoj) in tradukoj {
+			let lingvoNomo = lingvoj[lingvoKodo]!
+			
 			let teksto = prepariTradukTekstojn(tradukoj: trdoj)
-			print(lingvo + "\n" + teksto + "\n\n")
+			let trd = Traduko(
+				lingvo: Lingvo(kodo: lingvoKodo, nomo: lingvoNomo),
+				teksto: teksto
+			)
+			tekstTradukoj.append(trd)
 		}
 		
 		if let titolo = titolo,
@@ -81,7 +93,7 @@ struct ArtikolFabriko {
 				indekso: indekso,
 				ofc: ofc,
 				subartikoloj: subartikoloj,
-				tradukoj: [] // TODO: Konverti ArtikolTradukojn en tekstojn
+				tradukoj: tekstTradukoj
 			)
 		} else {
 			assert(false, "Ia eraro okazis en artikol-legado")
@@ -149,5 +161,19 @@ class Stato {
 	func aldoni(serchTradukon traduko: SerchTraduko, lingvo: String) {
 		if serchTradukoj[lingvo] == nil { serchTradukoj[lingvo] = [] }
 		serchTradukoj[lingvo]?.append(traduko)
+	}
+	
+	// MARK: Rezultoj
+	
+	func rezultoj(lingvoj: [String: String]) -> ArtikolAnalizRezulto? {
+		guard let artikolo = artikolFabriko.fabriki(lingvoj: lingvoj) else {
+			return nil
+		}
+		
+		return ArtikolAnalizRezulto(
+			artikolo: artikolo,
+			serchTradukoj: serchTradukoj
+		)
+
 	}
 }

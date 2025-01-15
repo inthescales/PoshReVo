@@ -1,6 +1,8 @@
 import Foundation
 import CoreData
 
+import ReVoModelojOSX
+
 /// Analizas XMLan dosieron kiu reprezentas artikolo
 /// Parses an XML file representing an article
 class ArtikolAnalizilo: NSObject, XMLParserDelegate {
@@ -8,6 +10,7 @@ class ArtikolAnalizilo: NSObject, XMLParserDelegate {
 	private let literoj: [String: String]
 	
 	var arbo: [ArtikolNodo] = [ArtikolNodo(tipo: .radiko)]
+	var rezultoj: ArtikolAnalizRezulto?
 	
 	init(_ konteksto: NSManagedObjectContext, literoj: [String: String]) {
 		self.konteksto = konteksto
@@ -71,8 +74,9 @@ extension ArtikolAnalizilo {
 	public static func legi(
 		el indikilo: String,
 		en konteksto: NSManagedObjectContext,
+		lingvoj: [String: String],
 		literoj: [String: String]
-	) {
+	) -> ArtikolAnalizRezulto? {
 		let artikolAnalizilo = ArtikolAnalizilo(konteksto, literoj: literoj)
 		let datumoj = try! Data(contentsOf: URL(fileURLWithPath: indikilo))
 		let analizilo = XMLParser(data: datumoj)
@@ -84,7 +88,10 @@ extension ArtikolAnalizilo {
 		
 		let dosierNomo = indikilo.split(separator: "/").last!
 		let indekso = String(dosierNomo[..<dosierNomo.index(dosierNomo.endIndex, offsetBy: -4)])
-		let artikolo = kreiArtikolon(el: artikolAnalizilo.arbo.first!, indekso: indekso)
-		print(artikolo.subartikoloj.first!.vortoj.first!.teksto)
+		return analizi(
+			arbon: artikolAnalizilo.arbo.first!,
+			indekso: indekso,
+			lingvoj: lingvoj
+		)
 	}
 }

@@ -13,7 +13,6 @@ import CoreData
     Reprezentas la enhavojn de tuta paĝo en la vortaro.
 */
 public final class Artikolo {
-    
     public let titolo: String
     public let radiko: String
     public let indekso: String

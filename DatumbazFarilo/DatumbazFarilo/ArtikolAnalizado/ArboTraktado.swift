@@ -1,12 +1,12 @@
 import ReVoModelojOSX
 
-func kreiArtikolon(el arbo: ArtikolNodo, indekso: String) -> Artikolo {
+func analizi(arbon arbo: ArtikolNodo, indekso: String, lingvoj: [String: String]) -> ArtikolAnalizRezulto? {
 	let stato = Stato()
 	stato.artikolFabriko.indekso = indekso
 	
 	_ = traktiFilojn(de: arbo, stato: stato)
 	
-	return stato.artikolFabriko.fabriki()!
+	return stato.rezultoj(lingvoj: lingvoj)
 }
 
 func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) -> String? {
