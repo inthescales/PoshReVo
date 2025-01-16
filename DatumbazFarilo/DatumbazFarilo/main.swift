@@ -25,25 +25,52 @@ FakoAnalizilo.registri(fakojn: fakoj, en: konteksto)
 let mallongigoj = MallongigoAnalizilo.legi(el: grundIndiko + "/cfg/mallongigoj.xml")
 MallongigoAnalizilo.registri(mallongigojn: mallongigoj, en: konteksto)
 
-StiloAnalizilo2.legi(el: grundIndiko + "/cfg/stiloj.xml", en: konteksto)
+let stiloj = StiloAnalizilo.legi(el: grundIndiko + "/cfg/stiloj.xml")
+StiloAnalizilo.registri(stilojn: stiloj, en: konteksto)
+
 Oficialecoj.aldoni(al: konteksto)
 let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
 
 // Legi artikolojn
 
-var artikoloj: [Artikolo] = []
-var serchTradukoj: [String: [SerchTraduko]] = [:]
+var artikolRezultoj: [ArtikolAnalizRezulto] = []
+
+let legotaj = [
+	revoIndiko + "/revo/abak.xml"
+	//revoIndiko + "/revo/not.xml"
+]
 
 let lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in
 	dict[lingvo.kodo] = lingvo
 }
-if let rezulto = ArtikolAnalizilo.legi(
-	el: revoIndiko + "/revo/abak.xml",
-	en: konteksto,
-	lingvoj: lingvoDict,
-	literoj: literoj
-) {
+
+let stiloDict = stiloj.reduce(into: [String: String]()) { dict, stilo in
+	dict[stilo.kodo] = stilo.nomo
+}
+
+func legiArtikolon(che indiko: String, lingvoDict: [String: Lingvo], stiloDict: [String: String]) -> ArtikolAnalizRezulto? {
+	if let rezulto = ArtikolAnalizilo.legi(
+		el: indiko,
+		en: konteksto,
+		lingvoj: lingvoDict,
+		stiloj: stiloDict,
+		literoj: literoj
+	) {
+		return rezulto
+	}
+	
+	return nil
+}
+
+var artikoloj: [Artikolo] = []
+var serchTradukoj: [String: [SerchTraduko]] = [:]
+for indiko in legotaj {
+	guard let rezulto = legiArtikolon(che: indiko, lingvoDict: lingvoDict, stiloDict: stiloDict) else {
+		continue
+	}
+	
 	artikoloj.append(rezulto.artikolo)
+	print(rezulto.artikolo.subartikoloj[0].vortoj.forEach { print($0.teksto + "\n\n--------\n\n")})
 	
 	for (lingvo, tradukoj) in rezulto.serchTradukoj {
 		if serchTradukoj[lingvo] == nil {
@@ -64,13 +91,13 @@ for artikolo in artikoloj {
 
 try! konteksto.save()
 
-// Generi tekstojn
-
-TekstFarilo.generiTekstojn(fakoj: fakoj, mallongigoj: mallongigoj, destinIndiko: produktajhIndiko)
-
 // Fari trie-on
 
-let trieFarilo = TrieFarilo(konteksto: konteksto, tradukaro: serchTradukoj)
-trieFarilo.konstruiChiuTrie(kodoj: lingvoj.map { $0.kodo })
+// let trieFarilo = TrieFarilo(konteksto: konteksto, tradukaro: serchTradukoj)
+// trieFarilo.konstruiChiuTrie(kodoj: lingvoj.map { $0.kodo })
+
+// Generi tekstojn
+
+// TekstFarilo.generiTekstojn(fakoj: fakoj, mallongigoj: mallongigoj, destinIndiko: produktajhIndiko)
 
 print("All done :)")

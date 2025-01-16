@@ -100,9 +100,17 @@ struct ArtikolFabriko {
 }
 
 class Stato {
+	init(stiloj: [String: String]) {
+		self.stiloj = stiloj
+	}
+	
 	var artikolFabriko = ArtikolFabriko()
 	var subartikoloFabriko: SubartikoloFabriko?
 	var vortoFabriko: VortoFabriko?
+	
+	// MARK: Grundaĵoj
+	
+	let stiloj: [String: String]
 	
 	// MARK: Artikol-informoj
 	
@@ -132,6 +140,12 @@ class Stato {
 	/// Necesas por ke ni sciu ĉu la procezo ankoraŭ estas ene de senco, aŭ ĉu ĝi jam eliras (ekz. kiam ni renkontas tradukon post ĉiuj sencoj en derivaĵo)
 	var nunaSenco: Int?
 	
+	/// Samkiel `lastaSenco` je subsencoj
+	var lastaSubsenco: Int?
+
+	/// Samkiel `nunaSenco` je subsencoj
+	var nunaSubsenco: Int?
+	
 	var marko: String? {
 		for tipo in cheno.reversed() {
 			switch tipo {
@@ -146,6 +160,9 @@ class Stato {
 		
 		return nil
 	}
+	
+	/// Por ĉiu marko kiu aperas en senco, la numero de tiu senco (por resolvi 'sncref'-ojn)
+	var sencMarkoj: [String: Int] = [:]
 	
 	// MARK: Tradukoj
 	

@@ -1,23 +1,24 @@
 import Foundation
 import CoreData
 
+import ReVoModelojOSX
+import ReVoDatumbazoOSX
+
 /// Analizas XMLan dosieron enhavantan liston da stiloj, kaj aldonas ilin al la datumbazo
 /// Parses the XML file containing the list of styles, and adds them to the database
-class StiloAnalizilo2: NSObject, XMLParserDelegate {
-	private let konteksto: NSManagedObjectContext
+class StiloAnalizilo: NSObject, XMLParserDelegate {
+	var stiloj: [Stilo] = []
 	
-	private var nunaStilo: NSManagedObject?
+	private var nunaStilo: String?
 	private var teksto: String = ""
-	private var kvanto = 0
 	
-	init(_ konteksto: NSManagedObjectContext) {
-		self.konteksto = konteksto
+	override init() {
+		super.init()
 		print("Legas stilojn")
 	}
 	
 	func parserDidEndDocument(_ parser: XMLParser) {
-		try! konteksto.save()
-		print("Legis \(kvanto) stilojn")
+		print("Legis \(stiloj.count) stilojn")
 	}
 	
 	func parser(
@@ -28,9 +29,8 @@ class StiloAnalizilo2: NSObject, XMLParserDelegate {
 		attributes attributeDict: [String : String] = [:]
 	) {
 		if elementName == "stilo",
-			let kodo = attributeDict["kodo"] {
-			nunaStilo = NSEntityDescription.insertNewObject(forEntityName: "Stilo", into: konteksto)
-			nunaStilo?.setValue(kodo, forKey: "kodo")
+			let mll = attributeDict["kodo"] {
+			nunaStilo = mll
 			teksto = ""
 		}
 	}
@@ -42,23 +42,33 @@ class StiloAnalizilo2: NSObject, XMLParserDelegate {
 	func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
 		if elementName == "stilo",
 		   let nunaStilo = nunaStilo {
-			nunaStilo.setValue(teksto, forKey: "nomo")
-			kvanto += 1
+			stiloj.append(Stilo(kodo: nunaStilo, nomo: teksto))
 		}
 	}
 }
 
 // MARK: - Vokilo
 
-extension StiloAnalizilo2 {
-	/// Legas stilojn el la donata indikilo, en la donatan datumbaz-kontekston
-	/// Reads styles from the given file path, into the given database context
-	public static func legi(el indikilo: String, en konteksto: NSManagedObjectContext) {
-				
-		let stiloAnalizilo = StiloAnalizilo2(konteksto)
+extension StiloAnalizilo {
+	public static func registri(
+		stilojn stiloj: [Stilo],
+		en konteksto: NSManagedObjectContext) {
+		for stilo in stiloj {
+			stilo.skribi(en: konteksto)
+		}
+		
+		try! konteksto.save()
+	}
+	
+	/// Legas Stilojn el la donata indikilo, en la donatan datumbaz-kontekston
+	/// Reads abbreviations from the given file path, into the given database context
+	public static func legi(el indikilo: String) -> [Stilo] {
+		let StiloAnalizilo = StiloAnalizilo()
 		let datumoj = try! Data(contentsOf: URL(fileURLWithPath: indikilo))
 		let analizilo = XMLParser(data: datumoj)
-		analizilo.delegate = stiloAnalizilo
+		analizilo.delegate = StiloAnalizilo
 		analizilo.parse()
+		
+		return StiloAnalizilo.stiloj
 	}
 }

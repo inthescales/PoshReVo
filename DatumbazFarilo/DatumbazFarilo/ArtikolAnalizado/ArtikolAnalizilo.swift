@@ -75,6 +75,7 @@ extension ArtikolAnalizilo {
 		el indikilo: String,
 		en konteksto: NSManagedObjectContext,
 		lingvoj: [String: Lingvo],
+		stiloj: [String: String],
 		literoj: [String: String]
 	) -> ArtikolAnalizRezulto? {
 		let artikolAnalizilo = ArtikolAnalizilo(konteksto, literoj: literoj)
@@ -91,7 +92,8 @@ extension ArtikolAnalizilo {
 		return analizi(
 			arbon: artikolAnalizilo.arbo.first!,
 			indekso: indekso,
-			lingvoj: lingvoj
+			lingvoj: lingvoj,
+			stiloj: stiloj
 		)
 	}
 }

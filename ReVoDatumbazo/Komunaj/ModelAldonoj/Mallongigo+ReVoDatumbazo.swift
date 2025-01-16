@@ -31,18 +31,21 @@ extension Mallongigo {
     }
 }
 
-// MARK: - Equatable
+// TODO: Forigi, se ne necesas
 
-extension Mallongigo: Equatable {
-    public static func ==(lhs: Mallongigo, rhs: Mallongigo) -> Bool {
-        return lhs.kodo == rhs.kodo && lhs.nomo == rhs.nomo
-    }
-}
-
-// MARK: - Comparable
-
-extension Mallongigo: Comparable {
-    public static func < (lhs: Mallongigo, rhs: Mallongigo) -> Bool {
-        return lhs.nomo.compare(rhs.nomo, options: .caseInsensitive, range: nil, locale: Locale(identifier: "eo")) == .orderedAscending
-    }
-}
+//
+//// MARK: - Equatable
+//
+//extension Mallongigo: Equatable {
+//    public static func ==(lhs: Mallongigo, rhs: Mallongigo) -> Bool {
+//        return lhs.kodo == rhs.kodo && lhs.nomo == rhs.nomo
+//    }
+//}
+//
+//// MARK: - Comparable
+//
+//extension Mallongigo: Comparable {
+//    public static func < (lhs: Mallongigo, rhs: Mallongigo) -> Bool {
+//        return lhs.nomo.compare(rhs.nomo, options: .caseInsensitive, range: nil, locale: Locale(identifier: "eo")) == .orderedAscending
+//    }
+//}

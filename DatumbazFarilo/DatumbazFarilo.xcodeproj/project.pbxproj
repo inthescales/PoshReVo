@@ -14,7 +14,7 @@
 		0049F3442D2F5317002ABBFE /* ReVoModelojOSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0049F34B2D302E93002ABBFE /* FakoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34A2D302E93002ABBFE /* FakoAnalizilo.swift */; };
 		0049F34D2D3030B9002ABBFE /* MallongigoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34C2D3030B9002ABBFE /* MallongigoAnalizilo.swift */; };
-		0049F34F2D30316E002ABBFE /* StiloAnalizilo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34E2D30316E002ABBFE /* StiloAnalizilo2.swift */; };
+		0049F34F2D30316E002ABBFE /* StiloAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34E2D30316E002ABBFE /* StiloAnalizilo.swift */; };
 		0049F3512D303383002ABBFE /* Oficialecoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3502D303383002ABBFE /* Oficialecoj.swift */; };
 		0049F3532D303970002ABBFE /* KreiDatumbazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3522D303970002ABBFE /* KreiDatumbazon.swift */; };
 		0049F3552D304BF0002ABBFE /* ArtikolAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3542D304BF0002ABBFE /* ArtikolAnalizilo.swift */; };
@@ -57,7 +57,7 @@
 		0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModelojOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0049F34A2D302E93002ABBFE /* FakoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakoAnalizilo.swift; sourceTree = "<group>"; };
 		0049F34C2D3030B9002ABBFE /* MallongigoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoAnalizilo.swift; sourceTree = "<group>"; };
-		0049F34E2D30316E002ABBFE /* StiloAnalizilo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloAnalizilo2.swift; sourceTree = "<group>"; };
+		0049F34E2D30316E002ABBFE /* StiloAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloAnalizilo.swift; sourceTree = "<group>"; };
 		0049F3502D303383002ABBFE /* Oficialecoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oficialecoj.swift; sourceTree = "<group>"; };
 		0049F3522D303970002ABBFE /* KreiDatumbazon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KreiDatumbazon.swift; sourceTree = "<group>"; };
 		0049F3542D304BF0002ABBFE /* ArtikolAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolAnalizilo.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 				0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */,
 				0049F34A2D302E93002ABBFE /* FakoAnalizilo.swift */,
 				0049F34C2D3030B9002ABBFE /* MallongigoAnalizilo.swift */,
-				0049F34E2D30316E002ABBFE /* StiloAnalizilo2.swift */,
+				0049F34E2D30316E002ABBFE /* StiloAnalizilo.swift */,
 				0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */,
 				0049F3502D303383002ABBFE /* Oficialecoj.swift */,
 			);
@@ -222,7 +222,7 @@
 				0049F3582D31F946002ABBFE /* ArtikolNodo.swift in Sources */,
 				0049F36B2D384D0A002ABBFE /* TekstFarilo.swift in Sources */,
 				0049F3532D303970002ABBFE /* KreiDatumbazon.swift in Sources */,
-				0049F34F2D30316E002ABBFE /* StiloAnalizilo2.swift in Sources */,
+				0049F34F2D30316E002ABBFE /* StiloAnalizilo.swift in Sources */,
 				0049F35F2D331487002ABBFE /* ArboModeloj.swift in Sources */,
 				0049F36A2D384D0A002ABBFE /* TrieFarilo.swift in Sources */,
 				0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo.swift in Sources */,

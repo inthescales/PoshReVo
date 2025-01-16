@@ -25,6 +25,16 @@ func refSimbolo(tipo: String) -> String? {
 	}
 }
 
+func subsencLitero(por numero: Int) -> String? {
+	let aboco = "abcdefghijklmnoprstuvz"
+	guard numero < aboco.count else {
+		return nil
+	}
+	
+	let indekso = aboco.index(aboco.startIndex, offsetBy: numero - 1)
+	return String(aboco[indekso])
+}
+
 /// Liveras tekston, ĝuste kiel ĝi aperu en artikolo, por ĉiuj tradukoj de unu lingvo
 func prepariTradukTekstojn(tradukoj: [ArtikolTraduko]) -> String {
 	var teksto = ""

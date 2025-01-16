@@ -4,12 +4,12 @@ import CoreData
 /// Kreas novan datumbazon en destinon el fontoj je la font-indiko, liveras 'managed object' kontekston
 /// Creates a new database at the destination using data in the source path, returns managed object context
 func kreiDatumbazon(fontIndiko: String, destino: String) -> NSManagedObjectContext {
-	var managedObjectModel: NSManagedObjectModel = {
+	let managedObjectModel: NSManagedObjectModel = {
 		let momdIndiko = URL(fileURLWithPath: fontIndiko + "/test.momd")
 		return NSManagedObjectModel(contentsOf: momdIndiko)!
 	}()
 
-	var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+	let persistentStoreCoordinator: NSPersistentStoreCoordinator = {
 		let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
 		let datumbazUrl = URL(fileURLWithPath: destino)
 		
@@ -34,7 +34,7 @@ func kreiDatumbazon(fontIndiko: String, destino: String) -> NSManagedObjectConte
 		return coordinator
 	}()
 
-	var managedObjectContext: NSManagedObjectContext = {
+	let managedObjectContext: NSManagedObjectContext = {
 		let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
 		managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
 		return managedObjectContext
