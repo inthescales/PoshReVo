@@ -36,8 +36,9 @@ let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
 var artikolRezultoj: [ArtikolAnalizRezulto] = []
 
 let legotaj = [
-	revoIndiko + "/revo/abak.xml"
-	//revoIndiko + "/revo/not.xml"
+	//revoIndiko + "/revo/abak.xml"
+	//revoIndiko + "/revo/not.xml",
+	revoIndiko + "/revo/per.xml"
 ]
 
 let lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in
@@ -70,7 +71,10 @@ for indiko in legotaj {
 	}
 	
 	artikoloj.append(rezulto.artikolo)
-	print(rezulto.artikolo.subartikoloj[0].vortoj.forEach { print($0.teksto + "\n\n--------\n\n")})
+	for subartikolo in rezulto.artikolo.subartikoloj {
+		print(subartikolo.teksto)
+		print(subartikolo.vortoj.forEach { print($0.titolo + " (\($0.ofc ?? "n"))" + "\n---\n" + $0.teksto + "\n\n--------\n\n")})
+	}
 	
 	for (lingvo, tradukoj) in rezulto.serchTradukoj {
 		if serchTradukoj[lingvo] == nil {

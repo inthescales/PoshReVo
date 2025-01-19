@@ -2,6 +2,7 @@ enum NodTipo {
 	case radiko
 	case vortaro
 	case art(mrk: String)
+	case subart
 	case kap
 	case rad
 	case ofc
@@ -15,6 +16,7 @@ enum NodTipo {
 	case dif
 	case ekz
 	case rim
+	case em
 	case fnt
 	case aut
 	case bib
@@ -24,7 +26,7 @@ enum NodTipo {
 	case klr(tip: String?)
 	case ref(tip: String?, cel: String)
 	case refgrp(tip: String)
-	case sncref(ref: String)
+	case sncref(ref: String?)
 	case trd(lng: String?)
 	case trdgrp(lng: String)
 	case pr
@@ -38,6 +40,8 @@ enum NodTipo {
 			return .vortaro
 		case "art":
 			return .art(mrk: ecoj["mrk"]!)
+		case "subart":
+			return .subart
 		case "kap":
 			return .kap
 		case "rad":
@@ -64,6 +68,8 @@ enum NodTipo {
 			return .ekz
 		case "rim":
 			return .rim
+		case "em":
+			return .em
 		case "fnt":
 			return .fnt
 		case "aut":
@@ -83,7 +89,7 @@ enum NodTipo {
 		case "refgrp":
 			return .refgrp(tip: ecoj["tip"]!)
 		case "sncref":
-			return .sncref(ref: ecoj["ref"]!)
+			return .sncref(ref: ecoj["ref"])
 		case "trd":
 			return .trd(lng: ecoj["lng"])
 		case "trdgrp":

@@ -25,6 +25,18 @@ func refSimbolo(tipo: String) -> String? {
 	}
 }
 
+/// Oficialeco, en la formo per kiu ĝi estu konserivita en ofcvortoj
+func konserOficialeco(ofc: String?) -> String {
+	switch ofc {
+	case nil:
+		return "n"
+	case "*", "1", "2", "3", "4", "5", "6", "7", "8", "9":
+		return ofc!
+	default:
+		return "a"
+	}
+}
+
 func subsencLitero(por numero: Int) -> String? {
 	let aboco = "abcdefghijklmnoprstuvz"
 	guard numero < aboco.count else {
@@ -33,6 +45,30 @@ func subsencLitero(por numero: Int) -> String? {
 	
 	let indekso = aboco.index(aboco.startIndex, offsetBy: numero - 1)
 	return String(aboco[indekso])
+}
+
+func romajCiferoj(por nombro: Int) -> String {
+	let arabaj = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+	let romiaj = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+			
+	var rezulto = ""
+	var komenca = nombro
+		
+	for j in 0..<romiaj.count {
+		let litero = romiaj[j]
+		let arabaSumo = arabaj[j]
+		let div = komenca / arabaSumo
+		
+		if div > 0 {
+			for i in 0..<div {
+				rezulto += litero
+			}
+			
+			komenca -= arabaSumo * div
+		}
+	}
+
+	return rezulto
 }
 
 /// Liveras tekston, ĝuste kiel ĝi aperu en artikolo, por ĉiuj tradukoj de unu lingvo

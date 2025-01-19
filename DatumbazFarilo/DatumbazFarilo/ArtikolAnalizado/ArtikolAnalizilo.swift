@@ -46,11 +46,16 @@ class ArtikolAnalizilo: NSObject, XMLParserDelegate {
 	}
 	
 	func parser(_ parser: XMLParser, resolveExternalEntityName name: String, systemID: String?) -> Data? {
-		if let litero = literoj[name] {
+		// Kodoj kiuj aperas en artikoloj, sed ne troviĝas en subtenaj dosieroj, la mia scio
+		let specialaj = [
+			"Z": "Zamenhof"
+		]
+		
+		if let trovajho = literoj[name] ?? specialaj[name] {
 			if let nunaNodo = arbo.last {
-				nunaNodo.filoj.append(ArtikolNodo(tipo: .teksto(litero)))
+				nunaNodo.filoj.append(ArtikolNodo(tipo: .teksto(trovajho)))
 			}
-			return litero.data(using: .utf8)
+			return trovajho.data(using: .utf8)
 		}
 		
 		return nil
