@@ -289,7 +289,7 @@ func trakti(sencon senco: ArtikolNodo, marko: String?, stato: Stato) -> String {
 	stato.nunaSenco = stato.lastaSenco
 	
 	if let marko = marko {
-		stato.sencMarkoj[marko] = stato.nunaSenco
+		stato.markSencoj[marko] = stato.nunaSenco
 	}
 	
 	let subsencKvanto = senco.filoj.map { if case .subsnc = $0.tipo { return 1 } else { return 0 }}.reduce(0, +)
@@ -449,7 +449,11 @@ func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String, stato: Stat
 }
 
 func trakti(sencReferencon sencReferenco: ArtikolNodo, marko: String, stato: Stato) -> String {
-	return "!!!SNCREF!!!"
+	// Pro tio ke ne eblas antaŭscii la ordon laŭ kiu la artikoloj legiĝos,
+	// kaj tio ke (mi supozas) eblas ke estos cirklaj senc-referencoj, ĉi tie
+	// nur eblas marki la lokojn en kiu superskriptoj devos aperi. En posta
+	// fazo, ni anstataŭos ilin per la finaj tekstoj
+	return "<sncref mrk=\"\(marko)\"/>"
 }
 
 func traktiTildon(stato: Stato) -> String {
@@ -512,7 +516,7 @@ func trakti(tradukon traduko: ArtikolNodo, lingvo: String, stato: Stato) {
 	teksto = teksto.kunpremi(" ")
 	
 	if false {
-		// Tradukoj en ekzemploj
+		// TODO: Tradukoj en ekzemploj
 //		let artikolTraduko = ArtikolTraduko(
 //			nomo: indekso,
 //			teksto: teksto,

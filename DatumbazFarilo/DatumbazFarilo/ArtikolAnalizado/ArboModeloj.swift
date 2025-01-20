@@ -4,6 +4,7 @@ import ReVoModelojOSX
 struct ArtikolAnalizRezulto {
 	let artikolo: Artikolo
 	let serchTradukoj: [String: [SerchTraduko]]
+	let markSencoj: [String: Int]
 }
 
 /// Traduko tiel kiel ĝi aperos en artikolo
@@ -162,7 +163,7 @@ class Stato {
 	}
 	
 	/// Por ĉiu marko kiu aperas en senco, la numero de tiu senco (por resolvi 'sncref'-ojn)
-	var sencMarkoj: [String: Int] = [:]
+	var markSencoj: [String: Int] = [:]
 	
 	// MARK: Tradukoj
 	
@@ -187,7 +188,8 @@ class Stato {
 		
 		return ArtikolAnalizRezulto(
 			artikolo: artikolo,
-			serchTradukoj: serchTradukoj
+			serchTradukoj: serchTradukoj,
+			markSencoj: markSencoj
 		)
 
 	}

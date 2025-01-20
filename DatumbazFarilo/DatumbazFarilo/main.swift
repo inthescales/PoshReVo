@@ -65,6 +65,8 @@ func legiArtikolon(che indiko: String, lingvoDict: [String: Lingvo], stiloDict: 
 
 var artikoloj: [Artikolo] = []
 var serchTradukoj: [String: [SerchTraduko]] = [:]
+var markSencoj: [String: Int] = [:]
+
 for indiko in legotaj {
 	guard let rezulto = legiArtikolon(che: indiko, lingvoDict: lingvoDict, stiloDict: stiloDict) else {
 		continue
@@ -83,6 +85,16 @@ for indiko in legotaj {
 		
 		serchTradukoj[lingvo]? += tradukoj
 	}
+	
+	rezulto.markSencoj.forEach { marko, senco in
+		markSencoj[marko] = senco
+	}
+}
+
+// Posttrakti artikolojn
+
+artikoloj = artikoloj.map { artikolo in
+	return postTrakti(artikolon: artikolo, markSencoj: markSencoj)
 }
 
 // Skribi artikolojn en datumbazon
