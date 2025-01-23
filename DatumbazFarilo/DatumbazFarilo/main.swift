@@ -8,7 +8,7 @@ print(FileManager.default.currentDirectoryPath)
 let radiko = ""
 
 let fontIndiko = radiko + "/fontoj"
-var revoIndiko = fontIndiko + "/revo"
+var revoIndiko = fontIndiko + "/revo/revo/"
 var grundIndiko = fontIndiko + "/grundo"
 
 let produktajhIndiko = radiko + "/produktajhoj"
@@ -36,10 +36,11 @@ let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
 var artikolRezultoj: [ArtikolAnalizRezulto] = []
 
 let legotaj = [
-	//revoIndiko + "/revo/abak.xml"
-	//revoIndiko + "/revo/not.xml",
-	revoIndiko + "/revo/per.xml"
+	// "om.xml"
+	"not.xml"
 ]
+
+// let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
 
 let lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in
 	dict[lingvo.kodo] = lingvo
@@ -68,7 +69,7 @@ var serchTradukoj: [String: [SerchTraduko]] = [:]
 var markSencoj: [String: Int] = [:]
 
 for indiko in legotaj {
-	guard let rezulto = legiArtikolon(che: indiko, lingvoDict: lingvoDict, stiloDict: stiloDict) else {
+	guard let rezulto = legiArtikolon(che: revoIndiko + indiko, lingvoDict: lingvoDict, stiloDict: stiloDict) else {
 		continue
 	}
 	

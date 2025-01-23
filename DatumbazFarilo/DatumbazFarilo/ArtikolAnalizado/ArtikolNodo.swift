@@ -1,13 +1,17 @@
+/// Tipo de XML-nodo
+/// Vidu priskribon de dokument-strukturo: https://revuloj.github.io/temoj/rnc
 enum NodTipo {
 	case radiko
 	case vortaro
 	case art(mrk: String)
 	case subart
 	case kap
+	case mlg
+	case vari
 	case rad
 	case ofc
 	case drv(mrk: String)
-	case tld
+	case tld(lit: String?)
 	case gra
 	case vspec
 	case snc(mrk: String?)
@@ -44,6 +48,10 @@ enum NodTipo {
 			return .subart
 		case "kap":
 			return .kap
+		case "mlg":
+			return .mlg
+		case "var":
+			return .vari
 		case "rad":
 			return .rad
 		case "ofc":
@@ -51,7 +59,7 @@ enum NodTipo {
 		case "drv":
 			return .drv(mrk: ecoj["mrk"]!)
 		case "tld":
-			return .tld
+			return .tld(lit: ecoj["lit"])
 		case "gra":
 			return .gra
 		case "vspec":
