@@ -9,7 +9,7 @@ class ArtikolAnalizilo: NSObject, XMLParserDelegate {
 	private let konteksto: NSManagedObjectContext
 	private let literoj: [String: String]
 	
-	var arbo: [ArtikolNodo] = [ArtikolNodo(tipo: .radiko)]
+	var arbo: [ArtikolNodo] = [ArtikolNodo(tipo: .arbo)]
 	var rezultoj: ArtikolAnalizRezulto?
 	
 	init(_ konteksto: NSManagedObjectContext, literoj: [String: String]) {

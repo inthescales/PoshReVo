@@ -35,11 +35,11 @@ let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
 
 var artikolRezultoj: [ArtikolAnalizRezulto] = []
 
-let legotaj = [
-	"majoritat.xml"
-]
+//let legotaj = [
+//	"majoritat.xml"
+//]
 
-//let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
+let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
 
 let lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in
 	dict[lingvo.kodo] = lingvo
