@@ -20,7 +20,7 @@ func postTrakti(artikolon artikolo: Artikolo, markSencoj: [String: Int]) -> Arti
 	for subartikolo in artikolo.subartikoloj {
 		var novajVortoj: [Vorto] = []
 		for vorto in subartikolo.vortoj {
-			var novaVorto = vorto.kopio(teksto: anstataui(en: vorto.teksto))
+			let novaVorto = vorto.kopio(teksto: anstataui(en: vorto.teksto))
 			novajVortoj.append(novaVorto)
 		}
 		let novaSubartikolo = Subartikolo(

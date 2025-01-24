@@ -531,6 +531,9 @@ func trakti(
 		   let simbolo = refSimbolo(tipo: tipo) {
 			teksto += simbolo + " "
 		}
+	case .snc:
+		// Kelkfoje ref ene de snc aperas sub aliaj tekstoj. vd. 'sal' (ekkrio)
+		break
 	default:
 		break
 	}
@@ -632,7 +635,7 @@ func trakti(uzon uzo: ArtikolNodo, tipo: String, stato: Stato) -> String {
 	switch tipo {
 	case "fak":
 		return "[\(teksto)] "
-	case "stl":
+	case "klr", "stl":
 		let stilTeksto = stato.stiloj[teksto] ?? teksto
 		return "(\(stilTeksto)) "
 	default:
