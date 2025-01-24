@@ -45,22 +45,6 @@ class ArtikolAnalizilo: NSObject, XMLParserDelegate {
 		}
 	}
 	
-	func parser(_ parser: XMLParser, resolveExternalEntityName name: String, systemID: String?) -> Data? {
-		// Kodoj kiuj aperas en artikoloj, sed ne troviĝas en subtenaj dosieroj, la mia scio
-		let specialaj = [
-			"Z": "Zamenhof"
-		]
-		
-		if let trovajho = literoj[name] ?? specialaj[name] {
-			if let nunaNodo = arbo.last {
-				nunaNodo.filoj.append(ArtikolNodo(tipo: .teksto(trovajho)))
-			}
-			return trovajho.data(using: .utf8)
-		}
-		
-		return nil
-	}
-	
 	func parser(
 		_ parser: XMLParser,
 		didEndElement elementName: String,
@@ -84,7 +68,9 @@ extension ArtikolAnalizilo {
 		literoj: [String: String]
 	) -> ArtikolAnalizRezulto? {
 		let artikolAnalizilo = ArtikolAnalizilo(konteksto, literoj: literoj)
-		let datumoj = try! Data(contentsOf: URL(fileURLWithPath: indikilo))
+		var teksto = try! String(contentsOfFile: indikilo, encoding: .utf8)
+		teksto = Antautraktado.antautrakti(tekston: teksto, literoj: literoj)
+		let datumoj = teksto.data(using: .utf8)!
 		let analizilo = XMLParser(data: datumoj)
 		analizilo.externalEntityResolvingPolicy = .always
 		analizilo.delegate = artikolAnalizilo

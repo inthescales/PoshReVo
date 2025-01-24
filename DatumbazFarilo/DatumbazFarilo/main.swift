@@ -5,7 +5,7 @@ import ReVoModelojOSX
 import ReVoDatumbazoOSX
 
 print(FileManager.default.currentDirectoryPath)
-let radiko = ""
+let radiko = "/Users/robin/Desktop"
 
 let fontIndiko = radiko + "/fontoj"
 var revoIndiko = fontIndiko + "/revo/revo/"
@@ -36,11 +36,10 @@ let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
 var artikolRezultoj: [ArtikolAnalizRezulto] = []
 
 let legotaj = [
-	// "om.xml"
-	"not.xml"
+	"majoritat.xml"
 ]
 
-// let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
+//let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
 
 let lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in
 	dict[lingvo.kodo] = lingvo
@@ -74,10 +73,7 @@ for indiko in legotaj {
 	}
 	
 	artikoloj.append(rezulto.artikolo)
-	for subartikolo in rezulto.artikolo.subartikoloj {
-		print(subartikolo.teksto)
-		print(subartikolo.vortoj.forEach { print($0.titolo + " (\($0.ofc ?? "n"))" + "\n---\n" + $0.teksto + "\n\n--------\n\n")})
-	}
+	print(rezulto.artikolo)
 	
 	for (lingvo, tradukoj) in rezulto.serchTradukoj {
 		if serchTradukoj[lingvo] == nil {

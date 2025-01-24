@@ -8,10 +8,10 @@ enum NodTipo {
 	case kap
 	case mlg
 	case vari
-	case rad
+	case rad(vari: String?)
 	case ofc
 	case drv(mrk: String)
-	case tld(lit: String?)
+	case tld(lit: String?, vari: String?)
 	case gra
 	case vspec
 	case snc(mrk: String?)
@@ -20,7 +20,10 @@ enum NodTipo {
 	case dif
 	case ekz
 	case rim
+	case ctl
 	case em
+	case frm
+	case sub
 	case fnt
 	case aut
 	case bib
@@ -35,7 +38,9 @@ enum NodTipo {
 	case trdgrp(lng: String)
 	case pr
 	case ind
+	case baz
 	case url(ref: String)
+	case bld
 	case teksto(String)
 	
 	static func el(nomo: String, ecoj: [String: String]) -> NodTipo? {
@@ -53,13 +58,13 @@ enum NodTipo {
 		case "var":
 			return .vari
 		case "rad":
-			return .rad
+			return .rad(vari: ecoj["var"])
 		case "ofc":
 			return .ofc
 		case "drv":
 			return .drv(mrk: ecoj["mrk"]!)
 		case "tld":
-			return .tld(lit: ecoj["lit"])
+			return .tld(lit: ecoj["lit"], vari: ecoj["var"])
 		case "gra":
 			return .gra
 		case "vspec":
@@ -76,8 +81,14 @@ enum NodTipo {
 			return .ekz
 		case "rim":
 			return .rim
+		case "ctl":
+			return .ctl
 		case "em":
 			return .em
+		case "frm":
+			return .frm
+		case "sub":
+			return .sub
 		case "fnt":
 			return .fnt
 		case "aut":
@@ -106,10 +117,14 @@ enum NodTipo {
 			return .pr
 		case "ind":
 			return .ind
+		case "baz":
+			return .baz
 		case "url":
 			return .url(ref: ecoj["ref"]!)
 		case "teksto":
 			return .teksto(ecoj["teksto"]!)
+		case "bld":
+			return .bld
 		default:
 			return nil
 		}

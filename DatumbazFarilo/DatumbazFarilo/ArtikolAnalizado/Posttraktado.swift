@@ -5,7 +5,6 @@ import ReVoModelojOSX
 func postTrakti(artikolon artikolo: Artikolo, markSencoj: [String: Int]) -> Artikolo {
 	func anstataui(en teksto: String) -> String {
 		let regex = try! Regex("<sncref mrk=\"(.*?)\"\\/>")
-		//let matches = teksto.matches(of: regex)
 		return teksto.replacing(regex) { (match: Regex.Match) in
 			let marko = String(match.output[1].substring!)
 			// TODO: erari se indekso ne trivoĝas, kiam ni legos ĉiujn artikolojn

@@ -30,14 +30,10 @@ struct SubartikoloFabriko {
 	var vortoj: [Vorto] = []
 	
 	func fabriki() -> Subartikolo? {
-		if !vortoj.isEmpty {
-			return Subartikolo(
-				teksto: teksto,
-				vortoj: vortoj
-			)
-		}
-		
-		return nil
+		return Subartikolo(
+			teksto: teksto,
+			vortoj: vortoj
+		)
 	}
 }
 
@@ -114,6 +110,12 @@ class Stato {
 	let stiloj: [String: String]
 	
 	// MARK: Artikol-informoj
+	
+	var artikolRadiko: String? {
+		artikolFabriko.radiko
+	}
+	
+	var artikolRadikVariajhoj: [String: String] = [:]
 	
 	var artikolNomo: String? {
 		artikolFabriko.titolo
