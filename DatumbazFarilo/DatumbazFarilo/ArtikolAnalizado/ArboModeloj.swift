@@ -127,7 +127,11 @@ class Stato {
 	
 	// MARK: Arbo-tradirada stato
 	
+	/// Stako enhavanta la nod-tipojn de la ĉi-nodaj patroj
 	var cheno: [NodTipo] = []
+	
+	/// Stako enhavanta la nod-tipojn de la lastaj siboj
+	var sibStako: [NodTipo?] = []
 	
 	/// Titolo de nuna derivaĵo, plenteksta, kiel ĝi aperu en serĉrezultoj
 	var derivajhNomo: String?

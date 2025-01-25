@@ -36,10 +36,6 @@ class ArtikolAnalizilo: NSObject, XMLParserDelegate {
 			arbo.last?.filoj.append(novaNodo)
 		}
 		
-		if elementName == "url", let str = attributeDict["ref"] {
-			print("-----" + str)
-		}
-		
 		arbo.append(novaNodo)
 	}
 	
@@ -80,7 +76,6 @@ extension ArtikolAnalizilo {
 		analizilo.delegate = artikolAnalizilo
 		analizilo.parse()
 		
-		artikolAnalizilo.arbo.forEach { print($0.tipo) }
 		assert(artikolAnalizilo.arbo.count == 1, "Devas resti nur unu nodo")
 		
 		let dosierNomo = indikilo.split(separator: "/").last!

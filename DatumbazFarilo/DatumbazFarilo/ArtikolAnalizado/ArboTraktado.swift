@@ -107,11 +107,8 @@ func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) 
 }
 
 func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) -> String {
-	stato.cheno.append(nodo.tipo)
-	
 	var teksto = ""
-	
-	for filo in nodo.filoj {
+	traktiFilojn(de: nodo, stato: stato) { filo in
 		switch filo.tipo {
 		case .fnt:
 			// <fnt> ofte enkondukas nenecesajn spacojn - jen ni forigas ilin
@@ -121,18 +118,27 @@ func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = tru
 		}
 	}
 	
-	_ = stato.cheno.popLast()
 	return teksto
 }
 
 func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, farotajh: (ArtikolNodo) -> Void) {
 	stato.cheno.append(nodo.tipo)
+	stato.sibStako.append(nil)
 	
 	for filo in nodo.filoj {
 		farotajh(filo)
+		
+		if case .teksto(let sibTeksto) = filo.tipo {
+			if !sibTeksto.tondi().isEmpty {
+				stato.sibStako[stato.sibStako.count-1] = filo.tipo
+			}
+		} else {
+			stato.sibStako[stato.sibStako.count-1] = filo.tipo
+		}
 	}
 	
 	_ = stato.cheno.popLast()
+	_ = stato.sibStako.popLast()
 }
 
 func trakti(vortaron vortaro: ArtikolNodo, stato: Stato) {
@@ -515,25 +521,26 @@ func trakti(
 	referencon referenco: ArtikolNodo,
 	tipo: String?,
 	celo: String,
-	novaLinio: Bool = true,
 	montriSimbolon: Bool = true,
 	stato: Stato
 ) -> String {
 	var teksto = ""
 	
 	switch stato.cheno.last {
-	case .drv:
-		if novaLinio {
+	case .drv, .snc:
+		switch stato.sibStako.last {
+		case .ref:
+			teksto += " "
+			break
+		default:
 			teksto += "\n"
 		}
+
 		if montriSimbolon,
 		   let tipo = tipo,
 		   let simbolo = refSimbolo(tipo: tipo) {
 			teksto += simbolo + " "
 		}
-	case .snc:
-		// Kelkfoje ref ene de snc aperas sub aliaj tekstoj. vd. 'sal' (ekkrio)
-		break
 	default:
 		break
 	}
@@ -573,7 +580,6 @@ func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String, stato: Stat
 				referencon: filo,
 				tipo: tipo,
 				celo: cel,
-				novaLinio: false,
 				montriSimbolon: false,
 				stato: stato
 			)
