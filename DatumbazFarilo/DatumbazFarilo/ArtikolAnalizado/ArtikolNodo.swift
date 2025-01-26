@@ -11,12 +11,14 @@ enum NodTipo {
 	case ctl
 	case dif
 	case drv(mrk: String)
+	case esc
 	case ekz
 	case em
 	case fnt
 	case frm
 	case gra
 	case ind
+	case k
 	case kap
 	case ke
 	case klr(tip: String?)
@@ -34,7 +36,8 @@ enum NodTipo {
 	case sncref(ref: String?)
 	case sub
 	case subart
-	case subsnc
+	case subsnc(mrk: String?)
+	case sup
 	case teksto(String)
 	case tezrad
 	case tld(lit: String?, vari: String?)
@@ -67,6 +70,8 @@ enum NodTipo {
 			return .dif
 		case "drv":
 			return .drv(mrk: ecoj["mrk"]!)
+		case "esc":
+			return .esc
 		case "ekz":
 			return .ekz
 		case "em":
@@ -79,6 +84,8 @@ enum NodTipo {
 			return .gra
 		case "ind":
 			return .ind
+		case "k":
+			return .k
 		case "kap":
 			return .kap
 		case "ke":
@@ -112,9 +119,11 @@ enum NodTipo {
 		case "sub":
 			return .sub
 		case "subsnc":
-			return .subsnc
+			return .subsnc(mrk: ecoj["mrk"])
 		case "subart":
 			return .subart
+		case "sup":
+			return .sup
 		case "teksto":
 			return .teksto(ecoj["teksto"]!)
 		case "tezrad":

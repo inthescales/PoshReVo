@@ -2,6 +2,9 @@ import AppKit
 import Foundation
 
 enum Antautraktado {
+	/// Signoj kiuj ne povas aperi en XML-dosiero
+	static let kontrauleghaj = ["&", "<", ">"]
+	
 	/// Kodoj kiuj uziĝas en artikoloj, tamen mi ne scias kie ĝi difiniĝas
 	static let specialaj = [
 		"Z": "Zamenhof"
@@ -17,9 +20,7 @@ enum Antautraktado {
 		rezulto = rezulto.replacing(regex) { (match: Regex.Match) in
 			let kodo = String(match.output[1].substring!)
 			if let litero = literoj[kodo] {
-				if litero == "&" {
-					// Ne NEPRE ne liveru "&", ĉar XML ne povas enhavi "&"-on, kaj
-					// analizado malsukcesos
+				if kontrauleghaj.contains(litero) {
 					return String("&" + match.output[1].substring! + ";")
 				} else {
 					return litero

@@ -13,6 +13,8 @@ func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) 
 	switch nodo.tipo {
 	case .arbo:
 		break
+	case .esc:
+		return trakti(escepton: nodo, stato: stato)
 	case .vortaro:
 		trakti(vortaron: nodo, stato: stato)
 	case .art(let mrk):
@@ -21,6 +23,8 @@ func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) 
 		trakti(subartikolon: nodo, stato: stato)
 	case .kap:
 		_ = trakti(kapon: nodo, stato: stato)
+	case .k:
+		return trakti(kursivon: nodo, stato: stato)
 	case .ke:
 		return trakti(komunlingvan: nodo, stato: stato)
 	case .vari:
@@ -43,8 +47,8 @@ func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) 
 		return trakti(vortSpecon: nodo, stato: stato)
 	case .snc(let mrk):
 		return trakti(sencon: nodo, marko: mrk, stato: stato)
-	case .subsnc:
-		return trakti(subsencon: nodo, stato: stato)
+	case .subsnc(let mrk):
+		return trakti(subsencon: nodo, marko: mrk, stato: stato)
 	case .uzo(let tip):
 		return trakti(uzon: nodo, tipo: tip, stato: stato)
 	case .mlg:
@@ -63,6 +67,8 @@ func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) 
 		return trakti(formulon: nodo, stato: stato)
 	case .sub:
 		return trakti(indicon: nodo, stato: stato)
+	case .sup:
+		return trakti(altigitan: nodo, stato: stato)
 	case .nom:
 		return trakti(nomon: nodo, stato: stato)
 	case .nac:
@@ -261,6 +267,9 @@ func trakti(kapon kapo: ArtikolNodo, stato: Stato) -> (nomo: String, tildo: Stri
 				let filTeksto = trakti(radikon: filo, variajho: vari, stato: stato)
 				teksto += filTeksto
 				tildTeksto += "~"
+			case .ofc:
+				assert(stato.vortoFabriko?.ofc == nil, "Pluraj ofc-oj en unu derivajho")
+				stato.vortoFabriko?.ofc = trakti(oficialecon: filo, stato: stato)
 			case .teksto(let filTeksto):
 				teksto += filTeksto
 				tildTeksto += filTeksto
@@ -348,11 +357,21 @@ func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: Stato) {
 			teksto += filTeksto
 		case .ref(let tip, let cel):
 			teksto += trakti(referencon: filo, tipo: tip, celo: cel, stato: stato)
-		case .rim, .trd, .trdgrp:
+		case .refgrp(let tip):
+			teksto += trakti(referencGrupon: filo, tipo: tip, stato: stato)
+		case .rim:
+			teksto += trakti(rimarkon: filo, stato: stato)
+		case .trd, .trdgrp:
 			_ = trakti(nodon: filo, stato: stato)
 		case .fnt:
-			teksto = teksto.tondi()
-		case .bld, .teksto:
+			switch stato.sibStako.last {
+			case .uzo:
+				// XXX: Uzoj devas lasi spacon tekst-fine.
+				break
+			default:
+				teksto = teksto.tondi()
+			}
+		case .adm, .bld, .teksto:
 			break
 		default:
 			assert(false, "Neatendita filo")
@@ -397,7 +416,6 @@ func trakti(sencon senco: ArtikolNodo, marko: String?, stato: Stato) -> String {
 		stato.markSencoj[marko] = stato.nunaSenco
 	}
 	
-	let subsencKvanto = senco.filoj.map { if case .subsnc = $0.tipo { return 1 } else { return 0 }}.reduce(0, +)
 	var teksto = ""
 	traktiFilojn(de: senco, stato: stato) { filo in
 		switch filo.tipo {
@@ -409,11 +427,10 @@ func trakti(sencon senco: ArtikolNodo, marko: String?, stato: Stato) -> String {
 			teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
 		case .trd, .trdgrp:
 			_ = trakti(nodon: filo, stato: stato)
-		case .subsnc:
-			let filTeksto = trakti(subsencon: filo, stato: stato)
+		case .subsnc(let mrk):
+			let filTeksto = trakti(subsencon: filo, marko: mrk, stato: stato)
 			
-			if subsencKvanto > 1,
-			   let subsencNombro = stato.lastaSubsenco,
+			if let subsencNombro = stato.lastaSubsenco,
 			   let litero = subsencLitero(por: subsencNombro) {
 				teksto += "\n\n" + litero + ") "
 			}
@@ -437,7 +454,7 @@ func trakti(sencon senco: ArtikolNodo, marko: String?, stato: Stato) -> String {
 	return teksto
 }
 
-func trakti(subsencon subsenco: ArtikolNodo, stato: Stato) -> String {
+func trakti(subsencon subsenco: ArtikolNodo, marko: String?, stato: Stato) -> String {
 	if stato.lastaSubsenco == nil {
 		stato.lastaSubsenco = 0
 	}
@@ -506,7 +523,12 @@ func trakti(formulon formulo: ArtikolNodo, stato: Stato) -> String {
 
 func trakti(indicon indico: ArtikolNodo, stato: Stato) -> String {
 	let teksto = "<sub>" + traktiFilojn(de: indico, stato: stato).tondi() + "</sub>"
-	return teksto.kunpremi(" ").tondi()
+	return teksto.kunpremi(" ")
+}
+
+func trakti(altigitan altigita: ArtikolNodo, stato: Stato) -> String {
+	let teksto = "<sup>" + traktiFilojn(de: altigita, stato: stato).tondi() + "</sup>"
+	return teksto.kunpremi(" ")
 }
 
 func trakti(nomon nomo: ArtikolNodo, stato: Stato) -> String {
@@ -529,7 +551,7 @@ func trakti(
 	switch stato.cheno.last {
 	case .drv, .snc:
 		switch stato.sibStako.last {
-		case .ref:
+		case .ref, .refgrp:
 			teksto += " "
 			break
 		default:
@@ -564,8 +586,26 @@ func trakti(
 }
 
 func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String, stato: Stato) -> String {
-	var teksto = "\n"
-	if let simbolo = refSimbolo(tipo: tipo) {
+	var teksto = ""
+	switch stato.sibStako.last {
+	case .ref, .refgrp:
+		teksto += " "
+		break
+	default:
+		teksto += "\n"
+	}
+	
+	let montriSimbolon = {
+		switch stato.cheno.last {
+		case .drv, .snc, .subsnc:
+			return true
+		default:
+			return false
+		}
+	}()
+	
+	if montriSimbolon,
+	   let simbolo = refSimbolo(tipo: tipo) {
 		teksto += simbolo + " "
 	}
 	
@@ -663,6 +703,14 @@ func trakti(mallongigon mallongigo: ArtikolNodo, stato: Stato) -> String {
 	return (linio ? "\n" : "") + "(" + teksto + ")"
 }
 
+func trakti(escepton escepto: ArtikolNodo, stato: Stato) -> String {
+	return traktiFilojn(de: escepto, stato: stato)
+}
+
+func trakti(kursivon kursivajho: ArtikolNodo, stato: Stato) -> String {
+	// En la retejo, kursiva teksto aperas en tiparo "TeX-math"
+	return traktiFilojn(de: kursivajho, stato: stato)
+}
 func trakti(komunlingvan komunlingvajho: ArtikolNodo, stato: Stato) -> String {
 	return "<i>" + traktiFilojn(de: komunlingvajho, stato: stato) + "</i>"
 }
@@ -711,7 +759,8 @@ func trakti(tradukon traduko: ArtikolNodo, lingvo: String, stato: Stato) -> Stri
 			nomo: tildo,
 			teksto: teksto,
 			marko: marko,
-			senco: stato.nunaSenco
+			senco: stato.nunaSenco,
+			subsenco: stato.nunaSubsenco
 		)
 		stato.aldoni(artikolTradukon: artikolTraduko, lingvo: lingvo)
 		

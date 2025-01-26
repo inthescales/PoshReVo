@@ -76,12 +76,16 @@ func prepariTradukTekstojn(tradukoj: [ArtikolTraduko]) -> String {
 	var teksto = ""
 	
 	var montriSencon = false
+	var montriSubsencon = false
 	
 	for i in 0 ..< tradukoj.count {
 		
 		let nuna = tradukoj[i]
 		let lasta = (i > 0) ? tradukoj[i-1]: nil
-		if lasta != nil && lasta?.nomo != nuna.nomo { montriSencon = false}
+		if lasta != nil && lasta?.nomo != nuna.nomo {
+			montriSencon = false
+			montriSubsencon = false
+		}
 
 		for j in (i + 1) ..< tradukoj.count {
 			let nunnuna = tradukoj[j]
@@ -91,18 +95,28 @@ func prepariTradukTekstojn(tradukoj: [ArtikolTraduko]) -> String {
 			else if nuna.senco != nunnuna.senco {
 				montriSencon = true
 				break
+			} else if nuna.subsenco != nunnuna.subsenco {
+				montriSubsencon = true
+				break
 			}
 		}
 		
 		if lasta == nil ||
 			lasta?.nomo != nuna.nomo ||
-			lasta?.senco != nuna.senco {
+			lasta?.senco != nuna.senco ||
+			lasta?.subsenco != nuna.subsenco {
 			if !teksto.isEmpty {
 				teksto += "; "
 			}
 			teksto += "<a href=\"" + nuna.marko + "\">" + nuna.nomo
-			if montriSencon, let senco = nuna.senco, senco > 0 {
+			if montriSencon || montriSubsencon, 
+				let senco = nuna.senco, senco > 0 {
 				teksto += " " + String(senco)
+			}
+			if montriSubsencon,
+			   let subsenco = nuna.subsenco,
+			   let litero = subsencLitero(por: subsenco) {
+				teksto += "." + litero
 			}
 			teksto += "</a>: "
 		} else {

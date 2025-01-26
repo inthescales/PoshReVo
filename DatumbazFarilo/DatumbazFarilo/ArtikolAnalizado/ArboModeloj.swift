@@ -13,6 +13,7 @@ struct ArtikolTraduko {
 	let teksto: String
 	let marko: String
 	let senco: Int?
+	let subsenco: Int?
 }
 
 /// Traduko kiu estos serĉebla
