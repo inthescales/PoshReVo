@@ -35,9 +35,9 @@ let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
 
 var artikolRezultoj: [ArtikolAnalizRezulto] = []
 
-let legotaj = [
-	"sal1.xml"
-]
+//let legotaj = [
+//	"respon.xml"
+//]
 
 //let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
 

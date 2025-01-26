@@ -11,8 +11,10 @@ enum Antautraktado {
 	/// Aŭ la Swift-a `XMLParserDelegate` ne bone traktas liter-kodojn, aŭ mi ne komprenas kiel ĝi funkcias.
 	/// Iukaze, ĉi tie ni anstataŭas la literkodojn per siaj literoj
 	static func antautrakti(tekston teksto: String, literoj: [String: String]) -> String {
+		var rezulto = teksto
+		
 		let regex = try! Regex("&(.*?);")
-		return teksto.replacing(regex) { (match: Regex.Match) in
+		rezulto = rezulto.replacing(regex) { (match: Regex.Match) in
 			let kodo = String(match.output[1].substring!)
 			if let litero = literoj[kodo] {
 				if litero == "&" {
@@ -34,6 +36,13 @@ enum Antautraktado {
 				return ""
 			}
 		}
+		
+		// Certigi ke estas spaco inter ekzemploj
+		// Nur necesas dum artikol-analizado konstruas tekston paŝ-post-paŝe, sen intertempa
+		// strukturo.
+		rezulto = rezulto.replacingOccurrences(of: "</ekz><ekz>", with: "</ekz> <ekz>")
+		
+		return rezulto
 	}
 	
 	/// Legi HTML-kodon, aparte necesa por unikodo-signojn kiuj aperas en tradukoj

@@ -237,7 +237,7 @@ func trakti(kapon kapo: ArtikolNodo, stato: Stato) -> (nomo: String, tildo: Stri
 				teksto += filRezulto.nomo
 				tildTeksto += filRezulto.tildo
 			case .teksto(let filTeksto):
-				teksto += filTeksto
+				teksto += filTeksto.prepari().kunpremi(" ")
 				tildTeksto += filTeksto
 			case .fnt:
 				break
@@ -403,7 +403,7 @@ func trakti(sencon senco: ArtikolNodo, marko: String?, stato: Stato) -> String {
 		switch filo.tipo {
 		case .kap:
 			_ = trakti(kapon: filo, stato: stato)
-		case .ekz, .dif, .fnt, .rim, .ref, .refgrp, .uzo:
+		case .ekz, .dif, .fnt, .gra, .rim, .ref, .refgrp, .uzo:
 			teksto += trakti(nodon: filo, stato: stato) ?? ""
 		case .tld(let lit, let vari):
 			teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
