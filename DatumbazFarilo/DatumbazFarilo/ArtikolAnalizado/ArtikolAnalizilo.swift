@@ -16,11 +16,11 @@ class ArtikolAnalizilo: NSObject, XMLParserDelegate {
 		self.konteksto = konteksto
 		self.literoj = literoj
 		
-		print("Konstruas artikol-arbon")
+		// print("Konstruas artikol-arbon")
 	}
 	
 	func parserDidEndDocument(_ parser: XMLParser) {
-		print("Konstruis artikol-arbon")
+		// print("Konstruis artikol-arbon")
 	}
 	
 	func parser(
@@ -80,11 +80,12 @@ extension ArtikolAnalizilo {
 		
 		let dosierNomo = indikilo.split(separator: "/").last!
 		let indekso = String(dosierNomo[..<dosierNomo.index(dosierNomo.endIndex, offsetBy: -4)])
-		return analizi(
+		/* return analizi(
 			arbon: artikolAnalizilo.arbo.first!,
 			indekso: indekso,
 			lingvoj: lingvoj,
 			stiloj: stiloj
-		)
+		)*/
+		return nil
 	}
 }

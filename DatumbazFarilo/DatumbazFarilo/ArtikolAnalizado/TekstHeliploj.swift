@@ -1,5 +1,14 @@
 import Foundation
 
+func hexAlUnikodo(_ kodo: String) -> String? {
+	guard kodo.count > 2 && kodo[kodo.startIndex..<kodo.index(kodo.startIndex, offsetBy: 2)] == "#x" else {
+		return nil
+	}
+	
+	let signoKodo = kodo[kodo.index(kodo.startIndex, offsetBy: 2)...]
+	let signo = String(UnicodeScalar(UInt32(signoKodo, radix: 16)!)!)
+	return signo
+}
 func refSimbolo(tipo: String) -> String? {
 	switch tipo {
 	case "sin":
@@ -35,6 +44,10 @@ func konserOficialeco(ofc: String?) -> String {
 	default:
 		return "a"
 	}
+}
+
+func subdrvLitero(por numero: Int) -> String? {
+	return subsencLitero(por: numero)?.uppercased()
 }
 
 func subsencLitero(por numero: Int) -> String? {
@@ -109,7 +122,7 @@ func prepariTradukTekstojn(tradukoj: [ArtikolTraduko]) -> String {
 				teksto += "; "
 			}
 			teksto += "<a href=\"" + nuna.marko + "\">" + nuna.nomo
-			if montriSencon || montriSubsencon, 
+			if montriSencon || montriSubsencon,
 				let senco = nuna.senco, senco > 0 {
 				teksto += " " + String(senco)
 			}

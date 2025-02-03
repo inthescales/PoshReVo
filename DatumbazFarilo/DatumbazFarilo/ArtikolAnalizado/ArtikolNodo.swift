@@ -16,6 +16,7 @@ enum NodTipo {
 	case em
 	case fnt
 	case frm
+	case g
 	case gra
 	case ind
 	case k
@@ -23,19 +24,23 @@ enum NodTipo {
 	case ke
 	case klr(tip: String?)
 	case lok
+	case lstref(lst: String)
+	case mis
 	case mlg
+	case mrk
 	case nac
 	case nom
 	case ofc
 	case pr
 	case rad(vari: String?)
 	case ref(tip: String?, cel: String)
-	case refgrp(tip: String)
+	case refgrp(tip: String?)
 	case rim
 	case snc(mrk: String?)
 	case sncref(ref: String?)
 	case sub
 	case subart
+	case subdrv
 	case subsnc(mrk: String?)
 	case sup
 	case teksto(String)
@@ -43,7 +48,7 @@ enum NodTipo {
 	case tld(lit: String?, vari: String?)
 	case trd(lng: String?)
 	case trdgrp(lng: String)
-	case url(ref: String)
+	case url(ref: String?)
 	case uzo(tip: String)
 	case vari
 	case vortaro
@@ -79,7 +84,11 @@ enum NodTipo {
 		case "fnt":
 			return .fnt
 		case "frm":
+			// <frm> povas havi atributon "am", kiu ĝenerale egalas la enhavatan tekston.
+			// Mi ne scias ĝian funkcion, kaj ignoras nuntempe.
 			return .frm
+		case "g":
+			return .g
 		case "gra":
 			return .gra
 		case "ind":
@@ -94,8 +103,14 @@ enum NodTipo {
 			return .klr(tip: ecoj["tip"])
 		case "lok":
 			return .lok
+		case "lstref":
+			return .lstref(lst: ecoj["lst"]!)
+		case "mis":
+			return .mis
 		case "mlg":
 			return .mlg
+		case "mrk":
+			return .mrk
 		case "nac":
 			return .nac
 		case "nom":
@@ -109,7 +124,7 @@ enum NodTipo {
 		case "ref":
 			return .ref(tip: ecoj["tip"] ?? nil, cel: ecoj["cel"]!)
 		case "refgrp":
-			return .refgrp(tip: ecoj["tip"]!)
+			return .refgrp(tip: ecoj["tip"])
 		case "rim":
 			return .rim
 		case "snc":
@@ -118,6 +133,8 @@ enum NodTipo {
 			return .sncref(ref: ecoj["ref"])
 		case "sub":
 			return .sub
+		case "subdrv":
+			return .subdrv
 		case "subsnc":
 			return .subsnc(mrk: ecoj["mrk"])
 		case "subart":
@@ -135,7 +152,7 @@ enum NodTipo {
 		case "trdgrp":
 			return .trdgrp(lng: ecoj["lng"]!)
 		case "url":
-			return .url(ref: ecoj["ref"]!)
+			return .url(ref: ecoj["ref"])
 		case "uzo":
 			return .uzo(tip: ecoj["tip"]!)
 		case "var":

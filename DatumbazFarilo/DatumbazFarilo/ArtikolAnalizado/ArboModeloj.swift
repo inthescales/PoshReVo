@@ -93,6 +93,7 @@ struct ArtikolFabriko {
 			)
 		} else {
 			assert(false, "Ia eraro okazis en artikol-legado")
+			return nil
 		}
 	}
 }
@@ -139,6 +140,10 @@ class Stato {
 	
 	/// Titolo de nuna derivaĵo, kun ~-oj, kiel ĝi aperu en tradukoj
 	var derivajhTildo: String?
+	
+	var lastaSubderivajho: Int?
+	
+	var nunaSubderivajho: Int?
 	
 	/// Numero de la lasta senco traktita en la derivaĵo (eĉ si la procezo jam eliris el ĉiuj sencoj)
 	/// Necesas por nombri la sencojn (endas scii la lastan senc-numeron).

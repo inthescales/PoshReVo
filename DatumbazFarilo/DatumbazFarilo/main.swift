@@ -36,7 +36,7 @@ let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
 var artikolRezultoj: [ArtikolAnalizRezulto] = []
 
 //let legotaj = [
-//	"juni.xml"
+//	"karunkl.xml"
 //]
 
 let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
@@ -67,24 +67,28 @@ var artikoloj: [Artikolo] = []
 var serchTradukoj: [String: [SerchTraduko]] = [:]
 var markSencoj: [String: Int] = [:]
 
-for indiko in legotaj {
-	guard let rezulto = legiArtikolon(che: revoIndiko + indiko, lingvoDict: lingvoDict, stiloDict: stiloDict) else {
-		continue
-	}
-	
-	artikoloj.append(rezulto.artikolo)
-	print(rezulto.artikolo)
-	
-	for (lingvo, tradukoj) in rezulto.serchTradukoj {
-		if serchTradukoj[lingvo] == nil {
-			serchTradukoj[lingvo] = []
+autoreleasepool {
+	for indiko in legotaj {
+		guard let rezulto = legiArtikolon(che: revoIndiko + indiko, lingvoDict: lingvoDict, stiloDict: stiloDict) else {
+			print("NE traktis '\(indiko)'")
+			continue
 		}
 		
-		serchTradukoj[lingvo]? += tradukoj
-	}
-	
-	rezulto.markSencoj.forEach { marko, senco in
-		markSencoj[marko] = senco
+		// artikoloj.append(rezulto.artikolo)
+		// print(rezulto.artikolo)
+		print("Traktis '\(rezulto.artikolo.titolo)'")
+		
+		for (lingvo, tradukoj) in rezulto.serchTradukoj {
+			if serchTradukoj[lingvo] == nil {
+				serchTradukoj[lingvo] = []
+			}
+			
+			// serchTradukoj[lingvo]? += tradukoj
+		}
+		
+		rezulto.markSencoj.forEach { marko, senco in
+			// markSencoj[marko] = senco
+		}
 	}
 }
 

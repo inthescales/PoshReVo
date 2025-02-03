@@ -23,14 +23,10 @@ class LiteroAnalizilo : NSObject, XMLParserDelegate {
 		attributes attributeDict: [String : String] = [:]
 	) {
 		if elementName == "l",
-		    let nomo = attributeDict["nomo"],
+			let nomo = attributeDict["nomo"]?.tondi(),
 			let kodo = attributeDict["kodo"] {
 			if kodo[..<kodo.index(kodo.startIndex, offsetBy: 2)] == "#x" {
-				// Ĉi-kodoj indikas unikodajn signonumerojn de la signoj
-				// These codes indicate Unicode code-points of the characters
-				// ekz: Ecirc = #x00ca = Ê
-				let signoKodo = kodo[kodo.index(kodo.startIndex, offsetBy: 2)...]
-				let signo = String(UnicodeScalar(UInt32(signoKodo, radix: 16)!)!)
+				let signo = hexAlUnikodo(kodo)!
 				literoj[nomo] = signo
 				trovis(litero: nomo, signo: signo)
 			} else if kodo.count > 5
