@@ -13,7 +13,11 @@ enum Antautraktado {
 	/// Efikas ŝanĝojn en la XML-an tekston antaŭ ke ĝi estos analizita.
 	/// Aŭ la Swift-a `XMLParserDelegate` ne bone traktas liter-kodojn, aŭ mi ne komprenas kiel ĝi funkcias.
 	/// Iukaze, ĉi tie ni anstataŭas la literkodojn per siaj literoj
-	static func antautrakti(tekston teksto: String, literoj: [String: String]) -> String {
+	static func antautrakti(
+		tekston teksto: String,
+		literoj: [String: String],
+		urloj: [String: String]
+	) -> String {
 		var rezulto = teksto
 		
 		let regex = try! Regex("&(.*?);")
@@ -25,9 +29,13 @@ enum Antautraktado {
 				} else {
 					return litero
 				}
+			} else if let url = urloj[kodo] {
+				return url
 			} else if let teksto = specialaj[kodo] {
 				return teksto
-			}  else if let signo = hexAlUnikodo(kodo) {
+			} else if let signo = decAlUnikodo(kodo) {
+				return signo
+			} else if let signo = hexAlUnikodo(kodo) {
 				return signo
 			} else {
 				return ""

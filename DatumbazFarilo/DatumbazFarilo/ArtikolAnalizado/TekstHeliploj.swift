@@ -1,5 +1,17 @@
 import Foundation
 
+func decAlUnikodo(_ kodo: String) -> String? {
+	guard kodo.count > 1
+			&& kodo[kodo.startIndex..<kodo.index(kodo.startIndex, offsetBy: 1)] == "#"
+			&& Int(String(kodo[kodo.index(kodo.startIndex, offsetBy: 1)..<kodo.index(kodo.startIndex, offsetBy: 2)])) != nil else {
+		return nil
+	}
+	
+	let signoKodo = kodo[kodo.index(kodo.startIndex, offsetBy: 1)...]
+	let signo = String(UnicodeScalar(UInt32(signoKodo, radix: 10)!)!)
+	return signo
+}
+
 func hexAlUnikodo(_ kodo: String) -> String? {
 	guard kodo.count > 2 && kodo[kodo.startIndex..<kodo.index(kodo.startIndex, offsetBy: 2)] == "#x" else {
 		return nil
@@ -9,6 +21,7 @@ func hexAlUnikodo(_ kodo: String) -> String? {
 	let signo = String(UnicodeScalar(UInt32(signoKodo, radix: 16)!)!)
 	return signo
 }
+
 func refSimbolo(tipo: String) -> String? {
 	switch tipo {
 	case "sin":

@@ -65,11 +65,12 @@ extension ArtikolAnalizilo {
 		en konteksto: NSManagedObjectContext,
 		lingvoj: [String: Lingvo],
 		stiloj: [String: String],
-		literoj: [String: String]
+		literoj: [String: String],
+		urloj: [String: String]
 	) -> ArtikolAnalizRezulto? {
 		let artikolAnalizilo = ArtikolAnalizilo(konteksto, literoj: literoj)
 		var teksto = try! String(contentsOfFile: indikilo, encoding: .utf8)
-		teksto = Antautraktado.antautrakti(tekston: teksto, literoj: literoj)
+		teksto = Antautraktado.antautrakti(tekston: teksto, literoj: literoj, urloj: urloj)
 		let datumoj = teksto.data(using: .utf8)!
 		let analizilo = XMLParser(data: datumoj)
 		analizilo.externalEntityResolvingPolicy = .never

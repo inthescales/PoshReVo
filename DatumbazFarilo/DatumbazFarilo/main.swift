@@ -31,6 +31,8 @@ StiloAnalizilo.registri(stilojn: stiloj, en: konteksto)
 Oficialecoj.aldoni(al: konteksto)
 let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
 
+let urloj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokourl.dtd")
+
 // Legi artikolojn
 
 var artikolRezultoj: [ArtikolAnalizRezulto] = []
@@ -55,7 +57,8 @@ func legiArtikolon(che indiko: String, lingvoDict: [String: Lingvo], stiloDict: 
 		en: konteksto,
 		lingvoj: lingvoDict,
 		stiloj: stiloDict,
-		literoj: literoj
+		literoj: literoj,
+		urloj: urloj
 	) {
 		return rezulto
 	}
