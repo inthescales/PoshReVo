@@ -1,5 +1,23 @@
 import Foundation
 
+func htmlUnikodo(_ teksto: String) -> String? {
+	guard teksto.count > 1
+			&& teksto[teksto.startIndex..<teksto.index(teksto.startIndex, offsetBy: 1)] == "&"
+			&& teksto[teksto.index(teksto.endIndex, offsetBy: -1)..<teksto.endIndex] == ";" else {
+		return nil
+	}
+	
+	let kodo = String(teksto[teksto.index(teksto.startIndex, offsetBy: 1)..<teksto.index(teksto.endIndex, offsetBy: -1)])
+	
+	if let hexa = hexAlUnikodo(kodo) {
+		return hexa
+	} else if let deka = decAlUnikodo(kodo) {
+		return deka
+	}
+	
+	return nil
+}
+
 func decAlUnikodo(_ kodo: String) -> String? {
 	guard kodo.count > 1
 			&& kodo[kodo.startIndex..<kodo.index(kodo.startIndex, offsetBy: 1)] == "#"
