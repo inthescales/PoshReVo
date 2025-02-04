@@ -19,6 +19,10 @@ class ArtikolAnalizilo: NSObject, XMLParserDelegate {
 		// print("Konstruas artikol-arbon")
 	}
 	
+	func parser(_ parser: XMLParser, parseErrorOccurred parseError: any Error) {
+		print(parseError)
+	}
+	
 	func parserDidEndDocument(_ parser: XMLParser) {
 		// print("Konstruis artikol-arbon")
 	}

@@ -26,7 +26,7 @@ class LiteroAnalizilo : NSObject, XMLParserDelegate {
 			let nomo = attributeDict["nomo"]?.tondi(),
 			let kodo = attributeDict["kodo"] {
 			if kodo[..<kodo.index(kodo.startIndex, offsetBy: 2)] == "#x" {
-				let signo = hexAlUnikodo(kodo)!
+				let signo = Interpreti.unikodon(deksesuma: kodo)!
 				literoj[nomo] = signo
 				trovis(litero: nomo, signo: signo)
 			} else if kodo.count > 5

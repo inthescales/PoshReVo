@@ -13,7 +13,7 @@ struct ArtikolFabriko {
 		var tekstTradukoj: [Traduko] = []
 		
 		for (lingvoKodo, trdoj) in tradukoj {
-			let teksto = prepariTradukTekstojn(tradukoj: trdoj)
+			let teksto = ArtikolTeksto.tradukTeksto(por: trdoj)
 			let trd = Traduko(
 				lingvo: lingvoj[lingvoKodo]!,
 				teksto: teksto

@@ -3,7 +3,7 @@ import Foundation
 
 enum Antautraktado {
 	/// Signoj kiuj ne povas aperi en XML-dosiero
-	static let rezervitaj = ["amp", "gt", "lt", "quot"]
+	static let rezervitaj = ["amp", "gt", "lt"]
 	
 	/// Efikas ŝanĝojn en la XML-an tekston antaŭ ke ĝi estos analizita.
 	/// Aŭ la Swift-a `XMLParserDelegate` ne bone traktas liter-kodojn, aŭ mi ne komprenas kiel ĝi funkcias.
@@ -19,18 +19,16 @@ enum Antautraktado {
 		let regex = try! Regex("&(.*?);")
 		rezulto = rezulto.replacing(regex) { (match: Regex.Match) in
 			let kodo = String(match.output[1].substring!)
-			if let litero = literoj[kodo] {
+			if rezervitaj.contains(kodo) {
+				return kodo
+			} else if let litero = literoj[kodo] {
 				return litero
 			} else if let mll = mallongigoj[kodo] {
 				return mll
 			} else if let url = urloj[kodo] {
 				return url
-			} else if let signo = decAlUnikodo(kodo) {
+			} else if let signo = Interpreti.unikodon(html: kodo) {
 				return signo
-			} else if let signo = hexAlUnikodo(kodo) {
-				return signo
-			} else if rezervitaj.contains(kodo) {
-				return kodo
 			} else {
 				return ""
 			}

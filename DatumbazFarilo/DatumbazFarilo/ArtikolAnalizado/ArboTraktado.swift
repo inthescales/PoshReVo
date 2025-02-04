@@ -206,7 +206,7 @@ func trakti(subartikolon subartikolo: ArtikolNodo, stato: TraktadoStato) {
 		}
 	}
 	
-	teksto = romajCiferoj(por: subartNumero) + "." + (teksto.isEmpty ? "" : " ") + teksto
+	teksto = ArtikolTeksto.romajCiferoj(por: subartNumero) + "." + (teksto.isEmpty ? "" : " ") + teksto
 
 	stato.subartikoloFabriko?.teksto = teksto
 	
@@ -237,8 +237,8 @@ func trakti(kapon kapo: ArtikolNodo, stato: TraktadoStato) -> (nomo: String, til
 				let filRezulto = trakti(variajhon: filo, stato: stato)
 				teksto += filRezulto.nomo
 			case .teksto(let filTeksto):
-				teksto += filTeksto.prepari().kunpremi(" ")
-				tildTeksto += filTeksto.prepari().kunpremi(" ")
+				teksto += filTeksto.prepari().kunpremi()
+				tildTeksto += filTeksto.prepari().kunpremi()
 			case .fnt:
 				teksto = teksto.tondi()
 				tildTeksto = tildTeksto.tondi()
@@ -264,7 +264,7 @@ func trakti(kapon kapo: ArtikolNodo, stato: TraktadoStato) -> (nomo: String, til
 				teksto += filRezulto.nomo
 				tildTeksto += filRezulto.tildo
 			case .teksto(let filTeksto):
-				teksto += filTeksto.prepari().kunpremi(" ")
+				teksto += filTeksto.prepari().kunpremi()
 				tildTeksto += filTeksto
 			case .fnt:
 				break
@@ -392,7 +392,7 @@ func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: TraktadoSta
 				if subdrvNumero > 1 {
 					teksto += "\n\n"
 				}
-				teksto += subdrvLitero(por: subdrvNumero)! + ". "
+				teksto += ArtikolTeksto.subdrvLitero(por: subdrvNumero)! + ". "
 			}
 			
 			teksto += filTeksto
@@ -422,7 +422,7 @@ func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: TraktadoSta
 	}
 
 	// let teksto = traktiFilojn(de: derivajho, stato: stato)
-	stato.vortoFabriko?.teksto = teksto.kunpremi(" ").tondi()
+	stato.vortoFabriko?.teksto = teksto.kunpremi().tondi()
 	
 	if stato.subartikoloFabriko == nil {
 		stato.subartikoloFabriko = SubartikoloFabriko()
@@ -536,7 +536,7 @@ func trakti(sencon senco: ArtikolNodo, marko: String?, stato: TraktadoStato) -> 
 			let filTeksto = trakti(subsencon: filo, marko: mrk, stato: stato)
 			
 			if let subsencNombro = stato.lastaSubsenco,
-			   let litero = subsencLitero(por: subsencNombro) {
+			   let litero = ArtikolTeksto.subsencLitero(por: subsencNombro) {
 				teksto += "\n\n" + litero + ") "
 			}
 			teksto += filTeksto
@@ -586,7 +586,7 @@ func trakti(subsencon subsenco: ArtikolNodo, marko: String?, stato: TraktadoStat
 }
 
 func trakti(difinon difino: ArtikolNodo, stato: TraktadoStato) -> String {
-	return traktiFilojn(de: difino, stato: stato).kunpremi(" ").tondi()
+	return traktiFilojn(de: difino, stato: stato).kunpremi().tondi()
 }
 
 func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: TraktadoStato) -> String {
@@ -606,39 +606,39 @@ func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: TraktadoStato) -> String {
 			teksto += trakti(nodon: filo, stato: stato) ?? ""
 		}
 	}
-	return "<i>" + teksto.kunpremi(" ").tondi() + "</i>"
+	return "<i>" + teksto.kunpremi().tondi() + "</i>"
 }
 
 func trakti(rimarkon rimarko: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "<b>Rim</b>: " + traktiFilojn(de: rimarko, stato: stato).tondi()
-	return "\n" + teksto.kunpremi(" ").tondi()
+	return "\n" + teksto.kunpremi().tondi()
 }
 
 func trakti(citilon citilo: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "„" + traktiFilojn(de: citilo, stato: stato).tondi() + "”"
-	return teksto.kunpremi(" ").tondi()
+	return teksto.kunpremi().tondi()
 }
 
 func trakti(emfazon emfazo: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "<b>" + traktiFilojn(de: emfazo, stato: stato).tondi() + "</b>"
-	return teksto.kunpremi(" ").tondi()
+	return teksto.kunpremi().tondi()
 }
 
 func trakti(formulon formulo: ArtikolNodo, stato: TraktadoStato) -> String {
 	// Formulo ŝajne uzas apartan tiparon (MJXc-TeX-main-*) en la retejo. Esploro indas.
 	// vd. ekz. artikolon 'logaritm/o'
 	let teksto = traktiFilojn(de: formulo, stato: stato).tondi()
-	return teksto.kunpremi(" ").tondi()
+	return teksto.kunpremi().tondi()
 }
 
 func trakti(indicon indico: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "<sub>" + traktiFilojn(de: indico, stato: stato).tondi() + "</sub>"
-	return teksto.kunpremi(" ")
+	return teksto.kunpremi()
 }
 
 func trakti(altigitan altigita: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "<sup>" + traktiFilojn(de: altigita, stato: stato).tondi() + "</sup>"
-	return teksto.kunpremi(" ")
+	return teksto.kunpremi()
 }
 
 func trakti(nomon nomo: ArtikolNodo, stato: TraktadoStato) -> String {
@@ -670,7 +670,7 @@ func trakti(
 
 		if montriSimbolon,
 		   let tipo = tipo,
-		   let simbolo = refSimbolo(tipo: tipo) {
+		   let simbolo = ArtikolTeksto.refSimbolo(tipo: tipo) {
 			teksto += simbolo + " "
 		}
 	default:
@@ -718,7 +718,7 @@ func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String?, stato: Tra
 	
 	if montriSimbolon,
 	   let tipo = tipo,
-	   let simbolo = refSimbolo(tipo: tipo) {
+	   let simbolo = ArtikolTeksto.refSimbolo(tipo: tipo) {
 		teksto += simbolo + " "
 	}
 	
@@ -908,7 +908,7 @@ func trakti(tradukon traduko: ArtikolNodo, lingvo: String, stato: TraktadoStato)
 			serchNomo = rezulto.1
 		case .mll(let tipo):
 			filTeksto = trakti(nodon: filo, stato: stato) ?? ""
-			serchNomo = mllTeksto(baza: filTeksto, tipo: tipo)
+			serchNomo = ArtikolTeksto.mllTeksto(baza: filTeksto, tipo: tipo)
 		default:
 			filTeksto = ""
 			break
@@ -916,7 +916,7 @@ func trakti(tradukon traduko: ArtikolNodo, lingvo: String, stato: TraktadoStato)
 		teksto += filTeksto
 	}
 	
-	teksto = teksto.kunpremi(" ")
+	teksto = teksto.kunpremi()
 	
 	if false {
 		// TODO: Tradukoj en ekzemploj
@@ -976,7 +976,7 @@ func trakti(indekson indekso: ArtikolNodo, stato: TraktadoStato) -> (teksto: Str
 			teksto += filTeksto
 			// Ideale la '…' kiun aldonas ĉi-funkcio estus videbla en serĉrezultoj, sed ne
 			// estus parto de serĉ-nomo. Tamen tio ne gravas.
-			filaMLLTeksto = mllTeksto(baza: filTeksto, tipo: tipo)
+			filaMLLTeksto = ArtikolTeksto.mllTeksto(baza: filTeksto, tipo: tipo)
 		default:
 			let filTeksto = trakti(nodon: filo, stato: stato)
 			teksto += filTeksto ?? ""

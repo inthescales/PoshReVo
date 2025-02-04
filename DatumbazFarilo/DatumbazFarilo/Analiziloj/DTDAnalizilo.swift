@@ -22,7 +22,7 @@ enum DTDAnalizilo {
 		let regex = try! Regex("<!ENTITY\\s*([\\S_]*?)\\s*\"(.*?)\">")
 		teksto.matches(of: regex).forEach { (match: Regex.Match) in
 			if match.output.count > 2 {
-				if let signo = htmlUnikodo(String(match.output[2].substring!)) {
+				if let signo = Interpreti.unikodon(html: String(match.output[2].substring!)) {
 					entoj[String(match.output[1].substring!)] = signo
 				} else {
 					entoj[String(match.output[1].substring!)] = String(match.output[2].substring!)

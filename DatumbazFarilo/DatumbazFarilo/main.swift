@@ -40,7 +40,7 @@ let urloj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokourl.dtd")
 var artikolRezultoj: [ArtikolAnalizRezulto] = []
 
 //let legotaj = [
-//	"sent.xml"
+//	"ni.xml"
 //]
 
 let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
