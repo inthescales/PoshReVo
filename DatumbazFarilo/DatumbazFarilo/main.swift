@@ -84,7 +84,7 @@ autoreleasepool {
 		// print(rezulto.artikolo)
 		print("Traktis '\(rezulto.artikolo.titolo)'")
 		
-		for (lingvo, tradukoj) in rezulto.serchTradukoj {
+		for (lingvo, _) in rezulto.serchTradukoj {
 			if serchTradukoj[lingvo] == nil {
 				serchTradukoj[lingvo] = []
 			}

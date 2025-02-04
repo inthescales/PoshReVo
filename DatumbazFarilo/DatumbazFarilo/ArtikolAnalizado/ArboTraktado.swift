@@ -1,7 +1,7 @@
 import ReVoModelojOSX
 
 func analizi(arbon arbo: ArtikolNodo, indekso: String, lingvoj: [String: Lingvo], stiloj: [String: String]) -> ArtikolAnalizRezulto? {
-	let stato = Stato(stiloj: stiloj)
+	let stato = TraktadoStato(stiloj: stiloj)
 	stato.artikolFabriko.indekso = indekso
 	
 	_ = traktiFilojn(de: arbo, stato: stato)
@@ -9,7 +9,7 @@ func analizi(arbon arbo: ArtikolNodo, indekso: String, lingvoj: [String: Lingvo]
 	return stato.rezultoj(lingvoj: lingvoj)
 }
 
-func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) -> String? {
+func trakti(nodon nodo: ArtikolNodo, stato: TraktadoStato, ampligiTildojn: Bool = true) -> String? {
 	switch nodo.tipo {
 	case .arbo:
 		break
@@ -128,7 +128,7 @@ func trakti(nodon nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) 
 	return nil
 }
 
-func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = true) -> String {
+func traktiFilojn(de nodo: ArtikolNodo, stato: TraktadoStato, ampligiTildojn: Bool = true) -> String {
 	var teksto = ""
 	traktiFilojn(de: nodo, stato: stato) { filo in
 		switch filo.tipo {
@@ -143,7 +143,7 @@ func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, ampligiTildojn: Bool = tru
 	return teksto
 }
 
-func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, farotajh: (ArtikolNodo) -> Void) {
+func traktiFilojn(de nodo: ArtikolNodo, stato: TraktadoStato, farotajh: (ArtikolNodo) -> Void) {
 	stato.cheno.append(nodo.tipo)
 	stato.sibStako.append(nil)
 	
@@ -163,11 +163,11 @@ func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, farotajh: (ArtikolNodo) ->
 	_ = stato.sibStako.popLast()
 }
 
-func trakti(vortaron vortaro: ArtikolNodo, stato: Stato) {
+func trakti(vortaron vortaro: ArtikolNodo, stato: TraktadoStato) {
 	_ = traktiFilojn(de: vortaro, stato: stato)
 }
 
-func trakti(artikolon artikolo: ArtikolNodo, marko: String?, stato: Stato) {
+func trakti(artikolon artikolo: ArtikolNodo, marko: String?, stato: TraktadoStato) {
 	_ = traktiFilojn(de: artikolo, stato: stato)
 	
 	if stato.subartikoloFabriko != nil {
@@ -176,7 +176,7 @@ func trakti(artikolon artikolo: ArtikolNodo, marko: String?, stato: Stato) {
 	}
 }
 
-func trakti(subartikolon subartikolo: ArtikolNodo, stato: Stato) {
+func trakti(subartikolon subartikolo: ArtikolNodo, stato: TraktadoStato) {
 
 	let subartNumero = stato.artikolFabriko.subartikoloj.count + 1
 
@@ -216,7 +216,7 @@ func trakti(subartikolon subartikolo: ArtikolNodo, stato: Stato) {
 	}
 }
 
-func trakti(kapon kapo: ArtikolNodo, stato: Stato) -> (nomo: String, tildo: String) {
+func trakti(kapon kapo: ArtikolNodo, stato: TraktadoStato) -> (nomo: String, tildo: String) {
 	switch stato.cheno.last {
 	case .art:
 		var teksto = ""
@@ -311,7 +311,7 @@ func trakti(kapon kapo: ArtikolNodo, stato: Stato) -> (nomo: String, tildo: Stri
 	}
 }
 
-func trakti(variajhon variajho: ArtikolNodo, stato: Stato) -> (nomo: String, tildo: String) {
+func trakti(variajhon variajho: ArtikolNodo, stato: TraktadoStato) -> (nomo: String, tildo: String) {
 	var rezulto: (nomo: String, tildo: String)? = nil
 	traktiFilojn(de: variajho, stato: stato) { filo in
 		switch filo.tipo {
@@ -330,7 +330,7 @@ func trakti(variajhon variajho: ArtikolNodo, stato: Stato) -> (nomo: String, til
 	return rezulto!
 }
 	
-func trakti(radikon radiko: ArtikolNodo, variajho: String?, stato: Stato) -> String {
+func trakti(radikon radiko: ArtikolNodo, variajho: String?, stato: TraktadoStato) -> String {
 	let teksto = traktiFilojn(de: radiko, stato: stato)
 	
 	if variajho == nil {
@@ -342,11 +342,11 @@ func trakti(radikon radiko: ArtikolNodo, variajho: String?, stato: Stato) -> Str
 	return teksto
 }
 
-func trakti(oficialecon oficialeco: ArtikolNodo, stato: Stato) -> String {
+func trakti(oficialecon oficialeco: ArtikolNodo, stato: TraktadoStato) -> String {
 	return traktiFilojn(de: oficialeco, stato: stato).tondi()
 }
 
-func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: Stato) {
+func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: TraktadoStato) {
 	stato.vortoFabriko = VortoFabriko()
 	stato.vortoFabriko?.marko = marko
 	
@@ -437,23 +437,23 @@ func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: Stato) {
 	stato.lastaSenco = nil
 }
 
-func trakti(grasan grasajho: ArtikolNodo, stato: Stato) -> String {
+func trakti(grasan grasajho: ArtikolNodo, stato: TraktadoStato) -> String {
 	let filTeksto = traktiFilojn(de: grasajho, stato: stato)
 	
 	return "<b>" + filTeksto.tondi() + "</b>"
 }
 
-func trakti(gramatikon gramatiko: ArtikolNodo, stato: Stato) -> String {
+func trakti(gramatikon gramatiko: ArtikolNodo, stato: TraktadoStato) -> String {
 	let filTeksto = traktiFilojn(de: gramatiko, stato: stato)
 	
 	return "(\(filTeksto))\n"
 }
 
-func trakti(vortSpecon vortSpeco: ArtikolNodo, stato: Stato) -> String {
+func trakti(vortSpecon vortSpeco: ArtikolNodo, stato: TraktadoStato) -> String {
 	return traktiFilojn(de: vortSpeco, stato: stato)
 }
 
-func trakti(subderivajhon subderivajho: ArtikolNodo, stato: Stato) -> String {
+func trakti(subderivajhon subderivajho: ArtikolNodo, stato: TraktadoStato) -> String {
 	if stato.lastaSubderivajho == nil {
 		stato.lastaSubderivajho = 0
 	}
@@ -507,7 +507,7 @@ func trakti(subderivajhon subderivajho: ArtikolNodo, stato: Stato) -> String {
 	return teksto
 }
 
-func trakti(sencon senco: ArtikolNodo, marko: String?, stato: Stato) -> String {
+func trakti(sencon senco: ArtikolNodo, marko: String?, stato: TraktadoStato) -> String {
 	if stato.lastaSenco == nil {
 		stato.lastaSenco = 0
 	}
@@ -559,7 +559,7 @@ func trakti(sencon senco: ArtikolNodo, marko: String?, stato: Stato) -> String {
 	return teksto
 }
 
-func trakti(subsencon subsenco: ArtikolNodo, marko: String?, stato: Stato) -> String {
+func trakti(subsencon subsenco: ArtikolNodo, marko: String?, stato: TraktadoStato) -> String {
 	if stato.lastaSubsenco == nil {
 		stato.lastaSubsenco = 0
 	}
@@ -585,11 +585,11 @@ func trakti(subsencon subsenco: ArtikolNodo, marko: String?, stato: Stato) -> St
 	return teksto
 }
 
-func trakti(difinon difino: ArtikolNodo, stato: Stato) -> String {
+func trakti(difinon difino: ArtikolNodo, stato: TraktadoStato) -> String {
 	return traktiFilojn(de: difino, stato: stato).kunpremi(" ").tondi()
 }
 
-func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: Stato) -> String {
+func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: TraktadoStato) -> String {
 	var teksto = ""
 	traktiFilojn(de: ekzemplo, stato: stato) { filo in
 		switch filo.tipo {
@@ -609,43 +609,43 @@ func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: Stato) -> String {
 	return "<i>" + teksto.kunpremi(" ").tondi() + "</i>"
 }
 
-func trakti(rimarkon rimarko: ArtikolNodo, stato: Stato) -> String {
+func trakti(rimarkon rimarko: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "<b>Rim</b>: " + traktiFilojn(de: rimarko, stato: stato).tondi()
 	return "\n" + teksto.kunpremi(" ").tondi()
 }
 
-func trakti(citilon citilo: ArtikolNodo, stato: Stato) -> String {
+func trakti(citilon citilo: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "„" + traktiFilojn(de: citilo, stato: stato).tondi() + "”"
 	return teksto.kunpremi(" ").tondi()
 }
 
-func trakti(emfazon emfazo: ArtikolNodo, stato: Stato) -> String {
+func trakti(emfazon emfazo: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "<b>" + traktiFilojn(de: emfazo, stato: stato).tondi() + "</b>"
 	return teksto.kunpremi(" ").tondi()
 }
 
-func trakti(formulon formulo: ArtikolNodo, stato: Stato) -> String {
+func trakti(formulon formulo: ArtikolNodo, stato: TraktadoStato) -> String {
 	// Formulo ŝajne uzas apartan tiparon (MJXc-TeX-main-*) en la retejo. Esploro indas.
 	// vd. ekz. artikolon 'logaritm/o'
 	let teksto = traktiFilojn(de: formulo, stato: stato).tondi()
 	return teksto.kunpremi(" ").tondi()
 }
 
-func trakti(indicon indico: ArtikolNodo, stato: Stato) -> String {
+func trakti(indicon indico: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "<sub>" + traktiFilojn(de: indico, stato: stato).tondi() + "</sub>"
 	return teksto.kunpremi(" ")
 }
 
-func trakti(altigitan altigita: ArtikolNodo, stato: Stato) -> String {
+func trakti(altigitan altigita: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = "<sup>" + traktiFilojn(de: altigita, stato: stato).tondi() + "</sup>"
 	return teksto.kunpremi(" ")
 }
 
-func trakti(nomon nomo: ArtikolNodo, stato: Stato) -> String {
+func trakti(nomon nomo: ArtikolNodo, stato: TraktadoStato) -> String {
 	return traktiFilojn(de: nomo, stato: stato).tondi()
 }
 
-func trakti(nacilingvan nacilingvajho: ArtikolNodo, stato: Stato) -> String {
+func trakti(nacilingvan nacilingvajho: ArtikolNodo, stato: TraktadoStato) -> String {
 	return traktiFilojn(de: nacilingvajho, stato: stato)
 }
 
@@ -654,7 +654,7 @@ func trakti(
 	tipo: String?,
 	celo: String,
 	montriSimbolon: Bool = true,
-	stato: Stato
+	stato: TraktadoStato
 ) -> String {
 	var teksto = ""
 	
@@ -697,7 +697,7 @@ func trakti(
 	return teksto
 }
 
-func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String?, stato: Stato) -> String {
+func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String?, stato: TraktadoStato) -> String {
 	var teksto = ""
 	switch stato.sibStako.last {
 	case .ref, .refgrp:
@@ -749,14 +749,14 @@ func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String?, stato: Sta
 	return teksto
 }
 
-func trakti(listReferencon listReferenco: ArtikolNodo, stato: Stato) -> String {
+func trakti(listReferencon listReferenco: ArtikolNodo, stato: TraktadoStato) -> String {
 	// Referenco, similaspecta je la bazaj ref-oj, indikanta vortolisto (ekz. personaj nomoj)
 	// Pro tio ke la apo ne nuntempe enhavas tiujn vortolistojn, ni ignoru ĉi-referencojn
 	// TODO: Aldoninta listojn, videbligu lstref-ojn
 	return ""
 }
 
-func trakti(sencReferencon sencReferenco: ArtikolNodo, marko: String, stato: Stato) -> String {
+func trakti(sencReferencon sencReferenco: ArtikolNodo, marko: String, stato: TraktadoStato) -> String {
 	// Pro tio ke ne eblas antaŭscii la ordon laŭ kiu la artikoloj legiĝos,
 	// kaj tio ke (mi supozas) eblas ke estos cirklaj senc-referencoj, ĉi tie
 	// nur eblas marki la lokojn en kiu superskriptoj devos aperi. En posta
@@ -764,7 +764,7 @@ func trakti(sencReferencon sencReferenco: ArtikolNodo, marko: String, stato: Sta
 	return "<sncref mrk=\"\(marko)\"/>"
 }
 
-func traktiTildon(stato: Stato, litero: String?, variajho: String?) -> String {
+func traktiTildon(stato: TraktadoStato, litero: String?, variajho: String?) -> String {
 	var teksto = ""
 	if case .ekz = stato.cheno.last {
 		teksto += "<b>"
@@ -795,12 +795,12 @@ func traktiTildon(stato: Stato, litero: String?, variajho: String?) -> String {
 	return teksto
 }
 
-func trakti(trastrekitan: ArtikolNodo, stato: Stato) -> String {
+func trakti(trastrekitan: ArtikolNodo, stato: TraktadoStato) -> String {
 	let filTeksto = traktiFilojn(de: trastrekitan, stato: stato)
 	return "<del>" + filTeksto + "</del>"
 }
 
-func trakti(uzon uzo: ArtikolNodo, tipo: String?, stato: Stato) -> String {
+func trakti(uzon uzo: ArtikolNodo, tipo: String?, stato: TraktadoStato) -> String {
 	let teksto = traktiFilojn(de: uzo, stato: stato)
 	
 	switch tipo {
@@ -817,12 +817,12 @@ func trakti(uzon uzo: ArtikolNodo, tipo: String?, stato: Stato) -> String {
 	}
 }
 
-func trakti(misstilan misstilajho: ArtikolNodo, stato: Stato) -> String {
+func trakti(misstilan misstilajho: ArtikolNodo, stato: TraktadoStato) -> String {
 	let filTeksto = traktiFilojn(de: misstilajho, stato: stato)
 	return "<sup>x</sup>" + filTeksto
 }
 
-func trakti(mallongigon mallongigo: ArtikolNodo, stato: Stato) -> String {
+func trakti(mallongigon mallongigo: ArtikolNodo, stato: TraktadoStato) -> String {
 	let linio: Bool = {
 		switch stato.cheno.last {
 		case .kap:
@@ -865,19 +865,19 @@ func trakti(mallongigon mallongigo: ArtikolNodo, stato: Stato) -> String {
 	return rezulto
 }
 
-func trakti(escepton escepto: ArtikolNodo, stato: Stato) -> String {
+func trakti(escepton escepto: ArtikolNodo, stato: TraktadoStato) -> String {
 	return traktiFilojn(de: escepto, stato: stato)
 }
 
-func trakti(kursivon kursivajho: ArtikolNodo, stato: Stato) -> String {
+func trakti(kursivon kursivajho: ArtikolNodo, stato: TraktadoStato) -> String {
 	// En la retejo, kursiva teksto aperas en tiparo "TeX-math"
 	return traktiFilojn(de: kursivajho, stato: stato)
 }
-func trakti(komunlingvan komunlingvajho: ArtikolNodo, stato: Stato) -> String {
+func trakti(komunlingvan komunlingvajho: ArtikolNodo, stato: TraktadoStato) -> String {
 	return "<i>" + traktiFilojn(de: komunlingvajho, stato: stato) + "</i>"
 }
 
-func trakti(URLon url: ArtikolNodo, referenco: String?, stato: Stato) -> String {
+func trakti(URLon url: ArtikolNodo, referenco: String?, stato: TraktadoStato) -> String {
 	// TODO: Trakti url-bazojn en grundo/dtd/vokourl.dtd / jsc/x/voko_entities.ts
 	// TODO: Aldoni simbolon ekz. en ankaŭ
 	let filTeksto = traktiFilojn(de: url, stato: stato)
@@ -891,7 +891,7 @@ func trakti(URLon url: ArtikolNodo, referenco: String?, stato: Stato) -> String 
 
 // MARK: - Tradukoj
 
-func trakti(tradukon traduko: ArtikolNodo, lingvo: String, stato: Stato) -> String {
+func trakti(tradukon traduko: ArtikolNodo, lingvo: String, stato: TraktadoStato) -> String {
 	guard let marko = stato.marko else {
 		return ""
 	}
@@ -953,7 +953,7 @@ func trakti(tradukon traduko: ArtikolNodo, lingvo: String, stato: Stato) -> Stri
 	return teksto
 }
 
-func trakti(tradukGrupon tradukGrupo: ArtikolNodo, lingvo: String, stato: Stato) {
+func trakti(tradukGrupon tradukGrupo: ArtikolNodo, lingvo: String, stato: TraktadoStato) {
 	traktiFilojn(de: tradukGrupo, stato: stato) { filo in
 		switch filo.tipo {
 		case .trd(_):
@@ -964,7 +964,7 @@ func trakti(tradukGrupon tradukGrupo: ArtikolNodo, lingvo: String, stato: Stato)
 	}
 }
 
-func trakti(indekson indekso: ArtikolNodo, stato: Stato) -> (teksto: String, serchTeksto: String) {
+func trakti(indekson indekso: ArtikolNodo, stato: TraktadoStato) -> (teksto: String, serchTeksto: String) {
 	var teksto = ""
 	var filaMLLTeksto: String? = nil
 	
@@ -986,7 +986,7 @@ func trakti(indekson indekso: ArtikolNodo, stato: Stato) -> (teksto: String, ser
 	return (teksto, filaMLLTeksto ?? teksto)
 }
 
-func trakti(klarigon klarigo: ArtikolNodo, stato: Stato) -> String {
+func trakti(klarigon klarigo: ArtikolNodo, stato: TraktadoStato) -> String {
 	var teksto = traktiFilojn(de: klarigo, stato: stato)
 	
 	// Liveri tekston, sen emfazoj (ekz. "Banderolo" en)
@@ -996,7 +996,7 @@ func trakti(klarigon klarigo: ArtikolNodo, stato: Stato) -> String {
 	return teksto
 }
 
-func trakti(prononcon prononco: ArtikolNodo, stato: Stato) -> String {
+func trakti(prononcon prononco: ArtikolNodo, stato: TraktadoStato) -> String {
 	let teksto = traktiFilojn(de: prononco, stato: stato)
 	return "[" + teksto + "]"
 }

@@ -1,4 +1,4 @@
-/// Tipo de XML-nodo
+/// Tipo de elemento en artikola dokument-strukturo.
 /// Vidu priskribon de dokument-strukturo: https://revuloj.github.io/temoj/rnc
 enum NodTipo {
 	case adm
@@ -172,24 +172,5 @@ enum NodTipo {
 		default:
 			return nil
 		}
-	}
-}
-
-class ArtikolNodo {
-	let tipo: NodTipo
-	var filoj: [ArtikolNodo]
-	
-	init?(nomo: String, ecoj: [String: String] = [:]) {
-		guard let tipo = NodTipo.el(nomo: nomo, ecoj: ecoj) else {
-			return nil
-		}
-		
-		self.tipo = tipo
-		self.filoj = []
-	}
-	
-	init(tipo: NodTipo) {
-		self.tipo = tipo
-		self.filoj = []
 	}
 }

@@ -1,128 +1,42 @@
 import Foundation
 import ReVoModelojOSX
 
-struct ArtikolAnalizRezulto {
-	let artikolo: Artikolo
-	let serchTradukoj: [String: [SerchTraduko]]
-	let markSencoj: [String: Int]
-}
-
-/// Traduko tiel kiel ĝi aperos en artikolo
-struct ArtikolTraduko {
-	let nomo: String
-	let teksto: String
-	let marko: String
-	let senco: Int?
-	let subsenco: Int?
-}
-
-/// Traduko kiu estos serĉebla
-struct SerchTraduko {
-	let videblaNomo: String // Search key, and what is shown
-	let nomo: String // Detail label of search cell (esperanto derivaĵo)
-	let teksto: String // Search key (name in search language)
-	let indekso: String // Used to create the article reference
-	let marko: String // Used to navigate within article
-	let senco: Int? // Creates superscript
-}
-
-struct SubartikoloFabriko {
-	var teksto = ""
-	var vortoj: [Vorto] = []
-	
-	func fabriki() -> Subartikolo? {
-		return Subartikolo(
-			teksto: teksto,
-			vortoj: vortoj
-		)
-	}
-}
-
-struct VortoFabriko {
-	var titolo: String?
-	var teksto: String?
-	var marko: String?
-	var ofc: String?
-	
-	func fabriki() -> Vorto? {
-		if let titolo = titolo,
-		   let teksto = teksto {
-			return Vorto(
-				titolo: titolo,
-				teksto: teksto,
-				marko: marko,
-				ofc: ofc
-			)
-		}
-		
-		return nil
-	}
-}
-
-struct ArtikolFabriko {
-	var titolo: String?
-	var radiko: String?
-	var indekso: String?
-	var ofc: String?
-	var subartikoloj: [Subartikolo] = []
-	var tradukoj: [String: [ArtikolTraduko]] = [:]
-	
-	func fabriki(lingvoj: [String: Lingvo]) -> Artikolo? {
-		var tekstTradukoj: [Traduko] = []
-		
-		for (lingvoKodo, trdoj) in tradukoj {
-			let teksto = prepariTradukTekstojn(tradukoj: trdoj)
-			let trd = Traduko(
-				lingvo: lingvoj[lingvoKodo]!,
-				teksto: teksto
-			)
-			tekstTradukoj.append(trd)
-		}
-		
-		if let titolo = titolo,
-		   let radiko = radiko,
-		   let indekso = indekso,
-		   !subartikoloj.isEmpty {
-			return Artikolo(
-				titolo: titolo,
-				radiko: radiko,
-				indekso: indekso,
-				ofc: ofc,
-				subartikoloj: subartikoloj,
-				tradukoj: tekstTradukoj
-			)
-		} else {
-			assert(false, "Ia eraro okazis en artikol-legado")
-			return nil
-		}
-	}
-}
-
-class Stato {
+/// Stato de artikol-traktado
+class TraktadoStato {
 	init(stiloj: [String: String]) {
 		self.stiloj = stiloj
 	}
 	
+	/// Fabriko kiu fabrikos la nune traktatan artikolon
 	var artikolFabriko = ArtikolFabriko()
+	
+	/// Fabriko kiu fabrikos la nune traktatan subartikolon, se tio ekzistas
 	var subartikoloFabriko: SubartikoloFabriko?
+	
+	/// Fabriko kiu fabrikos la nune traktatan derivaĵon, se tio ekzistas
 	var vortoFabriko: VortoFabriko?
 	
 	// MARK: Grundaĵoj
 	
+	/// Stilaj tekstoj kaj siaj kodoj
 	let stiloj: [String: String]
 	
 	// MARK: Artikol-informoj
 	
+	/// La radiko de la nune traktata artikolo
 	var artikolRadiko: String? {
 		artikolFabriko.radiko
 	}
 	
+	/// Variaĵoj de la nuna radiko
 	var artikolRadikVariajhoj: [String: String] = [:]
 	
+	/// La nomo de la nune traktata artikolo, kiel ĝi aperos paĝ-kape
 	var artikolNomo: String? {
 		artikolFabriko.titolo
 	}
 	
+	/// La indekso de la nune traktata artikolo
 	var artikolIndekso: String? {
 		artikolFabriko.indekso
 	}
@@ -141,8 +55,10 @@ class Stato {
 	/// Titolo de nuna derivaĵo, kun ~-oj, kiel ĝi aperu en tradukoj
 	var derivajhTildo: String?
 	
+	/// Numero de la lasta subderivaĵo, se tio ekzistas
 	var lastaSubderivajho: Int?
 	
+	/// Numero de la nuna subderivaĵo, se trairado enas subderivaĵon
 	var nunaSubderivajho: Int?
 	
 	/// Numero de la lasta senco traktita en la derivaĵo (eĉ si la procezo jam eliris el ĉiuj sencoj)
@@ -159,6 +75,7 @@ class Stato {
 	/// Samkiel `nunaSenco` je subsencoj
 	var nunaSubsenco: Int?
 	
+	/// La plej proksima supera marko de la nuna trairad-loko
 	var marko: String? {
 		for tipo in cheno.reversed() {
 			switch tipo {
@@ -179,13 +96,16 @@ class Stato {
 	
 	// MARK: Tradukoj
 	
+	/// Ĉiuj jam-konstruitaj serĉtradukoj
 	var serchTradukoj: [String: [SerchTraduko]] = [:]
 	
+	/// Aldonas artikolan tradukoj
 	func aldoni(artikolTradukon traduko: ArtikolTraduko, lingvo: String) {
 		if artikolFabriko.tradukoj[lingvo] == nil { artikolFabriko.tradukoj[lingvo] = [] }
 		artikolFabriko.tradukoj[lingvo]?.append(traduko)
 	}
 	
+	/// Aldonas serĉtradukon
 	func aldoni(serchTradukon traduko: SerchTraduko, lingvo: String) {
 		if serchTradukoj[lingvo] == nil { serchTradukoj[lingvo] = [] }
 		serchTradukoj[lingvo]?.append(traduko)
@@ -193,6 +113,7 @@ class Stato {
 	
 	// MARK: Rezultoj
 	
+	/// La finaj rezultoj de la artikol-traktado
 	func rezultoj(lingvoj: [String: Lingvo]) -> ArtikolAnalizRezulto? {
 		guard let artikolo = artikolFabriko.fabriki(lingvoj: lingvoj) else {
 			return nil
