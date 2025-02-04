@@ -86,12 +86,11 @@ extension ArtikolAnalizilo {
 		
 		let dosierNomo = indikilo.split(separator: "/").last!
 		let indekso = String(dosierNomo[..<dosierNomo.index(dosierNomo.endIndex, offsetBy: -4)])
-		/* return analizi(
+		return analizi(
 			arbon: artikolAnalizilo.arbo.first!,
 			indekso: indekso,
 			lingvoj: lingvoj,
 			stiloj: stiloj
-		)*/
-		return nil
+		)
 	}
 }

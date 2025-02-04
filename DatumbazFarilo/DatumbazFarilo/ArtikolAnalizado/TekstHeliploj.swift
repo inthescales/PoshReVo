@@ -65,6 +65,23 @@ func refSimbolo(tipo: String) -> String? {
 	}
 }
 
+/// Teksto uzota kiel serĉindekso kiam `<mll>` aperas.
+func mllTeksto(baza: String, tipo: String?) -> String {
+	switch tipo {
+	case "kom":
+		return baza + "…"
+	case "mez":
+		return "…" + baza + "…"
+	case "fin":
+		return "…" + baza
+	case nil:
+		return baza
+	default:
+		assert(false, "Neatendita tipo")
+		return ""
+	}
+}
+
 /// Oficialeco, en la formo per kiu ĝi estu konserivita en ofcvortoj
 func konserOficialeco(ofc: String?) -> String {
 	switch ofc {

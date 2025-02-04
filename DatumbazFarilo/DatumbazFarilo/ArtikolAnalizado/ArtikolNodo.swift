@@ -27,6 +27,7 @@ enum NodTipo {
 	case lstref(lst: String)
 	case mis
 	case mlg
+	case mll(tipo: String?)
 	case mrk
 	case nac
 	case nom
@@ -46,10 +47,11 @@ enum NodTipo {
 	case teksto(String)
 	case tezrad
 	case tld(lit: String?, vari: String?)
+	case ts
 	case trd(lng: String?)
 	case trdgrp(lng: String)
 	case url(ref: String?)
-	case uzo(tip: String)
+	case uzo(tip: String?)
 	case vari
 	case vortaro
 	case vrk
@@ -109,6 +111,8 @@ enum NodTipo {
 			return .mis
 		case "mlg":
 			return .mlg
+		case "mll":
+			return .mll(tipo: ecoj["tip"])
 		case "mrk":
 			return .mrk
 		case "nac":
@@ -147,6 +151,8 @@ enum NodTipo {
 			return .tezrad
 		case "tld":
 			return .tld(lit: ecoj["lit"], vari: ecoj["var"])
+		case "ts":
+			return .ts
 		case "trd":
 			return .trd(lng: ecoj["lng"])
 		case "trdgrp":
@@ -154,7 +160,7 @@ enum NodTipo {
 		case "url":
 			return .url(ref: ecoj["ref"])
 		case "uzo":
-			return .uzo(tip: ecoj["tip"]!)
+			return .uzo(tip: ecoj["tip"])
 		case "var":
 			return .vari
 		case "vortaro":

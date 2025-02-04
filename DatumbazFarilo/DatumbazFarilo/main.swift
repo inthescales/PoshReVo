@@ -28,8 +28,8 @@ MallongigoAnalizilo.registri(mallongigojn: mallongigoj, en: konteksto)
 let stiloj = StiloAnalizilo.legi(el: grundIndiko + "/cfg/stiloj.xml")
 StiloAnalizilo.registri(stilojn: stiloj, en: konteksto)
 
-Oficialecoj.aldoni(al: konteksto)
-let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
+//Oficialecoj.aldoni(al: konteksto)
+//let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
 
 let vokoSignoj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokosgn.dtd")
 let vokoMallongigoj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokomll.dtd")
@@ -40,7 +40,7 @@ let urloj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokourl.dtd")
 var artikolRezultoj: [ArtikolAnalizRezulto] = []
 
 //let legotaj = [
-//	"karunkl.xml"
+//	"sent.xml"
 //]
 
 let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
