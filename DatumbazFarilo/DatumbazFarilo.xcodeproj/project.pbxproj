@@ -16,9 +16,9 @@
 		0049F34F2D30316E002ABBFE /* StiloAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34E2D30316E002ABBFE /* StiloAnalizilo.swift */; };
 		0049F3512D303383002ABBFE /* Oficialecoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3502D303383002ABBFE /* Oficialecoj.swift */; };
 		0049F3532D303970002ABBFE /* KreiDatumbazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3522D303970002ABBFE /* KreiDatumbazon.swift */; };
-		0049F3552D304BF0002ABBFE /* ArtikolAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3542D304BF0002ABBFE /* ArtikolAnalizilo.swift */; };
+		0049F3552D304BF0002ABBFE /* ArtikolKonvertilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3542D304BF0002ABBFE /* ArtikolKonvertilo.swift */; };
 		0049F3582D31F946002ABBFE /* ArtikolNodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3572D31F946002ABBFE /* ArtikolNodo.swift */; };
-		0049F35A2D31F96C002ABBFE /* ArboTraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3592D31F96C002ABBFE /* ArboTraktado.swift */; };
+		0049F35A2D31F96C002ABBFE /* ArboAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3592D31F96C002ABBFE /* ArboAnalizilo.swift */; };
 		0049F35C2D331458002ABBFE /* TekstHeliploj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F35B2D331458002ABBFE /* TekstHeliploj.swift */; };
 		0049F35F2D331487002ABBFE /* TraktadoStato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F35E2D331487002ABBFE /* TraktadoStato.swift */; };
 		0049F36A2D384D0A002ABBFE /* TrieFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3682D384D0A002ABBFE /* TrieFarilo.swift */; };
@@ -28,7 +28,6 @@
 		0049F3A12D43C36F002ABBFE /* Antautraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A02D43C36F002ABBFE /* Antautraktado.swift */; };
 		0049F3A32D5154FB002ABBFE /* DTDAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A22D5154FB002ABBFE /* DTDAnalizilo.swift */; };
 		0049F3A62D52A3FD002ABBFE /* NodTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A52D52A3FD002ABBFE /* NodTipo.swift */; };
-		0049F3A82D52A496002ABBFE /* ArtikolAnalizRezulto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A72D52A496002ABBFE /* ArtikolAnalizRezulto.swift */; };
 		0049F3AA2D52A4B7002ABBFE /* ArtikolTraduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A92D52A4B7002ABBFE /* ArtikolTraduko.swift */; };
 		0049F3AC2D52A561002ABBFE /* SerchTraduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3AB2D52A561002ABBFE /* SerchTraduko.swift */; };
 		0049F3B12D52A67C002ABBFE /* SubartikoloFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3B02D52A67C002ABBFE /* SubartikoloFabriko.swift */; };
@@ -73,9 +72,9 @@
 		0049F34E2D30316E002ABBFE /* StiloAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloAnalizilo.swift; sourceTree = "<group>"; };
 		0049F3502D303383002ABBFE /* Oficialecoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oficialecoj.swift; sourceTree = "<group>"; };
 		0049F3522D303970002ABBFE /* KreiDatumbazon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KreiDatumbazon.swift; sourceTree = "<group>"; };
-		0049F3542D304BF0002ABBFE /* ArtikolAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolAnalizilo.swift; sourceTree = "<group>"; };
+		0049F3542D304BF0002ABBFE /* ArtikolKonvertilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolKonvertilo.swift; sourceTree = "<group>"; };
 		0049F3572D31F946002ABBFE /* ArtikolNodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolNodo.swift; sourceTree = "<group>"; };
-		0049F3592D31F96C002ABBFE /* ArboTraktado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArboTraktado.swift; sourceTree = "<group>"; };
+		0049F3592D31F96C002ABBFE /* ArboAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArboAnalizilo.swift; sourceTree = "<group>"; };
 		0049F35B2D331458002ABBFE /* TekstHeliploj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstHeliploj.swift; sourceTree = "<group>"; };
 		0049F35E2D331487002ABBFE /* TraktadoStato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktadoStato.swift; sourceTree = "<group>"; };
 		0049F3682D384D0A002ABBFE /* TrieFarilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrieFarilo.swift; sourceTree = "<group>"; };
@@ -85,7 +84,6 @@
 		0049F3A02D43C36F002ABBFE /* Antautraktado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Antautraktado.swift; sourceTree = "<group>"; };
 		0049F3A22D5154FB002ABBFE /* DTDAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTDAnalizilo.swift; sourceTree = "<group>"; };
 		0049F3A52D52A3FD002ABBFE /* NodTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodTipo.swift; sourceTree = "<group>"; };
-		0049F3A72D52A496002ABBFE /* ArtikolAnalizRezulto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolAnalizRezulto.swift; sourceTree = "<group>"; };
 		0049F3A92D52A4B7002ABBFE /* ArtikolTraduko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolTraduko.swift; sourceTree = "<group>"; };
 		0049F3AB2D52A561002ABBFE /* SerchTraduko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchTraduko.swift; sourceTree = "<group>"; };
 		0049F3B02D52A67C002ABBFE /* SubartikoloFabriko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubartikoloFabriko.swift; sourceTree = "<group>"; };
@@ -141,8 +139,8 @@
 				0049F3B62D52A9AB002ABBFE /* Helpiloj */,
 				0049F3BD2D53EC2A002ABBFE /* Artikolaro.swift */,
 				0049F3A02D43C36F002ABBFE /* Antautraktado.swift */,
-				0049F3542D304BF0002ABBFE /* ArtikolAnalizilo.swift */,
-				0049F3592D31F96C002ABBFE /* ArboTraktado.swift */,
+				0049F3542D304BF0002ABBFE /* ArtikolKonvertilo.swift */,
+				0049F3592D31F96C002ABBFE /* ArboAnalizilo.swift */,
 				0049F36C2D3ED0E3002ABBFE /* Posttraktado.swift */,
 			);
 			path = ArtikolAnalizado;
@@ -154,7 +152,6 @@
 				0049F3AF2D52A66E002ABBFE /* Fabrikoj */,
 				0049F3A52D52A3FD002ABBFE /* NodTipo.swift */,
 				0049F3572D31F946002ABBFE /* ArtikolNodo.swift */,
-				0049F3A72D52A496002ABBFE /* ArtikolAnalizRezulto.swift */,
 				0049F3A92D52A4B7002ABBFE /* ArtikolTraduko.swift */,
 				0049F3AB2D52A561002ABBFE /* SerchTraduko.swift */,
 				0049F35E2D331487002ABBFE /* TraktadoStato.swift */,
@@ -284,7 +281,6 @@
 				0049F3B52D52A6C3002ABBFE /* ArtikolFabriko.swift in Sources */,
 				0049F3AA2D52A4B7002ABBFE /* ArtikolTraduko.swift in Sources */,
 				0049F3512D303383002ABBFE /* Oficialecoj.swift in Sources */,
-				0049F3A82D52A496002ABBFE /* ArtikolAnalizRezulto.swift in Sources */,
 				0049F35C2D331458002ABBFE /* TekstHeliploj.swift in Sources */,
 				0049F34B2D302E93002ABBFE /* FakoAnalizilo.swift in Sources */,
 				0049F3582D31F946002ABBFE /* ArtikolNodo.swift in Sources */,
@@ -298,11 +294,11 @@
 				0049F3B32D52A6A2002ABBFE /* VortoFabriko.swift in Sources */,
 				0049F36A2D384D0A002ABBFE /* TrieFarilo.swift in Sources */,
 				0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo.swift in Sources */,
-				0049F35A2D31F96C002ABBFE /* ArboTraktado.swift in Sources */,
+				0049F35A2D31F96C002ABBFE /* ArboAnalizilo.swift in Sources */,
 				0049F36D2D3ED0E3002ABBFE /* Posttraktado.swift in Sources */,
 				0049F3A32D5154FB002ABBFE /* DTDAnalizilo.swift in Sources */,
 				0049F3B82D52A9D2002ABBFE /* Interpreti.swift in Sources */,
-				0049F3552D304BF0002ABBFE /* ArtikolAnalizilo.swift in Sources */,
+				0049F3552D304BF0002ABBFE /* ArtikolKonvertilo.swift in Sources */,
 				0049F3BC2D53E27A002ABBFE /* SignoAnalizilo.swift in Sources */,
 				0049F3AC2D52A561002ABBFE /* SerchTraduko.swift in Sources */,
 				00BE1AD82D24B7450027BC22 /* main.swift in Sources */,

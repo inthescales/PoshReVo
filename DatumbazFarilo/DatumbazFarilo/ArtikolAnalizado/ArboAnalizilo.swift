@@ -1,12 +1,44 @@
 import ReVoModelojOSX
 
-func analizi(arbon arbo: ArtikolNodo, indekso: String, lingvoj: [String: Lingvo], stiloj: [String: String]) -> ArtikolAnalizRezulto? {
-	let stato = TraktadoStato(stiloj: stiloj)
-	stato.artikolFabriko.indekso = indekso
+enum ArboAnalizilo {
+	/// Rezulto de analizo de artikol-dokumento.
+	struct Rezulto {
+		/// Ĉiuj datumoj per kiu artikolo estos prezentata
+		let artikolo: Artikolo
+		
+		/// Tradukoj kiuj estos serĉeblaj
+		let serchTradukoj: [String: [SerchTraduko]]
+		
+		/// Markoj kaj siaj kunligitaj sencoj
+		let markSencoj: [String: Int]
+	}
 	
-	_ = traktiFilojn(de: arbo, stato: stato)
+	static func analizi(
+		arbon arbo: ArtikolNodo,
+		indekso: String,
+		lingvoj: [String: Lingvo],
+		stiloj: [String: String]
+	) -> Rezulto? {
+		let stato = TraktadoStato(stiloj: stiloj)
+		stato.artikolFabriko.indekso = indekso
+		
+		_ = traktiFilojn(de: arbo, stato: stato)
+		
+		return rezulto(stato: stato, lingvoj: lingvoj)
+	}
 	
-	return stato.rezultoj(lingvoj: lingvoj)
+	/// La finaj rezultoj de la artikol-traktado
+	static func rezulto(stato: TraktadoStato, lingvoj: [String: Lingvo]) -> Rezulto? {
+		guard let artikolo = stato.artikolFabriko.fabriki(lingvoj: lingvoj) else {
+			return nil
+		}
+		
+		return Rezulto(
+			artikolo: artikolo,
+			serchTradukoj: stato.serchTradukoj,
+			markSencoj: stato.markSencoj
+		)
+	}
 }
 
 func trakti(nodon nodo: ArtikolNodo, stato: TraktadoStato, ampligiTildojn: Bool = true) -> String? {
@@ -1003,5 +1035,3 @@ func trakti(prononcon prononco: ArtikolNodo, stato: TraktadoStato) -> String {
 
 // ATENTU
 // En 'provludi' - tradukoj ekzistas por 'prov~o', kiu NE APERAS KIEL DERIVAĴO
-
-// Eraroj en 'not/i'

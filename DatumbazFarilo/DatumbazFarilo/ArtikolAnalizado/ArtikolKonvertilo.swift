@@ -3,12 +3,11 @@ import CoreData
 
 import ReVoModelojOSX
 
-/// Analizas XMLan dosieron kiu reprezentas artikolon.
-class ArtikolAnalizilo: NSObject, XMLParserDelegate {
+/// Konvertas artikolajn-datumojn el XML en ArikolNodan arbon.
+class ArtikolKonvertilo: NSObject, XMLParserDelegate {
 	private let literoj: [String: String]
 	
 	var arbo: [ArtikolNodo] = [ArtikolNodo(tipo: .arbo)]
-	var rezultoj: ArtikolAnalizRezulto?
 	
 	init(literoj: [String: String]) {
 		self.literoj = literoj
@@ -54,17 +53,15 @@ class ArtikolAnalizilo: NSObject, XMLParserDelegate {
 
 // MARK: - Vokilo
 
-extension ArtikolAnalizilo {	
-	/// Legas artikolon je la indikilo, metante ĝin en la datumbaz-kontekston
-	public static func legi(
+extension ArtikolKonvertilo {	
+	/// Konvertas XML-ajn artikoldatumojn en artikol-arbon, liverante la radika nodo de la arbo
+	public static func konverti(
 		el indikilo: String,
-		lingvoj: [String: Lingvo],
-		stiloj: [String: String],
 		signoj: [String: String],
 		mallongigoj: [String: String],
 		urloj: [String: String]
-	) -> ArtikolAnalizRezulto? {
-		let artikolAnalizilo = ArtikolAnalizilo(literoj: signoj)
+	) -> ArtikolNodo? {
+		let artikolKonvertilo = ArtikolKonvertilo(literoj: signoj)
 		var teksto = try! String(contentsOfFile: indikilo, encoding: .utf8)
 		
 		teksto = Antautraktado.antautrakti(
@@ -77,18 +74,11 @@ extension ArtikolAnalizilo {
 		let datumoj = teksto.data(using: .utf8)!
 		let analizilo = XMLParser(data: datumoj)
 		analizilo.externalEntityResolvingPolicy = .never
-		analizilo.delegate = artikolAnalizilo
+		analizilo.delegate = artikolKonvertilo
 		analizilo.parse()
 		
-		assert(artikolAnalizilo.arbo.count == 1, "Eraro: Devas resti nur unu nodo post analizo")
+		assert(artikolKonvertilo.arbo.count == 1, "Eraro: Devas resti nur unu nodo post analizo")
 		
-		let dosierNomo = indikilo.split(separator: "/").last!
-		let indekso = String(dosierNomo[..<dosierNomo.index(dosierNomo.endIndex, offsetBy: -4)])
-		return analizi(
-			arbon: artikolAnalizilo.arbo.first!,
-			indekso: indekso,
-			lingvoj: lingvoj,
-			stiloj: stiloj
-		)
+		return artikolKonvertilo.arbo.first
 	}
 }

@@ -110,20 +110,4 @@ class TraktadoStato {
 		if serchTradukoj[lingvo] == nil { serchTradukoj[lingvo] = [] }
 		serchTradukoj[lingvo]?.append(traduko)
 	}
-	
-	// MARK: Rezultoj
-	
-	/// La finaj rezultoj de la artikol-traktado
-	func rezultoj(lingvoj: [String: Lingvo]) -> ArtikolAnalizRezulto? {
-		guard let artikolo = artikolFabriko.fabriki(lingvoj: lingvoj) else {
-			return nil
-		}
-		
-		return ArtikolAnalizRezulto(
-			artikolo: artikolo,
-			serchTradukoj: serchTradukoj,
-			markSencoj: markSencoj
-		)
-
-	}
 }

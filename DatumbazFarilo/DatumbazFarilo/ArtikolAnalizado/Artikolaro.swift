@@ -16,18 +16,6 @@ enum Artikolaro {
 		}
 	}
 	
-	/// Registras artikolojn en datumbaz-kontekston
-	public static func registri(
-		artikolojn artikoloj: [Artikolo],
-		en konteksto: NSManagedObjectContext
-	) {
-		for (indekso, artikolo) in artikoloj.enumerated() {
-			artikolo.skribi(en: konteksto, numero: indekso)
-		}
-		
-		try! konteksto.save()
-	}
-	
 	/// Legas ĉiujn artikolojn el certa indikilo kaj liveras ĉiujn artikolo-modelojn kaj serĉ-tradukojn
 	static func legi(
 		el indikilo: String,
@@ -57,21 +45,31 @@ enum Artikolaro {
 		var markSencoj: [String: Int] = [:]
 
 		for indiko in legotaj {
-			guard let rezulto = ArtikolAnalizilo.legi(
+			guard let arbo = ArtikolKonvertilo.konverti(
 				el: revoIndiko + indiko,
-				lingvoj: lingvoDict,
-				stiloj: stiloDict,
 				signoj: signoj,
 				mallongigoj: verkajMallongigoj,
 				urloj: urloj
 			) else {
-				print("NE atingis rezulton por artikolo '\(indiko)'")
+				print("NE sukcesis konverti artikolon '\(indiko)'")
+				continue
+			}
+			
+			let dosierNomo = String(indiko.split(separator: "/").last!)
+			let indekso = dosierNomo.prefikso(ghis: dosierNomo.count - 4)
+			
+			guard let rezulto = ArboAnalizilo.analizi(
+				arbon: arbo,
+				indekso: indekso,
+				lingvoj: lingvoDict,
+				stiloj: stiloDict
+			) else {
+				print("NE sukcesis analizi artikolon '\(indiko)'")
 				continue
 			}
 			
 			artikoloj.append(rezulto.artikolo)
-			print("Traktis '\(rezulto.artikolo.titolo)'")
-			// print(rezulto.artikolo)
+			print("Analizis '\(rezulto.artikolo.titolo)'")
 			
 			for (lingvo, novajTradukoj) in rezulto.serchTradukoj {
 				if tradukoj[lingvo] == nil {
@@ -96,5 +94,17 @@ enum Artikolaro {
 			artikoloj: artikoloj,
 			tradukoj: tradukoj
 		)
+	}
+	
+	/// Registras artikolojn en datumbaz-kontekston
+	public static func registri(
+		artikolojn artikoloj: [Artikolo],
+		en konteksto: NSManagedObjectContext
+	) {
+		for (indekso, artikolo) in artikoloj.enumerated() {
+			artikolo.skribi(en: konteksto, numero: indekso)
+		}
+		
+		try! konteksto.save()
 	}
 }
