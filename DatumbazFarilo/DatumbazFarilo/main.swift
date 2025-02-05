@@ -22,97 +22,31 @@ LingvoAnalizilo.registri(lingvojn: lingvoj, en: konteksto)
 let fakoj = FakoAnalizilo.legi(el: grundIndiko + "/cfg/fakoj.xml")
 FakoAnalizilo.registri(fakojn: fakoj, en: konteksto)
 
-let mallongigoj = MallongigoAnalizilo.legi(el: grundIndiko + "/cfg/mallongigoj.xml")
-MallongigoAnalizilo.registri(mallongigojn: mallongigoj, en: konteksto)
+let vortarajMallongigoj = VortarajMallongigojAnalizilo.legi(el: grundIndiko + "/cfg/mallongigoj.xml")
+VortarajMallongigojAnalizilo.registri(mallongigojn: vortarajMallongigoj, en: konteksto)
 
 let stiloj = StiloAnalizilo.legi(el: grundIndiko + "/cfg/stiloj.xml")
 StiloAnalizilo.registri(stilojn: stiloj, en: konteksto)
 
-//Oficialecoj.aldoni(al: konteksto)
-//let literoj = LiteroAnalizilo.legi(el: grundIndiko + "/cfg/literoj.xml")
+Oficialecoj.aldoni(al: konteksto)
 
-let vokoSignoj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokosgn.dtd")
-let vokoMallongigoj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokomll.dtd")
+let signoj = SignoAnalizilo.analizi(el: grundIndiko + "/dtd/vokosgn.dtd")
+
+let verkajMallongigoj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokomll.dtd")
+
 let urloj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokourl.dtd")
 
 // Legi artikolojn
 
-var artikolRezultoj: [ArtikolAnalizRezulto] = []
-
-//let legotaj = [
-//	"ni.xml"
-//]
-
-let legotaj = try! FileManager.default.contentsOfDirectory(atPath: revoIndiko)
-
-let lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in
-	dict[lingvo.kodo] = lingvo
-}
-
-let stiloDict = stiloj.reduce(into: [String: String]()) { dict, stilo in
-	dict[stilo.kodo] = stilo.nomo
-}
-
-func legiArtikolon(che indiko: String, lingvoDict: [String: Lingvo], stiloDict: [String: String]) -> ArtikolAnalizRezulto? {
-	if let rezulto = ArtikolAnalizilo.legi(
-		el: indiko,
-		en: konteksto,
-		lingvoj: lingvoDict,
-		stiloj: stiloDict,
-		literoj: vokoSignoj,
-		mallongigoj: vokoMallongigoj,
-		urloj: urloj
-	) {
-		return rezulto
-	}
-	
-	return nil
-}
-
-var artikoloj: [Artikolo] = []
-var serchTradukoj: [String: [SerchTraduko]] = [:]
-var markSencoj: [String: Int] = [:]
-
-autoreleasepool {
-	for indiko in legotaj {
-		guard let rezulto = legiArtikolon(che: revoIndiko + indiko, lingvoDict: lingvoDict, stiloDict: stiloDict) else {
-			print("NE traktis '\(indiko)'")
-			continue
-		}
-		
-		// artikoloj.append(rezulto.artikolo)
-		// print(rezulto.artikolo)
-		print("Traktis '\(rezulto.artikolo.titolo)'")
-		
-		for (lingvo, _) in rezulto.serchTradukoj {
-			if serchTradukoj[lingvo] == nil {
-				serchTradukoj[lingvo] = []
-			}
-			
-			// serchTradukoj[lingvo]? += tradukoj
-		}
-		
-		rezulto.markSencoj.forEach { marko, senco in
-			// markSencoj[marko] = senco
-		}
-	}
-}
-
-// Posttrakti artikolojn
-
-artikoloj = artikoloj.map { artikolo in
-	return postTrakti(artikolon: artikolo, markSencoj: markSencoj)
-}
-
-// Skribi artikolojn en datumbazon
-
-var numero = 0
-for artikolo in artikoloj {
-	artikolo.skribi(en: konteksto, numero: numero)
-	numero += 1
-}
-
-try! konteksto.save()
+let artikolRezultoj = Artikolaro.legi(
+	el: revoIndiko,
+	lingvoj: lingvoj,
+	stiloj: stiloj,
+	signoj: signoj,
+	mallongigoj: verkajMallongigoj,
+	urloj: urloj
+)
+Artikolaro.registri(artikolojn: artikolRezultoj.artikoloj, en: konteksto)
 
 // Fari trie-on
 

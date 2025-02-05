@@ -4,18 +4,16 @@ enum Interpreti {
 	/// ĝi tamen NE inkluzivu komencan '&' kaj finan ';'.
 	static func unikodon(html teksto: String) -> String? {
 		guard teksto.count > 1
-				&& teksto[teksto.startIndex..<teksto.index(teksto.startIndex, offsetBy: 1)] == "#"
+				&& teksto.sub(de: 0, al: 1) == "#"
 		else {
 			return nil
 		}
 		
-		let dua = teksto[teksto.index(teksto.startIndex, offsetBy: 1)..<teksto.index(teksto.startIndex, offsetBy: 2)]
-		
-		if dua == "x" {
-		   let nombro = String(teksto[teksto.index(teksto.startIndex, offsetBy: 2)..<teksto.endIndex])
-		   return unikodon(deksesuma: nombro)
+		if teksto.sub(de: 1, al: 2) == "x" {
+			let nombro = teksto.sub(de: 2, al: teksto.count)
+			return unikodon(deksesuma: nombro)
 		} else {
-			let nombro = String(teksto[teksto.index(teksto.startIndex, offsetBy: 1)..<teksto.endIndex])
+			let nombro = teksto.sub(de: 1, al: teksto.count)
 			return unikodon(dekuma: nombro)
 		}
 	}

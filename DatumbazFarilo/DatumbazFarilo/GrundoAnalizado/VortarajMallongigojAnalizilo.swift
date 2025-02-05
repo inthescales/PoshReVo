@@ -6,7 +6,7 @@ import ReVoDatumbazoOSX
 
 /// Analizas XMLan dosieron enhavantan liston da mallongigoj, kaj aldonas ilin al la datumbazo
 /// Parses the XML file containing the list of abbreviations, and adds them to the database
-class MallongigoAnalizilo: NSObject, XMLParserDelegate {
+class VortarajMallongigojAnalizilo: NSObject, XMLParserDelegate {
 	var mallongigoj: [Mallongigo] = []
 	
 	private var nunaMallongigo: String?
@@ -49,7 +49,7 @@ class MallongigoAnalizilo: NSObject, XMLParserDelegate {
 
 // MARK: - Vokilo
 
-extension MallongigoAnalizilo {
+extension VortarajMallongigojAnalizilo {
 	public static func registri(
 		mallongigojn mallongigoj: [Mallongigo],
 		en konteksto: NSManagedObjectContext) {
@@ -63,7 +63,7 @@ extension MallongigoAnalizilo {
 	/// Legas mallongigojn el la donata indikilo, en la donatan datumbaz-kontekston
 	/// Reads abbreviations from the given file path, into the given database context
 	public static func legi(el indikilo: String) -> [Mallongigo] {
-		let mallongigoAnalizilo = MallongigoAnalizilo()
+		let mallongigoAnalizilo = VortarajMallongigojAnalizilo()
 		let datumoj = try! Data(contentsOf: URL(fileURLWithPath: indikilo))
 		let analizilo = XMLParser(data: datumoj)
 		analizilo.delegate = mallongigoAnalizilo

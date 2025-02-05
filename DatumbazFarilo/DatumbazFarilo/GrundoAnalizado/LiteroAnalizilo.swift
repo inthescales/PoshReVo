@@ -1,6 +1,6 @@
 import Foundation
 
-/// Kolektas literojn kaj siajn kodojn el la XMLa dosiero
+/// Kolektas literojn kaj siajn kodojn el la XMLa dosiero.
 /// Collects letters and their codes from the XML file
 class LiteroAnalizilo : NSObject, XMLParserDelegate {
 	var literoj: [String: String] = [:]
@@ -25,22 +25,22 @@ class LiteroAnalizilo : NSObject, XMLParserDelegate {
 		if elementName == "l",
 			let nomo = attributeDict["nomo"]?.tondi(),
 			let kodo = attributeDict["kodo"] {
-			if kodo[..<kodo.index(kodo.startIndex, offsetBy: 2)] == "#x" {
-				let signo = Interpreti.unikodon(deksesuma: kodo)!
+			if kodo.prefikso(ghis: 2) == "#x" {
+				let signo = Interpreti.unikodon(deksesuma: kodo.sufikso(de: 2))!
 				literoj[nomo] = signo
 				trovis(litero: nomo, signo: signo)
 			} else if kodo.count > 5
-						&& kodo[..<kodo.index(kodo.startIndex, offsetBy: 5)] == "#38;#" {
+						&& kodo.prefikso(ghis: 5) == "#38;#" {
 				// Ĉi-kodoj havas ŝajne ne-uzatan "#38" komence, kaj poste validan ASCII-kodon
 				// These codes have a seeminly unused '#38' at the start, then afterwards a valid ASCII code
-				let signoKodo = kodo[kodo.index(kodo.startIndex, offsetBy: 5)...]
+				let signoKodo = kodo.sufikso(de: 5)
 				let signo = String(UnicodeScalar(UInt32(signoKodo)!)!)
 				literoj[nomo] = signo
 				trovis(litero: nomo, signo: signo)
-			} else if kodo[..<kodo.index(kodo.startIndex, offsetBy: 1)] == "#" {
+			} else if kodo.signo(0) == "#" {
 				// Ĉi-kodoj estas validaj ASCIIaj signo-kodoj
 				// These codes are valid ASCII character codes
-				let signoKodo = kodo[kodo.index(kodo.startIndex, offsetBy: 1)...]
+				let signoKodo = kodo.sufikso(de: 1)
 				let signo = String(UnicodeScalar(UInt32(signoKodo)!)!)
 				literoj[nomo] = signo
 				trovis(litero: nomo, signo: signo)

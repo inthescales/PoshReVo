@@ -1,13 +1,14 @@
 import AppKit
 import Foundation
 
+/// Procezo al kiu artikolaj tekstoj estu submetitaj *antaŭ* ol analizado.
 enum Antautraktado {
-	/// Signoj kiuj ne povas aperi en XML-dosiero
+	/// Signoj kiuj ne povas aperi en XML-dosiero kaj estu trapasitaj
 	static let rezervitaj = ["amp", "gt", "lt"]
 	
 	/// Efikas ŝanĝojn en la XML-an tekston antaŭ ke ĝi estos analizita.
 	/// Aŭ la Swift-a `XMLParserDelegate` ne bone traktas liter-kodojn, aŭ mi ne komprenas kiel ĝi funkcias.
-	/// Iukaze, ĉi tie ni anstataŭas la literkodojn per siaj literoj
+	/// Ĉiukaze, ĉi tie ni anstataŭas la literkodojn per siaj literoj
 	static func antautrakti(
 		tekston teksto: String,
 		literoj: [String: String],

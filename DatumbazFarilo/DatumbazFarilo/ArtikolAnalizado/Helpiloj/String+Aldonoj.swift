@@ -43,4 +43,26 @@ extension String {
 		
 		return rezulto
 	}
+	
+	// MARK: - Subĉenoj
+	
+	/// Liveras signo je certa indekso
+	func signo(_ indekso: Int) -> String {
+		sub(de: indekso, al: indekso + 1)
+	}
+	
+	/// Liveras subĉenon ekde la komenco ĝis certa indekso
+	func prefikso(ghis longo: Int) -> String {
+		sub(de: 0, al: longo)
+	}
+	
+	/// Liveras subĉenon ekde certa loko ĝis la fino
+	func sufikso(de komenco: Int) -> String {
+		sub(de: komenco, al: count)
+	}
+	
+	/// Liveras subĉenon inter du indeksoj
+	func sub(de komencIndekso: Int, al finIndekso: Int) -> String {
+		String(self[index(startIndex, offsetBy: komencIndekso)..<index(startIndex, offsetBy: finIndekso)])
+	}
 }

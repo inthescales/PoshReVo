@@ -16,8 +16,7 @@ enum ArtikolTeksto {
 			return nil
 		}
 		
-		let indekso = aboco.index(aboco.startIndex, offsetBy: numero - 1)
-		return String(aboco[indekso])
+		return aboco.signo(numero - 1)
 	}
 	
 	/// Romaj cierfoj kiel ĝi aperu antaŭ subartikoloj (ekz. "I.", "II.", ktp.)

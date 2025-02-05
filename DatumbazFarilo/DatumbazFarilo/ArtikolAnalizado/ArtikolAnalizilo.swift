@@ -3,29 +3,22 @@ import CoreData
 
 import ReVoModelojOSX
 
-/// Analizas XMLan dosieron kiu reprezentas artikolo
-/// Parses an XML file representing an article
+/// Analizas XMLan dosieron kiu reprezentas artikolon.
 class ArtikolAnalizilo: NSObject, XMLParserDelegate {
-	private let konteksto: NSManagedObjectContext
 	private let literoj: [String: String]
 	
 	var arbo: [ArtikolNodo] = [ArtikolNodo(tipo: .arbo)]
 	var rezultoj: ArtikolAnalizRezulto?
 	
-	init(_ konteksto: NSManagedObjectContext, literoj: [String: String]) {
-		self.konteksto = konteksto
+	init(literoj: [String: String]) {
 		self.literoj = literoj
-		
-		// print("Konstruas artikol-arbon")
 	}
 	
 	func parser(_ parser: XMLParser, parseErrorOccurred parseError: any Error) {
-		print(parseError)
+		assert(false, "Analizeraro: \(parseError)")
 	}
 	
-	func parserDidEndDocument(_ parser: XMLParser) {
-		// print("Konstruis artikol-arbon")
-	}
+	func parserDidEndDocument(_ parser: XMLParser) {}
 	
 	func parser(
 		_ parser: XMLParser,
@@ -61,32 +54,33 @@ class ArtikolAnalizilo: NSObject, XMLParserDelegate {
 
 // MARK: - Vokilo
 
-extension ArtikolAnalizilo {
-	/// Legas artikolon el la donata indikilo, en la donatan datumbaz-kontekston
-	/// Reads the article from the given file path, into the given database context
+extension ArtikolAnalizilo {	
+	/// Legas artikolon je la indikilo, metante ĝin en la datumbaz-kontekston
 	public static func legi(
 		el indikilo: String,
-		en konteksto: NSManagedObjectContext,
 		lingvoj: [String: Lingvo],
 		stiloj: [String: String],
-		literoj: [String: String],
+		signoj: [String: String],
 		mallongigoj: [String: String],
 		urloj: [String: String]
 	) -> ArtikolAnalizRezulto? {
-		let artikolAnalizilo = ArtikolAnalizilo(konteksto, literoj: literoj)
+		let artikolAnalizilo = ArtikolAnalizilo(literoj: signoj)
 		var teksto = try! String(contentsOfFile: indikilo, encoding: .utf8)
+		
 		teksto = Antautraktado.antautrakti(
 			tekston: teksto,
-			literoj: literoj,
+			literoj: signoj,
 			mallongigoj: mallongigoj,
-			urloj: urloj)
+			urloj: urloj
+		)
+		
 		let datumoj = teksto.data(using: .utf8)!
 		let analizilo = XMLParser(data: datumoj)
 		analizilo.externalEntityResolvingPolicy = .never
 		analizilo.delegate = artikolAnalizilo
 		analizilo.parse()
 		
-		assert(artikolAnalizilo.arbo.count == 1, "Devas resti nur unu nodo")
+		assert(artikolAnalizilo.arbo.count == 1, "Eraro: Devas resti nur unu nodo post analizo")
 		
 		let dosierNomo = indikilo.split(separator: "/").last!
 		let indekso = String(dosierNomo[..<dosierNomo.index(dosierNomo.endIndex, offsetBy: -4)])

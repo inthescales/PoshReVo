@@ -58,6 +58,7 @@ extension LingvoAnalizilo {
 		
 		try! konteksto.save()
 	}
+	
 	/// Legas lingvojn el la donata indikilo, en la donatan datumbaz-kontekston
 	/// Reads languages from the given file path, into the given database context
 	public static func legi(el indikilo: String) -> [Lingvo] {

@@ -783,7 +783,7 @@ func traktiTildon(stato: TraktadoStato, litero: String?, variajho: String?) -> S
 	}
 
 	if let litero = litero {
-		teksto += litero + radiko.suffix(from: radiko.index(radiko.startIndex, offsetBy: 1))
+		teksto += litero + radiko.sufikso(de: 1)
 	} else {
 		teksto += radiko
 	}
