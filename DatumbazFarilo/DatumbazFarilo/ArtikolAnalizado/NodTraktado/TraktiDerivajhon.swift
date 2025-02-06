@@ -8,24 +8,38 @@ extension ArboAnalizilo {
 		
 		traktiFilojn(de: derivajho, stato: stato) { filo in
 			switch filo.tipo {
-			case .kap:
-				_ = trakti(kapon: filo, stato: stato)
-			case .mlg:
-				// TODO: Trakti kapajn mallongigojn
+			case .adm:
 				break
-			case .gra:
-				teksto += trakti(gramatikon: filo, stato: stato)
-			case .uzo(let tip):
-				teksto += trakti(uzon: filo, tipo: tip, stato: stato)
+			case .bld:
+				break
 			case .dif:
 				teksto += trakti(difinon: filo, stato: stato)
 				if sencKvanto > 0 && stato.lastaSenco != sencKvanto {
 					teksto += "\n"
 				}
-			case .lstref:
-				teksto += trakti(listReferencon: filo, stato: stato)
-			case .tld(let lit, let vari):
-				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
+			case .fnt:
+				switch stato.sibStako.last {
+				case .uzo:
+					// XXX: Uzoj devas lasi spacon tekst-fine.
+					break
+				default:
+					teksto = teksto.tondi()
+				}
+			case .gra:
+				teksto += trakti(gramatikon: filo, stato: stato)
+			case .kap:
+				_ = trakti(kapon: filo, stato: stato)
+			case .mlg:
+				// TODO: Trakti kapajn mallongigojn
+				break
+			case .lstref(let lst):
+				teksto += trakti(listReferencon: filo, listo: lst, stato: stato)
+			case .ref(let tip, let cel):
+				teksto += trakti(referencon: filo, tipo: tip, celo: cel, stato: stato)
+			case .refgrp(let tip):
+				teksto += trakti(referencGrupon: filo, tipo: tip, stato: stato)
+			case .rim:
+				teksto += trakti(rimarkon: filo, stato: stato)
 			case .snc(let mrk):
 				let filTeksto = trakti(sencon: filo, marko: mrk, stato: stato)
 				
@@ -49,32 +63,25 @@ extension ArboAnalizilo {
 				}
 				
 				teksto += filTeksto
-			case .ref(let tip, let cel):
-				teksto += trakti(referencon: filo, tipo: tip, celo: cel, stato: stato)
-			case .refgrp(let tip):
-				teksto += trakti(referencGrupon: filo, tipo: tip, stato: stato)
-			case .rim:
-				teksto += trakti(rimarkon: filo, stato: stato)
+			case .tld(let lit, let vari):
+				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
+			case .teksto:
+				break
+			case .tezrad:
+				break
+			case .trd(let lng):
+				trakti(tradukon: filo, lingvo: lng!, stato: stato)
+			case .trdgrp(let lng):
+				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
 			case .url(let ref):
 				teksto += "\n\n" + trakti(URLon: filo, referenco: ref, stato: stato)
-			case .trd, .trdgrp:
-				_ = trakti(nodon: filo, stato: stato)
-			case .fnt:
-				switch stato.sibStako.last {
-				case .uzo:
-					// XXX: Uzoj devas lasi spacon tekst-fine.
-					break
-				default:
-					teksto = teksto.tondi()
-				}
-			case .adm, .bld, .teksto, .tezrad:
-				break
+			case .uzo(let tip):
+				teksto += trakti(uzon: filo, tipo: tip, stato: stato)
 			default:
 				assert(false, "Neatendita filo")
 			}
 		}
 		
-		// let teksto = traktiFilojn(de: derivajho, stato: stato)
 		stato.vortoFabriko?.teksto = teksto.kunpremi().tondi()
 		
 		if stato.subartikoloFabriko == nil {

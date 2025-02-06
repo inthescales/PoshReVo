@@ -87,8 +87,8 @@ enum ArboAnalizilo {
 			return trakti(komunlingvan: nodo, stato: stato)
 		case .klr(_):
 			return trakti(klarigon: nodo, stato: stato)
-		case .lstref:
-			return trakti(listReferencon: nodo, stato: stato)
+		case .lstref(let lst):
+			return trakti(listReferencon: nodo, listo: lst, stato: stato)
 		case .mis:
 			return trakti(misstilan: nodo, stato: stato)
 		case .mlg:

@@ -12,13 +12,15 @@ extension ArboAnalizilo {
 		var teksto = ""
 		traktiFilojn(de: subderivajho, stato: stato) { filo in
 			switch filo.tipo {
+			case .adm:
+				break
 			case .dif:
 				teksto += trakti(difinon: filo, stato: stato)
 				if sencKvanto > 0 && stato.lastaSenco != sencKvanto {
 					teksto += "\n\n"
 				}
 			case .gra:
-				teksto += trakti(nodon: filo, stato: stato) ?? ""
+				teksto += trakti(gramatikon: filo, stato: stato)
 			case .ref(let tip, let cel):
 				teksto += trakti(referencon: filo, tipo: tip, celo: cel, stato: stato)
 			case .refgrp(let tip):
@@ -37,10 +39,12 @@ extension ArboAnalizilo {
 				}
 				
 				teksto += filTeksto
-			case .trd, .trdgrp:
-				_ = trakti(nodon: filo, stato: stato)
-			case .adm, .teksto:
+			case .teksto:
 				break
+			case .trd(let lng):
+				trakti(tradukon: filo, lingvo: lng!, stato: stato)
+			case .trdgrp(let lng):
+				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
 			default:
 				assert(false, "Neatendita filo")
 			}

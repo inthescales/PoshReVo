@@ -14,16 +14,31 @@ extension ArboAnalizilo {
 		var teksto = ""
 		traktiFilojn(de: senco, stato: stato) { filo in
 			switch filo.tipo {
+			case .adm, .bld:
+				break
+			case .dif:
+				teksto += trakti(difinon: filo, stato: stato)
+			case .ekz:
+				teksto += trakti(ekzemplon: filo, stato: stato)
+			case .fnt:
+				teksto = teksto.tondi()
+			case .gra:
+				teksto += trakti(gramatikon: filo, stato: stato)
 			case .kap:
 				_ = trakti(kapon: filo, stato: stato)
-			case .ekz, .dif, .fnt, .gra, .lstref, .rim, .ref, .refgrp, .uzo:
-				teksto += trakti(nodon: filo, stato: stato) ?? ""
-			case .tld(let lit, let vari):
-				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
-			case .url(let ref):
-				teksto += "\n\n" + trakti(URLon: filo, referenco: ref, stato: stato)
-			case .trd, .trdgrp:
-				_ = trakti(nodon: filo, stato: stato)
+			case .lstref(let lst):
+				teksto += trakti(listReferencon: filo, listo: lst, stato: stato)
+			case .mlg:
+				// Teksto de mallongigo en senco aperu *post* ceterajn tekstojn.
+				// Mi ne scias tuje kiel efektivigi tion, kaj, pro tio ke la apo
+				// jam ne reprezentas tiajn mallongigojn, mi ne ŝanĝas tion nun.
+				break
+			case .ref(let tip, let cel):
+				teksto += trakti(referencon: filo, tipo: tip, celo: cel, stato: stato)
+			case .refgrp(let tip):
+				teksto += trakti(referencGrupon: filo, tipo: tip, stato: stato)
+			case .rim:
+				teksto += trakti(rimarkon: filo, stato: stato)
 			case .subsnc(let mrk):
 				let filTeksto = trakti(subsencon: filo, marko: mrk, stato: stato)
 				
@@ -32,13 +47,18 @@ extension ArboAnalizilo {
 					teksto += "\n\n" + litero + ") "
 				}
 				teksto += filTeksto
-			case .adm, .bld, .teksto, .tezrad:
+			case .teksto, .tezrad:
 				break
-			case .mlg:
-				// Teksto de mallongigo en senco aperu *post* ceterajn tekstojn.
-				// Mi ne scias tuje kiel efektivigi tion, kaj, pro tio ke la apo
-				// jam ne reprezentas tiajn mallongigojn, mi ne ŝanĝas tion nun.
-				break
+			case .tld(let lit, let vari):
+				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
+			case .trd(let lng):
+				trakti(tradukon: filo, lingvo: lng!, stato: stato)
+			case .trdgrp(let lng):
+				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
+			case .url(let ref):
+				teksto += "\n\n" + trakti(URLon: filo, referenco: ref, stato: stato)
+			case .uzo(let tip):
+				teksto += trakti(uzon: filo, tipo: tip, stato: stato)
 			default:
 				assert(false, "Neatendita filo")
 			}
