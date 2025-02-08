@@ -4,6 +4,7 @@ extension ArboAnalizilo {
 		traktiFilojn(de: ekzemplo, stato: stato) { filo in
 			switch filo.tipo {
 			case .trd, .trdgrp:
+				// TODO: Trakti tradukojn ĉi tie
 				break
 			case .fnt:
 				teksto = teksto.tondi()

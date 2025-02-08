@@ -1,6 +1,6 @@
 extension ArboAnalizilo {
 	static func trakti(uzon uzo: ArtikolNodo, tipo: String?, stato: TraktadoStato) -> String {
-		let teksto = traktiFilojn(de: uzo, stato: stato)
+		let teksto = akumuliTekstojn(de: uzo, stato: stato)
 		
 		switch tipo {
 		case "fak":

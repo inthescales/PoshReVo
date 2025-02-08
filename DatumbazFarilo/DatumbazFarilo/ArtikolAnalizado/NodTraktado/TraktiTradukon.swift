@@ -14,17 +14,23 @@ extension ArboAnalizilo {
 				let rezulto = trakti(indekson: filo, stato: stato)
 				filTeksto = rezulto.0
 				serchNomo = rezulto.1
+			case .klr(_):
+				filTeksto = trakti(klarigon: filo, stato: stato)
 			case .mll(let tipo):
 				filTeksto = trakti(nodon: filo, stato: stato) ?? ""
 				serchNomo = ArtikolTeksto.mllTeksto(baza: filTeksto, tipo: tipo)
+			case .pr:
+				filTeksto = trakti(prononcon: filo, stato: stato)
+			case .teksto(let tekstEnhavoj):
+				filTeksto = tekstEnhavoj
 			default:
+				assert(false, "Neatendita filo")
 				filTeksto = ""
-				break
 			}
 			teksto += filTeksto
 		}
 		
-		teksto = teksto.kunpremi()
+		teksto = teksto.prepari().kunpremi().tondi()
 		
 		if false {
 			// TODO: Tradukoj en ekzemploj

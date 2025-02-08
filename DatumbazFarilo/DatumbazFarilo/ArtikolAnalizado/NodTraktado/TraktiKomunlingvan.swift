@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
 	static func trakti(komunlingvan komunlingvajho: ArtikolNodo, stato: TraktadoStato) -> String {
-		return "<i>" + traktiFilojn(de: komunlingvajho, stato: stato) + "</i>"
+		return "<i>" + akumuliTekstojn(de: komunlingvajho, stato: stato) + "</i>"
 	}
 }
