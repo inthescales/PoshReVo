@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "C904D1FE-6C90-4B36-A5B4-2BBC36523E56",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DatumbazFarilo.xcodeproj",
+        "identifier" : "0049F41A2D5927E2002ABBFE",
+        "name" : "DatumbazFariloTestoj"
+      }
+    }
+  ],
+  "version" : 1
+}

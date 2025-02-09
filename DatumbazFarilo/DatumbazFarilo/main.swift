@@ -4,7 +4,6 @@ import CoreData
 import ReVoModelojOSX
 import ReVoDatumbazoOSX
 
-print(FileManager.default.currentDirectoryPath)
 let radiko = "/Users/robin/Desktop"
 
 let fontIndiko = radiko + "/fontoj"

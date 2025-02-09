@@ -27,7 +27,8 @@ enum Artikolaro {
 	) -> Rezulto {
 		// let legotaj = ["not.xml"]
 		let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
-
+			.filter { $0.hasSuffix(".xml") }
+		
 		// Prepari grundaĵojn
 		
 		let lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in

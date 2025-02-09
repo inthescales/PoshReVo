@@ -80,6 +80,15 @@
 		0049F4122D552CA5002ABBFE /* TraktiArtikolon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4112D552CA5002ABBFE /* TraktiArtikolon.swift */; };
 		0049F4142D552CBA002ABBFE /* TraktiVortaron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4132D552CBA002ABBFE /* TraktiVortaron.swift */; };
 		0049F4162D57FE78002ABBFE /* TraktiAutoron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4152D57FE78002ABBFE /* TraktiAutoron.swift */; };
+		0049F41E2D5927E2002ABBFE /* DatumbazFariloTestoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F41D2D5927E2002ABBFE /* DatumbazFariloTestoj.swift */; };
+		0049F4292D592B99002ABBFE /* not.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4282D592B99002ABBFE /* not.xml */; };
+		0049F42C2D5931CF002ABBFE /* GrundoAlJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F42B2D5931CF002ABBFE /* GrundoAlJSON.swift */; };
+		0049F43B2D5939AA002ABBFE /* lingvoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4352D5939AA002ABBFE /* lingvoj.json */; };
+		0049F43C2D5939AA002ABBFE /* mallongigoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4362D5939AA002ABBFE /* mallongigoj.json */; };
+		0049F43D2D5939AA002ABBFE /* stiloj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4372D5939AA002ABBFE /* stiloj.json */; };
+		0049F43E2D5939AA002ABBFE /* urloj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4382D5939AA002ABBFE /* urloj.json */; };
+		0049F43F2D5939AA002ABBFE /* signoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4392D5939AA002ABBFE /* signoj.json */; };
+		0049F4402D5939AA002ABBFE /* fakoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F43A2D5939AA002ABBFE /* fakoj.json */; };
 		00BE1AD82D24B7450027BC22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE1AD72D24B7450027BC22 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -179,11 +188,29 @@
 		0049F4112D552CA5002ABBFE /* TraktiArtikolon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiArtikolon.swift; sourceTree = "<group>"; };
 		0049F4132D552CBA002ABBFE /* TraktiVortaron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiVortaron.swift; sourceTree = "<group>"; };
 		0049F4152D57FE78002ABBFE /* TraktiAutoron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiAutoron.swift; sourceTree = "<group>"; };
+		0049F41B2D5927E2002ABBFE /* DatumbazFariloTestoj.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatumbazFariloTestoj.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0049F41D2D5927E2002ABBFE /* DatumbazFariloTestoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumbazFariloTestoj.swift; sourceTree = "<group>"; };
+		0049F4272D592B35002ABBFE /* DatumbazFarilo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DatumbazFarilo.xctestplan; sourceTree = "<group>"; };
+		0049F4282D592B99002ABBFE /* not.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = not.xml; sourceTree = "<group>"; };
+		0049F42B2D5931CF002ABBFE /* GrundoAlJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrundoAlJSON.swift; sourceTree = "<group>"; };
+		0049F4352D5939AA002ABBFE /* lingvoj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lingvoj.json; sourceTree = "<group>"; };
+		0049F4362D5939AA002ABBFE /* mallongigoj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mallongigoj.json; sourceTree = "<group>"; };
+		0049F4372D5939AA002ABBFE /* stiloj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stiloj.json; sourceTree = "<group>"; };
+		0049F4382D5939AA002ABBFE /* urloj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = urloj.json; sourceTree = "<group>"; };
+		0049F4392D5939AA002ABBFE /* signoj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signoj.json; sourceTree = "<group>"; };
+		0049F43A2D5939AA002ABBFE /* fakoj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fakoj.json; sourceTree = "<group>"; };
 		00BE1AD42D24B7450027BC22 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE1AD72D24B7450027BC22 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0049F4182D5927E2002ABBFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00BE1AD12D24B7450027BC22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,10 +343,59 @@
 			path = NodTraktado;
 			sourceTree = "<group>";
 		};
+		0049F41C2D5927E2002ABBFE /* DatumbazFariloTestoj */ = {
+			isa = PBXGroup;
+			children = (
+				0049F4262D592B30002ABBFE /* TestPlanoj */,
+				0049F42D2D593943002ABBFE /* Grundajhoj */,
+				0049F4252D592A73002ABBFE /* XML */,
+				0049F42A2D593173002ABBFE /* Modeloj+JSON */,
+				0049F41D2D5927E2002ABBFE /* DatumbazFariloTestoj.swift */,
+			);
+			path = DatumbazFariloTestoj;
+			sourceTree = "<group>";
+		};
+		0049F4252D592A73002ABBFE /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				0049F4282D592B99002ABBFE /* not.xml */,
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
+		0049F4262D592B30002ABBFE /* TestPlanoj */ = {
+			isa = PBXGroup;
+			children = (
+				0049F4272D592B35002ABBFE /* DatumbazFarilo.xctestplan */,
+			);
+			path = TestPlanoj;
+			sourceTree = "<group>";
+		};
+		0049F42A2D593173002ABBFE /* Modeloj+JSON */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Modeloj+JSON";
+			sourceTree = "<group>";
+		};
+		0049F42D2D593943002ABBFE /* Grundajhoj */ = {
+			isa = PBXGroup;
+			children = (
+				0049F43A2D5939AA002ABBFE /* fakoj.json */,
+				0049F4352D5939AA002ABBFE /* lingvoj.json */,
+				0049F4362D5939AA002ABBFE /* mallongigoj.json */,
+				0049F4392D5939AA002ABBFE /* signoj.json */,
+				0049F4372D5939AA002ABBFE /* stiloj.json */,
+				0049F4382D5939AA002ABBFE /* urloj.json */,
+			);
+			path = Grundajhoj;
+			sourceTree = "<group>";
+		};
 		00BE1ACB2D24B7450027BC22 = {
 			isa = PBXGroup;
 			children = (
 				00BE1AD62D24B7450027BC22 /* DatumbazFarilo */,
+				0049F41C2D5927E2002ABBFE /* DatumbazFariloTestoj */,
 				00BE1AD52D24B7450027BC22 /* Products */,
 				0049F3412D2F5317002ABBFE /* Frameworks */,
 			);
@@ -329,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				00BE1AD42D24B7450027BC22 /* DatumbazFarilo */,
+				0049F41B2D5927E2002ABBFE /* DatumbazFariloTestoj.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,6 +419,7 @@
 				0049F3522D303970002ABBFE /* KreiDatumbazon.swift */,
 				0049F3692D384D0A002ABBFE /* TekstFarilo.swift */,
 				0049F3682D384D0A002ABBFE /* TrieFarilo.swift */,
+				0049F42B2D5931CF002ABBFE /* GrundoAlJSON.swift */,
 				00BE1AD72D24B7450027BC22 /* main.swift */,
 			);
 			path = DatumbazFarilo;
@@ -358,6 +436,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0049F41A2D5927E2002ABBFE /* DatumbazFariloTestoj */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0049F41F2D5927E2002ABBFE /* Build configuration list for PBXNativeTarget "DatumbazFariloTestoj" */;
+			buildPhases = (
+				0049F4172D5927E2002ABBFE /* Sources */,
+				0049F4182D5927E2002ABBFE /* Frameworks */,
+				0049F4192D5927E2002ABBFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DatumbazFariloTestoj;
+			productName = DatumbazFariloTestoj;
+			productReference = 0049F41B2D5927E2002ABBFE /* DatumbazFariloTestoj.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		00BE1AD32D24B7450027BC22 /* DatumbazFarilo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00BE1ADB2D24B7450027BC22 /* Build configuration list for PBXNativeTarget "DatumbazFarilo" */;
@@ -383,9 +478,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				DefaultBuildSystemTypeForWorkspace = Latest;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					0049F41A2D5927E2002ABBFE = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					00BE1AD32D24B7450027BC22 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -405,11 +504,37 @@
 			projectRoot = "";
 			targets = (
 				00BE1AD32D24B7450027BC22 /* DatumbazFarilo */,
+				0049F41A2D5927E2002ABBFE /* DatumbazFariloTestoj */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		0049F4192D5927E2002ABBFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0049F43D2D5939AA002ABBFE /* stiloj.json in Resources */,
+				0049F43E2D5939AA002ABBFE /* urloj.json in Resources */,
+				0049F4292D592B99002ABBFE /* not.xml in Resources */,
+				0049F4402D5939AA002ABBFE /* fakoj.json in Resources */,
+				0049F43F2D5939AA002ABBFE /* signoj.json in Resources */,
+				0049F43C2D5939AA002ABBFE /* mallongigoj.json in Resources */,
+				0049F43B2D5939AA002ABBFE /* lingvoj.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		0049F4172D5927E2002ABBFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0049F41E2D5927E2002ABBFE /* DatumbazFariloTestoj.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00BE1AD02D24B7450027BC22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,6 +556,7 @@
 				0049F40C2D552C6B002ABBFE /* TraktiVariajhon.swift in Sources */,
 				0049F3D22D543331002ABBFE /* TraktiEscepton.swift in Sources */,
 				0049F3582D31F946002ABBFE /* ArtikolNodo.swift in Sources */,
+				0049F42C2D5931CF002ABBFE /* GrundoAlJSON.swift in Sources */,
 				0049F3EA2D552B1B002ABBFE /* TraktiAltigitan.swift in Sources */,
 				0049F4122D552CA5002ABBFE /* TraktiArtikolon.swift in Sources */,
 				0049F3C12D54315E002ABBFE /* TraktiPrononcon.swift in Sources */,
@@ -492,6 +618,41 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		0049F4202D5927E2002ABBFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JZ3WYZWA8F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inthescales.DatumbazFariloTestoj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0049F4212D5927E2002ABBFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JZ3WYZWA8F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inthescales.DatumbazFariloTestoj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		00BE1AD92D24B7450027BC22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -639,6 +800,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0049F41F2D5927E2002ABBFE /* Build configuration list for PBXNativeTarget "DatumbazFariloTestoj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0049F4202D5927E2002ABBFE /* Debug */,
+				0049F4212D5927E2002ABBFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		00BE1ACF2D24B7450027BC22 /* Build configuration list for PBXProject "DatumbazFarilo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
