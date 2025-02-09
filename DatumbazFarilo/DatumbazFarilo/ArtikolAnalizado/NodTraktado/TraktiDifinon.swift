@@ -36,7 +36,7 @@ extension ArboAnalizilo {
 				teksto += trakti(referencon: filo, tipo: tip, celo: cel, stato: stato)
 			case .refgrp(let tip):
 				teksto += trakti(referencGrupon: filo, tipo: tip, stato: stato)
-			case .snc(let mrk):
+			case .snc:
 				// Mi ne scias kial, tamen ja eblas ke senco aperu ene de difino.
 				// Vidu artikolo 'nimb/o'. Tie, la artikolo aperas samkiel estus
 				// kelkaj sencoj vice. Aŭ tio estas eraro ReVo-e, aŭ mi devas serĉi

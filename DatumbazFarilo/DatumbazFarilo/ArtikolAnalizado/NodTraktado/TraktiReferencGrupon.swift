@@ -11,7 +11,7 @@ extension ArboAnalizilo {
 		
 		let montriSimbolon = {
 			switch stato.cheno.last {
-			case .drv, .snc, .subsnc:
+			case .art, .drv, .snc, .subart, .subdrv, .subsnc:
 				return true
 			default:
 				return false
