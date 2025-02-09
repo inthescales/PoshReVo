@@ -3,6 +3,7 @@ import XCTest
 @testable import DatumbazFarilo
 import ReVoModelojOSX
 
+
 final class DatumbazFariloTestoj: XCTestCase {
 	let pakajho = Bundle(for: DatumbazFariloTestoj.self)
 	
@@ -47,16 +48,17 @@ final class DatumbazFariloTestoj: XCTestCase {
     }
 
     func testExample() throws {
-		let dosieroj = try! FileManager.default.contentsOfDirectory(atPath: pakajho.resourcePath!)
-			.filter { $0.hasSuffix(".xml") }
+		let rezulto = Artikolaro.legi(
+			el: pakajho.resourcePath!,
+			lingvoj: lingvoj,
+			stiloj: stiloj,
+			signoj: signoj,
+			mallongigoj: mallongigoj,
+			urloj: urloj
+		)
 		
-//		_ = Artikolaro.legi(
-//			el: pakajho.resourcePath!,
-//			lingvoj: lingvoj,
-//			stiloj: stiloj,
-//			signoj: signoj,
-//			mallongigoj: mallongigoj,
-//			urloj: urloj
-//		)
+		for artikolo in rezulto.artikoloj {
+			assertSnapsho
+		}
     }
 }

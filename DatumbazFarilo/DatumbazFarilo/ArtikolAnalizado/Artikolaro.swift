@@ -47,9 +47,9 @@ enum Artikolaro {
 
 		for indiko in legotaj {
 			guard let arbo = ArtikolKonvertilo.konverti(
-				el: revoIndiko + indiko,
+				el: indikilo + indiko,
 				signoj: signoj,
-				mallongigoj: verkajMallongigoj,
+				mallongigoj: mallongigoj,
 				urloj: urloj
 			) else {
 				print("NE sukcesis konverti artikolon '\(indiko)'")

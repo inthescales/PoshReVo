@@ -89,6 +89,65 @@
 		0049F43E2D5939AA002ABBFE /* urloj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4382D5939AA002ABBFE /* urloj.json */; };
 		0049F43F2D5939AA002ABBFE /* signoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4392D5939AA002ABBFE /* signoj.json */; };
 		0049F4402D5939AA002ABBFE /* fakoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F43A2D5939AA002ABBFE /* fakoj.json */; };
+		0049F4412D5965C3002ABBFE /* Artikolaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3BD2D53EC2A002ABBFE /* Artikolaro.swift */; };
+		0049F4422D5965EF002ABBFE /* SerchTraduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3AB2D52A561002ABBFE /* SerchTraduko.swift */; };
+		0049F4442D596600002ABBFE /* ArtikolKonvertilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3542D304BF0002ABBFE /* ArtikolKonvertilo.swift */; };
+		0049F4452D596609002ABBFE /* ArtikolNodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3572D31F946002ABBFE /* ArtikolNodo.swift */; };
+		0049F4462D59660F002ABBFE /* NodTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A52D52A3FD002ABBFE /* NodTipo.swift */; };
+		0049F4472D596A02002ABBFE /* TraktadoStato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F35E2D331487002ABBFE /* TraktadoStato.swift */; };
+		0049F4482D596A02002ABBFE /* ArtikolTraduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A92D52A4B7002ABBFE /* ArtikolTraduko.swift */; };
+		0049F4492D596A08002ABBFE /* TraktiKlarigon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3C22D5431CF002ABBFE /* TraktiKlarigon.swift */; };
+		0049F44A2D596A08002ABBFE /* TraktiKursivan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3CF2D543320002ABBFE /* TraktiKursivan.swift */; };
+		0049F44B2D596A08002ABBFE /* TraktiTradukon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3C92D5432CE002ABBFE /* TraktiTradukon.swift */; };
+		0049F44C2D596A08002ABBFE /* TraktiPrononcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3C02D54315E002ABBFE /* TraktiPrononcon.swift */; };
+		0049F44D2D596A08002ABBFE /* TraktiReferencGrupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3E12D552ACE002ABBFE /* TraktiReferencGrupon.swift */; };
+		0049F44E2D596A08002ABBFE /* TraktiURLon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3CB2D5432E6002ABBFE /* TraktiURLon.swift */; };
+		0049F44F2D596A08002ABBFE /* TraktiMisstilan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3D52D552A34002ABBFE /* TraktiMisstilan.swift */; };
+		0049F4502D596A08002ABBFE /* TraktiNacilingvan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3E52D552AF4002ABBFE /* TraktiNacilingvan.swift */; };
+		0049F4512D596A08002ABBFE /* TraktiEmfazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3EF2D552B5E002ABBFE /* TraktiEmfazon.swift */; };
+		0049F4522D596A08002ABBFE /* TraktiSubsencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3F92D552BBB002ABBFE /* TraktiSubsencon.swift */; };
+		0049F4532D596A08002ABBFE /* TraktiVortSpecon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3FF2D552BF5002ABBFE /* TraktiVortSpecon.swift */; };
+		0049F4542D596A08002ABBFE /* TraktiCitilon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3F12D552B71002ABBFE /* TraktiCitilon.swift */; };
+		0049F4552D596A08002ABBFE /* TraktiRadikon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4092D552C5A002ABBFE /* TraktiRadikon.swift */; };
+		0049F4562D596A08002ABBFE /* TraktiReferencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3E32D552AE1002ABBFE /* TraktiReferencon.swift */; };
+		0049F4572D596A08002ABBFE /* TraktiTradukGrupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3C72D5432B6002ABBFE /* TraktiTradukGrupon.swift */; };
+		0049F4582D596A08002ABBFE /* TraktiTildon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3DB2D552A87002ABBFE /* TraktiTildon.swift */; };
+		0049F4592D596A08002ABBFE /* TraktiMallongigon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3D32D54334E002ABBFE /* TraktiMallongigon.swift */; };
+		0049F45A2D596A08002ABBFE /* TraktiDifinon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3F72D552BA8002ABBFE /* TraktiDifinon.swift */; };
+		0049F45B2D596A08002ABBFE /* TraktiVariajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F40B2D552C6B002ABBFE /* TraktiVariajhon.swift */; };
+		0049F45C2D596A08002ABBFE /* TraktiKomunlingvan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3CD2D5432FF002ABBFE /* TraktiKomunlingvan.swift */; };
+		0049F45D2D596A08002ABBFE /* TraktiGramatikon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4012D552C0F002ABBFE /* TraktiGramatikon.swift */; };
+		0049F45E2D596A08002ABBFE /* TraktiKapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F40D2D552C7F002ABBFE /* TraktiKapon.swift */; };
+		0049F45F2D596A08002ABBFE /* TraktiIndekson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3C42D54329B002ABBFE /* TraktiIndekson.swift */; };
+		0049F4602D596A08002ABBFE /* TraktiEscepton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3D12D543331002ABBFE /* TraktiEscepton.swift */; };
+		0049F4612D596A08002ABBFE /* TraktiDerivajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4052D552C37002ABBFE /* TraktiDerivajhon.swift */; };
+		0049F4622D596A08002ABBFE /* TraktiRimarkon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3F32D552B80002ABBFE /* TraktiRimarkon.swift */; };
+		0049F4632D596A08002ABBFE /* TraktiTrastrekitan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3D92D552A67002ABBFE /* TraktiTrastrekitan.swift */; };
+		0049F4642D596A08002ABBFE /* TraktiNomon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3E72D552B07002ABBFE /* TraktiNomon.swift */; };
+		0049F4652D596A08002ABBFE /* TraktiSencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3FB2D552BCE002ABBFE /* TraktiSencon.swift */; };
+		0049F4662D596A08002ABBFE /* TraktiGrasan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4032D552C24002ABBFE /* TraktiGrasan.swift */; };
+		0049F4672D596A08002ABBFE /* TraktiEkzemplon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3F52D552B96002ABBFE /* TraktiEkzemplon.swift */; };
+		0049F4682D596A08002ABBFE /* TraktiSubartikolon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F40F2D552C93002ABBFE /* TraktiSubartikolon.swift */; };
+		0049F4692D596A08002ABBFE /* TraktiArtikolon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4112D552CA5002ABBFE /* TraktiArtikolon.swift */; };
+		0049F46A2D596A08002ABBFE /* TraktiUzon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3D72D552A56002ABBFE /* TraktiUzon.swift */; };
+		0049F46B2D596A08002ABBFE /* TraktiAltigitan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3E92D552B1B002ABBFE /* TraktiAltigitan.swift */; };
+		0049F46C2D596A08002ABBFE /* TraktiSencReferencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3DD2D552A9C002ABBFE /* TraktiSencReferencon.swift */; };
+		0049F46D2D596A08002ABBFE /* TraktiListReferencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3DF2D552AB9002ABBFE /* TraktiListReferencon.swift */; };
+		0049F46E2D596A08002ABBFE /* TraktiIndicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3EB2D552B2D002ABBFE /* TraktiIndicon.swift */; };
+		0049F46F2D596A08002ABBFE /* TraktiOficialecon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4072D552C4A002ABBFE /* TraktiOficialecon.swift */; };
+		0049F4702D596A08002ABBFE /* TraktiVortaron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4132D552CBA002ABBFE /* TraktiVortaron.swift */; };
+		0049F4712D596A08002ABBFE /* TraktiAutoron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4152D57FE78002ABBFE /* TraktiAutoron.swift */; };
+		0049F4722D596A08002ABBFE /* TraktiFormulon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3ED2D552B4E002ABBFE /* TraktiFormulon.swift */; };
+		0049F4732D596A08002ABBFE /* TraktiSubderivajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3FD2D552BE2002ABBFE /* TraktiSubderivajhon.swift */; };
+		0049F4742D596A11002ABBFE /* TekstHeliploj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F35B2D331458002ABBFE /* TekstHeliploj.swift */; };
+		0049F4752D596A11002ABBFE /* String+Aldonoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3B92D52AE1F002ABBFE /* String+Aldonoj.swift */; };
+		0049F4762D596A11002ABBFE /* Interpreti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3B72D52A9D2002ABBFE /* Interpreti.swift */; };
+		0049F4772D596A16002ABBFE /* Antautraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A02D43C36F002ABBFE /* Antautraktado.swift */; };
+		0049F4782D596A16002ABBFE /* ArboAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3592D31F96C002ABBFE /* ArboAnalizilo.swift */; };
+		0049F4792D596A16002ABBFE /* Posttraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F36C2D3ED0E3002ABBFE /* Posttraktado.swift */; };
+		0049F47A2D596A20002ABBFE /* VortoFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3B22D52A6A2002ABBFE /* VortoFabriko.swift */; };
+		0049F47B2D596A20002ABBFE /* SubartikoloFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3B02D52A67C002ABBFE /* SubartikoloFabriko.swift */; };
+		0049F47C2D596A20002ABBFE /* ArtikolFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3B42D52A6C3002ABBFE /* ArtikolFabriko.swift */; };
 		00BE1AD82D24B7450027BC22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE1AD72D24B7450027BC22 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -417,9 +476,9 @@
 				0049F3562D31F92D002ABBFE /* ArtikolAnalizado */,
 				00BE1ADE2D24B7570027BC22 /* ModelAldonoj */,
 				0049F3522D303970002ABBFE /* KreiDatumbazon.swift */,
+				0049F42B2D5931CF002ABBFE /* GrundoAlJSON.swift */,
 				0049F3692D384D0A002ABBFE /* TekstFarilo.swift */,
 				0049F3682D384D0A002ABBFE /* TrieFarilo.swift */,
-				0049F42B2D5931CF002ABBFE /* GrundoAlJSON.swift */,
 				00BE1AD72D24B7450027BC22 /* main.swift */,
 			);
 			path = DatumbazFarilo;
@@ -532,6 +591,65 @@
 			buildActionMask = 2147483647;
 			files = (
 				0049F41E2D5927E2002ABBFE /* DatumbazFariloTestoj.swift in Sources */,
+				0049F4452D596609002ABBFE /* ArtikolNodo.swift in Sources */,
+				0049F4492D596A08002ABBFE /* TraktiKlarigon.swift in Sources */,
+				0049F44A2D596A08002ABBFE /* TraktiKursivan.swift in Sources */,
+				0049F44B2D596A08002ABBFE /* TraktiTradukon.swift in Sources */,
+				0049F4742D596A11002ABBFE /* TekstHeliploj.swift in Sources */,
+				0049F4752D596A11002ABBFE /* String+Aldonoj.swift in Sources */,
+				0049F4762D596A11002ABBFE /* Interpreti.swift in Sources */,
+				0049F44C2D596A08002ABBFE /* TraktiPrononcon.swift in Sources */,
+				0049F44D2D596A08002ABBFE /* TraktiReferencGrupon.swift in Sources */,
+				0049F44E2D596A08002ABBFE /* TraktiURLon.swift in Sources */,
+				0049F44F2D596A08002ABBFE /* TraktiMisstilan.swift in Sources */,
+				0049F4502D596A08002ABBFE /* TraktiNacilingvan.swift in Sources */,
+				0049F4512D596A08002ABBFE /* TraktiEmfazon.swift in Sources */,
+				0049F4522D596A08002ABBFE /* TraktiSubsencon.swift in Sources */,
+				0049F4532D596A08002ABBFE /* TraktiVortSpecon.swift in Sources */,
+				0049F4542D596A08002ABBFE /* TraktiCitilon.swift in Sources */,
+				0049F4552D596A08002ABBFE /* TraktiRadikon.swift in Sources */,
+				0049F4562D596A08002ABBFE /* TraktiReferencon.swift in Sources */,
+				0049F4572D596A08002ABBFE /* TraktiTradukGrupon.swift in Sources */,
+				0049F4582D596A08002ABBFE /* TraktiTildon.swift in Sources */,
+				0049F4592D596A08002ABBFE /* TraktiMallongigon.swift in Sources */,
+				0049F45A2D596A08002ABBFE /* TraktiDifinon.swift in Sources */,
+				0049F45B2D596A08002ABBFE /* TraktiVariajhon.swift in Sources */,
+				0049F45C2D596A08002ABBFE /* TraktiKomunlingvan.swift in Sources */,
+				0049F45D2D596A08002ABBFE /* TraktiGramatikon.swift in Sources */,
+				0049F45E2D596A08002ABBFE /* TraktiKapon.swift in Sources */,
+				0049F45F2D596A08002ABBFE /* TraktiIndekson.swift in Sources */,
+				0049F4602D596A08002ABBFE /* TraktiEscepton.swift in Sources */,
+				0049F4612D596A08002ABBFE /* TraktiDerivajhon.swift in Sources */,
+				0049F4622D596A08002ABBFE /* TraktiRimarkon.swift in Sources */,
+				0049F4632D596A08002ABBFE /* TraktiTrastrekitan.swift in Sources */,
+				0049F4642D596A08002ABBFE /* TraktiNomon.swift in Sources */,
+				0049F4772D596A16002ABBFE /* Antautraktado.swift in Sources */,
+				0049F4782D596A16002ABBFE /* ArboAnalizilo.swift in Sources */,
+				0049F4792D596A16002ABBFE /* Posttraktado.swift in Sources */,
+				0049F4652D596A08002ABBFE /* TraktiSencon.swift in Sources */,
+				0049F4662D596A08002ABBFE /* TraktiGrasan.swift in Sources */,
+				0049F4672D596A08002ABBFE /* TraktiEkzemplon.swift in Sources */,
+				0049F4682D596A08002ABBFE /* TraktiSubartikolon.swift in Sources */,
+				0049F4692D596A08002ABBFE /* TraktiArtikolon.swift in Sources */,
+				0049F46A2D596A08002ABBFE /* TraktiUzon.swift in Sources */,
+				0049F46B2D596A08002ABBFE /* TraktiAltigitan.swift in Sources */,
+				0049F46C2D596A08002ABBFE /* TraktiSencReferencon.swift in Sources */,
+				0049F46D2D596A08002ABBFE /* TraktiListReferencon.swift in Sources */,
+				0049F46E2D596A08002ABBFE /* TraktiIndicon.swift in Sources */,
+				0049F46F2D596A08002ABBFE /* TraktiOficialecon.swift in Sources */,
+				0049F4702D596A08002ABBFE /* TraktiVortaron.swift in Sources */,
+				0049F4712D596A08002ABBFE /* TraktiAutoron.swift in Sources */,
+				0049F4722D596A08002ABBFE /* TraktiFormulon.swift in Sources */,
+				0049F47A2D596A20002ABBFE /* VortoFabriko.swift in Sources */,
+				0049F47B2D596A20002ABBFE /* SubartikoloFabriko.swift in Sources */,
+				0049F47C2D596A20002ABBFE /* ArtikolFabriko.swift in Sources */,
+				0049F4732D596A08002ABBFE /* TraktiSubderivajhon.swift in Sources */,
+				0049F4442D596600002ABBFE /* ArtikolKonvertilo.swift in Sources */,
+				0049F4472D596A02002ABBFE /* TraktadoStato.swift in Sources */,
+				0049F4482D596A02002ABBFE /* ArtikolTraduko.swift in Sources */,
+				0049F4462D59660F002ABBFE /* NodTipo.swift in Sources */,
+				0049F4412D5965C3002ABBFE /* Artikolaro.swift in Sources */,
+				0049F4422D5965EF002ABBFE /* SerchTraduko.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

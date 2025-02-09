@@ -4,6 +4,8 @@ import CoreData
 import ReVoModelojOSX
 import ReVoDatumbazoOSX
 
+// Indikiloj
+
 let radiko = "/Users/robin/Desktop"
 
 let fontIndiko = radiko + "/fontoj"
@@ -11,6 +13,13 @@ var revoIndiko = fontIndiko + "/revo/revo/"
 var grundIndiko = fontIndiko + "/grundo"
 
 let produktajhIndiko = radiko + "/produktajhoj"
+
+// Agordoj
+
+let jsonigiGrundajhojn = false
+
+// Datumbazaĵoj
+
 let konteksto = kreiDatumbazon(fontIndiko: radiko + "/fontoj", destino: produktajhIndiko + "/PoshReVoDatumbazo.sqlite")
 
 // Legi grundaĵojn
@@ -34,6 +43,20 @@ let signoj = SignoAnalizilo.analizi(el: grundIndiko + "/dtd/vokosgn.dtd")
 let verkajMallongigoj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokomll.dtd")
 
 let urloj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokourl.dtd")
+
+// Skribi grundaĵojn en JSON, por testoj, se necesas
+
+if jsonigiGrundajhojn {
+	GrundoAlJSON.konverti(
+		el: grundIndiko,
+		al: radiko + "/produktajhoj/json",
+		lingvoj: lingvoj,
+		stiloj: stiloj,
+		signoj: signoj,
+		mallongigoj: verkajMallongigoj,
+		urloj: urloj
+	)
+}
 
 // Legi artikolojn
 
