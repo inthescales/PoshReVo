@@ -10,6 +10,8 @@ extension ArboAnalizilo {
 		traktiFilojn(de: traduko, stato: stato) { filo in
 			let filTeksto: String
 			switch filo.tipo {
+			case .baz, .ofc:
+				filTeksto = ""
 			case .ind:
 				let rezulto = trakti(indekson: filo, stato: stato)
 				filTeksto = rezulto.0
@@ -27,6 +29,7 @@ extension ArboAnalizilo {
 				assert(false, "Neatendita filo")
 				filTeksto = ""
 			}
+			
 			teksto += filTeksto
 		}
 		

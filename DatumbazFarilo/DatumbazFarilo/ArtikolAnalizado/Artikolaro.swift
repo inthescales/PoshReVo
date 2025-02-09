@@ -25,8 +25,8 @@ enum Artikolaro {
 		mallongigoj: [String: String],
 		urloj: [String: String]
 	) -> Rezulto {
-		let legotaj = ["not.xml"]
-		// let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
+		// let legotaj = ["not.xml"]
+		let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
 
 		// Prepari grundaĵojn
 		
