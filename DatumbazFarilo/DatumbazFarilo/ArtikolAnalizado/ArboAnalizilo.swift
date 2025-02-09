@@ -209,7 +209,7 @@ enum ArboAnalizilo {
 			// Traktas sendependajn tradukojn. Tiuj ene de 'trdgrp' estos traktataj
 			// ene de `trakti(tradukGrupon:...)`
 			if let lingvo = lng {
-				_ = trakti(tradukon: nodo, lingvo: lingvo, stato: stato)
+				trakti(tradukon: nodo, lingvo: lingvo, stato: stato)
 			}
 			return nil
 		case .trdgrp(let lng):

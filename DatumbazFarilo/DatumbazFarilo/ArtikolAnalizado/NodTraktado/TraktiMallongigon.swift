@@ -24,8 +24,12 @@ extension ArboAnalizilo {
 			case .ind:
 				// TODO: Plene trakti indeksojn kaj mallongigojn
 				teksto += trakti(indekson: filo, stato: stato).0
+			case .teksto(let filTeksto):
+				teksto += filTeksto
+			case .tld(let lit, let vari):
+				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
 			default:
-				teksto += trakti(nodon: filo, stato: stato) ?? ""
+				assert(false, "Neatendita filo")
 			}
 		}
 		

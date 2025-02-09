@@ -19,7 +19,7 @@ extension ArboAnalizilo {
 			case .klr(_):
 				filTeksto = trakti(klarigon: filo, stato: stato)
 			case .mll(let tipo):
-				filTeksto = trakti(nodon: filo, stato: stato) ?? ""
+				filTeksto = trakti(mallongigon: filo, stato: stato)
 				serchNomo = ArtikolTeksto.mllTeksto(baza: filTeksto, tipo: tipo)
 			case .pr:
 				filTeksto = trakti(prononcon: filo, stato: stato)

@@ -1,6 +1,6 @@
 extension ArboAnalizilo {
 	static func trakti(radikon radiko: ArtikolNodo, variajho: String?, stato: TraktadoStato) -> String {
-		let teksto = traktiFilojn(de: radiko, stato: stato)
+		let teksto = akumuliTekstojn(de: radiko, stato: stato)
 		
 		if variajho == nil {
 			stato.artikolFabriko.radiko = teksto

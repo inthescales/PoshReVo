@@ -39,9 +39,7 @@ extension ArboAnalizilo {
 					stato: stato
 				)
 				refNumero += 1
-				// case .ke:
 			case .teksto(_):
-				// Ignori nudajn tekstojn
 				break
 			default:
 				assert(false, "Neatendita filo")

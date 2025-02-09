@@ -35,7 +35,7 @@ extension ArboAnalizilo {
 			case .tld(let lit, let vari):
 				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
 			case .klr:
-				teksto += trakti(nodon: filo, stato: stato) ?? ""
+				teksto += trakti(klarigon: filo, stato: stato)
 			case .teksto(let filteksto):
 				teksto += filteksto
 			default:

@@ -4,8 +4,10 @@ extension ArboAnalizilo {
 			switch filo.tipo {
 			case .trd:
 				trakti(tradukon: filo, lingvo: lingvo, stato: stato)
-			default:
+			case .teksto:
 				break
+			default:
+				assert(false, "Neatendita filo")
 			}
 		}
 	}
