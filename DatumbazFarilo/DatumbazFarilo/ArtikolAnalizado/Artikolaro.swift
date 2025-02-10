@@ -17,6 +17,17 @@ enum Artikolaro {
 	}
 	
 	/// Legas ĉiujn artikolojn el certa indikilo kaj liveras ĉiujn artikolo-modelojn kaj serĉ-tradukojn
+	static func legi(el indikilo: String, grundo: Grundo) -> Rezulto {
+		legi(
+			el: indikilo,
+			lingvoj: grundo.lingvoj,
+			stiloj: grundo.stiloj,
+			signoj: grundo.signoj,
+			mallongigoj: grundo.mallongigojVerkaj,
+			urloj: grundo.urloj)
+	}
+	
+	/// Legas ĉiujn artikolojn el certa indikilo kaj liveras ĉiujn artikolo-modelojn kaj serĉ-tradukojn
 	static func legi(
 		el indikilo: String,
 		lingvoj: [Lingvo],
@@ -98,7 +109,7 @@ enum Artikolaro {
 	}
 	
 	/// Registras artikolojn en datumbaz-kontekston
-	public static func registri(
+	public static func skribi(
 		artikolojn artikoloj: [Artikolo],
 		en konteksto: NSManagedObjectContext
 	) {

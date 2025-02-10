@@ -14,61 +14,19 @@ var grundIndiko = fontIndiko + "/grundo"
 
 let produktajhIndiko = radiko + "/produktajhoj"
 
-// Agordoj
-
-let jsonigiGrundajhojn = false
-
 // Datumbazaĵoj
 
 let konteksto = kreiDatumbazon(fontIndiko: radiko + "/fontoj", destino: produktajhIndiko + "/PoshReVoDatumbazo.sqlite")
 
 // Legi grundaĵojn
 
-let lingvoj = LingvoAnalizilo.legi(el: grundIndiko + "/cfg/lingvoj.xml")
-LingvoAnalizilo.registri(lingvojn: lingvoj, en: konteksto)
-
-let fakoj = FakoAnalizilo.legi(el: grundIndiko + "/cfg/fakoj.xml")
-FakoAnalizilo.registri(fakojn: fakoj, en: konteksto)
-
-let vortarajMallongigoj = VortarajMallongigojAnalizilo.legi(el: grundIndiko + "/cfg/mallongigoj.xml")
-VortarajMallongigojAnalizilo.registri(mallongigojn: vortarajMallongigoj, en: konteksto)
-
-let stiloj = StiloAnalizilo.legi(el: grundIndiko + "/cfg/stiloj.xml")
-StiloAnalizilo.registri(stilojn: stiloj, en: konteksto)
-
-Oficialecoj.aldoni(al: konteksto)
-
-let signoj = SignoAnalizilo.analizi(el: grundIndiko + "/dtd/vokosgn.dtd")
-
-let verkajMallongigoj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokomll.dtd")
-
-let urloj = DTDAnalizilo.entoj(el: grundIndiko + "/dtd/vokourl.dtd")
-
-// Skribi grundaĵojn en JSON, por testoj, se necesas
-
-if jsonigiGrundajhojn {
-	GrundoAlJSON.konverti(
-		el: grundIndiko,
-		al: radiko + "/produktajhoj/json",
-		lingvoj: lingvoj,
-		stiloj: stiloj,
-		signoj: signoj,
-		mallongigoj: verkajMallongigoj,
-		urloj: urloj
-	)
-}
+let grundo = Grundo.legi(el: grundIndiko)
+grundo.skribi(json: produktajhIndiko)
 
 // Legi artikolojn
 
-let artikolRezultoj = Artikolaro.legi(
-	el: revoIndiko,
-	lingvoj: lingvoj,
-	stiloj: stiloj,
-	signoj: signoj,
-	mallongigoj: verkajMallongigoj,
-	urloj: urloj
-)
-Artikolaro.registri(artikolojn: artikolRezultoj.artikoloj, en: konteksto)
+let artikolRezultoj = Artikolaro.legi(el: revoIndiko, grundo: grundo)
+Artikolaro.skribi(artikolojn: artikolRezultoj.artikoloj, en: konteksto)
 
 // Fari trie-on
 

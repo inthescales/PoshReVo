@@ -40,7 +40,8 @@ public final class Artikolo: Codable {
 		try container.encode(titolo, forKey: .titolo)
 		try container.encode(radiko, forKey: .radiko)
 		try container.encode(indekso, forKey: .indekso)
-		try container.encode(ofc, forKey: .ofc)
+		try ofc.flatMap { try container.encode($0, forKey: .ofc) }
+		
 		try container.encode(subartikoloj, forKey: .subartikoloj)
 		
 		// Alfabetigi tradukojn tiel ke ĝi ĉiam je sama ordigo

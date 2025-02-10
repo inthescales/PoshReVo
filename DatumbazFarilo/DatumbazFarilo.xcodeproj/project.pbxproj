@@ -82,13 +82,6 @@
 		0049F4162D57FE78002ABBFE /* TraktiAutoron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F4152D57FE78002ABBFE /* TraktiAutoron.swift */; };
 		0049F41E2D5927E2002ABBFE /* DatumbazFariloTestoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F41D2D5927E2002ABBFE /* DatumbazFariloTestoj.swift */; };
 		0049F4292D592B99002ABBFE /* not.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4282D592B99002ABBFE /* not.xml */; };
-		0049F42C2D5931CF002ABBFE /* GrundoAlJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F42B2D5931CF002ABBFE /* GrundoAlJSON.swift */; };
-		0049F43B2D5939AA002ABBFE /* lingvoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4352D5939AA002ABBFE /* lingvoj.json */; };
-		0049F43C2D5939AA002ABBFE /* mallongigoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4362D5939AA002ABBFE /* mallongigoj.json */; };
-		0049F43D2D5939AA002ABBFE /* stiloj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4372D5939AA002ABBFE /* stiloj.json */; };
-		0049F43E2D5939AA002ABBFE /* urloj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4382D5939AA002ABBFE /* urloj.json */; };
-		0049F43F2D5939AA002ABBFE /* signoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F4392D5939AA002ABBFE /* signoj.json */; };
-		0049F4402D5939AA002ABBFE /* fakoj.json in Resources */ = {isa = PBXBuildFile; fileRef = 0049F43A2D5939AA002ABBFE /* fakoj.json */; };
 		0049F4412D5965C3002ABBFE /* Artikolaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3BD2D53EC2A002ABBFE /* Artikolaro.swift */; };
 		0049F4422D5965EF002ABBFE /* SerchTraduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3AB2D52A561002ABBFE /* SerchTraduko.swift */; };
 		0049F4442D596600002ABBFE /* ArtikolKonvertilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3542D304BF0002ABBFE /* ArtikolKonvertilo.swift */; };
@@ -151,6 +144,17 @@
 		00BE1AD82D24B7450027BC22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE1AD72D24B7450027BC22 /* main.swift */; };
 		00E604432D5A6FA500757EE6 /* Pods_DatumbazFariloTestoj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */; };
 		00E6044C2D5A794300757EE6 /* testiArtikolon.not-i.json in Resources */ = {isa = PBXBuildFile; fileRef = 00E6044B2D5A794300757EE6 /* testiArtikolon.not-i.json */; };
+		00F223322D5A9FFC00D049A1 /* Grundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F223312D5A9FFC00D049A1 /* Grundo.swift */; };
+		00F223332D5AA00000D049A1 /* Grundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F223312D5A9FFC00D049A1 /* Grundo.swift */; };
+		00F223352D5AA27E00D049A1 /* grundo.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F223342D5AA27E00D049A1 /* grundo.json */; };
+		00F223362D5AA2F600D049A1 /* SignoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3BB2D53E27A002ABBFE /* SignoAnalizilo.swift */; };
+		00F223372D5AA2F600D049A1 /* LingvoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */; };
+		00F223382D5AA2F600D049A1 /* VortarajMallongigojAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34C2D3030B9002ABBFE /* VortarajMallongigojAnalizilo.swift */; };
+		00F223392D5AA2F600D049A1 /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */; };
+		00F2233A2D5AA2F600D049A1 /* Oficialecoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3502D303383002ABBFE /* Oficialecoj.swift */; };
+		00F2233B2D5AA2F600D049A1 /* StiloAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34E2D30316E002ABBFE /* StiloAnalizilo.swift */; };
+		00F2233C2D5AA2F600D049A1 /* FakoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34A2D302E93002ABBFE /* FakoAnalizilo.swift */; };
+		00F2233D2D5AA2F600D049A1 /* DTDAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A22D5154FB002ABBFE /* DTDAnalizilo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -264,16 +268,11 @@
 		0049F41D2D5927E2002ABBFE /* DatumbazFariloTestoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumbazFariloTestoj.swift; sourceTree = "<group>"; };
 		0049F4272D592B35002ABBFE /* DatumbazFarilo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DatumbazFarilo.xctestplan; sourceTree = "<group>"; };
 		0049F4282D592B99002ABBFE /* not.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = not.xml; sourceTree = "<group>"; };
-		0049F42B2D5931CF002ABBFE /* GrundoAlJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrundoAlJSON.swift; sourceTree = "<group>"; };
-		0049F4352D5939AA002ABBFE /* lingvoj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lingvoj.json; sourceTree = "<group>"; };
-		0049F4362D5939AA002ABBFE /* mallongigoj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mallongigoj.json; sourceTree = "<group>"; };
-		0049F4372D5939AA002ABBFE /* stiloj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stiloj.json; sourceTree = "<group>"; };
-		0049F4382D5939AA002ABBFE /* urloj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = urloj.json; sourceTree = "<group>"; };
-		0049F4392D5939AA002ABBFE /* signoj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signoj.json; sourceTree = "<group>"; };
-		0049F43A2D5939AA002ABBFE /* fakoj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fakoj.json; sourceTree = "<group>"; };
 		00BE1AD42D24B7450027BC22 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE1AD72D24B7450027BC22 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		00E6044B2D5A794300757EE6 /* testiArtikolon.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.not-i.json"; sourceTree = "<group>"; };
+		00F223312D5A9FFC00D049A1 /* Grundo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grundo.swift; sourceTree = "<group>"; };
+		00F223342D5AA27E00D049A1 /* grundo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = grundo.json; sourceTree = "<group>"; };
 		38706F105BC911CCA2168050 /* Pods-DatumbazFariloTestoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.debug.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.debug.xcconfig"; sourceTree = "<group>"; };
 		D6445A9E6D72197DDF4EC2BB /* Pods-DatumbazFariloTestoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.release.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -301,6 +300,7 @@
 		0049F3392D2F4B99002ABBFE /* GrundoAnalizado */ = {
 			isa = PBXGroup;
 			children = (
+				00F223302D5A9FF200D049A1 /* Modeloj */,
 				0049F3A22D5154FB002ABBFE /* DTDAnalizilo.swift */,
 				0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */,
 				0049F34A2D302E93002ABBFE /* FakoAnalizilo.swift */,
@@ -424,7 +424,6 @@
 			isa = PBXGroup;
 			children = (
 				0049F4262D592B30002ABBFE /* Risurcoj */,
-				0049F42D2D593943002ABBFE /* Grundajhoj */,
 				0049F4252D592A73002ABBFE /* Artikoloj */,
 				00E604492D5A78B600757EE6 /* __Snapshots__ */,
 				0049F41D2D5927E2002ABBFE /* DatumbazFariloTestoj.swift */,
@@ -444,21 +443,9 @@
 			isa = PBXGroup;
 			children = (
 				0049F4272D592B35002ABBFE /* DatumbazFarilo.xctestplan */,
+				00F223342D5AA27E00D049A1 /* grundo.json */,
 			);
 			path = Risurcoj;
-			sourceTree = "<group>";
-		};
-		0049F42D2D593943002ABBFE /* Grundajhoj */ = {
-			isa = PBXGroup;
-			children = (
-				0049F43A2D5939AA002ABBFE /* fakoj.json */,
-				0049F4352D5939AA002ABBFE /* lingvoj.json */,
-				0049F4362D5939AA002ABBFE /* mallongigoj.json */,
-				0049F4392D5939AA002ABBFE /* signoj.json */,
-				0049F4372D5939AA002ABBFE /* stiloj.json */,
-				0049F4382D5939AA002ABBFE /* urloj.json */,
-			);
-			path = Grundajhoj;
 			sourceTree = "<group>";
 		};
 		00BE1ACB2D24B7450027BC22 = {
@@ -488,7 +475,6 @@
 				0049F3562D31F92D002ABBFE /* ArtikolAnalizado */,
 				00BE1ADE2D24B7570027BC22 /* ModelAldonoj */,
 				0049F3522D303970002ABBFE /* KreiDatumbazon.swift */,
-				0049F42B2D5931CF002ABBFE /* GrundoAlJSON.swift */,
 				0049F3692D384D0A002ABBFE /* TekstFarilo.swift */,
 				0049F3682D384D0A002ABBFE /* TrieFarilo.swift */,
 				00BE1AD72D24B7450027BC22 /* main.swift */,
@@ -518,6 +504,14 @@
 				00E604482D5A78B600757EE6 /* DatumbazFariloTestoj */,
 			);
 			path = __Snapshots__;
+			sourceTree = "<group>";
+		};
+		00F223302D5A9FF200D049A1 /* Modeloj */ = {
+			isa = PBXGroup;
+			children = (
+				00F223312D5A9FFC00D049A1 /* Grundo.swift */,
+			);
+			path = Modeloj;
 			sourceTree = "<group>";
 		};
 		576516C24BC1131F7087589A /* Pods */ = {
@@ -614,14 +608,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0049F43D2D5939AA002ABBFE /* stiloj.json in Resources */,
-				0049F43E2D5939AA002ABBFE /* urloj.json in Resources */,
+				00F223352D5AA27E00D049A1 /* grundo.json in Resources */,
 				0049F4292D592B99002ABBFE /* not.xml in Resources */,
-				0049F4402D5939AA002ABBFE /* fakoj.json in Resources */,
-				0049F43F2D5939AA002ABBFE /* signoj.json in Resources */,
-				0049F43C2D5939AA002ABBFE /* mallongigoj.json in Resources */,
 				00E6044C2D5A794300757EE6 /* testiArtikolon.not-i.json in Resources */,
-				0049F43B2D5939AA002ABBFE /* lingvoj.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +665,7 @@
 				0049F41E2D5927E2002ABBFE /* DatumbazFariloTestoj.swift in Sources */,
 				0049F4452D596609002ABBFE /* ArtikolNodo.swift in Sources */,
 				0049F4492D596A08002ABBFE /* TraktiKlarigon.swift in Sources */,
+				00F223332D5AA00000D049A1 /* Grundo.swift in Sources */,
 				0049F44A2D596A08002ABBFE /* TraktiKursivan.swift in Sources */,
 				0049F44B2D596A08002ABBFE /* TraktiTradukon.swift in Sources */,
 				0049F4742D596A11002ABBFE /* TekstHeliploj.swift in Sources */,
@@ -715,6 +705,14 @@
 				0049F4682D596A08002ABBFE /* TraktiSubartikolon.swift in Sources */,
 				0049F4692D596A08002ABBFE /* TraktiArtikolon.swift in Sources */,
 				0049F46A2D596A08002ABBFE /* TraktiUzon.swift in Sources */,
+				00F223362D5AA2F600D049A1 /* SignoAnalizilo.swift in Sources */,
+				00F223372D5AA2F600D049A1 /* LingvoAnalizilo.swift in Sources */,
+				00F223382D5AA2F600D049A1 /* VortarajMallongigojAnalizilo.swift in Sources */,
+				00F223392D5AA2F600D049A1 /* LiteroAnalizilo.swift in Sources */,
+				00F2233A2D5AA2F600D049A1 /* Oficialecoj.swift in Sources */,
+				00F2233B2D5AA2F600D049A1 /* StiloAnalizilo.swift in Sources */,
+				00F2233C2D5AA2F600D049A1 /* FakoAnalizilo.swift in Sources */,
+				00F2233D2D5AA2F600D049A1 /* DTDAnalizilo.swift in Sources */,
 				0049F46B2D596A08002ABBFE /* TraktiAltigitan.swift in Sources */,
 				0049F46C2D596A08002ABBFE /* TraktiSencReferencon.swift in Sources */,
 				0049F46D2D596A08002ABBFE /* TraktiListReferencon.swift in Sources */,
@@ -757,7 +755,6 @@
 				0049F40C2D552C6B002ABBFE /* TraktiVariajhon.swift in Sources */,
 				0049F3D22D543331002ABBFE /* TraktiEscepton.swift in Sources */,
 				0049F3582D31F946002ABBFE /* ArtikolNodo.swift in Sources */,
-				0049F42C2D5931CF002ABBFE /* GrundoAlJSON.swift in Sources */,
 				0049F3EA2D552B1B002ABBFE /* TraktiAltigitan.swift in Sources */,
 				0049F4122D552CA5002ABBFE /* TraktiArtikolon.swift in Sources */,
 				0049F3C12D54315E002ABBFE /* TraktiPrononcon.swift in Sources */,
@@ -798,6 +795,7 @@
 				0049F3DC2D552A87002ABBFE /* TraktiTildon.swift in Sources */,
 				0049F3D42D54334E002ABBFE /* TraktiMallongigon.swift in Sources */,
 				0049F3E22D552ACE002ABBFE /* TraktiReferencGrupon.swift in Sources */,
+				00F223322D5A9FFC00D049A1 /* Grundo.swift in Sources */,
 				0049F4022D552C0F002ABBFE /* TraktiGramatikon.swift in Sources */,
 				0049F3D02D543320002ABBFE /* TraktiKursivan.swift in Sources */,
 				0049F3C52D54329B002ABBFE /* TraktiIndekson.swift in Sources */,
