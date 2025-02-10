@@ -4,6 +4,7 @@ import SnapshotTesting
 @testable import DatumbazFarilo
 import ReVoModelojOSX
 
+/// Testoj pri datumbaz-farado
 final class DatumbazFariloTestoj: XCTestCase {
 	let pakajho = Bundle(for: DatumbazFariloTestoj.self)
 	
@@ -13,6 +14,7 @@ final class DatumbazFariloTestoj: XCTestCase {
 		return try! JSONDecoder().decode(Grundo.self, from: datumoj)
 	}()
 
+	/// Testi legadon de artikoloj, iliajn strukturojn, tekstojn, kaj tradikojn de
     func testiArtikolon() throws {
 		let rezulto = Artikolaro.legi(
 			el: pakajho.resourcePath! + "/",

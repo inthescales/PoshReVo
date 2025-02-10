@@ -4,7 +4,7 @@ import CoreData
 import ReVoModelojOSX
 import ReVoDatumbazoOSX
 
-// Indikiloj
+// Indikoj
 
 let radiko = "/Users/robin/Desktop"
 
