@@ -3,7 +3,7 @@ import CoreData
 import ReVoModelojOSX
 
 /// Enhavas ĉiujn necesajn informojn el voko-grundo
-struct Grundo: Codable {
+class Grundo: Codable {
 	let lingvoj: [Lingvo]
 	let fakoj: [Fako]
 	let stiloj: [Stilo]
@@ -11,6 +11,14 @@ struct Grundo: Codable {
 	let mallongigojVerkaj: [String: String]
 	let mallongigojVortaraj: [Mallongigo]
 	let urloj: [String: String]
+	
+	lazy var lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in
+		dict[lingvo.kodo] = lingvo
+	}
+
+	lazy var stiloDict = stiloj.reduce(into: [String: String]()) { dict, stilo in
+		dict[stilo.kodo] = stilo.nomo
+	}
 	
 	init(
 		lingvoj: [Lingvo],

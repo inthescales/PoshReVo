@@ -40,16 +40,6 @@ enum Artikolaro {
 		let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
 			.filter { $0.hasSuffix(".xml") }
 		
-		// Prepari grundaĵojn
-		
-		let lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in
-			dict[lingvo.kodo] = lingvo
-		}
-
-		let stiloDict = stiloj.reduce(into: [String: String]()) { dict, stilo in
-			dict[stilo.kodo] = stilo.nomo
-		}
-		
 		// Legi artikolojn
 
 		var artikoloj: [Artikolo] = []
@@ -73,8 +63,8 @@ enum Artikolaro {
 			guard let rezulto = ArboAnalizilo.analizi(
 				arbon: arbo,
 				indekso: indekso,
-				lingvoj: lingvoDict,
-				stiloj: stiloDict
+				lingvoj: grundo.lingvoDict,
+				stiloj: grundo.stiloDict
 			) else {
 				print("NE sukcesis analizi artikolon '\(indiko)'")
 				continue
