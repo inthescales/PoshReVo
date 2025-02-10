@@ -11,7 +11,7 @@ import Foundation
 /*
     Reprezentas fakon al kiu apartenas vorto aŭ frazaĵo. Uzataj en kelkaj difinoj.
  */
-public struct Fako {
+public struct Fako: Codable {
     public let kodo: String
     public let nomo: String
     

@@ -11,7 +11,7 @@ import Foundation
 /*
     Reprezentas unu aŭ plurajn vortojn havantajn unu saman difinon.
 */
-public struct Vorto {
+public struct Vorto: Codable {
     public let titolo: String
     public let teksto: String
     public let marko: String?

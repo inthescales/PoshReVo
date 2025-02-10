@@ -11,7 +11,7 @@ import Foundation
 /*
     Parto de artikolo havanta sian propran tekstojn supre de listo da vortoj.
 */
-public struct Subartikolo {
+public struct Subartikolo: Codable {
     public let teksto: String
     public let vortoj: [Vorto]
     

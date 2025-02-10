@@ -11,7 +11,7 @@ import Foundation
 /*
     Traduko de esperanta vorto en alian lingvon.
 */
-public struct Traduko {
+public struct Traduko: Codable {
     public let lingvo: Lingvo
     public let teksto: String
     

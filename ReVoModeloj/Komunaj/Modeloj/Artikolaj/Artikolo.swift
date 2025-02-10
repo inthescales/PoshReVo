@@ -12,7 +12,7 @@ import CoreData
 /*
     Reprezentas la enhavojn de tuta paĝo en la vortaro.
 */
-public final class Artikolo {
+public final class Artikolo: Codable {
     public let titolo: String
     public let radiko: String
     public let indekso: String
@@ -33,4 +33,17 @@ public final class Artikolo {
         self.subartikoloj = subartikoloj
         self.tradukoj = tradukoj
     }
+	
+	public func encode(to encoder: any Encoder) throws {
+		var container = encoder.container(keyedBy: CodingKeys.self)
+
+		try container.encode(titolo, forKey: .titolo)
+		try container.encode(radiko, forKey: .radiko)
+		try container.encode(indekso, forKey: .indekso)
+		try container.encode(ofc, forKey: .ofc)
+		try container.encode(subartikoloj, forKey: .subartikoloj)
+		
+		// Alfabetigi tradukojn tiel ke ĝi ĉiam je sama ordigo
+		try container.encode(tradukoj.sorted(by: { $0.lingvo < $1.lingvo }), forKey: .tradukoj)
+	}
 }

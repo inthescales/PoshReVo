@@ -11,7 +11,7 @@ import Foundation
 /*
     Reprezentas oficialeco-indikolo, ekzemple de fundamento aŭ oficiala aldono
  */
-public struct Oficialeco {
+public struct Oficialeco: Codable {
     public let kodo: String
     public let indikilo: String
     public let nomo: String

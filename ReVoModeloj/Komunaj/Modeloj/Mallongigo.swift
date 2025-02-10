@@ -11,7 +11,7 @@ import Foundation
 /*
     Reprezentas vortaran mallongigon, kiuj inkluzivas fontojn, verikistojn, aldonojn.
  */
-public struct Mallongigo {
+public struct Mallongigo: Codable {
     public let kodo: String
     public let nomo: String
     

@@ -11,7 +11,7 @@ import Foundation
 /*
     Reprezentas skriban stilon. Uzataj en kelkaj difinoj.
  */
-public struct Stilo {
+public struct Stilo: Codable {
     public let kodo: String
     public let nomo: String
     

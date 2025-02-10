@@ -1,8 +1,8 @@
 import XCTest
+import SnapshotTesting
 
 @testable import DatumbazFarilo
 import ReVoModelojOSX
-
 
 final class DatumbazFariloTestoj: XCTestCase {
 	let pakajho = Bundle(for: DatumbazFariloTestoj.self)
@@ -39,17 +39,9 @@ final class DatumbazFariloTestoj: XCTestCase {
 		return try! JSONSerialization.jsonObject(with: datumoj) as! [String: String]
 	}()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
+    func testiArtikolon() throws {
 		let rezulto = Artikolaro.legi(
-			el: pakajho.resourcePath!,
+			el: pakajho.resourcePath! + "/",
 			lingvoj: lingvoj,
 			stiloj: stiloj,
 			signoj: signoj,
@@ -58,7 +50,7 @@ final class DatumbazFariloTestoj: XCTestCase {
 		)
 		
 		for artikolo in rezulto.artikoloj {
-			assertSnapsho
+			assertSnapshot(matching: artikolo, as: .json, named: artikolo.titolo)
 		}
     }
 }

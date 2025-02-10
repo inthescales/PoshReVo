@@ -49,6 +49,20 @@
                ReferencedContainer = "container:../ReVoDatumbazo/ReVoDatumbazo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9E0D8255542684806B5523532C80EE07"
+               BuildableName = "Pods_DatumbazFariloTestoj.framework"
+               BlueprintName = "Pods-DatumbazFariloTestoj"
+               ReferencedContainer = "container:../Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

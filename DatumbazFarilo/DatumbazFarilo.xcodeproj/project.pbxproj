@@ -149,6 +149,8 @@
 		0049F47B2D596A20002ABBFE /* SubartikoloFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3B02D52A67C002ABBFE /* SubartikoloFabriko.swift */; };
 		0049F47C2D596A20002ABBFE /* ArtikolFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3B42D52A6C3002ABBFE /* ArtikolFabriko.swift */; };
 		00BE1AD82D24B7450027BC22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BE1AD72D24B7450027BC22 /* main.swift */; };
+		00E604432D5A6FA500757EE6 /* Pods_DatumbazFariloTestoj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */; };
+		00E6044C2D5A794300757EE6 /* testiArtikolon.not-i.json in Resources */ = {isa = PBXBuildFile; fileRef = 00E6044B2D5A794300757EE6 /* testiArtikolon.not-i.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -172,9 +174,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		00DB3F232D596DD700BC3C14 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_DatumbazFariloTestoj.framework; path = "../../../Library/Developer/Xcode/DerivedData/PoshReVo-eifliqqelwuzehalckrzildacjdd/Build/Products/Debug-iphoneos/Pods_DatumbazFariloTestoj.framework"; sourceTree = "<group>"; };
 		0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteroAnalizilo.swift; sourceTree = "<group>"; };
 		0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoAnalizilo.swift; sourceTree = "<group>"; };
 		0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModelojOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +273,9 @@
 		0049F43A2D5939AA002ABBFE /* fakoj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fakoj.json; sourceTree = "<group>"; };
 		00BE1AD42D24B7450027BC22 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE1AD72D24B7450027BC22 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		00E6044B2D5A794300757EE6 /* testiArtikolon.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.not-i.json"; sourceTree = "<group>"; };
+		38706F105BC911CCA2168050 /* Pods-DatumbazFariloTestoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.debug.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.debug.xcconfig"; sourceTree = "<group>"; };
+		D6445A9E6D72197DDF4EC2BB /* Pods-DatumbazFariloTestoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.release.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +283,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E604432D5A6FA500757EE6 /* Pods_DatumbazFariloTestoj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */,
+				00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -405,36 +423,29 @@
 		0049F41C2D5927E2002ABBFE /* DatumbazFariloTestoj */ = {
 			isa = PBXGroup;
 			children = (
-				0049F4262D592B30002ABBFE /* TestPlanoj */,
+				0049F4262D592B30002ABBFE /* Risurcoj */,
 				0049F42D2D593943002ABBFE /* Grundajhoj */,
-				0049F4252D592A73002ABBFE /* XML */,
-				0049F42A2D593173002ABBFE /* Modeloj+JSON */,
+				0049F4252D592A73002ABBFE /* Artikoloj */,
+				00E604492D5A78B600757EE6 /* __Snapshots__ */,
 				0049F41D2D5927E2002ABBFE /* DatumbazFariloTestoj.swift */,
 			);
 			path = DatumbazFariloTestoj;
 			sourceTree = "<group>";
 		};
-		0049F4252D592A73002ABBFE /* XML */ = {
+		0049F4252D592A73002ABBFE /* Artikoloj */ = {
 			isa = PBXGroup;
 			children = (
 				0049F4282D592B99002ABBFE /* not.xml */,
 			);
-			path = XML;
+			path = Artikoloj;
 			sourceTree = "<group>";
 		};
-		0049F4262D592B30002ABBFE /* TestPlanoj */ = {
+		0049F4262D592B30002ABBFE /* Risurcoj */ = {
 			isa = PBXGroup;
 			children = (
 				0049F4272D592B35002ABBFE /* DatumbazFarilo.xctestplan */,
 			);
-			path = TestPlanoj;
-			sourceTree = "<group>";
-		};
-		0049F42A2D593173002ABBFE /* Modeloj+JSON */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Modeloj+JSON";
+			path = Risurcoj;
 			sourceTree = "<group>";
 		};
 		0049F42D2D593943002ABBFE /* Grundajhoj */ = {
@@ -457,6 +468,7 @@
 				0049F41C2D5927E2002ABBFE /* DatumbazFariloTestoj */,
 				00BE1AD52D24B7450027BC22 /* Products */,
 				0049F3412D2F5317002ABBFE /* Frameworks */,
+				576516C24BC1131F7087589A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -492,6 +504,32 @@
 			path = ModelAldonoj;
 			sourceTree = "<group>";
 		};
+		00E604482D5A78B600757EE6 /* DatumbazFariloTestoj */ = {
+			isa = PBXGroup;
+			children = (
+				00E6044B2D5A794300757EE6 /* testiArtikolon.not-i.json */,
+			);
+			path = DatumbazFariloTestoj;
+			sourceTree = "<group>";
+		};
+		00E604492D5A78B600757EE6 /* __Snapshots__ */ = {
+			isa = PBXGroup;
+			children = (
+				00E604482D5A78B600757EE6 /* DatumbazFariloTestoj */,
+			);
+			path = __Snapshots__;
+			sourceTree = "<group>";
+		};
+		576516C24BC1131F7087589A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38706F105BC911CCA2168050 /* Pods-DatumbazFariloTestoj.debug.xcconfig */,
+				D6445A9E6D72197DDF4EC2BB /* Pods-DatumbazFariloTestoj.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -499,9 +537,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0049F41F2D5927E2002ABBFE /* Build configuration list for PBXNativeTarget "DatumbazFariloTestoj" */;
 			buildPhases = (
+				7019AF0B57CB2B70E3C10D3A /* [CP] Check Pods Manifest.lock */,
 				0049F4172D5927E2002ABBFE /* Sources */,
 				0049F4182D5927E2002ABBFE /* Frameworks */,
 				0049F4192D5927E2002ABBFE /* Resources */,
+				65EBD73F8E4E792FB242512E /* [CP] Embed Pods Frameworks */,
+				00DB3F232D596DD700BC3C14 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -579,11 +620,53 @@
 				0049F4402D5939AA002ABBFE /* fakoj.json in Resources */,
 				0049F43F2D5939AA002ABBFE /* signoj.json in Resources */,
 				0049F43C2D5939AA002ABBFE /* mallongigoj.json in Resources */,
+				00E6044C2D5A794300757EE6 /* testiArtikolon.not-i.json in Resources */,
 				0049F43B2D5939AA002ABBFE /* lingvoj.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65EBD73F8E4E792FB242512E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks.sh\"\n";
+		};
+		7019AF0B57CB2B70E3C10D3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DatumbazFariloTestoj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0049F4172D5927E2002ABBFE /* Sources */ = {
@@ -738,6 +821,7 @@
 /* Begin XCBuildConfiguration section */
 		0049F4202D5927E2002ABBFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38706F105BC911CCA2168050 /* Pods-DatumbazFariloTestoj.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -755,6 +839,7 @@
 		};
 		0049F4212D5927E2002ABBFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6445A9E6D72197DDF4EC2BB /* Pods-DatumbazFariloTestoj.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -808,7 +893,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -871,7 +956,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
