@@ -16,11 +16,7 @@ final class DatumbazFariloTestoj: XCTestCase {
     func testiArtikolon() throws {
 		let rezulto = Artikolaro.legi(
 			el: pakajho.resourcePath! + "/",
-			lingvoj: grundo.lingvoj,
-			stiloj: grundo.stiloj,
-			signoj: grundo.signoj,
-			mallongigoj: grundo.mallongigojVerkaj,
-			urloj: grundo.urloj
+			grundo: grundo
 		)
 		
 		for artikolo in rezulto.artikoloj {

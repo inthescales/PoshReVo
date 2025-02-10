@@ -1,0 +1,727 @@
+{
+  "indekso" : "ni",
+  "ofc" : "*",
+  "radiko" : "ni",
+  "subartikoloj" : [
+    {
+      "teksto" : "",
+      "vortoj" : [
+        {
+          "marko" : "ni.0",
+          "ofc" : "*",
+          "teksto" : "<a href=\"pronom.0o\">Pronomo<\/a> de la unua persono en pluralo, t.e. mi kaj alia(j), do vi, li, ŝi resp. ili: <i><b>ni<\/b> estas fratoj;<\/i> <i>al <b>ni<\/b> apartenas la akvo;<\/i> <i>aŭskultu <b>ni<\/b>n;<\/i> <i><b>ni<\/b> konstruu al <b>ni<\/b> urbon;<\/i> <i>vivanton <b>ni<\/b> malhonoras, mortinton <b>ni<\/b> adoras (kp <a href=\"oni.0\">oni<\/a>);<\/i> <i><b>ni<\/b>n ĉiam ravas, kion <b>ni<\/b> ne havas.<\/i>",
+          "titolo" : "ni"
+        },
+        {
+          "marko" : "ni.0a",
+          "ofc" : "*",
+          "teksto" : "Poseda adjektivo aŭ pronomo signifanta: „posedata de ni, rilata al ni“: <i><b>ni<\/b>a patro, <b>ni<\/b>aj infanoj;<\/i> <i><b>ni<\/b>aj parencoj;<\/i> <i><b>ni<\/b>a familio;<\/i> <i><b>ni<\/b>aj malamikoj;<\/i> <i><b>ni<\/b>a Dio;<\/i> <i><b>ni<\/b>aj faroj;<\/i> <i>malproksima de <b>ni<\/b>a domo;<\/i> <i>en <b>ni<\/b>a loko ne estas […];<\/i> <i><b>ni<\/b> donos al vi <b>ni<\/b>an konsenton, se vi […];<\/i> <i>li signifoklarigis al <b>ni<\/b> <b>ni<\/b>ajn sonĝojn, al ĉiu li klarigis laŭ lia sonĝo.<\/i>",
+          "titolo" : "nia"
+        }
+      ]
+    }
+  ],
+  "titolo" : "ni",
+  "tradukoj" : [
+    {
+      "lingvo" : {
+        "kodo" : "af",
+        "nomo" : "afrikansa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ons; <a href=\"ni.0a\">~a<\/a>: ons."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sq",
+        "nomo" : "albana"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ne; <a href=\"ni.0a\">~a<\/a>: tonë."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "am",
+        "nomo" : "amhara"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: እኛ; <a href=\"ni.0a\">~a<\/a>: የእኛ."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "en",
+        "nomo" : "angla"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: we; <a href=\"ni.0a\">~a<\/a>: our."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ar",
+        "nomo" : "araba"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: نحن; <a href=\"ni.0a\">~a<\/a>: لدينا."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "hy",
+        "nomo" : "armena"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: մենք; <a href=\"ni.0a\">~a<\/a>: մեր."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "az",
+        "nomo" : "azerbajĝana"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: biz; <a href=\"ni.0a\">~a<\/a>: bizim."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "be",
+        "nomo" : "belorusa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: мы; <a href=\"ni.0a\">~a<\/a>: наш, наша."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "bn",
+        "nomo" : "bengala"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: আমরা; <a href=\"ni.0a\">~a<\/a>: আমাদের."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "my",
+        "nomo" : "birma"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ကျွန်တော်တို့; <a href=\"ni.0a\">~a<\/a>: ကျွန်တော်တို့၏."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "bs",
+        "nomo" : "bosna"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: smo; <a href=\"ni.0a\">~a<\/a>: našim."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "br",
+        "nomo" : "bretona"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ni; <a href=\"ni.0a\">~a<\/a>: hol, hon, hor."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "cs",
+        "nomo" : "ĉeĥa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ný (řecké písmeno); <a href=\"ni.0a\">~a<\/a>: náš."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "zh",
+        "nomo" : "ĉina"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: 我们, tr. 我們 [wǒmen]; <a href=\"ni.0a\">~a<\/a>: 我们的, tr. 我們的 [wǒmende]."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "da",
+        "nomo" : "dana"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: vi; <a href=\"ni.0a\">~a<\/a>: vores."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "et",
+        "nomo" : "estona"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: me; <a href=\"ni.0a\">~a<\/a>: us."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "eu",
+        "nomo" : "eŭska"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: dugu; <a href=\"ni.0a\">~a<\/a>: gure."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "tl",
+        "nomo" : "filipina"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: namin; <a href=\"ni.0a\">~a<\/a>: atin."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "fi",
+        "nomo" : "finna"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: me; <a href=\"ni.0a\">~a<\/a>: meidän, meidän -mme, -mme."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "fr",
+        "nomo" : "franca"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: nous; <a href=\"ni.0a\">~a<\/a>: notre."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "gl",
+        "nomo" : "galega"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: nós; <a href=\"ni.0a\">~a<\/a>: nosa."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "de",
+        "nomo" : "germana"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: wir; <a href=\"ni.0a\">~a<\/a>: unser."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "el",
+        "nomo" : "greka"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: εμείς; <a href=\"ni.0a\">~a<\/a>: μας."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "gu",
+        "nomo" : "guĝarata"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: અમે; <a href=\"ni.0a\">~a<\/a>: અમારા."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ht",
+        "nomo" : "haitia"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: nou; <a href=\"ni.0a\">~a<\/a>: nou an."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ha",
+        "nomo" : "haŭsa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: muna; <a href=\"ni.0a\">~a<\/a>: mu."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "he",
+        "nomo" : "hebrea"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: אנו, אנחנו; <a href=\"ni.0a\">~a<\/a>: שלנו."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "hi",
+        "nomo" : "hinda"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: हम; <a href=\"ni.0a\">~a<\/a>: हमारे."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "es",
+        "nomo" : "hispana"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: nosotros; <a href=\"ni.0a\">~a<\/a>: nuestro."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "hu",
+        "nomo" : "hungara"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: mi; <a href=\"ni.0a\">~a<\/a>: mi -nk, miénk."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "io",
+        "nomo" : "ida"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ni; <a href=\"ni.0a\">~a<\/a>: nia."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ig",
+        "nomo" : "igba"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: anyị; <a href=\"ni.0a\">~a<\/a>: anyị."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "id",
+        "nomo" : "indonezia"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: kami, kita; <a href=\"ni.0a\">~a<\/a>: milik kami, milik kita."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ga",
+        "nomo" : "irlanda"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: againn; <a href=\"ni.0a\">~a<\/a>: ár n-."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "is",
+        "nomo" : "islanda"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: við; <a href=\"ni.0a\">~a<\/a>: okkar."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "it",
+        "nomo" : "itala"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: noi; <a href=\"ni.0a\">~a<\/a>: nostro."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ja",
+        "nomo" : "japana"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: 私たち [わたしたち], われわれ; <a href=\"ni.0a\">~a<\/a>: 私たちの [わたしたちの], われわれの."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "jv",
+        "nomo" : "java"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: kita; <a href=\"ni.0a\">~a<\/a>: kita."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "yi",
+        "nomo" : "jida"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: מיר; <a href=\"ni.0a\">~a<\/a>: אונדזער."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "yo",
+        "nomo" : "joruba"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: a; <a href=\"ni.0a\">~a<\/a>: wa."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "kn",
+        "nomo" : "kanara"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ನಾವು; <a href=\"ni.0a\">~a<\/a>: ನಮ್ಮ."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ka",
+        "nomo" : "kartvela"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ჩვენ; <a href=\"ni.0a\">~a<\/a>: ჩვენი."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "kk",
+        "nomo" : "kazaĥa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: біз; <a href=\"ni.0a\">~a<\/a>: біздің."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "kek",
+        "nomo" : "kekĉia"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: aaʼo, haʼo, laaʼo."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "cy",
+        "nomo" : "kimra"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: rydym; <a href=\"ni.0a\">~a<\/a>: ein."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ky",
+        "nomo" : "kirgiza"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: биз; <a href=\"ni.0a\">~a<\/a>: биздин."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "km",
+        "nomo" : "kmera"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: យើង; <a href=\"ni.0a\">~a<\/a>: របស់យើង."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ko",
+        "nomo" : "korea"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: 우리; <a href=\"ni.0a\">~a<\/a>: 우리의."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "co",
+        "nomo" : "korsika"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: avemu; <a href=\"ni.0a\">~a<\/a>: u nostru."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "xh",
+        "nomo" : "kosa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: thina; <a href=\"ni.0a\">~a<\/a>: yethu."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "hr",
+        "nomo" : "kroata"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: smo; <a href=\"ni.0a\">~a<\/a>: naša."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ku",
+        "nomo" : "kurda"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: em; <a href=\"ni.0a\">~a<\/a>: yên me."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "lat",
+        "nomo" : "latina"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: nos; <a href=\"ni.0a\">~a<\/a>: nostrum."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "lv",
+        "nomo" : "latva"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: mēs; <a href=\"ni.0a\">~a<\/a>: mūsu."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "lo",
+        "nomo" : "laŭa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ພວກເຮົາ; <a href=\"ni.0a\">~a<\/a>: ຂອງພວກເຮົາ."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "lt",
+        "nomo" : "litova"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: mes; <a href=\"ni.0a\">~a<\/a>: mūsų."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "mk",
+        "nomo" : "makedona"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ние; <a href=\"ni.0a\">~a<\/a>: нашите."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "mg",
+        "nomo" : "malagasa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: izahay; <a href=\"ni.0a\">~a<\/a>: ny."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ms",
+        "nomo" : "malaja"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: kami; <a href=\"ni.0a\">~a<\/a>: kami."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ml",
+        "nomo" : "malajalama"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ഞങ്ങള്; <a href=\"ni.0a\">~a<\/a>: നമ്മുടെ."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "mt",
+        "nomo" : "malta"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: aħna; <a href=\"ni.0a\">~a<\/a>: tagħna."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "mi",
+        "nomo" : "maoria"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: tatou i; <a href=\"ni.0a\">~a<\/a>: to tatou."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "mr",
+        "nomo" : "marata"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: आम्ही; <a href=\"ni.0a\">~a<\/a>: आमच्या."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "hmn",
+        "nomo" : "monga"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: peb; <a href=\"ni.0a\">~a<\/a>: peb."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "mn",
+        "nomo" : "mongola"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: бид; <a href=\"ni.0a\">~a<\/a>: манай."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "nl",
+        "nomo" : "nederlanda"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: wij; <a href=\"ni.0a\">~a<\/a>: ons."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ne",
+        "nomo" : "nepala"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: हामी; <a href=\"ni.0a\">~a<\/a>: हाम्रो."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ny",
+        "nomo" : "njanĝa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ife; <a href=\"ni.0a\">~a<\/a>: yathu."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "fy",
+        "nomo" : "okcidentfrisa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: wy; <a href=\"ni.0a\">~a<\/a>: ús."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "pa",
+        "nomo" : "panĝaba"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ਸਾਨੂੰ; <a href=\"ni.0a\">~a<\/a>: ਸਾਡੇ."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ps",
+        "nomo" : "paŝtua"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: موږ; <a href=\"ni.0a\">~a<\/a>: زموږ."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "pl",
+        "nomo" : "pola"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: my; <a href=\"ni.0a\">~a<\/a>: nasz, nasze, nasi."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "pt",
+        "nomo" : "portugala"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: nós; <a href=\"ni.0a\">~a<\/a>: nosso."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "rw",
+        "nomo" : "ruanda"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: twe; <a href=\"ni.0a\">~a<\/a>: yacu."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ru",
+        "nomo" : "rusa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: мы; <a href=\"ni.0a\">~a<\/a>: наш, наша, наше, наши."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sm",
+        "nomo" : "samoa"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: tatou; <a href=\"ni.0a\">~a<\/a>: tatou."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sd",
+        "nomo" : "sinda"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: اسان; <a href=\"ni.0a\">~a<\/a>: اسان."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "si",
+        "nomo" : "sinhala"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: අපි; <a href=\"ni.0a\">~a<\/a>: අපගේ."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "gd",
+        "nomo" : "skotgaela"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: tha sinn a ‘; <a href=\"ni.0a\">~a<\/a>: againn."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sk",
+        "nomo" : "slovaka"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ný (grécke písmeno); <a href=\"ni.0a\">~a<\/a>: naše."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sl",
+        "nomo" : "slovena"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: smo; <a href=\"ni.0a\">~a<\/a>: naše."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "so",
+        "nomo" : "somala"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: waxaan."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "st",
+        "nomo" : "sota"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: re; <a href=\"ni.0a\">~a<\/a>: rōna."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "su",
+        "nomo" : "sunda"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: urang; <a href=\"ni.0a\">~a<\/a>: urang."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sw",
+        "nomo" : "svahila"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: sisi; <a href=\"ni.0a\">~a<\/a>: wetu."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sv",
+        "nomo" : "sveda"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: vi; <a href=\"ni.0a\">~a<\/a>: vår."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sn",
+        "nomo" : "ŝona"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: isu; <a href=\"ni.0a\">~a<\/a>: yedu."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "tg",
+        "nomo" : "taĝika"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: мо; <a href=\"ni.0a\">~a<\/a>: мо."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "th",
+        "nomo" : "taja"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: พวกเรา; <a href=\"ni.0a\">~a<\/a>: ของพวกเรา."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ta",
+        "nomo" : "tamila"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: நாம்; <a href=\"ni.0a\">~a<\/a>: எங்கள்."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "tt",
+        "nomo" : "tatara"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: без; <a href=\"ni.0a\">~a<\/a>: безнең."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "te",
+        "nomo" : "telugua"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: మేము; <a href=\"ni.0a\">~a<\/a>: మా."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "bo",
+        "nomo" : "tibeta"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ང་ཚོ་."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "tok",
+        "nomo" : "tokipona"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: mi (ajnnombra), mi tu (dunombra), mi mute (plurnombra); <a href=\"ni.0a\">~a<\/a>: mi (ajnnombra), pi mi tu (dunombra), pi mi mute (plurnombra)."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "uk",
+        "nomo" : "ukraina"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ми; <a href=\"ni.0a\">~a<\/a>: наш."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ur",
+        "nomo" : "urdua"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: ہم; <a href=\"ni.0a\">~a<\/a>: ہمارے."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "uz",
+        "nomo" : "uzbeka"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: bizlar; <a href=\"ni.0a\">~a<\/a>: bizning."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "vi",
+        "nomo" : "vjetnama"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: chúng tôi; <a href=\"ni.0a\">~a<\/a>: của chúng tôi."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "vo",
+        "nomo" : "volapuka"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: obs; <a href=\"ni.0a\">~a<\/a>: obsik, obsa."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "zu",
+        "nomo" : "zulua"
+      },
+      "teksto" : "<a href=\"ni.0\">~<\/a>: thina; <a href=\"ni.0a\">~a<\/a>: ethu."
+    }
+  ]
+}

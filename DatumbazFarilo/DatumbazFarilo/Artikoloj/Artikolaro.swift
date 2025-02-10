@@ -20,8 +20,8 @@ enum Artikolaro {
 	static func legi(el indikilo: String, grundo: Grundo) -> Rezulto {
 		legi(
 			el: indikilo,
-			lingvoj: grundo.lingvoj,
-			stiloj: grundo.stiloj,
+			lingvoDict: grundo.lingvoDict,
+			stiloDict: grundo.stiloDict,
 			signoj: grundo.signoj,
 			mallongigoj: grundo.mallongigojVerkaj,
 			urloj: grundo.urloj)
@@ -30,8 +30,8 @@ enum Artikolaro {
 	/// Legas ĉiujn artikolojn el certa indikilo kaj liveras ĉiujn artikolo-modelojn kaj serĉ-tradukojn
 	static func legi(
 		el indikilo: String,
-		lingvoj: [Lingvo],
-		stiloj: [Stilo],
+		lingvoDict: [String: Lingvo],
+		stiloDict: [String: String],
 		signoj: [String: String],
 		mallongigoj: [String: String],
 		urloj: [String: String]
@@ -63,8 +63,8 @@ enum Artikolaro {
 			guard let rezulto = ArboAnalizilo.analizi(
 				arbon: arbo,
 				indekso: indekso,
-				lingvoj: grundo.lingvoDict,
-				stiloj: grundo.stiloDict
+				lingvoj: lingvoDict,
+				stiloj: stiloDict
 			) else {
 				print("NE sukcesis analizi artikolon '\(indiko)'")
 				continue

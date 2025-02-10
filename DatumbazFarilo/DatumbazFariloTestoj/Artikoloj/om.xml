@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!DOCTYPE vortaro SYSTEM "../dtd/vokoxml.dtd">
+<vortaro>
+<art mrk="$Id: om.xml,v 1.36 2024/01/30 16:09:26 revo Exp $">
+<kap>
+  <rad>Om</rad>/o
+</kap>
+
+<drv mrk="om.0o">
+  <kap><tld/>o</kap>
+  <uzo tip="fak">PERS</uzo>
+  <snc>
+    <dif>
+      Germanlingve: 
+      <trd lng="de">Ohm<klr tip="amb"> (Georg Simon)</klr></trd>,
+      1787-1854; germana 
+      <ref tip="lst" cel="fizik.0isto" lst="voko:historiaj_personoj">fizikisto</ref>, malkovrinta la
+      le&gcirc;on
+      pri proporcieco de elektra tensio kaj kurentintenso
+      <klr>(tiu le&gcirc;o
+      nun estas nomata &leftquot;la le&gcirc;o de Omo&rightquot;)</klr>.
+    </dif>
+  </snc>
+  <trd lng="be">&c_O;&c_m; <klr>(&c_n;&c_ja;&c_m;&c_je;&c_c;&c_k;&c_ib; &c_f;&c_ib;&c_z;&c_y;&c_k;)</klr></trd>
+  <trd lng="ca">Ohm</trd>
+  <trd lng="cs">G.S. Ohm</trd>
+  <trd lng="en">Ohm<klr> (Georg Simon)</klr></trd>
+  <trd lng="fr">Ohm</trd>
+  <trd lng="hu">Georg Simon <ind>Ohm</ind></trd>
+  <trd lng="id">Ohm</trd>
+  <trd lng="it">Ohm</trd>
+  <trd lng="nl">Georg Simon <ind>Ohm</ind></trd>
+  <trd lng="pl">Georg Simon <ind>Ohm</ind></trd>
+  <trd lng="pt">Ohm</trd>
+  <trd lng="ru">&c_G;&c_je;&c_o;&c_r;&c_g; &c_S;&c_i;&c_m;&c_o;&c_n;
+  <ind>&c_O;&c_m;</ind></trd>
+  <trd lng="sk">G.S. Ohm</trd>
+  <trdgrp lng="zh">
+    <trd>&#x4E54;&#x6CBB;&#x897F;&#x8499;&#x6B27;&#x59C6; <pr>qi&#xE1;ozh&#xEC;x&#x12B;m&#xE9;ng&#x14D;um&#x1D4;</pr></trd>,
+    <trd>&#x55AC;&#x6CBB;&#x897F;&#x8499;&#x6B50;&#x59C6; <pr>qi&#xE1;ozh&#xEC;x&#x12B;m&#xE9;ng&#x14D;um&#x1D4;</pr></trd>,
+    <trd>&#x683C;&#x5965;&#x5C14;&#x683C;&#x6B27;&#x59C6; <pr>g&#xE9;&#xE0;o&#x11B;rg&#xE9;&#x14D;um&#x1D4;</pr></trd>,
+    <trd>&#x683C;&#x5967;&#x723E;&#x683C;&#x6B50;&#x59C6; <pr>g&#xE9;&#xE0;o&#x11B;rg&#xE9;&#x14D;um&#x1D4;</pr></trd>
+  </trdgrp>
+</drv>
+
+<drv mrk="om.o0o">
+  <kap><tld lit="o"/>o</kap>
+  <uzo tip="fak">ELE</uzo>
+  <mlg kod="SI">&Omega;</mlg>
+  <snc mrk="om.o0o.unuo">
+    <dif>
+      <ref tip="lst" cel="unu.mezur0o" lst="voko:mezurunuoj">Mezurunuo</ref> de
+      <ref tip="vid" cel="rezist1.0o">rezistanco</ref>
+      en la Internacia Sistemo de unuoj:
+      <ekz>
+        unu <tld lit="o"/>o egalas al la rezistanco
+        de kondukilo, kiu tralasas kurenton de
+        unu <ref tip="vid" cel="amper.a0o">ampero</ref> sub tensio de
+        unu <ref tip="vid" cel="volt.v0o">volto</ref>.
+      </ekz>
+    </dif>
+  </snc>
+  <trd lng="be">&c_o;&c_m; <klr>(&c_a;&c_d;&c_z;&c_ib;&c_n;&c_k;&c_a; &c_v;&c_y;&c_m;&c_ja;&c_r;&c_e;&c_n;&c_mol;&c_n;&c_ja;)</klr></trd>
+  <trd lng="be">&c_o;&c_m;</trd>
+  <trd lng="ca">ohm</trd>
+  <trd lng="cs">G.S. Ohm</trd>
+  <trd lng="de">Ohm</trd>
+  <trd lng="en">ohm</trd>
+  <trd lng="fr">ohm</trd>
+  <trd lng="hu">ohm</trd>
+  <trd lng="id">ohm</trd>
+  <trd lng="it">ohm<klr> (unit&agrave; di misura)</klr></trd>
+  <trd lng="ja">&#x30AA;&#x30FC;&#x30E0;</trd>
+  <trd lng="nl">ohm</trd>
+  <trd lng="pl">om</trd>
+  <trd lng="pt">ohm</trd>
+  <trd lng="ru">&c_o;&c_m;</trd>
+  <trd lng="sk">G.S. Ohm</trd>
+  <trd lng="sv">ohm</trd>
+  <trd lng="uk">&c_O;&c_m; (&c_f;&c_ib;&c_z;&c_i;&c_k;)</trd>
+  <trdgrp lng="zh">
+    <trd>&#x6B27;&#x59C6; <pr>&#x14D;um&#x1D4;</pr></trd>,
+    <trd>&#x6B50;&#x59C6; <pr>&#x14D;um&#x1D4;</pr></trd>
+  </trdgrp>
+</drv>
+
+<drv mrk="om.o0metro">
+  <kap><tld lit="o"/>ometro, <var><kap><tld lit="o"/>metro</kap></var></kap>
+  <uzo tip="fak">ELE</uzo>
+  <mlg kod="SI">&Omega;m</mlg>
+  <snc mrk="om.o0metro.unuo">
+    <dif>
+      <ref tip="lst" cel="unu.mezur0o" lst="voko:mezurunuoj">Mezurunuo</ref> de
+      <ref tip="vid" cel="rezist2.0o">rezistivo</ref>
+      en la Internacia Sistemo de unuoj:
+      <ekz>
+        unu <tld lit="o"/>ometro egalas al la rezistivo
+        de tia materio, ke cilindra kondukilo el &gcirc;i
+        kun orta sekco je
+        unu <ref cel="metr.kvadrata0o">kvadrata metro</ref>,
+        kaj longo je unu <ref cel="metr.0o.unuo">metro</ref>, havas
+        <ref cel="rezist1.0o">rezistancon</ref> 
+        je unu <ref cel="om.o0o"><tld lit="o"/>o</ref>.
+      </ekz>
+    </dif>
+    <rim>
+      Oni anka&ubreve; nomas aparaton por mezuri la rezistancon 
+      &leftquot;<ref tip="hom" cel="ommetr">ommetro</ref>&rightquot;.
+    </rim>
+    <trd lng="be">&c_o;&c_m;&c_a;&c_m;&c_e;&c_t;&c_a;&c_r;</trd>
+    <trd lng="ca"><ind>ohm</ind> metre</trd>
+    <trdgrp lng="de">
+      <trd>Ohmmeter</trd>
+    </trdgrp>
+    <trd lng="en">ohm-meter<klr> (unit of measure)</klr></trd>
+    <trd lng="fr">ohm-m&egrave;tre<klr tip="ind">
+    (unit&eacute; de mesure)</klr></trd>
+    <trd lng="id">ohm-meter</trd>
+    <trd lng="it"><ind>ohm</ind> per metro</trd>
+    <trd lng="nl">ohm-meter</trd>
+    <trd lng="pl">omometr</trd>
+    <trdgrp lng="zh">
+    <trd>&#x6B27;&#x59C6;&#x8BA1; <pr>&#x14D;um&#x1D4;j&#xEC;</pr></trd>,
+    <trd>&#x6B50;&#x59C6;&#x8A08; <pr>&#x14D;um&#x1D4;j&#xEC;</pr></trd>
+  </trdgrp>
+</snc>
+</drv>
+</art>
+<!--
+$Log$
+versio 1.34 2023/05/13 06:30:08
+Wolfram Diestel: +snc-ref
+
+versio 1.33 2023/05/12 09:25:26
+Wolfram Diestel: anst. snc mezurilo per ref-hom
+
+versio 1.32 2023/05/11 10:30:38
+Damien Brucker: -eraro cxe cel en ref
+
+versio 1.31 2023/05/10 01:40:27
+Robert Baruch: +snc: mezurilo (evitinda)
+
+versio 1.30 2022/04/07 07:29:16
+Dmitri Gabinski: + trd be
+
+Revision 1.27  2015/07/04 08:37:40  revo
+aldono de trd cs per skripto de M. von Laer
+
+Revision 1.26  2015/06/29 16:33:21  revo
+aldono de trd sk per skripto de M. von Laer
+
+Revision 1.25  2014/07/02 15:10:36  revo
+-->
+</vortaro>

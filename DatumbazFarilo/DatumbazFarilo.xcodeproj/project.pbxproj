@@ -155,6 +155,16 @@
 		00F2233B2D5AA2F600D049A1 /* StiloAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34E2D30316E002ABBFE /* StiloAnalizilo.swift */; };
 		00F2233C2D5AA2F600D049A1 /* FakoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F34A2D302E93002ABBFE /* FakoAnalizilo.swift */; };
 		00F2233D2D5AA2F600D049A1 /* DTDAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F3A22D5154FB002ABBFE /* DTDAnalizilo.swift */; };
+		00F223432D5AA5E500D049A1 /* ni.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00F2233E2D5AA5E500D049A1 /* ni.xml */; };
+		00F223442D5AA5E500D049A1 /* majoritat.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00F2233F2D5AA5E500D049A1 /* majoritat.xml */; };
+		00F223452D5AA5E500D049A1 /* per.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00F223402D5AA5E500D049A1 /* per.xml */; };
+		00F223462D5AA5E500D049A1 /* om.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00F223412D5AA5E500D049A1 /* om.xml */; };
+		00F223472D5AA5E500D049A1 /* abak.xml in Resources */ = {isa = PBXBuildFile; fileRef = 00F223422D5AA5E500D049A1 /* abak.xml */; };
+		00F2234D2D5AA68E00D049A1 /* testiArtikolon.abak-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F223482D5AA68D00D049A1 /* testiArtikolon.abak-o.json */; };
+		00F2234E2D5AA68E00D049A1 /* testiArtikolon.majoritat-o-maĵori-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F223492D5AA68D00D049A1 /* testiArtikolon.majoritat-o-maĵori-o.json */; };
+		00F2234F2D5AA68E00D049A1 /* testiArtikolon.per.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F2234A2D5AA68D00D049A1 /* testiArtikolon.per.json */; };
+		00F223502D5AA68E00D049A1 /* testiArtikolon.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F2234B2D5AA68D00D049A1 /* testiArtikolon.Om-o.json */; };
+		00F223512D5AA68E00D049A1 /* testiArtikolon.ni.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F2234C2D5AA68E00D049A1 /* testiArtikolon.ni.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -273,6 +283,16 @@
 		00E6044B2D5A794300757EE6 /* testiArtikolon.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.not-i.json"; sourceTree = "<group>"; };
 		00F223312D5A9FFC00D049A1 /* Grundo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grundo.swift; sourceTree = "<group>"; };
 		00F223342D5AA27E00D049A1 /* grundo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = grundo.json; sourceTree = "<group>"; };
+		00F2233E2D5AA5E500D049A1 /* ni.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ni.xml; sourceTree = "<group>"; };
+		00F2233F2D5AA5E500D049A1 /* majoritat.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = majoritat.xml; sourceTree = "<group>"; };
+		00F223402D5AA5E500D049A1 /* per.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = per.xml; sourceTree = "<group>"; };
+		00F223412D5AA5E500D049A1 /* om.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = om.xml; sourceTree = "<group>"; };
+		00F223422D5AA5E500D049A1 /* abak.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abak.xml; sourceTree = "<group>"; };
+		00F223482D5AA68D00D049A1 /* testiArtikolon.abak-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.abak-o.json"; sourceTree = "<group>"; };
+		00F223492D5AA68D00D049A1 /* testiArtikolon.majoritat-o-maĵori-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.majoritat-o-maĵori-o.json"; sourceTree = "<group>"; };
+		00F2234A2D5AA68D00D049A1 /* testiArtikolon.per.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiArtikolon.per.json; sourceTree = "<group>"; };
+		00F2234B2D5AA68D00D049A1 /* testiArtikolon.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.Om-o.json"; sourceTree = "<group>"; };
+		00F2234C2D5AA68E00D049A1 /* testiArtikolon.ni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiArtikolon.ni.json; sourceTree = "<group>"; };
 		38706F105BC911CCA2168050 /* Pods-DatumbazFariloTestoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.debug.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.debug.xcconfig"; sourceTree = "<group>"; };
 		D6445A9E6D72197DDF4EC2BB /* Pods-DatumbazFariloTestoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.release.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -297,7 +317,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0049F3392D2F4B99002ABBFE /* GrundoAnalizado */ = {
+		0049F3392D2F4B99002ABBFE /* Grundo */ = {
 			isa = PBXGroup;
 			children = (
 				00F223302D5A9FF200D049A1 /* Modeloj */,
@@ -310,7 +330,7 @@
 				0049F3502D303383002ABBFE /* Oficialecoj.swift */,
 				0049F3BB2D53E27A002ABBFE /* SignoAnalizilo.swift */,
 			);
-			path = GrundoAnalizado;
+			path = Grundo;
 			sourceTree = "<group>";
 		};
 		0049F3412D2F5317002ABBFE /* Frameworks */ = {
@@ -322,7 +342,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0049F3562D31F92D002ABBFE /* ArtikolAnalizado */ = {
+		0049F3562D31F92D002ABBFE /* Artikoloj */ = {
 			isa = PBXGroup;
 			children = (
 				0049F3A42D52A3D3002ABBFE /* Modeloj */,
@@ -334,7 +354,7 @@
 				0049F3592D31F96C002ABBFE /* ArboAnalizilo.swift */,
 				0049F36C2D3ED0E3002ABBFE /* Posttraktado.swift */,
 			);
-			path = ArtikolAnalizado;
+			path = Artikoloj;
 			sourceTree = "<group>";
 		};
 		0049F3A42D52A3D3002ABBFE /* Modeloj */ = {
@@ -434,7 +454,12 @@
 		0049F4252D592A73002ABBFE /* Artikoloj */ = {
 			isa = PBXGroup;
 			children = (
+				00F223422D5AA5E500D049A1 /* abak.xml */,
+				00F2233F2D5AA5E500D049A1 /* majoritat.xml */,
+				00F2233E2D5AA5E500D049A1 /* ni.xml */,
 				0049F4282D592B99002ABBFE /* not.xml */,
+				00F223412D5AA5E500D049A1 /* om.xml */,
+				00F223402D5AA5E500D049A1 /* per.xml */,
 			);
 			path = Artikoloj;
 			sourceTree = "<group>";
@@ -471,8 +496,8 @@
 		00BE1AD62D24B7450027BC22 /* DatumbazFarilo */ = {
 			isa = PBXGroup;
 			children = (
-				0049F3392D2F4B99002ABBFE /* GrundoAnalizado */,
-				0049F3562D31F92D002ABBFE /* ArtikolAnalizado */,
+				0049F3392D2F4B99002ABBFE /* Grundo */,
+				0049F3562D31F92D002ABBFE /* Artikoloj */,
 				00BE1ADE2D24B7570027BC22 /* ModelAldonoj */,
 				0049F3522D303970002ABBFE /* KreiDatumbazon.swift */,
 				0049F3692D384D0A002ABBFE /* TekstFarilo.swift */,
@@ -493,7 +518,12 @@
 		00E604482D5A78B600757EE6 /* DatumbazFariloTestoj */ = {
 			isa = PBXGroup;
 			children = (
+				00F223482D5AA68D00D049A1 /* testiArtikolon.abak-o.json */,
+				00F223492D5AA68D00D049A1 /* testiArtikolon.majoritat-o-maĵori-o.json */,
+				00F2234C2D5AA68E00D049A1 /* testiArtikolon.ni.json */,
 				00E6044B2D5A794300757EE6 /* testiArtikolon.not-i.json */,
+				00F2234B2D5AA68D00D049A1 /* testiArtikolon.Om-o.json */,
+				00F2234A2D5AA68D00D049A1 /* testiArtikolon.per.json */,
 			);
 			path = DatumbazFariloTestoj;
 			sourceTree = "<group>";
@@ -608,8 +638,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F2234D2D5AA68E00D049A1 /* testiArtikolon.abak-o.json in Resources */,
+				00F223432D5AA5E500D049A1 /* ni.xml in Resources */,
+				00F223512D5AA68E00D049A1 /* testiArtikolon.ni.json in Resources */,
+				00F223502D5AA68E00D049A1 /* testiArtikolon.Om-o.json in Resources */,
+				00F223442D5AA5E500D049A1 /* majoritat.xml in Resources */,
+				00F223462D5AA5E500D049A1 /* om.xml in Resources */,
+				00F2234F2D5AA68E00D049A1 /* testiArtikolon.per.json in Resources */,
 				00F223352D5AA27E00D049A1 /* grundo.json in Resources */,
+				00F2234E2D5AA68E00D049A1 /* testiArtikolon.majoritat-o-maĵori-o.json in Resources */,
+				00F223452D5AA5E500D049A1 /* per.xml in Resources */,
 				0049F4292D592B99002ABBFE /* not.xml in Resources */,
+				00F223472D5AA5E500D049A1 /* abak.xml in Resources */,
 				00E6044C2D5A794300757EE6 /* testiArtikolon.not-i.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

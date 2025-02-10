@@ -1,0 +1,424 @@
+<?xml version="1.0"?>
+<!DOCTYPE vortaro SYSTEM "../dtd/vokoxml.dtd">
+
+<vortaro>
+<art mrk="$Id: ni.xml,v 1.108 2023/10/19 20:12:46 revo Exp $">
+<kap>
+   <ofc>*</ofc>
+   <rad>ni</rad>
+</kap>
+<drv mrk="ni.0">
+   <kap><ofc>*</ofc><tld/></kap>
+   <snc>
+     <dif>
+      <ref tip="super" cel="pronom.0o">Pronomo</ref>
+      de la unua persono en pluralo, t.e.
+      mi kaj alia(j), do vi, li, &scirc;i resp. ili:
+      <ekz>
+        <tld/> estas fratoj
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 13:8</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        al <tld/> apartenas la akvo
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 26:20</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        a&ubreve;skultu <tld/>n
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 23:6</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/> konstruu al <tld/> urbon
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 11:4</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        vivanton <tld/> malhonoras, mortinton <tld/> adoras
+        <klr>(kp <ref tip="super" cel="oni.0">oni</ref>)</klr>
+        <fnt>
+          <bib>PrV</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/>n &ccirc;iam ravas, kion <tld/> ne havas
+        <fnt>
+          <bib>PrV</bib>
+        </fnt>.
+      </ekz>
+     </dif>
+   </snc>
+  <trd lng="af">ons</trd>
+  <trd lng="am">&#4773;&#4763;</trd>
+  <trd lng="ar">&a_n;&a_H;&a_n;</trd>
+  <trd lng="az">biz</trd>
+  <trd lng="bn">&#2438;&#2478;&#2480;&#2494;</trd>
+  <trd lng="bs">smo</trd>
+  <trd lng="co">avemu</trd>
+  <trd lng="cy">rydym</trd>
+  <trd lng="da">vi</trd>
+  <trd lng="et">me</trd>
+  <trd lng="eu">dugu</trd>
+  <trd lng="ga">againn</trd>
+  <trd lng="gd">tha sinn a &#8216;</trd>
+  <trd lng="gl">n&oacute;s</trd>
+  <trd lng="gu">&#2693;&#2734;&#2759;</trd>
+  <trd lng="ha">muna</trd>
+  <trd lng="hi">&#2361;&#2350;</trd>
+  <trd lng="hmn">peb</trd>
+  <trd lng="hr">smo</trd>
+  <trd lng="ht">nou</trd>
+  <trd lng="hy">&#1396;&#1381;&#1398;&#1412;</trd>
+  <trd lng="ig">any&#7883;</trd>
+  <trd lng="is">við</trd>
+  <trd lng="jv">kita</trd>
+  <trd lng="ka">&#4329;&#4309;&#4308;&#4316;</trd>
+  <trdgrp lng="kek">
+   <trd>aa&#700;o</trd>
+   <trd>ha&#700;o</trd>
+   <trd>laa&#700;o</trd>
+   </trdgrp>
+  <trd lng="be">&c_m;&c_y;</trd>
+  <trd lng="bo">&t_nga;&t_tsheg;&t_tsha;&t_naro;&t_tsheg;</trd>
+  <trd lng="br">ni</trd>
+  <trd lng="cs">n&yacute; <klr>(&rcaron;eck&eacute; p&iacute;smeno)</klr></trd>
+  <trd lng="de">wir</trd>
+  <trd lng="el">&epsilon;&my;&epsilon;&jota_ton;&sigma_fina;</trd>
+  <trd lng="en">we</trd>
+  <trd lng="es">nosotros</trd>
+  <trd lng="fi">me</trd>
+  <trd lng="fr">nous</trd>
+  <trd lng="fy">wy</trd>
+  <trdgrp lng="he">
+    <trd>&alef;&nun;&vav;</trd>,
+    <trd>&alef;&nun;&het;&nun;&vav;</trd>
+  </trdgrp>
+  <trd lng="hu">mi</trd>
+  <trdgrp lng="id">
+    <trd>kami</trd>,
+    <trd>kita</trd>
+  </trdgrp>
+  <trd lng="io">ni</trd>
+  <trd lng="it">noi</trd>
+  <trdgrp lng="ja">
+    <trd>&#31169;&#12383;&#12385; <pr>&#12431;&#12383;&#12375;&#12383;&#12385;</pr></trd>,
+    <trd>&#12431;&#12428;&#12431;&#12428;</trd>
+  </trdgrp>
+  <trd lng="kk">&c_b;&c_ib;&c_z;</trd>
+  <trd lng="km">&#6041;&#6078;&#6020;</trd>
+  <trd lng="kn">&#3240;&#3262;&#3253;&#3265;</trd>
+  <trd lng="ko">&#50864;&#47532;</trd>
+  <trd lng="ku">em</trd>
+  <trd lng="ky">&c_b;&c_i;&c_z;</trd>
+  <trd lng="lat">nos</trd>
+  <trd lng="lo">&#3742;&#3751;&#3713;&#3776;&#3758;&#3771;&#3762;</trd>
+  <trd lng="lt">mes</trd>
+  <trd lng="lv">m&#275;s</trd>
+  <trd lng="mg">izahay</trd>
+  <trd lng="mi">tatou i</trd>
+  <trd lng="mk">&c_n;&c_i;&c_je;</trd>
+  <trd lng="ml">&#3358;&#3353;&#3405;&#3353;&#3379;&#3405;</trd>
+  <trd lng="mn">&c_b;&c_i;&c_d;</trd>
+  <trd lng="mr">&#2310;&#2350;&#2381;&#2361;&#2368;</trd>
+  <trd lng="ms">kami</trd>
+  <trd lng="mt">a&#295;na</trd>
+  <trd lng="my">&#4096;&#4155;&#4157;&#4116;&#4154;&#4112;&#4145;&#4140;&#4154;&#4112;&#4141;&#4143;&#4151;</trd>
+  <trd lng="ne">&#2361;&#2366;&#2350;&#2368;</trd>
+  <trd lng="nl">wij</trd>
+  <trd lng="ny">ife</trd>
+  <trd lng="pa">&#2616;&#2622;&#2600;&#2626;&#2672;</trd>
+  <trd lng="pl">my</trd>
+  <trd lng="ps">&a_m;&a_w;&#1686;</trd>
+  <trd lng="pt">n&oacute;s</trd>
+  <trd lng="ru">&c_m;&c_y;</trd>
+  <trd lng="rw">twe</trd>
+  <trd lng="sd">&a_A;&a_s;&a_A;&a_n;</trd>
+  <trd lng="si">&#3461;&#3508;&#3538;</trd>
+  <trd lng="sk">n&yacute; <klr>(gr&eacute;cke p&iacute;smeno)</klr></trd>
+  <trd lng="sl">smo</trd>
+  <trd lng="sm">tatou</trd>
+  <trd lng="sn">isu</trd>
+  <trd lng="so">waxaan</trd>
+  <trd lng="sq">ne</trd>
+  <trd lng="st">re</trd>
+  <trd lng="su">urang</trd>
+  <trd lng="sv">vi</trd>
+  <trd lng="sw">sisi</trd>
+  <trd lng="ta">&#2984;&#3006;&#2990;&#3021;</trd>
+  <trd lng="te">&#3118;&#3143;&#3118;&#3137;</trd>
+  <trd lng="tg">&c_m;&c_o;</trd>
+  <trd lng="th">&#3614;&#3623;&#3585;&#3648;&#3619;&#3634;</trd>
+  <trd lng="tl">namin</trd>
+  <trdgrp lng="tok">
+    <trd>mi<klr> (ajnnombra)</klr></trd>,
+    <trd>mi tu<klr> (dunombra)</klr></trd>,
+    <trd>mi mute<klr> (plurnombra)</klr></trd>
+  </trdgrp>
+  <trd lng="tt">&c_b;&c_je;&c_z;</trd>
+  <trd lng="uk">&c_m;&c_i;</trd>
+  <trd lng="ur">&#1729;&a_m;</trd>
+  <trd lng="uz">bizlar</trd>
+  <trd lng="vi">ch&uacute;ng t&ocirc;i</trd>
+  <trd lng="vo">obs</trd>
+  <trd lng="xh">thina</trd>
+  <trd lng="yi">&mem;&yod;&resh;</trd>
+  <trd lng="yo">a</trd>
+  <trdgrp lng="zh">
+     <trd>&#25105;&#20204;</trd>,
+     <trd><klr>tr. </klr>&#25105;&#20497;<klr> [w&#466;men]</klr></trd>
+   </trdgrp>
+  <trd lng="zu">thina</trd>
+</drv>
+
+<drv mrk="ni.0a">
+  <kap><ofc>*</ofc><tld/>a <fnt><bib>F</bib>, <lok>Universala Vortaro,
+  <url ref="&AdE;/fundamento/universala_vortaro.html#av-5123">ni'a</url></lok></fnt></kap>
+  <snc>
+    <dif>
+      Poseda adjektivo a&ubreve; pronomo signifanta: &leftquot;posedata de ni,
+      rilata al ni&rightquot;:
+      <ekz>
+        <tld/>a patro, <tld/>aj infanoj
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 31:16</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/>aj parencoj
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 31:32</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/>a familio
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 43:7</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/>aj malamikoj
+        <fnt>
+          <bib>MT</bib>
+          <lok>Eliro 1:10</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/>a Dio  
+        <fnt>
+          <bib>MT</bib>
+          <lok>Eliro 3:18</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/>aj faroj
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 5:29</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        malproksima de <tld/>a domo
+        <fnt>
+          <bib>PrV</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        en <tld/>a loko ne estas <klr>[&#8230;]</klr>
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 29:26</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/> donos al vi <tld/>an konsenton, se vi <klr>[&#8230;]</klr>
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 34:15</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        li signifoklarigis al <tld/> <tld/>ajn son&gcirc;ojn, al &ccirc;iu li klarigis la&ubreve; lia son&gcirc;o
+        <fnt>
+          <bib>MT</bib>
+          <lok>Genezo 41:12</lok>
+        </fnt>.
+      </ekz>
+    </dif>
+  </snc>
+  <trd lng="af">ons</trd>
+  <trd lng="am">&#4840;&#4773;&#4763;</trd>
+  <trd lng="ar">&a_l;&a_d;&a_y;&a_n;&a_A;</trd>
+  <trd lng="az">bizim</trd>
+  <trdgrp lng="be">
+    <trd>&c_n;&c_a;&c_sh;</trd>
+    (<trd>&c_n;&c_a;&c_sh;&c_a;</trd>)
+  </trdgrp>
+  <trd lng="bn">&#2438;&#2478;&#2494;&#2470;&#2503;&#2480;</trd>
+  <trdgrp lng="br">
+    <trd>hol</trd>,
+    <trd>hon</trd>,
+    <trd>hor</trd>
+  </trdgrp>
+  <trd lng="bs">na&scaron;im</trd>
+  <trd lng="co">u nostru</trd>
+  <trd lng="cs">n&aacute;&scaron;</trd>
+  <trd lng="cy">ein</trd>
+  <trd lng="da">vores</trd>
+  <trd lng="de">unser</trd>
+  <trd lng="el">&my;&alfa;&sigma_fina;</trd>
+  <trd lng="en">our</trd>
+  <trd lng="es">nuestro</trd>
+  <trd lng="et">us</trd>
+  <trd lng="eu">gure</trd>
+  <trdgrp lng="fi">
+    <trd>meid&auml;n</trd>,
+    <trd>meid&auml;n -mme</trd>,
+    <trd>-<ind>mme</ind></trd>
+  </trdgrp>
+  <trd lng="fr">notre</trd>
+  <trd lng="fy">&uacute;s</trd>
+  <trd lng="ga">&aacute;r n-</trd>
+  <trd lng="gd">againn</trd>
+  <trd lng="gl">nosa</trd>
+  <trd lng="gu">&#2693;&#2734;&#2750;&#2736;&#2750;</trd>
+  <trd lng="ha">mu</trd>
+  <trd lng="he">&shin;&lamed;&nun;&vav;</trd>
+  <trd lng="hi">&#2361;&#2350;&#2366;&#2352;&#2375;</trd>
+  <trd lng="hmn">peb</trd>
+  <trd lng="hr">na&scaron;a</trd>
+  <trd lng="ht">nou an</trd>
+  <trdgrp lng="hu">
+    <trd>mi -nk</trd>,
+    <trd>mi&eacute;nk</trd>
+  </trdgrp>
+  <trd lng="hy">&#1396;&#1381;&#1408;</trd>
+  <trdgrp lng="id">
+    <trd><ind>milik</ind> kami</trd>,
+    <trd><ind>milik</ind> kita</trd>
+  </trdgrp>
+  <trd lng="ig">any&#7883;</trd>
+  <trd lng="io">nia</trd>
+  <trd lng="is">okkar</trd>
+  <trd lng="it">nostro</trd>
+  <trdgrp lng="ja">
+    <trd>&#31169;&#12383;&#12385;&#12398; <pr>&#12431;&#12383;&#12375;&#12383;&#12385;&#12398;</pr></trd>,
+    <trd>&#12431;&#12428;&#12431;&#12428;&#12398;</trd>
+  </trdgrp>
+  <trd lng="jv">kita</trd>
+  <trd lng="ka">&#4329;&#4309;&#4308;&#4316;&#4312;</trd>
+  <trd lng="kk">&c_b;&c_ib;&c_z;&c_d;&c_ib;&#1187;</trd>
+  <trd lng="km">&#6042;&#6036;&#6047;&#6091;&#6041;&#6078;&#6020;</trd>
+  <trd lng="kn">&#3240;&#3246;&#3277;&#3246;</trd>
+  <trd lng="ko">&#50864;&#47532;&#51032;</trd>
+  <trd lng="ku">y&ecirc;n me</trd>
+  <trd lng="ky">&c_b;&c_i;&c_z;&c_d;&c_i;&c_n;</trd>
+  <trd lng="lat">nostrum</trd>
+  <trd lng="lo">&#3714;&#3757;&#3719;&#3742;&#3751;&#3713;&#3776;&#3758;&#3771;&#3762;</trd>
+  <trd lng="lt">m&#363;s&#371;</trd>
+  <trd lng="lv">m&#363;su</trd>
+  <trd lng="mg">ny</trd>
+  <trd lng="mi">to tatou</trd>
+  <trd lng="mk">&c_n;&c_a;&c_sh;&c_i;&c_t;&c_je;</trd>
+  <trd lng="ml">&#3368;&#3374;&#3405;&#3374;&#3393;&#3359;&#3398;</trd>
+  <trd lng="mn">&c_m;&c_a;&c_n;&c_a;&c_j;</trd>
+  <trd lng="mr">&#2310;&#2350;&#2330;&#2381;&#2351;&#2366;</trd>
+  <trd lng="ms">kami</trd>
+  <trd lng="mt">tag&#295;na</trd>
+  <trd lng="my">&#4096;&#4155;&#4157;&#4116;&#4154;&#4112;&#4145;&#4140;&#4154;&#4112;&#4141;&#4143;&#4151;&#4175;</trd>
+  <trd lng="ne">&#2361;&#2366;&#2350;&#2381;&#2352;&#2379;</trd>
+  <trd lng="nl">ons</trd>
+  <trd lng="ny">yathu</trd>
+  <trd lng="pa">&#2616;&#2622;&#2593;&#2631;</trd>
+  <trdgrp lng="pl">
+    <trd>nasz</trd>,
+    <trd>nasze</trd>,
+    <trd>nasi</trd>
+  </trdgrp>
+  <trd lng="ps">&a_z;&a_m;&a_w;&#1686;</trd>
+  <trd lng="pt">nosso</trd>
+  <trdgrp lng="ru">
+    <trd>&c_n;&c_a;&c_sh;</trd>,
+    <trd>&c_n;&c_a;&c_sh;&c_a;</trd>,
+    <trd>&c_n;&c_a;&c_sh;&c_je;</trd>
+    <trd>&c_n;&c_a;&c_sh;&c_i;</trd>
+  </trdgrp>
+  <trd lng="rw">yacu</trd>
+  <trd lng="sd">&a_A;&a_s;&a_A;&a_n;</trd>
+  <trd lng="si">&#3461;&#3508;&#3484;&#3546;</trd>
+  <trd lng="sk">na&scaron;e</trd>
+  <trd lng="sl">na&scaron;e</trd>
+  <trd lng="sm">tatou</trd>
+  <trd lng="sn">yedu</trd>
+  <trd lng="sq">ton&euml;</trd>
+  <trd lng="st">r&#333;na</trd>
+  <trd lng="su">urang</trd>
+  <trd lng="sv">v&aring;r</trd>
+  <trd lng="sw">wetu</trd>
+  <trd lng="ta">&#2958;&#2969;&#3021;&#2965;&#2995;&#3021;</trd>
+  <trd lng="te">&#3118;&#3134;</trd>
+  <trd lng="tg">&c_m;&c_o;</trd>
+  <trd lng="th">&#3586;&#3629;&#3591;&#3614;&#3623;&#3585;&#3648;&#3619;&#3634;</trd>
+  <trd lng="tl">atin</trd>
+  <trdgrp lng="tok">
+    <trd>mi<klr> (ajnnombra)</klr></trd>,
+    <trd>pi mi tu<klr> (dunombra)</klr></trd>,
+    <trd>pi mi mute<klr> (plurnombra)</klr></trd>
+  </trdgrp>
+  <trd lng="tt">&c_b;&c_je;&c_z;&c_n;&c_je;&#1187;</trd>
+  <trd lng="uk">&c_n;&c_a;&c_sh;</trd>
+  <trd lng="ur">&#1729;&a_m;&a_A;&a_r;&#1746;</trd>
+  <trd lng="uz">bizning</trd>
+  <trd lng="vi">c&#7911;a ch&uacute;ng t&ocirc;i</trd>
+  <trdgrp lng="vo">
+    <trd>obsik</trd>,
+    <trd>obsa</trd>
+  </trdgrp>
+  <trd lng="xh">yethu</trd>
+  <trd lng="yi">&alef;&vav;&nun;&dalet;&zayin;&ayin;&resh;</trd>
+  <trd lng="yo">wa</trd>
+  <trdgrp lng="zh">
+    <trd>&#25105;&#20204;&#30340;</trd>,
+    <trd><klr>tr. </klr>&#25105;&#20497;&#30340;<klr>
+    [w&#466;mende]</klr></trd>
+  </trdgrp>
+  <trd lng="zu">ethu</trd>
+</drv>
+</art>
+<!--
+$Log$
+versio 1.108 2023/10/19 20:12:46
+revo: transskribo per <pr>
+
+versio 1.107 2022/05/01 16:20:54
+aktualigo lingvokodoj kaj URL-unuoj
+
+versio 1.106 2021/12/10 17:41:18
+Warut Bunprasert: red th
+
+versio 1.32 2020/10/04 09:11:01
+Aleks Andre: tibeta
+
+Revision 1.30  2017/12/19 21:10:19  revo
+Michel Cantigneaux: "ni/a" fundamenta kunmetajxo el la U.V.
+
+Revision 1.29  2017/11/06 14:10:17  revo
+Sam Penter: +trd ja,tp
+
+Revision 1.28  2016/11/20 13:10:14  revo
+Robin van der Vliet: +trd fy, io, tp, vo
+
+Revision 1.27  2015/07/04 08:37:40  revo
+-->
+</vortaro>

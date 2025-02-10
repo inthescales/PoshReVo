@@ -1,0 +1,145 @@
+{
+  "indekso" : "majoritat",
+  "radiko" : "majoritat",
+  "subartikoloj" : [
+    {
+      "teksto" : "",
+      "vortoj" : [
+        {
+          "marko" : "majoritat.0o",
+          "teksto" : "(malofte) [POL] <a href=\"mult.pli0o\">Plimulto<\/a>: <i>la <b>majoritat<\/b>o de la familioj ne volas sendi siajn infanojn al lernejo antaŭ la sepa jaro;<\/i> <i>tio, kion mi volas priparoli, estas ja ĝuste tio, ke la amaso, la <b>majoritat<\/b>o, tiu damnita, kompakta plimulto ‐ ke estas tiu, mi diras, kiu venenas niajn spiritajn vivofontojn;<\/i> <i><b>majoritat<\/b>a voĉdonado en lokaj konsilantaroj;<\/i> <i>la <b>maĵori<\/b>o parolis la rumanan;<\/i> <i>„eskimo“ laŭ la hodiaŭa <b>maĵori<\/b>a opinio de lingvistoj venas el la lingvo de najbaraj Kri- kaj Algonkin-indianoj.<\/i>\n⇝ <a href=\"minoritat.0o\">minoritato<\/a>",
+          "titolo" : "majoritato, maĵorio"
+        }
+      ]
+    }
+  ],
+  "titolo" : "majoritat\/o, maĵori\/o",
+  "tradukoj" : [
+    {
+      "lingvo" : {
+        "kodo" : "en",
+        "nomo" : "angla"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: majority."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "be",
+        "nomo" : "belorusa"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: большасьць."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "bg",
+        "nomo" : "bulgara"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: мнозинство, болшинство."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "cs",
+        "nomo" : "ĉeĥa"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: majorita, většina."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "zh",
+        "nomo" : "ĉina"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: 大多数 [dàduōshù], 大多數 [dàduōshù], 多数 [duōshù], 多數 [duōshù], 大部份 [dàbùfen], 大部分 [dàbùfen]."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "fr",
+        "nomo" : "franca"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: majorité."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "de",
+        "nomo" : "germana"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: Mehrheit."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "he",
+        "nomo" : "hebrea"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: רוב."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "es",
+        "nomo" : "hispana"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: mayoría."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "hu",
+        "nomo" : "hungara"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: többség."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ja",
+        "nomo" : "japana"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: 多数派 [たすうは], マジョリティー."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "nl",
+        "nomo" : "nederlanda"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: meerderheid (ontr.)."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "fa",
+        "nomo" : "persa"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: اکثریت."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "pl",
+        "nomo" : "pola"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: większość."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "pt",
+        "nomo" : "portugala"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: muito (quantidade)."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ru",
+        "nomo" : "rusa"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: большинство."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sk",
+        "nomo" : "slovaka"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: majorita, väčšina."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "uk",
+        "nomo" : "ukraina"
+      },
+      "teksto" : "<a href=\"majoritat.0o\">~o, ~o<\/a>: повноліття, більшість."
+    }
+  ]
+}

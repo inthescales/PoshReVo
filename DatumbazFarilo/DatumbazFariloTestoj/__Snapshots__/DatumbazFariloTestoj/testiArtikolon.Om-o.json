@@ -1,0 +1,155 @@
+{
+  "indekso" : "om",
+  "radiko" : "Om",
+  "subartikoloj" : [
+    {
+      "teksto" : "",
+      "vortoj" : [
+        {
+          "marko" : "om.0o",
+          "teksto" : "[PERS] Germanlingve: , 1787-1854; germana <a href=\"fizik.0isto\">fizikisto<\/a>, malkovrinta la leĝon pri proporcieco de elektra tensio kaj kurentintenso (tiu leĝo nun estas nomata „la leĝo de Omo“).",
+          "titolo" : "Omo"
+        },
+        {
+          "marko" : "om.o0o",
+          "teksto" : "[ELE] <a href=\"unu.mezur0o\">Mezurunuo<\/a> de <a href=\"rezist1.0o\">rezistanco<\/a> en la Internacia Sistemo de unuoj: <i>unu <b>om<\/b>o egalas al la rezistanco de kondukilo, kiu tralasas kurenton de unu <a href=\"amper.a0o\">ampero<\/a> sub tensio de unu <a href=\"volt.v0o\">volto<\/a>.<\/i>",
+          "titolo" : "omo"
+        },
+        {
+          "marko" : "om.o0metro",
+          "teksto" : "[ELE] <a href=\"unu.mezur0o\">Mezurunuo<\/a> de <a href=\"rezist2.0o\">rezistivo<\/a> en la Internacia Sistemo de unuoj: <i>unu <b>om<\/b>ometro egalas al la rezistivo de tia materio, ke cilindra kondukilo el ĝi kun orta sekco je unu <a href=\"metr.kvadrata0o\">kvadrata metro<\/a>, kaj longo je unu <a href=\"metr.0o.unuo\">metro<\/a>, havas <a href=\"rezist1.0o\">rezistancon<\/a> je unu <a href=\"om.o0o\">omo<\/a>.<\/i>\n<b>Rim<\/b>: Oni ankaŭ nomas aparaton por mezuri la rezistancon „<a href=\"ommetr\">ommetro<\/a>“.",
+          "titolo" : "omometro, ommetro"
+        }
+      ]
+    }
+  ],
+  "titolo" : "Om\/o",
+  "tradukoj" : [
+    {
+      "lingvo" : {
+        "kodo" : "en",
+        "nomo" : "angla"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Ohm (Georg Simon), ohm; <a href=\"om.o0metro\">~ometro, ~metro<\/a>: ohm-meter (unit of measure)."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "be",
+        "nomo" : "belorusa"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Ом (нямецкі фізык), ом (адзінка вымярэньня), ом; <a href=\"om.o0metro\">~ometro, ~metro<\/a>: омамэтар."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "cs",
+        "nomo" : "ĉeĥa"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: G.S. Ohm, G.S. Ohm."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "zh",
+        "nomo" : "ĉina"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: 乔治西蒙欧姆 [qiáozhìxīméngōumǔ], 喬治西蒙歐姆 [qiáozhìxīméngōumǔ], 格奥尔格欧姆 [géàoěrgéōumǔ], 格奧爾格歐姆 [géàoěrgéōumǔ], 欧姆 [ōumǔ], 歐姆 [ōumǔ]; <a href=\"om.o0metro\">~ometro, ~metro<\/a>: 欧姆计 [ōumǔjì], 歐姆計 [ōumǔjì]."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "fr",
+        "nomo" : "franca"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Ohm, ohm; <a href=\"om.o0metro\">~ometro, ~metro<\/a>: ohm-mètre (unité de mesure)."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "de",
+        "nomo" : "germana"
+      },
+      "teksto" : "<a href=\"om.0o\">~o 1<\/a>: Ohm (Georg Simon); <a href=\"om.o0o\">~o<\/a>: Ohm; <a href=\"om.o0metro\">~ometro, ~metro<\/a>: Ohmmeter."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "hu",
+        "nomo" : "hungara"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Georg Simon Ohm, ohm."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "id",
+        "nomo" : "indonezia"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Ohm, ohm; <a href=\"om.o0metro\">~ometro, ~metro<\/a>: ohm-meter."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "it",
+        "nomo" : "itala"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Ohm, ohm (unità di misura); <a href=\"om.o0metro\">~ometro, ~metro<\/a>: ohm per metro."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ja",
+        "nomo" : "japana"
+      },
+      "teksto" : "<a href=\"om.o0o\">~o<\/a>: オーム."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ca",
+        "nomo" : "kataluna"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Ohm, ohm; <a href=\"om.o0metro\">~ometro, ~metro<\/a>: ohm metre."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "nl",
+        "nomo" : "nederlanda"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Georg Simon Ohm, ohm; <a href=\"om.o0metro\">~ometro, ~metro<\/a>: ohm-meter."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "pl",
+        "nomo" : "pola"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Georg Simon Ohm, om; <a href=\"om.o0metro\">~ometro, ~metro<\/a>: omometr."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "pt",
+        "nomo" : "portugala"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Ohm, ohm."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "ru",
+        "nomo" : "rusa"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: Георг Симон Ом, ом."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sk",
+        "nomo" : "slovaka"
+      },
+      "teksto" : "<a href=\"om.0o\">~o<\/a>: G.S. Ohm, G.S. Ohm."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "sv",
+        "nomo" : "sveda"
+      },
+      "teksto" : "<a href=\"om.o0o\">~o<\/a>: ohm."
+    },
+    {
+      "lingvo" : {
+        "kodo" : "uk",
+        "nomo" : "ukraina"
+      },
+      "teksto" : "<a href=\"om.o0o\">~o<\/a>: Ом (фізик)."
+    }
+  ]
+}
