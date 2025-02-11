@@ -16,7 +16,10 @@ let produktajhIndiko = radiko + "/produktajhoj"
 
 // Datumbazaĵoj
 
-let konteksto = kreiDatumbazon(fontIndiko: radiko + "/fontoj", destino: produktajhIndiko + "/PoshReVoDatumbazo.sqlite")
+let konteksto = kreiDatumbazon(
+	fontIndiko: radiko + "/fontoj",
+	destino: produktajhIndiko + "/PoshReVoDatumbazo.sqlite"
+)
 
 // Legi grundaĵojn
 

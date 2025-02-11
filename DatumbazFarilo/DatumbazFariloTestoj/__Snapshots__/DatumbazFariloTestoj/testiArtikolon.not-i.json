@@ -112,7 +112,7 @@
         "kodo" : "be",
         "nomo" : "belorusa"
       },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: адзначыць, пазначыць, зацеміць, заўважыць, занатаваць; <a href=\"not.0o\">~o 1<\/a>: нататка, заўвага, зацемка; <a href=\"not.0o\">~o 2<\/a>: нота; <a href=\"not.0o\">~o 3<\/a>: адзнака; <a href=\"not.0oj\">~oj<\/a>: ноты; <a href=\"not.pri0o\">pri~o<\/a>: зацемка, заўвага, нататка; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: дыпляматычная нота; <a href=\"not.kurz0o\">kurz~o<\/a>: катыроўка (біржавая); <a href=\"not.pied0i\">pied~i<\/a>: дадаваць зноску; <a href=\"not.pied0o\">pied~o<\/a>: зноска (у тэксьце)."
+      "teksto" : "<a href=\"not.0i\">~i<\/a>: адзначыць, пазначыць, зацеміць, заўважыць, занатаваць; <a href=\"not.0o\">~o 1<\/a>: нататка, заўвага, зацемка; <a href=\"not.0o\">falsa ~o.a<\/a>: фальшывая нота; <a href=\"not.0o\">~o 2<\/a>: нота; <a href=\"not.0o\">~o 3<\/a>: адзнака; <a href=\"not.0oj\">~oj<\/a>: ноты; <a href=\"not.pri0o\">pri~o<\/a>: зацемка, заўвага, нататка; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: дыпляматычная нота; <a href=\"not.kurz0o\">kurz~o<\/a>: катыроўка (біржавая); <a href=\"not.pied0i\">pied~i<\/a>: дадаваць зноску; <a href=\"not.pied0o\">pied~o<\/a>: зноска (у тэксьце)."
     },
     {
       "lingvo" : {
@@ -238,7 +238,7 @@
         "kodo" : "hu",
         "nomo" : "hungara"
       },
-      "teksto" : "<a href=\"not.0i\">~i 1<\/a>: feljegyez, lejegyez; <a href=\"not.0i\">~i 2<\/a>: megjegyez; <a href=\"not.0o\">~o 1<\/a>: feljegyzés, megjegyzés, jegyzet; <a href=\"not.0o\">~o 2.a<\/a>: hangjegy; <a href=\"not.0o\">~o 2.b<\/a>: tónus; <a href=\"not.0o\">~o 3<\/a>: érdemjegy, osztályzat; <a href=\"not.0oj\">~oj<\/a>: kotta; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: diplomáciai jegyzék; <a href=\"not.kurz0o\">kurz~o<\/a>: árfolyamjegyzés."
+      "teksto" : "<a href=\"not.0i\">~i 1<\/a>: feljegyez, lejegyez; <a href=\"not.0i\">~i 2<\/a>: megjegyez; <a href=\"not.0o\">~o 1<\/a>: feljegyzés, megjegyzés, jegyzet; <a href=\"not.0o\">falsa ~o.a<\/a>: hamis hang; <a href=\"not.0o\">~o 2.a<\/a>: hangjegy; <a href=\"not.0o\">~o 2.b<\/a>: tónus; <a href=\"not.0o\">~o 3<\/a>: érdemjegy, osztályzat; <a href=\"not.0oj\">~oj<\/a>: kotta; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: diplomáciai jegyzék; <a href=\"not.kurz0o\">kurz~o<\/a>: árfolyamjegyzés."
     },
     {
       "lingvo" : {
@@ -455,7 +455,7 @@
         "kodo" : "nl",
         "nomo" : "nederlanda"
       },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: noteren; <a href=\"not.0o\">~o 1<\/a>: aantekening, noot, notitie; <a href=\"not.0o\">~o 2.a<\/a>: noot, muzieknoot; <a href=\"not.0o\">~o 2.b<\/a>: noot; <a href=\"not.0o\">~o 3<\/a>: (school)cijfer, beoordeling (m.n. van leerlingen); <a href=\"not.0oj\">~oj<\/a>: noten, bladmuziek; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: diplomatieke nota; <a href=\"not.kurz0o\">kurz~o<\/a>: koersnotering; <a href=\"not.pied0o\">pied~o<\/a>: voetnoot."
+      "teksto" : "<a href=\"not.0i\">~i<\/a>: noteren; <a href=\"not.0o\">~o 1<\/a>: aantekening, noot, notitie; <a href=\"not.0o\">falsa ~o.a<\/a>: valse noot; <a href=\"not.0o\">~o 2.a<\/a>: noot, muzieknoot; <a href=\"not.0o\">~o 2.b<\/a>: noot; <a href=\"not.0o\">~o 3<\/a>: (school)cijfer, beoordeling (m.n. van leerlingen); <a href=\"not.0oj\">~oj<\/a>: noten, bladmuziek; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: diplomatieke nota; <a href=\"not.kurz0o\">kurz~o<\/a>: koersnotering; <a href=\"not.pied0o\">pied~o<\/a>: voetnoot."
     },
     {
       "lingvo" : {
@@ -497,7 +497,7 @@
         "kodo" : "pl",
         "nomo" : "pola"
       },
-      "teksto" : "<a href=\"not.0i\">~i 1<\/a>: notować, robić notatki; <a href=\"not.0i\">~i 2<\/a>: notować, zanotować; <a href=\"not.0o\">~o 1<\/a>: notatka, notka, adnotacja, dopisek, zapis, zapisek; <a href=\"not.0o\">~o 2.a<\/a>: nuta; <a href=\"not.0o\">~o 2.b<\/a>: nuta; <a href=\"not.0o\">~o 3<\/a>: nota, ocena, stopień; <a href=\"not.0oj\">~oj<\/a>: nuty, partytura; <a href=\"not.pri0o\">pri~o<\/a>: przypis, notatka; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: nota dyplomatyczna; <a href=\"not.kurz0o\">kurz~o<\/a>: korekta kursu, korekta notowań; <a href=\"not.pied0o\">pied~o<\/a>: stopka, przypis."
+      "teksto" : "<a href=\"not.0i\">~i 1<\/a>: notować, robić notatki; <a href=\"not.0i\">~i 2<\/a>: notować, zanotować; <a href=\"not.0o\">~o 1<\/a>: notatka, notka, adnotacja, dopisek, zapis, zapisek; <a href=\"not.0o\">falsa ~o.a<\/a>: fałszywa nuta; <a href=\"not.0o\">~o 2.a<\/a>: nuta; <a href=\"not.0o\">~o 2.b<\/a>: nuta; <a href=\"not.0o\">~o 3<\/a>: nota, ocena, stopień; <a href=\"not.0oj\">~oj<\/a>: nuty, partytura; <a href=\"not.pri0o\">pri~o<\/a>: przypis, notatka; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: nota dyplomatyczna; <a href=\"not.kurz0o\">kurz~o<\/a>: korekta kursu, korekta notowań; <a href=\"not.pied0o\">pied~o<\/a>: stopka, przypis."
     },
     {
       "lingvo" : {
@@ -525,7 +525,7 @@
         "kodo" : "ru",
         "nomo" : "rusa"
       },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: пометить, отметить, сделать заметку; <a href=\"not.0o\">~o 1<\/a>: заметка, примечание; <a href=\"not.0o\">~o 2.b<\/a>: нота; <a href=\"not.0o\">~o 2<\/a>: нота (музыкальная); <a href=\"not.0o\">~o 3<\/a>: оценка, отметка; <a href=\"not.0oj\">~oj<\/a>: ноты; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: дипломатичес кая нота; <a href=\"not.pied0o\">pied~o<\/a>: сноска."
+      "teksto" : "<a href=\"not.0i\">~i<\/a>: пометить, отметить, сделать заметку; <a href=\"not.0o\">~o 1<\/a>: заметка, примечание; <a href=\"not.0o\">falsa ~o.a<\/a>: фальшивая нота; <a href=\"not.0o\">~o 2.b<\/a>: нота; <a href=\"not.0o\">~o 2<\/a>: нота (музыкальная); <a href=\"not.0o\">~o 3<\/a>: оценка, отметка; <a href=\"not.0oj\">~oj<\/a>: ноты; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: дипломатичес кая нота; <a href=\"not.pied0o\">pied~o<\/a>: сноска."
     },
     {
       "lingvo" : {

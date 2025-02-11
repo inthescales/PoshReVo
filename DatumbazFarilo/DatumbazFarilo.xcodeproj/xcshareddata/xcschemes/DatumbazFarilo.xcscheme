@@ -72,7 +72,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:DatumbazFariloTestoj/TestPlanoj/DatumbazFarilo.xctestplan"
+            reference = "container:DatumbazFariloTestoj/Risurcoj/DatumbazFarilo.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

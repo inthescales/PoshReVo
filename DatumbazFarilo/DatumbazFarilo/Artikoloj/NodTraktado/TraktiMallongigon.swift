@@ -23,7 +23,7 @@ extension ArboAnalizilo {
 			switch filo.tipo {
 			case .ind:
 				// TODO: Plene trakti indeksojn kaj mallongigojn
-				teksto += trakti(indekson: filo, stato: stato).0
+				teksto += trakti(indekson: filo, stato: stato).teksto
 			case .teksto(let filTeksto):
 				teksto += filTeksto
 			case .tld(let lit, let vari):

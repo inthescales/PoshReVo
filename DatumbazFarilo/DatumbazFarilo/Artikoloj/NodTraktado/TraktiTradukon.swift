@@ -1,5 +1,10 @@
 extension ArboAnalizilo {
-	static func trakti(tradukon traduko: ArtikolNodo, lingvo: String, stato: TraktadoStato) {
+	static func trakti(
+		tradukon traduko: ArtikolNodo,
+		lingvo: String,
+		transpasIndekso: IndeksRezulto? = nil,
+		stato: TraktadoStato
+	) {
 		guard let marko = stato.marko else {
 			return
 		}
@@ -14,8 +19,8 @@ extension ArboAnalizilo {
 				filTeksto = ""
 			case .ind:
 				let rezulto = trakti(indekson: filo, stato: stato)
-				filTeksto = rezulto.0
-				serchNomo = rezulto.1
+				filTeksto = rezulto.teksto
+				serchNomo = rezulto.serchTeksto
 			case .klr(_):
 				filTeksto = trakti(klarigon: filo, stato: stato)
 			case .mll(let tipo):
@@ -35,30 +40,23 @@ extension ArboAnalizilo {
 		
 		teksto = teksto.prepari().kunpremi().tondi()
 		
-		if false {
-			// TODO: Tradukoj en ekzemploj
-			//		let artikolTraduko = ArtikolTraduko(
-			//			nomo: indekso,
-			//			teksto: teksto,
-			//			marko: marko,
-			//			senco: stato.sncNombro
-			//		)
-			//		stato.aldoni(artikolTradukon: artikolTraduko, lingvo: lingvo)
-		} else if let nomo = stato.derivajhNomo,
-				  let tildo = stato.derivajhTildo,
-				  let indekso = stato.artikolIndekso {
+		if let nomo = stato.derivajhNomo,
+		   let tildo = stato.derivajhTildo,
+		   let indekso = stato.artikolIndekso {
+			
 			let artikolTraduko = ArtikolTraduko(
-				nomo: tildo,
+				nomo: transpasIndekso?.tildTeksto ?? tildo,
 				teksto: teksto,
 				marko: marko,
 				senco: stato.nunaSenco,
-				subsenco: stato.nunaSubsenco
+				subsenco: stato.nunaSubsenco,
+				transpasNomo: transpasIndekso != nil
 			)
 			stato.aldoni(artikolTradukon: artikolTraduko, lingvo: lingvo)
 			
 			let serchTraduko = SerchTraduko(
 				videblaNomo: serchNomo ?? teksto,
-				nomo: nomo,
+				nomo: transpasIndekso?.teksto ?? nomo,
 				teksto: teksto,
 				indekso: indekso,
 				marko: marko,

@@ -1,9 +1,14 @@
 extension ArboAnalizilo {
-	static func trakti(tradukGrupon tradukGrupo: ArtikolNodo, lingvo: String, stato: TraktadoStato) {
+	static func trakti(
+		tradukGrupon tradukGrupo: ArtikolNodo,
+		lingvo: String,
+		transpasIndekso: IndeksRezulto? = nil,
+		stato: TraktadoStato
+	) {
 		traktiFilojn(de: tradukGrupo, stato: stato) { filo in
 			switch filo.tipo {
 			case .trd:
-				trakti(tradukon: filo, lingvo: lingvo, stato: stato)
+				trakti(tradukon: filo, lingvo: lingvo, transpasIndekso: transpasIndekso, stato: stato)
 			case .teksto:
 				break
 			default:

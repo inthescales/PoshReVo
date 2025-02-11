@@ -1,6 +1,8 @@
 extension ArboAnalizilo {
 	static func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: TraktadoStato) -> String {
 		var teksto = ""
+		var indeksajho: IndeksRezulto?
+		
 		traktiFilojn(de: ekzemplo, stato: stato) { filo in
 			switch filo.tipo {
 			case .ctl:
@@ -14,8 +16,9 @@ extension ArboAnalizilo {
 			case .frm:
 				teksto += trakti(formulon: filo, stato: stato)
 			case .ind:
-				// TODO: Plene trakti indeksojn
-				teksto += trakti(indekson: filo, stato: stato).0
+				let indeksRezulto = trakti(indekson: filo, stato: stato)
+				teksto += indeksRezulto.teksto
+				indeksajho = indeksRezulto
 			case .klr:
 				teksto += trakti(klarigon: filo, stato: stato)
 			case .mis:
@@ -40,9 +43,10 @@ extension ArboAnalizilo {
 				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
 			case .ts:
 				teksto += trakti(trastrekitan: filo, stato: stato)
-			case .trd, .trdgrp:
-				// TODO: Trakti tradukojn ĉi tie
-				break
+			case .trd(let lng):
+				trakti(tradukon: filo, lingvo: lng!, transpasIndekso: indeksajho, stato: stato)
+			case .trdgrp(let lng):
+				trakti(tradukGrupon: filo, lingvo: lng, transpasIndekso: indeksajho, stato: stato)
 			case .uzo(let tip):
 				teksto += trakti(uzon: filo, tipo: tip, stato: stato)
 			default:
