@@ -95,8 +95,7 @@ class LiteroAnalizilo : NSObject, XMLParserDelegate {
 	/// Aldonas plurajn mankantajn literojn
 	/// Add a few missing letters
 	private func kompletigi() {
-		// FARENDA: Konfirmu ĉu ia korekto indas ReVo-flanke (ĉu aldoni literojn ĉu korekti uzadon)
-		// TODO: Check whether a correction is needed on the ReVo side (whether adding letters or correcting usage)
+		// TODO: Konfirmu ĉu ia korekto indas ReVo-flanke (ĉu aldoni literojn ĉu korekti uzadon)
 		literoj["a_a"] = literoj["a_A"]
 		literoj["a_fatha_a"] = literoj["a_fatha_A"]
 	}

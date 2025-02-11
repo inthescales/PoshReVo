@@ -7,11 +7,10 @@ func postTrakti(artikolon artikolo: Artikolo, markSencoj: [String: Int]) -> Arti
 		let regex = try! Regex("<sncref mrk=\"(.*?)\"\\/>")
 		return teksto.replacing(regex) { (match: Regex.Match) in
 			let marko = String(match.output[1].substring!)
-			// TODO: erari se indekso ne trivoĝas, kiam ni legos ĉiujn artikolojn
 			if let indekso = markSencoj[marko] {
 				return "<sup>\(indekso)</sup>"
 			} else {
-				return ""
+				assert(false, "Ne trovis markon")
 			}
 		}
 	}
