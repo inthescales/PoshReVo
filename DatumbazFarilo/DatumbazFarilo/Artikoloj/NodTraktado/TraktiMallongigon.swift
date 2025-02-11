@@ -22,10 +22,11 @@ extension ArboAnalizilo {
 		traktiFilojn(de: mallongigo, stato: stato) { filo in
 			switch filo.tipo {
 			case .ind:
-				// TODO: Plene trakti indeksojn kaj mallongigojn
+				// Indekso ene de mallongigo ŝajne ne havas efikon
+				// Ekz. 'grav/i', tradukoj ĉe "sed tio ne gravas"
 				teksto += trakti(indekson: filo, stato: stato).teksto
 			case .teksto(let filTeksto):
-				teksto += filTeksto
+				teksto += filTeksto.prepari().kunpremi()
 			case .tld(let lit, let vari):
 				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
 			default:

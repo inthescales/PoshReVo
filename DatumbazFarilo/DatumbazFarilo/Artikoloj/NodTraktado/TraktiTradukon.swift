@@ -55,7 +55,7 @@ extension ArboAnalizilo {
 			stato.aldoni(artikolTradukon: artikolTraduko, lingvo: lingvo)
 			
 			let serchTraduko = SerchTraduko(
-				videblaNomo: serchNomo ?? teksto,
+				videblaTeksto: serchNomo ?? teksto,
 				nomo: transpasIndekso?.teksto ?? nomo,
 				teksto: teksto,
 				indekso: indekso,

@@ -27,12 +27,14 @@ extension ArboAnalizilo {
 				tildTeksto += filTeksto
 			case .mll(let tipo):
 				let filTeksto = trakti(mallongigon: filo, stato: stato)
-				teksto += filTeksto
-				tildTeksto += filTeksto
+				// teksto += filTeksto
+				// tildTeksto += filTeksto
+				teksto = filTeksto
+				tildTeksto = filTeksto
 				
 				// Ideale la '…' kiun aldonas ĉi-funkcio estus videbla en serĉrezultoj, sed ne
-				// estus parto de serĉ-nomo. Tamen tio ne gravas.
-				// TODO: Ĉu gravas se `…` aperas komence?
+				// estus parto de serĉ-nomo.
+				// TODO: Certigu ke '…' estu ignorata konstruante trie-on
 				serchTeksto = ArtikolTeksto.mllTeksto(baza: filTeksto, tipo: tipo)
 			case .teksto(let filTeksto):
 				teksto += filTeksto

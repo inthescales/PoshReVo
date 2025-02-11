@@ -1,7 +1,7 @@
 /// Traduko tiel kiel ĝi aperos en serĉrezultoj.
 struct SerchTraduko {
 	/// Ĉefa teksto nacilingva (aŭ esperanta), kiu aperos en serĉrezultoj
-	let videblaNomo: String
+	let videblaTeksto: String
 	
 	/// Nomo de esperanta vorto aŭ derivaĵo, se malsamas ol videbla nomo
 	let nomo: String

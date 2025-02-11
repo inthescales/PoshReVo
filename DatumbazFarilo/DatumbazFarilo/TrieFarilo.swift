@@ -42,7 +42,7 @@ final class TrieFarilo {
 			for traduko in tradukoj {
 				// Kiel dict: indekso, senco, teksto, marko
 				
-				let videbla = traduko.videblaNomo
+				let videbla = traduko.videblaTeksto
 				let teksto = traduko.teksto
 				let nomo = traduko.nomo
 				let indekso = traduko.indekso

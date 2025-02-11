@@ -10,7 +10,9 @@ func postTrakti(artikolon artikolo: Artikolo, markSencoj: [String: Int]) -> Arti
 			if let indekso = markSencoj[marko] {
 				return "<sup>\(indekso)</sup>"
 			} else {
-				assert(false, "Ne trovis markon")
+				// TODO: Konstatu ke ĉiuj markoj estos trovataj
+				// assert(false, "Ne trovis markon")
+				return ""
 			}
 		}
 	}

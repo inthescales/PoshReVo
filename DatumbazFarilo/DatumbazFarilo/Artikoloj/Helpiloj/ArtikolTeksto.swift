@@ -135,17 +135,20 @@ enum ArtikolTeksto {
 					teksto += "; "
 				}
 				
+				let montriSubsencon = nuna.subsenco != nil && !nuna.transpasNomo
+				
 				// Konstrui etikedon
 				teksto += "<a href=\"" + nuna.marko + "\">" + nuna.nomo
 				
-				if montriSencon,
+				if montriSencon || montriSubsencon,
 				   let senco = nuna.senco,
 				   senco > 0 {
 					teksto += " " + String(senco)
 				}
 				
 				// Ĉiam montru subsencon, se ĉeestas
-				if let subsenco = nuna.subsenco,
+				if montriSubsencon,
+				   let subsenco = nuna.subsenco,
 				   let litero = subsencLitero(por: subsenco) {
 					teksto += "." + litero
 				}
