@@ -52,6 +52,7 @@ extension ArboAnalizilo {
 		if linio {
 			rezulto += "\n"
 		}
+		
 		if parentezoj {
 			rezulto += "(" + teksto + ")"
 		} else {

@@ -96,7 +96,7 @@
       "videblaTeksto" : "зацемка"
     },
     {
-      "esperantaNomo" : "noto",
+      "esperantaNomo" : "falsa noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 2,
@@ -788,7 +788,7 @@
       "videblaTeksto" : "jegyzet"
     },
     {
-      "esperantaNomo" : "noto",
+      "esperantaNomo" : "falsa noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 2,
@@ -1202,7 +1202,7 @@
       "videblaTeksto" : "notitie"
     },
     {
-      "esperantaNomo" : "noto",
+      "esperantaNomo" : "falsa noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 2,
@@ -1385,7 +1385,7 @@
       "videblaTeksto" : "zapisek"
     },
     {
-      "esperantaNomo" : "noto",
+      "esperantaNomo" : "falsa noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 2,
@@ -1569,7 +1569,7 @@
       "videblaTeksto" : "примечание"
     },
     {
-      "esperantaNomo" : "noto",
+      "esperantaNomo" : "falsa noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 2,

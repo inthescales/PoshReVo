@@ -1,16 +1,13 @@
 extension ArboAnalizilo {
 	struct IndeksRezulto {
-		/// Teksto de la <ind> en sia plena formo (<tld/> fariĝas kapvorton)
+		/// Teksto en sia plena formo, kiel ĝi aperu en artikol-tekstoj
 		let teksto: String
-		
-		/// Teksto de la <ind> en tildhava formo (<tld/> restas `~`)
-		let tildTeksto: String
-		
-		/// Teksto kiel ĝi aperu en serĉrezultoj (povas enhavi `…`, ekz.)
-		let serchTeksto: String?
+
+		/// Teksto kiel ĝi aperu en serĉrezultoj (uzas mallongigojn)
+		let serchTeksto: String
 		
 		/// Teksto kiel ĝi aperu en artikol-tradukoj (uzas `~`, mallongigojn)
-		let tradukTeksto: String?
+		let tradukTeksto: String
 	}
 	
 	static func trakti(indekson indekso: ArtikolNodo, stato: TraktadoStato) -> IndeksRezulto {
@@ -48,9 +45,8 @@ extension ArboAnalizilo {
 		
 		return IndeksRezulto(
 			teksto: teksto,
-			tildTeksto: tildTeksto,
-			serchTeksto: serchTeksto,
-			tradukTeksto: tradukTeksto
+			serchTeksto: serchTeksto ?? teksto,
+			tradukTeksto: tradukTeksto ?? tildTeksto
 		)
 	}
 }

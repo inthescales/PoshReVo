@@ -64,9 +64,14 @@ enum ArtikolAnalizilo {
 			assert(false, "Malsukcesis analizi artikolon '\(indiko)'")
 		}
 		
+		// Ni ĝenerale ne posttraktu po-artikole, ĉar posttraktado bezonas aron da markSencoj.
+		// Tamen, ĉi tio estas utila en testado.
 		let artikolo: Artikolo
 		if postTrakti {
-			artikolo = Posttraktado.postTrakti(artikolon: rezulto.artikolo, markSencoj: rezulto.markSencoj)
+			artikolo = Posttraktado.postTrakti(
+				artikolon: rezulto.artikolo,
+				markSencoj: rezulto.markSencoj
+			)
 		} else {
 			artikolo = rezulto.artikolo
 		}
