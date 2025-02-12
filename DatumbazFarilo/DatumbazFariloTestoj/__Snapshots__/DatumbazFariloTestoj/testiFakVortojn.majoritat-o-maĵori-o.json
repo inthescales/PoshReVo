@@ -1,0 +1,16 @@
+{
+  "POL" : [
+    {
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "senco" : 1,
+      "teksto" : "majoritato"
+    },
+    {
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "senco" : 1,
+      "teksto" : "maĵorio"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(sencon senco: ArtikolNodo, marko: String?, stato: TraktadoStato) -> String {
+	static func trakti(sencon senco: ArtikolNodo, marko: String?, stato: Stato) -> String {
 		if stato.lastaSenco == nil {
 			stato.lastaSenco = 0
 		}

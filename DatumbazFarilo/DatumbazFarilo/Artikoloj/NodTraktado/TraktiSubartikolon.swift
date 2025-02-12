@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(subartikolon subartikolo: ArtikolNodo, stato: TraktadoStato) {
+	static func trakti(subartikolon subartikolo: ArtikolNodo, stato: Stato) {
 		
 		let subartNumero = stato.artikolFabriko.subartikoloj.count + 1
 		

@@ -7,7 +7,7 @@ extension ArboAnalizilo {
 		let tildTeksto: String
 	}
 	
-	static func trakti(mallongigon mallongigo: ArtikolNodo, stato: TraktadoStato) -> MallongigoRezulto {
+	static func trakti(mallongigon mallongigo: ArtikolNodo, stato: Stato) -> MallongigoRezulto {
 		let linio: Bool = {
 			switch stato.cheno.last {
 			case .kap, .ind:

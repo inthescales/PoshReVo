@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(artikolon artikolo: ArtikolNodo, marko: String?, stato: TraktadoStato) {
+	static func trakti(artikolon artikolo: ArtikolNodo, marko: String?, stato: Stato) {
 		traktiFilojn(de: artikolo, stato: stato) { filo in
 			switch filo.tipo {
 			case .adm:

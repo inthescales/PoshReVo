@@ -4,7 +4,7 @@ extension ArboAnalizilo {
 		tipo: String?,
 		celo: String,
 		montriSimbolon: Bool = true,
-		stato: TraktadoStato
+		stato: Stato
 	) -> String {
 		var teksto = ""
 		

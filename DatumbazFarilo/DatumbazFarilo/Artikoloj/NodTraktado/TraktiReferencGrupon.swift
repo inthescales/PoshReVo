@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String?, stato: TraktadoStato) -> String {
+	static func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String?, stato: Stato) -> String {
 		var teksto = ""
 		switch stato.sibStako.last {
 		case .ref, .refgrp:

@@ -10,10 +10,17 @@ enum Artikolaro {
 		var artikoloj: [Artikolo]
 		var tradukoj: [String: [SerchTraduko]]
 		var serchVortoj: [SerchVorto]
+		var fakVortoj: [String: [FakVorto]]
 		
-		init(artikoloj: [Artikolo], tradukoj: [String: [SerchTraduko]], serchVortoj: [SerchVorto]) {
+		init(
+			artikoloj: [Artikolo],
+			tradukoj: [String: [SerchTraduko]],
+			serchVortoj: [SerchVorto],
+			fakVortoj: [String: [FakVorto]]
+		) {
 			self.artikoloj = artikoloj
 			self.tradukoj = tradukoj
+			self.fakVortoj = fakVortoj
 			self.serchVortoj = serchVortoj
 		}
 	}
@@ -48,6 +55,7 @@ enum Artikolaro {
 		var artikoloj: [Artikolo] = []
 		var tradukoj: [String: [SerchTraduko]] = [:]
 		var serchVortoj: [SerchVorto] = []
+		var fakVortoj: [String: [FakVorto]] = [:]
 		var markSencoj: [String: Int] = [:]
 
 		for indiko in legotaj {
@@ -62,16 +70,20 @@ enum Artikolaro {
 			
 			artikoloj.append(rezulto.artikolo)
 			
-			for (lingvo, novajTradukoj) in rezulto.serchTradukoj {
-				if tradukoj[lingvo] == nil {
-					tradukoj[lingvo] = []
-				}
-				
-				tradukoj[lingvo]? += novajTradukoj
+			// Serchtradukoj
+			tradukoj.merge(rezulto.serchTradukoj) { malnovaj, novaj in
+				malnovaj + novaj
 			}
 			
+			// Serchvortoj
 			serchVortoj += rezulto.serchVortoj
 			
+			// Fakvortoj
+			fakVortoj.merge(rezulto.fakVortoj) { malnovaj, novaj in
+				malnovaj + novaj
+			}
+			
+			// Marksencoj
 			rezulto.markSencoj.forEach { marko, senco in
 				markSencoj[marko] = senco
 			}
@@ -86,7 +98,8 @@ enum Artikolaro {
 		return Rezulto(
 			artikoloj: artikoloj,
 			tradukoj: tradukoj,
-			serchVortoj: serchVortoj
+			serchVortoj: serchVortoj,
+			fakVortoj: fakVortoj
 		)
 	}
 	

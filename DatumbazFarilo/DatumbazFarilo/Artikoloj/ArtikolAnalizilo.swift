@@ -6,17 +6,20 @@ enum ArtikolAnalizilo {
 		var artikolo: Artikolo
 		var serchTradukoj: [String: [SerchTraduko]]
 		var serchVortoj: [SerchVorto]
+		var fakVortoj: [String: [FakVorto]]
 		var markSencoj: [String: Int]
 		
 		init(
 			artikolo: Artikolo,
 			serchTradukoj: [String: [SerchTraduko]],
 			serchVortoj: [SerchVorto],
+			fakVortoj: [String: [FakVorto]],
 			markSencoj: [String: Int]
 		) {
 			self.artikolo = artikolo
 			self.serchTradukoj = serchTradukoj
 			self.serchVortoj = serchVortoj
+			self.fakVortoj = fakVortoj
 			self.markSencoj = markSencoj
 		}
 	}
@@ -84,6 +87,7 @@ enum ArtikolAnalizilo {
 			artikolo: artikolo,
 			serchTradukoj: rezulto.serchTradukoj,
 			serchVortoj: rezulto.serchVortoj,
+			fakVortoj: rezulto.fakVortoj,
 			markSencoj: rezulto.markSencoj
 		)
 	}

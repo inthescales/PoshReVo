@@ -5,7 +5,7 @@ extension ArboAnalizilo {
 		tradukon traduko: ArtikolNodo,
 		lingvo: String,
 		transpasIndekso: IndeksRezulto? = nil,
-		stato: TraktadoStato
+		stato: Stato
 	) {
 		guard let marko = stato.marko else {
 			return

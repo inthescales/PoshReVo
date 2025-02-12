@@ -10,10 +10,9 @@ extension ArboAnalizilo {
 		let formoj: [String]
 	}
 	
-	static func trakti(kapon kapo: ArtikolNodo, stato: TraktadoStato) -> KapRezulto {
+	static func trakti(kapon kapo: ArtikolNodo, stato: Stato) -> KapRezulto {
 		var teksto = ""
 		var tildTeksto = ""
-		var formoj: [String] = []
 		
 		switch stato.cheno.last {
 		case .art:
@@ -30,7 +29,6 @@ extension ArboAnalizilo {
 					let filTeksto = trakti(radikon: filo, variajho: vari, stato: stato)
 					teksto += filTeksto
 					tildTeksto += "~"
-					formoj.append(filTeksto)
 				case .teksto(let filTeksto):
 					teksto += filTeksto.prepari().kunpremi()
 					tildTeksto += filTeksto.prepari().kunpremi()
@@ -40,7 +38,6 @@ extension ArboAnalizilo {
 				case .vari:
 					let filRezulto = trakti(variajhon: filo, stato: stato)
 					teksto += filRezulto.nomo
-					formoj.append(filRezulto.nomo)
 				default:
 					assert(false, "Neatendita filo")
 				}
@@ -52,7 +49,7 @@ extension ArboAnalizilo {
 			return KapRezulto(
 				teksto: teksto,
 				tildTeksto: tildTeksto,
-				formoj: teksto.split(separator: ", ").map { String($0) }
+				formoj: ArtikolTeksto.kapFormoj(por: teksto)
 			)
 		case .drv:
 			traktiFilojn(de: kapo, stato: stato) { filo in
@@ -81,7 +78,7 @@ extension ArboAnalizilo {
 			return KapRezulto(
 				teksto: teksto,
 				tildTeksto: tildTeksto,
-				formoj: teksto.split(separator: ", ").map { String($0) }
+				formoj: ArtikolTeksto.kapFormoj(por: teksto)
 			)
 		case .vari:
 			traktiFilojn(de: kapo, stato: stato) { filo in
@@ -114,7 +111,7 @@ extension ArboAnalizilo {
 			return KapRezulto(
 				teksto: teksto,
 				tildTeksto: tildTeksto,
-				formoj: teksto.split(separator: ", ").map { String($0) }
+				formoj: ArtikolTeksto.kapFormoj(por: teksto)
 			)
 		default:
 			assert(false, "Neatendita cheno")

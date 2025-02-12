@@ -1,0 +1,60 @@
+{
+  "EKON" : [
+    {
+      "indekso" : "not",
+      "marko" : "not.bank0o",
+      "senco" : 1,
+      "teksto" : "banknoto"
+    },
+    {
+      "indekso" : "not",
+      "marko" : "not.kurz0o",
+      "senco" : 1,
+      "teksto" : "kurznoto"
+    }
+  ],
+  "MUZ" : [
+    {
+      "indekso" : "not",
+      "marko" : "not.0o",
+      "senco" : 2,
+      "teksto" : "noto"
+    },
+    {
+      "indekso" : "not",
+      "marko" : "not.0oj",
+      "senco" : 1,
+      "teksto" : "notoj"
+    }
+  ],
+  "PED" : [
+    {
+      "indekso" : "not",
+      "marko" : "not.0o",
+      "senco" : 3,
+      "teksto" : "noto"
+    }
+  ],
+  "POL" : [
+    {
+      "indekso" : "not",
+      "marko" : "not.diplomatia0o",
+      "senco" : 1,
+      "teksto" : "diplomatia noto"
+    }
+  ],
+  "TIP" : [
+    {
+      "indekso" : "not",
+      "marko" : "not.pri0o",
+      "senco" : 1,
+      "teksto" : "prinoto"
+    },
+    {
+      "indekso" : "not",
+      "marko" : "not.pied0o",
+      "senco" : 1,
+      "teksto" : "piednoto"
+    }
+  ]
+}

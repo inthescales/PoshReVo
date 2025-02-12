@@ -12,6 +12,9 @@ enum ArboAnalizilo {
 		/// Esperantaj vortoj kiuj estos serĉeblaj
 		let serchVortoj: [SerchVorto]
 		
+		/// Fakaj vortoj aperontaj en fakvortaj listoj
+		let fakVortoj: [String: [FakVorto]]
+		
 		/// Markoj kaj siaj kunligitaj sencoj
 		let markSencoj: [String: Int]
 	}
@@ -22,7 +25,7 @@ enum ArboAnalizilo {
 		lingvoj: [String: Lingvo],
 		stiloj: [String: String]
 	) -> Rezulto? {
-		let stato = TraktadoStato(stiloj: stiloj)
+		let stato = Stato(stiloj: stiloj)
 		stato.artikolFabriko.indekso = indekso
 		
 		trakti(arbon: arbo, stato: stato)
@@ -30,7 +33,7 @@ enum ArboAnalizilo {
 		return rezulto(stato: stato, lingvoj: lingvoj)
 	}
 	
-	static func trakti(arbon arbo: ArtikolNodo, stato: TraktadoStato) {
+	static func trakti(arbon arbo: ArtikolNodo, stato: Stato) {
 		assert(arbo.filoj.count == 1, "Tro da filoj en arboradiko")
 		let filo = arbo.filoj.first!
 		switch filo.tipo {
@@ -42,7 +45,7 @@ enum ArboAnalizilo {
 	}
 	
 	/// La finaj rezultoj de la artikol-traktado
-	static func rezulto(stato: TraktadoStato, lingvoj: [String: Lingvo]) -> Rezulto? {
+	static func rezulto(stato: Stato, lingvoj: [String: Lingvo]) -> Rezulto? {
 		guard let artikolo = stato.artikolFabriko.fabriki(lingvoj: lingvoj) else {
 			return nil
 		}
@@ -51,6 +54,7 @@ enum ArboAnalizilo {
 			artikolo: artikolo,
 			serchTradukoj: stato.serchTradukoj,
 			serchVortoj: stato.serchVortoj,
+			fakVortoj: stato.fakVortoj,
 			markSencoj: stato.markSencoj
 		)
 	}
@@ -58,7 +62,7 @@ enum ArboAnalizilo {
 	// MARK: - Nodspecoj
 	
 	/// Akumulas tekston el teksto-nodoj, kaj alispecaj nodoj kiuj enhavas nur tekstojn
-	static func akumuliTekstojn(de nodo: ArtikolNodo, stato: TraktadoStato) -> String {
+	static func akumuliTekstojn(de nodo: ArtikolNodo, stato: Stato) -> String {
 		var teksto = ""
 		traktiFilojn(de: nodo, stato: stato) { filo in
 			switch filo.tipo {
@@ -122,7 +126,7 @@ enum ArboAnalizilo {
 		return teksto
 	}
 	
-	static func traktiFilojn(de nodo: ArtikolNodo, stato: TraktadoStato, farotajh: (ArtikolNodo) -> Void) {
+	static func traktiFilojn(de nodo: ArtikolNodo, stato: Stato, farotajh: (ArtikolNodo) -> Void) {
 		stato.cheno.append(nodo.tipo)
 		stato.sibStako.append(nil)
 		

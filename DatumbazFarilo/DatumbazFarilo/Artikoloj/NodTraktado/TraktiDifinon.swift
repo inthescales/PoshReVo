@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(difinon difino: ArtikolNodo, stato: TraktadoStato) -> String {
+	static func trakti(difinon difino: ArtikolNodo, stato: Stato) -> String {
 		var teksto = ""
 		
 		traktiFilojn(de: difino, stato: stato) { filo in

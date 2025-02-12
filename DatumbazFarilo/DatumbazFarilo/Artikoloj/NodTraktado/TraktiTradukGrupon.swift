@@ -3,7 +3,7 @@ extension ArboAnalizilo {
 		tradukGrupon tradukGrupo: ArtikolNodo,
 		lingvo: String,
 		transpasIndekso: IndeksRezulto? = nil,
-		stato: TraktadoStato
+		stato: Stato
 	) {
 		traktiFilojn(de: tradukGrupo, stato: stato) { filo in
 			switch filo.tipo {

@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: TraktadoStato) {
+	static func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: Stato) {
 		stato.vortoFabriko = VortoFabriko()
 		stato.vortoFabriko?.marko = marko
 		

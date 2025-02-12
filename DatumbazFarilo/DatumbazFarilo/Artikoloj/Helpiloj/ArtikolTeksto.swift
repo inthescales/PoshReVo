@@ -4,6 +4,11 @@ import Foundation
 enum ArtikolTeksto {
 	// MARK: - Simboloj kaj sekcio-etikedoj
 	
+	/// Supozante ke la ĉeno estas kapteksto havanta plurajn formojn, liveras array-on da formoj
+	static func kapFormoj(por kapTeksto: String) -> [String] {
+		return kapTeksto.split(separator: ", ").map { String($0) }
+	}
+	
 	/// Litero aperonta antaŭ suberivaĵo (ekz. "A.", "B.", ktp.)
 	static func subdrvLitero(por numero: Int) -> String? {
 		return subsencLitero(por: numero)?.uppercased()

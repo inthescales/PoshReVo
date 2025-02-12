@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(prononcon prononco: ArtikolNodo, stato: TraktadoStato) -> String {
+	static func trakti(prononcon prononco: ArtikolNodo, stato: Stato) -> String {
 		return "[" + akumuliTekstojn(de: prononco, stato: stato) + "]"
 	}
 }

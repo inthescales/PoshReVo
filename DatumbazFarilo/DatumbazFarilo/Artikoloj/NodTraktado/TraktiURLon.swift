@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(URLon url: ArtikolNodo, referenco: String?, stato: TraktadoStato) -> String {
+	static func trakti(URLon url: ArtikolNodo, referenco: String?, stato: Stato) -> String {
 		let filTeksto = akumuliTekstojn(de: url, stato: stato)
 		
 		if let referenco = referenco {

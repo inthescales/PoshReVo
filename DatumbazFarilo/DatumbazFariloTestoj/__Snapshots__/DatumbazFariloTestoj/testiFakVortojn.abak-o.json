@@ -1,0 +1,24 @@
+{
+  "ARKI" : [
+    {
+      "indekso" : "abak",
+      "marko" : "abak.0o",
+      "senco" : 1,
+      "teksto" : "abako"
+    }
+  ],
+  "MAT" : [
+    {
+      "indekso" : "abak",
+      "marko" : "abak.0o",
+      "senco" : 2,
+      "teksto" : "abako"
+    },
+    {
+      "indekso" : "abak",
+      "marko" : "abak.0o",
+      "senco" : 3,
+      "teksto" : "abako"
+    }
+  ]
+}

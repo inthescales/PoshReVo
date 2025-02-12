@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func traktiTildon(stato: TraktadoStato, litero: String?, variajho: String?) -> String {
+	static func traktiTildon(stato: Stato, litero: String?, variajho: String?) -> String {
 		var teksto = ""
 		if case .ekz = stato.cheno.last {
 			teksto += "<b>"

@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(gramatikon gramatiko: ArtikolNodo, stato: TraktadoStato) -> String {
+	static func trakti(gramatikon gramatiko: ArtikolNodo, stato: Stato) -> String {
 		let filTeksto = akumuliTekstojn(de: gramatiko, stato: stato)
 		return "(\(filTeksto))\n"
 	}

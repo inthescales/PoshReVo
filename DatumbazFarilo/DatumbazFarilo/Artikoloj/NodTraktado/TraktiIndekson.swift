@@ -10,7 +10,7 @@ extension ArboAnalizilo {
 		let tradukTeksto: String
 	}
 	
-	static func trakti(indekson indekso: ArtikolNodo, stato: TraktadoStato) -> IndeksRezulto {
+	static func trakti(indekson indekso: ArtikolNodo, stato: Stato) -> IndeksRezulto {
 		var teksto = ""
 		var tildTeksto = ""
 		var serchTeksto: String?

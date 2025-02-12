@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: TraktadoStato) -> String {
+	static func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: Stato) -> String {
 		var teksto = ""
 		var indeksajho: IndeksRezulto?
 		
