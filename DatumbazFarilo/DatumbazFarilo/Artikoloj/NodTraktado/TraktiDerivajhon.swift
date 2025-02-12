@@ -28,9 +28,21 @@ extension ArboAnalizilo {
 			case .gra:
 				teksto += trakti(gramatikon: filo, stato: stato)
 			case .kap:
-				_ = trakti(kapon: filo, stato: stato)
+				let kapRezulto = trakti(kapon: filo, stato: stato)
+				if let indekso = stato.artikolIndekso,
+				   let marko = stato.marko {
+					for variajho in kapRezulto.formoj {
+						let serchajho = SerchVorto(
+							teksto: variajho,
+							indekso: indekso,
+							marko: marko
+						)
+						stato.aldoni(serchVorton: serchajho)
+					}
+				}
 			case .mlg:
 				// TODO: Trakti kapajn mallongigojn
+				// Endos aldoni ion al vorto-modelo
 				break
 			case .lstref(let lst):
 				teksto += trakti(listReferencon: filo, listo: lst, stato: stato)

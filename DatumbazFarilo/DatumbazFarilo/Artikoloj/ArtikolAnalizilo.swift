@@ -5,14 +5,18 @@ enum ArtikolAnalizilo {
 	struct Rezulto {
 		var artikolo: Artikolo
 		var serchTradukoj: [String: [SerchTraduko]]
+		var serchVortoj: [SerchVorto]
 		var markSencoj: [String: Int]
 		
-		init(artikolo: Artikolo,
-			 serchTradukoj: [String: [SerchTraduko]],
-			 markSencoj: [String: Int]
+		init(
+			artikolo: Artikolo,
+			serchTradukoj: [String: [SerchTraduko]],
+			serchVortoj: [SerchVorto],
+			markSencoj: [String: Int]
 		) {
 			self.artikolo = artikolo
 			self.serchTradukoj = serchTradukoj
+			self.serchVortoj = serchVortoj
 			self.markSencoj = markSencoj
 		}
 	}
@@ -79,6 +83,7 @@ enum ArtikolAnalizilo {
 		return Rezulto(
 			artikolo: artikolo,
 			serchTradukoj: rezulto.serchTradukoj,
+			serchVortoj: rezulto.serchVortoj,
 			markSencoj: rezulto.markSencoj
 		)
 	}

@@ -1,6 +1,6 @@
 /// Traduko tiel kiel ĝi aperos en serĉrezultoj.
 struct SerchTraduko: Codable {
-	/// Teksto nacilingva kiun serĉanto devas tajpi (eble malsamas ol supraj nomoj)
+	/// Teksto nacilingva kiun serĉanto devas tajpi
 	let serchTeksto: String
 	
 	/// Ĉefa teksto nacilingva, kiu aperos en serĉrezultoj

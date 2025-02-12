@@ -1,9 +1,22 @@
 extension ArboAnalizilo {
-	static func trakti(kapon kapo: ArtikolNodo, stato: TraktadoStato) -> (nomo: String, tildo: String) {
+	struct KapRezulto {
+		/// Tuta teksto, kiel ĝi aperu en artikolo
+		let teksto: String
+		
+		/// Teksto kun tildoj, kiel ĝi aperu en artikol-tradukoj
+		let tildTeksto: String
+		
+		/// Ĉiuj variaĵoj de la kapvorto, el kiuj ĉiuj estu serĉeblaj
+		let formoj: [String]
+	}
+	
+	static func trakti(kapon kapo: ArtikolNodo, stato: TraktadoStato) -> KapRezulto {
+		var teksto = ""
+		var tildTeksto = ""
+		var formoj: [String] = []
+		
 		switch stato.cheno.last {
 		case .art:
-			var teksto = ""
-			var tildTeksto = ""
 			traktiFilojn(de: kapo, stato: stato) { filo in
 				switch filo.tipo {
 				case .fnt:
@@ -17,6 +30,7 @@ extension ArboAnalizilo {
 					let filTeksto = trakti(radikon: filo, variajho: vari, stato: stato)
 					teksto += filTeksto
 					tildTeksto += "~"
+					formoj.append(filTeksto)
 				case .teksto(let filTeksto):
 					teksto += filTeksto.prepari().kunpremi()
 					tildTeksto += filTeksto.prepari().kunpremi()
@@ -26,15 +40,21 @@ extension ArboAnalizilo {
 				case .vari:
 					let filRezulto = trakti(variajhon: filo, stato: stato)
 					teksto += filRezulto.nomo
+					formoj.append(filRezulto.nomo)
 				default:
 					assert(false, "Neatendita filo")
 				}
 			}
-			stato.artikolFabriko.titolo = teksto.tondi()
-			return (teksto, tildTeksto)
+			
+			teksto = teksto.tondi()
+			stato.artikolFabriko.titolo = teksto
+			
+			return KapRezulto(
+				teksto: teksto,
+				tildTeksto: tildTeksto,
+				formoj: teksto.split(separator: ", ").map { String($0) }
+			)
 		case .drv:
-			var teksto = ""
-			var tildTeksto = ""
 			traktiFilojn(de: kapo, stato: stato) { filo in
 				switch filo.tipo {
 				case .fnt:
@@ -58,10 +78,12 @@ extension ArboAnalizilo {
 			stato.vortoFabriko?.titolo = teksto.tondi()
 			stato.derivajhNomo = teksto.tondi()
 			stato.derivajhTildo = tildTeksto.tondi()
-			return (teksto, tildTeksto)
+			return KapRezulto(
+				teksto: teksto,
+				tildTeksto: tildTeksto,
+				formoj: teksto.split(separator: ", ").map { String($0) }
+			)
 		case .vari:
-			var teksto = ""
-			var tildTeksto = ""
 			traktiFilojn(de: kapo, stato: stato) { filo in
 				switch filo.tipo {
 				case .fnt:
@@ -85,12 +107,18 @@ extension ArboAnalizilo {
 					assert(false, "Neatendita filo")
 				}
 			}
-			// La kap-teksto tondiĝis, do ni aldonu kroman spacon
-			//stato.vortoFabriko?.titolo? += " " + teksto.tondi()
-			return (teksto.tondi(), tildTeksto.tondi())
+			
+			teksto = teksto.tondi()
+			tildTeksto = tildTeksto.tondi()
+			
+			return KapRezulto(
+				teksto: teksto,
+				tildTeksto: tildTeksto,
+				formoj: teksto.split(separator: ", ").map { String($0) }
+			)
 		default:
 			assert(false, "Neatendita cheno")
-			return ("", "")
+			return KapRezulto(teksto: "", tildTeksto: "", formoj: [])
 		}
 	}
 }

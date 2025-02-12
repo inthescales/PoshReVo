@@ -1,0 +1,22 @@
+[
+  {
+    "indekso" : "om",
+    "marko" : "om.0o",
+    "teksto" : "Omo"
+  },
+  {
+    "indekso" : "om",
+    "marko" : "om.o0o",
+    "teksto" : "omo"
+  },
+  {
+    "indekso" : "om",
+    "marko" : "om.o0metro",
+    "teksto" : "omometro"
+  },
+  {
+    "indekso" : "om",
+    "marko" : "om.o0metro",
+    "teksto" : "ommetro"
+  }
+]

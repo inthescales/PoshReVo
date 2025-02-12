@@ -9,6 +9,9 @@ enum ArboAnalizilo {
 		/// Tradukoj kiuj estos serĉeblaj
 		let serchTradukoj: [String: [SerchTraduko]]
 		
+		/// Esperantaj vortoj kiuj estos serĉeblaj
+		let serchVortoj: [SerchVorto]
+		
 		/// Markoj kaj siaj kunligitaj sencoj
 		let markSencoj: [String: Int]
 	}
@@ -47,6 +50,7 @@ enum ArboAnalizilo {
 		return Rezulto(
 			artikolo: artikolo,
 			serchTradukoj: stato.serchTradukoj,
+			serchVortoj: stato.serchVortoj,
 			markSencoj: stato.markSencoj
 		)
 	}

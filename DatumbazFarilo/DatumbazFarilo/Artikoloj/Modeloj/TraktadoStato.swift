@@ -99,6 +99,9 @@ class TraktadoStato {
 	/// Ĉiuj jam-konstruitaj serĉtradukoj
 	var serchTradukoj: [String: [SerchTraduko]] = [:]
 	
+	/// Ĉiujn sercheblaj esperantaj vortoj aŭ derivaĵoj
+	var serchVortoj: [SerchVorto] = []
+	
 	/// Aldonas artikolan tradukoj
 	func aldoni(artikolTradukon traduko: ArtikolTraduko, lingvo: String) {
 		if artikolFabriko.tradukoj[lingvo] == nil { artikolFabriko.tradukoj[lingvo] = [] }
@@ -109,5 +112,9 @@ class TraktadoStato {
 	func aldoni(serchTradukon traduko: SerchTraduko, lingvo: String) {
 		if serchTradukoj[lingvo] == nil { serchTradukoj[lingvo] = [] }
 		serchTradukoj[lingvo]?.append(traduko)
+	}
+	
+	func aldoni(serchVorton vorto: SerchVorto) {
+		serchVortoj.append(vorto)
 	}
 }

@@ -9,10 +9,12 @@ enum Artikolaro {
 	struct Rezulto {
 		var artikoloj: [Artikolo]
 		var tradukoj: [String: [SerchTraduko]]
+		var serchVortoj: [SerchVorto]
 		
-		init(artikoloj: [Artikolo], tradukoj: [String: [SerchTraduko]]) {
+		init(artikoloj: [Artikolo], tradukoj: [String: [SerchTraduko]], serchVortoj: [SerchVorto]) {
 			self.artikoloj = artikoloj
 			self.tradukoj = tradukoj
+			self.serchVortoj = serchVortoj
 		}
 	}
 	
@@ -45,6 +47,7 @@ enum Artikolaro {
 
 		var artikoloj: [Artikolo] = []
 		var tradukoj: [String: [SerchTraduko]] = [:]
+		var serchVortoj: [SerchVorto] = []
 		var markSencoj: [String: Int] = [:]
 
 		for indiko in legotaj {
@@ -67,6 +70,8 @@ enum Artikolaro {
 				tradukoj[lingvo]? += novajTradukoj
 			}
 			
+			serchVortoj += rezulto.serchVortoj
+			
 			rezulto.markSencoj.forEach { marko, senco in
 				markSencoj[marko] = senco
 			}
@@ -80,7 +85,8 @@ enum Artikolaro {
 		
 		return Rezulto(
 			artikoloj: artikoloj,
-			tradukoj: tradukoj
+			tradukoj: tradukoj,
+			serchVortoj: serchVortoj
 		)
 	}
 	

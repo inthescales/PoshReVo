@@ -1,0 +1,47 @@
+[
+  {
+    "indekso" : "not",
+    "marko" : "not.0i",
+    "teksto" : "noti"
+  },
+  {
+    "indekso" : "not",
+    "marko" : "not.0o",
+    "teksto" : "noto "
+  },
+  {
+    "indekso" : "not",
+    "marko" : "not.0oj",
+    "teksto" : "notoj"
+  },
+  {
+    "indekso" : "not",
+    "marko" : "not.pri0o",
+    "teksto" : "prinoto"
+  },
+  {
+    "indekso" : "not",
+    "marko" : "not.bank0o",
+    "teksto" : "banknoto"
+  },
+  {
+    "indekso" : "not",
+    "marko" : "not.diplomatia0o",
+    "teksto" : "diplomatia noto"
+  },
+  {
+    "indekso" : "not",
+    "marko" : "not.kurz0o",
+    "teksto" : " kurznoto "
+  },
+  {
+    "indekso" : "not",
+    "marko" : "not.pied0i",
+    "teksto" : "piednoti"
+  },
+  {
+    "indekso" : "not",
+    "marko" : "not.pied0o",
+    "teksto" : "piednoto  "
+  }
+]

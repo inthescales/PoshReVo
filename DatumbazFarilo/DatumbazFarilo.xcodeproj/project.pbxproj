@@ -18,6 +18,15 @@
 		0008AF712D5CFC08009C3803 /* testiSerchTradukojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF6A2D5CFC08009C3803 /* testiSerchTradukojn.Om-o.json */; };
 		0008AF732D5CFDDD009C3803 /* ArtikolAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AF722D5CFDDD009C3803 /* ArtikolAnalizilo.swift */; };
 		0008AF742D5CFDE0009C3803 /* ArtikolAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AF722D5CFDDD009C3803 /* ArtikolAnalizilo.swift */; };
+		0008AF762D5D1249009C3803 /* SerchVorto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AF752D5D1249009C3803 /* SerchVorto.swift */; };
+		0008AF772D5D1249009C3803 /* SerchVorto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AF752D5D1249009C3803 /* SerchVorto.swift */; };
+		0008AF7F2D5D18CB009C3803 /* testiSerchVortojn.abak-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF782D5D18CB009C3803 /* testiSerchVortojn.abak-o.json */; };
+		0008AF802D5D18CB009C3803 /* testiSerchVortojn.per.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF792D5D18CB009C3803 /* testiSerchVortojn.per.json */; };
+		0008AF812D5D18CB009C3803 /* testiSerchVortojn.ni.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF7A2D5D18CB009C3803 /* testiSerchVortojn.ni.json */; };
+		0008AF822D5D18CB009C3803 /* testiSerchVortojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF7B2D5D18CB009C3803 /* testiSerchVortojn.Om-o.json */; };
+		0008AF832D5D18CB009C3803 /* testiSerchVortojn.grav-a.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF7C2D5D18CB009C3803 /* testiSerchVortojn.grav-a.json */; };
+		0008AF842D5D18CB009C3803 /* testiSerchVortojn.not-i.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF7D2D5D18CB009C3803 /* testiSerchVortojn.not-i.json */; };
+		0008AF852D5D18CB009C3803 /* testiSerchVortojn.majoritat-o-maĵori-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF7E2D5D18CB009C3803 /* testiSerchVortojn.majoritat-o-maĵori-o.json */; };
 		0049F32E2D2DBDB7002ABBFE /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */; };
 		0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */; };
 		0049F3432D2F5317002ABBFE /* ReVoModelojOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */; };
@@ -222,6 +231,14 @@
 		0008AF692D5CFC08009C3803 /* testiSerchTradukojn.grav-a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.grav-a.json"; sourceTree = "<group>"; };
 		0008AF6A2D5CFC08009C3803 /* testiSerchTradukojn.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.Om-o.json"; sourceTree = "<group>"; };
 		0008AF722D5CFDDD009C3803 /* ArtikolAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolAnalizilo.swift; sourceTree = "<group>"; };
+		0008AF752D5D1249009C3803 /* SerchVorto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchVorto.swift; sourceTree = "<group>"; };
+		0008AF782D5D18CB009C3803 /* testiSerchVortojn.abak-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.abak-o.json"; sourceTree = "<group>"; };
+		0008AF792D5D18CB009C3803 /* testiSerchVortojn.per.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiSerchVortojn.per.json; sourceTree = "<group>"; };
+		0008AF7A2D5D18CB009C3803 /* testiSerchVortojn.ni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiSerchVortojn.ni.json; sourceTree = "<group>"; };
+		0008AF7B2D5D18CB009C3803 /* testiSerchVortojn.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.Om-o.json"; sourceTree = "<group>"; };
+		0008AF7C2D5D18CB009C3803 /* testiSerchVortojn.grav-a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.grav-a.json"; sourceTree = "<group>"; };
+		0008AF7D2D5D18CB009C3803 /* testiSerchVortojn.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.not-i.json"; sourceTree = "<group>"; };
+		0008AF7E2D5D18CB009C3803 /* testiSerchVortojn.majoritat-o-maĵori-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.majoritat-o-maĵori-o.json"; sourceTree = "<group>"; };
 		00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_DatumbazFariloTestoj.framework; path = "../../../Library/Developer/Xcode/DerivedData/PoshReVo-eifliqqelwuzehalckrzildacjdd/Build/Products/Debug-iphoneos/Pods_DatumbazFariloTestoj.framework"; sourceTree = "<group>"; };
 		0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteroAnalizilo.swift; sourceTree = "<group>"; };
 		0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoAnalizilo.swift; sourceTree = "<group>"; };
@@ -387,6 +404,7 @@
 				0049F3572D31F946002ABBFE /* ArtikolNodo.swift */,
 				0049F3A92D52A4B7002ABBFE /* ArtikolTraduko.swift */,
 				0049F3AB2D52A561002ABBFE /* SerchTraduko.swift */,
+				0008AF752D5D1249009C3803 /* SerchVorto.swift */,
 				0049F35E2D331487002ABBFE /* TraktadoStato.swift */,
 			);
 			path = Modeloj;
@@ -555,6 +573,13 @@
 				0008AF652D5CFC07009C3803 /* testiSerchTradukojn.not-i.json */,
 				0008AF6A2D5CFC08009C3803 /* testiSerchTradukojn.Om-o.json */,
 				0008AF672D5CFC08009C3803 /* testiSerchTradukojn.per.json */,
+				0008AF782D5D18CB009C3803 /* testiSerchVortojn.abak-o.json */,
+				0008AF7C2D5D18CB009C3803 /* testiSerchVortojn.grav-a.json */,
+				0008AF7E2D5D18CB009C3803 /* testiSerchVortojn.majoritat-o-maĵori-o.json */,
+				0008AF7A2D5D18CB009C3803 /* testiSerchVortojn.ni.json */,
+				0008AF7D2D5D18CB009C3803 /* testiSerchVortojn.not-i.json */,
+				0008AF7B2D5D18CB009C3803 /* testiSerchVortojn.Om-o.json */,
+				0008AF792D5D18CB009C3803 /* testiSerchVortojn.per.json */,
 			);
 			path = DatumbazFariloTestoj;
 			sourceTree = "<group>";
@@ -677,9 +702,13 @@
 				00F223502D5AA68E00D049A1 /* testiArtikolon.Om-o.json in Resources */,
 				0008AF632D5C1A02009C3803 /* testiArtikolon.grav-a.json in Resources */,
 				0008AF712D5CFC08009C3803 /* testiSerchTradukojn.Om-o.json in Resources */,
+				0008AF7F2D5D18CB009C3803 /* testiSerchVortojn.abak-o.json in Resources */,
 				00F223442D5AA5E500D049A1 /* majoritat.xml in Resources */,
 				00F223462D5AA5E500D049A1 /* om.xml in Resources */,
+				0008AF832D5D18CB009C3803 /* testiSerchVortojn.grav-a.json in Resources */,
+				0008AF852D5D18CB009C3803 /* testiSerchVortojn.majoritat-o-maĵori-o.json in Resources */,
 				00F2234F2D5AA68E00D049A1 /* testiArtikolon.per.json in Resources */,
+				0008AF842D5D18CB009C3803 /* testiSerchVortojn.not-i.json in Resources */,
 				0008AF6B2D5CFC08009C3803 /* testiSerchTradukojn.ni.json in Resources */,
 				0008AF612D5C19E9009C3803 /* grav.xml in Resources */,
 				0008AF6D2D5CFC08009C3803 /* testiSerchTradukojn.abak-o.json in Resources */,
@@ -688,9 +717,12 @@
 				0008AF6C2D5CFC08009C3803 /* testiSerchTradukojn.not-i.json in Resources */,
 				00F2234E2D5AA68E00D049A1 /* testiArtikolon.majoritat-o-maĵori-o.json in Resources */,
 				00F223452D5AA5E500D049A1 /* per.xml in Resources */,
+				0008AF812D5D18CB009C3803 /* testiSerchVortojn.ni.json in Resources */,
 				0049F4292D592B99002ABBFE /* not.xml in Resources */,
 				00F223472D5AA5E500D049A1 /* abak.xml in Resources */,
+				0008AF822D5D18CB009C3803 /* testiSerchVortojn.Om-o.json in Resources */,
 				00E6044C2D5A794300757EE6 /* testiArtikolon.not-i.json in Resources */,
+				0008AF802D5D18CB009C3803 /* testiSerchVortojn.per.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +784,7 @@
 				0049F4752D596A11002ABBFE /* String+Aldonoj.swift in Sources */,
 				0049F4762D596A11002ABBFE /* Interpreti.swift in Sources */,
 				0049F44C2D596A08002ABBFE /* TraktiPrononcon.swift in Sources */,
+				0008AF772D5D1249009C3803 /* SerchVorto.swift in Sources */,
 				0049F44D2D596A08002ABBFE /* TraktiReferencGrupon.swift in Sources */,
 				0049F44E2D596A08002ABBFE /* TraktiURLon.swift in Sources */,
 				0049F44F2D596A08002ABBFE /* TraktiMisstilan.swift in Sources */,
@@ -891,6 +924,7 @@
 				0049F3C32D5431CF002ABBFE /* TraktiKlarigon.swift in Sources */,
 				0049F3F82D552BA8002ABBFE /* TraktiDifinon.swift in Sources */,
 				0049F3CE2D5432FF002ABBFE /* TraktiKomunlingvan.swift in Sources */,
+				0008AF762D5D1249009C3803 /* SerchVorto.swift in Sources */,
 				0049F3FC2D552BCE002ABBFE /* TraktiSencon.swift in Sources */,
 				0049F3E02D552AB9002ABBFE /* TraktiListReferencon.swift in Sources */,
 			);
