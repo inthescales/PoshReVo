@@ -24,7 +24,8 @@ enum Artikolaro {
 			stiloDict: grundo.stiloDict,
 			signoj: grundo.signoj,
 			mallongigoj: grundo.mallongigojVerkaj,
-			urloj: grundo.urloj)
+			urloj: grundo.urloj
+		)
 	}
 	
 	/// Legas ĉiujn artikolojn el certa indikilo kaj liveras ĉiujn artikolo-modelojn kaj serĉ-tradukojn
@@ -47,31 +48,16 @@ enum Artikolaro {
 		var markSencoj: [String: Int] = [:]
 
 		for indiko in legotaj {
-			guard let arbo = ArtikolKonvertilo.konverti(
-				el: indikilo + indiko,
+			let rezulto = ArtikolAnalizilo.legi(
+				el: indikilo + "/" + indiko,
+				lingvoDict: lingvoDict,
+				stiloDict: stiloDict,
 				signoj: signoj,
 				mallongigoj: mallongigoj,
 				urloj: urloj
-			) else {
-				print("NE sukcesis konverti artikolon '\(indiko)'")
-				continue
-			}
-			
-			let dosierNomo = String(indiko.split(separator: "/").last!)
-			let indekso = dosierNomo.prefikso(ghis: dosierNomo.count - 4)
-			
-			guard let rezulto = ArboAnalizilo.analizi(
-				arbon: arbo,
-				indekso: indekso,
-				lingvoj: lingvoDict,
-				stiloj: stiloDict
-			) else {
-				print("NE sukcesis analizi artikolon '\(indiko)'")
-				continue
-			}
+			)
 			
 			artikoloj.append(rezulto.artikolo)
-			print("Analizis '\(rezulto.artikolo.titolo)'")
 			
 			for (lingvo, novajTradukoj) in rezulto.serchTradukoj {
 				if tradukoj[lingvo] == nil {
@@ -89,7 +75,7 @@ enum Artikolaro {
 		// Posttrakti artikolojn
 
 		artikoloj = artikoloj.map { artikolo in
-			return postTrakti(artikolon: artikolo, markSencoj: markSencoj)
+			return Posttraktado.postTrakti(artikolon: artikolo, markSencoj: markSencoj)
 		}
 		
 		return Rezulto(

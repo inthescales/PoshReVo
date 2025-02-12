@@ -42,17 +42,17 @@ final class TrieFarilo {
 			for traduko in tradukoj {
 				// Kiel dict: indekso, senco, teksto, marko
 				
-				let videbla = traduko.videblaTeksto
-				let teksto = traduko.teksto
-				let nomo = traduko.nomo
+				let serchTeksto = traduko.serchTeksto
+				let videblaTeksto = traduko.videblaTeksto
+				let esperantaNomo = traduko.esperantaNomo
 				let indekso = traduko.indekso
 				let marko = traduko.marko
 				let senco = traduko.senco
 				
 				// Trovi klavojn
 				var klavoj = [String]()
-				klavoj.append(teksto)
-				if videbla != teksto { klavoj.append(videbla) }
+				klavoj.append(serchTeksto)
+				if videblaTeksto != serchTeksto { klavoj.append(videblaTeksto) }
 				
 				for klavo in klavoj {
 					for nunLitero in klavo.lowercased() {
@@ -85,9 +85,9 @@ final class TrieFarilo {
 					
 					// if indekso != nil {
 						let novaDestino = NSEntityDescription.insertNewObject(forEntityName: "Destino", into: konteksto)
-						novaDestino.setValue(videbla, forKey: "teksto")
+						novaDestino.setValue(videblaTeksto, forKey: "teksto")
 						novaDestino.setValue(indekso, forKey: "indekso")
-						novaDestino.setValue(nomo, forKey: "nomo")
+						novaDestino.setValue(esperantaNomo, forKey: "nomo")
 						novaDestino.setValue(marko, forKey: "marko")
 						if let senco = senco {
 							novaDestino.setValue(String(senco), forKey: "senco")

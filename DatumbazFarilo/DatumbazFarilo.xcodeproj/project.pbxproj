@@ -16,6 +16,8 @@
 		0008AF6F2D5CFC08009C3803 /* testiSerchTradukojn.majoritat-o-maĵori-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF682D5CFC08009C3803 /* testiSerchTradukojn.majoritat-o-maĵori-o.json */; };
 		0008AF702D5CFC08009C3803 /* testiSerchTradukojn.grav-a.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF692D5CFC08009C3803 /* testiSerchTradukojn.grav-a.json */; };
 		0008AF712D5CFC08009C3803 /* testiSerchTradukojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF6A2D5CFC08009C3803 /* testiSerchTradukojn.Om-o.json */; };
+		0008AF732D5CFDDD009C3803 /* ArtikolAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AF722D5CFDDD009C3803 /* ArtikolAnalizilo.swift */; };
+		0008AF742D5CFDE0009C3803 /* ArtikolAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AF722D5CFDDD009C3803 /* ArtikolAnalizilo.swift */; };
 		0049F32E2D2DBDB7002ABBFE /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */; };
 		0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */; };
 		0049F3432D2F5317002ABBFE /* ReVoModelojOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */; };
@@ -219,6 +221,7 @@
 		0008AF682D5CFC08009C3803 /* testiSerchTradukojn.majoritat-o-maĵori-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.majoritat-o-maĵori-o.json"; sourceTree = "<group>"; };
 		0008AF692D5CFC08009C3803 /* testiSerchTradukojn.grav-a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.grav-a.json"; sourceTree = "<group>"; };
 		0008AF6A2D5CFC08009C3803 /* testiSerchTradukojn.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.Om-o.json"; sourceTree = "<group>"; };
+		0008AF722D5CFDDD009C3803 /* ArtikolAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolAnalizilo.swift; sourceTree = "<group>"; };
 		00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_DatumbazFariloTestoj.framework; path = "../../../Library/Developer/Xcode/DerivedData/PoshReVo-eifliqqelwuzehalckrzildacjdd/Build/Products/Debug-iphoneos/Pods_DatumbazFariloTestoj.framework"; sourceTree = "<group>"; };
 		0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteroAnalizilo.swift; sourceTree = "<group>"; };
 		0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoAnalizilo.swift; sourceTree = "<group>"; };
@@ -366,6 +369,7 @@
 				0049F3A42D52A3D3002ABBFE /* Modeloj */,
 				0049F3BF2D543147002ABBFE /* NodTraktado */,
 				0049F3B62D52A9AB002ABBFE /* Helpiloj */,
+				0008AF722D5CFDDD009C3803 /* ArtikolAnalizilo.swift */,
 				0049F3BD2D53EC2A002ABBFE /* Artikolaro.swift */,
 				0049F3A02D43C36F002ABBFE /* Antautraktado.swift */,
 				0049F3542D304BF0002ABBFE /* ArtikolKonvertilo.swift */,
@@ -790,6 +794,7 @@
 				00F2233C2D5AA2F600D049A1 /* FakoAnalizilo.swift in Sources */,
 				00F2233D2D5AA2F600D049A1 /* DTDAnalizilo.swift in Sources */,
 				0049F46B2D596A08002ABBFE /* TraktiAltigitan.swift in Sources */,
+				0008AF742D5CFDE0009C3803 /* ArtikolAnalizilo.swift in Sources */,
 				0049F46C2D596A08002ABBFE /* TraktiSencReferencon.swift in Sources */,
 				0049F46D2D596A08002ABBFE /* TraktiListReferencon.swift in Sources */,
 				0049F46E2D596A08002ABBFE /* TraktiIndicon.swift in Sources */,
@@ -864,6 +869,7 @@
 				0049F3A32D5154FB002ABBFE /* DTDAnalizilo.swift in Sources */,
 				0049F3B82D52A9D2002ABBFE /* Interpreti.swift in Sources */,
 				0049F40A2D552C5A002ABBFE /* TraktiRadikon.swift in Sources */,
+				0008AF732D5CFDDD009C3803 /* ArtikolAnalizilo.swift in Sources */,
 				0049F4062D552C37002ABBFE /* TraktiDerivajhon.swift in Sources */,
 				0049F3552D304BF0002ABBFE /* ArtikolKonvertilo.swift in Sources */,
 				0049F3BC2D53E27A002ABBFE /* SignoAnalizilo.swift in Sources */,

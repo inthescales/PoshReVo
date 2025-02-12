@@ -14,22 +14,37 @@ final class DatumbazFariloTestoj: XCTestCase {
 		return try! JSONDecoder().decode(Grundo.self, from: datumoj)
 	}()
 	
-	lazy var rezulto = Artikolaro.legi(
-		el: pakajho.resourcePath! + "/",
-		   grundo: grundo
-	   )
+	lazy var rezultoj = {
+		let pakajhIndiko = pakajho.resourcePath! + "/"
+		let dosierNomoj = try! FileManager.default.contentsOfDirectory(atPath: pakajhIndiko)
+			.filter { $0.hasSuffix(".xml") }
+		
+		var rezultoj: [ArtikolAnalizilo.Rezulto] = []
+		for dosierNomo in dosierNomoj {
+			let novaRezulto = ArtikolAnalizilo.legi(
+				el: pakajhIndiko + "/" + dosierNomo,
+				grundo: grundo,
+				postTrakti: true
+			)
+			
+			rezultoj.append(novaRezulto)
+		}
+		
+		return rezultoj
+	}()
 
 	/// Testi artikol-tekstojn, inkluzive artikolajn tradukojn
     func testiArtikolon() throws {
-		for artikolo in rezulto.artikoloj {
+		for rezulto in rezultoj {
+			let artikolo = rezulto.artikolo
 			assertSnapshot(matching: artikolo, as: .json, named: artikolo.titolo)
 		}
     }
 	
 	/// Testi serch-tradukojn
 	func testiSerchTradukojn() throws {
-		for artikolo in rezulto.artikoloj {
-			assertSnapshot(matching: rezulto.tradukoj, as: .json, named: artikolo.titolo)
+		for rezulto in rezultoj {
+			assertSnapshot(matching: rezulto.serchTradukoj, as: .json, named: rezulto.artikolo.titolo)
 		}
 	}
 }
