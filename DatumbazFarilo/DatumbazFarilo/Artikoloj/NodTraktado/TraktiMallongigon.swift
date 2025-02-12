@@ -48,6 +48,10 @@ extension ArboAnalizilo {
 			}
 		}
 		
+		// TODO: The next stuff
+		// Separate article translation tests, add search translation tests
+		// Continue revising the index/mll/translation code (it could probably be a bit clearer)		
+		
 		var rezulto = ""
 		if linio {
 			rezulto += "\n"

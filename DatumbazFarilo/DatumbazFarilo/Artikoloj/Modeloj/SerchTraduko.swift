@@ -1,5 +1,5 @@
 /// Traduko tiel kiel ĝi aperos en serĉrezultoj.
-struct SerchTraduko {
+struct SerchTraduko: Codable {
 	/// Ĉefa teksto nacilingva (aŭ esperanta), kiu aperos en serĉrezultoj
 	let videblaTeksto: String
 	
