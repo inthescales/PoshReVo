@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0008AF612D5C19E9009C3803 /* grav.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF602D5C19E8009C3803 /* grav.xml */; };
+		0008AF632D5C1A02009C3803 /* testiArtikolon.grav-a.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF622D5C1A02009C3803 /* testiArtikolon.grav-a.json */; };
 		0049F32E2D2DBDB7002ABBFE /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */; };
 		0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */; };
 		0049F3432D2F5317002ABBFE /* ReVoModelojOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */; };
@@ -201,6 +203,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0008AF602D5C19E8009C3803 /* grav.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = grav.xml; sourceTree = "<group>"; };
+		0008AF622D5C1A02009C3803 /* testiArtikolon.grav-a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.grav-a.json"; sourceTree = "<group>"; };
 		00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_DatumbazFariloTestoj.framework; path = "../../../Library/Developer/Xcode/DerivedData/PoshReVo-eifliqqelwuzehalckrzildacjdd/Build/Products/Debug-iphoneos/Pods_DatumbazFariloTestoj.framework"; sourceTree = "<group>"; };
 		0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteroAnalizilo.swift; sourceTree = "<group>"; };
 		0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoAnalizilo.swift; sourceTree = "<group>"; };
@@ -455,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				00F223422D5AA5E500D049A1 /* abak.xml */,
+				0008AF602D5C19E8009C3803 /* grav.xml */,
 				00F2233F2D5AA5E500D049A1 /* majoritat.xml */,
 				00F2233E2D5AA5E500D049A1 /* ni.xml */,
 				0049F4282D592B99002ABBFE /* not.xml */,
@@ -519,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				00F223482D5AA68D00D049A1 /* testiArtikolon.abak-o.json */,
+				0008AF622D5C1A02009C3803 /* testiArtikolon.grav-a.json */,
 				00F223492D5AA68D00D049A1 /* testiArtikolon.majoritat-o-maĵori-o.json */,
 				00F2234C2D5AA68E00D049A1 /* testiArtikolon.ni.json */,
 				00E6044B2D5A794300757EE6 /* testiArtikolon.not-i.json */,
@@ -642,9 +648,11 @@
 				00F223432D5AA5E500D049A1 /* ni.xml in Resources */,
 				00F223512D5AA68E00D049A1 /* testiArtikolon.ni.json in Resources */,
 				00F223502D5AA68E00D049A1 /* testiArtikolon.Om-o.json in Resources */,
+				0008AF632D5C1A02009C3803 /* testiArtikolon.grav-a.json in Resources */,
 				00F223442D5AA5E500D049A1 /* majoritat.xml in Resources */,
 				00F223462D5AA5E500D049A1 /* om.xml in Resources */,
 				00F2234F2D5AA68E00D049A1 /* testiArtikolon.per.json in Resources */,
+				0008AF612D5C19E9009C3803 /* grav.xml in Resources */,
 				00F223352D5AA27E00D049A1 /* grundo.json in Resources */,
 				00F2234E2D5AA68E00D049A1 /* testiArtikolon.majoritat-o-maĵori-o.json in Resources */,
 				00F223452D5AA5E500D049A1 /* per.xml in Resources */,

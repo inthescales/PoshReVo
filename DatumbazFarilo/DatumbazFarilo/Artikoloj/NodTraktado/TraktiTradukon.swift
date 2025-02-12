@@ -9,7 +9,8 @@ extension ArboAnalizilo {
 			return
 		}
 		
-		var serchNomo: String?
+		var serchNomo: String? // Vorto tajpenda en serĉo
+		var mallongaNomo: String? // Mallonga formo de serĉteksto
 		var teksto = ""
 		
 		traktiFilojn(de: traduko, stato: stato) { filo in
@@ -20,12 +21,14 @@ extension ArboAnalizilo {
 			case .ind:
 				let rezulto = trakti(indekson: filo, stato: stato)
 				filTeksto = rezulto.teksto
-				serchNomo = rezulto.serchTeksto
+				serchNomo = rezulto.serchTeksto ?? rezulto.teksto
 			case .klr(_):
 				filTeksto = trakti(klarigon: filo, stato: stato)
+				serchNomo = teksto
 			case .mll(let tipo):
-				filTeksto = trakti(mallongigon: filo, stato: stato)
-				serchNomo = ArtikolTeksto.mllTeksto(baza: filTeksto, tipo: tipo)
+				filTeksto = trakti(mallongigon: filo, stato: stato).teksto
+				mallongaNomo = ArtikolTeksto.mllTeksto(baza: filTeksto, tipo: tipo)
+				serchNomo = filTeksto
 			case .pr:
 				filTeksto = trakti(prononcon: filo, stato: stato)
 			case .teksto(let tekstEnhavoj):
@@ -45,7 +48,7 @@ extension ArboAnalizilo {
 		   let indekso = stato.artikolIndekso {
 			
 			let artikolTraduko = ArtikolTraduko(
-				nomo: transpasIndekso?.tildTeksto ?? tildo,
+				nomo: transpasIndekso?.tradukTeksto ?? transpasIndekso?.tildTeksto ?? tildo,
 				teksto: teksto,
 				marko: marko,
 				senco: stato.nunaSenco,
@@ -55,9 +58,9 @@ extension ArboAnalizilo {
 			stato.aldoni(artikolTradukon: artikolTraduko, lingvo: lingvo)
 			
 			let serchTraduko = SerchTraduko(
-				videblaTeksto: serchNomo ?? teksto,
-				nomo: transpasIndekso?.teksto ?? nomo,
-				teksto: teksto,
+				videblaTeksto: mallongaNomo ?? teksto,
+				nomo: transpasIndekso?.serchTeksto ?? nomo,
+				teksto: serchNomo ?? teksto,
 				indekso: indekso,
 				marko: marko,
 				senco: stato.nunaSenco

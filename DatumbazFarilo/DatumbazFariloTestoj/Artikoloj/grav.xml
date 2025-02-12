@@ -1,0 +1,1090 @@
+<?xml version="1.0"?>
+<!DOCTYPE vortaro SYSTEM "../dtd/vokoxml.dtd">
+<vortaro>
+<art mrk="$Id: grav.xml,v 1.55 2023/11/11 11:36:36 revo Exp $">
+<kap>
+  <ofc>*</ofc>
+  <rad>grav</rad>/a
+</kap>
+
+<drv mrk="grav.0a">
+  <kap><ofc>*</ofc><tld/>a</kap>
+  <snc mrk="grav.0a.KOMUNE">
+    <dif>
+      Atentinda pro sia granda influo a&ubreve; siaj grandaj sekvoj:
+      <ekz>
+        ili foriris de li, lasinte lin en <tld/>a malsano
+        <fnt>
+          <bib>MT</bib>
+          <lok>II. Kroniko 24:25</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        la plej <tld/>aj pleja&gcirc;uloj
+        <fnt>
+          <bib>MT</bib>
+          <lok>Jeremia 29:1</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <klr>[ili]</klr> staris &ccirc;irka&ubreve;e, akuzante lin pri <klr>[&#x2026;]</klr> <tld/>aj kulpoj
+        <fnt>
+          <bib>NT</bib>
+          <lok>La agoj 25:7</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        la plej <tld/>aj krimuloj
+        <fnt>
+          <bib>Fab2</bib>
+          <lok>Bildo el kastelremparo</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        la homo estis tre ri&ccirc;e vestita, li estis videble <tld/>a persono
+        <fnt>
+          <bib>Fab2</bib>
+          <lok>La ombro</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        li dancas belege, <klr>[&#x2026;]</klr> sed egale <tld/>a demando estas, &ccirc;u li estas
+        sufi&ccirc;e instruita
+        <fnt>
+          <bib>Fab2</bib>
+          <lok>La ombro</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/>a festotago
+        <fnt>
+          <bib>Fab1</bib>
+          <lok>Lekanto</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        estis konfirmado <klr>[&#x2026;]</klr>, tio estis ja <tld/>a tago por ili, el infanoj ili subite
+        fari&gcirc;is plenkreskaj
+        homoj
+        <fnt>
+          <bib>Fab2</bib>
+          <lok>Sonorilo</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        a&ubreve;skultu, &ccirc;ar mi parolos <ind><tld/>a&jcirc;o</ind>n
+        <fnt><bib>MT</bib>, <lok>&Sen; 8:6</lok></fnt>;
+        <trd lng="fr">chose <ind>importante</ind></trd>
+        <trd lng="hu">fontos dolog</trd>
+        <trd lng="id">hal <ind>penting</ind></trd>
+        <trd lng="nl">iets <ind>belangrijks</ind></trd>
+      </ekz>
+      <ekz>
+        ofte de ka&ubreve;zo senenhava venas efiko plej <tld/>a
+        <fnt>
+          <bib>PrV</bib>
+        </fnt>.
+      </ekz>
+    </dif>
+    <refgrp tip="vid">
+      <ref cel="pez.0a.multe0a">peza<sncref/></ref>,
+      <ref cel="serioz.0a">serioza</ref>,
+      <ref cel="signif.0a.FIG">signifa</ref>
+    </refgrp>
+  </snc>
+  <trdgrp lng="be">
+    <trd>&c_v;&c_a;&c_zh;&c_n;&c_y;</trd>,
+    <trd>&c_z;&c_n;&c_a;&c_ch;&c_n;&c_y;</trd>,
+    <trd>&c_ib;&c_s;&c_t;&c_o;&c_t;&c_n;&c_y;</trd>,
+    <trd>&c_s;&c_u;&c_r;'&c_jo;&c_z;&c_n;&c_y;</trd>,
+    <trd>&c_v;&c_a;&c_r;&c_t;&c_y; &c_w;&c_v;&c_a;&c_g;&c_ib;</trd>
+  </trdgrp>
+  <trdgrp lng="bg">
+    <trd>&c_v;&c_a;&c_zh;&c_je;&c_n;</trd>,
+    <trd>&c_s;&c_malmol;&c_shch;&c_je;&c_s;&c_t;&c_v;&c_je;&c_n;</trd>
+  </trdgrp>
+  <trd lng="bo">&t_ga;&t_la;&t_tsheg;&t_cha;&t_drengbu;&t_na;&t_tsheg;&t_pa;&t_naro;&t_tsheg;</trd>
+  <trdgrp lng="cs">
+    <trd>d&uring;le&zcaron;it&yacute;</trd>,
+    <trd>d&uring;le&zcaron;it&yacute;</trd>,
+    <trd>hrub&yacute; (v&aacute;&zcaron;n&yacute;)</trd>,
+    <trd>pov&aacute;&zcaron;liv&yacute;</trd>,
+    <trd>t&ecaron;&zcaron;k&yacute; <klr>(d&uring;le&zcaron;it&yacute;)</klr></trd>,
+    <trd>v&aacute;&zcaron;n&yacute;</trd>,
+    <trd>z&aacute;va&zcaron;n&yacute;</trd>
+  </trdgrp>
+  <trdgrp lng="de">
+    <trd>wichtig</trd>,
+    <trd>bedeutend</trd>
+  </trdgrp>
+  <trd lng="en">important</trd>
+  <trd lng="es">importante</trd>
+  <trdgrp lng="fr">
+    <trd>important</trd>,
+    <trd>grave</trd>,
+    <trd>gros<klr tip="ind"> (important)</klr></trd>,
+    <trd>marquant</trd>
+  </trdgrp>
+  <trdgrp lng="hu">
+    <trd>fontos</trd>,
+    <trd>s&uacute;lyos<klr tip="amb"> (&aacute;tv.)</klr></trd>
+  </trdgrp>
+  <trd lng="id">penting</trd>
+  <trdgrp lng="ja">
+    <trd>&#x91CD;&#x8981;&#x306A;  <pr>&#x3058;&#x3085;&#x3046;&#x3088;&#x3046;&#x306A;</pr></trd>,
+    <trd>&#x91CD;&#x5927;&#x306A;  <pr>&#x3058;&#x3085;&#x3046;&#x3060;&#x3044;&#x306A;</pr></trd>,
+    <trd>&#x6DF1;&#x523B;&#x306A;  <pr>&#x3057;&#x3093;&#x3053;&#x304F;&#x306A;</pr></trd>
+  </trdgrp>
+  <trdgrp lng="nl">
+    <trd>belangrijk</trd>,
+    <trd>gewichtig</trd>,
+    <trd>aanzienlijk</trd>
+  </trdgrp>
+  <trdgrp lng="pl">
+    <trd>wa&zdot;ny</trd>,
+    <trd>istotny</trd>,
+    <trd>znaczny</trd>,
+    <trd>znacz&aogonek;cy</trd>,
+    <trd>donios&lstroke;y</trd>,
+    <trd>serio<klr> (pot.)</klr></trd>
+  </trdgrp>
+  <trdgrp lng="pt">
+    <trd>grave</trd>,
+    <trd>importante</trd>
+  </trdgrp>
+  <trdgrp lng="ru">
+    <trd>&c_v;&c_a;&c_zh;&c_n;&c_y;&c_j;</trd>,
+    <trd>
+    &c_z;&c_n;&c_a;&c_ch;&c_i;&c_t;&c_je;&c_l;&c_mol;&c_n;&c_y;&c_j;
+    </trd>,
+    <trd>&c_s;&c_je;&c_r;&c_mol;&c_jo;&c_z;&c_n;&c_y;&c_j;</trd>,
+    <trd>
+    &c_s;&c_u;&c_shch;&c_je;&c_s;&c_t;&c_v;&c_je;&c_n;&c_n;&c_y;&c_j;
+    </trd>
+  </trdgrp>
+  <trdgrp lng="sk">
+    <trd>d&ocirc;le&zcaron;it&yacute;</trd>,
+    <trd>pov&aacute;&zcaron;liv&yacute;</trd>,
+    <trd>v&aacute;&zcaron;ny</trd>,
+    <trd>z&aacute;va&zcaron;n&yacute;</trd>
+  </trdgrp>
+  <trd lng="sv">viktig</trd>
+  <trd lng="tok">suli</trd>
+  <trdgrp lng="uk">
+    <trd>&c_v;&c_a;&c_zh;&#x43B;&c_i;&c_v;&c_i;&c_j;</trd>,
+    <trd>&c_z;&#x43D;&c_a;&c_ch;&#x43D;&c_i;&c_j;</trd>,
+    <trd>&c_z;&#x43D;&c_a;&c_ch;&c_u;&c_shch;&c_i;&c_j;</trd>,
+    <trd>&c_s;&c_je;&c_r;&c_j;&#x43E;&c_z;&#x43D;&c_i;&c_j;</trd>,
+    <trd>&#x43F;&#x43E;&c_v;&c_a;&c_zh;&#x43D;&c_i;&c_j;</trd>
+  </trdgrp>
+  <trdgrp lng="zh">
+    <trd>&#x91CD; <pr>zh&#xF2;ng</pr></trd>,
+    <trd>&#x6709;&#x5730;&#x4F4D; <pr>y&#x1D2;ud&#xEC;w&#xE8;i</pr></trd>,
+    <trd>&#x91CD;&#x8981; <pr>zh&#x14D;ngy&#xE0;o</pr></trd>,
+    <trd>&#x8981; <pr>y&#xE0;o</pr></trd>
+  </trdgrp>
+</drv>
+
+<drv mrk="grav.0e">
+  <kap><tld/>e</kap>
+  <snc mrk="grav.0e.KOMUNE">
+    <dif>
+      La&ubreve; grava maniero:
+      <ekz>
+        mi estas <tld/>e vundita
+        <fnt>
+          <bib>MT</bib>
+          <lok>II. Kroniko 35:23</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        se mi jam tiel longe ku&scirc;is, ne estas ja <tld/>e ku&scirc;i ankora&ubreve; iom pli
+        <fnt>
+          <bib>Fab2</bib>
+          <lok>Malbela anasido</lok>
+        </fnt>!
+      </ekz>
+      <ekz>
+        por li estis <tld/>e havi la lastan vorton
+        <fnt>
+          <bib>Fab3</bib>
+          <lok>Io</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/>e maloportuna
+        <fnt>
+          <bib>Paroloj</bib>
+          <vrk>Parolado anta&ubreve; la Sesa Kongreso Esperantista en Washington en la 15a de a&ubreve;gusto
+          1910</vrk>
+        </fnt>;
+      </ekz>
+      <ekz>
+        ne <tld/>e, ne <tld/>e, diris <nom>Mefres</nom>
+        <fnt>
+          <bib>Far3</bib>
+          <lok>&Ccirc;apitro XII</lok>
+        </fnt>.
+      </ekz>
+    </dif>
+    <refgrp tip="vid">
+      <ref cel="fort.0e.multe">forte<sncref/></ref>,
+      <ref cel="mult.0e">multe</ref>,
+      <ref cel="tre.0">tre</ref>
+    </refgrp>
+  </snc>
+  <trdgrp lng="be">
+    <trd>&c_v;&c_a;&c_zh;&c_n;&c_a;</trd>,
+    <trd>&c_z;&c_n;&c_a;&c_ch;&c_n;&c_a;</trd>,
+    <trd>&c_ib;&c_s;&c_t;&c_o;&c_t;&c_n;&c_a;</trd>,
+    <trd>&c_s;&c_u;&c_r;'&c_jo;&c_z;&c_n;&c_a;</trd>
+  </trdgrp>
+  <trdgrp lng="cs">
+    <trd>d&uring;le&zcaron;it&ecaron;</trd>,
+    <trd>t&ecaron;&zcaron;ce</trd>,
+    <trd>v&aacute;&zcaron;n&ecaron;</trd>
+  </trdgrp>
+  <trdgrp lng="de">
+    <trd>wichtig</trd>,
+    <trd>bedeutend</trd>,
+    <trd>gravierend</trd>
+  </trdgrp>
+  <trd lng="fr">gravement</trd>
+  <trdgrp lng="hu">
+    <trd>fontosan</trd>,
+    <trd>s&uacute;lyosan</trd>,
+    <trd>komolyan</trd>
+  </trdgrp>
+  <trdgrp lng="ja">
+    <trd>&#x3072;&#x3069;&#x304F;</trd>,
+    <trd>&#x91CD;&#x304F;  <pr>&#x304A;&#x3082;&#x304F;</pr></trd>
+  </trdgrp>
+  <trdgrp lng="pl">
+    <trd>wa&zdot;nie</trd>,
+    <trd>istotnie</trd>,
+    <trd>znacznie</trd>,
+    <trd>znacz&aogonek;co</trd>,
+    <trd>donio&sacute;le</trd>,
+    <trd>serio<klr> (pot.)</klr></trd>
+  </trdgrp>
+  <trd lng="pt">gravemente</trd>
+  <trdgrp lng="ru">
+    <trd>&c_v;&c_a;&c_zh;&c_n;&c_o;</trd>,
+    <trd>&c_z;&c_n;&c_a;&c_ch;&c_i;&c_t;&c_je;&c_l;&c_mol;&c_n;&c_o;
+    </trd>,
+    <trd>&c_s;&c_je;&c_r;&c_mol;&c_jo;&c_z;&c_n;&c_o;</trd>
+  </trdgrp>
+  <trdgrp lng="sk">
+    <trd>d&ocirc;le&zcaron;ito</trd>,
+    <trd>v&aacute;&zcaron;ne</trd>
+  </trdgrp>
+  <trd lng="sv">viktigt</trd>
+  <trdgrp lng="uk">
+    <trd>&c_v;&c_a;&c_zh;&#x43B;&c_i;&c_v;&#x43E;</trd>,
+    <trd>&c_s;&c_je;&c_r;&c_j;&#x43E;&c_z;&#x43D;&#x43E;</trd>,
+    <trd>&#x43F;&#x43E;&c_v;&c_a;&c_zh;&#x43D;&#x43E;</trd>
+  </trdgrp>
+</drv>
+
+<drv mrk="grav.0i">
+  <kap><tld/>i</kap>
+  <gra><vspec>ntr</vspec></gra>
+  <snc mrk="grav.0i.KOMUNE">
+    <dif>
+      Esti <tld/>a:
+      <ekz>
+        <ind>sed tio <mll tip="fin">ne <tld/>as</mll></ind>!
+        <trd lng="de">aber das <mll tip="fin"><ind>macht
+        nichts</ind></mll></trd>
+        <trdgrp lng="fr">
+          <trd>mais <mll tip="fin">&ccedil;a ne fait rien</mll></trd>,
+          <trd>mais <mll tip="fin">peu importe</mll></trd>
+        </trdgrp>
+        <trd lng="hu">de ez <mll tip="fin">
+        <ind>egy&aacute;ltal&aacute;n nem
+        fontos</ind></mll></trd>
+        <trd lng="nl">maar <mll tip="fin">dat is niet erg</mll></trd>
+      </ekz>
+      <ekz>
+        ne <tld/>as, ne <tld/>as, respondis la etulo
+        <fnt>
+          <bib>ElektFab</bib>
+          <lok>Fingreto</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        tio &ccirc;i neniel <tld/>as
+        <fnt>
+          <aut>Raymond Schwartz</aut>
+          <vrk><url ref="&Steloj;butiko">La Stranga Butiko</url></vrk>
+          <lok>&Scirc;arado</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        la sumeto ne tre <tld/>as
+        <fnt>
+          <bib>Tor</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        por tiuj, kiuj suferis la militon, <tld/>as haltigi &gcirc;in
+        <fnt>
+	<aut>Zlatko Ti&scaron;ljar</aut>
+	<vrk><url ref="&Monato;/2000/006811.php">Nekredeblaj malveroj</url></vrk>
+	<bib>Monato</bib>
+	<lok>2000/03, p. 12-13</lok>
+        </fnt>.
+      </ekz>
+    </dif>
+  </snc>
+  <trdgrp lng="be">
+    <trd>&c_b;&c_y;&c_c;&c_mol; <ind>&c_v;&c_a;&c_zh;&c_n;&c_y;&c_m;</ind></trd>,
+    <trd>&c_z;&c_n;&c_a;&c_ch;&c_y;&c_c;&c_mol;</trd>
+  </trdgrp>
+  <trd lng="cs">b&yacute;t d&uring;le&zcaron;it&yacute;</trd>
+  <trdgrp lng="de">
+    <trd>wichtig sein</trd>,
+    <trd>bedeutend sein</trd>
+  </trdgrp>
+  <trd lng="en">matter</trd>
+  <trd lng="es">importar</trd>
+  <trdgrp lng="fr">
+    <trd>importer</trd>,
+    <trd>compter<klr tip="ind"> (importer)</klr></trd>,
+    <trd>convenir<klr tip="ind"> (de)</klr></trd>,
+    <trd>falloir</trd>,
+    <trd>&ecirc;tre <ind>grave</ind></trd>,
+    <trd>peser<klr tip="ind"> (importer)</klr></trd>
+  </trdgrp>
+  <trd lng="hu">fontos</trd>
+  <trd lng="id">penting</trd>
+  <trdgrp lng="ja">
+    <trd>&#x91CD;&#x5927;&#x3067;&#x3042;&#x308B;  <pr>&#x3058;&#x3085;&#x3046;&#x3060;&#x3044;&#x3067;&#x3042;&#x308B;</pr></trd>,
+    <trd>&#x91CD;&#x8981;&#x3067;&#x3042;&#x308B;  <pr>&#x3058;&#x3085;&#x3046;&#x3088;&#x3046;&#x3067;&#x3042;&#x308B;</pr></trd>
+  </trdgrp>
+  <trdgrp lng="nl">
+    <trd>belangrijk zijn</trd>,
+    <trd>gewichtig zijn</trd>
+  </trdgrp>
+  <trdgrp lng="pl">
+    <trd>by&cacute; wa&zdot;nym</trd>,
+    <trd>by&cacute; istotnym</trd>,
+    <trd>by&cacute; znacznym</trd>,
+    <trd>by&cacute; znacz&aogonek;cym</trd>,
+    <trd>mie&cacute; znaczenie</trd>,
+    <trd>by&cacute; donios&lstroke;e</trd>,
+    <trd>by&cacute; serio<klr> (pot.)</klr></trd>
+  </trdgrp>
+  <trdgrp lng="pt">
+    <trd>importar<klr tip="amb"> (ter valor)</klr></trd>,
+    <trd>ser <ind>importante</ind></trd>
+  </trdgrp>
+  <trdgrp lng="ru">
+    <trd>&c_b;&c_y;&c_t;&c_mol;
+    <ind>&c_v;&c_a;&c_zh;&c_n;&c_y;&c_m;</ind></trd>,
+    <trd>&c_i;&c_m;&c_je;&c_t;&c_mol;
+    <ind>&c_z;&c_n;&c_a;&c_ch;&c_je;&c_n;&c_i;&c_je;</ind></trd>
+  </trdgrp>
+  <trd lng="sk">by&tcaron; d&ocirc;le&zcaron;it&yacute;</trd>
+  <trdgrp lng="sv">
+    <trd>vara <ind>viktig</ind></trd>,
+    <trd>spela <ind>roll</ind></trd>
+  </trdgrp>
+  <trdgrp lng="uk">
+    <trd>&#x43C;&c_a;&c_t;&c_i; &c_z;&#x43D;&c_a;&c_ch;&c_je;&#x43D;&#x43D;&#x44F;</trd>,
+    <trd>&c_b;&c_u;&c_t;&c_i; &c_v;&c_a;&c_zh;&#x43B;&c_i;&c_v;&c_i;&#x43C;</trd>
+  </trdgrp>
+</drv>
+
+<drv mrk="grav.0igi">
+  <kap>
+    <tld/>igi, <var><kap>pli<tld/>igi</kap></var>
+  </kap>
+  <snc>
+    <dif>
+      Igi pli <tld/>a, prezenti kiel <tld/>a:
+      <ekz>
+        la malfeli&ccirc;a virino estas enprofundigita en doloron, <klr>[&#x2026;]</klr> kiun hiera&ubreve;
+        via &ccirc;eesto ankora&ubreve; pli<tld/>igis
+        <fnt>
+          <bib>ChL</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        la publiko <klr>[&#x2026;]</klr> per sia konduto <tld/>igas a&ubreve; mal<tld/>igas la
+        esprimitajn ideojn
+        <fnt>
+          <bib>Ret</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        la diferencon <klr>[inter ili]</klr> <tld/>igas ne nur aparta parolo, sed
+        konkura kredo
+        <fnt>
+          <bib>VivZam</bib>
+        </fnt>.
+      </ekz>
+    </dif>
+    <refgrp tip="vid">
+      <ref cel="akcent.0i.KOMUNE">akcenti<sncref/></ref>,
+      <ref cel="star.el0igi">elstarigi</ref>,
+      <ref cel="emfaz.0i.FIG">emfazi<sncref/></ref>,
+<ref cel="fort.0igi">plifortigi</ref>
+    </refgrp>
+  </snc>
+  <trdgrp lng="be">
+    <trd>&c_n;&c_a;&c_d;&c_a;&c_v;&c_a;&c_c;&c_mol; <ind>&c_z;&c_n;&c_a;&c_ch;&c_e;&c_n;&c_mol;&c_n;&c_je;</ind></trd>,
+    <trd>&c_p;&c_a;&c_d;&c_k;&c_r;&c_e;&c_s;&c_mol;&c_l;&c_ib;&c_v;&c_a;&c_c;&c_mol; <ind>&c_v;&c_a;&c_zh;&c_n;&c_a;&c_s;&c_mol;&c_c;&c_mol;</ind></trd>
+  </trdgrp>
+  <trdgrp lng="de">
+    <trd>verst&auml;rken</trd>
+  </trdgrp>
+  <trd lng="id"><baz>penting</baz>mementingkan</trd>
+  <trdgrp lng="ja">
+    <trd>&#x3044;&#x3063;&#x305D;&#x3046;&#x91CD;&#x5927;&#x5316;&#x3059;&#x308B;  <pr>&#x3044;&#x3063;&#x305D;&#x3046;&#x3058;&#x3085;&#x3046;&#x3060;&#x3044;&#x304B;&#x3059;&#x308B;</pr></trd>,
+    <trd>&#x3088;&#x308A;&#x6DF1;&#x523B;&#x5316;&#x3059;&#x308B; 
+    <pr>&#x3088;&#x308A;&#x3057;&#x3093;&#x3053;&#x304F;&#x304B;&#x3059;&#x308B;</pr></trd>
+  </trdgrp>
+  <trdgrp lng="uk">
+    <trd>&#x43D;&c_a;&c_d;&c_a;&c_v;&c_a;&c_t;&c_i; &c_z;&#x43D;&c_a;&c_ch;&c_je;&#x43D;&#x43D;&#x44F;</trd>
+    <trd>&#x43D;&c_a;&c_d;&c_a;&c_v;&c_a;&c_t;&c_i;&c_v;&c_a;&c_zh;&#x43B;&c_i;&c_v;&#x43E;&c_s;&c_t;&c_ib;</trd>,
+    <trd>&#x43D;&c_a;&c_d;&c_a;&c_v;&c_a;&c_t;&c_i;&c_z;&#x43D;&c_a;&c_ch;&c_u;&c_shch;&#x43E;&c_s;&c_t;&c_ib;</trd>,
+    <trd>&c_r;&#x43E;&c_b;&c_i;&c_t;&c_i; &c_v;&c_a;&c_zh;&#x43B;&c_i;&c_v;&c_i;&#x43C;</trd>
+    <trd>&c_r;&#x43E;&c_b;&c_i;&c_t;&c_i; &c_z;&#x43D;&c_a;&c_ch;&c_u;&c_shch;&c_i;&#x43C;</trd>
+  </trdgrp>
+  <trdgrp lng="zh">
+    <trd>&#x5F37;&#x8ABF;&#x6307;&#x51FA; <pr>qi&#xE1;ngdi&#xE0;ozh&#x1D0;ch&#x16B;</pr></trd>,
+    <trd>&#x6CE8;&#x91CD; <pr>zh&#xF9;zh&#xF2;ng</pr></trd>
+  </trdgrp>
+</drv>
+
+<drv mrk="grav.0eco">
+  <kap><tld/>eco</kap>
+  <snc mrk="grav.0eco.KOMUNE">
+    <dif>
+      Eco de io <tld/>a:
+      <ekz>
+        al li tiuj figuroj &scirc;ajnis <klr>[&#x2026;]</klr> havantaj la plej altan <tld/>econ
+        <fnt>
+          <bib>Fab2</bib>
+          <lok>Ne&gcirc;a re&gcirc;ino</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        pompa parolado pri la <tld/>eco de l' sciencoj
+        <fnt>
+          <bib>Far2</bib>
+          <lok>&Ccirc;apitro I</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        tute specialan <tld/>econ li atribuis al la historio
+        <fnt>
+          <bib>Fab3</bib>
+          <lok>Sub la saliko</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        tiu titolo donis al li <tld/>econ, kiu kvaza&ubreve; plifortigis lin en liaj altaj
+        oficoj
+        <fnt>
+          <bib>Far1</bib>
+          <lok>&Ccirc;apitro XVIII</lok>
+        </fnt>.
+      </ekz>
+    </dif>
+  </snc>
+  <trdgrp lng="be">
+    <trd>&c_v;&c_a;&c_zh;&c_n;&c_a;&c_s;&c_mol;&c_c;&c_mol;</trd>,
+    <trd>
+    &c_k;&c_a;&c_sh;&c_t;&c_o;&c_w;&c_n;&c_a;&c_s;&c_mol;&c_c;&c_mol;
+    </trd>
+  </trdgrp>
+  <trdgrp lng="cs">
+    <trd>d&uring;le&zcaron;itost</trd>,
+    <trd>z&aacute;va&zcaron;nost</trd>
+  </trdgrp>
+  <trdgrp lng="de">
+    <trd>Wichtigkeit</trd>,
+    <trd>Bedeutung</trd>
+  </trdgrp>
+  <trd lng="en">importance</trd>
+  <trdgrp lng="fr">
+    <trd>gravit&eacute;</trd>,
+    <trd>importance</trd>
+  </trdgrp>
+  <trdgrp lng="hu">
+    <trd>fontoss&aacute;g</trd>,
+    <trd>jelent&odblac;ss&eacute;g</trd>
+  </trdgrp>
+  <trdgrp lng="id">
+    <trd><ind>penting</ind>nya</trd>,
+    <trd>ke<ind>penting</ind>an</trd>
+  </trdgrp>
+  <trdgrp lng="ja">
+    <trd>&#x91CD;&#x8981;&#x6027;  <pr>&#x3058;&#x3085;&#x3046;&#x3088;&#x3046;&#x305B;&#x3044;</pr></trd>,
+    <trd>&#x91CD;&#x5927;&#x3055;  <pr>&#x3058;&#x3085;&#x3046;&#x3060;&#x3044;&#x3055;</pr></trd>
+  </trdgrp>
+  <trdgrp lng="nl">
+    <trd>belangrijkheid</trd>,
+    <trd>belang</trd>,
+    <trd>betekenis<klr tip="ind"> (belang)</klr></trd>
+  </trdgrp>
+  <trdgrp lng="pl">
+    <trd>waga</trd>,
+    <trd>istota</trd>,
+    <trd>znaczenia</trd>,
+    <trd>donios&lstroke;o&sacute;&cacute;</trd>
+  </trdgrp>
+  <trdgrp lng="pt">
+    <trd>gravidade<klr tip="ind"> (adj.)</klr></trd>,
+    <trd>import&acirc;ncia<klr tip="ind"> (adj.)</klr></trd>
+  </trdgrp>
+  <trdgrp lng="ru">
+    <trd>&c_v;&c_a;&c_zh;&c_n;&c_o;&c_s;&c_t;&c_mol;</trd>,
+    <trd>&c_z;&c_n;&c_a;&c_ch;&c_i;&c_t;&c_je;&c_l;&c_mol;&c_n;&c_o;&c_s;&c_t;&c_mol;</trd>
+  </trdgrp>
+  <trdgrp lng="sk">
+    <trd>d&ocirc;le&zcaron;itos&tcaron;</trd>,
+    <trd>z&aacute;va&zcaron;nos&tcaron;</trd>
+  </trdgrp>
+  <trdgrp lng="sv">
+    <trd>viktighet</trd>,
+    <trd>betydelse</trd>
+  </trdgrp>
+  <trd lng="tok">suli</trd>
+  <trdgrp lng="uk">
+    <trd>&c_v;&c_a;&c_zh;&#x43B;&c_i;&c_v;&c_ib;&c_s;&c_t;&#x44C;</trd>,
+    <trd>&c_z;&#x43D;&c_a;&c_ch;&c_u;&c_shch;&c_ib;&c_s;&c_t;&#x44C;</trd>,
+    <trd>&c_s;&c_je;&c_r;&c_j;&#x43E;&c_z;&#x43D;&c_ib;&c_s;&c_t;&#x44C;</trd>
+  </trdgrp>
+  <trdgrp lng="zh">
+    <trd>&#x8981;&#x7D27; <pr>y&#xE0;oj&#x1D0;n</pr></trd>,
+    <trd>&#x610F;&#x51FD; <pr>y&#xEC;h&#xE1;n</pr></trd>,
+    <trd>&#x8F15;&#x91CD; <pr>q&#x12B;ngzh&#xF2;ng</pr></trd>,
+    <trd>&#x7737; <pr>ju&#xE0;n</pr></trd>,
+    <trd>&#x91CD;&#x8981;&#x6027; <pr>zh&#xF2;ngy&#xE0;ox&#xEC;ng</pr></trd>,
+    <trd>&#x5173;&#x7167; <pr>gu&#x101;nzh&#xE0;o</pr></trd>,
+    <trd>&#x6D89; <pr>sh&#xE8;</pr></trd>
+  </trdgrp>
+</drv>
+
+<drv mrk="grav.0ulo">
+  <kap>
+    <tld/>ulo
+  </kap>
+  <snc>
+    <dif>
+      Homo <tld/>a en iu socia medio pro distinga influo, decidpovo a&ubreve; scio, alta posteno ks:
+      <ekz>
+        la negoco estis <tld/>a kaj tre esperiga, la <tld/>uloj interkonsili&gcirc;is en la
+        interna &ccirc;ambro
+        <fnt>
+          <bib>KKr</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        multaj <tld/>uloj, i.a. pluraj ministroj, venis &ccirc;i tien
+        <fnt>
+          <bib>CKv</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <tld/>uloj a&ubreve; eminentuloj, &dash; preska&ubreve; &ccirc;iam inter la a&ubreve;skultantoj trovi&gcirc;as unu a&ubreve;
+        pluraj aparte <ref cel="star.el0a">elstara</ref>j personoj, kiuj ludas certan rolon en la
+        urbo
+        <fnt>
+          <bib>Ret</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        <klr>[iu]</klr> denuncis Patrikson kaj lin al iu <tld/>ulo en la drogreto
+        <fnt>
+          <bib>ChR</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        el <tld/>uloj de la Esperanto-Movado kaj verkistoj, aperis <klr>[&#x2026;]</klr>
+        <nom>Kalocsay</nom> kaj <nom>Baghy</nom> <klr>[&#x2026;]</klr>, <nom>Grabowski</nom> kaj
+        <nom>Kabe</nom>
+        <klr>[&#x2026;]</klr>, <nom>Hodler</nom>, <klr>[&#x2026;]</klr>
+        <fnt>
+          <bib>EeP</bib>
+        </fnt>.
+      </ekz>
+    </dif>
+    <refgrp tip="sin">
+       <ref cel="distin.0ito">distingito</ref>,
+       <ref cel="eminen1.0ulo">eminentulo</ref>
+    </refgrp>
+    <refgrp tip="sub">
+       <ref cel="estr.0o">estro</ref>,
+       <ref cel="kurato.0o.POL">kuratoro<sncref/></ref>,
+       <ref cel="mecena.0o">mecenato</ref>,
+       <ref cel="patron.0o">patrono</ref>
+    </refgrp>
+  </snc>
+  <trdgrp lng="be">
+    <trd>&c_v;&c_a;&c_zh;&c_n;&c_a;&c_ja; &c_a;&c_s;&c_o;&c_b;&c_a;</trd>,
+    <trd>&c_V;&c_Ib;&c_P;</trd>
+  </trdgrp>
+  <trdgrp lng="de">
+    <trd>wichtige <ind>Pers&ouml;nlichkeit</ind></trd>,
+    <trd>Ber&uuml;hmtheit</trd>,
+    <trd>Entscheider</trd>,
+    <trd>W&uuml;rdentr&auml;ger</trd>
+  </trdgrp>
+  <trd lng="en">VIP</trd>
+  <trdgrp lng="id">
+    <trd>orang <ind>penting</ind></trd>,
+    <trd>naratama</trd>,
+    <trd>VIP</trd>
+  </trdgrp>
+  <trd lng="ja">&#x91CD;&#x8981;&#x4EBA;&#x7269;  <pr>&#x3058;&#x3085;&#x3046;&#x3088;&#x3046;&#x3058;&#x3093;&#x3076;&#x3064;</pr></trd>
+  <trdgrp lng="uk">
+    <trd>&#x43F;&#x43E;&c_v;&c_a;&c_zh;&#x43D;&c_a; &#x43E;&c_s;&#x43E;&c_b;&c_a;</trd>,
+    <trd>&#x43F;&#x43E;&c_v;&c_a;&c_zh;&#x43D;&c_i;&c_j; &c_ch;&c_i;&#x43D;</trd>
+  </trdgrp>
+  <trd lng="zh">&#x540D;&#x4EBA; <pr>m&#xED;ngr&#xE9;n</pr></trd>
+</drv>
+
+<drv mrk="grav.mal0a">
+  <kap>mal<tld/>a</kap>
+  <snc mrk="grav.mal0a.KOMUNE">
+    <dif>
+      Bagatela, ne meritanta atenton:
+      <ekz>
+        ili fari&gcirc;is kiel herbo de kampo, kiel mal<tld/>a verda&jcirc;o
+        <fnt>
+          <bib>MT</bib>
+          <lok>II. Re&gcirc;oj 19:26</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        trompi lin <klr>[&#x2026;]</klr> en mal<tld/>aj aferoj
+        <fnt>
+          <bib>Far2</bib>
+          <lok>&Ccirc;apitro III</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        li havas mienon, kvaza&ubreve; lia trumpetado estas io <tld/>a, sed &gcirc;i estas tute
+        mal<tld/>a
+        <fnt>
+          <bib>Fab3</bib>
+          <lok>Supo el kolbasaj bastonetoj</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        se mi e&ccirc; havos la plej mal<tld/>an pozicion, tamen se tio, kion mi faros, estos
+        bona, &gcirc;i &ccirc;iam havos ian valoron
+        <fnt>
+          <bib>Fab3</bib>
+          <lok>Io</lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        malgranda, mal<tld/>aspekta dometo
+        <fnt>
+          <bib>Fab2</bib>
+          <lok>Ne&gcirc;a re&gcirc;ino</lok>
+        </fnt>.
+      </ekz>
+    </dif>
+    <ref tip="sin" cel="bagate.0a">bagatela</ref>
+    <refgrp tip="vid">
+       <ref cel="banal.0a">banala</ref>
+    </refgrp>
+  </snc>
+  <trdgrp lng="be">
+    <trd>&c_n;&c_ja;&c_v;&c_a;&c_zh;&c_n;&c_y;</trd>,
+    <trd>&c_n;&c_je;&c_ib;&c_s;&c_t;&c_o;&c_t;&c_n;&c_y;</trd>,
+    <trd>&c_n;&c_ja;&c_z;&c_n;&c_a;&c_ch;&c_n;&c_y;</trd>
+  </trdgrp>
+  <trdgrp lng="cs">
+    <trd>bezv&yacute;znamn&yacute;</trd>,
+    <trd>lehk&yacute;</trd>
+  </trdgrp>
+  <trdgrp lng="de">
+    <trd>unwichtig</trd>,
+    <trd>bedeutungslos</trd>
+  </trdgrp>
+  <trd lng="en">unimportant</trd>
+  <trdgrp lng="fr">
+    <trd>anodin</trd>,
+    <trd>b&eacute;nin</trd>,
+    <trd>sans <ind>importance</ind></trd>,
+    <trd>insignifiant</trd>
+  </trdgrp>
+  <trdgrp lng="hu">
+    <trd>l&eacute;nyegtelen</trd>,
+    <trd>jelent&eacute;ktelen</trd>,
+    <trd>bagatell</trd>
+  </trdgrp>
+  <trdgrp lng="id">
+    <trd>remeh</trd>,
+    <trd>sepele</trd>
+  </trdgrp>
+  <trdgrp lng="ja">
+    <trd>&#x3055;&#x3055;&#x3044;&#x306A;</trd>,
+    <trd>&#x53D6;&#x308B;&#x306B;&#x8DB3;&#x308A;&#x306A;&#x3044; 
+    <pr>&#x3068;&#x308B;&#x306B;&#x305F;&#x308A;&#x306A;&#x3044;</pr></trd>
+  </trdgrp>
+  <trd lng="nl">onbelangrijk</trd>
+  <trdgrp lng="pl">
+    <trd>niewa&zdot;ny</trd>,
+    <trd>nieistotny</trd>,
+    <trd>nieznaczny</trd>,
+    <trd>nieznacz&aogonek;cy</trd>
+  </trdgrp>
+  <trdgrp lng="pt">
+    <trd>sem <ind>import&acirc;ncia</ind></trd>,
+    <trd>f&uacute;til</trd>
+  </trdgrp>
+  <trdgrp lng="ru">
+    <trd>&c_n;&c_je;&c_v;&c_a;&c_zh;&c_n;&c_y;&c_j;</trd>,
+    <trd>&c_n;&c_je;&c_z;&c_n;&c_a;&c_ch;&c_i;&c_t;&c_je;&c_l;&c_mol;&c_n;&c_y;&c_j;</trd>,
+    <trd>&c_n;&c_je;&c_s;&c_u;&c_shch;&c_je;&c_s;&c_t;&c_v;&c_je;&c_n;&c_n;&c_y;&c_j;</trd>
+  </trdgrp>
+  <trdgrp lng="sk">
+    <trd>bezv&yacute;znamn&yacute;</trd>,
+    <trd>ned&ocirc;le&zcaron;it&yacute;</trd>
+  </trdgrp>
+  <trdgrp lng="sv">
+    <trd>oviktig</trd>,
+    <trd>betydelsel&ouml;s</trd>
+  </trdgrp>
+  <trd lng="tok">suli ala</trd>
+  <trdgrp lng="uk">
+    <trd>&#x43D;&c_je;&c_v;&c_a;&c_zh;&#x43B;&c_i;&c_v;&c_i;&c_j;</trd>,
+    <trd>&c_d;&c_r;&c_ib;&c_b;&#x43D;&c_i;&c_j;</trd>,
+    <trd>&c_d;&c_r;&c_ib;&c_b;&#x2019;&#x44F;&c_z;&#x43A;&#x43E;&c_v;&c_i;&c_j;</trd>
+  </trdgrp>
+  <trdgrp lng="zh">
+    <trd>&#x53EF;&#x5FFD;&#x8996; <pr>k&#x11B;h&#x16B;sh&#xEC;</pr></trd>,
+    <trd>&#x65E0;&#x610F;&#x4E49; <pr>w&#xFA;y&#xEC;y&#xEC;</pr></trd>,
+    <trd>&#x5C0F;&#x53EF; <pr>xi&#x1CE;ok&#x11B;</pr></trd>,
+    <trd>&#x65E0;&#x5173;&#x7D27;&#x8981; <pr>w&#xFA;gu&#x101;nj&#x1D0;ny&#xE0;o</pr></trd>,
+    <trd>&#x65E0;&#x51E0; <pr>w&#xFA;j&#x1D0;</pr></trd>
+  </trdgrp>
+</drv>
+
+<drv mrk="grav.mal0ajxo">
+  <kap>mal<tld/>a&jcirc;o</kap>
+  <snc mrk="grav.mal0ajxo.KOMUNE">
+    <dif>
+      Ne atentinda afero:
+      <ekz>
+        gloro, potenco &ndash; vanta fumo! mal<tld/>a&jcirc;o
+        <fnt>
+          <bib>QuV</bib>
+        </fnt>!
+      </ekz>
+      <ekz>
+        la parolanto ne kapablas distingi mal<tld/>a&jcirc;on de <tld/>a&jcirc;o
+        <fnt>
+          <bib>Ret</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        li rapide eksciti&gcirc;as pro mal<tld/>a&jcirc;oj
+        <fnt>
+          <bib>Rsp</bib>
+        </fnt>.
+      </ekz>
+    </dif>
+    <ref tip="sin" cel="bagate.0o">bagatelo</ref>
+  </snc>
+  <trdgrp lng="be">
+    <trd>&c_d;&c_r;&c_o;&c_b;&c_ja;&c_z;&c_mol;</trd>,
+    <trd>&c_d;&c_r;&c_a;&c_b;&c_n;&c_ib;&c_c;&c_a;</trd>,
+    <trd>
+    &c_p;&c_u;&c_s;&c_mol;&c_c;&c_ja;&c_k;&c_o;&c_v;&c_ib;&c_n;&c_a;
+    </trd>
+  </trdgrp>
+  <trdgrp lng="de">
+    <trd>Nebens&auml;chlichkeit</trd>,
+    <trd>Bagatelle</trd>
+  </trdgrp>
+  <trdgrp lng="en">
+    <trd>trifle</trd>,
+    <trd>peanut</trd>
+  </trdgrp>
+  <trdgrp lng="fr">
+    <trd>bagatelle</trd>,
+    <trd>broutille</trd>
+  </trdgrp>
+  <trdgrp lng="hu">
+    <trd>potoms&aacute;g</trd>,
+    <trd>bagatell dolog</trd>,
+    <trd>csek&eacute;lys&eacute;g</trd>
+  </trdgrp>
+  <trdgrp lng="id">
+    <trd>hal <ind>sepele</ind></trd>,
+    <trd>hal <ind>remeh</ind></trd>,
+    <trd>tetek bengek</trd>
+  </trdgrp>
+  <trd lng="ja">&#x3055;&#x3055;&#x3044;&#x306A;&#x4E8B;  <pr>&#x3055;&#x3055;&#x3044;&#x306A;&#x3053;&#x3068;</pr></trd>
+  <trdgrp lng="nl">
+    <trd>bagatel</trd>,
+    <trd>kleinigheid</trd>,
+    <trd>futiliteit</trd>,
+    <trd>iets <ind>onbelangrijks</ind></trd>
+  </trdgrp>
+  <trdgrp lng="pl">
+    <trd>drobiazg</trd>,
+    <trd>b&lstroke;ahostka</trd>,
+    <trd>bagatela</trd>
+  </trdgrp>
+  <trd lng="pt">bagatela</trd>
+  <trdgrp lng="ru">
+    <trd>&c_m;&c_je;&c_l;&c_o;&c_ch;&c_mol;</trd>,
+    <trd>&c_p;&c_u;&c_s;&c_t;&c_ja;&c_k;</trd>
+  </trdgrp>
+  <trd lng="tok">ijo pi suli ala</trd>
+  <trdgrp lng="uk">
+    <trd>&#x43D;&c_je;&c_v;&c_a;&c_zh;&#x43B;&c_i;&c_v;&c_a; &c_r;&c_ib;&c_ch;</trd>,
+    <trd>&c_d;&c_r;&c_ib;&c_b;&#x2019;&#x44F;&c_z;&#x43A;&#x43E;&c_v;&c_a; &c_s;&#x43F;&c_r;&c_a;&c_v;&c_a;</trd>,
+    <trd>&c_d;&c_r;&c_ib;&c_b;&#x43D;&c_i;&c_c;&#x44F;</trd>,
+    <trd>&c_d;&c_r;&c_ib;&c_b;&#x2019;&#x44F;&c_z;&#x43E;&#x43A;</trd>
+  </trdgrp>
+  <trd lng="zh">&#x679D;&#x7BC0; <pr>zh&#x12B;ji&#xE9;</pr></trd>
+</drv>
+
+<drv mrk="grav.mal0igi">
+  <kap>mal<tld/>igi</kap>
+  <gra><vspec>tr</vspec></gra>
+  <snc mrk="grav.mal0igi.OPI">
+    <dif>
+      Igi malpli <tld/>a, rigardi, prezenti kiel ne tiom <tld/>an:
+      <ekz>
+        tio ne estas menciita por mal<tld/>igi <klr>[la]</klr> signifon
+        <fnt>
+          <bib>EeP</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        la domvendisto, iom embarasita, provas mal<tld/>igi la
+        fenomenon: &leftquot;vi sciu, oni a&ubreve;das tiun bruon nur la unuajn
+        du a&ubreve; tri tagojn&rightquot;
+        <fnt>
+          <aut>-</aut>,
+          <vrk>Multe da bruo...</vrk>,
+          <lok>
+         <url ref="http://miresperanto.narod.ru/humuro/anekdotoj-7.htm">
+          [Anekdotoj kaj &scirc;ercoj 7, vidita en 2008-09]</url></lok>
+        </fnt>;
+      </ekz>
+      <ekz>
+        li finis per supera gesto de mal<tld/>igo
+        <fnt>
+          <bib>KrM</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        la teknologia evoluo mal<tld/>igas distancojn kaj oficialajn strukturojn
+        <fnt>
+          <bib>LOdE</bib>
+          <vrk>Reage al la eseo de Walter &Zdot;elazny en LOdE. 2000: 2&ndash;5</vrk>
+        </fnt>.
+      </ekz>
+    </dif>
+    <refgrp tip="vid">
+      <ref cel="bagate.0igi">bagateligi</ref>,
+      <ref cel="redukt.0i.FIG">redukti<sncref/></ref>,
+      <ref cel="relati.0igi">relativigi</ref>,
+      <ref cel="taks.sub0i">subtaksi</ref>
+    </refgrp>
+  </snc>
+  <trdgrp lng="be">
+    <trd>&c_p;&c_r;&c_y;&c_n;&c_ib;&c_zh;&c_a;&c_c;&c_mol; &c_z;&c_n;&c_a;&c_ch;&c_e;&c_n;&c_mol;&c_n;&c_je;</trd>,
+    <trd>&c_p;&c_r;&c_a;&c_d;&c_s;&c_t;&c_a;&c_w;&c_l;&c_ja;&c_c;&c_mol; &c_n;&c_ja;&c_v;&c_a;&c_zh;&c_n;&c_y;&c_m;</trd>
+  </trdgrp>
+  <trd lng="cs">znev&aacute;&zcaron;it</trd>
+  <trdgrp lng="de">
+    <trd>herunterspielen</trd>,
+    <trd>kleinreden</trd>,
+    <trd>abwinken</trd>
+  </trdgrp>
+  <trdgrp lng="en">
+    <trd>downplay </trd>,
+    <trd>understate</trd>
+  </trdgrp>
+  <trdgrp lng="fr">
+    <trd>minimiser</trd>,
+    <trd>minorer<klr> (l'importance de)</klr></trd>
+  </trdgrp>
+  <trd lng="id">me<ind>remeh</ind>kan</trd>
+  <trdgrp lng="pl">
+    <trd>umniejsza&cacute;<klr> wag&eogonek;, znaczenie
+    (czego&sacute;)</klr></trd>,
+    <trd>bagatelizowa&cacute;</trd>,
+    <trd>marginalizowa&cacute;</trd>,
+    <trd>pozbawia&cacute; <ind>znaczenia</ind></trd>,
+    <trd>pozbawia&cacute; <ind>wa&zdot;no&sacute;ci</ind></trd>
+  </trdgrp>
+  <trd lng="sk">znev&aacute;&zcaron;i&tcaron;</trd>
+  <trd lng="tok">suli ala e ijo</trd>
+  <trdgrp lng="uk">
+    <trd>&#x43F;&c_r;&c_i;&#x43C;&c_je;&#x43D;&c_sh;&c_u;&c_v;&c_a;&c_t;&c_i; &c_z;&#x43D;&c_a;&c_ch;&c_je;&#x43D;&#x43D;&#x44F;</trd>,
+    <trd>&#x43F;&c_r;&c_i;&#x43C;&c_je;&#x43D;&c_sh;&c_u;&c_v;&c_a;&c_t;&c_i; &c_v;&c_a;&c_g;&c_u;</trd>
+  </trdgrp>
+  <trd lng="zh">&#x8CB6;&#x4F4E; <pr>bi&#x1CE;nd&#x12B;</pr></trd>
+</drv>
+
+<drv mrk="grav.malpli0igi">
+  <kap>malpli<tld/>igi</kap>
+  <snc mrk="grav.malpli0igi.KOMUNE">
+    <dif>
+      Fari malpli <tld/>a:
+      <ekz>
+        malpli<tld/>igi sian kulpon per pento.
+      </ekz>
+      <ekz>
+        <klr>[la]</klr> ministro <klr>[&#x2026;]</klr> en masklisma maniero ne hezitis
+        malpli<tld/>igi la okaza&jcirc;on deklarante ke &leftquot;nu, neniu mortis&rightquot;
+        <fnt>
+          <bib>MD11</bib>
+          <vrk>Devoji&gcirc;inta maldekstro</vrk>
+        </fnt>;
+      </ekz>
+      <ekz>
+        estas malpermes<klr>[ita]</klr> vidigi a&ubreve; porti religiajn signojn
+        ene de registaraj konstrua&jcirc;oj a&ubreve; lokoj, kie religio estas periferia a&ubreve;
+        malpli<tld/>igita en la publika sfero
+        <fnt>
+          <bib>Monato</bib>
+          <aut>Lenio Marobin</aut>
+          <vrk><url ref="&Monato;/2013/010834.php">&Ccirc;u forvi&scirc;i la kredon por esti
+          egala?</url></vrk>
+          <lok>2013</lok>
+        </fnt>.
+      </ekz>
+    </dif>
+  </snc>
+  <trd lng="be">&c_p;&c_r;&c_y;&c_m;&c_ja;&c_n;&c_sh;&c_a;&c_c;&c_mol;</trd>
+  <trdgrp lng="de">
+    <trd>untertreiben</trd>,
+    <trd>herunterspielen</trd>
+  </trdgrp>
+  <trd lng="fr">minimiser<klr tip="ind"> (rendre moins
+  important)</klr></trd>
+  <trdgrp lng="hu">
+    <trd>(el)<ind>bagateliz&aacute;l</ind></trd>,
+    <trd>lekicsinyel</trd>
+  </trdgrp>
+  <trdgrp lng="ja">
+    <trd>&#x8EFD;&#x304F;&#x898B;&#x306A;&#x3059; 
+    <pr>&#x304B;&#x308B;&#x304F;&#x307F;&#x306A;&#x3059;</pr></trd>,
+    <trd>&#x914C;&#x91CF;&#x3059;&#x308B;  <pr>&#x3057;&#x3083;&#x304F;&#x308A;&#x3087;&#x3046;&#x3059;&#x308B;</pr></trd>
+  </trdgrp>
+  <trdgrp lng="nl">
+    <trd>minimaliseren</trd>,
+    <trd>bagatelliseren</trd>,
+    <trd>futiliseren</trd>
+  </trdgrp>
+  <trdgrp lng="pl">
+    <trd>umniejsza&cacute;<klr> wag&eogonek;, znaczenie
+    (czego&sacute;)</klr></trd>,
+    <trd>bagatelizowa&cacute;</trd>,
+    <trd>marginalizowa&cacute;</trd>
+  </trdgrp>
+  <trd lng="pt">atenuar</trd>
+  <trdgrp lng="ru">
+    <trd>&c_u;&c_m;&c_je;&c_n;&c_mol;&c_sh;&c_i;&c_t;&c_mol;</trd>,
+    <trd>&c_o;&c_b;&c_l;&c_je;&c_g;&c_ch;&c_i;&c_t;&c_mol;</trd>
+  </trdgrp>
+</drv>
+
+<drv mrk="grav.vivo0a">
+  <kap>viv<tld/>a, <var><kap>vivo<tld/>a</kap></var></kap>
+  <snc mrk="grav.vivo0a.KOMUNE">
+    <dif>
+      Tre <tld/>a en ies vivo, por ies da&ubreve;ra vivado:
+      <ekz>
+        la estraro de la banko ne konsideras la aferon viv<tld/>a, e&ccirc; se la banko pro
+        tia malzorgemo devos &ccirc;esigi sian funkcion
+        <fnt>
+          <bib>KKr</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        li finfine laboris <klr>[&#x2026;]</klr> por trovi en tiu laboro iun kontentigan kaj
+        vivo<tld/>an
+        <fnt>
+          <bib>ViV</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        li verkis bonegajn artikolojn pri la viv<tld/>aj problemoj de
+        la terlaboristoj
+        <fnt>
+        <aut>I. Lo-Johansson, trad. F. Szil&aacute;gyi</aut>,
+        <vrk>La studento kaj la Terproletido</vrk>,
+        <lok>Vespera ru&gcirc;o anoncas ventegon, 1950</lok>
+        </fnt>.
+      </ekz>
+    </dif>
+    <refgrp tip="vid">
+      <ref cel="esenc.0a">esenca</ref>
+    </refgrp>
+    <trdgrp lng="de">
+      <trd>lebenswichtig</trd>,
+      <trd>&uuml;berlebenswichtig</trd>,
+      <trd>lebensnotwendig</trd>,
+      <trd>existentiell</trd>
+    </trdgrp>
+    <trdgrp lng="zh">
+    <trd>&#x751F;&#x6B7B;&#x6538;&#x5173; <pr>sh&#x113;ngs&#x1D0;y&#x14D;ugu&#x101;n</pr></trd>,
+    <trd>&#x6781;&#x5176;&#x91CD;&#x8981; <pr>j&#xED;q&#xED;zh&#xF2;ngy&#xE0;o</pr></trd>,
+    <trd>&#x751F;&#x6D3B;&#x5FC5;&#x9700; <pr>sh&#x113;nghu&#xF3;b&#xEC;x&#x16B;</pr></trd>,
+    <trd>&#x57FA;&#x672C; <pr>j&#x12B;b&#x11B;n</pr></trd>
+  </trdgrp>
+</snc>
+  <trd lng="be">&c_zh;&c_y;&c_c;&c_mol;&c_c;&c_jo;&c_v;&c_a; &c_v;&c_a;&c_zh;&c_n;&c_y;</trd>
+  <trdgrp lng="en">
+    <trd>existential</trd>,
+    <trd>essential</trd>
+  </trdgrp>
+  <trdgrp lng="fr">
+    <trd>essentiel</trd>,
+    <trd>existenciel</trd>,
+    <trd>vital</trd>
+  </trdgrp>
+  <trdgrp lng="id">
+    <trd>esensial</trd>,
+    <trd>hakiki</trd>,
+    <trd>vital</trd>
+  </trdgrp>
+  <trdgrp lng="pl">
+    <trd>&zdot;yciowy</trd>,
+    <trd>egzystencjalny</trd>
+  </trdgrp>
+</drv>
+</art>
+<!--
+$Log$
+versio 1.54 2023/10/15 18:38:19
+revo: transskribo per <pr>
+
+versio 1.53 2023/09/13 06:30:18
+Eko Nur Syah Hidayat: +trd id
+
+versio 1.51 2023/04/23 18:29:26
+Paul Peeraerts: &Steloj -> &Monato
+
+versio 1.50 2022/10/13 17:54:22
+Dmitri Gabinski: +trd be
+
+versio 1.49 2022/04/30 08:42:40
+aktualigo lingvokodoj kaj URL-unuoj
+
+versio 1.46 2022/01/18 08:39:22
+Damien Brucker: -eraro cxe cel en ref
+
+versio 1.45 2022/01/17 15:32:36
+Wolfram Diestel: +~igi
+
+versio 1.44 2021/11/02 07:29:10
+-->
+</vortaro>
