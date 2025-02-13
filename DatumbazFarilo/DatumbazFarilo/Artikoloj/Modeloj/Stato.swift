@@ -111,6 +111,9 @@ extension ArboAnalizilo {
 		/// Ĉiuj fakaj vortoj, laŭ iliaj fakoj
 		var fakVortoj: [String: [FakVorto]] = [:]
 		
+		/// Vortoj laŭ oficialeco
+		var ofcVortoj: [String: [OfcVorto]] = [:]
+		
 		/// Aldonas artikolan tradukoj
 		func aldoni(artikolTradukon traduko: ArtikolTraduko, lingvo: String) {
 			if artikolFabriko.tradukoj[lingvo] == nil { artikolFabriko.tradukoj[lingvo] = [] }
@@ -129,9 +132,15 @@ extension ArboAnalizilo {
 		}
 		
 		/// Aldonas fakvorton
-		func aldoni(fakVorton: FakVorto, fako: String) {
+		func aldoni(fakVorton fakVorto: FakVorto, fako: String) {
 			if fakVortoj[fako] == nil { fakVortoj[fako] = [] }
-			fakVortoj[fako]?.append(fakVorton)
+			fakVortoj[fako]?.append(fakVorto)
+		}
+		
+		/// Aldonas ofcvorton
+		func aldoni(ofcVorton ofcVorto: OfcVorto, oficialeco: String) {
+			if ofcVortoj[oficialeco] == nil { ofcVortoj[oficialeco] = [] }
+			ofcVortoj[oficialeco]?.append(ofcVorto)
 		}
 	}
 }

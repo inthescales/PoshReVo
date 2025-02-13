@@ -11,17 +11,20 @@ enum Artikolaro {
 		var tradukoj: [String: [SerchTraduko]]
 		var serchVortoj: [SerchVorto]
 		var fakVortoj: [String: [FakVorto]]
+		var ofcVortoj: [String: [OfcVorto]]
 		
 		init(
 			artikoloj: [Artikolo],
 			tradukoj: [String: [SerchTraduko]],
 			serchVortoj: [SerchVorto],
-			fakVortoj: [String: [FakVorto]]
+			fakVortoj: [String: [FakVorto]],
+			ofcVortoj: [String: [OfcVorto]]
 		) {
 			self.artikoloj = artikoloj
 			self.tradukoj = tradukoj
 			self.fakVortoj = fakVortoj
 			self.serchVortoj = serchVortoj
+			self.ofcVortoj = ofcVortoj
 		}
 	}
 	
@@ -56,6 +59,7 @@ enum Artikolaro {
 		var tradukoj: [String: [SerchTraduko]] = [:]
 		var serchVortoj: [SerchVorto] = []
 		var fakVortoj: [String: [FakVorto]] = [:]
+		var ofcVortoj: [String: [OfcVorto]] = [:]
 		var markSencoj: [String: Int] = [:]
 
 		for indiko in legotaj {
@@ -83,6 +87,11 @@ enum Artikolaro {
 				malnovaj + novaj
 			}
 			
+			// Fakvortoj
+			ofcVortoj.merge(rezulto.ofcVortoj) { malnovaj, novaj in
+				malnovaj + novaj
+			}
+			
 			// Marksencoj
 			rezulto.markSencoj.forEach { marko, senco in
 				markSencoj[marko] = senco
@@ -99,7 +108,8 @@ enum Artikolaro {
 			artikoloj: artikoloj,
 			tradukoj: tradukoj,
 			serchVortoj: serchVortoj,
-			fakVortoj: fakVortoj
+			fakVortoj: fakVortoj,
+			ofcVortoj: ofcVortoj
 		)
 	}
 	

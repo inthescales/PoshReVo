@@ -55,10 +55,17 @@ final class DatumbazFariloTestoj: XCTestCase {
 		}
 	}
 	
-	/// Testi serchvortojn
+	/// Testi fakvortojn
 	func testiFakVortojn() throws {
 		for rezulto in rezultoj {
 			assertSnapshot(matching: rezulto.fakVortoj, as: .json, named: rezulto.artikolo.titolo)
+		}
+	}
+	
+	/// Testi ofcvortojn
+	func testiOfcVortojn() throws {
+		for rezulto in rezultoj {
+			assertSnapshot(matching: rezulto.ofcVortoj, as: .json, named: rezulto.artikolo.titolo)
 		}
 	}
 }

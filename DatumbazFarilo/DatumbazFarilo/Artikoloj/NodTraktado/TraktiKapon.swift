@@ -24,7 +24,6 @@ extension ArboAnalizilo {
 					break
 				case .ofc:
 					stato.artikolFabriko.ofc = trakti(oficialecon: filo, stato: stato)
-					// TODO: Aldoni ofc-vortojn
 				case .rad(let vari):
 					let filTeksto = trakti(radikon: filo, variajho: vari, stato: stato)
 					teksto += filTeksto
@@ -45,6 +44,16 @@ extension ArboAnalizilo {
 			
 			teksto = teksto.tondi()
 			stato.artikolFabriko.titolo = teksto
+			
+			// Krei ofcvortojn
+			if let ofc = stato.artikolFabriko.ofc,
+			   let artikolIndekso = stato.artikolIndekso {
+				let ofcVorto = OfcVorto(
+					teksto: teksto,
+					indekso: artikolIndekso
+				)
+				stato.aldoni(ofcVorton: ofcVorto, oficialeco: ofc)
+			}
 			
 			return KapRezulto(
 				teksto: teksto,
