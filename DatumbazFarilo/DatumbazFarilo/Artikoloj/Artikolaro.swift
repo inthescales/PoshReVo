@@ -49,9 +49,9 @@ enum Artikolaro {
 		mallongigoj: [String: String],
 		urloj: [String: String]
 	) -> Rezulto {
-		// let legotaj = ["teks.xml"]
-		let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
-			.filter { $0.hasSuffix(".xml") }
+		let legotaj = ["teks.xml", "tekst.xml", "teg.xml", "art.xml", "arangx.xml"]
+//		let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
+//			.filter { $0.hasSuffix(".xml") }
 		
 		// Legi artikolojn
 
