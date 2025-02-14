@@ -49,7 +49,7 @@ enum Artikolaro {
 		mallongigoj: [String: String],
 		urloj: [String: String]
 	) -> Rezulto {
-		//let legotaj = ["grav.xml"]
+		// let legotaj = ["teks.xml"]
 		let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
 			.filter { $0.hasSuffix(".xml") }
 		
@@ -96,6 +96,8 @@ enum Artikolaro {
 			rezulto.markSencoj.forEach { marko, senco in
 				markSencoj[marko] = senco
 			}
+			
+			print("Legis \(rezulto.artikolo.titolo)")
 		}
 
 		// Posttrakti artikolojn

@@ -23,13 +23,25 @@ let konteksto = kreiDatumbazon(
 
 // Legi grundaĵojn
 
+print("Legas grundon")
+
 let grundo = Grundo.legi(el: grundIndiko)
 grundo.skribi(json: produktajhIndiko)
+grundo.skribi(en: konteksto)
 
 // Legi artikolojn
 
+print("Legas artikolojn")
+
 let artikolRezultoj = Artikolaro.legi(el: revoIndiko, grundo: grundo)
 Artikolaro.skribi(artikolojn: artikolRezultoj.artikoloj, en: konteksto)
+
+// Skribi vortlistojn
+
+print("Skribas vortlistojn")
+
+VortListoj.skribi(fakVortojn: artikolRezultoj.fakVortoj, en: konteksto)
+VortListoj.skribi(ofcVortojn: artikolRezultoj.ofcVortoj, en: konteksto)
 
 // Fari trie-on
 

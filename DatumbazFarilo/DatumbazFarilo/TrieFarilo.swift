@@ -32,7 +32,7 @@ final class TrieFarilo {
     func konstruiTriePorLingvo(kodo: String) {
         print("Kreas trie-on por " + kodo)
 		
-        guard let lingvoObjekto = lingvo(porKodo: kodo),
+		guard let lingvoObjekto = Datumbaza.lingvo(porKodo: kodo),
 			  let tradukoj = tradukaro[kodo] else {
 			  return
 		  }
@@ -92,7 +92,7 @@ final class TrieFarilo {
 						if let senco = senco {
 							novaDestino.setValue(String(senco), forKey: "senco")
 						}
-						if let artikolo = artikolo(porIndekso: indekso) {
+						if let artikolo = Datumbaza.artikolo(porIndekso: indekso) {
 							novaDestino.setValue(artikolo, forKey: "artikolo")
 						}
 						nunNodo?.mutableOrderedSetValue(forKey: "destinoj").add(novaDestino)
@@ -107,15 +107,6 @@ final class TrieFarilo {
     }
 	
 	// MARK: - Helpiloj
-	
-	/// Liveras NSManagedObject-on reprezentantan lingvon havantan la donatan kodon
-	private func lingvo(porKodo kodo: String) -> NSManagedObject? {
-		let serchPeto = NSFetchRequest<NSFetchRequestResult>()
-		serchPeto.entity = NSEntityDescription.entity(forEntityName: "Lingvo", in: konteksto)
-		serchPeto.predicate = NSPredicate(format: "kodo == %@", argumentArray: [kodo])
-		
-		return try! konteksto.fetch(serchPeto).first as? NSManagedObject
-	}
 	
 	/// Liveras ĉiuj komencajn trie-nodojn de certa lingva NSManagedObject
 	func komencajNodojPorLingvo(_ lingvo: NSManagedObject) -> [NSManagedObject] {
@@ -150,15 +141,6 @@ final class TrieFarilo {
 		}
 		
 		return nil
-	}
-	
-	/// Liveras artikolan NSManagedObject-on havantan certan indekson.
-	func artikolo(porIndekso indekso: String) -> NSManagedObject? {
-		let serchPeto = NSFetchRequest<NSFetchRequestResult>()
-		serchPeto.entity = NSEntityDescription.entity(forEntityName: "Artikolo", in: konteksto)
-		serchPeto.predicate = NSPredicate(format: "indekso == %@", argumentArray: [indekso])
-
-		return try! konteksto.fetch(serchPeto).first as? NSManagedObject
 	}
 }
 

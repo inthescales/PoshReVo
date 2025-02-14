@@ -45,6 +45,8 @@
 		0008AFA52D5E7201009C3803 /* testiOfcVortojn.ni.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF9E2D5E7200009C3803 /* testiOfcVortojn.ni.json */; };
 		0008AFA62D5E7201009C3803 /* testiOfcVortojn.not-i.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AF9F2D5E7200009C3803 /* testiOfcVortojn.not-i.json */; };
 		0008AFA72D5E7201009C3803 /* testiOfcVortojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AFA02D5E7201009C3803 /* testiOfcVortojn.Om-o.json */; };
+		0008AFAC2D5E82C7009C3803 /* VortListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AFAB2D5E82C7009C3803 /* VortListoj.swift */; };
+		0008AFAE2D5E8422009C3803 /* DatumbazHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AFAD2D5E8422009C3803 /* DatumbazHelpiloj.swift */; };
 		0049F32E2D2DBDB7002ABBFE /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */; };
 		0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */; };
 		0049F3432D2F5317002ABBFE /* ReVoModelojOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */; };
@@ -273,6 +275,8 @@
 		0008AF9E2D5E7200009C3803 /* testiOfcVortojn.ni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiOfcVortojn.ni.json; sourceTree = "<group>"; };
 		0008AF9F2D5E7200009C3803 /* testiOfcVortojn.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiOfcVortojn.not-i.json"; sourceTree = "<group>"; };
 		0008AFA02D5E7201009C3803 /* testiOfcVortojn.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiOfcVortojn.Om-o.json"; sourceTree = "<group>"; };
+		0008AFAB2D5E82C7009C3803 /* VortListoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortListoj.swift; sourceTree = "<group>"; };
+		0008AFAD2D5E8422009C3803 /* DatumbazHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumbazHelpiloj.swift; sourceTree = "<group>"; };
 		00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_DatumbazFariloTestoj.framework; path = "../../../Library/Developer/Xcode/DerivedData/PoshReVo-eifliqqelwuzehalckrzildacjdd/Build/Products/Debug-iphoneos/Pods_DatumbazFariloTestoj.framework"; sourceTree = "<group>"; };
 		0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteroAnalizilo.swift; sourceTree = "<group>"; };
 		0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoAnalizilo.swift; sourceTree = "<group>"; };
@@ -577,8 +581,10 @@
 				0049F3562D31F92D002ABBFE /* Artikoloj */,
 				00BE1ADE2D24B7570027BC22 /* ModelAldonoj */,
 				0049F3522D303970002ABBFE /* KreiDatumbazon.swift */,
+				0008AFAB2D5E82C7009C3803 /* VortListoj.swift */,
 				0049F3692D384D0A002ABBFE /* TekstFarilo.swift */,
 				0049F3682D384D0A002ABBFE /* TrieFarilo.swift */,
+				0008AFAD2D5E8422009C3803 /* DatumbazHelpiloj.swift */,
 				00BE1AD72D24B7450027BC22 /* main.swift */,
 			);
 			path = DatumbazFarilo;
@@ -919,6 +925,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0049F3DE2D552A9C002ABBFE /* TraktiSencReferencon.swift in Sources */,
+				0008AFAE2D5E8422009C3803 /* DatumbazHelpiloj.swift in Sources */,
 				0008AF872D5D5363009C3803 /* FakVorto.swift in Sources */,
 				0049F3CC2D5432E6002ABBFE /* TraktiURLon.swift in Sources */,
 				0049F4142D552CBA002ABBFE /* TraktiVortaron.swift in Sources */,
@@ -959,6 +966,7 @@
 				0049F3B32D52A6A2002ABBFE /* VortoFabriko.swift in Sources */,
 				0049F3E82D552B07002ABBFE /* TraktiNomon.swift in Sources */,
 				0049F36A2D384D0A002ABBFE /* TrieFarilo.swift in Sources */,
+				0008AFAC2D5E82C7009C3803 /* VortListoj.swift in Sources */,
 				0008AF982D5E6EE4009C3803 /* OfcVorto.swift in Sources */,
 				0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo.swift in Sources */,
 				0049F4042D552C24002ABBFE /* TraktiGrasan.swift in Sources */,
