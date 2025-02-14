@@ -18,3 +18,19 @@ struct SerchTraduko: Codable {
 	/// Senco al kiu traduko apartenas. Aperas kiel klariga indico apud nomo en serĉrezultoj
 	let senco: Int?
 }
+
+extension SerchTraduko: Serchebla {
+	var subteksto: String? {
+		esperantaNomo
+	}
+	
+	var derivajhMarko: String? {
+		marko
+	}
+
+	var klavoj: [String] {
+		(serchTeksto == videblaTeksto)
+			? [serchTeksto]
+			: [serchTeksto, videblaTeksto]
+	}
+}

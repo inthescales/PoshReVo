@@ -31,11 +31,13 @@ public struct Destino {
         
         self.artikolObjekto = artikolObjekto
         
-        guard let nomo = objekto.value(forKey: "nomo") as? String,
-            let teksto = objekto.value(forKey: "teksto") as? String,
+        guard let teksto = objekto.value(forKey: "teksto") as? String,
             let indekso = objekto.value(forKey: "indekso") as? String else {
                 return nil
         }
+		
+		// Nomo nur necesas se montriĝos subtitolon
+		let nomo = objekto.value(forKey: "nomo") as? String ?? teksto
 
         let marko = objekto.value(forKey: "marko") as? String
         let senco = objekto.value(forKey: "senco") as? String

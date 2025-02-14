@@ -42,7 +42,7 @@ class UzantDatumaro {
         if testTrapaso {
             sharghiTrapasajnDatumojn()
         } else {
-            sharghiJeKonservitajnDatumojn()
+            //sharghiJeKonservitajnDatumojn()
         }
         
         // Se datumoj ne estas trovitaj, starigi bazajn informojn
@@ -213,7 +213,7 @@ class UzantDatumaro {
     
     // Konservi la uzant datumojn por reuzi ghin post rekomenco de la programo
     static func konserviDatumojn() {
-        
+        return
         let defaults = UserDefaults.standard
         
         if konserviSerchLingvon {

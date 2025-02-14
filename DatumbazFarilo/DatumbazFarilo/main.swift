@@ -45,7 +45,11 @@ VortListoj.skribi(ofcVortojn: artikolRezultoj.ofcVortoj, en: konteksto)
 
 // Fari trie-on
 
-let trieFarilo = TrieFarilo(konteksto: konteksto, tradukaro: artikolRezultoj.tradukoj)
+let trieFarilo = TrieFarilo(
+	konteksto: konteksto,
+	serchVortoj: artikolRezultoj.serchVortoj,
+	tradukaro: artikolRezultoj.tradukoj
+)
 trieFarilo.konstruiChiuTrie(kodoj: grundo.lingvoj.map { $0.kodo })
 
 // Generi tekstojn

@@ -15,34 +15,46 @@ import ReVoDatumbazoOSX
 final class TrieFarilo {
 	// TODO: Movi al ReVoDatumbazon?
     let konteksto: NSManagedObjectContext
+	let serchVortoj: [SerchVorto]
 	let tradukaro: [String: [SerchTraduko]]
     
-	init(konteksto: NSManagedObjectContext, tradukaro: [String: [SerchTraduko]]) {
+	init(
+		konteksto: NSManagedObjectContext,
+		serchVortoj: [SerchVorto],
+		tradukaro: [String: [SerchTraduko]]
+	) {
         self.konteksto = konteksto
+		self.serchVortoj = serchVortoj
 		self.tradukaro = tradukaro
     }
     
     func konstruiChiuTrie(kodoj: [String]) {
-        for lingvo in kodoj {
-            konstruiTriePorLingvo(kodo: lingvo)
+		konstruiEsperantanTrieon()
+		
+		for lingvo in kodoj.filter({ kodo in kodo != "eo" }) {
+			konstruiNacilingvanTrieon(kodo: lingvo)
         }
     }
     
-    func konstruiTriePorLingvo(kodo: String) {
-        print("Kreas trie-on por " + kodo)
+	func konstruiEsperantanTrieon() {
+		print("Kreas trie-on por esperanto")
+		aldoni(sercheblajn: serchVortoj, al: Datumbaza.lingvo(porKodo: "eo")!)
+	}
+	
+	func konstruiNacilingvanTrieon(kodo: String) {
+		// 'guard' estas necesa dum testado
+		guard let tradukoj = tradukaro[kodo] else {
+			return
+		}
 		
-		guard let lingvo = Datumbaza.lingvo(porKodo: kodo),
-			  let tradukoj = tradukaro[kodo] else {
-			  return
-		  }
+		print("Kreas trie-on por " + kodo)
+		aldoni(sercheblajn: tradukoj, al: Datumbaza.lingvo(porKodo: kodo)!)
+	}
         
-		for traduko in tradukoj {
+	func aldoni(sercheblajn sercheblaj: [Serchebla], al lingvo: NSManagedObject) {
+		for serchebla in sercheblaj {
 			// TODO: Ĉu necesas aldoni videblaTekston?
-			let klavoj = (traduko.serchTeksto == traduko.videblaTeksto)
-				? [traduko.serchTeksto]
-				: [traduko.serchTeksto, traduko.videblaTeksto]
-			
-			for klavo in klavoj {
+			for klavo in serchebla.klavoj {
 				var nunaNodo: NSManagedObject?
 				
 				for (i, litero) in klavo.lowercased().enumerated() {
@@ -60,7 +72,7 @@ final class TrieFarilo {
 					nunaNodo = sekvaNodo
 				}
 				
-				fariDestinon(el: traduko, por: nunaNodo!, en: konteksto)
+				fariDestinon(el: serchebla, por: nunaNodo!, en: konteksto)
 			}
 		}
 		
@@ -87,18 +99,17 @@ final class TrieFarilo {
 		return novaNodo
 	}
 	
-	/// Kreas destinon el SerchTraduko
-	func fariDestinon(el traduko: SerchTraduko, por nodo: NSManagedObject, en konteksto: NSManagedObjectContext) {
-		guard let artikolo = Datumbaza.artikolo(porIndekso: traduko.indekso) else {
-			assert(false, "Ne trovis artikolon '\(traduko.indekso)'")
+	func fariDestinon(el serchebla: Serchebla, por nodo: NSManagedObject, en konteksto: NSManagedObjectContext) {
+		guard let artikolo = Datumbaza.artikolo(porIndekso: serchebla.indekso) else {
+			assert(false, "Ne trovis artikolon '\(serchebla.indekso)'")
 		}
 		
 		let novaDestino = NSEntityDescription.insertNewObject(forEntityName: "Destino", into: konteksto)
-		novaDestino.setValue(traduko.videblaTeksto, forKey: "teksto")
-		novaDestino.setValue(traduko.indekso, forKey: "indekso")
-		novaDestino.setValue(traduko.esperantaNomo, forKey: "nomo")
-		novaDestino.setValue(traduko.marko, forKey: "marko")
-		traduko.senco.flatMap {	novaDestino.setValue(String($0), forKey: "senco") }
+		novaDestino.setValue(serchebla.videblaTeksto, forKey: "teksto")
+		novaDestino.setValue(serchebla.indekso, forKey: "indekso")
+		novaDestino.setValue(serchebla.subteksto, forKey: "nomo")
+		novaDestino.setValue(serchebla.derivajhMarko, forKey: "marko")
+		serchebla.senco.flatMap { novaDestino.setValue(String($0), forKey: "senco") }
 		novaDestino.setValue(artikolo, forKey: "artikolo")
 		nodo.mutableOrderedSetValue(forKey: "destinoj").add(novaDestino)
 	}

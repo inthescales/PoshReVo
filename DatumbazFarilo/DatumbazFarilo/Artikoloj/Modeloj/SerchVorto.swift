@@ -9,3 +9,25 @@ struct SerchVorto: Codable {
 	/// Marko ene de artikolo al kiu apartenas la nacilingva esprimo
 	let marko: String
 }
+
+extension SerchVorto: Serchebla {
+	var videblaTeksto: String {
+		teksto
+	}
+	
+	var klavoj: [String] {
+		[teksto]
+	}
+	
+	var subteksto: String? {
+		nil
+	}
+	
+	var derivajhMarko: String? {
+		marko
+	}
+	
+	var senco: Int? {
+		nil
+	}
+}

@@ -47,6 +47,8 @@
 		0008AFA72D5E7201009C3803 /* testiOfcVortojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0008AFA02D5E7201009C3803 /* testiOfcVortojn.Om-o.json */; };
 		0008AFAC2D5E82C7009C3803 /* VortListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AFAB2D5E82C7009C3803 /* VortListoj.swift */; };
 		0008AFAE2D5E8422009C3803 /* DatumbazHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AFAD2D5E8422009C3803 /* DatumbazHelpiloj.swift */; };
+		0008AFB02D5FC922009C3803 /* Serchebla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AFAF2D5FC922009C3803 /* Serchebla.swift */; };
+		0008AFB12D5FC947009C3803 /* Serchebla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008AFAF2D5FC922009C3803 /* Serchebla.swift */; };
 		0049F32E2D2DBDB7002ABBFE /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */; };
 		0049F33D2D2F4BD6002ABBFE /* LingvoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */; };
 		0049F3432D2F5317002ABBFE /* ReVoModelojOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */; };
@@ -277,6 +279,7 @@
 		0008AFA02D5E7201009C3803 /* testiOfcVortojn.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiOfcVortojn.Om-o.json"; sourceTree = "<group>"; };
 		0008AFAB2D5E82C7009C3803 /* VortListoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortListoj.swift; sourceTree = "<group>"; };
 		0008AFAD2D5E8422009C3803 /* DatumbazHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumbazHelpiloj.swift; sourceTree = "<group>"; };
+		0008AFAF2D5FC922009C3803 /* Serchebla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serchebla.swift; sourceTree = "<group>"; };
 		00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_DatumbazFariloTestoj.framework; path = "../../../Library/Developer/Xcode/DerivedData/PoshReVo-eifliqqelwuzehalckrzildacjdd/Build/Products/Debug-iphoneos/Pods_DatumbazFariloTestoj.framework"; sourceTree = "<group>"; };
 		0049F32D2D2DBDB7002ABBFE /* LiteroAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteroAnalizilo.swift; sourceTree = "<group>"; };
 		0049F33C2D2F4BD6002ABBFE /* LingvoAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoAnalizilo.swift; sourceTree = "<group>"; };
@@ -441,6 +444,7 @@
 				0049F3A52D52A3FD002ABBFE /* NodTipo.swift */,
 				0049F3572D31F946002ABBFE /* ArtikolNodo.swift */,
 				0049F3A92D52A4B7002ABBFE /* ArtikolTraduko.swift */,
+				0008AFAF2D5FC922009C3803 /* Serchebla.swift */,
 				0049F3AB2D52A561002ABBFE /* SerchTraduko.swift */,
 				0008AF752D5D1249009C3803 /* SerchVorto.swift */,
 				0008AF862D5D5363009C3803 /* FakVorto.swift */,
@@ -877,6 +881,7 @@
 				0049F45F2D596A08002ABBFE /* TraktiIndekson.swift in Sources */,
 				0049F4602D596A08002ABBFE /* TraktiEscepton.swift in Sources */,
 				0049F4612D596A08002ABBFE /* TraktiDerivajhon.swift in Sources */,
+				0008AFB12D5FC947009C3803 /* Serchebla.swift in Sources */,
 				0049F4622D596A08002ABBFE /* TraktiRimarkon.swift in Sources */,
 				0049F4632D596A08002ABBFE /* TraktiTrastrekitan.swift in Sources */,
 				0049F4642D596A08002ABBFE /* TraktiNomon.swift in Sources */,
@@ -975,6 +980,7 @@
 				0049F36D2D3ED0E3002ABBFE /* Posttraktado.swift in Sources */,
 				0049F4082D552C4A002ABBFE /* TraktiOficialecon.swift in Sources */,
 				0049F3F22D552B71002ABBFE /* TraktiCitilon.swift in Sources */,
+				0008AFB02D5FC922009C3803 /* Serchebla.swift in Sources */,
 				0049F3A32D5154FB002ABBFE /* DTDAnalizilo.swift in Sources */,
 				0049F3B82D52A9D2002ABBFE /* Interpreti.swift in Sources */,
 				0049F40A2D552C5A002ABBFE /* TraktiRadikon.swift in Sources */,

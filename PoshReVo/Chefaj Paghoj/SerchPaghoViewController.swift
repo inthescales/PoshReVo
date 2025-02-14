@@ -250,7 +250,8 @@ extension SerchPaghoViewController : UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if serchRezultoj[indexPath.row].1.count == 1 {
+		let destinoj = serchRezultoj[indexPath.row].1
+		if destinoj.count == 1 {
             if let destino = serchRezultoj[indexPath.row].1.first,
                 let artikolo = destino.artikolo(enVortaro: VortaroDatumbazo.komuna) {
                 parent?.navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("serchi baza titolo", comment: ""), style: .plain, target: nil, action: nil)
@@ -260,10 +261,9 @@ extension SerchPaghoViewController : UITableViewDelegate, UITableViewDataSource 
                     (self.navigationController as? ChefaNavigationController)?.montriArtikolon(artikolo)
                 }
             }
-        } else {
+		} else if destinoj.count > 1 {
             let disigilo = VortoDisigiloViewController(endestinoj: serchRezultoj[indexPath.row].1)
             navigationController?.pushViewController(disigilo, animated: true)
-            
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
