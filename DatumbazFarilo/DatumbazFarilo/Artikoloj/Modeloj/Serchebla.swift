@@ -1,9 +1,12 @@
+/// Vorto, frazo, aŭ alia termino kiun oni povos serĉi en la aplikaĵo
 protocol Serchebla {
+	/// Ĉefa teksto kiu montriĝos en serĉrezulo
 	var videblaTeksto: String { get }
 	
-	/// Nomo de esperanta vorto, derivaĵo, aŭ termino
+	/// Subtekso kiu eble aperos flake en rezulto
 	var subteksto: String? { get }
 	
+	/// Ĉiuj serĉeblaj tekstoj kiuj kondukos al sama rezulto
 	var klavoj: [String] { get }
 	
 	/// Indekzo uzata por ligi al artikolo
