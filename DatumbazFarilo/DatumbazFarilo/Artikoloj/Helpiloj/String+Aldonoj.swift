@@ -26,6 +26,16 @@ extension String {
 		return self.trimmingCharacters(in: .whitespacesAndNewlines)
 	}
 	
+	/// Forigi nur komencajn spacojn
+	func tondiKomence() -> String {
+		return self.replacingOccurrences(of: "^\\s+", with: "", options: .regularExpression)
+	}
+	
+	/// Forigi nur finajn spacojn
+	func tondiFine() -> String {
+		return self.replacingOccurrences(of: "\\s+$", with: "", options: .regularExpression)
+	}
+	
 	/// Forigi apudajn kopiojn de signoj (aparte spacoj), lasante nur unu.
 	func kunpremi(_ simbolo: Character = " ") -> String {
 		var rezulto = ""

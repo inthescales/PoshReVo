@@ -248,7 +248,7 @@
       "esperantaNomo" : "grava",
       "indekso" : "grav",
       "marko" : "grav.0a",
-      "serchTeksto" : "těžký ",
+      "serchTeksto" : "těžký",
       "videblaTeksto" : "těžký (důležitý)"
     },
     {
@@ -877,8 +877,8 @@
       "indekso" : "grav",
       "marko" : "grav.0i",
       "senco" : 1,
-      "serchTeksto" : " egyáltalán nem fontos",
-      "videblaTeksto" : "… egyáltalán nem fontos"
+      "serchTeksto" : "egyáltalán nem fontos",
+      "videblaTeksto" : "…egyáltalán nem fontos"
     },
     {
       "esperantaNomo" : "gravi",
@@ -1092,22 +1092,22 @@
       "esperantaNomo" : "grava",
       "indekso" : "grav",
       "marko" : "grav.0a",
-      "serchTeksto" : "重要な [じゅうような]",
-      "videblaTeksto" : "重要な [じゅうような]"
+      "serchTeksto" : "重要な",
+      "videblaTeksto" : "重要な"
     },
     {
       "esperantaNomo" : "grava",
       "indekso" : "grav",
       "marko" : "grav.0a",
-      "serchTeksto" : "重大な [じゅうだいな]",
-      "videblaTeksto" : "重大な [じゅうだいな]"
+      "serchTeksto" : "重大な",
+      "videblaTeksto" : "重大な"
     },
     {
       "esperantaNomo" : "grava",
       "indekso" : "grav",
       "marko" : "grav.0a",
-      "serchTeksto" : "深刻な [しんこくな]",
-      "videblaTeksto" : "深刻な [しんこくな]"
+      "serchTeksto" : "深刻な",
+      "videblaTeksto" : "深刻な"
     },
     {
       "esperantaNomo" : "grave",
@@ -1120,57 +1120,57 @@
       "esperantaNomo" : "grave",
       "indekso" : "grav",
       "marko" : "grav.0e",
-      "serchTeksto" : "重く [おもく]",
-      "videblaTeksto" : "重く [おもく]"
+      "serchTeksto" : "重く",
+      "videblaTeksto" : "重く"
     },
     {
       "esperantaNomo" : "gravi",
       "indekso" : "grav",
       "marko" : "grav.0i",
-      "serchTeksto" : "重大である [じゅうだいである]",
-      "videblaTeksto" : "重大である [じゅうだいである]"
+      "serchTeksto" : "重大である",
+      "videblaTeksto" : "重大である"
     },
     {
       "esperantaNomo" : "gravi",
       "indekso" : "grav",
       "marko" : "grav.0i",
-      "serchTeksto" : "重要である [じゅうようである]",
-      "videblaTeksto" : "重要である [じゅうようである]"
+      "serchTeksto" : "重要である",
+      "videblaTeksto" : "重要である"
     },
     {
       "esperantaNomo" : "gravigi, pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
-      "serchTeksto" : "いっそう重大化する [いっそうじゅうだいかする]",
-      "videblaTeksto" : "いっそう重大化する [いっそうじゅうだいかする]"
+      "serchTeksto" : "いっそう重大化する",
+      "videblaTeksto" : "いっそう重大化する"
     },
     {
       "esperantaNomo" : "gravigi, pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
-      "serchTeksto" : "より深刻化する [よりしんこくかする]",
-      "videblaTeksto" : "より深刻化する [よりしんこくかする]"
+      "serchTeksto" : "より深刻化する",
+      "videblaTeksto" : "より深刻化する"
     },
     {
       "esperantaNomo" : "graveco",
       "indekso" : "grav",
       "marko" : "grav.0eco",
-      "serchTeksto" : "重要性 [じゅうようせい]",
-      "videblaTeksto" : "重要性 [じゅうようせい]"
+      "serchTeksto" : "重要性",
+      "videblaTeksto" : "重要性"
     },
     {
       "esperantaNomo" : "graveco",
       "indekso" : "grav",
       "marko" : "grav.0eco",
-      "serchTeksto" : "重大さ [じゅうだいさ]",
-      "videblaTeksto" : "重大さ [じゅうだいさ]"
+      "serchTeksto" : "重大さ",
+      "videblaTeksto" : "重大さ"
     },
     {
       "esperantaNomo" : "gravulo",
       "indekso" : "grav",
       "marko" : "grav.0ulo",
-      "serchTeksto" : "重要人物 [じゅうようじんぶつ]",
-      "videblaTeksto" : "重要人物 [じゅうようじんぶつ]"
+      "serchTeksto" : "重要人物",
+      "videblaTeksto" : "重要人物"
     },
     {
       "esperantaNomo" : "malgrava",
@@ -1183,29 +1183,29 @@
       "esperantaNomo" : "malgrava",
       "indekso" : "grav",
       "marko" : "grav.mal0a",
-      "serchTeksto" : "取るに足りない [とるにたりない]",
-      "videblaTeksto" : "取るに足りない [とるにたりない]"
+      "serchTeksto" : "取るに足りない",
+      "videblaTeksto" : "取るに足りない"
     },
     {
       "esperantaNomo" : "malgravaĵo",
       "indekso" : "grav",
       "marko" : "grav.mal0ajxo",
-      "serchTeksto" : "ささいな事 [ささいなこと]",
-      "videblaTeksto" : "ささいな事 [ささいなこと]"
+      "serchTeksto" : "ささいな事",
+      "videblaTeksto" : "ささいな事"
     },
     {
       "esperantaNomo" : "malpligravigi",
       "indekso" : "grav",
       "marko" : "grav.malpli0igi",
-      "serchTeksto" : "軽く見なす [かるくみなす]",
-      "videblaTeksto" : "軽く見なす [かるくみなす]"
+      "serchTeksto" : "軽く見なす",
+      "videblaTeksto" : "軽く見なす"
     },
     {
       "esperantaNomo" : "malpligravigi",
       "indekso" : "grav",
       "marko" : "grav.malpli0igi",
-      "serchTeksto" : "酌量する [しゃくりょうする]",
-      "videblaTeksto" : "酌量する [しゃくりょうする]"
+      "serchTeksto" : "酌量する",
+      "videblaTeksto" : "酌量する"
     }
   ],
   "nl" : [
@@ -2218,180 +2218,180 @@
       "esperantaNomo" : "grava",
       "indekso" : "grav",
       "marko" : "grav.0a",
-      "serchTeksto" : "重 [zhòng]",
-      "videblaTeksto" : "重 [zhòng]"
+      "serchTeksto" : "重",
+      "videblaTeksto" : "重"
     },
     {
       "esperantaNomo" : "grava",
       "indekso" : "grav",
       "marko" : "grav.0a",
-      "serchTeksto" : "有地位 [yǒudìwèi]",
-      "videblaTeksto" : "有地位 [yǒudìwèi]"
+      "serchTeksto" : "有地位",
+      "videblaTeksto" : "有地位"
     },
     {
       "esperantaNomo" : "grava",
       "indekso" : "grav",
       "marko" : "grav.0a",
-      "serchTeksto" : "重要 [zhōngyào]",
-      "videblaTeksto" : "重要 [zhōngyào]"
+      "serchTeksto" : "重要",
+      "videblaTeksto" : "重要"
     },
     {
       "esperantaNomo" : "grava",
       "indekso" : "grav",
       "marko" : "grav.0a",
-      "serchTeksto" : "要 [yào]",
-      "videblaTeksto" : "要 [yào]"
+      "serchTeksto" : "要",
+      "videblaTeksto" : "要"
     },
     {
       "esperantaNomo" : "gravigi, pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
-      "serchTeksto" : "強調指出 [qiángdiàozhǐchū]",
-      "videblaTeksto" : "強調指出 [qiángdiàozhǐchū]"
+      "serchTeksto" : "強調指出",
+      "videblaTeksto" : "強調指出"
     },
     {
       "esperantaNomo" : "gravigi, pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
-      "serchTeksto" : "注重 [zhùzhòng]",
-      "videblaTeksto" : "注重 [zhùzhòng]"
+      "serchTeksto" : "注重",
+      "videblaTeksto" : "注重"
     },
     {
       "esperantaNomo" : "graveco",
       "indekso" : "grav",
       "marko" : "grav.0eco",
-      "serchTeksto" : "要紧 [yàojǐn]",
-      "videblaTeksto" : "要紧 [yàojǐn]"
+      "serchTeksto" : "要紧",
+      "videblaTeksto" : "要紧"
     },
     {
       "esperantaNomo" : "graveco",
       "indekso" : "grav",
       "marko" : "grav.0eco",
-      "serchTeksto" : "意函 [yìhán]",
-      "videblaTeksto" : "意函 [yìhán]"
+      "serchTeksto" : "意函",
+      "videblaTeksto" : "意函"
     },
     {
       "esperantaNomo" : "graveco",
       "indekso" : "grav",
       "marko" : "grav.0eco",
-      "serchTeksto" : "輕重 [qīngzhòng]",
-      "videblaTeksto" : "輕重 [qīngzhòng]"
+      "serchTeksto" : "輕重",
+      "videblaTeksto" : "輕重"
     },
     {
       "esperantaNomo" : "graveco",
       "indekso" : "grav",
       "marko" : "grav.0eco",
-      "serchTeksto" : "眷 [juàn]",
-      "videblaTeksto" : "眷 [juàn]"
+      "serchTeksto" : "眷",
+      "videblaTeksto" : "眷"
     },
     {
       "esperantaNomo" : "graveco",
       "indekso" : "grav",
       "marko" : "grav.0eco",
-      "serchTeksto" : "重要性 [zhòngyàoxìng]",
-      "videblaTeksto" : "重要性 [zhòngyàoxìng]"
+      "serchTeksto" : "重要性",
+      "videblaTeksto" : "重要性"
     },
     {
       "esperantaNomo" : "graveco",
       "indekso" : "grav",
       "marko" : "grav.0eco",
-      "serchTeksto" : "关照 [guānzhào]",
-      "videblaTeksto" : "关照 [guānzhào]"
+      "serchTeksto" : "关照",
+      "videblaTeksto" : "关照"
     },
     {
       "esperantaNomo" : "graveco",
       "indekso" : "grav",
       "marko" : "grav.0eco",
-      "serchTeksto" : "涉 [shè]",
-      "videblaTeksto" : "涉 [shè]"
+      "serchTeksto" : "涉",
+      "videblaTeksto" : "涉"
     },
     {
       "esperantaNomo" : "gravulo",
       "indekso" : "grav",
       "marko" : "grav.0ulo",
-      "serchTeksto" : "名人 [míngrén]",
-      "videblaTeksto" : "名人 [míngrén]"
+      "serchTeksto" : "名人",
+      "videblaTeksto" : "名人"
     },
     {
       "esperantaNomo" : "malgrava",
       "indekso" : "grav",
       "marko" : "grav.mal0a",
-      "serchTeksto" : "可忽視 [kěhūshì]",
-      "videblaTeksto" : "可忽視 [kěhūshì]"
+      "serchTeksto" : "可忽視",
+      "videblaTeksto" : "可忽視"
     },
     {
       "esperantaNomo" : "malgrava",
       "indekso" : "grav",
       "marko" : "grav.mal0a",
-      "serchTeksto" : "无意义 [wúyìyì]",
-      "videblaTeksto" : "无意义 [wúyìyì]"
+      "serchTeksto" : "无意义",
+      "videblaTeksto" : "无意义"
     },
     {
       "esperantaNomo" : "malgrava",
       "indekso" : "grav",
       "marko" : "grav.mal0a",
-      "serchTeksto" : "小可 [xiǎokě]",
-      "videblaTeksto" : "小可 [xiǎokě]"
+      "serchTeksto" : "小可",
+      "videblaTeksto" : "小可"
     },
     {
       "esperantaNomo" : "malgrava",
       "indekso" : "grav",
       "marko" : "grav.mal0a",
-      "serchTeksto" : "无关紧要 [wúguānjǐnyào]",
-      "videblaTeksto" : "无关紧要 [wúguānjǐnyào]"
+      "serchTeksto" : "无关紧要",
+      "videblaTeksto" : "无关紧要"
     },
     {
       "esperantaNomo" : "malgrava",
       "indekso" : "grav",
       "marko" : "grav.mal0a",
-      "serchTeksto" : "无几 [wújǐ]",
-      "videblaTeksto" : "无几 [wújǐ]"
+      "serchTeksto" : "无几",
+      "videblaTeksto" : "无几"
     },
     {
       "esperantaNomo" : "malgravaĵo",
       "indekso" : "grav",
       "marko" : "grav.mal0ajxo",
-      "serchTeksto" : "枝節 [zhījié]",
-      "videblaTeksto" : "枝節 [zhījié]"
+      "serchTeksto" : "枝節",
+      "videblaTeksto" : "枝節"
     },
     {
       "esperantaNomo" : "malgravigi",
       "indekso" : "grav",
       "marko" : "grav.mal0igi",
-      "serchTeksto" : "貶低 [biǎndī]",
-      "videblaTeksto" : "貶低 [biǎndī]"
+      "serchTeksto" : "貶低",
+      "videblaTeksto" : "貶低"
     },
     {
       "esperantaNomo" : "vivgrava, vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
-      "serchTeksto" : "生死攸关 [shēngsǐyōuguān]",
-      "videblaTeksto" : "生死攸关 [shēngsǐyōuguān]"
+      "serchTeksto" : "生死攸关",
+      "videblaTeksto" : "生死攸关"
     },
     {
       "esperantaNomo" : "vivgrava, vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
-      "serchTeksto" : "极其重要 [jíqízhòngyào]",
-      "videblaTeksto" : "极其重要 [jíqízhòngyào]"
+      "serchTeksto" : "极其重要",
+      "videblaTeksto" : "极其重要"
     },
     {
       "esperantaNomo" : "vivgrava, vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
-      "serchTeksto" : "生活必需 [shēnghuóbìxū]",
-      "videblaTeksto" : "生活必需 [shēnghuóbìxū]"
+      "serchTeksto" : "生活必需",
+      "videblaTeksto" : "生活必需"
     },
     {
       "esperantaNomo" : "vivgrava, vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
-      "serchTeksto" : "基本 [jīběn]",
-      "videblaTeksto" : "基本 [jīběn]"
+      "serchTeksto" : "基本",
+      "videblaTeksto" : "基本"
     }
   ]
 }

@@ -43,6 +43,7 @@ private struct Oficialeco {
 		aldono(numero: 7),
 		aldono(numero: 8),
 		aldono(numero: 9),
+		aldono(numero: 10),
 		alia,
 		neoficiala
 	]

@@ -103,7 +103,7 @@
       "esperantaNomo" : "ĉi-pere",
       "indekso" : "per",
       "marko" : "per.cxi0e",
-      "serchTeksto" : "гэтым ",
+      "serchTeksto" : "гэтым",
       "videblaTeksto" : "гэтым (напр., дакумэнтам)"
     },
     {
@@ -329,7 +329,7 @@
       "esperantaNomo" : "per",
       "indekso" : "per",
       "marko" : "per.0",
-      "serchTeksto" : "mit ",
+      "serchTeksto" : "mit",
       "videblaTeksto" : "mit (mittels)"
     },
     {
@@ -1076,14 +1076,14 @@
       "esperantaNomo" : "per",
       "indekso" : "per",
       "marko" : "per.0",
-      "serchTeksto" : "-val",
+      "serchTeksto" : "val",
       "videblaTeksto" : "-val(eszközhatározó)"
     },
     {
       "esperantaNomo" : "per",
       "indekso" : "per",
       "marko" : "per.0",
-      "serchTeksto" : "-vel",
+      "serchTeksto" : "vel",
       "videblaTeksto" : "-vel(eszközhatározó)"
     },
     {
@@ -1273,85 +1273,85 @@
       "esperantaNomo" : "pera",
       "indekso" : "per",
       "marko" : "per.0a",
-      "serchTeksto" : "間接の [かんせつの]",
-      "videblaTeksto" : "間接の [かんせつの]"
+      "serchTeksto" : "間接の",
+      "videblaTeksto" : "間接の"
     },
     {
       "esperantaNomo" : "pera",
       "indekso" : "per",
       "marko" : "per.0a",
-      "serchTeksto" : "仲介の [ちゅうかいの]",
-      "videblaTeksto" : "仲介の [ちゅうかいの]"
+      "serchTeksto" : "仲介の",
+      "videblaTeksto" : "仲介の"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
-      "serchTeksto" : "仲介する [ちゅうかいする]",
-      "videblaTeksto" : "仲介する [ちゅうかいする]"
+      "serchTeksto" : "仲介する",
+      "videblaTeksto" : "仲介する"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
-      "serchTeksto" : "取り次ぐ [とりつぐ]",
-      "videblaTeksto" : "取り次ぐ [とりつぐ]"
+      "serchTeksto" : "取り次ぐ",
+      "videblaTeksto" : "取り次ぐ"
     },
     {
       "esperantaNomo" : "perado",
       "indekso" : "per",
       "marko" : "per.0ado",
-      "serchTeksto" : "仲介 [ちゅうかい]",
-      "videblaTeksto" : "仲介 [ちゅうかい]"
+      "serchTeksto" : "仲介",
+      "videblaTeksto" : "仲介"
     },
     {
       "esperantaNomo" : "perado",
       "indekso" : "per",
       "marko" : "per.0ado",
-      "serchTeksto" : "取次 [とりつぎ]",
-      "videblaTeksto" : "取次 [とりつぎ]"
+      "serchTeksto" : "取次",
+      "videblaTeksto" : "取次"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "仲介者 [ちゅうかいしゃ]",
-      "videblaTeksto" : "仲介者 [ちゅうかいしゃ]"
+      "serchTeksto" : "仲介者",
+      "videblaTeksto" : "仲介者"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "取次者 [とりつぎしゃ]",
-      "videblaTeksto" : "取次者 [とりつぎしゃ]"
+      "serchTeksto" : "取次者",
+      "videblaTeksto" : "取次者"
     },
     {
       "esperantaNomo" : "perilo",
       "indekso" : "per",
       "marko" : "per.0ilo",
-      "serchTeksto" : "手段 [しゅだん]",
-      "videblaTeksto" : "手段 [しゅだん]"
+      "serchTeksto" : "手段",
+      "videblaTeksto" : "手段"
     },
     {
       "esperantaNomo" : "perilo",
       "indekso" : "per",
       "marko" : "per.0ilo",
-      "serchTeksto" : "媒体 [ばいたい]",
-      "videblaTeksto" : "媒体 [ばいたい]"
+      "serchTeksto" : "媒体",
+      "videblaTeksto" : "媒体"
     },
     {
       "esperantaNomo" : "senpera",
       "indekso" : "per",
       "marko" : "per.sen0a",
-      "serchTeksto" : "直接の [ちょくせつの]",
-      "videblaTeksto" : "直接の [ちょくせつの]"
+      "serchTeksto" : "直接の",
+      "videblaTeksto" : "直接の"
     },
     {
       "esperantaNomo" : "senpere",
       "indekso" : "per",
       "marko" : "per.sen0e",
-      "serchTeksto" : "直接に [ちょくせつに]",
-      "videblaTeksto" : "直接に [ちょくせつに]"
+      "serchTeksto" : "直接に",
+      "videblaTeksto" : "直接に"
     },
     {
       "esperantaNomo" : "senpere",
@@ -1364,8 +1364,8 @@
       "esperantaNomo" : "pere de",
       "indekso" : "per",
       "marko" : "per.0ede",
-      "serchTeksto" : "を介して ",
-      "videblaTeksto" : "～を介して [をかいして]"
+      "serchTeksto" : "を介して",
+      "videblaTeksto" : "～を介して"
     }
   ],
   "jv" : [
@@ -1685,7 +1685,7 @@
       "esperantaNomo" : "per",
       "indekso" : "per",
       "marko" : "per.0",
-      "serchTeksto" : "dzięki ",
+      "serchTeksto" : "dzięki",
       "videblaTeksto" : "dzięki (komuś\/czemuś)"
     },
     {
@@ -1727,7 +1727,7 @@
       "esperantaNomo" : "perilo",
       "indekso" : "per",
       "marko" : "per.0ilo",
-      "serchTeksto" : "środek  ",
+      "serchTeksto" : "środek",
       "videblaTeksto" : "środek (sposób)"
     },
     {
@@ -2397,466 +2397,466 @@
       "indekso" : "per",
       "marko" : "per.0",
       "senco" : 6,
-      "serchTeksto" : "藉由 [jièyóu]",
-      "videblaTeksto" : "藉由 [jièyóu]"
+      "serchTeksto" : "藉由",
+      "videblaTeksto" : "藉由"
     },
     {
       "esperantaNomo" : "per",
       "indekso" : "per",
       "marko" : "per.0",
-      "serchTeksto" : "藉着 [jièzhe]",
-      "videblaTeksto" : "藉着 [jièzhe]"
+      "serchTeksto" : "藉着",
+      "videblaTeksto" : "藉着"
     },
     {
       "esperantaNomo" : "per",
       "indekso" : "per",
       "marko" : "per.0",
-      "serchTeksto" : "藉著 [jièzhe]",
-      "videblaTeksto" : "藉著 [jièzhe]"
+      "serchTeksto" : "藉著",
+      "videblaTeksto" : "藉著"
     },
     {
       "esperantaNomo" : "per",
       "indekso" : "per",
       "marko" : "per.0",
-      "serchTeksto" : "以心 [yǐxīn]",
-      "videblaTeksto" : "以心 [yǐxīn]"
+      "serchTeksto" : "以心",
+      "videblaTeksto" : "以心"
     },
     {
       "esperantaNomo" : "pera",
       "indekso" : "per",
       "marko" : "per.0a",
-      "serchTeksto" : "間接 [jiànjiē]",
-      "videblaTeksto" : "間接 [jiànjiē]"
+      "serchTeksto" : "間接",
+      "videblaTeksto" : "間接"
     },
     {
       "esperantaNomo" : "pera",
       "indekso" : "per",
       "marko" : "per.0a",
-      "serchTeksto" : "间接 [jiànjiē]",
-      "videblaTeksto" : "间接 [jiànjiē]"
+      "serchTeksto" : "间接",
+      "videblaTeksto" : "间接"
     },
     {
       "esperantaNomo" : "pera",
       "indekso" : "per",
       "marko" : "per.0a",
-      "serchTeksto" : "斡旋 [wòxuán]",
-      "videblaTeksto" : "斡旋 [wòxuán]"
+      "serchTeksto" : "斡旋",
+      "videblaTeksto" : "斡旋"
     },
     {
       "esperantaNomo" : "pera",
       "indekso" : "per",
       "marko" : "per.0a",
-      "serchTeksto" : "非直接 [fēizhíjiē]",
-      "videblaTeksto" : "非直接 [fēizhíjiē]"
+      "serchTeksto" : "非直接",
+      "videblaTeksto" : "非直接"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "劝和 [quànhé]",
-      "videblaTeksto" : "劝和 [quànhé]"
+      "serchTeksto" : "劝和",
+      "videblaTeksto" : "劝和"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "勸和 [quànhé]",
-      "videblaTeksto" : "勸和 [quànhé]"
+      "serchTeksto" : "勸和",
+      "videblaTeksto" : "勸和"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "圆场 [yuánchǎng]",
-      "videblaTeksto" : "圆场 [yuánchǎng]"
+      "serchTeksto" : "圆场",
+      "videblaTeksto" : "圆场"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "圓場 [yuánchǎng]",
-      "videblaTeksto" : "圓場 [yuánchǎng]"
+      "serchTeksto" : "圓場",
+      "videblaTeksto" : "圓場"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "拉皮条 [lāpítiáo]",
-      "videblaTeksto" : "拉皮条 [lāpítiáo]"
+      "serchTeksto" : "拉皮条",
+      "videblaTeksto" : "拉皮条"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "拉皮條 [lāpítiáo]",
-      "videblaTeksto" : "拉皮條 [lāpítiáo]"
+      "serchTeksto" : "拉皮條",
+      "videblaTeksto" : "拉皮條"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "排解 [páijiě]",
-      "videblaTeksto" : "排解 [páijiě]"
+      "serchTeksto" : "排解",
+      "videblaTeksto" : "排解"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "疏解 [shūjiě]",
-      "videblaTeksto" : "疏解 [shūjiě]"
+      "serchTeksto" : "疏解",
+      "videblaTeksto" : "疏解"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "調解 [tiáojiě]",
-      "videblaTeksto" : "調解 [tiáojiě]"
+      "serchTeksto" : "調解",
+      "videblaTeksto" : "調解"
     },
     {
       "esperantaNomo" : "peri",
       "indekso" : "per",
       "marko" : "per.0i",
       "senco" : 1,
-      "serchTeksto" : "调解 [tiáojiě]",
-      "videblaTeksto" : "调解 [tiáojiě]"
+      "serchTeksto" : "调解",
+      "videblaTeksto" : "调解"
     },
     {
       "esperantaNomo" : "perado",
       "indekso" : "per",
       "marko" : "per.0ado",
-      "serchTeksto" : "中介 [zhōngjiè]",
-      "videblaTeksto" : "中介 [zhōngjiè]"
+      "serchTeksto" : "中介",
+      "videblaTeksto" : "中介"
     },
     {
       "esperantaNomo" : "perado",
       "indekso" : "per",
       "marko" : "per.0ado",
-      "serchTeksto" : "中介所 [zhōngjièsuǒ]",
-      "videblaTeksto" : "中介所 [zhōngjièsuǒ]"
+      "serchTeksto" : "中介所",
+      "videblaTeksto" : "中介所"
     },
     {
       "esperantaNomo" : "perado",
       "indekso" : "per",
       "marko" : "per.0ado",
-      "serchTeksto" : "調停 [tiáotíng]",
-      "videblaTeksto" : "調停 [tiáotíng]"
+      "serchTeksto" : "調停",
+      "videblaTeksto" : "調停"
     },
     {
       "esperantaNomo" : "perado",
       "indekso" : "per",
       "marko" : "per.0ado",
-      "serchTeksto" : "调停 [tiáotíng]",
-      "videblaTeksto" : "调停 [tiáotíng]"
+      "serchTeksto" : "调停",
+      "videblaTeksto" : "调停"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "媒 [méi]",
-      "videblaTeksto" : "媒 [méi]"
+      "serchTeksto" : "媒",
+      "videblaTeksto" : "媒"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "中人 [zhōngrén]",
-      "videblaTeksto" : "中人 [zhōngrén]"
+      "serchTeksto" : "中人",
+      "videblaTeksto" : "中人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "中間人 [zhōngjiānrén]",
-      "videblaTeksto" : "中間人 [zhōngjiānrén]"
+      "serchTeksto" : "中間人",
+      "videblaTeksto" : "中間人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "中间人 [zhōngjiānrén]",
-      "videblaTeksto" : "中间人 [zhōngjiānrén]"
+      "serchTeksto" : "中间人",
+      "videblaTeksto" : "中间人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "經紀人 [jīngjìrén]",
-      "videblaTeksto" : "經紀人 [jīngjìrén]"
+      "serchTeksto" : "經紀人",
+      "videblaTeksto" : "經紀人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "经纪人 [jīngjìrén]",
-      "videblaTeksto" : "经纪人 [jīngjìrén]"
+      "serchTeksto" : "经纪人",
+      "videblaTeksto" : "经纪人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "調停者 [tiáotíngzhě]",
-      "videblaTeksto" : "調停者 [tiáotíngzhě]"
+      "serchTeksto" : "調停者",
+      "videblaTeksto" : "調停者"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "调停者 [tiáotíngzhě]",
-      "videblaTeksto" : "调停者 [tiáotíngzhě]"
+      "serchTeksto" : "调停者",
+      "videblaTeksto" : "调停者"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "仲介 [zhòngjiè]",
-      "videblaTeksto" : "仲介 [zhòngjiè]"
+      "serchTeksto" : "仲介",
+      "videblaTeksto" : "仲介"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "介紹人 [jièshàorén]",
-      "videblaTeksto" : "介紹人 [jièshàorén]"
+      "serchTeksto" : "介紹人",
+      "videblaTeksto" : "介紹人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "介绍人 [jièshàorén]",
-      "videblaTeksto" : "介绍人 [jièshàorén]"
+      "serchTeksto" : "介绍人",
+      "videblaTeksto" : "介绍人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "調停人 [tiáotíngrén]",
-      "videblaTeksto" : "調停人 [tiáotíngrén]"
+      "serchTeksto" : "調停人",
+      "videblaTeksto" : "調停人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "调停人 [tiáotíngrén]",
-      "videblaTeksto" : "调停人 [tiáotíngrén]"
+      "serchTeksto" : "调停人",
+      "videblaTeksto" : "调停人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "調解人 [tiáojiěrén]",
-      "videblaTeksto" : "調解人 [tiáojiěrén]"
+      "serchTeksto" : "調解人",
+      "videblaTeksto" : "調解人"
     },
     {
       "esperantaNomo" : "peranto",
       "indekso" : "per",
       "marko" : "per.0anto",
-      "serchTeksto" : "调解人 [tiáojiěrén]",
-      "videblaTeksto" : "调解人 [tiáojiěrén]"
+      "serchTeksto" : "调解人",
+      "videblaTeksto" : "调解人"
     },
     {
       "esperantaNomo" : "edzperanto",
       "indekso" : "per",
       "marko" : "per.edz0anto",
-      "serchTeksto" : "媒 [méi]",
-      "videblaTeksto" : "媒 [méi]"
+      "serchTeksto" : "媒",
+      "videblaTeksto" : "媒"
     },
     {
       "esperantaNomo" : "perilo",
       "indekso" : "per",
       "marko" : "per.0ilo",
-      "serchTeksto" : "中介 [zhōngjiè]",
-      "videblaTeksto" : "中介 [zhōngjiè]"
+      "serchTeksto" : "中介",
+      "videblaTeksto" : "中介"
     },
     {
       "esperantaNomo" : "perilo",
       "indekso" : "per",
       "marko" : "per.0ilo",
-      "serchTeksto" : "介質 [jièzhì]",
-      "videblaTeksto" : "介質 [jièzhì]"
+      "serchTeksto" : "介質",
+      "videblaTeksto" : "介質"
     },
     {
       "esperantaNomo" : "perilo",
       "indekso" : "per",
       "marko" : "per.0ilo",
-      "serchTeksto" : "介质 [jièzhì]",
-      "videblaTeksto" : "介质 [jièzhì]"
+      "serchTeksto" : "介质",
+      "videblaTeksto" : "介质"
     },
     {
       "esperantaNomo" : "perilo",
       "indekso" : "per",
       "marko" : "per.0ilo",
-      "serchTeksto" : "媒介 [méijiè]",
-      "videblaTeksto" : "媒介 [méijiè]"
+      "serchTeksto" : "媒介",
+      "videblaTeksto" : "媒介"
     },
     {
       "esperantaNomo" : "ĉi-pere",
       "indekso" : "per",
       "marko" : "per.cxi0e",
-      "serchTeksto" : "兹 [zī]",
-      "videblaTeksto" : "兹 [zī]"
+      "serchTeksto" : "兹",
+      "videblaTeksto" : "兹"
     },
     {
       "esperantaNomo" : "ĉi-pere",
       "indekso" : "per",
       "marko" : "per.cxi0e",
-      "serchTeksto" : "茲 [zī]",
-      "videblaTeksto" : "茲 [zī]"
+      "serchTeksto" : "茲",
+      "videblaTeksto" : "茲"
     },
     {
       "esperantaNomo" : "ĉi-pere",
       "indekso" : "per",
       "marko" : "per.cxi0e",
-      "serchTeksto" : "特此 [tècǐ]",
-      "videblaTeksto" : "特此 [tècǐ]"
+      "serchTeksto" : "特此",
+      "videblaTeksto" : "特此"
     },
     {
       "esperantaNomo" : "senpera",
       "indekso" : "per",
       "marko" : "per.sen0a",
-      "serchTeksto" : "迳直 [jìngzhí]",
-      "videblaTeksto" : "迳直 [jìngzhí]"
+      "serchTeksto" : "迳直",
+      "videblaTeksto" : "迳直"
     },
     {
       "esperantaNomo" : "senpera",
       "indekso" : "per",
       "marko" : "per.sen0a",
-      "serchTeksto" : "逕直 [jìngzhí]",
-      "videblaTeksto" : "逕直 [jìngzhí]"
+      "serchTeksto" : "逕直",
+      "videblaTeksto" : "逕直"
     },
     {
       "esperantaNomo" : "senpera",
       "indekso" : "per",
       "marko" : "per.sen0a",
-      "serchTeksto" : "直接 [zhíjiē]",
-      "videblaTeksto" : "直接 [zhíjiē]"
+      "serchTeksto" : "直接",
+      "videblaTeksto" : "直接"
     },
     {
       "esperantaNomo" : "senpera",
       "indekso" : "per",
       "marko" : "per.sen0a",
-      "serchTeksto" : "径直 [jìngzhí]",
-      "videblaTeksto" : "径直 [jìngzhí]"
+      "serchTeksto" : "径直",
+      "videblaTeksto" : "径直"
     },
     {
       "esperantaNomo" : "senpera",
       "indekso" : "per",
       "marko" : "per.sen0a",
-      "serchTeksto" : "徑直 [jìngzhí]",
-      "videblaTeksto" : "徑直 [jìngzhí]"
+      "serchTeksto" : "徑直",
+      "videblaTeksto" : "徑直"
     },
     {
       "esperantaNomo" : "senpera",
       "indekso" : "per",
       "marko" : "per.sen0a",
-      "serchTeksto" : "成方形 [chéngfāngxíng]",
-      "videblaTeksto" : "成方形 [chéngfāngxíng]"
+      "serchTeksto" : "成方形",
+      "videblaTeksto" : "成方形"
     },
     {
       "esperantaNomo" : "senpera",
       "indekso" : "per",
       "marko" : "per.sen0a",
-      "serchTeksto" : "照直 [zhàozhí]",
-      "videblaTeksto" : "照直 [zhàozhí]"
+      "serchTeksto" : "照直",
+      "videblaTeksto" : "照直"
     },
     {
       "esperantaNomo" : "senpera",
       "indekso" : "per",
       "marko" : "per.sen0a",
-      "serchTeksto" : "直按 [zhíàn]",
-      "videblaTeksto" : "直按 [zhíàn]"
+      "serchTeksto" : "直按",
+      "videblaTeksto" : "直按"
     },
     {
       "esperantaNomo" : "senpere",
       "indekso" : "per",
       "marko" : "per.sen0e",
-      "serchTeksto" : "一径 [yījìng]",
-      "videblaTeksto" : "一径 [yījìng]"
+      "serchTeksto" : "一径",
+      "videblaTeksto" : "一径"
     },
     {
       "esperantaNomo" : "senpere",
       "indekso" : "per",
       "marko" : "per.sen0e",
-      "serchTeksto" : "一徑 [yījìng]",
-      "videblaTeksto" : "一徑 [yījìng]"
+      "serchTeksto" : "一徑",
+      "videblaTeksto" : "一徑"
     },
     {
       "esperantaNomo" : "senpere",
       "indekso" : "per",
       "marko" : "per.sen0e",
-      "serchTeksto" : "直 [zhí]",
-      "videblaTeksto" : "直 [zhí]"
+      "serchTeksto" : "直",
+      "videblaTeksto" : "直"
     },
     {
       "esperantaNomo" : "senpere",
       "indekso" : "per",
       "marko" : "per.sen0e",
-      "serchTeksto" : "迎面而來 [yíngmiànérlái]",
-      "videblaTeksto" : "迎面而來 [yíngmiànérlái]"
+      "serchTeksto" : "迎面而來",
+      "videblaTeksto" : "迎面而來"
     },
     {
       "esperantaNomo" : "senpere",
       "indekso" : "per",
       "marko" : "per.sen0e",
-      "serchTeksto" : "迎面而来 [yíngmiànérlái]",
-      "videblaTeksto" : "迎面而来 [yíngmiànérlái]"
+      "serchTeksto" : "迎面而来",
+      "videblaTeksto" : "迎面而来"
     },
     {
       "esperantaNomo" : "pere de",
       "indekso" : "per",
       "marko" : "per.0ede",
-      "serchTeksto" : "藉由 [jièyóu]",
-      "videblaTeksto" : "藉由 [jièyóu]"
+      "serchTeksto" : "藉由",
+      "videblaTeksto" : "藉由"
     },
     {
       "esperantaNomo" : "pere de",
       "indekso" : "per",
       "marko" : "per.0ede",
-      "serchTeksto" : "凭借 [píngjiè]",
-      "videblaTeksto" : "凭借 [píngjiè]"
+      "serchTeksto" : "凭借",
+      "videblaTeksto" : "凭借"
     },
     {
       "esperantaNomo" : "pere de",
       "indekso" : "per",
       "marko" : "per.0ede",
-      "serchTeksto" : "憑借 [píngjiè]",
-      "videblaTeksto" : "憑借 [píngjiè]"
+      "serchTeksto" : "憑借",
+      "videblaTeksto" : "憑借"
     },
     {
       "esperantaNomo" : "pere de",
       "indekso" : "per",
       "marko" : "per.0ede",
-      "serchTeksto" : "凭靠 [píngkào]",
-      "videblaTeksto" : "凭靠 [píngkào]"
+      "serchTeksto" : "凭靠",
+      "videblaTeksto" : "凭靠"
     },
     {
       "esperantaNomo" : "pere de",
       "indekso" : "per",
       "marko" : "per.0ede",
-      "serchTeksto" : "憑靠 [píngkào]",
-      "videblaTeksto" : "憑靠 [píngkào]"
+      "serchTeksto" : "憑靠",
+      "videblaTeksto" : "憑靠"
     },
     {
       "esperantaNomo" : "pere de",
       "indekso" : "per",
       "marko" : "per.0ede",
-      "serchTeksto" : "藉着 [jièzhe]",
-      "videblaTeksto" : "藉着 [jièzhe]"
+      "serchTeksto" : "藉着",
+      "videblaTeksto" : "藉着"
     },
     {
       "esperantaNomo" : "pere de",
       "indekso" : "per",
       "marko" : "per.0ede",
-      "serchTeksto" : "藉著 [jièzhe]",
-      "videblaTeksto" : "藉著 [jièzhe]"
+      "serchTeksto" : "藉著",
+      "videblaTeksto" : "藉著"
     }
   ]
 }

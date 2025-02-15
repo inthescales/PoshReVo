@@ -506,16 +506,16 @@
       "indekso" : "abak",
       "marko" : "abak.0o",
       "senco" : 1,
-      "serchTeksto" : "冠板 [かむりいた]",
-      "videblaTeksto" : "冠板 [かむりいた]"
+      "serchTeksto" : "冠板",
+      "videblaTeksto" : "冠板"
     },
     {
       "esperantaNomo" : "abako",
       "indekso" : "abak",
       "marko" : "abak.0o",
       "senco" : 2,
-      "serchTeksto" : "計算盤 [けいさんばん]",
-      "videblaTeksto" : "計算盤 [けいさんばん]"
+      "serchTeksto" : "計算盤",
+      "videblaTeksto" : "計算盤"
     },
     {
       "esperantaNomo" : "abako",
@@ -750,15 +750,15 @@
       "esperantaNomo" : "abako",
       "indekso" : "abak",
       "marko" : "abak.0o",
-      "serchTeksto" : "算盘 [suànpán]",
-      "videblaTeksto" : "算盘 [suànpán]"
+      "serchTeksto" : "算盘",
+      "videblaTeksto" : "算盘"
     },
     {
       "esperantaNomo" : "abako",
       "indekso" : "abak",
       "marko" : "abak.0o",
-      "serchTeksto" : "算盤 [suànpán]",
-      "videblaTeksto" : "算盤 [suànpán]"
+      "serchTeksto" : "算盤",
+      "videblaTeksto" : "算盤"
     }
   ]
 }

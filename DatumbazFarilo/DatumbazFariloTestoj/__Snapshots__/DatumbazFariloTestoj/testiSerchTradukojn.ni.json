@@ -178,7 +178,7 @@
       "esperantaNomo" : "ni",
       "indekso" : "ni",
       "marko" : "ni.0",
-      "serchTeksto" : "ný ",
+      "serchTeksto" : "ný",
       "videblaTeksto" : "ný (řecké písmeno)"
     },
     {
@@ -684,8 +684,8 @@
       "esperantaNomo" : "ni",
       "indekso" : "ni",
       "marko" : "ni.0",
-      "serchTeksto" : "私たち [わたしたち]",
-      "videblaTeksto" : "私たち [わたしたち]"
+      "serchTeksto" : "私たち",
+      "videblaTeksto" : "私たち"
     },
     {
       "esperantaNomo" : "ni",
@@ -698,8 +698,8 @@
       "esperantaNomo" : "nia",
       "indekso" : "ni",
       "marko" : "ni.0a",
-      "serchTeksto" : "私たちの [わたしたちの]",
-      "videblaTeksto" : "私たちの [わたしたちの]"
+      "serchTeksto" : "私たちの",
+      "videblaTeksto" : "私たちの"
     },
     {
       "esperantaNomo" : "nia",
@@ -1284,7 +1284,7 @@
       "esperantaNomo" : "ni",
       "indekso" : "ni",
       "marko" : "ni.0",
-      "serchTeksto" : "ný ",
+      "serchTeksto" : "ný",
       "videblaTeksto" : "ný (grécke písmeno)"
     },
     {
@@ -1719,7 +1719,7 @@
       "esperantaNomo" : "ni",
       "indekso" : "ni",
       "marko" : "ni.0",
-      "serchTeksto" : "tr. 我們",
+      "serchTeksto" : "我們",
       "videblaTeksto" : "tr. 我們 [wǒmen]"
     },
     {
@@ -1733,7 +1733,7 @@
       "esperantaNomo" : "nia",
       "indekso" : "ni",
       "marko" : "ni.0a",
-      "serchTeksto" : "tr. 我們的",
+      "serchTeksto" : "我們的",
       "videblaTeksto" : "tr. 我們的 [wǒmende]"
     }
   ],

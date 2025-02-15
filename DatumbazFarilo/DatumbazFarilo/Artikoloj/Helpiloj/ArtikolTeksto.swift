@@ -89,11 +89,11 @@ enum ArtikolTeksto {
 	static func mllTeksto(baza: String, tipo: String?) -> String {
 		switch tipo {
 		case "kom":
-			return baza + "…"
+			return baza.tondiFine() + "…"
 		case "mez":
-			return "…" + baza + "…"
+			return "…" + baza.tondi() + "…"
 		case "fin":
-			return "…" + baza
+			return "…" + baza.tondiKomence()
 		case nil:
 			return baza
 		default:

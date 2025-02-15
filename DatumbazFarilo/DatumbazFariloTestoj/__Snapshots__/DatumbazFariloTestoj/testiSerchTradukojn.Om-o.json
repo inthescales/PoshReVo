@@ -4,14 +4,14 @@
       "esperantaNomo" : "Omo",
       "indekso" : "om",
       "marko" : "om.0o",
-      "serchTeksto" : "Ом ",
+      "serchTeksto" : "Ом",
       "videblaTeksto" : "Ом (нямецкі фізык)"
     },
     {
       "esperantaNomo" : "omo",
       "indekso" : "om",
       "marko" : "om.o0o",
-      "serchTeksto" : "ом ",
+      "serchTeksto" : "ом",
       "videblaTeksto" : "ом (адзінка вымярэньня)"
     },
     {
@@ -335,59 +335,59 @@
       "esperantaNomo" : "Omo",
       "indekso" : "om",
       "marko" : "om.0o",
-      "serchTeksto" : "乔治西蒙欧姆 [qiáozhìxīméngōumǔ]",
-      "videblaTeksto" : "乔治西蒙欧姆 [qiáozhìxīméngōumǔ]"
+      "serchTeksto" : "乔治西蒙欧姆",
+      "videblaTeksto" : "乔治西蒙欧姆"
     },
     {
       "esperantaNomo" : "Omo",
       "indekso" : "om",
       "marko" : "om.0o",
-      "serchTeksto" : "喬治西蒙歐姆 [qiáozhìxīméngōumǔ]",
-      "videblaTeksto" : "喬治西蒙歐姆 [qiáozhìxīméngōumǔ]"
+      "serchTeksto" : "喬治西蒙歐姆",
+      "videblaTeksto" : "喬治西蒙歐姆"
     },
     {
       "esperantaNomo" : "Omo",
       "indekso" : "om",
       "marko" : "om.0o",
-      "serchTeksto" : "格奥尔格欧姆 [géàoěrgéōumǔ]",
-      "videblaTeksto" : "格奥尔格欧姆 [géàoěrgéōumǔ]"
+      "serchTeksto" : "格奥尔格欧姆",
+      "videblaTeksto" : "格奥尔格欧姆"
     },
     {
       "esperantaNomo" : "Omo",
       "indekso" : "om",
       "marko" : "om.0o",
-      "serchTeksto" : "格奧爾格歐姆 [géàoěrgéōumǔ]",
-      "videblaTeksto" : "格奧爾格歐姆 [géàoěrgéōumǔ]"
+      "serchTeksto" : "格奧爾格歐姆",
+      "videblaTeksto" : "格奧爾格歐姆"
     },
     {
       "esperantaNomo" : "omo",
       "indekso" : "om",
       "marko" : "om.o0o",
-      "serchTeksto" : "欧姆 [ōumǔ]",
-      "videblaTeksto" : "欧姆 [ōumǔ]"
+      "serchTeksto" : "欧姆",
+      "videblaTeksto" : "欧姆"
     },
     {
       "esperantaNomo" : "omo",
       "indekso" : "om",
       "marko" : "om.o0o",
-      "serchTeksto" : "歐姆 [ōumǔ]",
-      "videblaTeksto" : "歐姆 [ōumǔ]"
+      "serchTeksto" : "歐姆",
+      "videblaTeksto" : "歐姆"
     },
     {
       "esperantaNomo" : "omometro, ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
-      "serchTeksto" : "欧姆计 [ōumǔjì]",
-      "videblaTeksto" : "欧姆计 [ōumǔjì]"
+      "serchTeksto" : "欧姆计",
+      "videblaTeksto" : "欧姆计"
     },
     {
       "esperantaNomo" : "omometro, ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
-      "serchTeksto" : "歐姆計 [ōumǔjì]",
-      "videblaTeksto" : "歐姆計 [ōumǔjì]"
+      "serchTeksto" : "歐姆計",
+      "videblaTeksto" : "歐姆計"
     }
   ]
 }

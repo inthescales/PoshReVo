@@ -108,8 +108,8 @@
       "esperantaNomo" : "majoritato, maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
-      "serchTeksto" : "多数派 [たすうは]",
-      "videblaTeksto" : "多数派 [たすうは]"
+      "serchTeksto" : "多数派",
+      "videblaTeksto" : "多数派"
     },
     {
       "esperantaNomo" : "majoritato, maĵorio",
@@ -192,43 +192,43 @@
       "esperantaNomo" : "majoritato, maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
-      "serchTeksto" : "大多数 [dàduōshù]",
-      "videblaTeksto" : "大多数 [dàduōshù]"
+      "serchTeksto" : "大多数",
+      "videblaTeksto" : "大多数"
     },
     {
       "esperantaNomo" : "majoritato, maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
-      "serchTeksto" : "大多數 [dàduōshù]",
-      "videblaTeksto" : "大多數 [dàduōshù]"
+      "serchTeksto" : "大多數",
+      "videblaTeksto" : "大多數"
     },
     {
       "esperantaNomo" : "majoritato, maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
-      "serchTeksto" : "多数 [duōshù]",
-      "videblaTeksto" : "多数 [duōshù]"
+      "serchTeksto" : "多数",
+      "videblaTeksto" : "多数"
     },
     {
       "esperantaNomo" : "majoritato, maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
-      "serchTeksto" : "多數 [duōshù]",
-      "videblaTeksto" : "多數 [duōshù]"
+      "serchTeksto" : "多數",
+      "videblaTeksto" : "多數"
     },
     {
       "esperantaNomo" : "majoritato, maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
-      "serchTeksto" : "大部份 [dàbùfen]",
-      "videblaTeksto" : "大部份 [dàbùfen]"
+      "serchTeksto" : "大部份",
+      "videblaTeksto" : "大部份"
     },
     {
       "esperantaNomo" : "majoritato, maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
-      "serchTeksto" : "大部分 [dàbùfen]",
-      "videblaTeksto" : "大部分 [dàbùfen]"
+      "serchTeksto" : "大部分",
+      "videblaTeksto" : "大部分"
     }
   ]
 }

@@ -4,6 +4,8 @@ import CoreData
 import ReVoModelojOSX
 import ReVoDatumbazoOSX
 
+let komencTempo = Date()
+
 // Indikoj
 
 let radiko = "/Users/robin/Desktop"
@@ -30,6 +32,8 @@ grundo.skribi(json: produktajhIndiko)
 grundo.skribi(en: konteksto)
 
 // Legi artikolojn
+let finTempo = Date()
+let dauro = finTempo.timeIntervalSince(komencTempo)
 
 print("Legas artikolojn")
 
@@ -56,4 +60,5 @@ prefiksArboFarilo.konstruiChiunArbon(kodoj: grundo.lingvoj.map { $0.kodo })
 
 // TekstFarilo.generiTekstojn(fakoj: fakoj, mallongigoj: mallongigoj, destinIndiko: produktajhIndiko)
 
-print("All done :)")
+print("Ĉion finis :)")
+print("- Daŭris " + DateComponentsFormatter().string(from: dauro)!)

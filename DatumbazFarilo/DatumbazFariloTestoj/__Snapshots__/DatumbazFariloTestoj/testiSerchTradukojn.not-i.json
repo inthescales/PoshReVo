@@ -158,7 +158,7 @@
       "esperantaNomo" : "kurznoto",
       "indekso" : "not",
       "marko" : "not.kurz0o",
-      "serchTeksto" : "катыроўка ",
+      "serchTeksto" : "катыроўка",
       "videblaTeksto" : "катыроўка (біржавая)"
     },
     {
@@ -172,7 +172,7 @@
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "зноска ",
+      "serchTeksto" : "зноска",
       "videblaTeksto" : "зноска (у тэксьце)"
     }
   ],
@@ -478,7 +478,7 @@
       "esperantaNomo" : "piednoti",
       "indekso" : "not",
       "marko" : "not.pied0i",
-      "serchTeksto" : "anmerken ",
+      "serchTeksto" : "anmerken",
       "videblaTeksto" : "anmerken (per Fußnote)"
     },
     {
@@ -882,102 +882,102 @@
       "indekso" : "not",
       "marko" : "not.0i",
       "senco" : 1,
-      "serchTeksto" : "メモする [めもする]",
-      "videblaTeksto" : "メモする [めもする]"
+      "serchTeksto" : "メモする",
+      "videblaTeksto" : "メモする"
     },
     {
       "esperantaNomo" : "noti",
       "indekso" : "not",
       "marko" : "not.0i",
       "senco" : 1,
-      "serchTeksto" : "覚書する [おぼえがきする]",
-      "videblaTeksto" : "覚書する [おぼえがきする]"
+      "serchTeksto" : "覚書する",
+      "videblaTeksto" : "覚書する"
     },
     {
       "esperantaNomo" : "noti",
       "indekso" : "not",
       "marko" : "not.0i",
       "senco" : 2,
-      "serchTeksto" : "記憶に留める [きおくにとどめる]",
-      "videblaTeksto" : "記憶に留める [きおくにとどめる]"
+      "serchTeksto" : "記憶に留める",
+      "videblaTeksto" : "記憶に留める"
     },
     {
       "esperantaNomo" : "noti",
       "indekso" : "not",
       "marko" : "not.0i",
       "senco" : 2,
-      "serchTeksto" : "気に留める [きにとどめる]",
-      "videblaTeksto" : "気に留める [きにとどめる]"
+      "serchTeksto" : "気に留める",
+      "videblaTeksto" : "気に留める"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "メモ [めも]",
-      "videblaTeksto" : "メモ [めも]"
+      "serchTeksto" : "メモ",
+      "videblaTeksto" : "メモ"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "覚書 [おぼえがき]",
-      "videblaTeksto" : "覚書 [おぼえがき]"
+      "serchTeksto" : "覚書",
+      "videblaTeksto" : "覚書"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "注釈 [ちゅうしゃく]",
-      "videblaTeksto" : "注釈 [ちゅうしゃく]"
+      "serchTeksto" : "注釈",
+      "videblaTeksto" : "注釈"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 2,
-      "serchTeksto" : "音符 [おんぷ]",
-      "videblaTeksto" : "音符 [おんぷ]"
+      "serchTeksto" : "音符",
+      "videblaTeksto" : "音符"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 3,
-      "serchTeksto" : "",
-      "videblaTeksto" : "(学業の)成績 [せいせき]"
+      "serchTeksto" : "成績",
+      "videblaTeksto" : "(学業の)成績"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 3,
-      "serchTeksto" : "",
-      "videblaTeksto" : "(学業の)評点 [ひょうてん]"
+      "serchTeksto" : "評点",
+      "videblaTeksto" : "(学業の)評点"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 3,
-      "serchTeksto" : "",
-      "videblaTeksto" : "(テストの)点数 [てんすう]"
+      "serchTeksto" : "点数",
+      "videblaTeksto" : "(テストの)点数"
     },
     {
       "esperantaNomo" : "notoj",
       "indekso" : "not",
       "marko" : "not.0oj",
-      "serchTeksto" : "楽譜 [がくふ]",
-      "videblaTeksto" : "楽譜 [がくふ]"
+      "serchTeksto" : "楽譜",
+      "videblaTeksto" : "楽譜"
     },
     {
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "脚注 [ちゃくちゅう]",
-      "videblaTeksto" : "脚注 [ちゃくちゅう]"
+      "serchTeksto" : "脚注",
+      "videblaTeksto" : "脚注"
     }
   ],
   "jv" : [
@@ -1683,7 +1683,7 @@
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
-      "serchTeksto" : "známka ",
+      "serchTeksto" : "známka",
       "videblaTeksto" : "známka (na vysvedčení)"
     },
     {
@@ -1922,380 +1922,380 @@
       "indekso" : "not",
       "marko" : "not.0i",
       "senco" : 1,
-      "serchTeksto" : "記下 [jìxià]",
-      "videblaTeksto" : "記下 [jìxià]"
+      "serchTeksto" : "記下",
+      "videblaTeksto" : "記下"
     },
     {
       "esperantaNomo" : "noti",
       "indekso" : "not",
       "marko" : "not.0i",
       "senco" : 1,
-      "serchTeksto" : "记下 [jìxià]",
-      "videblaTeksto" : "记下 [jìxià]"
+      "serchTeksto" : "记下",
+      "videblaTeksto" : "记下"
     },
     {
       "esperantaNomo" : "noti",
       "indekso" : "not",
       "marko" : "not.0i",
       "senco" : 1,
-      "serchTeksto" : "开价 [kāijià]",
-      "videblaTeksto" : "开价 [kāijià]"
+      "serchTeksto" : "开价",
+      "videblaTeksto" : "开价"
     },
     {
       "esperantaNomo" : "noti",
       "indekso" : "not",
       "marko" : "not.0i",
       "senco" : 1,
-      "serchTeksto" : "開價 [kāijià]",
-      "videblaTeksto" : "開價 [kāijià]"
-    },
-    {
-      "esperantaNomo" : "noti",
-      "indekso" : "not",
-      "marko" : "not.0i",
-      "senco" : 2,
-      "serchTeksto" : "注 [zhù]",
-      "videblaTeksto" : "注 [zhù]"
+      "serchTeksto" : "開價",
+      "videblaTeksto" : "開價"
     },
     {
       "esperantaNomo" : "noti",
       "indekso" : "not",
       "marko" : "not.0i",
       "senco" : 2,
-      "serchTeksto" : "註 [zhù]",
-      "videblaTeksto" : "註 [zhù]"
+      "serchTeksto" : "注",
+      "videblaTeksto" : "注"
+    },
+    {
+      "esperantaNomo" : "noti",
+      "indekso" : "not",
+      "marko" : "not.0i",
+      "senco" : 2,
+      "serchTeksto" : "註",
+      "videblaTeksto" : "註"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "手記 [shǒujì]",
-      "videblaTeksto" : "手記 [shǒujì]"
+      "serchTeksto" : "手記",
+      "videblaTeksto" : "手記"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "手记 [shǒujì]",
-      "videblaTeksto" : "手记 [shǒujì]"
+      "serchTeksto" : "手记",
+      "videblaTeksto" : "手记"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "便条 [biàntiáo]",
-      "videblaTeksto" : "便条 [biàntiáo]"
+      "serchTeksto" : "便条",
+      "videblaTeksto" : "便条"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "便條 [biàntiáo]",
-      "videblaTeksto" : "便條 [biàntiáo]"
+      "serchTeksto" : "便條",
+      "videblaTeksto" : "便條"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "方便貼 [fāngbiàntiē]",
-      "videblaTeksto" : "方便貼 [fāngbiàntiē]"
+      "serchTeksto" : "方便貼",
+      "videblaTeksto" : "方便貼"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "方便贴 [fāngbiàntiē]",
-      "videblaTeksto" : "方便贴 [fāngbiàntiē]"
+      "serchTeksto" : "方便贴",
+      "videblaTeksto" : "方便贴"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "備忘錄 [bèiwànglù]",
-      "videblaTeksto" : "備忘錄 [bèiwànglù]"
+      "serchTeksto" : "備忘錄",
+      "videblaTeksto" : "備忘錄"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "备忘录 [bèiwànglù]",
-      "videblaTeksto" : "备忘录 [bèiwànglù]"
+      "serchTeksto" : "备忘录",
+      "videblaTeksto" : "备忘录"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "便笺 [biànjiān]",
-      "videblaTeksto" : "便笺 [biànjiān]"
+      "serchTeksto" : "便笺",
+      "videblaTeksto" : "便笺"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 1,
-      "serchTeksto" : "便箋 [biànjiān]",
-      "videblaTeksto" : "便箋 [biànjiān]"
+      "serchTeksto" : "便箋",
+      "videblaTeksto" : "便箋"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 2,
-      "serchTeksto" : "声调 [shēngdiào]",
-      "videblaTeksto" : "声调 [shēngdiào]"
+      "serchTeksto" : "声调",
+      "videblaTeksto" : "声调"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 2,
-      "serchTeksto" : "聲調 [shēngdiào]",
-      "videblaTeksto" : "聲調 [shēngdiào]"
+      "serchTeksto" : "聲調",
+      "videblaTeksto" : "聲調"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 3,
-      "serchTeksto" : "評分 [píngfēn]",
-      "videblaTeksto" : "評分 [píngfēn]"
+      "serchTeksto" : "評分",
+      "videblaTeksto" : "評分"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 3,
-      "serchTeksto" : "评分 [píngfēn]",
-      "videblaTeksto" : "评分 [píngfēn]"
+      "serchTeksto" : "评分",
+      "videblaTeksto" : "评分"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 3,
-      "serchTeksto" : "比分 [bǐfēn]",
-      "videblaTeksto" : "比分 [bǐfēn]"
+      "serchTeksto" : "比分",
+      "videblaTeksto" : "比分"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 3,
-      "serchTeksto" : "成績 [chéngjì]",
-      "videblaTeksto" : "成績 [chéngjì]"
+      "serchTeksto" : "成績",
+      "videblaTeksto" : "成績"
     },
     {
       "esperantaNomo" : "noto",
       "indekso" : "not",
       "marko" : "not.0o",
       "senco" : 3,
-      "serchTeksto" : "成绩 [chéngjì]",
-      "videblaTeksto" : "成绩 [chéngjì]"
+      "serchTeksto" : "成绩",
+      "videblaTeksto" : "成绩"
     },
     {
       "esperantaNomo" : "notoj",
       "indekso" : "not",
       "marko" : "not.0oj",
-      "serchTeksto" : "乐谱 [yuèpǔ]",
-      "videblaTeksto" : "乐谱 [yuèpǔ]"
+      "serchTeksto" : "乐谱",
+      "videblaTeksto" : "乐谱"
     },
     {
       "esperantaNomo" : "notoj",
       "indekso" : "not",
       "marko" : "not.0oj",
-      "serchTeksto" : "樂譜 [yuèpǔ]",
-      "videblaTeksto" : "樂譜 [yuèpǔ]"
+      "serchTeksto" : "樂譜",
+      "videblaTeksto" : "樂譜"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "注释者 [zhùshìzhě]",
-      "videblaTeksto" : "注释者 [zhùshìzhě]"
+      "serchTeksto" : "注释者",
+      "videblaTeksto" : "注释者"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "註釋者 [zhùshìzhě]",
-      "videblaTeksto" : "註釋者 [zhùshìzhě]"
+      "serchTeksto" : "註釋者",
+      "videblaTeksto" : "註釋者"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "詁 [gǔ]",
-      "videblaTeksto" : "詁 [gǔ]"
+      "serchTeksto" : "詁",
+      "videblaTeksto" : "詁"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "诂 [gǔ]",
-      "videblaTeksto" : "诂 [gǔ]"
+      "serchTeksto" : "诂",
+      "videblaTeksto" : "诂"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "評論員 [pínglùnyuán]",
-      "videblaTeksto" : "評論員 [pínglùnyuán]"
+      "serchTeksto" : "評論員",
+      "videblaTeksto" : "評論員"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "评论员 [pínglùnyuán]",
-      "videblaTeksto" : "评论员 [pínglùnyuán]"
+      "serchTeksto" : "评论员",
+      "videblaTeksto" : "评论员"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "注 [zhù]",
-      "videblaTeksto" : "注 [zhù]"
+      "serchTeksto" : "注",
+      "videblaTeksto" : "注"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "註 [zhù]",
-      "videblaTeksto" : "註 [zhù]"
+      "serchTeksto" : "註",
+      "videblaTeksto" : "註"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "注释 [zhùshì]",
-      "videblaTeksto" : "注释 [zhùshì]"
+      "serchTeksto" : "注释",
+      "videblaTeksto" : "注释"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "注釋 [zhùshì]",
-      "videblaTeksto" : "注釋 [zhùshì]"
+      "serchTeksto" : "注釋",
+      "videblaTeksto" : "注釋"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "注释 [zhùshì]",
-      "videblaTeksto" : "注释 [zhùshì]"
+      "serchTeksto" : "注释",
+      "videblaTeksto" : "注释"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "註釋 [zhùshì]",
-      "videblaTeksto" : "註釋 [zhùshì]"
+      "serchTeksto" : "註釋",
+      "videblaTeksto" : "註釋"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "題解 [tíjiě]",
-      "videblaTeksto" : "題解 [tíjiě]"
+      "serchTeksto" : "題解",
+      "videblaTeksto" : "題解"
     },
     {
       "esperantaNomo" : "prinoto",
       "indekso" : "not",
       "marko" : "not.pri0o",
       "senco" : 1,
-      "serchTeksto" : "题解 [tíjiě]",
-      "videblaTeksto" : "题解 [tíjiě]"
+      "serchTeksto" : "题解",
+      "videblaTeksto" : "题解"
     },
     {
       "esperantaNomo" : "diplomatia noto",
       "indekso" : "not",
       "marko" : "not.diplomatia0o",
-      "serchTeksto" : "通牒 [tōngdié]",
-      "videblaTeksto" : "通牒 [tōngdié]"
+      "serchTeksto" : "通牒",
+      "videblaTeksto" : "通牒"
     },
     {
       "esperantaNomo" : "kurznoto",
       "indekso" : "not",
       "marko" : "not.kurz0o",
-      "serchTeksto" : "引用句 [yǐnyòngjù]",
-      "videblaTeksto" : "引用句 [yǐnyòngjù]"
+      "serchTeksto" : "引用句",
+      "videblaTeksto" : "引用句"
     },
     {
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "注脚 [zhùjiǎo]",
-      "videblaTeksto" : "注脚 [zhùjiǎo]"
+      "serchTeksto" : "注脚",
+      "videblaTeksto" : "注脚"
     },
     {
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "註腳 [zhùjiǎo]",
-      "videblaTeksto" : "註腳 [zhùjiǎo]"
+      "serchTeksto" : "註腳",
+      "videblaTeksto" : "註腳"
     },
     {
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "脚注 [jiǎozhù]",
-      "videblaTeksto" : "脚注 [jiǎozhù]"
+      "serchTeksto" : "脚注",
+      "videblaTeksto" : "脚注"
     },
     {
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "腳注 [jiǎozhù]",
-      "videblaTeksto" : "腳注 [jiǎozhù]"
+      "serchTeksto" : "腳注",
+      "videblaTeksto" : "腳注"
     },
     {
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "尾注 [wěizhù]",
-      "videblaTeksto" : "尾注 [wěizhù]"
+      "serchTeksto" : "尾注",
+      "videblaTeksto" : "尾注"
     },
     {
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "尾註 [wěizhù]",
-      "videblaTeksto" : "尾註 [wěizhù]"
+      "serchTeksto" : "尾註",
+      "videblaTeksto" : "尾註"
     },
     {
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "脚注 [jiǎozhù]",
-      "videblaTeksto" : "脚注 [jiǎozhù]"
+      "serchTeksto" : "脚注",
+      "videblaTeksto" : "脚注"
     },
     {
       "esperantaNomo" : "piednoto",
       "indekso" : "not",
       "marko" : "not.pied0o",
-      "serchTeksto" : "腳註 [jiǎozhù]",
-      "videblaTeksto" : "腳註 [jiǎozhù]"
+      "serchTeksto" : "腳註",
+      "videblaTeksto" : "腳註"
     }
   ],
   "zu" : [
