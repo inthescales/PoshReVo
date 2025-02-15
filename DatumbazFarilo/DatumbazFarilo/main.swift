@@ -37,22 +37,29 @@ let dauro = finTempo.timeIntervalSince(komencTempo)
 
 print("Legas artikolojn")
 
-let artikolRezultoj = Artikolaro.legi(el: revoIndiko, grundo: grundo)
-Artikolaro.skribi(artikolojn: artikolRezultoj.artikoloj, en: konteksto)
+let artikolAnalizajho = Artikolaro.legi(el: revoIndiko, grundo: grundo)
+let artikolSkribajho = Artikolaro.skribi(artikolojn: artikolAnalizajho.artikoloj, en: konteksto)
 
 // Skribi vortlistojn
 
 print("Skribas vortlistojn")
 
-VortListoj.skribi(fakVortojn: artikolRezultoj.fakVortoj, en: konteksto)
-VortListoj.skribi(ofcVortojn: artikolRezultoj.ofcVortoj, en: konteksto)
+VortListoj.skribi(
+	fakVortojn: artikolAnalizajho.fakVortoj,
+	artikolObjektoj: artikolSkribajho.artikoloj,
+	en: konteksto)
+VortListoj.skribi(
+	ofcVortojn: artikolAnalizajho.ofcVortoj,
+	artikolObjektoj: artikolSkribajho.artikoloj,
+	en: konteksto
+)
 
 // Fari trie-on
 
 let prefiksArboFarilo = PrefiksArboFarilo(
 	konteksto: konteksto,
-	serchVortoj: artikolRezultoj.serchVortoj,
-	tradukaro: artikolRezultoj.tradukoj
+	serchVortoj: artikolAnalizajho.serchVortoj,
+	tradukaro: artikolAnalizajho.tradukoj
 )
 prefiksArboFarilo.konstruiChiunArbon(kodoj: grundo.lingvoj.map { $0.kodo })
 

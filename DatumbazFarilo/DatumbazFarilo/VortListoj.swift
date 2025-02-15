@@ -5,6 +5,7 @@ import ReVoDatumbazoOSX
 enum VortListoj {
 	static func skribi(
 		fakVortojn fakVortoj: [String: [FakVorto]],
+		artikolObjektoj: [String: NSManagedObject]? = nil,
 		en konteksto: NSManagedObjectContext
 	) {
 		// TODO: Movi al ReVoDatumbazo? Eble movinta FakVorto-n en ReVoModeloj-n
@@ -21,7 +22,8 @@ enum VortListoj {
 				novaDestino.setValue(fakVorto.marko, forKey: "marko")
 				fakVorto.senco.flatMap { novaDestino.setValue(String($0), forKey: "senco") }
 				
-				if let artikolo = Datumbaza.artikolo(porIndekso: fakVorto.indekso) {
+				if let artikolo = artikolObjektoj?[fakVorto.indekso]
+						?? Datumbaza.artikolo(porIndekso: fakVorto.indekso) {
 					novaDestino.setValue(artikolo, forKey: "artikolo")
 					fako.mutableSetValue(forKey: "fakvortoj").add(novaDestino)
 				}
@@ -33,6 +35,7 @@ enum VortListoj {
 	
 	static func skribi(
 		ofcVortojn ofcVortoj: [String: [OfcVorto]],
+		artikolObjektoj: [String: NSManagedObject]? = nil,
 		en konteksto: NSManagedObjectContext
 	) {
 		// TODO: Movi al ReVoDatumbazo? Eble movinta OfcVorto-n en ReVoModeloj-n
@@ -48,7 +51,8 @@ enum VortListoj {
 				novaDestino.setValue(ofcVorto.teksto, forKey: "teksto")
 				novaDestino.setValue(ofcVorto.indekso, forKey: "indekso")
 				
-				if let artikolo = Datumbaza.artikolo(porIndekso: ofcVorto.indekso) {
+				if let artikolo = artikolObjektoj?[ofcVorto.indekso]
+					?? Datumbaza.artikolo(porIndekso: ofcVorto.indekso) {
 					novaDestino.setValue(artikolo, forKey: "artikolo")
 					oficialeco.mutableSetValue(forKey: "ofcvortoj").add(novaDestino)
 				}

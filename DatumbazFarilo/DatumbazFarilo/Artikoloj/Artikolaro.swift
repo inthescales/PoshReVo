@@ -28,6 +28,12 @@ enum Artikolaro {
 		}
 	}
 	
+	/// Rezulto de skribado de artikoloj al datumbazo
+	struct SkribRezulto {
+		/// Artikolaj datumbaz-objektoj, por ke ne endu reserĉi ilin poste
+		let artikoloj: [String: NSManagedObject]
+	}
+	
 	/// Legas ĉiujn artikolojn el certa indikilo kaj liveras ĉiujn artikolo-modelojn kaj serĉ-tradukojn
 	static func legi(el indikilo: String, grundo: Grundo) -> Rezulto {
 		legi(
@@ -119,11 +125,15 @@ enum Artikolaro {
 	public static func skribi(
 		artikolojn artikoloj: [Artikolo],
 		en konteksto: NSManagedObjectContext
-	) {
+	) -> SkribRezulto {
+		var objektoj: [String: NSManagedObject] = [:]
 		for (indekso, artikolo) in artikoloj.enumerated() {
-			artikolo.skribi(en: konteksto, numero: indekso)
+			let novaObjekto = artikolo.skribi(en: konteksto, numero: indekso)
+			objektoj[artikolo.indekso] = novaObjekto
 		}
 		
 		try! konteksto.save()
+		
+		return SkribRezulto(artikoloj: objektoj)
 	}
 }
