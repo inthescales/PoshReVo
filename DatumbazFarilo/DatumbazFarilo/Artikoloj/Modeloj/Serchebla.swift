@@ -1,3 +1,5 @@
+import ReVoDatumbazoOSX
+
 /// Vorto, frazo, aŭ alia termino kiun oni povos serĉi en la aplikaĵo
 protocol Serchebla {
 	/// Ĉefa teksto kiu montriĝos en serĉrezulo

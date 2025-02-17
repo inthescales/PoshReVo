@@ -32,8 +32,6 @@ grundo.skribi(json: produktajhIndiko)
 grundo.skribi(en: konteksto)
 
 // Legi artikolojn
-let finTempo = Date()
-let dauro = finTempo.timeIntervalSince(komencTempo)
 
 print("Legas artikolojn")
 
@@ -59,13 +57,17 @@ VortListoj.skribi(
 let prefiksArboFarilo = PrefiksArboFarilo(
 	konteksto: konteksto,
 	serchVortoj: artikolAnalizajho.serchVortoj,
-	tradukaro: artikolAnalizajho.tradukoj
+	tradukaro: artikolAnalizajho.tradukoj,
+	artikolObjektoj: artikolSkribajho.artikoloj
 )
-prefiksArboFarilo.konstruiChiunArbon(kodoj: grundo.lingvoj.map { $0.kodo })
+prefiksArboFarilo.kreiArbojn()
+prefiksArboFarilo.skribi(en: konteksto)
 
 // Generi tekstojn
 
 // TekstFarilo.generiTekstojn(fakoj: fakoj, mallongigoj: mallongigoj, destinIndiko: produktajhIndiko)
 
 print("Ĉion finis :)")
+
+let dauro = Date().timeIntervalSince(komencTempo)
 print("- Daŭris " + DateComponentsFormatter().string(from: dauro)!)

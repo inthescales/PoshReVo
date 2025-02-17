@@ -37,6 +37,7 @@ func kreiDatumbazon(fontIndiko: String, destino: String) -> NSManagedObjectConte
 	let managedObjectContext: NSManagedObjectContext = {
 		let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
 		managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+		managedObjectContext.undoManager = nil
 		return managedObjectContext
 	}()
 	

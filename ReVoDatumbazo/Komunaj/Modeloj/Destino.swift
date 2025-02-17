@@ -23,6 +23,22 @@ public struct Destino {
     public let marko: String?
     public let senco: String?
     
+	public init(
+		nomo: String,
+		teksto: String,
+		indekso: String,
+		marko: String?,
+		senco: String?,
+		artikolObjekto: NSManagedObject
+	) {
+		self.nomo = nomo
+		self.teksto = teksto
+		self.indekso = indekso
+		self.marko = marko
+		self.senco = senco
+		self.artikolObjekto = artikolObjekto
+	}
+	
     public init?(objekto: NSManagedObject) {
         
         guard let artikolObjekto = objekto.value(forKey: "artikolo") as? NSManagedObject else {

@@ -37,7 +37,7 @@ extension ArboAnalizilo {
 			case .klr:
 				teksto += trakti(klarigon: filo, stato: stato)
 			case .teksto(let filteksto):
-				teksto += filteksto
+				teksto += filteksto.prepari().tondi()
 			default:
 				assert(false, "Neatendita filo")
 			}

@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE vortaro SYSTEM "../dtd/vokoxml.dtd">
+<vortaro>
+<art mrk="$Id: elips.xml,v 1.37 2024/04/07 10:53:48 revo Exp $">
+<kap>
+<ofc>1</ofc>
+<rad>elips</rad>/o
+</kap>
+<drv mrk="elips.0o">
+  <kap><tld/>o</kap>
+  <snc mrk="elips.0o.linio">
+    <uzo tip="fak">MAT</uzo>
+    <fnt><bib>MatTerm</bib><lok>p. 33</lok></fnt>
+    <dif>
+      <ref tip="super" cel="konik.0o">Koniko</ref> kun discentreco
+      malpli granda ol unu:
+      <ekz>
+        <tld/>o havas du fokusojn kaj la sumo de la distancoj de &ccirc;iu
+        punkto de la <tld/>o al &gcirc;iaj fokusoj estas konstanta;
+      </ekz>
+      <ekz>
+        la ombro horizonta de la ombro&jcirc;etilo <frm am="IZ"><k>IZ</k></frm> trairas la <tld/>on en la
+        punkto <frm am="M"><k>M</k></frm>
+        <fnt>
+          <bib>FK</bib>
+        </fnt>;
+      </ekz>
+      <ekz>
+        la <klr>(sunsistemaj)</klr> planedoj la&ubreve;iras <tld/>ojn, kies
+        unu el la fokusoj okupas la suno
+        <klr>(unua <ref cel="kepler.k0a">keplera</ref> le&gcirc;o)</klr>;
+      </ekz>
+      <ekz>
+        la kartezia ekvacio de <tld/>o estas de la tipo
+        <frm
+        am="(x//a)^2+(y//b)^2=1">(<k>x</k>/<k>a</k>)<sup>2</sup>+(<k>y</k>/<k>b</k>)<sup>2</sup>
+        = 1</frm>.
+      </ekz>
+    </dif>
+    <refgrp tip="vid">
+      Atributoj de elipso:
+      <ref cel="centr.0o.elipso">centro</ref>,
+      <ref cel="aks.0o.simetrio">aksoj</ref> (fokusa kaj nefokusa),
+      <ref cel="aks.grandaduon0o">granda duonakso</ref>,
+      <ref cel="aks.malgrandaduon0o">malgranda duonakso</ref>;
+    </refgrp>
+    <refgrp tip="vid">
+      <ref cel="oval.0o">ovalo</ref>,
+      <ref cel="orbit.0o">orbito</ref>
+    </refgrp>
+    <trd lng="be">&c_e;&c_l;&c_ib;&c_p;&c_s;</trd>
+    <trd lng="bg">&c_je;&c_l;&c_i;&c_p;&c_s;&c_a;</trd>
+    <trd lng="de">Ellipse</trd>
+    <trd lng="en">ellipse</trd>
+    <trd lng="es">elipse</trd>
+    <trd lng="fa">&a_b;&f_y;&a_D;&f_y;</trd>
+    <trd lng="pl">elipsa</trd>
+    <trd lng="pt">elipse</trd>
+    <trd lng="ru">&c_e;&c_l;&c_l;&c_i;&c_p;&c_s;</trd>
+    <trdgrp lng="zh">
+      <trd>&#x692D;&#22278; <pr>tu&#x1D2;yu&#xE1;n</pr></trd>,
+      <trd>&#x692D; <pr>tu&#x1D2;</pr></trd>
+    </trdgrp>
+  </snc>
+  <rim>
+    En lingvouzo ellaso de iuj negravaj vortoj nomi&gcirc;as anka&ubreve; <ref tip="hom"
+    cel="elips1.0o">elipso</ref>.
+  </rim>
+  <bld lok="../bld/k_elipso.svg" tip="svg" alt="400" lrg="400">
+    <tld/>o
+  </bld>
+  <trd lng="cs">v&yacute;pustka</trd>
+  <trd lng="fr">ellipse<klr tip="ind"> (math., gram.)</klr></trd>
+  <trdgrp lng="ja">
+    <trd>&#30465;&#30053;  <pr>&#12375;&#12423;&#12358;&#x308A;&#12419;&#x304F;</pr></trd>,
+    <trd>&#26965;&#20870;  <pr>&#12384;&#12360;&#12435;</pr></trd>
+  </trdgrp>
+  <trd lng="nl">ellips</trd>
+  <trd lng="pl">elipsa</trd>
+  <trd lng="sk">v&yacute;pustka</trd>
+  <trdgrp lng="uk">
+    <trd>&c_je;&#x43B;&c_ib;&#x43F;&c_s;</trd>,
+    <trd>&c_je;&#x43B;&c_ib;&#x43F;&c_s;&c_i;&c_s;</trd>
+  </trdgrp>
+</drv>
+</art>
+<!--
+$Log$
+versio 1.37 2024/04/07 10:53:48
+Wolfram Diestel: movis la sencon "ellaso" al aparta artikolo
+
+versio 1.35 2023/10/14 15:49:04
+revo: transskribo per <pr>
+
+versio 1.33 2023/04/02 22:26:21
+Vito Redsky: +trd pl
+
+versio 1.32 2022/04/27 14:38:54
+aktualigo lingvokodoj kaj URL-unuoj
+
+versio 1.31 2022/04/25 11:28:46
+Dmitri Gabinski: + trd be
+
+versio 1.29 2020/02/22 19:10:27
+Wolfram Diestel: svg anst. gif
+
+Revision 1.28  2020/02/14 15:10:19  revo
+Wolfram Diestel: formuloj per am
+
+Revision 1.27  2019/09/27 10:10:22  revo
+-->
+</vortaro>

@@ -1,11 +1,3 @@
-//
-//  TrieFarilo.swift
-//  PoshReVo
-//
-//  Created by Robin Hill on 3/10/16.
-//  Copyright © 2016 Robin Hill. All rights reserved.
-//
-
 import Foundation
 import CoreData
 
@@ -13,141 +5,150 @@ import ReVoDatumbazoOSX
 
 /// Faras prefiksarbon por artikolserĉado
 final class PrefiksArboFarilo {
-	// TODO: Movi al ReVoDatumbazon?
-    let konteksto: NSManagedObjectContext
+	/// Nodo en la prefiksarbo
+	final class Nodo {
+		var sekvaj: [Character: Nodo] = [:]
+		var destinoj: [Destino] = []
+	}
+
+	let konteksto: NSManagedObjectContext
 	let serchVortoj: [SerchVorto]
 	let tradukaro: [String: [SerchTraduko]]
-    
+	let artikolObjektoj: [String: NSManagedObject]
+	
+	var komencajNodoj: [String: [Character: Nodo]] = [:]
+	
 	init(
 		konteksto: NSManagedObjectContext,
 		serchVortoj: [SerchVorto],
-		tradukaro: [String: [SerchTraduko]]
+		tradukaro: [String: [SerchTraduko]],
+		artikolObjektoj: [String: NSManagedObject]
 	) {
-        self.konteksto = konteksto
+		self.konteksto = konteksto
 		self.serchVortoj = serchVortoj
 		self.tradukaro = tradukaro
-    }
-    
-    func konstruiChiunArbon(kodoj: [String]) {
-		konstruiEsperantanArbon()
-		
-		for lingvo in kodoj.filter({ kodo in kodo != "eo" }) {
-			konstruiNacilingvanTrieon(kodo: lingvo)
-        }
-    }
-    
-	func konstruiEsperantanArbon() {
-		print("Kreas prefiksarbon por esperanto")
-		aldoni(sercheblajn: serchVortoj, al: Datumbaza.lingvo(porKodo: "eo")!)
+		self.artikolObjektoj = artikolObjektoj
 	}
 	
-	func konstruiNacilingvanTrieon(kodo: String) {
-		// 'guard' estas necesa dum testado
-		guard let tradukoj = tradukaro[kodo] else {
-			return
+	// MARK: - Arbokonstruado
+	
+	/// Konstrui prefiksarbon por ĉiuj lingvoj, kaj esperantaj derivaĵoj kaj nacilingvaj tradukoj
+	func kreiArbojn() {
+		let datumoj: [(String, [Serchebla])] = [("eo", serchVortoj)] + tradukaro.map { ($0, $1) }
+		for (lingvoKodo, sercheblaj) in datumoj {
+			kreiArbon(por: lingvoKodo, enhavanta: sercheblaj)
 		}
-		
-		print("Kreas prefiksarbon por " + kodo)
-		aldoni(sercheblajn: tradukoj, al: Datumbaza.lingvo(porKodo: kodo)!)
 	}
-        
-	func aldoni(sercheblajn sercheblaj: [Serchebla], al lingvo: NSManagedObject) {
+	
+	/// Krei prefiksarbon por certa lingvo, enhavanta certajn serĉvortojn
+	private func kreiArbon(por lingvoKodo: String, enhavanta sercheblaj: [Serchebla]) {
+		print("Kreas prefiksarbon por " + lingvoKodo)
+		komencajNodoj[lingvoKodo] = [:]
+
 		for serchebla in sercheblaj {
-			// TODO: Ĉu necesas aldoni videblaTekston?
 			for klavo in serchebla.klavoj {
-				var nunaNodo: NSManagedObject?
+				var nunaNodo: Nodo?
 				
 				for (i, litero) in klavo.lowercased().enumerated() {
-					// TODO: Eligi unuan literon el iteracio
 					if i == 0 {
-						nunaNodo = komencaNodo(en: lingvo, kun: String(litero))
-							?? fariKomencanNodon(por: lingvo, litero: String(litero), en: konteksto)
+						nunaNodo = komencajNodoj[lingvoKodo]?[litero]
+							?? fariKomencanNodon(por: lingvoKodo, litero: litero)
 					} else {
-						nunaNodo = sekvaNodo(el: nunaNodo!, kun: String(litero))
-							?? fariSekvanNodon(por: nunaNodo!, litero: String(litero), en: konteksto)
+						nunaNodo = nunaNodo?.sekvaj[litero]
+							?? fariSekvanNodon(por: nunaNodo!, litero: litero)
 					}
 				}
 				
-				fariDestinon(el: serchebla, por: nunaNodo!, en: konteksto)
+				nunaNodo?.destinoj.append(fariDestinon(el: serchebla, por: nunaNodo!))
 			}
 		}
-		
-		try! konteksto.save()
-    }
-	
-	// MARK: - Helpiloj
-	
-	/// Liveras ĉiuj komencajn trie-nodojn de certa lingva
-	private func komencajNodoj(por lingvo: NSManagedObject) -> [NSManagedObject] {
-		return Array(lingvo.value(forKey: "komencajNodoj") as! Set)
 	}
 	
-	/// Liveras komencan trie-nodon por certa lingvo kaj litero
-	private func komencaNodo(en lingvo: NSManagedObject, kun litero: String) -> NSManagedObject? {
-			
-		let nodoj = komencajNodoj(por: lingvo)
-		
-		if let trovo = nodoj.firstIndex(where: {
-			(kontrol: NSManagedObject) -> Bool in
-			return kontrol.value(forKey: "litero") as? String == litero
-		}) {
-			return nodoj[trovo]
-		}
-		
-		return nil
-	}
-	
-	/// Liveras sekvan trie-nodon el certa nodo laŭ certa litero
-	private func sekvaNodo(el nodo: NSManagedObject, kun litero: String) -> NSManagedObject? {
-		if let sekvaj: [NSManagedObject] = (nodo.value(forKey: "sekvajNodoj") as? NSSet)?.allObjects as? [NSManagedObject] {
-			
-			if let trov = sekvaj.firstIndex(where: {
-				(kontrol: NSManagedObject) -> Bool in
-				return kontrol.value(forKey: "litero") as? String == litero
-			}) {
-				return sekvaj[trov]
-			}
-		}
-		
-		return nil
-	}
-	
-	/// Kreas nodon, aldonante ĝin kiel komencan nodon al lingvo
-	private func fariKomencanNodon(por lingvo: NSManagedObject, litero: String, en konteksto: NSManagedObjectContext) -> NSManagedObject {
-		let novaNodo = NSEntityDescription.insertNewObject(forEntityName: "TrieNodo", into: konteksto)
-		novaNodo.setValue(litero, forKey: "litero")
-		lingvo.mutableSetValue(forKey: "komencajNodoj").add(novaNodo)
-		
+	/// Faras nodon kal aldonas ĝin kiel komencan nodon al la lingvo
+	private func fariKomencanNodon(por lingvo: String, litero: Character) -> Nodo {
+		let novaNodo = Nodo()
+		komencajNodoj[lingvo]![litero] = novaNodo
 		return novaNodo
 	}
 	
-	/// Kreas nodon, aldonante ĝin kiel sekvan nodon al alia nodo
-	private func fariSekvanNodon(por nodo: NSManagedObject, litero: String, en konteksto: NSManagedObjectContext) -> NSManagedObject {
-		let novaNodo = NSEntityDescription.insertNewObject(forEntityName: "TrieNodo", into: konteksto)
-		novaNodo.setValue(litero, forKey: "litero")
-		nodo.mutableSetValue(forKey: "sekvajNodoj").add(novaNodo)
-		
+	/// Faras nodon kal aldonas ĝin kiel sekvan nodon al la nodo
+	private func fariSekvanNodon(por nodo: Nodo, litero: Character) -> Nodo {
+		let novaNodo = Nodo()
+		nodo.sekvaj[litero] = novaNodo
 		return novaNodo
 	}
 	
-	/// Kreas destinon, kiu kondukos el nodo al artikolo, kaj skribas ĝin en kontekston
-	func fariDestinon(
-		el serchebla: Serchebla,
-		por nodo: NSManagedObject,
+	/// Faras destinon kaj aldonas ĝin al la nodo
+	private func fariDestinon(el serchebla: Serchebla, por nodo: Nodo) -> Destino {
+		guard let artikolObjekto = artikolObjektoj[serchebla.indekso]
+				?? Datumbaza.artikolo(porIndekso: serchebla.indekso) else {
+			assert(false, "Ne trovis artikolan datumbazobjekton")
+		}
+		
+		return Destino(
+			nomo: serchebla.subteksto ?? serchebla.videblaTeksto,
+			teksto: serchebla.videblaTeksto,
+			indekso: serchebla.indekso,
+			marko: serchebla.derivajhMarko,
+			senco: serchebla.senco.flatMap { String($0) },
+			artikolObjekto: artikolObjekto
+		)
+	}
+	
+	// MARK: - Skribado
+	
+	/// Skribas tutan prefiksarbaron en kontekston
+	func skribi(en konteksto: NSManagedObjectContext) {
+		for (lingvo, komencaj) in komencajNodoj {
+			print("Skribas arbon por " + lingvo)
+			
+			let lingvObjekto = Datumbaza.lingvo(porKodo: lingvo)!
+			for (litero, nodo) in komencaj {
+				let komencNodo = skribi(nodon: nodo, litero: litero, en: konteksto)
+				lingvObjekto.mutableSetValue(forKey: "komencajNodoj").add(komencNodo)
+			}
+			
+			try! konteksto.save()
+		}
+	}
+	
+	/// Skribas nodon, kaj ĝiajn filojn, en datumbazon
+	private func skribi(
+		nodon nodo: Nodo,
+		litero: Character,
 		en konteksto: NSManagedObjectContext
-	) {
-		guard let artikolo = Datumbaza.artikolo(porIndekso: serchebla.indekso) else {
-			assert(false, "Ne trovis artikolon '\(serchebla.indekso)'")
+	) -> NSManagedObject {
+		let novaNodo = NSEntityDescription.insertNewObject(forEntityName: "TrieNodo", into: konteksto)
+		novaNodo.setValue(String(litero), forKey: "litero")
+		
+		for (litero, sekva) in nodo.sekvaj {
+			let sekvaNodo = skribi(nodon: sekva, litero: litero, en: konteksto)
+			novaNodo.mutableSetValue(forKey: "sekvajNodoj").add(sekvaNodo)
+		}
+		
+		for destino in nodo.destinoj {
+			let destinObjekto = skribi(destinon: destino, en: konteksto)
+			novaNodo.mutableOrderedSetValue(forKey: "destinoj").add(destinObjekto)
+		}
+		
+		return novaNodo
+	}
+	
+	/// Skribas destinon en datumbazon
+	private func skribi(destinon destino: Destino, en konteksto: NSManagedObjectContext) -> NSManagedObject {
+		guard let artikolObjekto = artikolObjektoj[destino.indekso]
+				?? Datumbaza.artikolo(porIndekso: destino.indekso) else {
+			assert(false, "Ne trovis artikolan datumbazobjekton")
 		}
 		
 		let novaDestino = NSEntityDescription.insertNewObject(forEntityName: "Destino", into: konteksto)
-		novaDestino.setValue(serchebla.videblaTeksto, forKey: "teksto")
-		novaDestino.setValue(serchebla.indekso, forKey: "indekso")
-		novaDestino.setValue(serchebla.subteksto, forKey: "nomo")
-		novaDestino.setValue(serchebla.derivajhMarko, forKey: "marko")
-		serchebla.senco.flatMap { novaDestino.setValue(String($0), forKey: "senco") }
-		novaDestino.setValue(artikolo, forKey: "artikolo")
-		nodo.mutableOrderedSetValue(forKey: "destinoj").add(novaDestino)
+		novaDestino.setValue(destino.teksto, forKey: "teksto")
+		novaDestino.setValue(destino.indekso, forKey: "indekso")
+		novaDestino.setValue(destino.nomo, forKey: "nomo")
+		novaDestino.setValue(destino.marko, forKey: "marko")
+		novaDestino.setValue(destino.senco, forKey: "senco")
+		novaDestino.setValue(artikolObjekto, forKey: "artikolo")
+		
+		return novaDestino
 	}
 }
-

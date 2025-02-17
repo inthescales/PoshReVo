@@ -1,12 +1,16 @@
 extension ArboAnalizilo {
-	static func trakti(referencGrupon referencGrupo: ArtikolNodo, tipo: String?, stato: Stato) -> String {
-		var teksto = ""
+	static func trakti(
+		referencGrupon referencGrupo: ArtikolNodo,
+		tipo: String?,
+		stato: Stato
+	) -> String {
+		var prefikso = ""
 		switch stato.sibStako.last {
 		case .ref, .refgrp:
-			teksto += " "
+			prefikso += " "
 			break
 		default:
-			teksto += "\n"
+			prefikso += "\n"
 		}
 		
 		let montriSimbolon = {
@@ -21,16 +25,14 @@ extension ArboAnalizilo {
 		if montriSimbolon,
 		   let tipo = tipo,
 		   let simbolo = ArtikolTeksto.refSimbolo(tipo: tipo) {
-			teksto += simbolo + " "
+			prefikso += simbolo + " "
 		}
 		
+		var teksto = ""
 		var refNumero = 0
 		traktiFilojn(de: referencGrupo, stato: stato) { filo in
 			switch filo.tipo {
 			case .ref(_, let cel):
-				if refNumero > 0 {
-					teksto += ", "
-				}
 				teksto += trakti(
 					referencon: filo,
 					tipo: tipo,
@@ -39,13 +41,14 @@ extension ArboAnalizilo {
 					stato: stato
 				)
 				refNumero += 1
-			case .teksto(_):
-				break
+			case .teksto(let filTeksto):
+				teksto += filTeksto.prepari()
 			default:
 				assert(false, "Neatendita filo")
 			}
 		}
+		teksto = teksto.tondi()
 		
-		return teksto
+		return prefikso + teksto
 	}
 }

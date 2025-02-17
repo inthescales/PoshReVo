@@ -1,0 +1,185 @@
+{
+  "be" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "эліпс",
+      "videblaTeksto" : "эліпс"
+    }
+  ],
+  "bg" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "елипса",
+      "videblaTeksto" : "елипса"
+    }
+  ],
+  "cs" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "serchTeksto" : "výpustka",
+      "videblaTeksto" : "výpustka"
+    }
+  ],
+  "de" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "Ellipse",
+      "videblaTeksto" : "Ellipse"
+    }
+  ],
+  "en" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "ellipse",
+      "videblaTeksto" : "ellipse"
+    }
+  ],
+  "es" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "elipse",
+      "videblaTeksto" : "elipse"
+    }
+  ],
+  "fa" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "بیضی",
+      "videblaTeksto" : "بیضی"
+    }
+  ],
+  "fr" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "serchTeksto" : "ellipse",
+      "videblaTeksto" : "ellipse (math., gram.)"
+    }
+  ],
+  "ja" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "serchTeksto" : "省略",
+      "videblaTeksto" : "省略"
+    },
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "serchTeksto" : "楕円",
+      "videblaTeksto" : "楕円"
+    }
+  ],
+  "nl" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "serchTeksto" : "ellips",
+      "videblaTeksto" : "ellips"
+    }
+  ],
+  "pl" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "elipsa",
+      "videblaTeksto" : "elipsa"
+    },
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "serchTeksto" : "elipsa",
+      "videblaTeksto" : "elipsa"
+    }
+  ],
+  "pt" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "elipse",
+      "videblaTeksto" : "elipse"
+    }
+  ],
+  "ru" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "эллипс",
+      "videblaTeksto" : "эллипс"
+    }
+  ],
+  "sk" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "serchTeksto" : "výpustka",
+      "videblaTeksto" : "výpustka"
+    }
+  ],
+  "uk" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "serchTeksto" : "еліпс",
+      "videblaTeksto" : "еліпс"
+    },
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "serchTeksto" : "еліпсис",
+      "videblaTeksto" : "еліпсис"
+    }
+  ],
+  "zh" : [
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "椭圆",
+      "videblaTeksto" : "椭圆"
+    },
+    {
+      "esperantaNomo" : "elipso",
+      "indekso" : "elips",
+      "marko" : "elips.0o",
+      "senco" : 1,
+      "serchTeksto" : "椭",
+      "videblaTeksto" : "椭"
+    }
+  ]
+}
