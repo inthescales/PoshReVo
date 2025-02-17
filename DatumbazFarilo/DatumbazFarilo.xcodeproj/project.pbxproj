@@ -219,6 +219,7 @@
 		00F2234F2D5AA68E00D049A1 /* testiArtikolon.per.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F2234A2D5AA68D00D049A1 /* testiArtikolon.per.json */; };
 		00F223502D5AA68E00D049A1 /* testiArtikolon.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F2234B2D5AA68D00D049A1 /* testiArtikolon.Om-o.json */; };
 		00F223512D5AA68E00D049A1 /* testiArtikolon.ni.json in Resources */ = {isa = PBXBuildFile; fileRef = 00F2234C2D5AA68E00D049A1 /* testiArtikolon.ni.json */; };
+		F47AC4004B31CB2E2A13687C /* Pods_DatumbazFariloTestoj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09403B56AE972D098163B570 /* Pods_DatumbazFariloTestoj.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -393,6 +394,7 @@
 		00F2234A2D5AA68D00D049A1 /* testiArtikolon.per.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiArtikolon.per.json; sourceTree = "<group>"; };
 		00F2234B2D5AA68D00D049A1 /* testiArtikolon.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.Om-o.json"; sourceTree = "<group>"; };
 		00F2234C2D5AA68E00D049A1 /* testiArtikolon.ni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiArtikolon.ni.json; sourceTree = "<group>"; };
+		09403B56AE972D098163B570 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatumbazFariloTestoj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38706F105BC911CCA2168050 /* Pods-DatumbazFariloTestoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.debug.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.debug.xcconfig"; sourceTree = "<group>"; };
 		D6445A9E6D72197DDF4EC2BB /* Pods-DatumbazFariloTestoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.release.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -403,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E604432D5A6FA500757EE6 /* Pods_DatumbazFariloTestoj.framework in Frameworks */,
+				F47AC4004B31CB2E2A13687C /* Pods_DatumbazFariloTestoj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +443,7 @@
 				0059475E2D639BAA00A2A0CF /* ReVoDatumbazoOSX.framework */,
 				0049F3422D2F5317002ABBFE /* ReVoModelojOSX.framework */,
 				00115DB32D5A6F74006E1107 /* Pods_DatumbazFariloTestoj.framework */,
+				09403B56AE972D098163B570 /* Pods_DatumbazFariloTestoj.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

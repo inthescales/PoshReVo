@@ -100,6 +100,13 @@
 			remoteGlobalIDString = 000985961C31F0CB0083DE24;
 			remoteInfo = PoshReVo;
 		};
+		00DE37ED2D63D7CC002D4688 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0049F3332D2F4A8F002ABBFE /* DatumbazFarilo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0049F41B2D5927E2002ABBFE;
+			remoteInfo = DatumbazFariloTestoj;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -337,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				0049F3382D2F4A8F002ABBFE /* DatumbazFarilo */,
+				00DE37EE2D63D7CC002D4688 /* DatumbazFariloTestoj.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -643,6 +651,13 @@
 			fileType = "compiled.mach-o.executable";
 			path = DatumbazFarilo;
 			remoteRef = 0049F3372D2F4A8F002ABBFE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00DE37EE2D63D7CC002D4688 /* DatumbazFariloTestoj.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DatumbazFariloTestoj.xctest;
+			remoteRef = 00DE37ED2D63D7CC002D4688 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
