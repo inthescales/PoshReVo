@@ -55,7 +55,7 @@ enum Artikolaro {
 		mallongigoj: [String: String],
 		urloj: [String: String]
 	) -> Rezulto {
-		//let legotaj = ["elips.xml"]
+		//let legotaj = ["om.xml"]
 		let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
 			.filter { $0.hasSuffix(".xml") }
 		

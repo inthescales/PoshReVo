@@ -46,21 +46,19 @@ final class PrefiksArboFarilo {
 		komencajNodoj[lingvoKodo] = [:]
 
 		for serchebla in sercheblaj {
-			for klavo in serchebla.klavoj {
-				var nunaNodo: Nodo?
-				
-				for (i, litero) in klavo.lowercased().enumerated() {
-					if i == 0 {
-						nunaNodo = komencajNodoj[lingvoKodo]?[litero]
-							?? fariKomencanNodon(por: lingvoKodo, litero: litero)
-					} else {
-						nunaNodo = nunaNodo?.sekvaj[litero]
-							?? fariSekvanNodon(por: nunaNodo!, litero: litero)
-					}
+			var nunaNodo: Nodo?
+			
+			for (i, litero) in serchebla.serchTeksto.lowercased().enumerated() {
+				if i == 0 {
+					nunaNodo = komencajNodoj[lingvoKodo]?[litero]
+						?? fariKomencanNodon(por: lingvoKodo, litero: litero)
+				} else {
+					nunaNodo = nunaNodo?.sekvaj[litero]
+						?? fariSekvanNodon(por: nunaNodo!, litero: litero)
 				}
-				
-				nunaNodo?.destinoj.append(fariDestinon(el: serchebla, por: nunaNodo!))
 			}
+			
+			nunaNodo?.destinoj.append(fariDestinon(el: serchebla, por: nunaNodo!))
 		}
 	}
 	

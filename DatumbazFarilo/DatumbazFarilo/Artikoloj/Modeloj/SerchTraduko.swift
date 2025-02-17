@@ -27,10 +27,4 @@ extension SerchTraduko: Serchebla {
 	var derivajhMarko: String? {
 		marko
 	}
-
-	var klavoj: [String] {
-		(serchTeksto == videblaTeksto)
-			? [serchTeksto]
-			: [serchTeksto, videblaTeksto]
-	}
 }

@@ -1,7 +1,7 @@
 /// Esperanta vorto aŭ derivaĵo kiu estos serĉebla
 struct SerchVorto: Codable {
 	/// Teksto kiun serĉanto devas tajpi, kaj kiu aperos en serĉrezultoj
-	let teksto: String
+	let serchTeksto: String
 	
 	/// Indekzo uzata por ligi al artikolo
 	let indekso: String
@@ -12,11 +12,7 @@ struct SerchVorto: Codable {
 
 extension SerchVorto: Serchebla {
 	var videblaTeksto: String {
-		teksto
-	}
-	
-	var klavoj: [String] {
-		[teksto]
+		serchTeksto
 	}
 	
 	var subteksto: String? {
