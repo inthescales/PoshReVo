@@ -50,8 +50,7 @@ extension OficialecoVortoListoTableViewController {
         let chelo = tableView.dequeueReusableCell(withIdentifier: chelIdentigilo) ?? UITableViewCell()
         let destino = vortoj[indexPath.row]
         
-        let nomo = destino.nomo
-        chelo.textLabel?.text = nomo
+        chelo.textLabel?.text = destino.teksto
         
         chelo.backgroundColor = UzantDatumaro.stilo.bazKoloro
         chelo.textLabel?.textColor = UzantDatumaro.stilo.tekstKoloro

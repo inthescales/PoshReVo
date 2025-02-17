@@ -297,7 +297,7 @@ extension SerchPaghoViewController {
         
         var bonaNomo: String = ""
         if destinoj.count == 1 {
-            bonaNomo = (destinoj.first?.nomo)?.components(separatedBy: ", ").first ?? ""
+            bonaNomo = (destinoj.first?.teksto)?.components(separatedBy: ", ").first ?? ""
             if let senco = destinoj.first?.senco, senco != "0" {
                 bonaNomo += Iloj.superLit(senco)
             }

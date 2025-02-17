@@ -15,9 +15,10 @@ import ReVoModeloj
 import ReVoModelojOSX
 #endif
 
+/// Venigas datumojn el la datumbazo, kaj liveras ilin diversforme (t.e. kiel `Lingvon`, `Fakon`, ktp., kaj ne datumbazobjekton)
 public final class VortaroDatumbazo {
 
-    let alirilo: DatumbazAlirilo
+    private let alirilo: DatumbazAlirilo
 
     public init(konteksto: NSManagedObjectContext) {
         alirilo = DatumbazAlirilo(konteksto: konteksto)

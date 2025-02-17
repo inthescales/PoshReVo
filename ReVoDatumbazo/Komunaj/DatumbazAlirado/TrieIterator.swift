@@ -11,9 +11,10 @@ import CoreData
 
 final class TrieIterator {
 	
+	let locale: Locale
+	
     var nodStaplo = [(String, NSManagedObject)]()
     var destinojRestantaj = [(String, [NSManagedObject])]()
-    let locale: Locale
     var atingisFinon: Bool
     
     init(lingvoKodo: String, peto: String, komencaNodo: NSManagedObject?) {

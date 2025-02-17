@@ -1,11 +1,3 @@
-//
-//  Destino.swift
-//  ReVoModeloj
-//
-//  Created by Robin Hill on 7/4/20.
-//  Copyright © 2020 Robin Hill. All rights reserved.
-//
-
 import Foundation
 import CoreData
 
@@ -15,24 +7,36 @@ import ReVoModeloj
 import ReVoModelojOSX
 #endif
 
+/// Indekso kiu kondukas al loko en artikolo kaj priskribaj informoj, kiu povos aperi en listo
 public struct Destino {
-    let artikolObjekto: NSManagedObject
-    public let nomo: String
+	/// Nomo kiu aperos en serĉrezulto, vortolisto, ktp.
     public let teksto: String
+	
+	/// Subteksto kiu aperos flanke en listo
+    public let subTeksto: String?
+	
+	/// Indekso de la artikolo
     public let indekso: String
+	
+	/// Marko ene de artikolo (pli ofte je derivaĵo)
     public let marko: String?
+	
+	/// Senco ene artikolero
     public let senco: String?
+	
+	/// Datumbazobjekto de la artikolo
+	let artikolObjekto: NSManagedObject
     
 	public init(
-		nomo: String,
 		teksto: String,
+		subTeksto: String,
 		indekso: String,
 		marko: String?,
 		senco: String?,
 		artikolObjekto: NSManagedObject
 	) {
-		self.nomo = nomo
 		self.teksto = teksto
+		self.subTeksto = subTeksto
 		self.indekso = indekso
 		self.marko = marko
 		self.senco = senco
@@ -40,32 +44,26 @@ public struct Destino {
 	}
 	
     public init?(objekto: NSManagedObject) {
-        
-        guard let artikolObjekto = objekto.value(forKey: "artikolo") as? NSManagedObject else {
-            return nil
-        }
-        
-        self.artikolObjekto = artikolObjekto
-        
-        guard let teksto = objekto.value(forKey: "teksto") as? String,
-            let indekso = objekto.value(forKey: "indekso") as? String else {
+        guard let artikolObjekto = objekto.value(forKey: "artikolo") as? NSManagedObject,
+			  let teksto = objekto.value(forKey: "teksto") as? String,
+			  let indekso = objekto.value(forKey: "indekso") as? String else {
                 return nil
         }
 		
 		// Nomo nur necesas se montriĝos subtitolon
-		let nomo = objekto.value(forKey: "nomo") as? String ?? teksto
-
-        let marko = objekto.value(forKey: "marko") as? String
-        let senco = objekto.value(forKey: "senco") as? String
-        
-        self.nomo = nomo
-        self.teksto = teksto
-        self.indekso = indekso
+		let subTeksto = objekto.value(forKey: "nomo") as? String
+		let marko = objekto.value(forKey: "marko") as? String
+		let senco = objekto.value(forKey: "senco") as? String
+		
+		self.teksto = teksto
+		self.subTeksto = subTeksto
+		self.indekso = indekso
         self.marko = marko
         self.senco = senco
+		self.artikolObjekto = artikolObjekto
     }
 
-    
+	/// Kreas artikol-modelon, uzanta grund-informoj el la vortaro
     public func artikolo(enVortaro vortaro: VortaroDatumbazo) -> Artikolo? {
         return Artikolo.elDatumbazObjekto(objekto: artikolObjekto, datumbazo: vortaro)
     }
@@ -75,8 +73,8 @@ public struct Destino {
 
 extension Destino: Equatable {
     public static func ==(lhs: Destino, rhs: Destino) -> Bool {
-        return lhs.nomo == rhs.marko &&
-            lhs.teksto == rhs.teksto &&
+        return lhs.teksto == rhs.marko &&
+            lhs.subTeksto == rhs.subTeksto &&
             lhs.indekso == rhs.indekso &&
             lhs.marko == rhs.marko &&
             lhs.senco == rhs.senco &&
@@ -88,6 +86,6 @@ extension Destino: Equatable {
 
 extension Destino: Comparable {
     public static func < (lhs: Destino, rhs: Destino) -> Bool {
-        return lhs.nomo.compare(rhs.nomo, options: .caseInsensitive, range: nil, locale: Locale(identifier: "eo")) == .orderedAscending
+        return lhs.teksto.compare(rhs.teksto, options: .caseInsensitive, range: nil, locale: Locale(identifier: "eo")) == .orderedAscending
     }
 }

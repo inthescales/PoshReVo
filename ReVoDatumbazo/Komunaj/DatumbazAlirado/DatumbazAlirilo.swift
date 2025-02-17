@@ -94,7 +94,7 @@ final class DatumbazAlirilo {
         return nil
     }
     
-    // MARK: - Kolekto klasojn da objektoj
+    // MARK: - Kolekti klasojn da objektoj
     
     public func vortoj(oficialeco: String) -> [NSManagedObject]? {
         let serchPeto = NSFetchRequest<NSFetchRequestResult>()

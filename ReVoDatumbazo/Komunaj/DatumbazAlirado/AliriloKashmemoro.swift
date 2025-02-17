@@ -13,13 +13,8 @@ import ReVoModelojOSX
 #endif
 
 struct AliriloKashMemorero<K> {
-    var kompleta: Bool
-    var enhavoj: [K]
-    
-    init() {
-        kompleta = false
-        enhavoj = []
-    }
+    var kompleta: Bool = false
+    var enhavoj: [K] = []
 }
 
 struct AliriloKashMemoro {

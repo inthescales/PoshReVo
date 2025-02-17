@@ -84,8 +84,8 @@ final class PrefiksArboFarilo {
 		}
 		
 		return Destino(
-			nomo: serchebla.subteksto ?? serchebla.videblaTeksto,
-			teksto: serchebla.videblaTeksto,
+			teksto: serchebla.subteksto ?? serchebla.videblaTeksto,
+			subTeksto: serchebla.videblaTeksto,
 			indekso: serchebla.indekso,
 			marko: serchebla.derivajhMarko,
 			senco: serchebla.senco.flatMap { String($0) },
@@ -140,9 +140,9 @@ final class PrefiksArboFarilo {
 		}
 		
 		let novaDestino = NSEntityDescription.insertNewObject(forEntityName: "Destino", into: konteksto)
-		novaDestino.setValue(destino.teksto, forKey: "teksto")
+		novaDestino.setValue(destino.subTeksto, forKey: "teksto")
 		novaDestino.setValue(destino.indekso, forKey: "indekso")
-		novaDestino.setValue(destino.nomo, forKey: "nomo")
+		novaDestino.setValue(destino.teksto, forKey: "nomo")
 		novaDestino.setValue(destino.marko, forKey: "marko")
 		novaDestino.setValue(destino.senco, forKey: "senco")
 		novaDestino.setValue(artikolObjekto, forKey: "artikolo")

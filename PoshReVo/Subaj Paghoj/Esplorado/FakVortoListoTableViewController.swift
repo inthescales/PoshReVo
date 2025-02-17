@@ -52,8 +52,7 @@ extension FakVortoListoTableViewController {
         let chelo = tableView.dequeueReusableCell(withIdentifier: chelIdentigilo) ?? UITableViewCell()
         let vortoDestino = vortoj[indexPath.row]
         
-        let nomo = vortoDestino.nomo
-        chelo.textLabel?.text = nomo
+		chelo.textLabel?.text = vortoDestino.teksto
         
         chelo.backgroundColor = UzantDatumaro.stilo.bazKoloro
         chelo.textLabel?.textColor = UzantDatumaro.stilo.tekstKoloro

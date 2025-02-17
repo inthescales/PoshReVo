@@ -164,10 +164,10 @@
 			isa = PBXGroup;
 			children = (
 				00A47A5C24AFE19D00EA9DCF /* AliriloKashmemoro.swift */,
-				003657162309CE250028C21F /* VortaroDatumbazo.swift */,
 				003657192309DB740028C21F /* DatumbazAlirilo.swift */,
 				003657132309CA3F0028C21F /* DatumbazAlirilo+VortSerchado.swift */,
 				0049B22024B154F000B81E15 /* TrieIterator.swift */,
+				003657162309CE250028C21F /* VortaroDatumbazo.swift */,
 			);
 			path = DatumbazAlirado;
 			sourceTree = "<group>";
