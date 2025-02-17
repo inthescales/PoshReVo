@@ -81,7 +81,7 @@ final class PrefiksArboFarilo {
 	/// Faras destinon kaj aldonas ĝin al la nodo
 	private func fariDestinon(el serchebla: Serchebla, por nodo: Nodo) -> Destino {
 		guard let artikolObjekto = artikolObjektoj[serchebla.indekso]
-				?? Datumbaza.artikolo(porIndekso: serchebla.indekso) else {
+				?? Datumbaza.artikolo(porIndekso: serchebla.indekso, en: konteksto) else {
 			assert(false, "Ne trovis artikolan datumbazobjekton")
 		}
 		
@@ -102,7 +102,7 @@ final class PrefiksArboFarilo {
 		for (lingvo, komencaj) in komencajNodoj {
 			print("Skribas arbon por " + lingvo)
 			
-			let lingvObjekto = Datumbaza.lingvo(porKodo: lingvo)!
+			let lingvObjekto = Datumbaza.lingvo(porKodo: lingvo, en: konteksto)!
 			for (litero, nodo) in komencaj {
 				let komencNodo = skribi(nodon: nodo, litero: litero, en: konteksto)
 				lingvObjekto.mutableSetValue(forKey: "komencajNodoj").add(komencNodo)
@@ -137,7 +137,7 @@ final class PrefiksArboFarilo {
 	/// Skribas destinon en datumbazon
 	private func skribi(destinon destino: Destino, en konteksto: NSManagedObjectContext) -> NSManagedObject {
 		guard let artikolObjekto = artikolObjektoj[destino.indekso]
-				?? Datumbaza.artikolo(porIndekso: destino.indekso) else {
+				?? Datumbaza.artikolo(porIndekso: destino.indekso, en: konteksto) else {
 			assert(false, "Ne trovis artikolan datumbazobjekton")
 		}
 		

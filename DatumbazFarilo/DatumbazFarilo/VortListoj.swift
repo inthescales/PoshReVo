@@ -12,7 +12,7 @@ enum VortListoj {
 		
 		for (fako, vortoListo) in fakVortoj {
 			print("Skribas fakon \(fako)")
-			let fako = Datumbaza.fako(porKodo: fako)!
+			let fako = Datumbaza.fako(porKodo: fako, en: konteksto)!
 			
 			for fakVorto in vortoListo {
 				let novaDestino = NSEntityDescription.insertNewObject(forEntityName: "Destino", into: konteksto)
@@ -23,7 +23,7 @@ enum VortListoj {
 				fakVorto.senco.flatMap { novaDestino.setValue(String($0), forKey: "senco") }
 				
 				if let artikolo = artikolObjektoj?[fakVorto.indekso]
-						?? Datumbaza.artikolo(porIndekso: fakVorto.indekso) {
+						?? Datumbaza.artikolo(porIndekso: fakVorto.indekso, en: konteksto) {
 					novaDestino.setValue(artikolo, forKey: "artikolo")
 					fako.mutableSetValue(forKey: "fakvortoj").add(novaDestino)
 				}
@@ -42,7 +42,7 @@ enum VortListoj {
 		
 		for (ofc, vortoListo) in ofcVortoj {
 			print("Skribas oficialecon \(ofc)")
-			let oficialeco = Datumbaza.oficialeco(porKodo: ofc)!
+			let oficialeco = Datumbaza.oficialeco(porKodo: ofc, en: konteksto)!
 			
 			for ofcVorto in vortoListo {
 				
@@ -52,7 +52,7 @@ enum VortListoj {
 				novaDestino.setValue(ofcVorto.indekso, forKey: "indekso")
 				
 				if let artikolo = artikolObjektoj?[ofcVorto.indekso]
-					?? Datumbaza.artikolo(porIndekso: ofcVorto.indekso) {
+					?? Datumbaza.artikolo(porIndekso: ofcVorto.indekso, en: konteksto) {
 					novaDestino.setValue(artikolo, forKey: "artikolo")
 					oficialeco.mutableSetValue(forKey: "ofcvortoj").add(novaDestino)
 				}

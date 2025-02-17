@@ -42,7 +42,9 @@ extension ArboAnalizilo {
 				}
 			}
 			
-			teksto = teksto.tondi()
+			teksto = teksto.prepari().tondi()
+			tildTeksto = tildTeksto.prepari().tondi()
+			
 			stato.artikolFabriko.titolo = teksto
 			
 			// Krei ofcvortojn
@@ -81,9 +83,13 @@ extension ArboAnalizilo {
 					assert(false, "Neatendita filo")
 				}
 			}
-			stato.vortoFabriko?.titolo = teksto.tondi()
-			stato.derivajhNomo = teksto.tondi()
-			stato.derivajhTildo = tildTeksto.tondi()
+			teksto = teksto.prepari().tondi()
+			tildTeksto = tildTeksto.prepari().tondi()
+			
+			stato.vortoFabriko?.titolo = teksto
+			stato.derivajhNomo = teksto
+			stato.derivajhTildo = tildTeksto
+			
 			return KapRezulto(
 				teksto: teksto,
 				tildTeksto: tildTeksto,
@@ -114,8 +120,8 @@ extension ArboAnalizilo {
 				}
 			}
 			
-			teksto = teksto.tondi()
-			tildTeksto = tildTeksto.tondi()
+			teksto = teksto.prepari().tondi()
+			tildTeksto = tildTeksto.prepari().tondi()
 			
 			return KapRezulto(
 				teksto: teksto,

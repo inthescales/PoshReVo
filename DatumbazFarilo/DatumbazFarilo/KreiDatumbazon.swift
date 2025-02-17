@@ -3,10 +3,11 @@ import CoreData
 
 /// Kreas novan datumbazon en destinon el fontoj je la font-indiko, liveras 'managed object' kontekston
 /// Creates a new database at the destination using data in the source path, returns managed object context
-func kreiDatumbazon(fontIndiko: String, destino: String) -> NSManagedObjectContext {
+func kreiDatumbazon(destino: String) -> NSManagedObjectContext {
 	let managedObjectModel: NSManagedObjectModel = {
-		let momdIndiko = URL(fileURLWithPath: fontIndiko + "/test.momd")
-		return NSManagedObjectModel(contentsOf: momdIndiko)!
+		let datumbazBundle = Bundle(identifier: "inthescales.ReVoDatumbazoOSX")!
+		let modelURL = datumbazBundle.url(forResource: "PoshReVoDatumoj", withExtension: "momd")!
+		return NSManagedObjectModel(contentsOf: modelURL)!
 	}()
 
 	let persistentStoreCoordinator: NSPersistentStoreCoordinator = {

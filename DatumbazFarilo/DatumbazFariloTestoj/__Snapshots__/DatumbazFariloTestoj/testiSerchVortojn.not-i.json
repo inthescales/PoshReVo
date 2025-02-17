@@ -7,7 +7,7 @@
   {
     "indekso" : "not",
     "marko" : "not.0o",
-    "teksto" : "noto "
+    "teksto" : "noto"
   },
   {
     "indekso" : "not",
@@ -32,7 +32,7 @@
   {
     "indekso" : "not",
     "marko" : "not.kurz0o",
-    "teksto" : " kurznoto "
+    "teksto" : "kurznoto"
   },
   {
     "indekso" : "not",
@@ -42,6 +42,6 @@
   {
     "indekso" : "not",
     "marko" : "not.pied0o",
-    "teksto" : "piednoto  "
+    "teksto" : "piednoto"
   }
 ]

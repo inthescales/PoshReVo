@@ -6,7 +6,7 @@ enum ArtikolTeksto {
 	
 	/// Supozante ke la ĉeno estas kapteksto havanta plurajn formojn, liveras array-on da formoj
 	static func kapFormoj(por kapTeksto: String) -> [String] {
-		return kapTeksto.split(separator: ", ").map { String($0) }
+		return kapTeksto.split(separator: ", ").map { String($0).tondi() }
 	}
 	
 	/// Litero aperonta antaŭ suberivaĵo (ekz. "A.", "B.", ktp.)
