@@ -15,7 +15,7 @@ import ReVoModelojOSX
 #endif
 
 extension Lingvo {
-	public func skribi(en konteksto: NSManagedObjectContext) {
+	func skribi(en konteksto: NSManagedObjectContext) {
 		let objekto = NSEntityDescription.insertNewObject(forEntityName: "Lingvo", into: konteksto)
 		objekto.setValue(kodo, forKey: "kodo")
 		objekto.setValue(nomo, forKey: "nomo")

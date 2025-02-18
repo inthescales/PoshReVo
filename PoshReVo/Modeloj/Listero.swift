@@ -25,7 +25,7 @@ final class Listero : NSObject, NSSecureCoding {
     static var supportsSecureCoding = true
     
     required convenience init?(coder aDecoder: NSCoder) {
-        if let ennomo = aDecoder.decodeObject(forKey: "nomo") as? String,
+        if let ennomo = aDecoder.decodeObject(forKey: "teksto") as? String,
             let enindekso = aDecoder.decodeObject(forKey: "indekso") as? String {
             self.init(ennomo, enindekso)
         } else {
@@ -34,7 +34,7 @@ final class Listero : NSObject, NSSecureCoding {
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(nomo, forKey: "nomo")
+        aCoder.encode(nomo, forKey: "teksto")
         aCoder.encode(indekso, forKey: "indekso")
     }
 }

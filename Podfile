@@ -11,6 +11,6 @@ end
 
 target 'DatumbazFariloTestoj' do
   platform :macos, "14.5"
-  project 'DatumbazFarilo/DatumbazFarilo'
+  project 'ReVoDatumbazo/ReVoDatumbazo'
   pod 'SnapshotTesting', '~> 1.8.1'
 end

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,11 +33,264 @@
 		0051A6D02309A3690034DFF9 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
 		005270ED24E9A9E2009E17AA /* ReVoModelojOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005270EC24E9A9E2009E17AA /* ReVoModelojOSX.framework */; };
 		005E907B24CCF391002480BF /* ReVoModeloj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049B22B24B1622A00B81E15 /* ReVoModeloj.framework */; };
+		0099FC242D65058C0033EC11 /* KreiDatumbazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCC2D65058B0033EC11 /* KreiDatumbazon.swift */; };
+		0099FC252D65058C0033EC11 /* PrefiksArboFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */; };
+		0099FC262D65058C0033EC11 /* VortListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCE2D65058B0033EC11 /* VortListoj.swift */; };
+		0099FC282D65058C0033EC11 /* TekstFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD02D65058B0033EC11 /* TekstFarilo.swift */; };
+		0099FC292D65058C0033EC11 /* ArtikolTeksto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */; };
+		0099FC2A2D65058C0033EC11 /* Interpreti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD22D65058C0033EC11 /* Interpreti.swift */; };
+		0099FC2B2D65058C0033EC11 /* String+Aldonoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */; };
+		0099FC2C2D65058C0033EC11 /* ArtikolFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD52D65058C0033EC11 /* ArtikolFabriko.swift */; };
+		0099FC2D2D65058C0033EC11 /* SubartikoloFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD62D65058C0033EC11 /* SubartikoloFabriko.swift */; };
+		0099FC2E2D65058C0033EC11 /* VortoFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD72D65058C0033EC11 /* VortoFabriko.swift */; };
+		0099FC2F2D65058C0033EC11 /* ArtikolNodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD92D65058C0033EC11 /* ArtikolNodo.swift */; };
+		0099FC302D65058C0033EC11 /* ArtikolTraduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDA2D65058C0033EC11 /* ArtikolTraduko.swift */; };
+		0099FC312D65058C0033EC11 /* FakVorto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDB2D65058C0033EC11 /* FakVorto.swift */; };
+		0099FC322D65058C0033EC11 /* NodTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDC2D65058C0033EC11 /* NodTipo.swift */; };
+		0099FC332D65058C0033EC11 /* OfcVorto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDD2D65058C0033EC11 /* OfcVorto.swift */; };
+		0099FC342D65058C0033EC11 /* Serchebla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDE2D65058C0033EC11 /* Serchebla.swift */; };
+		0099FC352D65058C0033EC11 /* SerchTraduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDF2D65058C0033EC11 /* SerchTraduko.swift */; };
+		0099FC362D65058C0033EC11 /* SerchVorto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE02D65058C0033EC11 /* SerchVorto.swift */; };
+		0099FC372D65058C0033EC11 /* Stato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE12D65058C0033EC11 /* Stato.swift */; };
+		0099FC382D65058C0033EC11 /* TraktiAltigitan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE32D65058C0033EC11 /* TraktiAltigitan.swift */; };
+		0099FC392D65058C0033EC11 /* TraktiArtikolon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE42D65058C0033EC11 /* TraktiArtikolon.swift */; };
+		0099FC3A2D65058C0033EC11 /* TraktiAutoron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE52D65058C0033EC11 /* TraktiAutoron.swift */; };
+		0099FC3B2D65058C0033EC11 /* TraktiCitilon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE62D65058C0033EC11 /* TraktiCitilon.swift */; };
+		0099FC3C2D65058C0033EC11 /* TraktiDerivajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE72D65058C0033EC11 /* TraktiDerivajhon.swift */; };
+		0099FC3D2D65058C0033EC11 /* TraktiDifinon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE82D65058C0033EC11 /* TraktiDifinon.swift */; };
+		0099FC3E2D65058C0033EC11 /* TraktiEkzemplon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE92D65058C0033EC11 /* TraktiEkzemplon.swift */; };
+		0099FC3F2D65058C0033EC11 /* TraktiEmfazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEA2D65058C0033EC11 /* TraktiEmfazon.swift */; };
+		0099FC402D65058C0033EC11 /* TraktiEscepton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEB2D65058C0033EC11 /* TraktiEscepton.swift */; };
+		0099FC412D65058C0033EC11 /* TraktiFormulon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEC2D65058C0033EC11 /* TraktiFormulon.swift */; };
+		0099FC422D65058C0033EC11 /* TraktiGramatikon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBED2D65058C0033EC11 /* TraktiGramatikon.swift */; };
+		0099FC432D65058C0033EC11 /* TraktiGrasan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEE2D65058C0033EC11 /* TraktiGrasan.swift */; };
+		0099FC442D65058C0033EC11 /* TraktiIndekson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEF2D65058C0033EC11 /* TraktiIndekson.swift */; };
+		0099FC452D65058C0033EC11 /* TraktiIndicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF02D65058C0033EC11 /* TraktiIndicon.swift */; };
+		0099FC462D65058C0033EC11 /* TraktiKapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF12D65058C0033EC11 /* TraktiKapon.swift */; };
+		0099FC472D65058C0033EC11 /* TraktiKlarigon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF22D65058C0033EC11 /* TraktiKlarigon.swift */; };
+		0099FC482D65058C0033EC11 /* TraktiKomunlingvan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF32D65058C0033EC11 /* TraktiKomunlingvan.swift */; };
+		0099FC492D65058C0033EC11 /* TraktiKursivan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF42D65058C0033EC11 /* TraktiKursivan.swift */; };
+		0099FC4A2D65058C0033EC11 /* TraktiListReferencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF52D65058C0033EC11 /* TraktiListReferencon.swift */; };
+		0099FC4B2D65058C0033EC11 /* TraktiMallongigon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF62D65058C0033EC11 /* TraktiMallongigon.swift */; };
+		0099FC4C2D65058C0033EC11 /* TraktiMisstilan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF72D65058C0033EC11 /* TraktiMisstilan.swift */; };
+		0099FC4D2D65058C0033EC11 /* TraktiNacilingvan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF82D65058C0033EC11 /* TraktiNacilingvan.swift */; };
+		0099FC4E2D65058C0033EC11 /* TraktiNomon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF92D65058C0033EC11 /* TraktiNomon.swift */; };
+		0099FC4F2D65058C0033EC11 /* TraktiOficialecon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFA2D65058C0033EC11 /* TraktiOficialecon.swift */; };
+		0099FC502D65058C0033EC11 /* TraktiPrononcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFB2D65058C0033EC11 /* TraktiPrononcon.swift */; };
+		0099FC512D65058C0033EC11 /* TraktiRadikon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFC2D65058C0033EC11 /* TraktiRadikon.swift */; };
+		0099FC522D65058C0033EC11 /* TraktiReferencGrupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFD2D65058C0033EC11 /* TraktiReferencGrupon.swift */; };
+		0099FC532D65058C0033EC11 /* TraktiReferencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFE2D65058C0033EC11 /* TraktiReferencon.swift */; };
+		0099FC542D65058C0033EC11 /* TraktiRimarkon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFF2D65058C0033EC11 /* TraktiRimarkon.swift */; };
+		0099FC552D65058C0033EC11 /* TraktiSencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC002D65058C0033EC11 /* TraktiSencon.swift */; };
+		0099FC562D65058C0033EC11 /* TraktiSencReferencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC012D65058C0033EC11 /* TraktiSencReferencon.swift */; };
+		0099FC572D65058C0033EC11 /* TraktiSubartikolon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC022D65058C0033EC11 /* TraktiSubartikolon.swift */; };
+		0099FC582D65058C0033EC11 /* TraktiSubderivajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC032D65058C0033EC11 /* TraktiSubderivajhon.swift */; };
+		0099FC592D65058C0033EC11 /* TraktiSubsencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC042D65058C0033EC11 /* TraktiSubsencon.swift */; };
+		0099FC5A2D65058C0033EC11 /* TraktiTildon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC052D65058C0033EC11 /* TraktiTildon.swift */; };
+		0099FC5B2D65058C0033EC11 /* TraktiTradukGrupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC062D65058C0033EC11 /* TraktiTradukGrupon.swift */; };
+		0099FC5C2D65058C0033EC11 /* TraktiTradukon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC072D65058C0033EC11 /* TraktiTradukon.swift */; };
+		0099FC5D2D65058C0033EC11 /* TraktiTrastrekitan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC082D65058C0033EC11 /* TraktiTrastrekitan.swift */; };
+		0099FC5E2D65058C0033EC11 /* TraktiURLon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC092D65058C0033EC11 /* TraktiURLon.swift */; };
+		0099FC5F2D65058C0033EC11 /* TraktiUzon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0A2D65058C0033EC11 /* TraktiUzon.swift */; };
+		0099FC602D65058C0033EC11 /* TraktiVariajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0B2D65058C0033EC11 /* TraktiVariajhon.swift */; };
+		0099FC612D65058C0033EC11 /* TraktiVortaron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0C2D65058C0033EC11 /* TraktiVortaron.swift */; };
+		0099FC622D65058C0033EC11 /* TraktiVortSpecon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0D2D65058C0033EC11 /* TraktiVortSpecon.swift */; };
+		0099FC632D65058C0033EC11 /* Antautraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0F2D65058C0033EC11 /* Antautraktado.swift */; };
+		0099FC642D65058C0033EC11 /* ArboAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC102D65058C0033EC11 /* ArboAnalizilo.swift */; };
+		0099FC652D65058C0033EC11 /* ArtikolAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC112D65058C0033EC11 /* ArtikolAnalizilo.swift */; };
+		0099FC662D65058C0033EC11 /* Artikolaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC122D65058C0033EC11 /* Artikolaro.swift */; };
+		0099FC672D65058C0033EC11 /* ArtikolKonvertilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC132D65058C0033EC11 /* ArtikolKonvertilo.swift */; };
+		0099FC682D65058C0033EC11 /* Posttraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC142D65058C0033EC11 /* Posttraktado.swift */; };
+		0099FC692D65058C0033EC11 /* Artikolo+Printado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC162D65058C0033EC11 /* Artikolo+Printado.swift */; };
+		0099FC6A2D65058C0033EC11 /* Grundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC182D65058C0033EC11 /* Grundo.swift */; };
+		0099FC6B2D65058C0033EC11 /* DTDAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1A2D65058C0033EC11 /* DTDAnalizilo.swift */; };
+		0099FC6C2D65058C0033EC11 /* FakoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1B2D65058C0033EC11 /* FakoAnalizilo.swift */; };
+		0099FC6D2D65058C0033EC11 /* LingvoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1C2D65058C0033EC11 /* LingvoAnalizilo.swift */; };
+		0099FC6E2D65058C0033EC11 /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1D2D65058C0033EC11 /* LiteroAnalizilo.swift */; };
+		0099FC6F2D65058C0033EC11 /* Oficialecoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1E2D65058C0033EC11 /* Oficialecoj.swift */; };
+		0099FC702D65058C0033EC11 /* SignoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1F2D65058C0033EC11 /* SignoAnalizilo.swift */; };
+		0099FC712D65058C0033EC11 /* StiloAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC202D65058C0033EC11 /* StiloAnalizilo.swift */; };
+		0099FC722D65058C0033EC11 /* VortarajMallongigojAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC212D65058C0033EC11 /* VortarajMallongigojAnalizilo.swift */; };
+		0099FC732D65058C0033EC11 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC232D65058C0033EC11 /* main.swift */; };
+		0099FCB82D6506580033EC11 /* TestDatumoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC7F2D6506580033EC11 /* TestDatumoj.swift */; };
+		0099FCB92D6506580033EC11 /* abak.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC802D6506580033EC11 /* abak.xml */; };
+		0099FCBA2D6506580033EC11 /* elips.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC812D6506580033EC11 /* elips.xml */; };
+		0099FCBB2D6506580033EC11 /* grav.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC822D6506580033EC11 /* grav.xml */; };
+		0099FCBC2D6506580033EC11 /* majoritat.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC832D6506580033EC11 /* majoritat.xml */; };
+		0099FCBD2D6506580033EC11 /* ni.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC842D6506580033EC11 /* ni.xml */; };
+		0099FCBE2D6506580033EC11 /* not.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC852D6506580033EC11 /* not.xml */; };
+		0099FCBF2D6506580033EC11 /* om.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC862D6506580033EC11 /* om.xml */; };
+		0099FCC02D6506580033EC11 /* per.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC872D6506580033EC11 /* per.xml */; };
+		0099FCC22D6506580033EC11 /* grundo.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC8B2D6506580033EC11 /* grundo.json */; };
+		0099FCC32D6506580033EC11 /* testiArtikolon.abak-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC8D2D6506580033EC11 /* testiArtikolon.abak-o.json */; };
+		0099FCC42D6506580033EC11 /* testiArtikolon.elips-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC8E2D6506580033EC11 /* testiArtikolon.elips-o.json */; };
+		0099FCC52D6506580033EC11 /* testiArtikolon.grav-a.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC8F2D6506580033EC11 /* testiArtikolon.grav-a.json */; };
+		0099FCC62D6506580033EC11 /* testiArtikolon.majoritat-o-maĵori-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC902D6506580033EC11 /* testiArtikolon.majoritat-o-maĵori-o.json */; };
+		0099FCC72D6506580033EC11 /* testiArtikolon.ni.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC912D6506580033EC11 /* testiArtikolon.ni.json */; };
+		0099FCC82D6506580033EC11 /* testiArtikolon.not-i.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC922D6506580033EC11 /* testiArtikolon.not-i.json */; };
+		0099FCC92D6506580033EC11 /* testiArtikolon.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC932D6506580033EC11 /* testiArtikolon.Om-o.json */; };
+		0099FCCA2D6506580033EC11 /* testiArtikolon.per.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC942D6506580033EC11 /* testiArtikolon.per.json */; };
+		0099FCCB2D6506580033EC11 /* testiFakVortojn.abak-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC952D6506580033EC11 /* testiFakVortojn.abak-o.json */; };
+		0099FCCC2D6506580033EC11 /* testiFakVortojn.elips-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC962D6506580033EC11 /* testiFakVortojn.elips-o.json */; };
+		0099FCCD2D6506580033EC11 /* testiFakVortojn.grav-a.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC972D6506580033EC11 /* testiFakVortojn.grav-a.json */; };
+		0099FCCE2D6506580033EC11 /* testiFakVortojn.majoritat-o-maĵori-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC982D6506580033EC11 /* testiFakVortojn.majoritat-o-maĵori-o.json */; };
+		0099FCCF2D6506580033EC11 /* testiFakVortojn.ni.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC992D6506580033EC11 /* testiFakVortojn.ni.json */; };
+		0099FCD02D6506580033EC11 /* testiFakVortojn.not-i.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC9A2D6506580033EC11 /* testiFakVortojn.not-i.json */; };
+		0099FCD12D6506580033EC11 /* testiFakVortojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC9B2D6506580033EC11 /* testiFakVortojn.Om-o.json */; };
+		0099FCD22D6506580033EC11 /* testiFakVortojn.per.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC9C2D6506580033EC11 /* testiFakVortojn.per.json */; };
+		0099FCD32D6506580033EC11 /* testiOfcVortojn.abak-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC9D2D6506580033EC11 /* testiOfcVortojn.abak-o.json */; };
+		0099FCD42D6506580033EC11 /* testiOfcVortojn.elips-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC9E2D6506580033EC11 /* testiOfcVortojn.elips-o.json */; };
+		0099FCD52D6506580033EC11 /* testiOfcVortojn.grav-a.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FC9F2D6506580033EC11 /* testiOfcVortojn.grav-a.json */; };
+		0099FCD62D6506580033EC11 /* testiOfcVortojn.majoritat-o-maĵori-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA02D6506580033EC11 /* testiOfcVortojn.majoritat-o-maĵori-o.json */; };
+		0099FCD72D6506580033EC11 /* testiOfcVortojn.ni.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA12D6506580033EC11 /* testiOfcVortojn.ni.json */; };
+		0099FCD82D6506580033EC11 /* testiOfcVortojn.not-i.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA22D6506580033EC11 /* testiOfcVortojn.not-i.json */; };
+		0099FCD92D6506580033EC11 /* testiOfcVortojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA32D6506580033EC11 /* testiOfcVortojn.Om-o.json */; };
+		0099FCDA2D6506580033EC11 /* testiOfcVortojn.per.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA42D6506580033EC11 /* testiOfcVortojn.per.json */; };
+		0099FCDB2D6506580033EC11 /* testiSerchTradukojn.abak-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA52D6506580033EC11 /* testiSerchTradukojn.abak-o.json */; };
+		0099FCDC2D6506580033EC11 /* testiSerchTradukojn.elips-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA62D6506580033EC11 /* testiSerchTradukojn.elips-o.json */; };
+		0099FCDD2D6506580033EC11 /* testiSerchTradukojn.grav-a.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA72D6506580033EC11 /* testiSerchTradukojn.grav-a.json */; };
+		0099FCDE2D6506580033EC11 /* testiSerchTradukojn.majoritat-o-maĵori-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA82D6506580033EC11 /* testiSerchTradukojn.majoritat-o-maĵori-o.json */; };
+		0099FCDF2D6506580033EC11 /* testiSerchTradukojn.ni.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCA92D6506580033EC11 /* testiSerchTradukojn.ni.json */; };
+		0099FCE02D6506580033EC11 /* testiSerchTradukojn.not-i.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCAA2D6506580033EC11 /* testiSerchTradukojn.not-i.json */; };
+		0099FCE12D6506580033EC11 /* testiSerchTradukojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCAB2D6506580033EC11 /* testiSerchTradukojn.Om-o.json */; };
+		0099FCE22D6506580033EC11 /* testiSerchTradukojn.per.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCAC2D6506580033EC11 /* testiSerchTradukojn.per.json */; };
+		0099FCE32D6506580033EC11 /* testiSerchVortojn.abak-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCAD2D6506580033EC11 /* testiSerchVortojn.abak-o.json */; };
+		0099FCE42D6506580033EC11 /* testiSerchVortojn.elips-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCAE2D6506580033EC11 /* testiSerchVortojn.elips-o.json */; };
+		0099FCE52D6506580033EC11 /* testiSerchVortojn.grav-a.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCAF2D6506580033EC11 /* testiSerchVortojn.grav-a.json */; };
+		0099FCE62D6506580033EC11 /* testiSerchVortojn.majoritat-o-maĵori-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCB02D6506580033EC11 /* testiSerchVortojn.majoritat-o-maĵori-o.json */; };
+		0099FCE72D6506580033EC11 /* testiSerchVortojn.ni.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCB12D6506580033EC11 /* testiSerchVortojn.ni.json */; };
+		0099FCE82D6506580033EC11 /* testiSerchVortojn.not-i.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCB22D6506580033EC11 /* testiSerchVortojn.not-i.json */; };
+		0099FCE92D6506580033EC11 /* testiSerchVortojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCB32D6506580033EC11 /* testiSerchVortojn.Om-o.json */; };
+		0099FCEA2D6506580033EC11 /* testiSerchVortojn.per.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCB42D6506580033EC11 /* testiSerchVortojn.per.json */; };
+		0099FCEB2D6506580033EC11 /* DatumbazFariloTestoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FCB72D6506580033EC11 /* DatumbazFariloTestoj.swift */; };
+		0099FCEC2D65067F0033EC11 /* TekstFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD02D65058B0033EC11 /* TekstFarilo.swift */; };
+		0099FCED2D65067F0033EC11 /* KreiDatumbazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCC2D65058B0033EC11 /* KreiDatumbazon.swift */; };
+		0099FCEE2D65067F0033EC11 /* VortListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCE2D65058B0033EC11 /* VortListoj.swift */; };
+		0099FCEF2D65067F0033EC11 /* PrefiksArboFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */; };
+		0099FCF02D65067F0033EC11 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC232D65058C0033EC11 /* main.swift */; };
+		0099FCF32D6506890033EC11 /* Artikolaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC122D65058C0033EC11 /* Artikolaro.swift */; };
+		0099FCF42D6506890033EC11 /* ArtikolKonvertilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC132D65058C0033EC11 /* ArtikolKonvertilo.swift */; };
+		0099FCF52D6506890033EC11 /* ArboAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC102D65058C0033EC11 /* ArboAnalizilo.swift */; };
+		0099FCF62D6506890033EC11 /* Posttraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC142D65058C0033EC11 /* Posttraktado.swift */; };
+		0099FCF72D6506890033EC11 /* Antautraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0F2D65058C0033EC11 /* Antautraktado.swift */; };
+		0099FCF82D6506890033EC11 /* ArtikolAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC112D65058C0033EC11 /* ArtikolAnalizilo.swift */; };
+		0099FCF92D65068E0033EC11 /* TraktiFormulon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEC2D65058C0033EC11 /* TraktiFormulon.swift */; };
+		0099FCFA2D65068E0033EC11 /* TraktiSubderivajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC032D65058C0033EC11 /* TraktiSubderivajhon.swift */; };
+		0099FCFB2D65068E0033EC11 /* TraktiReferencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFE2D65058C0033EC11 /* TraktiReferencon.swift */; };
+		0099FCFC2D65068E0033EC11 /* TraktiIndekson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEF2D65058C0033EC11 /* TraktiIndekson.swift */; };
+		0099FCFD2D65068E0033EC11 /* TraktiReferencGrupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFD2D65058C0033EC11 /* TraktiReferencGrupon.swift */; };
+		0099FCFE2D65068E0033EC11 /* TraktiEkzemplon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE92D65058C0033EC11 /* TraktiEkzemplon.swift */; };
+		0099FCFF2D65068E0033EC11 /* TraktiMisstilan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF72D65058C0033EC11 /* TraktiMisstilan.swift */; };
+		0099FD002D65068E0033EC11 /* TraktiAltigitan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE32D65058C0033EC11 /* TraktiAltigitan.swift */; };
+		0099FD012D65068E0033EC11 /* TraktiSubartikolon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC022D65058C0033EC11 /* TraktiSubartikolon.swift */; };
+		0099FD022D65068E0033EC11 /* TraktiTildon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC052D65058C0033EC11 /* TraktiTildon.swift */; };
+		0099FD032D65068E0033EC11 /* TraktiDifinon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE82D65058C0033EC11 /* TraktiDifinon.swift */; };
+		0099FD042D65068E0033EC11 /* TraktiRimarkon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFF2D65058C0033EC11 /* TraktiRimarkon.swift */; };
+		0099FD052D65068E0033EC11 /* TraktiOficialecon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFA2D65058C0033EC11 /* TraktiOficialecon.swift */; };
+		0099FD062D65068E0033EC11 /* TraktiKlarigon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF22D65058C0033EC11 /* TraktiKlarigon.swift */; };
+		0099FD072D65068E0033EC11 /* TraktiKapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF12D65058C0033EC11 /* TraktiKapon.swift */; };
+		0099FD082D65068E0033EC11 /* TraktiMallongigon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF62D65058C0033EC11 /* TraktiMallongigon.swift */; };
+		0099FD092D65068E0033EC11 /* TraktiSubsencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC042D65058C0033EC11 /* TraktiSubsencon.swift */; };
+		0099FD0A2D65068E0033EC11 /* TraktiVortaron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0C2D65058C0033EC11 /* TraktiVortaron.swift */; };
+		0099FD0B2D65068E0033EC11 /* TraktiIndicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF02D65058C0033EC11 /* TraktiIndicon.swift */; };
+		0099FD0C2D65068E0033EC11 /* TraktiNomon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF92D65058C0033EC11 /* TraktiNomon.swift */; };
+		0099FD0D2D65068E0033EC11 /* TraktiTradukGrupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC062D65058C0033EC11 /* TraktiTradukGrupon.swift */; };
+		0099FD0E2D65068E0033EC11 /* TraktiURLon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC092D65058C0033EC11 /* TraktiURLon.swift */; };
+		0099FD0F2D65068E0033EC11 /* TraktiCitilon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE62D65058C0033EC11 /* TraktiCitilon.swift */; };
+		0099FD102D65068E0033EC11 /* TraktiVortSpecon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0D2D65058C0033EC11 /* TraktiVortSpecon.swift */; };
+		0099FD112D65068E0033EC11 /* TraktiAutoron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE52D65058C0033EC11 /* TraktiAutoron.swift */; };
+		0099FD122D65068E0033EC11 /* TraktiKomunlingvan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF32D65058C0033EC11 /* TraktiKomunlingvan.swift */; };
+		0099FD132D65068E0033EC11 /* TraktiRadikon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFC2D65058C0033EC11 /* TraktiRadikon.swift */; };
+		0099FD142D65068E0033EC11 /* TraktiSencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC002D65058C0033EC11 /* TraktiSencon.swift */; };
+		0099FD152D65068E0033EC11 /* TraktiGramatikon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBED2D65058C0033EC11 /* TraktiGramatikon.swift */; };
+		0099FD162D65068E0033EC11 /* TraktiEscepton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEB2D65058C0033EC11 /* TraktiEscepton.swift */; };
+		0099FD172D65068E0033EC11 /* TraktiDerivajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE72D65058C0033EC11 /* TraktiDerivajhon.swift */; };
+		0099FD182D65068E0033EC11 /* TraktiGrasan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEE2D65058C0033EC11 /* TraktiGrasan.swift */; };
+		0099FD192D65068E0033EC11 /* TraktiListReferencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF52D65058C0033EC11 /* TraktiListReferencon.swift */; };
+		0099FD1A2D65068E0033EC11 /* TraktiKursivan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF42D65058C0033EC11 /* TraktiKursivan.swift */; };
+		0099FD1B2D65068E0033EC11 /* TraktiSencReferencon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC012D65058C0033EC11 /* TraktiSencReferencon.swift */; };
+		0099FD1C2D65068E0033EC11 /* TraktiTrastrekitan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC082D65058C0033EC11 /* TraktiTrastrekitan.swift */; };
+		0099FD1D2D65068E0033EC11 /* TraktiUzon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0A2D65058C0033EC11 /* TraktiUzon.swift */; };
+		0099FD1E2D65068E0033EC11 /* TraktiPrononcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBFB2D65058C0033EC11 /* TraktiPrononcon.swift */; };
+		0099FD1F2D65068E0033EC11 /* TraktiVariajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC0B2D65058C0033EC11 /* TraktiVariajhon.swift */; };
+		0099FD202D65068E0033EC11 /* TraktiEmfazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBEA2D65058C0033EC11 /* TraktiEmfazon.swift */; };
+		0099FD212D65068E0033EC11 /* TraktiArtikolon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE42D65058C0033EC11 /* TraktiArtikolon.swift */; };
+		0099FD222D65068E0033EC11 /* TraktiNacilingvan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBF82D65058C0033EC11 /* TraktiNacilingvan.swift */; };
+		0099FD232D65068E0033EC11 /* TraktiTradukon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC072D65058C0033EC11 /* TraktiTradukon.swift */; };
+		0099FD242D6506940033EC11 /* NodTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDC2D65058C0033EC11 /* NodTipo.swift */; };
+		0099FD252D6506940033EC11 /* ArtikolTraduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDA2D65058C0033EC11 /* ArtikolTraduko.swift */; };
+		0099FD262D6506940033EC11 /* OfcVorto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDD2D65058C0033EC11 /* OfcVorto.swift */; };
+		0099FD272D6506940033EC11 /* SerchVorto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE02D65058C0033EC11 /* SerchVorto.swift */; };
+		0099FD282D6506940033EC11 /* Serchebla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDE2D65058C0033EC11 /* Serchebla.swift */; };
+		0099FD292D6506940033EC11 /* Stato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBE12D65058C0033EC11 /* Stato.swift */; };
+		0099FD2A2D6506940033EC11 /* ArtikolNodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD92D65058C0033EC11 /* ArtikolNodo.swift */; };
+		0099FD2B2D6506940033EC11 /* FakVorto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDB2D65058C0033EC11 /* FakVorto.swift */; };
+		0099FD2C2D6506940033EC11 /* SerchTraduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBDF2D65058C0033EC11 /* SerchTraduko.swift */; };
+		0099FD2D2D6506980033EC11 /* ArtikolFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD52D65058C0033EC11 /* ArtikolFabriko.swift */; };
+		0099FD2E2D6506980033EC11 /* SubartikoloFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD62D65058C0033EC11 /* SubartikoloFabriko.swift */; };
+		0099FD2F2D6506980033EC11 /* VortoFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD72D65058C0033EC11 /* VortoFabriko.swift */; };
+		0099FD302D65069D0033EC11 /* ArtikolTeksto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */; };
+		0099FD312D65069D0033EC11 /* String+Aldonoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */; };
+		0099FD322D65069D0033EC11 /* Interpreti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD22D65058C0033EC11 /* Interpreti.swift */; };
+		0099FD332D6506A30033EC11 /* SignoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1F2D65058C0033EC11 /* SignoAnalizilo.swift */; };
+		0099FD342D6506A30033EC11 /* DTDAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1A2D65058C0033EC11 /* DTDAnalizilo.swift */; };
+		0099FD352D6506A30033EC11 /* FakoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1B2D65058C0033EC11 /* FakoAnalizilo.swift */; };
+		0099FD362D6506A30033EC11 /* LiteroAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1D2D65058C0033EC11 /* LiteroAnalizilo.swift */; };
+		0099FD372D6506A30033EC11 /* VortarajMallongigojAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC212D65058C0033EC11 /* VortarajMallongigojAnalizilo.swift */; };
+		0099FD382D6506A30033EC11 /* LingvoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1C2D65058C0033EC11 /* LingvoAnalizilo.swift */; };
+		0099FD392D6506A30033EC11 /* Oficialecoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1E2D65058C0033EC11 /* Oficialecoj.swift */; };
+		0099FD3A2D6506A30033EC11 /* StiloAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC202D65058C0033EC11 /* StiloAnalizilo.swift */; };
+		0099FD3B2D6506A60033EC11 /* Grundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC182D65058C0033EC11 /* Grundo.swift */; };
+		0099FD402D65079E0033EC11 /* DatumbazFarilo.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 0099FD3F2D65079E0033EC11 /* DatumbazFarilo.xctestplan */; };
+		00A0E8E22D65087100F8285E /* ReVoDatumbazoOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003656FE2309C78F0028C21F /* ReVoDatumbazoOSX.framework */; };
+		00A0E8E32D65087100F8285E /* ReVoDatumbazoOSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 003656FE2309C78F0028C21F /* ReVoDatumbazoOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00A47A5B24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */; };
 		00A47A5D24AFE19D00EA9DCF /* AliriloKashmemoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5C24AFE19D00EA9DCF /* AliriloKashmemoro.swift */; };
 		00A47A5F24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */; };
 		00A47A6424AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A6324AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift */; };
+		00B297192D650F5100264431 /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
+		00B2971A2D6511CA00264431 /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
+		00B2971B2D65122B00264431 /* Artikolo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */; };
+		00B2971C2D65122B00264431 /* Fako+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A6324AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift */; };
+		00B2971D2D65122B00264431 /* Mallongigo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21B24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift */; };
+		00B2971E2D65122B00264431 /* Lingvo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */; };
+		00B297202D65122B00264431 /* Stilo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */; };
+		00B297232D65125100264431 /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
+		B201F0F7DC9CB88C446E788E /* Pods_DatumbazFariloTestoj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00A0E8E42D65087100F8285E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0051A6B62309A2F90034DFF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 003656FD2309C78F0028C21F;
+			remoteInfo = ReVoDatumbazoOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0099FBC32D6505330033EC11 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		00A0E8E62D65087100F8285E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				00A0E8E32D65087100F8285E /* ReVoDatumbazoOSX.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		000F784624F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Oficialeco+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
@@ -56,10 +309,147 @@
 		0051A6C32309A2F90034DFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0051A6CE2309A3630034DFF9 /* PReVoDatumoj.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PReVoDatumoj.xcdatamodel; sourceTree = "<group>"; };
 		005270EC24E9A9E2009E17AA /* ReVoModelojOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModelojOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0099FBC52D6505330033EC11 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
+		0099FBCC2D65058B0033EC11 /* KreiDatumbazon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KreiDatumbazon.swift; sourceTree = "<group>"; };
+		0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefiksArboFarilo.swift; sourceTree = "<group>"; };
+		0099FBCE2D65058B0033EC11 /* VortListoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VortListoj.swift; sourceTree = "<group>"; };
+		0099FBD02D65058B0033EC11 /* TekstFarilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TekstFarilo.swift; sourceTree = "<group>"; };
+		0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolTeksto.swift; sourceTree = "<group>"; };
+		0099FBD22D65058C0033EC11 /* Interpreti.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpreti.swift; sourceTree = "<group>"; };
+		0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Aldonoj.swift"; sourceTree = "<group>"; };
+		0099FBD52D65058C0033EC11 /* ArtikolFabriko.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolFabriko.swift; sourceTree = "<group>"; };
+		0099FBD62D65058C0033EC11 /* SubartikoloFabriko.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubartikoloFabriko.swift; sourceTree = "<group>"; };
+		0099FBD72D65058C0033EC11 /* VortoFabriko.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VortoFabriko.swift; sourceTree = "<group>"; };
+		0099FBD92D65058C0033EC11 /* ArtikolNodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolNodo.swift; sourceTree = "<group>"; };
+		0099FBDA2D65058C0033EC11 /* ArtikolTraduko.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolTraduko.swift; sourceTree = "<group>"; };
+		0099FBDB2D65058C0033EC11 /* FakVorto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakVorto.swift; sourceTree = "<group>"; };
+		0099FBDC2D65058C0033EC11 /* NodTipo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodTipo.swift; sourceTree = "<group>"; };
+		0099FBDD2D65058C0033EC11 /* OfcVorto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfcVorto.swift; sourceTree = "<group>"; };
+		0099FBDE2D65058C0033EC11 /* Serchebla.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serchebla.swift; sourceTree = "<group>"; };
+		0099FBDF2D65058C0033EC11 /* SerchTraduko.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerchTraduko.swift; sourceTree = "<group>"; };
+		0099FBE02D65058C0033EC11 /* SerchVorto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerchVorto.swift; sourceTree = "<group>"; };
+		0099FBE12D65058C0033EC11 /* Stato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stato.swift; sourceTree = "<group>"; };
+		0099FBE32D65058C0033EC11 /* TraktiAltigitan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiAltigitan.swift; sourceTree = "<group>"; };
+		0099FBE42D65058C0033EC11 /* TraktiArtikolon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiArtikolon.swift; sourceTree = "<group>"; };
+		0099FBE52D65058C0033EC11 /* TraktiAutoron.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiAutoron.swift; sourceTree = "<group>"; };
+		0099FBE62D65058C0033EC11 /* TraktiCitilon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiCitilon.swift; sourceTree = "<group>"; };
+		0099FBE72D65058C0033EC11 /* TraktiDerivajhon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiDerivajhon.swift; sourceTree = "<group>"; };
+		0099FBE82D65058C0033EC11 /* TraktiDifinon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiDifinon.swift; sourceTree = "<group>"; };
+		0099FBE92D65058C0033EC11 /* TraktiEkzemplon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiEkzemplon.swift; sourceTree = "<group>"; };
+		0099FBEA2D65058C0033EC11 /* TraktiEmfazon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiEmfazon.swift; sourceTree = "<group>"; };
+		0099FBEB2D65058C0033EC11 /* TraktiEscepton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiEscepton.swift; sourceTree = "<group>"; };
+		0099FBEC2D65058C0033EC11 /* TraktiFormulon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiFormulon.swift; sourceTree = "<group>"; };
+		0099FBED2D65058C0033EC11 /* TraktiGramatikon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiGramatikon.swift; sourceTree = "<group>"; };
+		0099FBEE2D65058C0033EC11 /* TraktiGrasan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiGrasan.swift; sourceTree = "<group>"; };
+		0099FBEF2D65058C0033EC11 /* TraktiIndekson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiIndekson.swift; sourceTree = "<group>"; };
+		0099FBF02D65058C0033EC11 /* TraktiIndicon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiIndicon.swift; sourceTree = "<group>"; };
+		0099FBF12D65058C0033EC11 /* TraktiKapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiKapon.swift; sourceTree = "<group>"; };
+		0099FBF22D65058C0033EC11 /* TraktiKlarigon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiKlarigon.swift; sourceTree = "<group>"; };
+		0099FBF32D65058C0033EC11 /* TraktiKomunlingvan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiKomunlingvan.swift; sourceTree = "<group>"; };
+		0099FBF42D65058C0033EC11 /* TraktiKursivan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiKursivan.swift; sourceTree = "<group>"; };
+		0099FBF52D65058C0033EC11 /* TraktiListReferencon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiListReferencon.swift; sourceTree = "<group>"; };
+		0099FBF62D65058C0033EC11 /* TraktiMallongigon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiMallongigon.swift; sourceTree = "<group>"; };
+		0099FBF72D65058C0033EC11 /* TraktiMisstilan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiMisstilan.swift; sourceTree = "<group>"; };
+		0099FBF82D65058C0033EC11 /* TraktiNacilingvan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiNacilingvan.swift; sourceTree = "<group>"; };
+		0099FBF92D65058C0033EC11 /* TraktiNomon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiNomon.swift; sourceTree = "<group>"; };
+		0099FBFA2D65058C0033EC11 /* TraktiOficialecon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiOficialecon.swift; sourceTree = "<group>"; };
+		0099FBFB2D65058C0033EC11 /* TraktiPrononcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiPrononcon.swift; sourceTree = "<group>"; };
+		0099FBFC2D65058C0033EC11 /* TraktiRadikon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiRadikon.swift; sourceTree = "<group>"; };
+		0099FBFD2D65058C0033EC11 /* TraktiReferencGrupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiReferencGrupon.swift; sourceTree = "<group>"; };
+		0099FBFE2D65058C0033EC11 /* TraktiReferencon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiReferencon.swift; sourceTree = "<group>"; };
+		0099FBFF2D65058C0033EC11 /* TraktiRimarkon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiRimarkon.swift; sourceTree = "<group>"; };
+		0099FC002D65058C0033EC11 /* TraktiSencon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiSencon.swift; sourceTree = "<group>"; };
+		0099FC012D65058C0033EC11 /* TraktiSencReferencon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiSencReferencon.swift; sourceTree = "<group>"; };
+		0099FC022D65058C0033EC11 /* TraktiSubartikolon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiSubartikolon.swift; sourceTree = "<group>"; };
+		0099FC032D65058C0033EC11 /* TraktiSubderivajhon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiSubderivajhon.swift; sourceTree = "<group>"; };
+		0099FC042D65058C0033EC11 /* TraktiSubsencon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiSubsencon.swift; sourceTree = "<group>"; };
+		0099FC052D65058C0033EC11 /* TraktiTildon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiTildon.swift; sourceTree = "<group>"; };
+		0099FC062D65058C0033EC11 /* TraktiTradukGrupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiTradukGrupon.swift; sourceTree = "<group>"; };
+		0099FC072D65058C0033EC11 /* TraktiTradukon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiTradukon.swift; sourceTree = "<group>"; };
+		0099FC082D65058C0033EC11 /* TraktiTrastrekitan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiTrastrekitan.swift; sourceTree = "<group>"; };
+		0099FC092D65058C0033EC11 /* TraktiURLon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiURLon.swift; sourceTree = "<group>"; };
+		0099FC0A2D65058C0033EC11 /* TraktiUzon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiUzon.swift; sourceTree = "<group>"; };
+		0099FC0B2D65058C0033EC11 /* TraktiVariajhon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiVariajhon.swift; sourceTree = "<group>"; };
+		0099FC0C2D65058C0033EC11 /* TraktiVortaron.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiVortaron.swift; sourceTree = "<group>"; };
+		0099FC0D2D65058C0033EC11 /* TraktiVortSpecon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktiVortSpecon.swift; sourceTree = "<group>"; };
+		0099FC0F2D65058C0033EC11 /* Antautraktado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Antautraktado.swift; sourceTree = "<group>"; };
+		0099FC102D65058C0033EC11 /* ArboAnalizilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArboAnalizilo.swift; sourceTree = "<group>"; };
+		0099FC112D65058C0033EC11 /* ArtikolAnalizilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolAnalizilo.swift; sourceTree = "<group>"; };
+		0099FC122D65058C0033EC11 /* Artikolaro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artikolaro.swift; sourceTree = "<group>"; };
+		0099FC132D65058C0033EC11 /* ArtikolKonvertilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolKonvertilo.swift; sourceTree = "<group>"; };
+		0099FC142D65058C0033EC11 /* Posttraktado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posttraktado.swift; sourceTree = "<group>"; };
+		0099FC162D65058C0033EC11 /* Artikolo+Printado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Artikolo+Printado.swift"; sourceTree = "<group>"; };
+		0099FC182D65058C0033EC11 /* Grundo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grundo.swift; sourceTree = "<group>"; };
+		0099FC1A2D65058C0033EC11 /* DTDAnalizilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTDAnalizilo.swift; sourceTree = "<group>"; };
+		0099FC1B2D65058C0033EC11 /* FakoAnalizilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakoAnalizilo.swift; sourceTree = "<group>"; };
+		0099FC1C2D65058C0033EC11 /* LingvoAnalizilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LingvoAnalizilo.swift; sourceTree = "<group>"; };
+		0099FC1D2D65058C0033EC11 /* LiteroAnalizilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiteroAnalizilo.swift; sourceTree = "<group>"; };
+		0099FC1E2D65058C0033EC11 /* Oficialecoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oficialecoj.swift; sourceTree = "<group>"; };
+		0099FC1F2D65058C0033EC11 /* SignoAnalizilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignoAnalizilo.swift; sourceTree = "<group>"; };
+		0099FC202D65058C0033EC11 /* StiloAnalizilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StiloAnalizilo.swift; sourceTree = "<group>"; };
+		0099FC212D65058C0033EC11 /* VortarajMallongigojAnalizilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VortarajMallongigojAnalizilo.swift; sourceTree = "<group>"; };
+		0099FC232D65058C0033EC11 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0099FC782D6506170033EC11 /* DatumbazFariloTestoj.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatumbazFariloTestoj.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0099FC7F2D6506580033EC11 /* TestDatumoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDatumoj.swift; sourceTree = "<group>"; };
+		0099FC802D6506580033EC11 /* abak.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abak.xml; sourceTree = "<group>"; };
+		0099FC812D6506580033EC11 /* elips.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = elips.xml; sourceTree = "<group>"; };
+		0099FC822D6506580033EC11 /* grav.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = grav.xml; sourceTree = "<group>"; };
+		0099FC832D6506580033EC11 /* majoritat.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = majoritat.xml; sourceTree = "<group>"; };
+		0099FC842D6506580033EC11 /* ni.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ni.xml; sourceTree = "<group>"; };
+		0099FC852D6506580033EC11 /* not.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = not.xml; sourceTree = "<group>"; };
+		0099FC862D6506580033EC11 /* om.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = om.xml; sourceTree = "<group>"; };
+		0099FC872D6506580033EC11 /* per.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = per.xml; sourceTree = "<group>"; };
+		0099FC8B2D6506580033EC11 /* grundo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = grundo.json; sourceTree = "<group>"; };
+		0099FC8D2D6506580033EC11 /* testiArtikolon.abak-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.abak-o.json"; sourceTree = "<group>"; };
+		0099FC8E2D6506580033EC11 /* testiArtikolon.elips-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.elips-o.json"; sourceTree = "<group>"; };
+		0099FC8F2D6506580033EC11 /* testiArtikolon.grav-a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.grav-a.json"; sourceTree = "<group>"; };
+		0099FC902D6506580033EC11 /* testiArtikolon.majoritat-o-maĵori-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.majoritat-o-maĵori-o.json"; sourceTree = "<group>"; };
+		0099FC912D6506580033EC11 /* testiArtikolon.ni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiArtikolon.ni.json; sourceTree = "<group>"; };
+		0099FC922D6506580033EC11 /* testiArtikolon.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.not-i.json"; sourceTree = "<group>"; };
+		0099FC932D6506580033EC11 /* testiArtikolon.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiArtikolon.Om-o.json"; sourceTree = "<group>"; };
+		0099FC942D6506580033EC11 /* testiArtikolon.per.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiArtikolon.per.json; sourceTree = "<group>"; };
+		0099FC952D6506580033EC11 /* testiFakVortojn.abak-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiFakVortojn.abak-o.json"; sourceTree = "<group>"; };
+		0099FC962D6506580033EC11 /* testiFakVortojn.elips-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiFakVortojn.elips-o.json"; sourceTree = "<group>"; };
+		0099FC972D6506580033EC11 /* testiFakVortojn.grav-a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiFakVortojn.grav-a.json"; sourceTree = "<group>"; };
+		0099FC982D6506580033EC11 /* testiFakVortojn.majoritat-o-maĵori-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiFakVortojn.majoritat-o-maĵori-o.json"; sourceTree = "<group>"; };
+		0099FC992D6506580033EC11 /* testiFakVortojn.ni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiFakVortojn.ni.json; sourceTree = "<group>"; };
+		0099FC9A2D6506580033EC11 /* testiFakVortojn.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiFakVortojn.not-i.json"; sourceTree = "<group>"; };
+		0099FC9B2D6506580033EC11 /* testiFakVortojn.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiFakVortojn.Om-o.json"; sourceTree = "<group>"; };
+		0099FC9C2D6506580033EC11 /* testiFakVortojn.per.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiFakVortojn.per.json; sourceTree = "<group>"; };
+		0099FC9D2D6506580033EC11 /* testiOfcVortojn.abak-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiOfcVortojn.abak-o.json"; sourceTree = "<group>"; };
+		0099FC9E2D6506580033EC11 /* testiOfcVortojn.elips-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiOfcVortojn.elips-o.json"; sourceTree = "<group>"; };
+		0099FC9F2D6506580033EC11 /* testiOfcVortojn.grav-a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiOfcVortojn.grav-a.json"; sourceTree = "<group>"; };
+		0099FCA02D6506580033EC11 /* testiOfcVortojn.majoritat-o-maĵori-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiOfcVortojn.majoritat-o-maĵori-o.json"; sourceTree = "<group>"; };
+		0099FCA12D6506580033EC11 /* testiOfcVortojn.ni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiOfcVortojn.ni.json; sourceTree = "<group>"; };
+		0099FCA22D6506580033EC11 /* testiOfcVortojn.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiOfcVortojn.not-i.json"; sourceTree = "<group>"; };
+		0099FCA32D6506580033EC11 /* testiOfcVortojn.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiOfcVortojn.Om-o.json"; sourceTree = "<group>"; };
+		0099FCA42D6506580033EC11 /* testiOfcVortojn.per.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiOfcVortojn.per.json; sourceTree = "<group>"; };
+		0099FCA52D6506580033EC11 /* testiSerchTradukojn.abak-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.abak-o.json"; sourceTree = "<group>"; };
+		0099FCA62D6506580033EC11 /* testiSerchTradukojn.elips-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.elips-o.json"; sourceTree = "<group>"; };
+		0099FCA72D6506580033EC11 /* testiSerchTradukojn.grav-a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.grav-a.json"; sourceTree = "<group>"; };
+		0099FCA82D6506580033EC11 /* testiSerchTradukojn.majoritat-o-maĵori-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.majoritat-o-maĵori-o.json"; sourceTree = "<group>"; };
+		0099FCA92D6506580033EC11 /* testiSerchTradukojn.ni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiSerchTradukojn.ni.json; sourceTree = "<group>"; };
+		0099FCAA2D6506580033EC11 /* testiSerchTradukojn.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.not-i.json"; sourceTree = "<group>"; };
+		0099FCAB2D6506580033EC11 /* testiSerchTradukojn.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchTradukojn.Om-o.json"; sourceTree = "<group>"; };
+		0099FCAC2D6506580033EC11 /* testiSerchTradukojn.per.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiSerchTradukojn.per.json; sourceTree = "<group>"; };
+		0099FCAD2D6506580033EC11 /* testiSerchVortojn.abak-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.abak-o.json"; sourceTree = "<group>"; };
+		0099FCAE2D6506580033EC11 /* testiSerchVortojn.elips-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.elips-o.json"; sourceTree = "<group>"; };
+		0099FCAF2D6506580033EC11 /* testiSerchVortojn.grav-a.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.grav-a.json"; sourceTree = "<group>"; };
+		0099FCB02D6506580033EC11 /* testiSerchVortojn.majoritat-o-maĵori-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.majoritat-o-maĵori-o.json"; sourceTree = "<group>"; };
+		0099FCB12D6506580033EC11 /* testiSerchVortojn.ni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiSerchVortojn.ni.json; sourceTree = "<group>"; };
+		0099FCB22D6506580033EC11 /* testiSerchVortojn.not-i.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.not-i.json"; sourceTree = "<group>"; };
+		0099FCB32D6506580033EC11 /* testiSerchVortojn.Om-o.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "testiSerchVortojn.Om-o.json"; sourceTree = "<group>"; };
+		0099FCB42D6506580033EC11 /* testiSerchVortojn.per.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiSerchVortojn.per.json; sourceTree = "<group>"; };
+		0099FCB72D6506580033EC11 /* DatumbazFariloTestoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatumbazFariloTestoj.swift; sourceTree = "<group>"; };
+		0099FD3F2D65079E0033EC11 /* DatumbazFarilo.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DatumbazFarilo.xctestplan; sourceTree = "<group>"; };
+		00A0E8DE2D65086900F8285E /* ReVoModelojOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModelojOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artikolo+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
 		00A47A5C24AFE19D00EA9DCF /* AliriloKashmemoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliriloKashmemoro.swift; sourceTree = "<group>"; };
 		00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lingvo+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
 		00A47A6324AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fako+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
+		3160BDCF41F0A5B31404DFB0 /* Pods-DatumbazFariloTestoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.debug.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.debug.xcconfig"; sourceTree = "<group>"; };
+		6A2C9EF617DC88330EC63FB1 /* Pods-DatumbazFariloTestoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.release.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.release.xcconfig"; sourceTree = "<group>"; };
+		86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatumbazFariloTestoj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +466,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				005E907B24CCF391002480BF /* ReVoModeloj.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0099FBC22D6505330033EC11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A0E8E22D65087100F8285E /* ReVoDatumbazoOSX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0099FC752D6506170033EC11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B201F0F7DC9CB88C446E788E /* Pods_DatumbazFariloTestoj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,8 +519,10 @@
 		0049B22A24B1622A00B81E15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00A0E8DE2D65086900F8285E /* ReVoModelojOSX.framework */,
 				005270EC24E9A9E2009E17AA /* ReVoModelojOSX.framework */,
 				0049B22B24B1622A00B81E15 /* ReVoModeloj.framework */,
+				86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,8 +533,11 @@
 				0051A6C12309A2F90034DFF9 /* ReVoDatumbazo */,
 				003656FF2309C78F0028C21F /* ReVoDatumbazoOSX */,
 				0036570F2309CA020028C21F /* Komunaj */,
+				0099FBC62D6505330033EC11 /* DatumbazFarilo */,
+				0099FC792D6506170033EC11 /* DatumbazFariloTestoj */,
 				0051A6C02309A2F90034DFF9 /* Products */,
 				0049B22A24B1622A00B81E15 /* Frameworks */,
+				0A543C699E067667DA999180 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +546,8 @@
 			children = (
 				0051A6BF2309A2F90034DFF9 /* ReVoDatumbazo.framework */,
 				003656FE2309C78F0028C21F /* ReVoDatumbazoOSX.framework */,
+				0099FBC52D6505330033EC11 /* DatumbazFarilo */,
+				0099FC782D6506170033EC11 /* DatumbazFariloTestoj.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +558,247 @@
 				0051A6C32309A2F90034DFF9 /* Info.plist */,
 			);
 			path = ReVoDatumbazo;
+			sourceTree = "<group>";
+		};
+		0099FBC62D6505330033EC11 /* DatumbazFarilo */ = {
+			isa = PBXGroup;
+			children = (
+				0099FC222D65058C0033EC11 /* Grundo */,
+				0099FC152D65058C0033EC11 /* Artikoloj */,
+				0099FC172D65058C0033EC11 /* ModelAldonoj */,
+				0099FBCC2D65058B0033EC11 /* KreiDatumbazon.swift */,
+				0099FBCE2D65058B0033EC11 /* VortListoj.swift */,
+				0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */,
+				0099FBD02D65058B0033EC11 /* TekstFarilo.swift */,
+				0099FC232D65058C0033EC11 /* main.swift */,
+			);
+			path = DatumbazFarilo;
+			sourceTree = "<group>";
+		};
+		0099FBD42D65058C0033EC11 /* Helpiloj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */,
+				0099FBD22D65058C0033EC11 /* Interpreti.swift */,
+				0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */,
+			);
+			path = Helpiloj;
+			sourceTree = "<group>";
+		};
+		0099FBD82D65058C0033EC11 /* Fabrikoj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FBD52D65058C0033EC11 /* ArtikolFabriko.swift */,
+				0099FBD62D65058C0033EC11 /* SubartikoloFabriko.swift */,
+				0099FBD72D65058C0033EC11 /* VortoFabriko.swift */,
+			);
+			path = Fabrikoj;
+			sourceTree = "<group>";
+		};
+		0099FBE22D65058C0033EC11 /* Modeloj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FBD82D65058C0033EC11 /* Fabrikoj */,
+				0099FBD92D65058C0033EC11 /* ArtikolNodo.swift */,
+				0099FBDA2D65058C0033EC11 /* ArtikolTraduko.swift */,
+				0099FBDB2D65058C0033EC11 /* FakVorto.swift */,
+				0099FBDC2D65058C0033EC11 /* NodTipo.swift */,
+				0099FBDD2D65058C0033EC11 /* OfcVorto.swift */,
+				0099FBDE2D65058C0033EC11 /* Serchebla.swift */,
+				0099FBDF2D65058C0033EC11 /* SerchTraduko.swift */,
+				0099FBE02D65058C0033EC11 /* SerchVorto.swift */,
+				0099FBE12D65058C0033EC11 /* Stato.swift */,
+			);
+			path = Modeloj;
+			sourceTree = "<group>";
+		};
+		0099FC0E2D65058C0033EC11 /* NodTraktado */ = {
+			isa = PBXGroup;
+			children = (
+				0099FBE32D65058C0033EC11 /* TraktiAltigitan.swift */,
+				0099FBE42D65058C0033EC11 /* TraktiArtikolon.swift */,
+				0099FBE52D65058C0033EC11 /* TraktiAutoron.swift */,
+				0099FBE62D65058C0033EC11 /* TraktiCitilon.swift */,
+				0099FBE72D65058C0033EC11 /* TraktiDerivajhon.swift */,
+				0099FBE82D65058C0033EC11 /* TraktiDifinon.swift */,
+				0099FBE92D65058C0033EC11 /* TraktiEkzemplon.swift */,
+				0099FBEA2D65058C0033EC11 /* TraktiEmfazon.swift */,
+				0099FBEB2D65058C0033EC11 /* TraktiEscepton.swift */,
+				0099FBEC2D65058C0033EC11 /* TraktiFormulon.swift */,
+				0099FBED2D65058C0033EC11 /* TraktiGramatikon.swift */,
+				0099FBEE2D65058C0033EC11 /* TraktiGrasan.swift */,
+				0099FBEF2D65058C0033EC11 /* TraktiIndekson.swift */,
+				0099FBF02D65058C0033EC11 /* TraktiIndicon.swift */,
+				0099FBF12D65058C0033EC11 /* TraktiKapon.swift */,
+				0099FBF22D65058C0033EC11 /* TraktiKlarigon.swift */,
+				0099FBF32D65058C0033EC11 /* TraktiKomunlingvan.swift */,
+				0099FBF42D65058C0033EC11 /* TraktiKursivan.swift */,
+				0099FBF52D65058C0033EC11 /* TraktiListReferencon.swift */,
+				0099FBF62D65058C0033EC11 /* TraktiMallongigon.swift */,
+				0099FBF72D65058C0033EC11 /* TraktiMisstilan.swift */,
+				0099FBF82D65058C0033EC11 /* TraktiNacilingvan.swift */,
+				0099FBF92D65058C0033EC11 /* TraktiNomon.swift */,
+				0099FBFA2D65058C0033EC11 /* TraktiOficialecon.swift */,
+				0099FBFB2D65058C0033EC11 /* TraktiPrononcon.swift */,
+				0099FBFC2D65058C0033EC11 /* TraktiRadikon.swift */,
+				0099FBFD2D65058C0033EC11 /* TraktiReferencGrupon.swift */,
+				0099FBFE2D65058C0033EC11 /* TraktiReferencon.swift */,
+				0099FBFF2D65058C0033EC11 /* TraktiRimarkon.swift */,
+				0099FC002D65058C0033EC11 /* TraktiSencon.swift */,
+				0099FC012D65058C0033EC11 /* TraktiSencReferencon.swift */,
+				0099FC022D65058C0033EC11 /* TraktiSubartikolon.swift */,
+				0099FC032D65058C0033EC11 /* TraktiSubderivajhon.swift */,
+				0099FC042D65058C0033EC11 /* TraktiSubsencon.swift */,
+				0099FC052D65058C0033EC11 /* TraktiTildon.swift */,
+				0099FC062D65058C0033EC11 /* TraktiTradukGrupon.swift */,
+				0099FC072D65058C0033EC11 /* TraktiTradukon.swift */,
+				0099FC082D65058C0033EC11 /* TraktiTrastrekitan.swift */,
+				0099FC092D65058C0033EC11 /* TraktiURLon.swift */,
+				0099FC0A2D65058C0033EC11 /* TraktiUzon.swift */,
+				0099FC0B2D65058C0033EC11 /* TraktiVariajhon.swift */,
+				0099FC0C2D65058C0033EC11 /* TraktiVortaron.swift */,
+				0099FC0D2D65058C0033EC11 /* TraktiVortSpecon.swift */,
+			);
+			path = NodTraktado;
+			sourceTree = "<group>";
+		};
+		0099FC152D65058C0033EC11 /* Artikoloj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FBD42D65058C0033EC11 /* Helpiloj */,
+				0099FBE22D65058C0033EC11 /* Modeloj */,
+				0099FC0E2D65058C0033EC11 /* NodTraktado */,
+				0099FC0F2D65058C0033EC11 /* Antautraktado.swift */,
+				0099FC102D65058C0033EC11 /* ArboAnalizilo.swift */,
+				0099FC112D65058C0033EC11 /* ArtikolAnalizilo.swift */,
+				0099FC122D65058C0033EC11 /* Artikolaro.swift */,
+				0099FC132D65058C0033EC11 /* ArtikolKonvertilo.swift */,
+				0099FC142D65058C0033EC11 /* Posttraktado.swift */,
+			);
+			path = Artikoloj;
+			sourceTree = "<group>";
+		};
+		0099FC172D65058C0033EC11 /* ModelAldonoj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FC162D65058C0033EC11 /* Artikolo+Printado.swift */,
+			);
+			path = ModelAldonoj;
+			sourceTree = "<group>";
+		};
+		0099FC192D65058C0033EC11 /* Modeloj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FC182D65058C0033EC11 /* Grundo.swift */,
+			);
+			path = Modeloj;
+			sourceTree = "<group>";
+		};
+		0099FC222D65058C0033EC11 /* Grundo */ = {
+			isa = PBXGroup;
+			children = (
+				0099FC192D65058C0033EC11 /* Modeloj */,
+				0099FC1A2D65058C0033EC11 /* DTDAnalizilo.swift */,
+				0099FC1B2D65058C0033EC11 /* FakoAnalizilo.swift */,
+				0099FC1C2D65058C0033EC11 /* LingvoAnalizilo.swift */,
+				0099FC1D2D65058C0033EC11 /* LiteroAnalizilo.swift */,
+				0099FC1E2D65058C0033EC11 /* Oficialecoj.swift */,
+				0099FC1F2D65058C0033EC11 /* SignoAnalizilo.swift */,
+				0099FC202D65058C0033EC11 /* StiloAnalizilo.swift */,
+				0099FC212D65058C0033EC11 /* VortarajMallongigojAnalizilo.swift */,
+			);
+			path = Grundo;
+			sourceTree = "<group>";
+		};
+		0099FC792D6506170033EC11 /* DatumbazFariloTestoj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FC8C2D6506580033EC11 /* Risurcoj */,
+				0099FCB62D6506580033EC11 /* __Snapshots__ */,
+				0099FC7F2D6506580033EC11 /* TestDatumoj.swift */,
+				0099FCB72D6506580033EC11 /* DatumbazFariloTestoj.swift */,
+			);
+			path = DatumbazFariloTestoj;
+			sourceTree = "<group>";
+		};
+		0099FC882D6506580033EC11 /* Artikoloj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FC802D6506580033EC11 /* abak.xml */,
+				0099FC812D6506580033EC11 /* elips.xml */,
+				0099FC822D6506580033EC11 /* grav.xml */,
+				0099FC832D6506580033EC11 /* majoritat.xml */,
+				0099FC842D6506580033EC11 /* ni.xml */,
+				0099FC852D6506580033EC11 /* not.xml */,
+				0099FC862D6506580033EC11 /* om.xml */,
+				0099FC872D6506580033EC11 /* per.xml */,
+			);
+			path = Artikoloj;
+			sourceTree = "<group>";
+		};
+		0099FC8C2D6506580033EC11 /* Risurcoj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FC882D6506580033EC11 /* Artikoloj */,
+				0099FD3F2D65079E0033EC11 /* DatumbazFarilo.xctestplan */,
+				0099FC8B2D6506580033EC11 /* grundo.json */,
+			);
+			path = Risurcoj;
+			sourceTree = "<group>";
+		};
+		0099FCB52D6506580033EC11 /* DatumbazFariloTestoj */ = {
+			isa = PBXGroup;
+			children = (
+				0099FC8D2D6506580033EC11 /* testiArtikolon.abak-o.json */,
+				0099FC8E2D6506580033EC11 /* testiArtikolon.elips-o.json */,
+				0099FC8F2D6506580033EC11 /* testiArtikolon.grav-a.json */,
+				0099FC902D6506580033EC11 /* testiArtikolon.majoritat-o-maĵori-o.json */,
+				0099FC912D6506580033EC11 /* testiArtikolon.ni.json */,
+				0099FC922D6506580033EC11 /* testiArtikolon.not-i.json */,
+				0099FC932D6506580033EC11 /* testiArtikolon.Om-o.json */,
+				0099FC942D6506580033EC11 /* testiArtikolon.per.json */,
+				0099FC952D6506580033EC11 /* testiFakVortojn.abak-o.json */,
+				0099FC962D6506580033EC11 /* testiFakVortojn.elips-o.json */,
+				0099FC972D6506580033EC11 /* testiFakVortojn.grav-a.json */,
+				0099FC982D6506580033EC11 /* testiFakVortojn.majoritat-o-maĵori-o.json */,
+				0099FC992D6506580033EC11 /* testiFakVortojn.ni.json */,
+				0099FC9A2D6506580033EC11 /* testiFakVortojn.not-i.json */,
+				0099FC9B2D6506580033EC11 /* testiFakVortojn.Om-o.json */,
+				0099FC9C2D6506580033EC11 /* testiFakVortojn.per.json */,
+				0099FC9D2D6506580033EC11 /* testiOfcVortojn.abak-o.json */,
+				0099FC9E2D6506580033EC11 /* testiOfcVortojn.elips-o.json */,
+				0099FC9F2D6506580033EC11 /* testiOfcVortojn.grav-a.json */,
+				0099FCA02D6506580033EC11 /* testiOfcVortojn.majoritat-o-maĵori-o.json */,
+				0099FCA12D6506580033EC11 /* testiOfcVortojn.ni.json */,
+				0099FCA22D6506580033EC11 /* testiOfcVortojn.not-i.json */,
+				0099FCA32D6506580033EC11 /* testiOfcVortojn.Om-o.json */,
+				0099FCA42D6506580033EC11 /* testiOfcVortojn.per.json */,
+				0099FCA52D6506580033EC11 /* testiSerchTradukojn.abak-o.json */,
+				0099FCA62D6506580033EC11 /* testiSerchTradukojn.elips-o.json */,
+				0099FCA72D6506580033EC11 /* testiSerchTradukojn.grav-a.json */,
+				0099FCA82D6506580033EC11 /* testiSerchTradukojn.majoritat-o-maĵori-o.json */,
+				0099FCA92D6506580033EC11 /* testiSerchTradukojn.ni.json */,
+				0099FCAA2D6506580033EC11 /* testiSerchTradukojn.not-i.json */,
+				0099FCAB2D6506580033EC11 /* testiSerchTradukojn.Om-o.json */,
+				0099FCAC2D6506580033EC11 /* testiSerchTradukojn.per.json */,
+				0099FCAD2D6506580033EC11 /* testiSerchVortojn.abak-o.json */,
+				0099FCAE2D6506580033EC11 /* testiSerchVortojn.elips-o.json */,
+				0099FCAF2D6506580033EC11 /* testiSerchVortojn.grav-a.json */,
+				0099FCB02D6506580033EC11 /* testiSerchVortojn.majoritat-o-maĵori-o.json */,
+				0099FCB12D6506580033EC11 /* testiSerchVortojn.ni.json */,
+				0099FCB22D6506580033EC11 /* testiSerchVortojn.not-i.json */,
+				0099FCB32D6506580033EC11 /* testiSerchVortojn.Om-o.json */,
+				0099FCB42D6506580033EC11 /* testiSerchVortojn.per.json */,
+			);
+			path = DatumbazFariloTestoj;
+			sourceTree = "<group>";
+		};
+		0099FCB62D6506580033EC11 /* __Snapshots__ */ = {
+			isa = PBXGroup;
+			children = (
+				0099FCB52D6506580033EC11 /* DatumbazFariloTestoj */,
+			);
+			path = __Snapshots__;
 			sourceTree = "<group>";
 		};
 		00A47A5924AFDFC700EA9DCF /* ModelAldonoj */ = {
@@ -170,6 +824,16 @@
 				003657162309CE250028C21F /* VortaroDatumbazo.swift */,
 			);
 			path = DatumbazAlirado;
+			sourceTree = "<group>";
+		};
+		0A543C699E067667DA999180 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3160BDCF41F0A5B31404DFB0 /* Pods-DatumbazFariloTestoj.debug.xcconfig */,
+				6A2C9EF617DC88330EC63FB1 /* Pods-DatumbazFariloTestoj.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,13 +892,52 @@
 			productReference = 0051A6BF2309A2F90034DFF9 /* ReVoDatumbazo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		0099FBC42D6505330033EC11 /* DatumbazFarilo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0099FBC92D6505330033EC11 /* Build configuration list for PBXNativeTarget "DatumbazFarilo" */;
+			buildPhases = (
+				0099FBC12D6505330033EC11 /* Sources */,
+				0099FBC22D6505330033EC11 /* Frameworks */,
+				0099FBC32D6505330033EC11 /* CopyFiles */,
+				00A0E8E62D65087100F8285E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00A0E8E52D65087100F8285E /* PBXTargetDependency */,
+			);
+			name = DatumbazFarilo;
+			productName = DatumbazFarilo;
+			productReference = 0099FBC52D6505330033EC11 /* DatumbazFarilo */;
+			productType = "com.apple.product-type.tool";
+		};
+		0099FC772D6506170033EC11 /* DatumbazFariloTestoj */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0099FC7C2D6506170033EC11 /* Build configuration list for PBXNativeTarget "DatumbazFariloTestoj" */;
+			buildPhases = (
+				94908B5B57B6E92448E72C29 /* [CP] Check Pods Manifest.lock */,
+				0099FC742D6506170033EC11 /* Sources */,
+				0099FC752D6506170033EC11 /* Frameworks */,
+				0099FC762D6506170033EC11 /* Resources */,
+				36DD01123DCF36A37B5552AE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DatumbazFariloTestoj;
+			productName = DatumbazFariloTestoj;
+			productReference = 0099FC782D6506170033EC11 /* DatumbazFariloTestoj.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0051A6B62309A2F90034DFF9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				DefaultBuildSystemTypeForWorkspace = Original;
+				DefaultBuildSystemTypeForWorkspace = Latest;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Robin Hill";
 				TargetAttributes = {
@@ -245,6 +948,14 @@
 					0051A6BE2309A2F90034DFF9 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
+					};
+					0099FBC42D6505330033EC11 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+					};
+					0099FC772D6506170033EC11 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -263,6 +974,8 @@
 			targets = (
 				0051A6BE2309A2F90034DFF9 /* ReVoDatumbazo */,
 				003656FD2309C78F0028C21F /* ReVoDatumbazoOSX */,
+				0099FBC42D6505330033EC11 /* DatumbazFarilo */,
+				0099FC772D6506170033EC11 /* DatumbazFariloTestoj */,
 			);
 		};
 /* End PBXProject section */
@@ -282,7 +995,106 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0099FC762D6506170033EC11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0099FD402D65079E0033EC11 /* DatumbazFarilo.xctestplan in Resources */,
+				0099FCDE2D6506580033EC11 /* testiSerchTradukojn.majoritat-o-maĵori-o.json in Resources */,
+				0099FCD22D6506580033EC11 /* testiFakVortojn.per.json in Resources */,
+				0099FCBD2D6506580033EC11 /* ni.xml in Resources */,
+				0099FCD72D6506580033EC11 /* testiOfcVortojn.ni.json in Resources */,
+				0099FCC82D6506580033EC11 /* testiArtikolon.not-i.json in Resources */,
+				0099FCC92D6506580033EC11 /* testiArtikolon.Om-o.json in Resources */,
+				0099FCDA2D6506580033EC11 /* testiOfcVortojn.per.json in Resources */,
+				0099FCD62D6506580033EC11 /* testiOfcVortojn.majoritat-o-maĵori-o.json in Resources */,
+				0099FCE12D6506580033EC11 /* testiSerchTradukojn.Om-o.json in Resources */,
+				0099FCE62D6506580033EC11 /* testiSerchVortojn.majoritat-o-maĵori-o.json in Resources */,
+				0099FCCA2D6506580033EC11 /* testiArtikolon.per.json in Resources */,
+				0099FCC32D6506580033EC11 /* testiArtikolon.abak-o.json in Resources */,
+				0099FCC52D6506580033EC11 /* testiArtikolon.grav-a.json in Resources */,
+				0099FCE42D6506580033EC11 /* testiSerchVortojn.elips-o.json in Resources */,
+				0099FCD82D6506580033EC11 /* testiOfcVortojn.not-i.json in Resources */,
+				0099FCD12D6506580033EC11 /* testiFakVortojn.Om-o.json in Resources */,
+				0099FCDD2D6506580033EC11 /* testiSerchTradukojn.grav-a.json in Resources */,
+				0099FCC22D6506580033EC11 /* grundo.json in Resources */,
+				0099FCD42D6506580033EC11 /* testiOfcVortojn.elips-o.json in Resources */,
+				0099FCC62D6506580033EC11 /* testiArtikolon.majoritat-o-maĵori-o.json in Resources */,
+				0099FCBB2D6506580033EC11 /* grav.xml in Resources */,
+				0099FCE02D6506580033EC11 /* testiSerchTradukojn.not-i.json in Resources */,
+				0099FCE22D6506580033EC11 /* testiSerchTradukojn.per.json in Resources */,
+				0099FCC72D6506580033EC11 /* testiArtikolon.ni.json in Resources */,
+				0099FCE82D6506580033EC11 /* testiSerchVortojn.not-i.json in Resources */,
+				0099FCBF2D6506580033EC11 /* om.xml in Resources */,
+				0099FCD02D6506580033EC11 /* testiFakVortojn.not-i.json in Resources */,
+				0099FCD32D6506580033EC11 /* testiOfcVortojn.abak-o.json in Resources */,
+				0099FCCC2D6506580033EC11 /* testiFakVortojn.elips-o.json in Resources */,
+				0099FCCB2D6506580033EC11 /* testiFakVortojn.abak-o.json in Resources */,
+				0099FCEA2D6506580033EC11 /* testiSerchVortojn.per.json in Resources */,
+				0099FCE52D6506580033EC11 /* testiSerchVortojn.grav-a.json in Resources */,
+				0099FCC42D6506580033EC11 /* testiArtikolon.elips-o.json in Resources */,
+				0099FCDF2D6506580033EC11 /* testiSerchTradukojn.ni.json in Resources */,
+				0099FCCE2D6506580033EC11 /* testiFakVortojn.majoritat-o-maĵori-o.json in Resources */,
+				0099FCB92D6506580033EC11 /* abak.xml in Resources */,
+				0099FCE32D6506580033EC11 /* testiSerchVortojn.abak-o.json in Resources */,
+				0099FCBE2D6506580033EC11 /* not.xml in Resources */,
+				0099FCCF2D6506580033EC11 /* testiFakVortojn.ni.json in Resources */,
+				0099FCE92D6506580033EC11 /* testiSerchVortojn.Om-o.json in Resources */,
+				0099FCCD2D6506580033EC11 /* testiFakVortojn.grav-a.json in Resources */,
+				0099FCD92D6506580033EC11 /* testiOfcVortojn.Om-o.json in Resources */,
+				0099FCC02D6506580033EC11 /* per.xml in Resources */,
+				0099FCBA2D6506580033EC11 /* elips.xml in Resources */,
+				0099FCD52D6506580033EC11 /* testiOfcVortojn.grav-a.json in Resources */,
+				0099FCE72D6506580033EC11 /* testiSerchVortojn.ni.json in Resources */,
+				0099FCDB2D6506580033EC11 /* testiSerchTradukojn.abak-o.json in Resources */,
+				0099FCDC2D6506580033EC11 /* testiSerchTradukojn.elips-o.json in Resources */,
+				0099FCBC2D6506580033EC11 /* majoritat.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36DD01123DCF36A37B5552AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94908B5B57B6E92448E72C29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DatumbazFariloTestoj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		003656FA2309C78F0028C21F /* Sources */ = {
@@ -327,7 +1139,196 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0099FBC12D6505330033EC11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0099FC562D65058C0033EC11 /* TraktiSencReferencon.swift in Sources */,
+				0099FC632D65058C0033EC11 /* Antautraktado.swift in Sources */,
+				0099FC542D65058C0033EC11 /* TraktiRimarkon.swift in Sources */,
+				0099FC2B2D65058C0033EC11 /* String+Aldonoj.swift in Sources */,
+				00B297232D65125100264431 /* Destino.swift in Sources */,
+				0099FC552D65058C0033EC11 /* TraktiSencon.swift in Sources */,
+				0099FC2C2D65058C0033EC11 /* ArtikolFabriko.swift in Sources */,
+				0099FC292D65058C0033EC11 /* ArtikolTeksto.swift in Sources */,
+				0099FC322D65058C0033EC11 /* NodTipo.swift in Sources */,
+				0099FC2E2D65058C0033EC11 /* VortoFabriko.swift in Sources */,
+				0099FC462D65058C0033EC11 /* TraktiKapon.swift in Sources */,
+				0099FC362D65058C0033EC11 /* SerchVorto.swift in Sources */,
+				0099FC412D65058C0033EC11 /* TraktiFormulon.swift in Sources */,
+				0099FC4B2D65058C0033EC11 /* TraktiMallongigon.swift in Sources */,
+				0099FC4A2D65058C0033EC11 /* TraktiListReferencon.swift in Sources */,
+				0099FC3E2D65058C0033EC11 /* TraktiEkzemplon.swift in Sources */,
+				0099FC382D65058C0033EC11 /* TraktiAltigitan.swift in Sources */,
+				0099FC522D65058C0033EC11 /* TraktiReferencGrupon.swift in Sources */,
+				0099FC392D65058C0033EC11 /* TraktiArtikolon.swift in Sources */,
+				0099FC3A2D65058C0033EC11 /* TraktiAutoron.swift in Sources */,
+				0099FC4C2D65058C0033EC11 /* TraktiMisstilan.swift in Sources */,
+				0099FC642D65058C0033EC11 /* ArboAnalizilo.swift in Sources */,
+				0099FC472D65058C0033EC11 /* TraktiKlarigon.swift in Sources */,
+				0099FC602D65058C0033EC11 /* TraktiVariajhon.swift in Sources */,
+				0099FC312D65058C0033EC11 /* FakVorto.swift in Sources */,
+				0099FC2D2D65058C0033EC11 /* SubartikoloFabriko.swift in Sources */,
+				0099FC732D65058C0033EC11 /* main.swift in Sources */,
+				0099FC442D65058C0033EC11 /* TraktiIndekson.swift in Sources */,
+				0099FC4E2D65058C0033EC11 /* TraktiNomon.swift in Sources */,
+				0099FC3F2D65058C0033EC11 /* TraktiEmfazon.swift in Sources */,
+				0099FC3D2D65058C0033EC11 /* TraktiDifinon.swift in Sources */,
+				0099FC492D65058C0033EC11 /* TraktiKursivan.swift in Sources */,
+				0099FC422D65058C0033EC11 /* TraktiGramatikon.swift in Sources */,
+				0099FC2F2D65058C0033EC11 /* ArtikolNodo.swift in Sources */,
+				0099FC672D65058C0033EC11 /* ArtikolKonvertilo.swift in Sources */,
+				0099FC452D65058C0033EC11 /* TraktiIndicon.swift in Sources */,
+				0099FC6A2D65058C0033EC11 /* Grundo.swift in Sources */,
+				0099FC302D65058C0033EC11 /* ArtikolTraduko.swift in Sources */,
+				0099FC5A2D65058C0033EC11 /* TraktiTildon.swift in Sources */,
+				0099FC692D65058C0033EC11 /* Artikolo+Printado.swift in Sources */,
+				0099FC4D2D65058C0033EC11 /* TraktiNacilingvan.swift in Sources */,
+				0099FC5F2D65058C0033EC11 /* TraktiUzon.swift in Sources */,
+				0099FC4F2D65058C0033EC11 /* TraktiOficialecon.swift in Sources */,
+				0099FC242D65058C0033EC11 /* KreiDatumbazon.swift in Sources */,
+				0099FC682D65058C0033EC11 /* Posttraktado.swift in Sources */,
+				0099FC622D65058C0033EC11 /* TraktiVortSpecon.swift in Sources */,
+				0099FC482D65058C0033EC11 /* TraktiKomunlingvan.swift in Sources */,
+				0099FC722D65058C0033EC11 /* VortarajMallongigojAnalizilo.swift in Sources */,
+				0099FC6D2D65058C0033EC11 /* LingvoAnalizilo.swift in Sources */,
+				0099FC342D65058C0033EC11 /* Serchebla.swift in Sources */,
+				0099FC592D65058C0033EC11 /* TraktiSubsencon.swift in Sources */,
+				0099FC512D65058C0033EC11 /* TraktiRadikon.swift in Sources */,
+				0099FC5E2D65058C0033EC11 /* TraktiURLon.swift in Sources */,
+				00B297192D650F5100264431 /* DatumbazAlirilo.swift in Sources */,
+				00B2971B2D65122B00264431 /* Artikolo+ReVoDatumbazo.swift in Sources */,
+				00B2971C2D65122B00264431 /* Fako+ReVoDatumbazo.swift in Sources */,
+				00B2971D2D65122B00264431 /* Mallongigo+ReVoDatumbazo.swift in Sources */,
+				00B2971E2D65122B00264431 /* Lingvo+ReVoDatumbazo.swift in Sources */,
+				00B297202D65122B00264431 /* Stilo+ReVoDatumbazo.swift in Sources */,
+				0099FC5B2D65058C0033EC11 /* TraktiTradukGrupon.swift in Sources */,
+				0099FC3C2D65058C0033EC11 /* TraktiDerivajhon.swift in Sources */,
+				0099FC332D65058C0033EC11 /* OfcVorto.swift in Sources */,
+				0099FC2A2D65058C0033EC11 /* Interpreti.swift in Sources */,
+				0099FC612D65058C0033EC11 /* TraktiVortaron.swift in Sources */,
+				0099FC662D65058C0033EC11 /* Artikolaro.swift in Sources */,
+				0099FC432D65058C0033EC11 /* TraktiGrasan.swift in Sources */,
+				0099FC532D65058C0033EC11 /* TraktiReferencon.swift in Sources */,
+				0099FC572D65058C0033EC11 /* TraktiSubartikolon.swift in Sources */,
+				0099FC6E2D65058C0033EC11 /* LiteroAnalizilo.swift in Sources */,
+				0099FC502D65058C0033EC11 /* TraktiPrononcon.swift in Sources */,
+				0099FC352D65058C0033EC11 /* SerchTraduko.swift in Sources */,
+				0099FC582D65058C0033EC11 /* TraktiSubderivajhon.swift in Sources */,
+				0099FC6F2D65058C0033EC11 /* Oficialecoj.swift in Sources */,
+				0099FC252D65058C0033EC11 /* PrefiksArboFarilo.swift in Sources */,
+				0099FC702D65058C0033EC11 /* SignoAnalizilo.swift in Sources */,
+				0099FC652D65058C0033EC11 /* ArtikolAnalizilo.swift in Sources */,
+				0099FC372D65058C0033EC11 /* Stato.swift in Sources */,
+				0099FC282D65058C0033EC11 /* TekstFarilo.swift in Sources */,
+				0099FC5C2D65058C0033EC11 /* TraktiTradukon.swift in Sources */,
+				0099FC6C2D65058C0033EC11 /* FakoAnalizilo.swift in Sources */,
+				0099FC5D2D65058C0033EC11 /* TraktiTrastrekitan.swift in Sources */,
+				0099FC6B2D65058C0033EC11 /* DTDAnalizilo.swift in Sources */,
+				0099FC402D65058C0033EC11 /* TraktiEscepton.swift in Sources */,
+				0099FC262D65058C0033EC11 /* VortListoj.swift in Sources */,
+				0099FC3B2D65058C0033EC11 /* TraktiCitilon.swift in Sources */,
+				0099FC712D65058C0033EC11 /* StiloAnalizilo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0099FC742D6506170033EC11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0099FCB82D6506580033EC11 /* TestDatumoj.swift in Sources */,
+				0099FD242D6506940033EC11 /* NodTipo.swift in Sources */,
+				0099FD252D6506940033EC11 /* ArtikolTraduko.swift in Sources */,
+				0099FD262D6506940033EC11 /* OfcVorto.swift in Sources */,
+				0099FD272D6506940033EC11 /* SerchVorto.swift in Sources */,
+				0099FD282D6506940033EC11 /* Serchebla.swift in Sources */,
+				0099FD292D6506940033EC11 /* Stato.swift in Sources */,
+				0099FD2A2D6506940033EC11 /* ArtikolNodo.swift in Sources */,
+				0099FD2B2D6506940033EC11 /* FakVorto.swift in Sources */,
+				0099FD2C2D6506940033EC11 /* SerchTraduko.swift in Sources */,
+				0099FCEC2D65067F0033EC11 /* TekstFarilo.swift in Sources */,
+				0099FCED2D65067F0033EC11 /* KreiDatumbazon.swift in Sources */,
+				0099FCEE2D65067F0033EC11 /* VortListoj.swift in Sources */,
+				0099FCEF2D65067F0033EC11 /* PrefiksArboFarilo.swift in Sources */,
+				0099FCF02D65067F0033EC11 /* main.swift in Sources */,
+				0099FCEB2D6506580033EC11 /* DatumbazFariloTestoj.swift in Sources */,
+				0099FCF32D6506890033EC11 /* Artikolaro.swift in Sources */,
+				0099FCF42D6506890033EC11 /* ArtikolKonvertilo.swift in Sources */,
+				0099FCF52D6506890033EC11 /* ArboAnalizilo.swift in Sources */,
+				0099FCF92D65068E0033EC11 /* TraktiFormulon.swift in Sources */,
+				0099FCFA2D65068E0033EC11 /* TraktiSubderivajhon.swift in Sources */,
+				0099FD332D6506A30033EC11 /* SignoAnalizilo.swift in Sources */,
+				0099FD342D6506A30033EC11 /* DTDAnalizilo.swift in Sources */,
+				0099FD352D6506A30033EC11 /* FakoAnalizilo.swift in Sources */,
+				0099FD362D6506A30033EC11 /* LiteroAnalizilo.swift in Sources */,
+				0099FD372D6506A30033EC11 /* VortarajMallongigojAnalizilo.swift in Sources */,
+				0099FD382D6506A30033EC11 /* LingvoAnalizilo.swift in Sources */,
+				0099FD392D6506A30033EC11 /* Oficialecoj.swift in Sources */,
+				0099FD3A2D6506A30033EC11 /* StiloAnalizilo.swift in Sources */,
+				0099FCFB2D65068E0033EC11 /* TraktiReferencon.swift in Sources */,
+				0099FD2D2D6506980033EC11 /* ArtikolFabriko.swift in Sources */,
+				0099FD2E2D6506980033EC11 /* SubartikoloFabriko.swift in Sources */,
+				0099FD2F2D6506980033EC11 /* VortoFabriko.swift in Sources */,
+				0099FCFC2D65068E0033EC11 /* TraktiIndekson.swift in Sources */,
+				0099FCFD2D65068E0033EC11 /* TraktiReferencGrupon.swift in Sources */,
+				0099FCFE2D65068E0033EC11 /* TraktiEkzemplon.swift in Sources */,
+				0099FCFF2D65068E0033EC11 /* TraktiMisstilan.swift in Sources */,
+				0099FD002D65068E0033EC11 /* TraktiAltigitan.swift in Sources */,
+				0099FD012D65068E0033EC11 /* TraktiSubartikolon.swift in Sources */,
+				00B2971A2D6511CA00264431 /* DatumbazAlirilo.swift in Sources */,
+				0099FD022D65068E0033EC11 /* TraktiTildon.swift in Sources */,
+				0099FD032D65068E0033EC11 /* TraktiDifinon.swift in Sources */,
+				0099FD042D65068E0033EC11 /* TraktiRimarkon.swift in Sources */,
+				0099FD052D65068E0033EC11 /* TraktiOficialecon.swift in Sources */,
+				0099FD062D65068E0033EC11 /* TraktiKlarigon.swift in Sources */,
+				0099FD072D65068E0033EC11 /* TraktiKapon.swift in Sources */,
+				0099FD082D65068E0033EC11 /* TraktiMallongigon.swift in Sources */,
+				0099FD092D65068E0033EC11 /* TraktiSubsencon.swift in Sources */,
+				0099FD0A2D65068E0033EC11 /* TraktiVortaron.swift in Sources */,
+				0099FD0B2D65068E0033EC11 /* TraktiIndicon.swift in Sources */,
+				0099FD0C2D65068E0033EC11 /* TraktiNomon.swift in Sources */,
+				0099FD0D2D65068E0033EC11 /* TraktiTradukGrupon.swift in Sources */,
+				0099FD0E2D65068E0033EC11 /* TraktiURLon.swift in Sources */,
+				0099FD302D65069D0033EC11 /* ArtikolTeksto.swift in Sources */,
+				0099FD312D65069D0033EC11 /* String+Aldonoj.swift in Sources */,
+				0099FD322D65069D0033EC11 /* Interpreti.swift in Sources */,
+				0099FD0F2D65068E0033EC11 /* TraktiCitilon.swift in Sources */,
+				0099FD102D65068E0033EC11 /* TraktiVortSpecon.swift in Sources */,
+				0099FD112D65068E0033EC11 /* TraktiAutoron.swift in Sources */,
+				0099FD122D65068E0033EC11 /* TraktiKomunlingvan.swift in Sources */,
+				0099FD132D65068E0033EC11 /* TraktiRadikon.swift in Sources */,
+				0099FD3B2D6506A60033EC11 /* Grundo.swift in Sources */,
+				0099FD142D65068E0033EC11 /* TraktiSencon.swift in Sources */,
+				0099FD152D65068E0033EC11 /* TraktiGramatikon.swift in Sources */,
+				0099FD162D65068E0033EC11 /* TraktiEscepton.swift in Sources */,
+				0099FD172D65068E0033EC11 /* TraktiDerivajhon.swift in Sources */,
+				0099FD182D65068E0033EC11 /* TraktiGrasan.swift in Sources */,
+				0099FD192D65068E0033EC11 /* TraktiListReferencon.swift in Sources */,
+				0099FD1A2D65068E0033EC11 /* TraktiKursivan.swift in Sources */,
+				0099FD1B2D65068E0033EC11 /* TraktiSencReferencon.swift in Sources */,
+				0099FD1C2D65068E0033EC11 /* TraktiTrastrekitan.swift in Sources */,
+				0099FD1D2D65068E0033EC11 /* TraktiUzon.swift in Sources */,
+				0099FD1E2D65068E0033EC11 /* TraktiPrononcon.swift in Sources */,
+				0099FD1F2D65068E0033EC11 /* TraktiVariajhon.swift in Sources */,
+				0099FD202D65068E0033EC11 /* TraktiEmfazon.swift in Sources */,
+				0099FD212D65068E0033EC11 /* TraktiArtikolon.swift in Sources */,
+				0099FD222D65068E0033EC11 /* TraktiNacilingvan.swift in Sources */,
+				0099FD232D65068E0033EC11 /* TraktiTradukon.swift in Sources */,
+				0099FCF62D6506890033EC11 /* Posttraktado.swift in Sources */,
+				0099FCF72D6506890033EC11 /* Antautraktado.swift in Sources */,
+				0099FCF82D6506890033EC11 /* ArtikolAnalizilo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00A0E8E52D65087100F8285E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 003656FD2309C78F0028C21F /* ReVoDatumbazoOSX */;
+			targetProxy = 00A0E8E42D65087100F8285E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		003657032309C78F0028C21F /* Debug */ = {
@@ -568,6 +1569,100 @@
 			};
 			name = Release;
 		};
+		0099FBCA2D6505330033EC11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JZ3WYZWA8F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0099FBCB2D6505330033EC11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JZ3WYZWA8F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0099FC7D2D6506170033EC11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3160BDCF41F0A5B31404DFB0 /* Pods-DatumbazFariloTestoj.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JZ3WYZWA8F;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inthescales.DatumbazFariloTestoj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0099FC7E2D6506170033EC11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A2C9EF617DC88330EC63FB1 /* Pods-DatumbazFariloTestoj.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JZ3WYZWA8F;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inthescales.DatumbazFariloTestoj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,6 +1689,24 @@
 			buildConfigurations = (
 				0051A6C82309A2F90034DFF9 /* Debug */,
 				0051A6C92309A2F90034DFF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0099FBC92D6505330033EC11 /* Build configuration list for PBXNativeTarget "DatumbazFarilo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0099FBCA2D6505330033EC11 /* Debug */,
+				0099FBCB2D6505330033EC11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0099FC7C2D6506170033EC11 /* Build configuration list for PBXNativeTarget "DatumbazFariloTestoj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0099FC7D2D6506170033EC11 /* Debug */,
+				0099FC7E2D6506170033EC11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

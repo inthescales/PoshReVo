@@ -114,8 +114,8 @@ final class DatumbazAlirilo {
         if let fako = fako(porKodo: kodo) {
             let vortoj = fako.mutableSetValue(forKey: "fakvortoj").allObjects as? [NSManagedObject]
             return vortoj?.sorted(by: { (unua: NSManagedObject, dua: NSManagedObject) -> Bool in
-                let unuaNomo = unua.value(forKey: "nomo") as! String
-                let duaNomo = dua.value(forKey: "nomo") as! String
+                let unuaNomo = unua.value(forKey: "teksto") as! String
+                let duaNomo = dua.value(forKey: "teksto") as! String
                 return unuaNomo.compare(duaNomo, options: .caseInsensitive, range: nil, locale: Locale(identifier: "eo")) == .orderedAscending
             })
         }
@@ -128,8 +128,8 @@ final class DatumbazAlirilo {
         if let oficialeco = oficialeco(porKodo: kodo) {
             let vortoj = oficialeco.mutableSetValue(forKey: "ofcvortoj").allObjects as? [NSManagedObject]
             return vortoj?.sorted(by: { (unua: NSManagedObject, dua: NSManagedObject) -> Bool in
-                let unuaNomo = unua.value(forKey: "nomo") as! String
-                let duaNomo = dua.value(forKey: "nomo") as! String
+                let unuaNomo = unua.value(forKey: "teksto") as! String
+                let duaNomo = dua.value(forKey: "teksto") as! String
                 return unuaNomo.compare(duaNomo, options: .caseInsensitive, range: nil, locale: Locale(identifier: "eo")) == .orderedAscending
             })
         }

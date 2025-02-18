@@ -42,19 +42,19 @@ public final class VortaroDatumbazo {
     
     public func artikolo(porIndekso indekso: String) -> Artikolo? {
         if let objekto = alirilo.artikolo(porIndekso: indekso) {
-            return Artikolo.elDatumbazObjekto(objekto: objekto, datumbazo: self)
+			return Artikolo.elDatumbazObjekto(objekto: objekto, alirilo: alirilo)
         }
         
         return nil
     }
 	
 	public func artikolo(de destino: Destino) -> Artikolo? {
-		Artikolo.elDatumbazObjekto(objekto: destino.artikolObjekto, datumbazo: self)
+		Artikolo.elDatumbazObjekto(objekto: destino.artikolObjekto, alirilo: alirilo)
 	}
 
     public func iuAjnArtikolo() -> Artikolo? {
         if let objekto = alirilo.iuAjnArtikolo() {
-            return Artikolo.elDatumbazObjekto(objekto: objekto, datumbazo: self)
+            return Artikolo.elDatumbazObjekto(objekto: objekto, alirilo: alirilo)
         }
         
         return nil
@@ -64,7 +64,7 @@ public final class VortaroDatumbazo {
     
     public func vortoj(oficialeco: String) -> [Artikolo] {
         alirilo.vortoj(oficialeco: oficialeco)?.compactMap { objekto in
-            Artikolo.elDatumbazObjekto(objekto: objekto, datumbazo: self)
+            Artikolo.elDatumbazObjekto(objekto: objekto, alirilo: alirilo)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs.titolo < rhs.titolo
         } ?? []

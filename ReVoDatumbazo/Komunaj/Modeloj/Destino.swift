@@ -39,6 +39,18 @@ public struct Destino {
 		self.artikolObjekto = artikolObjekto
 	}
 	
+	/// Skribas destinon en datumbazon
+	public func skribi(en konteksto: NSManagedObjectContext) -> NSManagedObject {
+		let novaObjekto = NSEntityDescription.insertNewObject(forEntityName: "Destino", into: konteksto)
+		novaObjekto.setValue(teksto, forKey: "teksto")
+		novaObjekto.setValue(subteksto, forKey: "subteksto")
+		novaObjekto.setValue(marko, forKey: "marko")
+		novaObjekto.setValue(senco, forKey: "senco")
+		novaObjekto.setValue(artikolObjekto, forKey: "artikolo")
+		
+		return novaObjekto
+	}
+	
 	/// Krei Destinon el datumbazobjekto
     public init?(objekto: NSManagedObject) {
         guard let artikolObjekto = objekto.value(forKey: "artikolo") as? NSManagedObject,
@@ -56,18 +68,6 @@ public struct Destino {
         self.senco = senco
 		self.artikolObjekto = artikolObjekto
     }
-	
-	/// Skribas destinon en datumbazon
-	public func skribi(en konteksto: NSManagedObjectContext) -> NSManagedObject {
-		let novaObjekto = NSEntityDescription.insertNewObject(forEntityName: "Destino", into: konteksto)
-		novaObjekto.setValue(teksto, forKey: "teksto")
-		novaObjekto.setValue(subteksto, forKey: "subteksto")
-		novaObjekto.setValue(marko, forKey: "marko")
-		novaObjekto.setValue(senco, forKey: "senco")
-		novaObjekto.setValue(artikolObjekto, forKey: "artikolo")
-		
-		return novaObjekto
-	}
 }
 
 // MARK: - Equatable

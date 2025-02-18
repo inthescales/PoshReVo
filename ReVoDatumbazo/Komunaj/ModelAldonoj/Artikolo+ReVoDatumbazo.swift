@@ -15,7 +15,7 @@ import ReVoModelojOSX
 #endif
 
 extension Artikolo {
-	public func skribi(en konteksto: NSManagedObjectContext, numero: Int) -> NSManagedObject {
+	func skribi(en konteksto: NSManagedObjectContext, numero: Int) -> NSManagedObject {
 		let dbObjekto = NSEntityDescription.insertNewObject(forEntityName: "Artikolo", into: konteksto)
 		
 		// Skribi ecojn
@@ -78,14 +78,16 @@ extension Artikolo {
 		return dbObjekto
 	}
 	
-    static func elDatumbazObjekto(objekto: NSManagedObject, datumbazo: VortaroDatumbazo) -> Artikolo? {
-        
+	static func elDatumbazObjekto(
+		objekto: NSManagedObject,
+		alirilo: DatumbazAlirilo
+	) -> Artikolo? {
         guard let trovTitolo = objekto.value(forKey: "titolo") as? String,
             let trovRadiko = objekto.value(forKey: "radiko") as? String,
             let trovIndekso = objekto.value(forKey: "indekso") as? String else {
            return nil
         }
-
+		
 		let trovOfc = objekto.value(forKey: "ofc") as? String
 		
         var novajSubartikoloj: [Subartikolo]? = [Subartikolo]()
@@ -123,7 +125,8 @@ extension Artikolo {
 				let tradukJSON = try JSONSerialization.jsonObject(with: tradukDatumoj as Data, options: JSONSerialization.ReadingOptions())
 				if let tradukDict = tradukJSON as? [String: String] {
 					for (lingvoKodo, teksto) in tradukDict {
-						if let lingvo = datumbazo.lingvo(porKodo: lingvoKodo) {
+						if let lingvObjekto = alirilo.lingvo(porKodo: lingvoKodo),
+						   let lingvo = Lingvo.elDatumbazObjekto(lingvObjekto) {
 							let novaTraduko = Traduko(lingvo: lingvo, teksto: teksto)
 							novajTradukoj.append(novaTraduko)
 						}

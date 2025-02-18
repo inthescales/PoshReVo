@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "021792A4-D7B4-44CD-89B7-ABEB7DB0DA27",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ReVoDatumbazo.xcodeproj",
+      "identifier" : "0099FBC42D6505330033EC11",
+      "name" : "DatumbazFarilo"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ReVoDatumbazo.xcodeproj",
+        "identifier" : "0099FC772D6506170033EC11",
+        "name" : "DatumbazFariloTestoj"
+      }
+    }
+  ],
+  "version" : 1
+}

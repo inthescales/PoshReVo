@@ -15,7 +15,7 @@ import ReVoModelojOSX
 #endif
 
 extension Mallongigo {
-	public func skribi(en konteksto: NSManagedObjectContext) {
+	func skribi(en konteksto: NSManagedObjectContext) {
 		let objekto = NSEntityDescription.insertNewObject(forEntityName: "Mallongigo", into: konteksto)
 		objekto.setValue(kodo, forKey: "kodo")
 		objekto.setValue(nomo, forKey: "nomo")

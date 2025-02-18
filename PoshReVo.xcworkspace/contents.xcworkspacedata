@@ -5,9 +5,6 @@
       location = "group:/Users/robin/Development/PoshReVo/PoshReVo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DatumbazFarilo/DatumbazFarilo.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:ReVoModeloj/ReVoModeloj.xcodeproj">
    </FileRef>
    <FileRef
