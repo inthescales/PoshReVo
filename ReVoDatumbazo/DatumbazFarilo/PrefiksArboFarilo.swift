@@ -1,8 +1,6 @@
 import Foundation
 import CoreData
 
-import ReVoDatumbazoOSX
-
 /// Faras prefiksarbon por artikolserĉado
 final class PrefiksArboFarilo {
 	/// Nodo en la prefiksarbo

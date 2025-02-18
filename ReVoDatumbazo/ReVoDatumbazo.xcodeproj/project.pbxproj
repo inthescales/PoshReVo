@@ -8,30 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		000F784724F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F784624F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift */; };
-		000F784824F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F784624F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift */; };
 		0027816724B7CE7300DFD71F /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
-		0027816824B7CE7300DFD71F /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
-		003657062309C7980028C21F /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
 		003657142309CA3F0028C21F /* DatumbazAlirilo+VortSerchado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657132309CA3F0028C21F /* DatumbazAlirilo+VortSerchado.swift */; };
-		003657152309CA3F0028C21F /* DatumbazAlirilo+VortSerchado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657132309CA3F0028C21F /* DatumbazAlirilo+VortSerchado.swift */; };
 		003657172309CE250028C21F /* VortaroDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657162309CE250028C21F /* VortaroDatumbazo.swift */; };
-		003657182309CE250028C21F /* VortaroDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657162309CE250028C21F /* VortaroDatumbazo.swift */; };
 		0036571A2309DB740028C21F /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
-		0036571B2309DB740028C21F /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		0049B21624B0E67000B81E15 /* SerchStato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21524B0E67000B81E15 /* SerchStato.swift */; };
-		0049B21724B0E67000B81E15 /* SerchStato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21524B0E67000B81E15 /* SerchStato.swift */; };
 		0049B21924B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */; };
-		0049B21A24B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */; };
 		0049B21C24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21B24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift */; };
-		0049B21D24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21B24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift */; };
 		0049B22124B154F000B81E15 /* TrieIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B22024B154F000B81E15 /* TrieIterator.swift */; };
-		0049B22224B154F000B81E15 /* TrieIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B22024B154F000B81E15 /* TrieIterator.swift */; };
-		0049B22324B15EB200B81E15 /* Lingvo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */; };
-		0049B22424B15EBD00B81E15 /* Fako+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A6324AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift */; };
-		0049B22524B15EC200B81E15 /* Artikolo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */; };
-		0049B22724B15EC600B81E15 /* AliriloKashmemoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5C24AFE19D00EA9DCF /* AliriloKashmemoro.swift */; };
 		0051A6D02309A3690034DFF9 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
-		005270ED24E9A9E2009E17AA /* ReVoModelojOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005270EC24E9A9E2009E17AA /* ReVoModelojOSX.framework */; };
 		005E907B24CCF391002480BF /* ReVoModeloj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049B22B24B1622A00B81E15 /* ReVoModeloj.framework */; };
 		0099FC242D65058C0033EC11 /* KreiDatumbazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCC2D65058B0033EC11 /* KreiDatumbazon.swift */; };
 		0099FC252D65058C0033EC11 /* PrefiksArboFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */; };
@@ -242,8 +227,6 @@
 		0099FD3A2D6506A30033EC11 /* StiloAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC202D65058C0033EC11 /* StiloAnalizilo.swift */; };
 		0099FD3B2D6506A60033EC11 /* Grundo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC182D65058C0033EC11 /* Grundo.swift */; };
 		0099FD402D65079E0033EC11 /* DatumbazFarilo.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 0099FD3F2D65079E0033EC11 /* DatumbazFarilo.xctestplan */; };
-		00A0E8E22D65087100F8285E /* ReVoDatumbazoOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003656FE2309C78F0028C21F /* ReVoDatumbazoOSX.framework */; };
-		00A0E8E32D65087100F8285E /* ReVoDatumbazoOSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 003656FE2309C78F0028C21F /* ReVoDatumbazoOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00A47A5B24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */; };
 		00A47A5D24AFE19D00EA9DCF /* AliriloKashmemoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5C24AFE19D00EA9DCF /* AliriloKashmemoro.swift */; };
 		00A47A5F24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */; };
@@ -256,18 +239,15 @@
 		00B2971E2D65122B00264431 /* Lingvo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */; };
 		00B297202D65122B00264431 /* Stilo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */; };
 		00B297232D65125100264431 /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
-		B201F0F7DC9CB88C446E788E /* Pods_DatumbazFariloTestoj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */; };
+		00B297252D654FC400264431 /* Artikolo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */; };
+		00B297262D654FCF00264431 /* Lingvo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */; };
+		00B297272D654FD600264431 /* Stilo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */; };
+		00B297282D654FE200264431 /* Fako+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A6324AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift */; };
+		00B297292D654FE600264431 /* Mallongigo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21B24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift */; };
+		00B2972A2D6550D200264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
+		00B2972B2D6550D300264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
+		00B2972C2D65517100264431 /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		00A0E8E42D65087100F8285E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0051A6B62309A2F90034DFF9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 003656FD2309C78F0028C21F;
-			remoteInfo = ReVoDatumbazoOSX;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0099FBC32D6505330033EC11 /* CopyFiles */ = {
@@ -285,7 +265,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				00A0E8E32D65087100F8285E /* ReVoDatumbazoOSX.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,8 +274,6 @@
 /* Begin PBXFileReference section */
 		000F784624F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Oficialeco+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
 		0027816624B7CE7300DFD71F /* Destino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destino.swift; sourceTree = "<group>"; };
-		003656FE2309C78F0028C21F /* ReVoDatumbazoOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReVoDatumbazoOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		003657012309C78F0028C21F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003657132309CA3F0028C21F /* DatumbazAlirilo+VortSerchado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DatumbazAlirilo+VortSerchado.swift"; sourceTree = "<group>"; };
 		003657162309CE250028C21F /* VortaroDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortaroDatumbazo.swift; sourceTree = "<group>"; };
 		003657192309DB740028C21F /* DatumbazAlirilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumbazAlirilo.swift; sourceTree = "<group>"; };
@@ -442,7 +419,6 @@
 		0099FCB42D6506580033EC11 /* testiSerchVortojn.per.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testiSerchVortojn.per.json; sourceTree = "<group>"; };
 		0099FCB72D6506580033EC11 /* DatumbazFariloTestoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatumbazFariloTestoj.swift; sourceTree = "<group>"; };
 		0099FD3F2D65079E0033EC11 /* DatumbazFarilo.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DatumbazFarilo.xctestplan; sourceTree = "<group>"; };
-		00A0E8DE2D65086900F8285E /* ReVoModelojOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModelojOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artikolo+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
 		00A47A5C24AFE19D00EA9DCF /* AliriloKashmemoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliriloKashmemoro.swift; sourceTree = "<group>"; };
 		00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lingvo+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
@@ -453,14 +429,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		003656FB2309C78F0028C21F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				005270ED24E9A9E2009E17AA /* ReVoModelojOSX.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0051A6BC2309A2F90034DFF9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,7 +441,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00A0E8E22D65087100F8285E /* ReVoDatumbazoOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,21 +448,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B201F0F7DC9CB88C446E788E /* Pods_DatumbazFariloTestoj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		003656FF2309C78F0028C21F /* ReVoDatumbazoOSX */ = {
-			isa = PBXGroup;
-			children = (
-				003657012309C78F0028C21F /* Info.plist */,
-			);
-			path = ReVoDatumbazoOSX;
-			sourceTree = "<group>";
-		};
 		0036570F2309CA020028C21F /* Komunaj */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,7 +477,6 @@
 		0049B22A24B1622A00B81E15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				00A0E8DE2D65086900F8285E /* ReVoModelojOSX.framework */,
 				005270EC24E9A9E2009E17AA /* ReVoModelojOSX.framework */,
 				0049B22B24B1622A00B81E15 /* ReVoModeloj.framework */,
 				86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */,
@@ -530,9 +487,8 @@
 		0051A6B52309A2F90034DFF9 = {
 			isa = PBXGroup;
 			children = (
-				0051A6C12309A2F90034DFF9 /* ReVoDatumbazo */,
-				003656FF2309C78F0028C21F /* ReVoDatumbazoOSX */,
 				0036570F2309CA020028C21F /* Komunaj */,
+				0051A6C12309A2F90034DFF9 /* ReVoDatumbazo */,
 				0099FBC62D6505330033EC11 /* DatumbazFarilo */,
 				0099FC792D6506170033EC11 /* DatumbazFariloTestoj */,
 				0051A6C02309A2F90034DFF9 /* Products */,
@@ -545,7 +501,6 @@
 			isa = PBXGroup;
 			children = (
 				0051A6BF2309A2F90034DFF9 /* ReVoDatumbazo.framework */,
-				003656FE2309C78F0028C21F /* ReVoDatumbazoOSX.framework */,
 				0099FBC52D6505330033EC11 /* DatumbazFarilo */,
 				0099FC782D6506170033EC11 /* DatumbazFariloTestoj.xctest */,
 			);
@@ -555,6 +510,9 @@
 		0051A6C12309A2F90034DFF9 /* ReVoDatumbazo */ = {
 			isa = PBXGroup;
 			children = (
+				003657132309CA3F0028C21F /* DatumbazAlirilo+VortSerchado.swift */,
+				0049B22024B154F000B81E15 /* TrieIterator.swift */,
+				003657162309CE250028C21F /* VortaroDatumbazo.swift */,
 				0051A6C32309A2F90034DFF9 /* Info.plist */,
 			);
 			path = ReVoDatumbazo;
@@ -819,9 +777,6 @@
 			children = (
 				00A47A5C24AFE19D00EA9DCF /* AliriloKashmemoro.swift */,
 				003657192309DB740028C21F /* DatumbazAlirilo.swift */,
-				003657132309CA3F0028C21F /* DatumbazAlirilo+VortSerchado.swift */,
-				0049B22024B154F000B81E15 /* TrieIterator.swift */,
-				003657162309CE250028C21F /* VortaroDatumbazo.swift */,
 			);
 			path = DatumbazAlirado;
 			sourceTree = "<group>";
@@ -839,13 +794,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		003656F92309C78F0028C21F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0051A6BA2309A2F90034DFF9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -856,24 +804,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		003656FD2309C78F0028C21F /* ReVoDatumbazoOSX */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 003657052309C78F0028C21F /* Build configuration list for PBXNativeTarget "ReVoDatumbazoOSX" */;
-			buildPhases = (
-				003656F92309C78F0028C21F /* Headers */,
-				003656FA2309C78F0028C21F /* Sources */,
-				003656FB2309C78F0028C21F /* Frameworks */,
-				003656FC2309C78F0028C21F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ReVoDatumbazoOSX;
-			productName = ReVoDatumbazoOSX;
-			productReference = 003656FE2309C78F0028C21F /* ReVoDatumbazoOSX.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		0051A6BE2309A2F90034DFF9 /* ReVoDatumbazo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0051A6C72309A2F90034DFF9 /* Build configuration list for PBXNativeTarget "ReVoDatumbazo" */;
@@ -904,7 +834,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				00A0E8E52D65087100F8285E /* PBXTargetDependency */,
 			);
 			name = DatumbazFarilo;
 			productName = DatumbazFarilo;
@@ -941,10 +870,6 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Robin Hill";
 				TargetAttributes = {
-					003656FD2309C78F0028C21F = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1020;
-					};
 					0051A6BE2309A2F90034DFF9 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
@@ -973,7 +898,6 @@
 			projectRoot = "";
 			targets = (
 				0051A6BE2309A2F90034DFF9 /* ReVoDatumbazo */,
-				003656FD2309C78F0028C21F /* ReVoDatumbazoOSX */,
 				0099FBC42D6505330033EC11 /* DatumbazFarilo */,
 				0099FC772D6506170033EC11 /* DatumbazFariloTestoj */,
 			);
@@ -981,13 +905,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		003656FC2309C78F0028C21F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0051A6BD2309A2F90034DFF9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1097,27 +1014,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		003656FA2309C78F0028C21F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0049B21D24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift in Sources */,
-				000F784824F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift in Sources */,
-				0049B22324B15EB200B81E15 /* Lingvo+ReVoDatumbazo.swift in Sources */,
-				0027816824B7CE7300DFD71F /* Destino.swift in Sources */,
-				003657182309CE250028C21F /* VortaroDatumbazo.swift in Sources */,
-				0049B21A24B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift in Sources */,
-				0049B22424B15EBD00B81E15 /* Fako+ReVoDatumbazo.swift in Sources */,
-				0049B22224B154F000B81E15 /* TrieIterator.swift in Sources */,
-				003657062309C7980028C21F /* PoshReVoDatumoj.xcdatamodeld in Sources */,
-				0049B21724B0E67000B81E15 /* SerchStato.swift in Sources */,
-				0049B22724B15EC600B81E15 /* AliriloKashmemoro.swift in Sources */,
-				0036571B2309DB740028C21F /* DatumbazAlirilo.swift in Sources */,
-				0049B22524B15EC200B81E15 /* Artikolo+ReVoDatumbazo.swift in Sources */,
-				003657152309CA3F0028C21F /* DatumbazAlirilo+VortSerchado.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0051A6BB2309A2F90034DFF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1143,6 +1039,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B2972A2D6550D200264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				0099FC562D65058C0033EC11 /* TraktiSencReferencon.swift in Sources */,
 				0099FC632D65058C0033EC11 /* Antautraktado.swift in Sources */,
 				0099FC542D65058C0033EC11 /* TraktiRimarkon.swift in Sources */,
@@ -1236,10 +1133,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B2972B2D6550D300264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				0099FCB82D6506580033EC11 /* TestDatumoj.swift in Sources */,
 				0099FD242D6506940033EC11 /* NodTipo.swift in Sources */,
 				0099FD252D6506940033EC11 /* ArtikolTraduko.swift in Sources */,
 				0099FD262D6506940033EC11 /* OfcVorto.swift in Sources */,
+				00B297282D654FE200264431 /* Fako+ReVoDatumbazo.swift in Sources */,
+				00B2972C2D65517100264431 /* Destino.swift in Sources */,
 				0099FD272D6506940033EC11 /* SerchVorto.swift in Sources */,
 				0099FD282D6506940033EC11 /* Serchebla.swift in Sources */,
 				0099FD292D6506940033EC11 /* Stato.swift in Sources */,
@@ -1247,6 +1147,7 @@
 				0099FD2B2D6506940033EC11 /* FakVorto.swift in Sources */,
 				0099FD2C2D6506940033EC11 /* SerchTraduko.swift in Sources */,
 				0099FCEC2D65067F0033EC11 /* TekstFarilo.swift in Sources */,
+				00B297262D654FCF00264431 /* Lingvo+ReVoDatumbazo.swift in Sources */,
 				0099FCED2D65067F0033EC11 /* KreiDatumbazon.swift in Sources */,
 				0099FCEE2D65067F0033EC11 /* VortListoj.swift in Sources */,
 				0099FCEF2D65067F0033EC11 /* PrefiksArboFarilo.swift in Sources */,
@@ -1256,6 +1157,7 @@
 				0099FCF42D6506890033EC11 /* ArtikolKonvertilo.swift in Sources */,
 				0099FCF52D6506890033EC11 /* ArboAnalizilo.swift in Sources */,
 				0099FCF92D65068E0033EC11 /* TraktiFormulon.swift in Sources */,
+				00B297252D654FC400264431 /* Artikolo+ReVoDatumbazo.swift in Sources */,
 				0099FCFA2D65068E0033EC11 /* TraktiSubderivajhon.swift in Sources */,
 				0099FD332D6506A30033EC11 /* SignoAnalizilo.swift in Sources */,
 				0099FD342D6506A30033EC11 /* DTDAnalizilo.swift in Sources */,
@@ -1271,6 +1173,7 @@
 				0099FD2F2D6506980033EC11 /* VortoFabriko.swift in Sources */,
 				0099FCFC2D65068E0033EC11 /* TraktiIndekson.swift in Sources */,
 				0099FCFD2D65068E0033EC11 /* TraktiReferencGrupon.swift in Sources */,
+				00B297292D654FE600264431 /* Mallongigo+ReVoDatumbazo.swift in Sources */,
 				0099FCFE2D65068E0033EC11 /* TraktiEkzemplon.swift in Sources */,
 				0099FCFF2D65068E0033EC11 /* TraktiMisstilan.swift in Sources */,
 				0099FD002D65068E0033EC11 /* TraktiAltigitan.swift in Sources */,
@@ -1311,6 +1214,7 @@
 				0099FD1E2D65068E0033EC11 /* TraktiPrononcon.swift in Sources */,
 				0099FD1F2D65068E0033EC11 /* TraktiVariajhon.swift in Sources */,
 				0099FD202D65068E0033EC11 /* TraktiEmfazon.swift in Sources */,
+				00B297272D654FD600264431 /* Stilo+ReVoDatumbazo.swift in Sources */,
 				0099FD212D65068E0033EC11 /* TraktiArtikolon.swift in Sources */,
 				0099FD222D65068E0033EC11 /* TraktiNacilingvan.swift in Sources */,
 				0099FD232D65068E0033EC11 /* TraktiTradukon.swift in Sources */,
@@ -1322,76 +1226,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00A0E8E52D65087100F8285E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 003656FD2309C78F0028C21F /* ReVoDatumbazoOSX */;
-			targetProxy = 00A0E8E42D65087100F8285E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		003657032309C78F0028C21F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = JZ3WYZWA8F;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = ReVoDatumbazoOSX/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = inthescales.ReVoDatumbazoOSX;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		003657042309C78F0028C21F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = JZ3WYZWA8F;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = ReVoDatumbazoOSX/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = inthescales.ReVoDatumbazoOSX;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		0051A6C52309A2F90034DFF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1666,15 +1501,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		003657052309C78F0028C21F /* Build configuration list for PBXNativeTarget "ReVoDatumbazoOSX" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				003657032309C78F0028C21F /* Debug */,
-				003657042309C78F0028C21F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0051A6B92309A2F90034DFF9 /* Build configuration list for PBXProject "ReVoDatumbazo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

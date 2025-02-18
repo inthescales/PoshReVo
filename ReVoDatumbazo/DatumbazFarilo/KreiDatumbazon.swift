@@ -5,7 +5,7 @@ import CoreData
 /// Creates a new database at the destination using data in the source path, returns managed object context
 func kreiDatumbazon(destino: String) -> NSManagedObjectContext {
 	let managedObjectModel: NSManagedObjectModel = {
-		let datumbazBundle = Bundle(identifier: "inthescales.ReVoDatumbazoOSX")!
+		let datumbazBundle = Bundle(for: PrefiksArboFarilo.self)
 		let modelURL = datumbazBundle.url(forResource: "PoshReVoDatumoj", withExtension: "momd")!
 		return NSManagedObjectModel(contentsOf: modelURL)!
 	}()

@@ -2,7 +2,6 @@ import Foundation
 import CoreData
 
 import ReVoModelojOSX
-import ReVoDatumbazoOSX
 
 enum DTDAnalizilo {
 	/// Legas entojn (entities) el .dtd-a dosiero

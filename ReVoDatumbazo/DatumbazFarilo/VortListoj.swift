@@ -1,7 +1,5 @@
 import CoreData
 
-import ReVoDatumbazoOSX
-
 enum VortListoj {
 	static func skribi(
 		fakVortojn fakVortoj: [String: [FakVorto]],

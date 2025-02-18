@@ -2,7 +2,6 @@ import Foundation
 import CoreData
 
 import ReVoModelojOSX
-import ReVoDatumbazoOSX
 
 /// Analizas XMLan dosieron enhavantan liston da stiloj, kaj aldonas ilin al la datumbazo
 /// Parses the XML file containing the list of styles, and adds them to the database
