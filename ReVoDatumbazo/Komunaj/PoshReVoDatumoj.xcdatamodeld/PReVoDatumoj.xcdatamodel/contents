@@ -11,10 +11,9 @@
         <relationship name="destinoj" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Destino" inverseName="artikolo" inverseEntity="Destino" syncable="YES"/>
     </entity>
     <entity name="Destino" syncable="YES">
-        <attribute name="indekso" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="marko" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nomo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="senco" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subteksto" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="teksto" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="artikolo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Artikolo" inverseName="destinoj" inverseEntity="Artikolo" syncable="YES"/>
         <relationship name="fako" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fako" inverseName="fakvortoj" inverseEntity="Fako" syncable="YES"/>

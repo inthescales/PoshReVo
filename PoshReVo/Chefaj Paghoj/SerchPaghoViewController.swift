@@ -253,7 +253,7 @@ extension SerchPaghoViewController : UITableViewDelegate, UITableViewDataSource 
 		let destinoj = serchRezultoj[indexPath.row].1
 		if destinoj.count == 1 {
             if let destino = serchRezultoj[indexPath.row].1.first,
-                let artikolo = destino.artikolo(enVortaro: VortaroDatumbazo.komuna) {
+			   let artikolo = VortaroDatumbazo.komuna.artikolo(de: destino) {
                 parent?.navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("serchi baza titolo", comment: ""), style: .plain, target: nil, action: nil)
                 if let marko = serchRezultoj[indexPath.row].1.first?.marko, !marko.isEmpty {
                     (self.navigationController as? ChefaNavigationController)?.montriArtikolon(artikolo, marko: marko)
@@ -297,7 +297,7 @@ extension SerchPaghoViewController {
         
         var bonaNomo: String = ""
         if destinoj.count == 1 {
-            bonaNomo = (destinoj.first?.teksto)?.components(separatedBy: ", ").first ?? ""
+            bonaNomo = (destinoj.first?.subteksto)?.components(separatedBy: ", ").first ?? ""
             if let senco = destinoj.first?.senco, senco != "0" {
                 bonaNomo += Iloj.superLit(senco)
             }

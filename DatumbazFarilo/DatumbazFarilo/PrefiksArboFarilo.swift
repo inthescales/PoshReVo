@@ -84,9 +84,8 @@ final class PrefiksArboFarilo {
 		}
 		
 		return Destino(
-			teksto: serchebla.subteksto ?? serchebla.videblaTeksto,
-			subTeksto: serchebla.videblaTeksto,
-			indekso: serchebla.indekso,
+			teksto: serchebla.videblaTeksto,
+			subTeksto: serchebla.subteksto,
 			marko: serchebla.derivajhMarko,
 			senco: serchebla.senco.flatMap { String($0) },
 			artikolObjekto: artikolObjekto
@@ -125,28 +124,10 @@ final class PrefiksArboFarilo {
 		}
 		
 		for destino in nodo.destinoj {
-			let destinObjekto = skribi(destinon: destino, en: konteksto)
+			let destinObjekto = destino.skribi(en: konteksto)
 			novaNodo.mutableOrderedSetValue(forKey: "destinoj").add(destinObjekto)
 		}
 		
 		return novaNodo
-	}
-	
-	/// Skribas destinon en datumbazon
-	private func skribi(destinon destino: Destino, en konteksto: NSManagedObjectContext) -> NSManagedObject {
-		guard let artikolObjekto = artikolObjektoj[destino.indekso]
-				?? Datumbaza.artikolo(porIndekso: destino.indekso, en: konteksto) else {
-			assert(false, "Ne trovis artikolan datumbazobjekton")
-		}
-		
-		let novaDestino = NSEntityDescription.insertNewObject(forEntityName: "Destino", into: konteksto)
-		novaDestino.setValue(destino.subTeksto, forKey: "teksto")
-		novaDestino.setValue(destino.indekso, forKey: "indekso")
-		novaDestino.setValue(destino.teksto, forKey: "nomo")
-		novaDestino.setValue(destino.marko, forKey: "marko")
-		novaDestino.setValue(destino.senco, forKey: "senco")
-		novaDestino.setValue(artikolObjekto, forKey: "artikolo")
-		
-		return novaDestino
 	}
 }

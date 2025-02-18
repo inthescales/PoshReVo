@@ -47,6 +47,10 @@ public final class VortaroDatumbazo {
         
         return nil
     }
+	
+	public func artikolo(de destino: Destino) -> Artikolo? {
+		Artikolo.elDatumbazObjekto(objekto: destino.artikolObjekto, datumbazo: self)
+	}
 
     public func iuAjnArtikolo() -> Artikolo? {
         if let objekto = alirilo.iuAjnArtikolo() {

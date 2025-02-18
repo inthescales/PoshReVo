@@ -61,7 +61,7 @@ extension OficialecoVortoListoTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let vortoDestino = vortoj[indexPath.row]
-        guard let artikolo = vortoDestino.artikolo(enVortaro: VortaroDatumbazo.komuna) else {
+        guard let artikolo = VortaroDatumbazo.komuna.artikolo(de: vortoDestino) else {
             return
         }
         

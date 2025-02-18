@@ -84,7 +84,7 @@ extension VortoDisigiloViewController : UITableViewDelegate, UITableViewDataSour
         chelo.backgroundColor = UzantDatumaro.stilo.bazKoloro
         chelo.textLabel?.textColor = UzantDatumaro.stilo.tekstKoloro
         chelo.textLabel?.text = destinoj[indexPath.row].teksto
-        chelo.detailTextLabel?.text = destinoj[indexPath.row].subTeksto
+        chelo.detailTextLabel?.text = destinoj[indexPath.row].subteksto
         if devasMontriSencon(indexPath: indexPath),
             let senco = destinoj[indexPath.row].senco {
             chelo.detailTextLabel?.text = (chelo.detailTextLabel?.text ?? "") + Iloj.superLit(senco)
@@ -96,7 +96,7 @@ extension VortoDisigiloViewController : UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let destino = destinoj[indexPath.row]
-        guard let artikolo = destino.artikolo(enVortaro: VortaroDatumbazo.komuna) else {
+		guard let artikolo = VortaroDatumbazo.komuna.artikolo(de: destino) else {
             return
         }
         
