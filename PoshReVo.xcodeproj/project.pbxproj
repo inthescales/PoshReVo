@@ -12,8 +12,6 @@
 		0036571D2309DBF10028C21F /* VortaroDatumbazo+Komuna.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036571C2309DBF10028C21F /* VortaroDatumbazo+Komuna.swift */; };
 		0041F8B5245CC81A00254EA0 /* PoshReVoEkranKopiilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0041F8B4245CC81A00254EA0 /* PoshReVoEkranKopiilo.swift */; };
 		0041F8BD245CC86300254EA0 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0041F8BC245CC86300254EA0 /* SnapshotHelper.swift */; };
-		0049B22D24B162EA00B81E15 /* ReVoModeloj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049B22824B160B000B81E15 /* ReVoModeloj.framework */; };
-		0049B22E24B162EA00B81E15 /* ReVoModeloj.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0049B22824B160B000B81E15 /* ReVoModeloj.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00700AD5231C59150075A077 /* FakVortoListoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00700AD4231C59150075A077 /* FakVortoListoTableViewController.swift */; };
 		00700AD6231D3BA50075A077 /* ReVoDatumbazo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003656D32309A50E0028C21F /* ReVoDatumbazo.framework */; };
 		00700AD7231D3BA50075A077 /* ReVoDatumbazo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 003656D32309A50E0028C21F /* ReVoDatumbazo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -103,7 +101,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				00700AD7231D3BA50075A077 /* ReVoDatumbazo.framework in Embed Frameworks */,
-				0049B22E24B162EA00B81E15 /* ReVoModeloj.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +194,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				00700AD6231D3BA50075A077 /* ReVoDatumbazo.framework in Frameworks */,
-				0049B22D24B162EA00B81E15 /* ReVoModeloj.framework in Frameworks */,
 				7D5D86C69AE149885D31A327 /* Pods_PoshReVo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

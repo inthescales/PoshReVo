@@ -1,11 +1,3 @@
-//
-//  Lingvo+ReVoDatumbazo.swift
-//  ReVoDatumbazo
-//
-//  Created by Robin Hill on 7/3/20.
-//  Copyright © 2020 Robin Hill. All rights reserved.
-//
-
 import CoreData
 
 extension Lingvo {
@@ -18,7 +10,7 @@ extension Lingvo {
     public static func el(_ objekto: NSManagedObject) -> Lingvo? {
         guard let kodo = objekto.value(forKey: "kodo") as? String,
 			  let nomo = objekto.value(forKey: "nomo") as? String else {
-			   return nil
+			return nil
         }
         
 		return Lingvo(kodo: kodo, nomo: nomo)

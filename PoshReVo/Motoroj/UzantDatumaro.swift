@@ -213,84 +213,83 @@ class UzantDatumaro {
     // Konservi la uzant datumojn por reuzi ghin post rekomenco de la programo
     static func konserviDatumojn() {
         return
-        let defaults = UserDefaults.standard
-        
-        if konserviSerchLingvon {
-            let datumoj = NSKeyedArchiver.archivedData(withRootObject: serchLingvo)
-            defaults.set(datumoj, forKey: "serchLingvo")
-            konserviSerchLingvon = false
-        }
-        
-        if konserviOftajnLingvojn {
-            let datumoj = NSKeyedArchiver.archivedData(withRootObject: oftajSerchLingvoj)
-            defaults.set(datumoj, forKey: "oftajSerchLingvoj")
-            konserviOftajnLingvojn = false
-        }
-        
-        if konserviTradukLingvojn {
-            let datumoj = NSKeyedArchiver.archivedData(withRootObject: Array(tradukLingvoj))
-            defaults.set(datumoj, forKey: "tradukLingvoj")
-            konserviTradukLingvojn = false
-        }
-        
-        if konserviHistorion {
-            let datumoj = NSKeyedArchiver.archivedData(withRootObject: historio)
-            defaults.set(datumoj, forKey: "historio")
-            konserviHistorion = false
-        }
-        
-        if konserviKonservitajn {
-            let datumoj = NSKeyedArchiver.archivedData(withRootObject: konservitaj)
-            defaults.set(datumoj, forKey: "konservitaj")
-            konserviKonservitajn = false
-        }
-        
-        if konserviStilon {
-            defaults.set(stilo.rawValue, forKey: "stilo")
-            konserviStilon = false
-        }
-        
-        defaults.synchronize()
+//        let defaults = UserDefaults.standard
+//        
+//        if konserviSerchLingvon {
+//            let datumoj = NSKeyedArchiver.archivedData(withRootObject: serchLingvo)
+//            defaults.set(datumoj, forKey: "serchLingvo")
+//            konserviSerchLingvon = false
+//        }
+//        
+//        if konserviOftajnLingvojn {
+//            let datumoj = NSKeyedArchiver.archivedData(withRootObject: oftajSerchLingvoj)
+//            defaults.set(datumoj, forKey: "oftajSerchLingvoj")
+//            konserviOftajnLingvojn = false
+//        }
+//        
+//        if konserviTradukLingvojn {
+//            let datumoj = NSKeyedArchiver.archivedData(withRootObject: Array(tradukLingvoj))
+//            defaults.set(datumoj, forKey: "tradukLingvoj")
+//            konserviTradukLingvojn = false
+//        }
+//        
+//        if konserviHistorion {
+//            let datumoj = NSKeyedArchiver.archivedData(withRootObject: historio)
+//            defaults.set(datumoj, forKey: "historio")
+//            konserviHistorion = false
+//        }
+//        
+//        if konserviKonservitajn {
+//            let datumoj = NSKeyedArchiver.archivedData(withRootObject: konservitaj)
+//            defaults.set(datumoj, forKey: "konservitaj")
+//            konserviKonservitajn = false
+//        }
+//        
+//        if konserviStilon {
+//            defaults.set(stilo.rawValue, forKey: "stilo")
+//            konserviStilon = false
+//        }
+//        
+//        defaults.synchronize()
     }
     
     // Trovi kaj starigi jamajn datumojn pri uzado
     static func sharghiJeKonservitajnDatumojn() {
-        
-        let defaults = UserDefaults.standard
-
-        // Legi malnoveg-nomajn aferojn
-        NSKeyedUnarchiver.setClass(Lingvo.self, forClassName: "PReVo.Lingvo")
-        NSKeyedUnarchiver.setClass(Listero.self, forClassName: "PReVo.Listero")
-        
-        // Legi malnov-nomajn aferojn
-        NSKeyedUnarchiver.setClass(Lingvo.self, forClassName: "PoshReVo.Lingvo")
-        NSKeyedUnarchiver.setClass(Listero.self, forClassName: "PoshReVo.Listero")
-        
-        if let datumoj = defaults.object(forKey: "serchLingvo") as? Data,
-            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? Lingvo {
-            serchLingvo = trovo
-        }
-        
-        if let datumoj = defaults.object(forKey: "oftajSerchLingvoj") as? Data,
-            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? [Lingvo] {
-            oftajSerchLingvoj = trovo
-        }
-        
-        if let datumoj = defaults.object(forKey: "tradukLingvoj") as? Data,
-            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? [Lingvo] {
-            tradukLingvoj = Set<Lingvo>(trovo)
-        }
-        
-        if let datumoj = defaults.object(forKey: "historio") as? Data,
-            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? [Listero] {
-            historio = trovo
-        }
-        
-        if let datumoj = defaults.object(forKey: "konservitaj") as? Data,
-            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? [Listero] {
-            konservitaj = trovo
-        }
-        
-        stilo = KolorStilo(rawValue: defaults.integer(forKey: "stilo")) ?? KolorStilo.Hela
+//        let defaults = UserDefaults.standard
+//
+//        // Legi malnoveg-nomajn aferojn
+//        NSKeyedUnarchiver.setClass(Lingvo.self, forClassName: "PReVo.Lingvo")
+//        NSKeyedUnarchiver.setClass(Listero.self, forClassName: "PReVo.Listero")
+//        
+//        // Legi malnov-nomajn aferojn
+//        NSKeyedUnarchiver.setClass(Lingvo.self, forClassName: "PoshReVo.Lingvo")
+//        NSKeyedUnarchiver.setClass(Listero.self, forClassName: "PoshReVo.Listero")
+//        
+//        if let datumoj = defaults.object(forKey: "serchLingvo") as? Data,
+//            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? Lingvo {
+//            serchLingvo = trovo
+//        }
+//        
+//        if let datumoj = defaults.object(forKey: "oftajSerchLingvoj") as? Data,
+//            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? [Lingvo] {
+//            oftajSerchLingvoj = trovo
+//        }
+//        
+//        if let datumoj = defaults.object(forKey: "tradukLingvoj") as? Data,
+//            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? [Lingvo] {
+//            tradukLingvoj = Set<Lingvo>(trovo)
+//        }
+//        
+//        if let datumoj = defaults.object(forKey: "historio") as? Data,
+//            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? [Listero] {
+//            historio = trovo
+//        }
+//        
+//        if let datumoj = defaults.object(forKey: "konservitaj") as? Data,
+//            let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? [Listero] {
+//            konservitaj = trovo
+//        }
+//        
+//        stilo = KolorStilo(rawValue: defaults.integer(forKey: "stilo")) ?? KolorStilo.Hela
     }
 }

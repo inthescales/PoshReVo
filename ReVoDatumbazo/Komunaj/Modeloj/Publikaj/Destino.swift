@@ -64,22 +64,15 @@ public struct Destino {
     }
 }
 
-// MARK: - Equatable
-
-extension Destino: Equatable {
-    public static func ==(lhs: Destino, rhs: Destino) -> Bool {
-        return lhs.teksto == rhs.marko &&
-            lhs.subteksto == rhs.subteksto &&
-            lhs.marko == rhs.marko &&
-            lhs.senco == rhs.senco &&
-            lhs.artikolObjekto == rhs.artikolObjekto
-    }
-}
-
 // MARK: - Comparable
 
 extension Destino: Comparable {
     public static func < (lhs: Destino, rhs: Destino) -> Bool {
-        return lhs.teksto.compare(rhs.teksto, options: .caseInsensitive, range: nil, locale: Locale(identifier: "eo")) == .orderedAscending
+        return lhs.teksto.compare(
+			rhs.teksto,
+			options: .caseInsensitive,
+			range: nil,
+			locale: Locale(identifier: "eo")
+		) == .orderedAscending
     }
 }

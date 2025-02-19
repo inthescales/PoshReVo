@@ -29,26 +29,26 @@ public final class VortaroDatumbazo {
     
     public func fako(porKodo kodo: String) -> Fako? {
         if let objekto = alirilo.fako(porKodo: kodo) {
-            return Fako.elDatumbazObjekto(objekto)
+            return Fako.el(objekto)
         }
         return nil
     }
     
     public func artikolo(porIndekso indekso: String) -> Artikolo? {
         if let objekto = alirilo.artikolo(porIndekso: indekso) {
-			return Artikolo.elDatumbazObjekto(objekto: objekto, alirilo: alirilo)
+			return Artikolo.el(objekto, alirilo: alirilo)
         }
         
         return nil
     }
 	
 	public func artikolo(de destino: Destino) -> Artikolo? {
-		Artikolo.elDatumbazObjekto(objekto: destino.artikolObjekto, alirilo: alirilo)
+		Artikolo.el(destino.artikolObjekto, alirilo: alirilo)
 	}
 
     public func iuAjnArtikolo() -> Artikolo? {
         if let objekto = alirilo.iuAjnArtikolo() {
-            return Artikolo.elDatumbazObjekto(objekto: objekto, alirilo: alirilo)
+            return Artikolo.el(objekto, alirilo: alirilo)
         }
         
         return nil
@@ -58,7 +58,7 @@ public final class VortaroDatumbazo {
     
     public func vortoj(oficialeco: String) -> [Artikolo] {
         alirilo.vortoj(oficialeco: oficialeco)?.compactMap { objekto in
-            Artikolo.elDatumbazObjekto(objekto: objekto, alirilo: alirilo)
+            Artikolo.el(objekto, alirilo: alirilo)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs.titolo < rhs.titolo
         } ?? []
@@ -92,7 +92,7 @@ public final class VortaroDatumbazo {
     
     public func chiujFakoj() -> [Fako] {
         alirilo.chiujFakoj().compactMap { objekto in
-            Fako.elDatumbazObjekto(objekto)
+            Fako.el(objekto)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs < rhs
         }
@@ -110,13 +110,26 @@ public final class VortaroDatumbazo {
     
     public func komenciSerchon(lingvo: Lingvo, teksto: String, komenco: Int? = 0, limo: Int) -> SerchStato {
         if let iterator = alirilo.starigiTrieIterator(lingvo: lingvo.kodo, peto: teksto) {
-            let komencaStato = SerchStato(iterator: iterator, rezultoj: [], peto: teksto, atingisFinon: false)
+            let komencaStato = SerchStato(
+				peto: teksto,
+				rezultoj: [],
+				atingisFinon: false,
+				iterator: iterator
+			)
             return daurigiSerchon(stato: komencaStato, limo: limo)
         }
-        return SerchStato(iterator: TrieIterator(lingvoKodo: lingvo.kodo, peto: teksto, komencaNodo: nil),
-                          rezultoj: [],
-                          peto: teksto,
-                          atingisFinon: true)
+		
+		let nombrilo = TrieIterator(
+			lingvoKodo: lingvo.kodo,
+			peto: teksto,
+			komencaNodo: nil
+		)
+        return SerchStato(
+			peto: teksto,
+			rezultoj: [],
+			atingisFinon: true,
+			iterator: nombrilo
+		)
     }
     
     public func daurigiSerchon(stato: SerchStato, limo: Int) -> SerchStato {
@@ -129,9 +142,11 @@ public final class VortaroDatumbazo {
                 }
             )
         }
-        return SerchStato(iterator: stato.iterator,
-                          rezultoj: stato.rezultoj + novajRezultoj,
-                          peto: stato.peto,
-                          atingisFinon: novajRezultoj.isEmpty)
+        return SerchStato(
+			peto: stato.peto,
+			rezultoj: stato.rezultoj + novajRezultoj,
+			atingisFinon: novajRezultoj.isEmpty,
+			iterator: stato.iterator
+		)
     }
 }

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Lingvo en kiu tradukoj ekzistas
-public final class Lingvo : NSObject, Codable {
+public struct Lingvo: Codable, Hashable {
     public let kodo: String
     public let nomo: String
     
