@@ -25,6 +25,11 @@ public final class Lingvo : NSObject, Codable {
     public override var hash: Int {
         return kodo.hashValue
     }
+	
+	
+	public static var esperanto: Lingvo {
+		return Lingvo(kodo: "eo", nomo: "Esperanto")
+	}
 }
 
 // MARK: - Equatable

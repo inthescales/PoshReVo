@@ -28,7 +28,7 @@ public final class VortaroDatumbazo {
     
     public func lingvo(porKodo kodo: String) -> Lingvo? {
         if let objekto = alirilo.lingvo(porKodo: kodo) {
-            return Lingvo.elDatumbazObjekto(objekto)
+			return Lingvo.el(objekto)
         }
         return nil
     }
@@ -90,7 +90,7 @@ public final class VortaroDatumbazo {
     
     public func chiujLingvoj() -> [Lingvo] {
         alirilo.chiujLingvoj().compactMap { objekto in
-            Lingvo.elDatumbazObjekto(objekto)
+            Lingvo.el(objekto)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs < rhs
         }
@@ -103,23 +103,7 @@ public final class VortaroDatumbazo {
             return lhs < rhs
         }
     }
-    
-    public func chiujStiloj() -> [Stilo]? {
-        alirilo.chiujStiloj().compactMap { objekto in
-            Stilo.elDatumbazObjekto(objekto)
-        }.sorted { (lhs, rhs) -> Bool in
-            return lhs < rhs
-        }
-    }
-    
-    public func chiujMallongigoj() -> [Mallongigo]? {
-        alirilo.chiujMallongigoj().compactMap { objekto in
-            Mallongigo.elDatumbazObjekto(objekto)
-        }.sorted { (lhs, rhs) -> Bool in
-            return lhs < rhs
-        }
-    }
-    
+        
     public func chiujOficialecoj() -> [Oficialeco]? {
         alirilo.chiujOficialecoj().compactMap { objekto in
             Oficialeco.elDatumbazObjekto(objekto)

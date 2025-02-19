@@ -30,19 +30,11 @@
         <attribute name="nomo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="komencajNodoj" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TrieNodo" inverseName="lingvo" inverseEntity="TrieNodo" syncable="YES"/>
     </entity>
-    <entity name="Mallongigo" syncable="YES">
-        <attribute name="kodo" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nomo" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <entity name="Oficialeco" syncable="YES">
         <attribute name="indikilo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="kodo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ofcvortoj" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Destino" inverseName="oficialeco" inverseEntity="Destino" syncable="YES"/>
-    </entity>
-    <entity name="Stilo" syncable="YES">
-        <attribute name="kodo" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nomo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="TrieNodo" syncable="YES">
         <attribute name="litero" optional="YES" attributeType="String" syncable="YES"/>

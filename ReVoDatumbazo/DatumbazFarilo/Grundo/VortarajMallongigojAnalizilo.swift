@@ -1,8 +1,6 @@
 import Foundation
 import CoreData
 
-import ReVoModelojOSX
-
 /// Analizas XMLan dosieron enhavantan liston da mallongigoj, kaj aldonas ilin al la datumbazo
 /// Parses the XML file containing the list of abbreviations, and adds them to the database
 class VortarajMallongigojAnalizilo: NSObject, XMLParserDelegate {
@@ -49,17 +47,6 @@ class VortarajMallongigojAnalizilo: NSObject, XMLParserDelegate {
 // MARK: - Vokilo
 
 extension VortarajMallongigojAnalizilo {
-	public static func skribi(
-		mallongigojn mallongigoj: [Mallongigo],
-		en konteksto: NSManagedObjectContext
-	) {
-		for mallongigo in mallongigoj {
-			mallongigo.skribi(en: konteksto)
-		}
-		
-		try! konteksto.save()
-	}
-	
 	/// Legas mallongigojn el la donata indikilo, en la donatan datumbaz-kontekston
 	/// Reads abbreviations from the given file path, into the given database context
 	public static func legi(el indikilo: String) -> [Mallongigo] {

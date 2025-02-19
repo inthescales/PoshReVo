@@ -13,8 +13,6 @@
 		003657172309CE250028C21F /* VortaroDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657162309CE250028C21F /* VortaroDatumbazo.swift */; };
 		0036571A2309DB740028C21F /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		0049B21624B0E67000B81E15 /* SerchStato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21524B0E67000B81E15 /* SerchStato.swift */; };
-		0049B21924B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */; };
-		0049B21C24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21B24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift */; };
 		0049B22124B154F000B81E15 /* TrieIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B22024B154F000B81E15 /* TrieIterator.swift */; };
 		0051A6D02309A3690034DFF9 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
 		005E907B24CCF391002480BF /* ReVoModeloj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0049B22B24B1622A00B81E15 /* ReVoModeloj.framework */; };
@@ -235,18 +233,18 @@
 		00B2971A2D6511CA00264431 /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		00B2971B2D65122B00264431 /* Artikolo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */; };
 		00B2971C2D65122B00264431 /* Fako+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A6324AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift */; };
-		00B2971D2D65122B00264431 /* Mallongigo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21B24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift */; };
 		00B2971E2D65122B00264431 /* Lingvo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */; };
-		00B297202D65122B00264431 /* Stilo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */; };
 		00B297232D65125100264431 /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
 		00B297252D654FC400264431 /* Artikolo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */; };
 		00B297262D654FCF00264431 /* Lingvo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */; };
-		00B297272D654FD600264431 /* Stilo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */; };
 		00B297282D654FE200264431 /* Fako+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A6324AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift */; };
-		00B297292D654FE600264431 /* Mallongigo+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21B24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift */; };
 		00B2972A2D6550D200264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
 		00B2972B2D6550D300264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
 		00B2972C2D65517100264431 /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
+		00B2972E2D65534600264431 /* Stilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2972D2D65534600264431 /* Stilo.swift */; };
+		00B297322D6556EF00264431 /* Mallongigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B297312D6556EF00264431 /* Mallongigo.swift */; };
+		00B297332D65572700264431 /* Mallongigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B297312D6556EF00264431 /* Mallongigo.swift */; };
+		00B297342D65579400264431 /* Stilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2972D2D65534600264431 /* Stilo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -278,8 +276,6 @@
 		003657162309CE250028C21F /* VortaroDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortaroDatumbazo.swift; sourceTree = "<group>"; };
 		003657192309DB740028C21F /* DatumbazAlirilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumbazAlirilo.swift; sourceTree = "<group>"; };
 		0049B21524B0E67000B81E15 /* SerchStato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchStato.swift; sourceTree = "<group>"; };
-		0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stilo+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
-		0049B21B24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mallongigo+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
 		0049B22024B154F000B81E15 /* TrieIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrieIterator.swift; sourceTree = "<group>"; };
 		0049B22B24B1622A00B81E15 /* ReVoModeloj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModeloj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0051A6BF2309A2F90034DFF9 /* ReVoDatumbazo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReVoDatumbazo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -423,6 +419,8 @@
 		00A47A5C24AFE19D00EA9DCF /* AliriloKashmemoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliriloKashmemoro.swift; sourceTree = "<group>"; };
 		00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lingvo+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
 		00A47A6324AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fako+ReVoDatumbazo.swift"; sourceTree = "<group>"; };
+		00B2972D2D65534600264431 /* Stilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stilo.swift; sourceTree = "<group>"; };
+		00B297312D6556EF00264431 /* Mallongigo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mallongigo.swift; sourceTree = "<group>"; };
 		3160BDCF41F0A5B31404DFB0 /* Pods-DatumbazFariloTestoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.debug.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.debug.xcconfig"; sourceTree = "<group>"; };
 		6A2C9EF617DC88330EC63FB1 /* Pods-DatumbazFariloTestoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.release.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.release.xcconfig"; sourceTree = "<group>"; };
 		86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatumbazFariloTestoj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -648,6 +646,8 @@
 			isa = PBXGroup;
 			children = (
 				0099FC182D65058C0033EC11 /* Grundo.swift */,
+				00B2972D2D65534600264431 /* Stilo.swift */,
+				00B297312D6556EF00264431 /* Mallongigo.swift */,
 			);
 			path = Modeloj;
 			sourceTree = "<group>";
@@ -764,8 +764,6 @@
 			children = (
 				00A47A5E24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift */,
 				00A47A6324AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift */,
-				0049B21824B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift */,
-				0049B21B24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift */,
 				000F784624F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift */,
 				00A47A5A24AFDFEB00EA9DCF /* Artikolo+ReVoDatumbazo.swift */,
 			);
@@ -1024,10 +1022,8 @@
 				0027816724B7CE7300DFD71F /* Destino.swift in Sources */,
 				00A47A6424AFF19D00EA9DCF /* Fako+ReVoDatumbazo.swift in Sources */,
 				0049B22124B154F000B81E15 /* TrieIterator.swift in Sources */,
-				0049B21C24B0F3E600B81E15 /* Mallongigo+ReVoDatumbazo.swift in Sources */,
 				00A47A5D24AFE19D00EA9DCF /* AliriloKashmemoro.swift in Sources */,
 				0051A6D02309A3690034DFF9 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
-				0049B21924B0F3C000B81E15 /* Stilo+ReVoDatumbazo.swift in Sources */,
 				00A47A5F24AFE34B00EA9DCF /* Lingvo+ReVoDatumbazo.swift in Sources */,
 				0049B21624B0E67000B81E15 /* SerchStato.swift in Sources */,
 				0036571A2309DB740028C21F /* DatumbazAlirilo.swift in Sources */,
@@ -1053,6 +1049,7 @@
 				0099FC462D65058C0033EC11 /* TraktiKapon.swift in Sources */,
 				0099FC362D65058C0033EC11 /* SerchVorto.swift in Sources */,
 				0099FC412D65058C0033EC11 /* TraktiFormulon.swift in Sources */,
+				00B297322D6556EF00264431 /* Mallongigo.swift in Sources */,
 				0099FC4B2D65058C0033EC11 /* TraktiMallongigon.swift in Sources */,
 				0099FC4A2D65058C0033EC11 /* TraktiListReferencon.swift in Sources */,
 				0099FC3E2D65058C0033EC11 /* TraktiEkzemplon.swift in Sources */,
@@ -1096,9 +1093,7 @@
 				00B297192D650F5100264431 /* DatumbazAlirilo.swift in Sources */,
 				00B2971B2D65122B00264431 /* Artikolo+ReVoDatumbazo.swift in Sources */,
 				00B2971C2D65122B00264431 /* Fako+ReVoDatumbazo.swift in Sources */,
-				00B2971D2D65122B00264431 /* Mallongigo+ReVoDatumbazo.swift in Sources */,
 				00B2971E2D65122B00264431 /* Lingvo+ReVoDatumbazo.swift in Sources */,
-				00B297202D65122B00264431 /* Stilo+ReVoDatumbazo.swift in Sources */,
 				0099FC5B2D65058C0033EC11 /* TraktiTradukGrupon.swift in Sources */,
 				0099FC3C2D65058C0033EC11 /* TraktiDerivajhon.swift in Sources */,
 				0099FC332D65058C0033EC11 /* OfcVorto.swift in Sources */,
@@ -1120,6 +1115,7 @@
 				0099FC282D65058C0033EC11 /* TekstFarilo.swift in Sources */,
 				0099FC5C2D65058C0033EC11 /* TraktiTradukon.swift in Sources */,
 				0099FC6C2D65058C0033EC11 /* FakoAnalizilo.swift in Sources */,
+				00B2972E2D65534600264431 /* Stilo.swift in Sources */,
 				0099FC5D2D65058C0033EC11 /* TraktiTrastrekitan.swift in Sources */,
 				0099FC6B2D65058C0033EC11 /* DTDAnalizilo.swift in Sources */,
 				0099FC402D65058C0033EC11 /* TraktiEscepton.swift in Sources */,
@@ -1147,6 +1143,7 @@
 				0099FD2B2D6506940033EC11 /* FakVorto.swift in Sources */,
 				0099FD2C2D6506940033EC11 /* SerchTraduko.swift in Sources */,
 				0099FCEC2D65067F0033EC11 /* TekstFarilo.swift in Sources */,
+				00B297332D65572700264431 /* Mallongigo.swift in Sources */,
 				00B297262D654FCF00264431 /* Lingvo+ReVoDatumbazo.swift in Sources */,
 				0099FCED2D65067F0033EC11 /* KreiDatumbazon.swift in Sources */,
 				0099FCEE2D65067F0033EC11 /* VortListoj.swift in Sources */,
@@ -1173,7 +1170,6 @@
 				0099FD2F2D6506980033EC11 /* VortoFabriko.swift in Sources */,
 				0099FCFC2D65068E0033EC11 /* TraktiIndekson.swift in Sources */,
 				0099FCFD2D65068E0033EC11 /* TraktiReferencGrupon.swift in Sources */,
-				00B297292D654FE600264431 /* Mallongigo+ReVoDatumbazo.swift in Sources */,
 				0099FCFE2D65068E0033EC11 /* TraktiEkzemplon.swift in Sources */,
 				0099FCFF2D65068E0033EC11 /* TraktiMisstilan.swift in Sources */,
 				0099FD002D65068E0033EC11 /* TraktiAltigitan.swift in Sources */,
@@ -1206,6 +1202,7 @@
 				0099FD162D65068E0033EC11 /* TraktiEscepton.swift in Sources */,
 				0099FD172D65068E0033EC11 /* TraktiDerivajhon.swift in Sources */,
 				0099FD182D65068E0033EC11 /* TraktiGrasan.swift in Sources */,
+				00B297342D65579400264431 /* Stilo.swift in Sources */,
 				0099FD192D65068E0033EC11 /* TraktiListReferencon.swift in Sources */,
 				0099FD1A2D65068E0033EC11 /* TraktiKursivan.swift in Sources */,
 				0099FD1B2D65068E0033EC11 /* TraktiSencReferencon.swift in Sources */,
@@ -1214,7 +1211,6 @@
 				0099FD1E2D65068E0033EC11 /* TraktiPrononcon.swift in Sources */,
 				0099FD1F2D65068E0033EC11 /* TraktiVariajhon.swift in Sources */,
 				0099FD202D65068E0033EC11 /* TraktiEmfazon.swift in Sources */,
-				00B297272D654FD600264431 /* Stilo+ReVoDatumbazo.swift in Sources */,
 				0099FD212D65068E0033EC11 /* TraktiArtikolon.swift in Sources */,
 				0099FD222D65068E0033EC11 /* TraktiNacilingvan.swift in Sources */,
 				0099FD232D65068E0033EC11 /* TraktiTradukon.swift in Sources */,

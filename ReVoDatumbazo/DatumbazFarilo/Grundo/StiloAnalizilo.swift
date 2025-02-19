@@ -49,16 +49,6 @@ class StiloAnalizilo: NSObject, XMLParserDelegate {
 // MARK: - Vokilo
 
 extension StiloAnalizilo {
-	public static func skribi(
-		stilojn stiloj: [Stilo],
-		en konteksto: NSManagedObjectContext) {
-		for stilo in stiloj {
-			stilo.skribi(en: konteksto)
-		}
-		
-		try! konteksto.save()
-	}
-	
 	/// Legas Stilojn el la donata indikilo, en la donatan datumbaz-kontekston
 	/// Reads abbreviations from the given file path, into the given database context
 	public static func legi(el indikilo: String) -> [Stilo] {

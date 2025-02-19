@@ -126,7 +126,7 @@ extension Artikolo {
 				if let tradukDict = tradukJSON as? [String: String] {
 					for (lingvoKodo, teksto) in tradukDict {
 						if let lingvObjekto = alirilo.lingvo(porKodo: lingvoKodo),
-						   let lingvo = Lingvo.elDatumbazObjekto(lingvObjekto) {
+						   let lingvo = Lingvo.el(lingvObjekto) {
 							let novaTraduko = Traduko(lingvo: lingvo, teksto: teksto)
 							novajTradukoj.append(novaTraduko)
 						}

@@ -20,6 +20,4 @@ struct AliriloKashMemorero<K> {
 struct AliriloKashMemoro {
     static var lingvoj = AliriloKashMemorero<Lingvo>()
     static var fakoj = AliriloKashMemorero<Fako>()
-    static var stiloj = AliriloKashMemorero<Stilo>()
-    static var mallongigoj = AliriloKashMemorero<Mallongigo>()
 }

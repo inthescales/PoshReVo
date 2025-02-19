@@ -61,8 +61,6 @@ class Grundo: Codable {
 	func skribi(en konteksto: NSManagedObjectContext) {
 		LingvoAnalizilo.skribi(lingvojn: lingvoj, en: konteksto)
 		FakoAnalizilo.skribi(fakojn: fakoj, en: konteksto)
-		VortarajMallongigojAnalizilo.skribi(mallongigojn: mallongigojVortaraj, en: konteksto)
-		StiloAnalizilo.skribi(stilojn: stiloj, en: konteksto)
 		Oficialecoj.skribi(en: konteksto)
 	}
 	

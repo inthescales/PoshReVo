@@ -21,16 +21,12 @@ extension Lingvo {
 		objekto.setValue(nomo, forKey: "nomo")
 	}
 	
-    public static func elDatumbazObjekto(_ objekto: NSManagedObject) -> Lingvo? {
-        if let kodo = objekto.value(forKey: "kodo") as? String,
-           let nomo = objekto.value(forKey: "nomo") as? String {
-            return Lingvo(kodo: kodo, nomo: nomo)
+    public static func el(_ objekto: NSManagedObject) -> Lingvo? {
+        guard let kodo = objekto.value(forKey: "kodo") as? String,
+			  let nomo = objekto.value(forKey: "nomo") as? String else {
+			   return nil
         }
         
-        return nil
-    }
-    
-    public static var esperanto: Lingvo {
-        return Lingvo(kodo: "eo", nomo: "Esperanto")
+		return Lingvo(kodo: kodo, nomo: nomo)
     }
 }

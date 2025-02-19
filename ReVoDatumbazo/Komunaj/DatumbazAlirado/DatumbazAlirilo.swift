@@ -52,20 +52,6 @@ final class DatumbazAlirilo {
         return nil
     }
     
-    func mallongigo(porKodo kodo: String) -> NSManagedObject? {
-        
-        let serchPeto = NSFetchRequest<NSFetchRequestResult>()
-        serchPeto.entity = NSEntityDescription.entity(forEntityName: "Mallongigo", in: konteksto)
-        serchPeto.predicate = NSPredicate(format: "kodo == %@", argumentArray: [kodo])
-        do {
-            return try konteksto.fetch(serchPeto).first as? NSManagedObject
-        } catch {
-            
-        }
-        
-        return nil
-    }
-    
     func oficialeco(porKodo kodo: String) -> NSManagedObject? {
         
         let serchPeto = NSFetchRequest<NSFetchRequestResult>()
