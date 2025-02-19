@@ -9,34 +9,22 @@
 import CoreData
 
 extension Oficialeco {
-    
-    public static func elDatumbazObjekto(_ objekto: NSManagedObject) -> Oficialeco? {
+	func skribi(en konteksto: NSManagedObjectContext) {
+		let objekto = NSEntityDescription.insertNewObject(forEntityName: "Oficialeco", into: konteksto)
+		objekto.setValue(kodo, forKey: "kodo")
+		objekto.setValue(indikilo, forKey: "indikilo")
+		objekto.setValue(nomo, forKey: "nomo")
+		objekto.setValue(vico, forKey: "vico")
+	}
+	
+    public static func el(_ objekto: NSManagedObject) -> Oficialeco? {
         if let kodo = objekto.value(forKey: "kodo") as? String,
-            let indikilo = objekto.value(forKey: "indikilo") as? String,
-            let nomo = objekto.value(forKey: "nomo") as? String {
-            return Oficialeco(kodo: kodo, indikilo: indikilo, nomo: nomo)
+            let nomo = objekto.value(forKey: "nomo") as? String,
+			let vico = objekto.value(forKey: "vico") as? Int {
+			let indikilo = (objekto.value(forKey: "indikilo") as? String) ?? ""
+			return Oficialeco(kodo: kodo, indikilo: indikilo, nomo: nomo, vico: vico)
         }
         
         return nil
-    }
-}
-
-// MARK: - Equatable
-
-extension Oficialeco: Equatable {
-    public static func ==(lhs: Oficialeco, rhs: Oficialeco) -> Bool {
-        return lhs.kodo == rhs.kodo && lhs.indikilo == rhs.indikilo && lhs.nomo == rhs.nomo
-    }
-}
-
-// MARK: - Comparable
-
-extension Oficialeco: Comparable {
-    public static func < (lhs: Oficialeco, rhs: Oficialeco) -> Bool {
-        if lhs.kodo == "*" || rhs.kodo == "n" { return true }
-        if lhs.kodo == "n" || rhs.kodo == "*" { return false }
-        if lhs.kodo == "a" && rhs.kodo != "n" { return false }
-        if lhs.kodo != "n" && rhs.kodo == "a" { return true }
-        return lhs.nomo.compare(rhs.nomo, options: .caseInsensitive, range: nil, locale: Locale(identifier: "eo")) == .orderedAscending
     }
 }

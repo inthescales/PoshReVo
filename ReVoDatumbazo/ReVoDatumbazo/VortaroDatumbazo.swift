@@ -100,7 +100,7 @@ public final class VortaroDatumbazo {
         
     public func chiujOficialecoj() -> [Oficialeco]? {
         alirilo.chiujOficialecoj().compactMap { objekto in
-            Oficialeco.elDatumbazObjekto(objekto)
+            Oficialeco.el(objekto)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs < rhs
         }

@@ -266,7 +266,9 @@
 		00B297502D6625A300264431 /* Oficialeco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2973C2D6625A300264431 /* Oficialeco.swift */; };
 		00B297512D6625A300264431 /* Oficialeco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2973C2D6625A300264431 /* Oficialeco.swift */; };
 		00B297522D6625A300264431 /* Oficialeco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2973C2D6625A300264431 /* Oficialeco.swift */; };
-		00B297542D66277500264431 /* Oficialecoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1E2D65058C0033EC11 /* Oficialecoj.swift */; };
+		00B297552D662E0500264431 /* Oficialeco+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F784624F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift */; };
+		00B297572D662E6700264431 /* Oficialeco+ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F784624F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift */; };
+		00EEB7D02D6630A8002AA05E /* Artikolo+Printado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC162D65058C0033EC11 /* Artikolo+Printado.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -689,8 +691,8 @@
 				0099FC1B2D65058C0033EC11 /* FakoAnalizilo.swift */,
 				0099FC1C2D65058C0033EC11 /* LingvoAnalizilo.swift */,
 				0099FC1D2D65058C0033EC11 /* LiteroAnalizilo.swift */,
-				0099FC1E2D65058C0033EC11 /* Oficialecoj.swift */,
 				0099FC1F2D65058C0033EC11 /* SignoAnalizilo.swift */,
+				0099FC1E2D65058C0033EC11 /* Oficialecoj.swift */,
 				0099FC202D65058C0033EC11 /* StiloAnalizilo.swift */,
 				0099FC212D65058C0033EC11 /* VortarajMallongigojAnalizilo.swift */,
 			);
@@ -804,8 +806,8 @@
 			children = (
 				00B297352D6625A300264431 /* Artikolo.swift */,
 				00B297362D6625A300264431 /* Subartikolo.swift */,
-				00B297372D6625A300264431 /* Traduko.swift */,
 				00B297382D6625A300264431 /* Vorto.swift */,
+				00B297372D6625A300264431 /* Traduko.swift */,
 			);
 			path = Artikolaj;
 			sourceTree = "<group>";
@@ -1076,7 +1078,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B297542D66277500264431 /* Oficialecoj.swift in Sources */,
 				00B297472D6625A300264431 /* Vorto.swift in Sources */,
 				003657172309CE250028C21F /* VortaroDatumbazo.swift in Sources */,
 				000F784724F1B47400F918C9 /* Oficialeco+ReVoDatumbazo.swift in Sources */,
@@ -1181,6 +1182,7 @@
 				0099FC502D65058C0033EC11 /* TraktiPrononcon.swift in Sources */,
 				0099FC352D65058C0033EC11 /* SerchTraduko.swift in Sources */,
 				0099FC582D65058C0033EC11 /* TraktiSubderivajhon.swift in Sources */,
+				00B297552D662E0500264431 /* Oficialeco+ReVoDatumbazo.swift in Sources */,
 				0099FC6F2D65058C0033EC11 /* Oficialecoj.swift in Sources */,
 				0099FC252D65058C0033EC11 /* PrefiksArboFarilo.swift in Sources */,
 				0099FC702D65058C0033EC11 /* SignoAnalizilo.swift in Sources */,
@@ -1257,6 +1259,7 @@
 				0099FD052D65068E0033EC11 /* TraktiOficialecon.swift in Sources */,
 				0099FD062D65068E0033EC11 /* TraktiKlarigon.swift in Sources */,
 				00B297492D6625A300264431 /* Vorto.swift in Sources */,
+				00B297572D662E6700264431 /* Oficialeco+ReVoDatumbazo.swift in Sources */,
 				0099FD072D65068E0033EC11 /* TraktiKapon.swift in Sources */,
 				0099FD082D65068E0033EC11 /* TraktiMallongigon.swift in Sources */,
 				0099FD092D65068E0033EC11 /* TraktiSubsencon.swift in Sources */,
@@ -1276,6 +1279,7 @@
 				0099FD132D65068E0033EC11 /* TraktiRadikon.swift in Sources */,
 				0099FD3B2D6506A60033EC11 /* Grundo.swift in Sources */,
 				0099FD142D65068E0033EC11 /* TraktiSencon.swift in Sources */,
+				00EEB7D02D6630A8002AA05E /* Artikolo+Printado.swift in Sources */,
 				00B297522D6625A300264431 /* Oficialeco.swift in Sources */,
 				00B2974C2D6625A300264431 /* Fako.swift in Sources */,
 				0099FD152D65068E0033EC11 /* TraktiGramatikon.swift in Sources */,

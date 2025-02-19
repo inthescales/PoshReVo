@@ -1,26 +1,16 @@
-//
-//  Vorto.swift
-//  PoshReVo
-//
-//  Created by Robin Hill on 5/4/20.
-//  Copyright © 2020 Robin Hill. All rights reserved.
-//
-
 import Foundation
 
-/*
-    Reprezentas unu aŭ plurajn vortojn havantajn unu saman difinon.
-*/
+// Vorto, derivaĵo, aŭ frazeo havantan unusaman difinon.
 public struct Vorto: Codable {
+	/// La vorto, derivaĵo, aŭ frazo mem
     public let titolo: String
+	
+	/// Difina teksto de la esprimo
     public let teksto: String
+	
+	/// Identigan marko
     public let marko: String?
+	
+	/// Oficialeco de la termino. Se estas pluraj variaĵoj, la plej frua oficialeco
     public let ofc: String?
-    
-    public init(titolo: String, teksto: String, marko: String?, ofc: String?) {
-        self.titolo = titolo
-        self.teksto = teksto
-        self.marko = marko
-        self.ofc = ofc
-    }
 }

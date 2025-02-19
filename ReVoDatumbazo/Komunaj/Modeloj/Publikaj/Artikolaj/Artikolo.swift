@@ -1,31 +1,34 @@
-//
-//  Artikolo.swift
-//  PoshReVo
-//
-//  Created by Robin Hill on 5/4/20.
-//  Copyright © 2020 Robin Hill. All rights reserved.
-//
-
 import Foundation
 import CoreData
 
-/*
-    Reprezentas la enhavojn de tuta paĝo en la vortaro.
-*/
+/// Ĉiuj enhavoj de unu vortara artikolo
 public final class Artikolo: Codable {
+	/// Titolo de la artikolo – kutime la radiko kaj ĝia baza formo
     public let titolo: String
+	
+	/// La radiko reprezentata de la artikolo, sen finaĵo
     public let radiko: String
+	
+	/// Indekso serĉebla kiu indikas ĉi-artikolon
     public let indekso: String
+	
+	/// Oficialeco de la radiko. Se ekzistas pluraj variaĵoj, la plej frua oficialeco
     public let ofc: String?
+	
+	/// Subartikolaj dividoj de la artikolo
     public let subartikoloj: [Subartikolo]
+	
+	/// Ĉiuj nacilingvaj tradukoj
     public let tradukoj: [Traduko]
     
-    public init(titolo: String,
-                radiko: String,
-                indekso: String,
-                ofc: String?,
-                subartikoloj: [Subartikolo],
-                tradukoj: [Traduko]) {
+    public init(
+		titolo: String,
+		radiko: String,
+		indekso: String,
+		ofc: String?,
+		subartikoloj: [Subartikolo],
+		tradukoj: [Traduko]
+	) {
         self.titolo = titolo
         self.radiko = radiko
         self.indekso = indekso

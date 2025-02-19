@@ -1,15 +1,23 @@
-//
-//import Foundation
-//
-///// Reprezentas oficialeco, ekzemple de fundamento aŭ oficiala aldono
-//public struct Oficialeco: Codable {
-//    public let kodo: String
-//    public let indikilo: String
-//    public let nomo: String
-//    
-//    public init(kodo: String, indikilo: String, nomo: String) {
-//        self.kodo = kodo
-//        self.indikilo = indikilo
-//        self.nomo = nomo
-//    }
-//}
+import Foundation
+
+public struct Oficialeco {
+	/// Kodo kiu reprezentas ĉi-oficialeco
+	public let kodo: String
+	
+	/// Teksta indikilo kiu montriĝos apud vortoj. Kutime samas al kodo
+	public let indikilo: String?
+	
+	/// Plenteksta nomo de la oficialeco
+	public let nomo: String
+	
+	/// Loko en ordigoj
+	public let vico: Int
+}
+
+// MARK: - Comparable
+
+extension Oficialeco: Comparable {
+	public static func < (lhs: Oficialeco, rhs: Oficialeco) -> Bool {
+		lhs.vico < rhs.vico
+	}
+}

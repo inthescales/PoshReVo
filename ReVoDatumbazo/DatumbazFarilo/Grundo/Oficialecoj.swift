@@ -1,68 +1,56 @@
 import Foundation
 import CoreData
 
-public struct Oficialeco {
-	public let kodo: String
-	public let indikilo: String?
-	public let nomo: String
-
+enum Oficialecoj {
 	private static var fundamento = Oficialeco(
 		kodo: "*",
 		indikilo: "*",
-		nomo: "fundamento"
+		nomo: "fundamento",
+		vico: 0
 	)
 	
 	private static func aldono(numero: Int) -> Oficialeco {
 		Oficialeco(
 			kodo: "\(numero)",
 			indikilo: "\(numero)",
-			nomo: "\(numero)a aldono"
+			nomo: "\(numero)a aldono",
+			vico: numero
 		)
 	}
 	
 	private static var alia = Oficialeco(
 		kodo: "a",
 		indikilo: nil,
-		nomo: "alia oficialigo"
+		nomo: "alia oficialigo",
+		vico: oficialajAldonoj + 1
 	)
 	
 	private static var neoficiala = Oficialeco(
 		kodo: "n",
 		indikilo: nil,
-		nomo: "neoficialaj"
+		nomo: "neoficialaj",
+		vico: oficialajAldonoj + 2
 	)
 	
-	static let oficialecoj = [
-		fundamento,
-		aldono(numero: 1),
-		aldono(numero: 2),
-		aldono(numero: 3),
-		aldono(numero: 4),
-		aldono(numero: 5),
-		aldono(numero: 6),
-		aldono(numero: 7),
-		aldono(numero: 8),
-		aldono(numero: 9),
-		aldono(numero: 10),
-		alia,
-		neoficiala
-	]
-}
+	/// Nombro de oficialaj aldonoj
+	static let oficialajAldonoj = 10
+	
+	/// Ĉiuj oficialecoj
+	static let oficialecoj =
+		[fundamento] +
+		(1...oficialajAldonoj).map { aldono(numero: $0) } +
+		[alia, neoficiala]
 
-enum Oficialecoj {
 	/// Aldonas oficialecojn al la donata datumbazo
 	/// Adds oficialnesses to the given database
 	public static func skribi(en konteksto: NSManagedObjectContext) {
 		print("Aldonas oficialecojn")
 		
-		for ofc in Oficialeco.oficialecoj {
-			let novaOfc = NSEntityDescription.insertNewObject(forEntityName: "Oficialeco", into: konteksto)
-			novaOfc.setValue(ofc.kodo, forKey: "kodo")
-			novaOfc.setValue(ofc.indikilo, forKey: "indikilo")
-			novaOfc.setValue(ofc.nomo, forKey: "nomo")
+		for ofc in Oficialecoj.oficialecoj {
+			ofc.skribi(en: konteksto)
 		}
 		try! konteksto.save()
 		
-		print("Aldonis \(Oficialeco.oficialecoj.count) oficialecojn")
+		print("Aldonis \(Oficialecoj.oficialecoj.count) oficialecojn")
 	}
 }
