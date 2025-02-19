@@ -60,7 +60,7 @@ extension DatumbazAlirilo {
 
     private func komencaNodo(por kodo: String, kunLitero litero: String) -> NSManagedObject? {
         
-        guard let lingvoObjekto = lingvo(porKodo: kodo) else {
+        guard let lingvoObjekto = lingvo(kodo: kodo) else {
             return nil
         }
         

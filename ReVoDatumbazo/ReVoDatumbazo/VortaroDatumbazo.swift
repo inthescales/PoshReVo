@@ -1,12 +1,4 @@
-//
-//  DatumbazAlirilo.swift
-//  ReVoDatumbazo
-//
-//  Created by Robin Hill on 8/18/19.
-//  Copyright © 2019 Robin Hill. All rights reserved.
-//
-
-import Foundation
+//import Foundation
 import CoreData
 
 /// Venigas datumojn el la datumbazo, kaj liveras ilin diversforme (t.e. kiel `Lingvon`, `Fakon`, ktp., kaj ne datumbazobjekton)
@@ -21,21 +13,21 @@ public final class VortaroDatumbazo {
     // MARK: - Modeloserĉado
     
     public func lingvo(porKodo kodo: String) -> Lingvo? {
-        if let objekto = alirilo.lingvo(porKodo: kodo) {
+        if let objekto = alirilo.lingvo(kodo: kodo) {
 			return Lingvo.el(objekto)
         }
         return nil
     }
     
     public func fako(porKodo kodo: String) -> Fako? {
-        if let objekto = alirilo.fako(porKodo: kodo) {
+        if let objekto = alirilo.fako(kodo: kodo) {
             return Fako.el(objekto)
         }
         return nil
     }
     
     public func artikolo(porIndekso indekso: String) -> Artikolo? {
-        if let objekto = alirilo.artikolo(porIndekso: indekso) {
+        if let objekto = alirilo.artikolo(indekso: indekso) {
 			return Artikolo.el(objekto, alirilo: alirilo)
         }
         
@@ -55,35 +47,27 @@ public final class VortaroDatumbazo {
     }
     
     // MARK: - Klasoj de modeloj
-    
-    public func vortoj(oficialeco: String) -> [Artikolo] {
-        alirilo.vortoj(oficialeco: oficialeco)?.compactMap { objekto in
-            Artikolo.el(objekto, alirilo: alirilo)
-        }.sorted { (lhs, rhs) -> Bool in
-            return lhs.titolo < rhs.titolo
-        } ?? []
-    }
-    
-    public func fakVortoj(porFako kodo: String) -> [Destino] {
-        alirilo.fakVortoj(porFako: kodo)?.compactMap { objekto in
+	
+    public func fakVortoj(fako kodo: String) -> [Destino] {
+        alirilo.fakVortoj(fako: kodo).compactMap { objekto in
             Destino(objekto: objekto)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs < rhs
-        } ?? []
+        }
     }
     
-    public func ofcVortoj(porOficialeco kodo: String) -> [Destino] {
-        alirilo.ofcVortoj(porOficialeco: kodo)?.compactMap { objekto in
+    public func ofcVortoj(oficialeco kodo: String) -> [Destino] {
+        alirilo.ofcVortoj(oficialeco: kodo).compactMap { objekto in
             Destino(objekto: objekto)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs < rhs
-        } ?? []
+        }
     }
     
     // MARK: - Chiuj modeloj
     
     public func chiujLingvoj() -> [Lingvo] {
-        alirilo.chiujLingvoj().compactMap { objekto in
+        alirilo.chiujLingvoj.compactMap { objekto in
             Lingvo.el(objekto)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs < rhs
@@ -91,7 +75,7 @@ public final class VortaroDatumbazo {
     }
     
     public func chiujFakoj() -> [Fako] {
-        alirilo.chiujFakoj().compactMap { objekto in
+        alirilo.chiujFakoj.compactMap { objekto in
             Fako.el(objekto)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs < rhs
@@ -99,7 +83,7 @@ public final class VortaroDatumbazo {
     }
         
     public func chiujOficialecoj() -> [Oficialeco]? {
-        alirilo.chiujOficialecoj().compactMap { objekto in
+        alirilo.chiujOficialecoj.compactMap { objekto in
             Oficialeco.el(objekto)
         }.sorted { (lhs, rhs) -> Bool in
             return lhs < rhs

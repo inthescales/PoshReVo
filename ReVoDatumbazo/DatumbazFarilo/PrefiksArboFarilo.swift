@@ -80,7 +80,7 @@ final class PrefiksArboFarilo {
 	/// Faras destinon kaj aldonas ĝin al la nodo
 	private func fariDestinon(el serchebla: Serchebla, por nodo: Nodo) -> Destino {
 		guard let artikolObjekto = artikolObjektoj[serchebla.indekso]
-				?? alirilo.artikolo(porIndekso: serchebla.indekso) else {
+				?? alirilo.artikolo(indekso: serchebla.indekso) else {
 			assert(false, "Ne trovis artikolan datumbazobjekton")
 		}
 		
@@ -100,7 +100,7 @@ final class PrefiksArboFarilo {
 		for (lingvo, komencaj) in komencajNodoj {
 			print("Skribas arbon por " + lingvo)
 			
-			let lingvObjekto = alirilo.lingvo(porKodo: lingvo)!
+			let lingvObjekto = alirilo.lingvo(kodo: lingvo)!
 			for (litero, nodo) in komencaj {
 				let komencNodo = skribi(nodon: nodo, litero: litero, en: konteksto)
 				lingvObjekto.mutableSetValue(forKey: "komencajNodoj").add(komencNodo)

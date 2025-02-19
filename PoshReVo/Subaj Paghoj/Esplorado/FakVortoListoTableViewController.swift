@@ -19,7 +19,7 @@ final class FakVortoListoTableViewController: BazStilaTableViewController {
     
     init(_ fako: Fako) {
         self.fako = fako
-        vortoj = VortaroDatumbazo.komuna.fakVortoj(porFako: fako.kodo)
+        vortoj = VortaroDatumbazo.komuna.fakVortoj(fako: fako.kodo)
         super.init(style: .plain)
         
         title = Iloj.majuskligiUnuan(fako.nomo)
