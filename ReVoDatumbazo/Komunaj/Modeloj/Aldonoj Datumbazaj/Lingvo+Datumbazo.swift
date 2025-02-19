@@ -7,7 +7,7 @@ extension Lingvo {
 		objekto.setValue(nomo, forKey: "nomo")
 	}
 	
-    public static func el(_ objekto: NSManagedObject) -> Lingvo? {
+    static func el(_ objekto: NSManagedObject) -> Lingvo? {
         guard let kodo = objekto.value(forKey: "kodo") as? String,
 			  let nomo = objekto.value(forKey: "nomo") as? String else {
 			return nil

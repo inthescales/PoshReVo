@@ -7,7 +7,7 @@ extension Fako {
 		objekto.setValue(nomo, forKey: "nomo")
 	}
 	
-    public static func el(_ objekto: NSManagedObject) -> Fako? {
+    static func el(_ objekto: NSManagedObject) -> Fako? {
         guard let kodo = objekto.value(forKey: "kodo") as? String,
 			  let nomo = objekto.value(forKey: "nomo") as? String else {
 			return nil

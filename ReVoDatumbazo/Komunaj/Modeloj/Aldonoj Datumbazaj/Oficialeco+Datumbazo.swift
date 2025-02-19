@@ -9,7 +9,7 @@ extension Oficialeco {
 		objekto.setValue(vico, forKey: "vico")
 	}
 	
-    public static func el(_ objekto: NSManagedObject) -> Oficialeco? {
+    static func el(_ objekto: NSManagedObject) -> Oficialeco? {
         guard let kodo = objekto.value(forKey: "kodo") as? String,
 			  let nomo = objekto.value(forKey: "nomo") as? String,
 			  let vico = objekto.value(forKey: "vico") as? Int else {
