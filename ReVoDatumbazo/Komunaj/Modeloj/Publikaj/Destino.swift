@@ -1,12 +1,6 @@
 import Foundation
 import CoreData
 
-#if os(iOS)
-import ReVoModeloj
-#elseif os(macOS)
-import ReVoModelojOSX
-#endif
-
 /// Indekso kiu kondukas al loko en artikolo kiun priskribaj informoj.
 /// Aperos en vortlistoj kaj serĉrezultoj.
 public struct Destino {

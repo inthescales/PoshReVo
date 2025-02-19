@@ -1,10 +1,10 @@
 import Foundation
 import CoreData
 
-private struct Oficialeco {
-	let kodo: String
-	let indikilo: String?
-	let nomo: String
+public struct Oficialeco {
+	public let kodo: String
+	public let indikilo: String?
+	public let nomo: String
 
 	private static var fundamento = Oficialeco(
 		kodo: "*",
@@ -58,7 +58,7 @@ enum Oficialecoj {
 		for ofc in Oficialeco.oficialecoj {
 			let novaOfc = NSEntityDescription.insertNewObject(forEntityName: "Oficialeco", into: konteksto)
 			novaOfc.setValue(ofc.kodo, forKey: "kodo")
-			novaOfc.setValue(ofc.indikilo ?? "", forKey: "indikilo")
+			novaOfc.setValue(ofc.indikilo, forKey: "indikilo")
 			novaOfc.setValue(ofc.nomo, forKey: "nomo")
 		}
 		try! konteksto.save()

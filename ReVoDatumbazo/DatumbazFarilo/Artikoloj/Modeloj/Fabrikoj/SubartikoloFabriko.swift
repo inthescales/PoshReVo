@@ -1,5 +1,3 @@
-import ReVoModelojOSX
-
 /// Fabriko fabrikanta subartikolojn.
 struct SubartikoloFabriko {
 	var teksto = ""

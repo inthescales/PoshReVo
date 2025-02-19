@@ -9,12 +9,6 @@
 import Foundation
 import CoreData
 
-#if os(iOS)
-import ReVoModeloj
-#elseif os(macOS)
-import ReVoModelojOSX
-#endif
-
 /// Venigas datumojn el la datumbazo, kaj liveras ilin diversforme (t.e. kiel `Lingvon`, `Fakon`, ktp., kaj ne datumbazobjekton)
 public final class VortaroDatumbazo {
 

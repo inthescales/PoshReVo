@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-import ReVoModeloj
 import ReVoDatumbazo
 
 let serchChelIdent = "serchRezultoChelo"

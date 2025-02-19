@@ -8,7 +8,6 @@
 
 import UIKit
 
-import ReVoModeloj
 import ReVoDatumbazo
 
 private enum Chelo: Int {

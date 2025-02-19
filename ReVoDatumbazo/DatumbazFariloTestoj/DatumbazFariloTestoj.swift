@@ -2,7 +2,6 @@ import XCTest
 import SnapshotTesting
 
 @testable import DatumbazFarilo
-import ReVoModelojOSX
 
 /// Testoj pri datumbaz-farado
 final class DatumbazFariloTestoj: XCTestCase {

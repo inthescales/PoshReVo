@@ -1,7 +1,5 @@
 import CoreData
 
-import ReVoModelojOSX
-
 /// Enhavas ĉiujn necesajn informojn el voko-grundo
 class Grundo: Codable {
 	let lingvoj: [Lingvo]

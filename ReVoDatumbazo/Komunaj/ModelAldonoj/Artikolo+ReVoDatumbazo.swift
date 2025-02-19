@@ -8,12 +8,6 @@
 
 import CoreData
 
-#if os(iOS)
-import ReVoModeloj
-#elseif os(macOS)
-import ReVoModelojOSX
-#endif
-
 extension Artikolo {
 	func skribi(en konteksto: NSManagedObjectContext, numero: Int) -> NSManagedObject {
 		let dbObjekto = NSEntityDescription.insertNewObject(forEntityName: "Artikolo", into: konteksto)

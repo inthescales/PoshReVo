@@ -6,12 +6,6 @@
 //  Copyright © 2020 Robin Hill. All rights reserved.
 //
 
-#if os(iOS)
-import ReVoModeloj
-#elseif os(macOS)
-import ReVoModelojOSX
-#endif
-
 struct AliriloKashMemorero<K> {
     var kompleta: Bool = false
     var enhavoj: [K] = []

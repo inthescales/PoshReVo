@@ -1,7 +1,5 @@
 import Foundation
 
-import ReVoModelojOSX
-
 final class TekstFarilo {
 
 	public static func generiTekstojn(fakoj: [Fako], mallongigoj: [Mallongigo], destinIndiko: String) {

@@ -1,8 +1,6 @@
 import Foundation
 import CoreData
 
-import ReVoModelojOSX
-
 /// Analizas XMLan dosieron enhavantan liston da lingvoj, kaj aldonas ilin al la datumbazo
 /// Parses the XML file containing the list of languages, and adds them to the database
 class LingvoAnalizilo: NSObject, XMLParserDelegate {

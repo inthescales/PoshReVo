@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-import ReVoModeloj
 import ReVoDatumbazo
 
 let oftajLimo = 5 // Limo de lingvoj en la "oftaj uzataj serch-lingvoj" listo

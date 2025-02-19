@@ -8,7 +8,6 @@
 
 import Foundation
 
-import ReVoModeloj
 import ReVoDatumbazo
 
 final class FakVortoListoTableViewController: BazStilaTableViewController {

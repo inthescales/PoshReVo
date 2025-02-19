@@ -1,8 +1,6 @@
 import Foundation
 import CoreData
 
-import ReVoModelojOSX
-
 let komencTempo = Date()
 
 // Indikoj

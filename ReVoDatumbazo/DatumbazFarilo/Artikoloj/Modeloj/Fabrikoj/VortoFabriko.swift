@@ -1,5 +1,3 @@
-import ReVoModelojOSX
-
 /// Fabriko fabrikanta vortojn.
 struct VortoFabriko {
 	var titolo: String?

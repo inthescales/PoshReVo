@@ -1,5 +1,3 @@
-import ReVoModelojOSX
-
 enum ArboAnalizilo {
 	/// Rezulto de analizo de artikol-dokumento.
 	struct Rezulto {

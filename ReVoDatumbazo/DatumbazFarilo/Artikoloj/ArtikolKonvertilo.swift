@@ -1,8 +1,6 @@
 import Foundation
 import CoreData
 
-import ReVoModelojOSX
-
 /// Konvertas artikolajn-datumojn el XML en ArikolNodan arbon.
 class ArtikolKonvertilo: NSObject, XMLParserDelegate {
 	private let literoj: [String: String]

@@ -1,5 +1,4 @@
 import Foundation
-import ReVoModelojOSX
 
 extension ArboAnalizilo {
 	/// Stato de artikol-traktado

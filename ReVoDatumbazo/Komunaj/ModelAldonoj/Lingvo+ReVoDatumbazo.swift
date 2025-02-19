@@ -8,12 +8,6 @@
 
 import CoreData
 
-#if os(iOS)
-import ReVoModeloj
-#elseif os(macOS)
-import ReVoModelojOSX
-#endif
-
 extension Lingvo {
 	func skribi(en konteksto: NSManagedObjectContext) {
 		let objekto = NSEntityDescription.insertNewObject(forEntityName: "Lingvo", into: konteksto)

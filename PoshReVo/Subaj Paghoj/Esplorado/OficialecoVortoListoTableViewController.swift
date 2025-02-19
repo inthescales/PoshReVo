@@ -6,7 +6,6 @@
 //  Copyright © 2020 Robin Hill. All rights reserved.
 //
 
-import ReVoModeloj
 import ReVoDatumbazo
 
 final class OficialecoVortoListoTableViewController: BazStilaTableViewController {

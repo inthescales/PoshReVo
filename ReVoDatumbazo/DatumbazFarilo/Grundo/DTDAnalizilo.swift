@@ -1,8 +1,6 @@
 import Foundation
 import CoreData
 
-import ReVoModelojOSX
-
 enum DTDAnalizilo {
 	/// Legas entojn (entities) el .dtd-a dosiero
 	static func entoj(el indikilo: String) -> [String: String] {

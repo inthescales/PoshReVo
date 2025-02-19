@@ -9,12 +9,6 @@
 import Foundation
 import CoreData
 
-#if os(iOS)
-import ReVoModeloj
-#elseif os(macOS)
-import ReVoModelojOSX
-#endif
-
 final class DatumbazAlirilo {
     
     let konteksto: NSManagedObjectContext

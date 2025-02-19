@@ -1,5 +1,3 @@
-import ReVoModelojOSX
-
 enum ArtikolAnalizilo {
 	/// Rezulto de legado kaj traktado de artikolo
 	struct Rezulto {

@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import TTTAttributedLabel
 
-import ReVoModeloj
 import ReVoDatumbazo
 
 let subArtikolChelIdent = "subArtikolaChelo"

@@ -1,8 +1,6 @@
 import Foundation
 import CoreData
 
-import ReVoModelojOSX
-
 /// Enkapsuligas ĉiujn funkciojn pri legado kaj traktado de artikoloj
 enum Artikolaro {
 	/// Rezulto de legado kaj traktado de ĉiuj artikoloj

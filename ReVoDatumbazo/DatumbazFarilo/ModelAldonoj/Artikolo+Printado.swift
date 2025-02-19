@@ -1,5 +1,3 @@
-import ReVoModelojOSX
-
 extension Artikolo: CustomStringConvertible {
 	public var description: String {
 		var rezulto = ""

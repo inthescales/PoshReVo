@@ -8,12 +8,6 @@
 
 import CoreData
 
-#if os(iOS)
-import ReVoModeloj
-#elseif os(macOS)
-import ReVoModelojOSX
-#endif
-
 extension Oficialeco {
     
     public static func elDatumbazObjekto(_ objekto: NSManagedObject) -> Oficialeco? {

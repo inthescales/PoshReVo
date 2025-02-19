@@ -1,5 +1,3 @@
-import ReVoModelojOSX
-
 /// Fabriko fabrikanta artikolojn
 struct ArtikolFabriko {
 	var titolo: String?

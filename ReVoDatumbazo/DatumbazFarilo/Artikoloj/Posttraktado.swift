@@ -1,5 +1,4 @@
 import Foundation
-import ReVoModelojOSX
 
 enum Posttraktado {
 	/// Efektivigas tiujn ŝanĝojn al artikolo kiuj ne eblas fari dum unuopa legado
