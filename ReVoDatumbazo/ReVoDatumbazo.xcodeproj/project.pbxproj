@@ -495,7 +495,6 @@
 			isa = PBXGroup;
 			children = (
 				00B2973D2D6625A300264431 /* Publikaj */,
-				00B297532D6625A700264431 /* Internaj */,
 				00A47A5924AFDFC700EA9DCF /* Aldonoj Datumbazaj */,
 			);
 			path = Modeloj;
@@ -830,13 +829,6 @@
 				0027816624B7CE7300DFD71F /* Destino.swift */,
 			);
 			path = Publikaj;
-			sourceTree = "<group>";
-		};
-		00B297532D6625A700264431 /* Internaj */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Internaj;
 			sourceTree = "<group>";
 		};
 		00C7B30B2461E8090084CC8F /* DatumbazAlirado */ = {

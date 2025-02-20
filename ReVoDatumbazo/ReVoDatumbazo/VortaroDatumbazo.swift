@@ -1,7 +1,7 @@
 //import Foundation
 import CoreData
 
-/// Venigas datumojn el la datumbazo, kaj liveras ilin diversforme (t.e. kiel `Lingvon`, `Fakon`, ktp., kaj ne datumbazobjekton)
+/// Venigas datumojn el la datumbazo, kaj liveras ilin forme de diversaj modeloj
 public final class VortaroDatumbazo {
     private let alirilo: DatumbazAlirilo
 

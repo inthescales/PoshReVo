@@ -1,6 +1,6 @@
 import Foundation
 
-// Vorto, derivaĵo, aŭ frazeo havantan unusaman difinon.
+/// Vorto, derivaĵo, aŭ frazeo havantan unusaman difinon.
 public struct Vorto: Codable {
 	/// La vorto, derivaĵo, aŭ frazo mem
     public let titolo: String
