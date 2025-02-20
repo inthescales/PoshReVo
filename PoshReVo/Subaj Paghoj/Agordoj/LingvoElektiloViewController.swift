@@ -30,7 +30,7 @@ final class LingvoElektiloViewController : UIViewController, Stilplena {
     @IBOutlet var serchTabulo: UISearchBar?
     @IBOutlet var lingvoTabelo: UITableView?
     
-    private let chiujLingvoj = VortaroDatumbazo.komuna.chiujLingvoj()
+    private let chiujLingvoj = VortaroDatumbazo.komuna.chiujLingvoj
     private var validajLingvoj: [Lingvo]?
     private var filtritajLingvoj: [Lingvo]? = nil
     

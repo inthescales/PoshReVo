@@ -14,7 +14,7 @@ final class OficialecoListoTableViewController: BazStilaTableViewController {
     
     private static let chelIdent = "OficialecoChelIdent"
     
-    private let oficialecoj = VortaroDatumbazo.komuna.chiujOficialecoj() ?? []
+    private let oficialecoj = VortaroDatumbazo.komuna.chiujOficialecoj ?? []
     
     override func viewDidLoad() {
         super.viewDidLoad()

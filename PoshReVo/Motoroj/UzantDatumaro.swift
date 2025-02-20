@@ -51,7 +51,7 @@ class UzantDatumaro {
             for kodo in NSLocale.preferredLanguages {
                 
                 let bazKodo = kodo.components(separatedBy: "-").first                
-                if let lingvo = VortaroDatumbazo.komuna.lingvo(porKodo: bazKodo ?? kodo),
+                if let lingvo = VortaroDatumbazo.komuna.lingvo(kodo: bazKodo ?? kodo),
                     lingvo != Lingvo.esperanto {
                     tradukLingvoj.insert(lingvo)
                     oftajSerchLingvoj.append(lingvo)
@@ -189,19 +189,19 @@ class UzantDatumaro {
     
     static func sharghiTrapasajnDatumojn() {
         if let trapasaSerchLingvoKodo = UserDefaults.standard.string(forKey: "TestSerchLingvo"),
-            let trapasaSerchLingvo = VortaroDatumbazo.komuna.lingvo(porKodo: trapasaSerchLingvoKodo) {
+            let trapasaSerchLingvo = VortaroDatumbazo.komuna.lingvo(kodo: trapasaSerchLingvoKodo) {
             serchLingvo = trapasaSerchLingvo
         }
         if let trapasaOftajKodoj = UserDefaults.standard.string(forKey: "TestOftajSerchLingvoj") {
             for kodo in trapasaOftajKodoj.split(separator: ",") {
-                if let trapasaLingvo = VortaroDatumbazo.komuna.lingvo(porKodo: String(kodo)) {
+                if let trapasaLingvo = VortaroDatumbazo.komuna.lingvo(kodo: String(kodo)) {
                     oftajSerchLingvoj.append(trapasaLingvo)
                 }
             }
         }
         if let trapasaTradukLingvoj = UserDefaults.standard.string(forKey: "TestTradukLingvoj") {
             for kodo in trapasaTradukLingvoj.split(separator: ",") {
-                if let trapasaLingvo = VortaroDatumbazo.komuna.lingvo(porKodo: String(kodo)) {
+                if let trapasaLingvo = VortaroDatumbazo.komuna.lingvo(kodo: String(kodo)) {
                     tradukLingvoj.insert(trapasaLingvo)
                 }
             }

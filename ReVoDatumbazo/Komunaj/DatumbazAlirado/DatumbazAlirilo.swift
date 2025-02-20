@@ -12,7 +12,7 @@ final class DatumbazAlirilo {
 	// MARK: - Kolektojn de ĉiuj datumbazeroj de certa speco
 	
 	/// Ĉiuj lingvoj
-	lazy var chiujLingvoj: [NSManagedObject] = {
+	func chiujLingvoj() -> [NSManagedObject] {
 		let serchPeto = NSFetchRequest<NSFetchRequestResult>()
 		serchPeto.entity = NSEntityDescription.entity(forEntityName: "Lingvo", in: konteksto)
 		
@@ -21,10 +21,10 @@ final class DatumbazAlirilo {
 		} catch {
 			return []
 		}
-	}()
+	}
 	
 	/// Ĉiuj fakoj
-	lazy var chiujFakoj: [NSManagedObject] = {
+	func chiujFakoj() -> [NSManagedObject] {
 		let serchPeto = NSFetchRequest<NSFetchRequestResult>()
 		serchPeto.entity = NSEntityDescription.entity(forEntityName: "Fako", in: konteksto)
 		do {
@@ -34,10 +34,10 @@ final class DatumbazAlirilo {
 		} catch { }
 		
 		return []
-	}()
+	}
 	
 	/// Ĉiuj oficialecoj
-	lazy var chiujOficialecoj: [NSManagedObject] = {
+	func chiujOficialecoj() -> [NSManagedObject] {
 		let serchPeto = NSFetchRequest<NSFetchRequestResult>()
 		serchPeto.entity = NSEntityDescription.entity(forEntityName: "Oficialeco", in: konteksto)
 		
@@ -46,7 +46,7 @@ final class DatumbazAlirilo {
 		} catch {
 			return []
 		}
-	}()
+	}
 	
     // MARK: - Vortlistaj destinoj
     

@@ -14,7 +14,7 @@ final class FakoListoTableViewController: BazStilaTableViewController {
     
     private static let chelIdent = "FakojChelIdent"
     
-    private let fakoj = VortaroDatumbazo.komuna.chiujFakoj()
+    private let fakoj = VortaroDatumbazo.komuna.chiujFakoj
     
     override func viewDidLoad() {
         super.viewDidLoad()

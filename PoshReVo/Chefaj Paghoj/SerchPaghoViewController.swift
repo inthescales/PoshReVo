@@ -23,8 +23,8 @@ class SerchPaghoViewController : UIViewController, Chefpagho, Stilplena {
     @IBOutlet var trovTabelo: UITableView?
     var lastaSercho: (Lingvo, String)? = nil
     var serchStato: SerchStato?
-    var serchRezultoj: [(String, [Destino])] {
-        return serchStato?.rezultoj ?? [(String, [Destino])]()
+    var serchRezultoj: [SerchRezulto] {
+        return serchStato?.rezultoj ?? [SerchRezulto]()
     }
     
     init() {
@@ -232,12 +232,12 @@ extension SerchPaghoViewController : UITableViewDelegate, UITableViewDataSource 
         
         novaChelo.backgroundColor = UzantDatumaro.stilo.bazKoloro
         novaChelo.textLabel?.textColor = UzantDatumaro.stilo.tekstKoloro
-        novaChelo.textLabel?.text = serchRezultoj[indexPath.row].0
+        novaChelo.textLabel?.text = serchRezultoj[indexPath.row].teksto
         novaChelo.isAccessibilityElement = true
         novaChelo.accessibilityLabel = novaChelo.textLabel?.text
 
         if UzantDatumaro.serchLingvo != Lingvo.esperanto {
-            novaChelo.detailTextLabel?.text = tekstoPorDestinoj(destinoj: serchRezultoj[indexPath.row].1)
+            novaChelo.detailTextLabel?.text = tekstoPorDestinoj(destinoj: serchRezultoj[indexPath.row].destinoj)
         }
         
         if indexPath.row > serchRezultoj.count - 5 {
@@ -249,19 +249,19 @@ extension SerchPaghoViewController : UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-		let destinoj = serchRezultoj[indexPath.row].1
+		let destinoj = serchRezultoj[indexPath.row].destinoj
 		if destinoj.count == 1 {
-            if let destino = serchRezultoj[indexPath.row].1.first,
+            if let destino = destinoj.first,
 			   let artikolo = VortaroDatumbazo.komuna.artikolo(de: destino) {
                 parent?.navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("serchi baza titolo", comment: ""), style: .plain, target: nil, action: nil)
-                if let marko = serchRezultoj[indexPath.row].1.first?.marko, !marko.isEmpty {
+                if let marko = destino.marko, !marko.isEmpty {
                     (self.navigationController as? ChefaNavigationController)?.montriArtikolon(artikolo, marko: marko)
                 } else {
                     (self.navigationController as? ChefaNavigationController)?.montriArtikolon(artikolo)
                 }
             }
 		} else if destinoj.count > 1 {
-            let disigilo = VortoDisigiloViewController(endestinoj: serchRezultoj[indexPath.row].1)
+            let disigilo = VortoDisigiloViewController(endestinoj: destinoj)
             navigationController?.pushViewController(disigilo, animated: true)
         }
         
