@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PoshReVo2.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:/Users/robin/Development/PoshReVo/PoshReVo.xcodeproj">
    </FileRef>
    <FileRef
