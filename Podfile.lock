@@ -1,24 +1,28 @@
 PODS:
   - iOS-Slide-Menu (1.5)
+  - SnapKit (5.7.1)
   - SnapshotTesting (1.8.2)
   - TTTAttributedLabel (2.0.0)
 
 DEPENDENCIES:
   - iOS-Slide-Menu (= 1.5)
+  - SnapKit (~> 5.7.0)
   - SnapshotTesting (~> 1.8.1)
   - TTTAttributedLabel (= 2.0.0)
 
 SPEC REPOS:
   trunk:
     - iOS-Slide-Menu
+    - SnapKit
     - SnapshotTesting
     - TTTAttributedLabel
 
 SPEC CHECKSUMS:
   iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: 8a289de9d45065dca0b737d1718fdfa4988343a4
+PODFILE CHECKSUM: 7afdd4687e7f7386d0ab7a030ab765b9c66d1175
 
 COCOAPODS: 1.15.2

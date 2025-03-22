@@ -12,6 +12,7 @@
 		000DA6EF2D8F33740026CBA0 /* ReVoDatumbazo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */; };
 		000DA6F02D8F33740026CBA0 /* ReVoDatumbazo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		000DA6F52D8F35FE0026CBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */; };
+		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,9 @@
 		000DA6EB2D8F32360026CBA0 /* ProvaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvaViewController.swift; sourceTree = "<group>"; };
 		000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoDatumbazo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
+		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				000DA6EF2D8F33740026CBA0 /* ReVoDatumbazo.framework in Frameworks */,
+				DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,7 @@
 				000DA6D62D8F31CF0026CBA0 /* PoshReVo2 */,
 				000DA6D52D8F31CF0026CBA0 /* Products */,
 				000DA6ED2D8F33740026CBA0 /* Frameworks */,
+				90F3C80E6330F4395B924C94 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,8 +85,18 @@
 			isa = PBXGroup;
 			children = (
 				000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */,
+				136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90F3C80E6330F4395B924C94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */,
+				A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,10 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 000DA6E22D8F31D10026CBA0 /* Build configuration list for PBXNativeTarget "PoshReVo2" */;
 			buildPhases = (
+				17D2CA4DB9F876E8E22E58A2 /* [CP] Check Pods Manifest.lock */,
 				000DA6D02D8F31CF0026CBA0 /* Sources */,
 				000DA6D12D8F31CF0026CBA0 /* Frameworks */,
 				000DA6D22D8F31CF0026CBA0 /* Resources */,
 				000DA6F12D8F33740026CBA0 /* Embed Frameworks */,
+				BA1C72EEFEC023138B6C98B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17D2CA4DB9F876E8E22E58A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoshReVo2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA1C72EEFEC023138B6C98B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		000DA6D02D8F31CF0026CBA0 /* Sources */ = {
@@ -283,6 +343,7 @@
 		};
 		000DA6E32D8F31D10026CBA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,6 +352,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PoshReVo2/Assets.xcassets\"";
 				DEVELOPMENT_TEAM = JZ3WYZWA8F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "PoŝReVo";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
@@ -316,6 +378,7 @@
 		};
 		000DA6E42D8F31D10026CBA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,6 +387,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PoshReVo2/Assets.xcassets\"";
 				DEVELOPMENT_TEAM = JZ3WYZWA8F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "PoŝReVo";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";

@@ -9,6 +9,12 @@ target 'PoshReVo' do
   pod 'TTTAttributedLabel', '= 2.0.0'
 end
 
+target 'PoshReVo2' do
+  platform :ios, "12.0"
+  project 'PoshReVo2'
+  pod 'SnapKit', '~> 5.7.0'
+end
+
 target 'DatumbazFariloTestoj' do
   platform :macos, "14.5"
   project 'ReVoDatumbazo/ReVoDatumbazo'

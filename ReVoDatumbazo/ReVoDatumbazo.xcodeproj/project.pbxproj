@@ -269,6 +269,7 @@
 		00B297552D662E0500264431 /* Oficialeco+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F784624F1B47400F918C9 /* Oficialeco+Datumbazo.swift */; };
 		00B297572D662E6700264431 /* Oficialeco+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F784624F1B47400F918C9 /* Oficialeco+Datumbazo.swift */; };
 		00EEB7D02D6630A8002AA05E /* Artikolo+Printado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC162D65058C0033EC11 /* Artikolo+Printado.swift */; };
+		C822822A21E90FC9EA2D64E0 /* Pods_DatumbazFariloTestoj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -476,6 +477,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C822822A21E90FC9EA2D64E0 /* Pods_DatumbazFariloTestoj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
