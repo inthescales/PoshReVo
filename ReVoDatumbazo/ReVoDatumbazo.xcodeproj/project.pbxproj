@@ -10,6 +10,9 @@
 		000DA6C22D8DD3E00026CBA0 /* ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6C12D8DD3E00026CBA0 /* ReVoDatumbazo.swift */; };
 		000DA6C32D8DD3E00026CBA0 /* ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6C12D8DD3E00026CBA0 /* ReVoDatumbazo.swift */; };
 		000DA6C42D8DD3E00026CBA0 /* ReVoDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6C12D8DD3E00026CBA0 /* ReVoDatumbazo.swift */; };
+		000DA6C72D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6C52D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld */; };
+		000DA6C82D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6C52D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld */; };
+		000DA6C92D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6C52D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld */; };
 		000F784724F1B47400F918C9 /* Oficialeco+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F784624F1B47400F918C9 /* Oficialeco+Datumbazo.swift */; };
 		0027816724B7CE7300DFD71F /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
 		003657142309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657132309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift */; };
@@ -17,7 +20,6 @@
 		0036571A2309DB740028C21F /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		0049B21624B0E67000B81E15 /* SerchStato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21524B0E67000B81E15 /* SerchStato.swift */; };
 		0049B22124B154F000B81E15 /* PrefiksArboIteraciilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B22024B154F000B81E15 /* PrefiksArboIteraciilo.swift */; };
-		0051A6D02309A3690034DFF9 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
 		007983722D67C6B60021FD4C /* SerchRezulto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007983712D67C6B60021FD4C /* SerchRezulto.swift */; };
 		0099FC252D65058C0033EC11 /* PrefiksArboFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */; };
 		0099FC262D65058C0033EC11 /* VortListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCE2D65058B0033EC11 /* VortListoj.swift */; };
@@ -238,8 +240,6 @@
 		00B297252D654FC400264431 /* Artikolo+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+Datumbazo.swift */; };
 		00B297262D654FCF00264431 /* Lingvo+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5E24AFE34B00EA9DCF /* Lingvo+Datumbazo.swift */; };
 		00B297282D654FE200264431 /* Fako+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A6324AFF19D00EA9DCF /* Fako+Datumbazo.swift */; };
-		00B2972A2D6550D200264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
-		00B2972B2D6550D300264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */; };
 		00B2972C2D65517100264431 /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
 		00B2972E2D65534600264431 /* Stilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2972D2D65534600264431 /* Stilo.swift */; };
 		00B297322D6556EF00264431 /* Mallongigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B297312D6556EF00264431 /* Mallongigo.swift */; };
@@ -295,6 +295,7 @@
 
 /* Begin PBXFileReference section */
 		000DA6C12D8DD3E00026CBA0 /* ReVoDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReVoDatumbazo.swift; sourceTree = "<group>"; };
+		000DA6C62D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PoshReVoDatumoj.xcdatamodel; sourceTree = "<group>"; };
 		000F784624F1B47400F918C9 /* Oficialeco+Datumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Oficialeco+Datumbazo.swift"; sourceTree = "<group>"; };
 		0027816624B7CE7300DFD71F /* Destino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destino.swift; sourceTree = "<group>"; };
 		003657132309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DatumbazAlirilo+PrefiksArbo.swift"; sourceTree = "<group>"; };
@@ -305,7 +306,6 @@
 		0049B22B24B1622A00B81E15 /* ReVoModeloj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModeloj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0051A6BF2309A2F90034DFF9 /* ReVoDatumbazo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReVoDatumbazo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0051A6C32309A2F90034DFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0051A6CE2309A3630034DFF9 /* PReVoDatumoj.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PReVoDatumoj.xcdatamodel; sourceTree = "<group>"; };
 		005270EC24E9A9E2009E17AA /* ReVoModelojOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModelojOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		007983712D67C6B60021FD4C /* SerchRezulto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchRezulto.swift; sourceTree = "<group>"; };
 		0099FBC52D6505330033EC11 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -488,7 +488,7 @@
 				0049B21424B0E66400B81E15 /* Modeloj */,
 				00C7B30B2461E8090084CC8F /* DatumbazAlirado */,
 				000DA6C12D8DD3E00026CBA0 /* ReVoDatumbazo.swift */,
-				0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */,
+				000DA6C52D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld */,
 			);
 			path = Komunaj;
 			sourceTree = "<group>";
@@ -1079,12 +1079,12 @@
 			files = (
 				00B297472D6625A300264431 /* Vorto.swift in Sources */,
 				003657172309CE250028C21F /* VortaroDatumbazo.swift in Sources */,
+				000DA6C72D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				000F784724F1B47400F918C9 /* Oficialeco+Datumbazo.swift in Sources */,
 				00A47A5B24AFDFEB00EA9DCF /* Artikolo+Datumbazo.swift in Sources */,
 				0027816724B7CE7300DFD71F /* Destino.swift in Sources */,
 				00A47A6424AFF19D00EA9DCF /* Fako+Datumbazo.swift in Sources */,
 				0049B22124B154F000B81E15 /* PrefiksArboIteraciilo.swift in Sources */,
-				0051A6D02309A3690034DFF9 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				00A47A5F24AFE34B00EA9DCF /* Lingvo+Datumbazo.swift in Sources */,
 				00B2974D2D6625A300264431 /* Lingvo.swift in Sources */,
 				00B297412D6625A300264431 /* Subartikolo.swift in Sources */,
@@ -1104,7 +1104,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B2972A2D6550D200264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				0099FC562D65058C0033EC11 /* TraktiSencReferencon.swift in Sources */,
 				0099FC632D65058C0033EC11 /* Antautraktado.swift in Sources */,
 				0099FC542D65058C0033EC11 /* TraktiRimarkon.swift in Sources */,
@@ -1187,6 +1186,7 @@
 				0099FC252D65058C0033EC11 /* PrefiksArboFarilo.swift in Sources */,
 				0099FC702D65058C0033EC11 /* SignoAnalizilo.swift in Sources */,
 				0099FC652D65058C0033EC11 /* ArtikolAnalizilo.swift in Sources */,
+				000DA6C82D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				0099FC372D65058C0033EC11 /* Stato.swift in Sources */,
 				0099FC282D65058C0033EC11 /* TekstFarilo.swift in Sources */,
 				0099FC5C2D65058C0033EC11 /* TraktiTradukon.swift in Sources */,
@@ -1206,7 +1206,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B2972B2D6550D300264431 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				0099FCB82D6506580033EC11 /* TestDatumoj.swift in Sources */,
 				0099FD242D6506940033EC11 /* NodTipo.swift in Sources */,
 				0099FD252D6506940033EC11 /* ArtikolTraduko.swift in Sources */,
@@ -1242,6 +1241,7 @@
 				0099FD392D6506A30033EC11 /* Oficialecoj.swift in Sources */,
 				0099FD3A2D6506A30033EC11 /* StiloAnalizilo.swift in Sources */,
 				00B297402D6625A300264431 /* Artikolo.swift in Sources */,
+				000DA6C92D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				0099FCFB2D65068E0033EC11 /* TraktiReferencon.swift in Sources */,
 				0099FD2D2D6506980033EC11 /* ArtikolFabriko.swift in Sources */,
 				0099FD2E2D6506980033EC11 /* SubartikoloFabriko.swift in Sources */,
@@ -1622,13 +1622,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0051A6CD2309A3630034DFF9 /* PoshReVoDatumoj.xcdatamodeld */ = {
+		000DA6C52D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0051A6CE2309A3630034DFF9 /* PReVoDatumoj.xcdatamodel */,
+				000DA6C62D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodel */,
 			);
-			currentVersion = 0051A6CE2309A3630034DFF9 /* PReVoDatumoj.xcdatamodel */;
-			path = PoshReVoDatumoj.xcdatamodeld;
+			currentVersion = 000DA6C62D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodel */;
+			name = PoshReVoDatumoj.xcdatamodeld;
+			path = /Users/robin/Development/PoshReVo/ReVoDatumbazo/Komunaj/PoshReVoDatumoj.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
