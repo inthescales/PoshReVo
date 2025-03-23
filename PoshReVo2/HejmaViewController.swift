@@ -2,7 +2,7 @@ import UIKit
 
 import SnapKit
 
-final class ProvaViewController: UIViewController {
+final class HejmaViewController: UIViewController {
 	lazy var label = {
 		let nova = UILabel()
 		nova.text = "Saluton, mondo"

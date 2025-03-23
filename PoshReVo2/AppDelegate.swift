@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Stiloj.efektivigiStilon(UzantDatumaro.stilo)
 		
 		fenestro = UIWindow(frame: UIScreen.main.bounds)
-		fenestro?.rootViewController = ProvaViewController()
+		fenestro?.rootViewController = HejmaViewController()
 		fenestro?.makeKeyAndVisible()
 				
 		return true
