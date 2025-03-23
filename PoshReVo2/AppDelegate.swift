@@ -20,10 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	) -> Bool {
 		// VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
 		// UzantDatumaro.starigi()
-		// Stiloj.efektivigiStilon(UzantDatumaro.stilo)
+		
+		let navigaciilo = ChefaNavigationController(rootViewController: HejmaViewController())
 		
 		fenestro = UIWindow(frame: UIScreen.main.bounds)
-		fenestro?.rootViewController = HejmaViewController()
+		fenestro?.rootViewController = navigaciilo
 		fenestro?.makeKeyAndVisible()
 				
 		return true

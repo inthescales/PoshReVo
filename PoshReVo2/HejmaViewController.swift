@@ -5,14 +5,7 @@ import SnapKit
 final class HejmaViewController: UIViewController {
 	let stilo: InterfacStilo
 	
-	lazy var label = {
-		let nova = UILabel()
-		nova.text = "Saluton, mondo"
-		nova.translatesAutoresizingMaskIntoConstraints = false
-		nova.textColor = InterfacStilo.nuna.teksto
-		
-		return nova
-	}()
+	lazy var serchilo = SerchiloView(lokokupaTeksto: "Serĉi vorton aŭ frazon")
 	
 	init(stilo: InterfacStilo = .nuna) {
 		self.stilo = stilo
@@ -20,14 +13,14 @@ final class HejmaViewController: UIViewController {
 		super.init(nibName: nil, bundle: nil)
 	}
 	
-	required init?(coder: NSCoder) { fatalError() }
+	required init?(coder: NSCoder) { fatalError("init(coder:) ne realas") }
 	
 	override func viewDidLoad() {
-		view.addSubview(label)
 		view.backgroundColor = InterfacStilo.nuna.koloraFono
 		
-		label.snp.makeConstraints { make in
-			make.center.equalTo(view)
+		view.addSubview(serchilo)
+		serchilo.snp.makeConstraints { make in
+			make.top.left.right.equalTo(view)
 		}
 	}
 }
