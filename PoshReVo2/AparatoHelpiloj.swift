@@ -12,6 +12,24 @@ enum Orientigho {
 	case horizontala
 }
 
+enum Stilo {
+	case hela
+	case malhela
+	
+	static func el(trajtaro: UITraitCollection) -> Stilo {
+		switch trajtaro.userInterfaceStyle {
+		case .light:
+			return .hela
+		case .dark:
+			return .malhela
+		default:
+			// Ĉi tio espereble neniam okazos
+			assert(false, "Nekonata stilo")
+			return .hela
+		}
+	}
+}
+
 /// Helpiloj je la uzata aparato
 enum Aparato {
 	/// Klaso de la uzata aparato
@@ -23,7 +41,7 @@ enum Aparato {
 			return .iPado
 		default:
 			// Ĉi tio espereble neniam okazos
-			assert(false, "Nokonata aparat-klaso")
+			assert(false, "Nekonata aparat-klaso")
 			return .iFono
 		}
 	}
@@ -37,7 +55,7 @@ enum Aparato {
 			return .horizontala
 		default:
 			// Ĉi tio espereble neniam okazos
-			assert(false, "Nokonata aparat-klaso")
+			assert(false, "Nekonata orientiĝo")
 			return .vertikala
 		}
 	}
@@ -55,5 +73,9 @@ enum Aparato {
 				return 0.6
 			}
 		}
+	}
+	
+	static var stilo: Stilo {
+		Stilo.el(trajtaro: UITraitCollection.current)
 	}
 }

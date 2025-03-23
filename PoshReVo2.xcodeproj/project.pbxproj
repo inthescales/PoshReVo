@@ -13,6 +13,7 @@
 		000DA6F02D8F33740026CBA0 /* ReVoDatumbazo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		000DA6F52D8F35FE0026CBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */; };
 		000DA6F72D9068660026CBA0 /* AparatoHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6F62D9068660026CBA0 /* AparatoHelpiloj.swift */; };
+		000DA6F92D906C6E0026CBA0 /* Stilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6F82D906C6E0026CBA0 /* Stilo.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoDatumbazo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		000DA6F62D9068660026CBA0 /* AparatoHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatoHelpiloj.swift; sourceTree = "<group>"; };
+		000DA6F82D906C6E0026CBA0 /* Stilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stilo.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */,
 				000DA6EB2D8F32360026CBA0 /* HejmaViewController.swift */,
 				000DA6F62D9068660026CBA0 /* AparatoHelpiloj.swift */,
+				000DA6F82D906C6E0026CBA0 /* Stilo.swift */,
 				000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */,
 			);
 			path = PoshReVo2;
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				000DA6D82D8F31CF0026CBA0 /* AppDelegate.swift in Sources */,
+				000DA6F92D906C6E0026CBA0 /* Stilo.swift in Sources */,
 				000DA6F72D9068660026CBA0 /* AparatoHelpiloj.swift in Sources */,
 				000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */,
 			);
@@ -366,7 +370,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,7 +405,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
