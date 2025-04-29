@@ -30,10 +30,17 @@ enum Stilo {
 	}
 }
 
-/// Helpiloj je la uzata aparato
-enum Aparato {
+/// Havigas informojn pri la aparato, ekrano, ktp
+protocol AparatInformo {
+	var aparatKlaso: AparatKlaso { get }
+	var orientigho: Orientigho { get }
+	var stilo: Stilo { get }
+}
+
+/// AparatInformo kiu provizas informojn pri la nuna aparato
+class NunaAparato: AparatInformo {
 	/// Klaso de la uzata aparato
-	static var aparatKlaso: AparatKlaso {
+	var aparatKlaso: AparatKlaso {
 		switch UIDevice.current.userInterfaceIdiom {
 		case .phone:
 			return .iFono
@@ -47,7 +54,7 @@ enum Aparato {
 	}
 	
 	/// Nuna orientiĝo de la ekrano
-	static var orientigho: Orientigho {
+	var orientigho: Orientigho {
 		switch UIDevice.current.orientation {
 		case .portrait, .portraitUpsideDown:
 			return .vertikala
@@ -61,7 +68,7 @@ enum Aparato {
 	}
 	
 	/// Porcio de la tuta larĝo de la ekrano kiu estu uzata
-	static var larghoPorcio: Double {
+	var larghoPorcio: Double {
 		switch aparatKlaso {
 		case .iFono:
 			return 1.0
@@ -75,7 +82,7 @@ enum Aparato {
 		}
 	}
 	
-	static var stilo: Stilo {
+	var stilo: Stilo {
 		Stilo.el(trajtaro: UITraitCollection.current)
 	}
 }
