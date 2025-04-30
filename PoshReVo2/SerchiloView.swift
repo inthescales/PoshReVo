@@ -1,8 +1,6 @@
 import UIKit
 
 final class SerchiloView: UIView {
-	private let lokokupaTeksto: String
-	
 	private lazy var staplo: UIStackView = {
 		let staplo = UIStackView(arrangedSubviews: [serchilo])
 		staplo.axis = .vertical
@@ -11,6 +9,7 @@ final class SerchiloView: UIView {
 	
 	private lazy var serchilo: UISearchBar = {
 		let serchilo = UISearchBar()
+		serchilo.delegate = self
 		serchilo.placeholder = lokokupaTeksto
 		serchilo.searchTextField.backgroundColor = InterfacStilo.nuna.senkoloraFono
 		
@@ -34,8 +33,25 @@ final class SerchiloView: UIView {
 		return serchilo
 	}()
 	
-	init(lokokupaTeksto: String) {
+	// Agordoj
+	
+	/// Lokokupa teksto kiu aperos en la serĉtabulo se uzanto jam ne tajpis
+	private let lokokupaTeksto: String
+	
+	/// Ĉu 'x'-klako aldonu ĉaplon aŭ hokon
+	private let iksumi: Bool
+	
+	/// Vokotas kiam teksto ŝanĝiĝos
+	private let tekstoShanghighis: (String) -> ()
+	
+	init(
+		lokokupaTeksto: String,
+		iksumi: Bool,
+		tekstoShanghighis: @escaping (String) -> ()
+	) {
 		self.lokokupaTeksto = lokokupaTeksto
+		self.iksumi = iksumi
+		self.tekstoShanghighis = tekstoShanghighis
 		super.init(frame: .zero)
 		
 		addSubview(staplo)
@@ -45,4 +61,33 @@ final class SerchiloView: UIView {
 	}
 	
 	required init?(coder: NSCoder) { fatalError("init(coder:) ne realas") }
+}
+
+extension SerchiloView: UISearchBarDelegate {
+	func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+		guard let teksto = searchBar.text else {
+			return true
+		}
+		
+		// Aldoni ĉapelojn
+		if iksumi
+			&& text == "x"
+			&& teksto.count > 0 {
+			if let iksumita = tekstHelpiloj.iksumiFinan(teksto) {
+				searchBar.text = iksumita
+				self.searchBar(searchBar, textDidChange: iksumita)
+				return false
+			}
+		}
+		
+		return true
+	}
+	
+	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		tekstoShanghighis(searchText)
+	}
+	
+	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+		searchBar.resignFirstResponder()
+	}
 }

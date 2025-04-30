@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
 		// UzantDatumaro.starigi()
 		
-		let navigaciilo = ChefaNavigationController(rootViewController: HejmaViewController())
+		let vc = LingvoElektiloViewController()
+		let navigaciilo = ChefaNavigationController(rootViewController: vc)
 		
 		fenestro = UIWindow(frame: UIScreen.main.bounds)
 		fenestro?.rootViewController = navigaciilo

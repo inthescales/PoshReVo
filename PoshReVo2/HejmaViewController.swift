@@ -5,22 +5,25 @@ import SnapKit
 final class HejmaViewController: UIViewController {
 	var stilo: InterfacStilo
 	
-	lazy var serchilo = SerchiloView(lokokupaTeksto: "Serĉi vorton aŭ frazon")
+	lazy var serchButono: SurkoloraButton = {
+		return SurkoloraButton(teksto: Tekstoj.serchi)
+	}()
 	
 	lazy var esplorButono: SurkoloraButton = {
-		return SurkoloraButton(teksto: "Esplori")
+		return SurkoloraButton(teksto: Tekstoj.esplori)
 	}()
 	
 	lazy var konservitajButono: SurkoloraButton = {
-		return SurkoloraButton(teksto: "Konservitaj")
+		return SurkoloraButton(teksto: Tekstoj.konservitaj)
 	}()
 	
 	lazy var historioButono: SurkoloraButton = {
-		return SurkoloraButton(teksto: "Historio")
+		return SurkoloraButton(teksto: Tekstoj.historio)
 	}()
 	
 	lazy var butonStaplo: UIStackView = {
 		let staplo = UIStackView(arrangedSubviews: [
+			serchButono,
 			esplorButono,
 			konservitajButono,
 			historioButono
@@ -41,15 +44,9 @@ final class HejmaViewController: UIViewController {
 	override func viewDidLoad() {
 		view.backgroundColor = stilo.koloraFono
 		
-		view.addSubview(serchilo)
-		serchilo.snp.makeConstraints { make in
-			make.top.left.right.equalTo(view)
-		}
-		
 		view.addSubview(butonStaplo)
 		butonStaplo.snp.makeConstraints { make in
 			make.center.equalTo(view)
-			make.top.greaterThanOrEqualTo(serchilo)
 		}
 	}
 }

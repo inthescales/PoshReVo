@@ -46,7 +46,7 @@ extension VortoListoViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard indexPath.row < listeroj.count else {
-			fatalError("Chelo ne ekzistas")
+			fatalError("Listero ne ekzistas")
 		}
 		
 		let listero = listeroj[indexPath.row]
