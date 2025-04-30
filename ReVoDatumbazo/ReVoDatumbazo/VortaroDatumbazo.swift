@@ -20,6 +20,19 @@ public final class VortaroDatumbazo {
 		}
 	}()
 	
+	/// Ĉiuj lingvoj krom Esperanto
+	public lazy var neesperantajLingvoj: [Lingvo] = {
+		alirilo.chiujLingvoj().compactMap { objekto in
+			Lingvo.el(objekto)
+		}
+		.filter { lingvo in
+			lingvo.kodo != "eo"
+		}
+		.sorted { (lhs, rhs) -> Bool in
+			return lhs < rhs
+		}
+	}()
+	
 	/// Ĉiuj Fakoj
 	public lazy var chiujFakoj: [Fako] = {
 		alirilo.chiujFakoj().compactMap { objekto in

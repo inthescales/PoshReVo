@@ -24,6 +24,8 @@
 		00B27B112DC264A100526F82 /* Tekstoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B102DC264A100526F82 /* Tekstoj.swift */; };
 		00B27B132DC2650800526F82 /* LingvoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B122DC2650800526F82 /* LingvoListoViewController.swift */; };
 		00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B142DC2682200526F82 /* TekstHelpiloj.swift */; };
+		00B27B172DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */; };
+		00B27B1A2DC2802700526F82 /* PoshReVoDatumbazo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 00B27B192DC2802700526F82 /* PoshReVoDatumbazo.sqlite */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		00B27B102DC264A100526F82 /* Tekstoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tekstoj.swift; sourceTree = "<group>"; };
 		00B27B122DC2650800526F82 /* LingvoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoListoViewController.swift; sourceTree = "<group>"; };
 		00B27B142DC2682200526F82 /* TekstHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstHelpiloj.swift; sourceTree = "<group>"; };
+		00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VortaroDatumbazo+Komuna.swift"; sourceTree = "<group>"; };
+		00B27B192DC2802700526F82 /* PoshReVoDatumbazo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoshReVoDatumbazo.sqlite; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,7 +116,8 @@
 				000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */,
 				00B27B102DC264A100526F82 /* Tekstoj.swift */,
 				00B27B142DC2682200526F82 /* TekstHelpiloj.swift */,
-				000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */,
+				00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */,
+				00B27B182DC2800500526F82 /* Risurcoj */,
 			);
 			path = PoshReVo2;
 			sourceTree = "<group>";
@@ -124,6 +129,15 @@
 				136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00B27B182DC2800500526F82 /* Risurcoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B192DC2802700526F82 /* PoshReVoDatumbazo.sqlite */,
+				000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */,
+			);
+			path = Risurcoj;
 			sourceTree = "<group>";
 		};
 		90F3C80E6330F4395B924C94 /* Pods */ = {
@@ -198,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				000DA6F52D8F35FE0026CBA0 /* Assets.xcassets in Resources */,
+				00B27B1A2DC2802700526F82 /* PoshReVoDatumbazo.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +278,7 @@
 				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* AranghHelpiloj.swift in Sources */,
 				000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */,
+				00B27B172DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift in Sources */,
 				000DA6FD2D908F680026CBA0 /* ChefaNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PoshReVo2/Assets.xcassets\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PoshReVo2/Risurcoj/Assets.xcassets\"";
 				DEVELOPMENT_TEAM = JZ3WYZWA8F;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -432,7 +448,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PoshReVo2/Assets.xcassets\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PoshReVo2/Risurcoj/Assets.xcassets\"";
 				DEVELOPMENT_TEAM = JZ3WYZWA8F;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;

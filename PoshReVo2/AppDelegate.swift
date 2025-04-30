@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		_ application: UIApplication,
 		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 	) -> Bool {
-		// VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
+		VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
 		// UzantDatumaro.starigi()
 		
-		let vc = LingvoElektiloViewController()
+		let vc = LingvoElektiloViewController(elektisLingvon: { lingvo in })
 		let navigaciilo = ChefaNavigationController(rootViewController: vc)
 		
 		fenestro = UIWindow(frame: UIScreen.main.bounds)
