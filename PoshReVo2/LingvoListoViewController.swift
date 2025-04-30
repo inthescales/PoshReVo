@@ -4,15 +4,22 @@ import ReVoDatumbazo
 
 /// Reprezentas iun ajn ekranon kiu prezentas liston da vortoj. Ekz. serĉrezultoj, fakvortoj, ktp.
 final class LingvoListoViewController: UIViewController {
-	lazy var tabelo: UITableView = {
+	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
 		tabelo.delegate = self
 		tabelo.dataSource = self
 		return tabelo
 	}()
 	
-	let lingvoj: [Lingvo]
-	let elektisLingvon: (Lingvo) -> ()
+	// MARK: Stato
+	
+	private var lingvoj: [Lingvo]
+	
+	// MARK: Agordoj
+	
+	private let elektisLingvon: (Lingvo) -> ()
+	
+	//
 	
 	init(lingvoj: [Lingvo], elektisLingvon: @escaping (Lingvo) -> ()) {
 		self.lingvoj = lingvoj
@@ -26,6 +33,13 @@ final class LingvoListoViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		view.addEdgeMatchedSubview(tabelo)
+	}
+	
+	// MARK: Agordado
+	
+	func montri(lingvojn lingvoj: [Lingvo]) {
+		self.lingvoj = lingvoj
+		tabelo.reloadData()
 	}
 }
 
@@ -56,6 +70,4 @@ extension LingvoListoViewController: UITableViewDataSource {
 		novaChelo.textLabel?.text = lingvo.nomo
 		return novaChelo
 	}
-	
-	
 }

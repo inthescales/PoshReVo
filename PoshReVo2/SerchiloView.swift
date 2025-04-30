@@ -84,6 +84,10 @@ extension SerchiloView: UISearchBarDelegate {
 	}
 	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		searchBar.text = searchBar.text?.lowercased()
+		
+		// TODO: Provu japanajn tekstojn, ĉar io speciala necesis en v1
+		
 		tekstoShanghighis(searchText)
 	}
 	

@@ -3,19 +3,17 @@ import UIKit
 import ReVoDatumbazo
 
 final class LingvoElektiloViewController: UIViewController {
-	let serchilo = SerchiloView(
+	lazy var serchilo = SerchiloView(
 		lokokupaTeksto: Tekstoj.serchiLingvon,
 		iksumi: true,
-		tekstoShanghighis: { teksto in }
+		tekstoShanghighis: { [weak self] teksto in
+			self?.filtriRezultojn(per: teksto)
+		}
 	)
 	
 	lazy var lingvoListoVC = {
-		let lingvoj = kromEsperanto
-			? VortaroDatumbazo.komuna.neesperantajLingvoj
-			: VortaroDatumbazo.komuna.chiujLingvoj
-
 		return LingvoListoViewController(
-			lingvoj: lingvoj,
+			lingvoj: montrotajLingvoj,
 			elektisLingvon: { [weak self] lingvo in
 				self?.dismiss(animated: true)
 				self?.elektisLingvon(lingvo)
@@ -23,16 +21,32 @@ final class LingvoElektiloViewController: UIViewController {
 		)
 	}()
 	
-	// Agordoj
+	// MARK: Stato
 
-	let kromEsperanto: Bool
+	var montrotajLingvoj: [Lingvo] {
+		didSet {
+			if oldValue != montrotajLingvoj {
+				lingvoListoVC.montri(lingvojn: montrotajLingvoj)
+			}
+		}
+	}
 	
+	// MARK: Agordoj
+
+	/// La tuto de elekteblaj lingvoj
+	let lingvaro: [Lingvo]
+	
+	/// Vokota kiam uzanto elektos lingvon
 	let elektisLingvon: (Lingvo) -> ()
 	
 	//
 	
 	init(kromEsperanto: Bool = false, elektisLingvon: @escaping (Lingvo) -> ()) {
-		self.kromEsperanto = kromEsperanto
+		lingvaro = kromEsperanto
+			? VortaroDatumbazo.komuna.neesperantajLingvoj
+			: VortaroDatumbazo.komuna.chiujLingvoj
+		montrotajLingvoj = lingvaro
+		
 		self.elektisLingvon = elektisLingvon
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -52,6 +66,19 @@ final class LingvoElektiloViewController: UIViewController {
 		lingvoListoVC.view.snp.makeConstraints { make in
 			make.left.right.bottom.equalToSuperview()
 			make.top.equalTo(serchilo.snp.bottom)
+		}
+	}
+	
+	// MARK: Serĉa Filtrado
+	
+	private func filtriRezultojn(per serchTeksto: String) {
+		guard !serchTeksto.isEmpty else {
+			montrotajLingvoj = lingvaro
+			return
+		}
+		
+		montrotajLingvoj = lingvaro.filter { lingvo in
+			lingvo.nomo.lowercased().hasPrefix(serchTeksto.lowercased())
 		}
 	}
 }
