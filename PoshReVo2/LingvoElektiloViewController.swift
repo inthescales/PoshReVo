@@ -39,15 +39,22 @@ final class LingvoElektiloViewController: UIViewController {
 	/// Vokota kiam uzanto elektos lingvon
 	let elektisLingvon: (Lingvo) -> ()
 	
+	var stilo: InterfacStilo
+	
 	//
 	
-	init(kromEsperanto: Bool = false, elektisLingvon: @escaping (Lingvo) -> ()) {
+	init(
+		kromEsperanto: Bool = false,
+		elektisLingvon: @escaping (Lingvo) -> (),
+		stilo: InterfacStilo = .nuna
+	) {
 		lingvaro = kromEsperanto
 			? VortaroDatumbazo.komuna.neesperantajLingvoj
 			: VortaroDatumbazo.komuna.chiujLingvoj
 		montrotajLingvoj = lingvaro
 		
 		self.elektisLingvon = elektisLingvon
+		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -56,6 +63,17 @@ final class LingvoElektiloViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
+		view.backgroundColor = stilo.koloraFono
+		
+		let iksoButono = UIBarButtonItem(
+			title: Tekstoj.rezigni,
+			style: .plain,
+			target: self,
+			action: #selector(Self.malaperi)
+		)
+		iksoButono.tintColor = stilo.navigaciilaTeksto
+		navigationItem.leftBarButtonItem = iksoButono
+		
 		view.addSubview(serchilo)
 		serchilo.snp.makeConstraints { make in
 			make.top.left.right.equalToSuperview()
@@ -67,6 +85,10 @@ final class LingvoElektiloViewController: UIViewController {
 			make.left.right.bottom.equalToSuperview()
 			make.top.equalTo(serchilo.snp.bottom)
 		}
+	}
+	
+	@objc private func malaperi() {
+		dismiss(animated: true)
 	}
 	
 	// MARK: Serĉa Filtrado

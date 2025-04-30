@@ -6,4 +6,10 @@ enum Tekstoj {
 	static let esplori = "Esplori"
 	static let konservitaj = "Konservitaj"
 	static let historio = "Historio"
+	
+	static let redakti = "Redakti"
+	static let aldoniLingvon = "Aldoni Lingvon"
+	static let lingvoj = "Lingvoj"
+	
+	static let rezigni = "Rezigni"
 }

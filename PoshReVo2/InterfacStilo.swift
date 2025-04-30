@@ -1,8 +1,8 @@
 import UIKit
 
 struct InterfacStilo {
-	var hela: Koloraro
-	var malhela: Koloraro
+	private var hela: Koloraro
+	private var malhela: Koloraro
 	
 	lazy var senkoloraFono = UIColor(hela: hela.senkoloraFono, malhela: malhela.senkoloraFono)
 	lazy var koloraFono = UIColor(hela: hela.koloraFono, malhela: malhela.koloraFono)
@@ -10,18 +10,22 @@ struct InterfacStilo {
 	lazy var teksto = UIColor(hela: hela.teksto, malhela: malhela.teksto)
 	lazy var surkoloraButono = UIColor(hela: hela.surkoloraButono, malhela: malhela.surkoloraButono)
 	
+	lazy var navigaciilaTeksto = UIColor(hela: hela.navigaciilaTeksto, malhela: malhela.navigaciilaTeksto)
+	
 	static let karamela = InterfacStilo(
 		hela: Koloraro(
 			senkoloraFono: .white,
 			koloraFono: .orange,
 			teksto: .black,
-			surkoloraButono: .white
+			surkoloraButono: .white,
+			navigaciilaTeksto: .white
 		),
 		malhela: Koloraro(
 			senkoloraFono: .black, 
 			koloraFono: .brown,
 			teksto: .white,
-			surkoloraButono: .black
+			surkoloraButono: .black,
+			navigaciilaTeksto: .white
 		)
 	)
 	
@@ -33,6 +37,7 @@ struct Koloraro {
 	var koloraFono: UIColor
 	var teksto: UIColor
 	var surkoloraButono: UIColor
+	var navigaciilaTeksto: UIColor
 }
 
 // Helpiloj
