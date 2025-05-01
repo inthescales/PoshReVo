@@ -185,6 +185,10 @@ extension LingvaroRedaktiloViewController: UITableViewDataSource {
 		return chelo
 	}
 	
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		cell.showsReorderControl = self.tableView(tabelo, canMoveRowAt: indexPath) && tableView.isEditing
+	}
+	
 	// MARK: Redaktado
 	
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -195,5 +199,15 @@ extension LingvaroRedaktiloViewController: UITableViewDataSource {
 		if editingStyle == .delete {
 			forigis(je: indexPath.row)
 		}
+	}
+	
+	func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+		return indexPath.section == 0
+	}
+	
+	func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+		let lingvo = lingvaro[sourceIndexPath.row]
+		lingvaro.remove(at: sourceIndexPath.row)
+		lingvaro.insert(lingvo, at: destinationIndexPath.row)
 	}
 }
