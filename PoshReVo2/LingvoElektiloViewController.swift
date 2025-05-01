@@ -14,6 +14,7 @@ final class LingvoElektiloViewController: UIViewController {
 	lazy var lingvoListoVC = {
 		return LingvoListoViewController(
 			lingvoj: montrotajLingvoj,
+			jamElektitaj: jamElektitaj,
 			elektisLingvon: { [weak self] lingvo in
 				self?.dismiss(animated: true)
 				self?.elektisLingvon(lingvo)
@@ -36,6 +37,9 @@ final class LingvoElektiloViewController: UIViewController {
 	/// La tuto de elekteblaj lingvoj
 	let lingvaro: [Lingvo]
 	
+	/// Lingvoj kiuj estas jam elektitaj, kaj estu neelekteblaj ĉi tie
+	let jamElektitaj: [Lingvo]
+	
 	/// Vokota kiam uzanto elektos lingvon
 	let elektisLingvon: (Lingvo) -> ()
 	
@@ -45,6 +49,7 @@ final class LingvoElektiloViewController: UIViewController {
 	
 	init(
 		kromEsperanto: Bool = false,
+		jamElektitaj: [Lingvo],
 		elektisLingvon: @escaping (Lingvo) -> (),
 		stilo: InterfacStilo = .nuna
 	) {
@@ -53,6 +58,7 @@ final class LingvoElektiloViewController: UIViewController {
 			: VortaroDatumbazo.komuna.chiujLingvoj
 		montrotajLingvoj = lingvaro
 		
+		self.jamElektitaj = jamElektitaj
 		self.elektisLingvon = elektisLingvon
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)

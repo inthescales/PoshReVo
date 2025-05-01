@@ -15,15 +15,26 @@ final class LingvoListoViewController: UIViewController {
 	
 	private var lingvoj: [Lingvo]
 	
+	private let jamElektitaj: [Lingvo]
+	
 	// MARK: Agordoj
 	
 	private let elektisLingvon: (Lingvo) -> ()
 	
+	private var stilo: InterfacStilo
+	
 	//
 	
-	init(lingvoj: [Lingvo], elektisLingvon: @escaping (Lingvo) -> ()) {
+	init(
+		lingvoj: [Lingvo],
+		jamElektitaj: [Lingvo],
+		elektisLingvon: @escaping (Lingvo) -> (),
+		stilo: InterfacStilo = .nuna
+	) {
 		self.lingvoj = lingvoj
+		self.jamElektitaj = jamElektitaj
 		self.elektisLingvon = elektisLingvon
+		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -68,6 +79,18 @@ extension LingvoListoViewController: UITableViewDataSource {
 		
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "vortoListo")
 		novaChelo.textLabel?.text = lingvo.nomo
+		novaChelo.accessoryType = jamElektitaj.contains(lingvo) ? .checkmark : .none
+		novaChelo.tintColor = stilo.koloraFono
+		
 		return novaChelo
+	}
+	
+	func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+		// Lingvoj jam elektitaj ne estu elekteblaj
+		if jamElektitaj.contains(lingvoj[indexPath.row]) {
+			return nil
+		}
+		
+		return indexPath
 	}
 }

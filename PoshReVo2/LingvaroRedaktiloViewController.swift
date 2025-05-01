@@ -123,6 +123,7 @@ extension LingvaroRedaktiloViewController: UITableViewDelegate {
 		if indexPath == IndexPath(row: 0, section: 1) {
 			let elektiloVC = LingvoElektiloViewController(
 				kromEsperanto: false,
+				jamElektitaj: lingvaro,
 				elektisLingvon: { [weak self] lingvo in
 					self?.aldonis(lingvon: lingvo)
 				}
