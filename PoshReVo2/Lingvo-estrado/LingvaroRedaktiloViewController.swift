@@ -4,7 +4,7 @@ import ReVoDatumbazo
 
 final class LingvaroRedaktiloViewController: UIViewController {
 	private enum Konstantoj {
-		static let minimumo = 0
+		static let minimumo = 1
 	}
 	
 	// MARK: Interfacaĵoj

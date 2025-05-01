@@ -7,6 +7,8 @@ enum Tekstoj {
 	static let konservitaj = "Konservitaj"
 	static let historio = "Historio"
 	
+	static let pli = "Pli"
+	
 	static let redakti = "Redakti"
 	static let aldoniLingvon = "Aldoni Lingvon"
 	static let viajLingvoj = "Viaj Lingvoj"
