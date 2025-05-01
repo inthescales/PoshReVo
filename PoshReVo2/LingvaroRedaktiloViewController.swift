@@ -3,7 +3,33 @@ import UIKit
 import ReVoDatumbazo
 
 final class LingvaroRedaktiloViewController: UIViewController {
+	private enum Konstantoj {
+		static let minimumo = 0
+	}
+	
 	// MARK: Interfacaĵoj
+	
+	lazy var iksoButono = {
+		let butono = UIBarButtonItem.init(
+			title: "IKSO",
+			style: .plain,
+			target: self,
+			action: #selector(Self.premisIkson)
+		)
+		butono.tintColor = stilo.navigaciilaTeksto
+		return butono
+	}()
+	
+	lazy var redaktButono = {
+		let butono = UIBarButtonItem.init(
+			title: Tekstoj.redakti,
+			style: .plain,
+			target: self,
+			action: #selector(Self.premisRedakti)
+		)
+		butono.tintColor = stilo.navigaciilaTeksto
+		return butono
+	}()
 	
 	lazy var tabelo: UITableView = {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
@@ -14,14 +40,21 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	
 	// MARK: Stato
 	
-	let lingvaro: [Lingvo]
+	var lingvaro: [Lingvo] {
+		didSet {
+			lingvaroShanghighis()
+		}
+	}
 	
 	// MARK: Agordoj
 	
 	var stilo: InterfacStilo
 	
-	init(lingvaro: [Lingvo], stilo: InterfacStilo = .nuna) {
+	let kompleti: ([Lingvo]) -> ()
+	
+	init(lingvaro: [Lingvo], kompleti: @escaping ([Lingvo]) -> (), stilo: InterfacStilo = .nuna) {
 		self.lingvaro = lingvaro
+		self.kompleti = kompleti
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -31,39 +64,67 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-		let redaktButono = UIBarButtonItem.init(
-			title: Tekstoj.redakti,
-			style: .plain,
-			target: self,
-			action: #selector(Self.premisRedakti(sender:))
-		)
-		redaktButono.tintColor = stilo.navigaciilaTeksto
+		navigationItem.leftBarButtonItem = iksoButono
 		navigationItem.rightBarButtonItem = redaktButono
 		
 		view.addEdgeMatchedSubview(tabelo)
 	}
+	
+	// MARK: Lingvaro-shanĝado
 		
+	private func forigis(je indekso: Int) {
+		lingvaro.remove(at: indekso)
+		if lingvaro.count <= Konstantoj.minimumo {
+			// Ĉi uzo de `DispatchQueue` evitas eraron en UITableView.setEditing(...)
+			DispatchQueue.main.async { [weak self] in
+				self?.finiRedaktadon()
+			}
+		}
+	}
+	
+	private func aldonis(lingvon lingvo: Lingvo) {
+		lingvaro.append(lingvo) // TODO: Reagigi
+	}
+	
+	private func lingvaroShanghighis() {
+		redaktButono.isEnabled = lingvaro.count > Konstantoj.minimumo
+		tabelo.reloadData()
+	}
+	
 	// MARK: Uzanto-agoj
 		
-	@objc private func premisRedakti(sender: Any) {
-		
+	@objc private func premisIkson() {
+		kompleti(lingvaro)
+	}
+	
+	@objc private func premisRedakti() {
+		if !tabelo.isEditing {
+			komenciRedaktadon()
+		} else {
+			finiRedaktadon()
+		}
+	}
+	
+	private func komenciRedaktadon() {
+		tabelo.setEditing(true, animated: true)
+		redaktButono.title = Tekstoj.fini
+		redaktButono.style = .done
+	}
+	
+	private func finiRedaktadon() {
+		tabelo.setEditing(false, animated: true)
+		redaktButono.title = Tekstoj.redakti
+		redaktButono.style = .plain
 	}
 }
 
 extension LingvaroRedaktiloViewController: UITableViewDelegate {
-//	func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-//		if indexPath.section == 1 {
-//			return indexPath
-//		}
-//		
-//		return nil
-//	}
-	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if indexPath == IndexPath(row: 0, section: 1) {
 			let elektiloVC = LingvoElektiloViewController(
 				kromEsperanto: false,
-				elektisLingvon: { lingvo in
+				elektisLingvon: { [weak self] lingvo in
+					self?.aldonis(lingvon: lingvo)
 				}
 			)
 			let navigaciilo = UINavigationController(rootViewController: elektiloVC)
@@ -79,15 +140,6 @@ extension LingvaroRedaktiloViewController: UITableViewDelegate {
 }
 
 extension LingvaroRedaktiloViewController: UITableViewDataSource {
-	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		switch section {
-		case 0:
-			return Tekstoj.lingvoj
-		default:
-			return nil
-		}
-	}
-	
 	func numberOfSections(in tableView: UITableView) -> Int {
 		2
 	}
@@ -100,6 +152,19 @@ extension LingvaroRedaktiloViewController: UITableViewDataSource {
 			return 1
 		default:
 			return 0
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		switch section {
+		case 0:
+			if lingvaro.count > 0 {
+				return Tekstoj.viajLingvoj
+			} else {
+				return nil
+			}
+		default:
+			return nil
 		}
 	}
 	
@@ -118,5 +183,17 @@ extension LingvaroRedaktiloViewController: UITableViewDataSource {
 		}
 		
 		return chelo
+	}
+	
+	// MARK: Redaktado
+	
+	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+		return indexPath.section == 0
+	}
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			forigis(je: indexPath.row)
+		}
 	}
 }

@@ -9,7 +9,8 @@ enum Tekstoj {
 	
 	static let redakti = "Redakti"
 	static let aldoniLingvon = "Aldoni Lingvon"
-	static let lingvoj = "Lingvoj"
+	static let viajLingvoj = "Viaj Lingvoj"
 	
 	static let rezigni = "Rezigni"
+	static let fini = "Fini"
 }
