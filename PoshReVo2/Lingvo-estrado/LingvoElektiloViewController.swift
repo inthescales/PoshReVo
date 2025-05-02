@@ -77,7 +77,7 @@ final class LingvoElektiloViewController: UIViewController {
 			target: self,
 			action: #selector(Self.malaperi)
 		)
-		iksoButono.tintColor = stilo.navigaciilaTeksto
+		iksoButono.tintColor = stilo.surkoloraTeksto
 		navigationItem.leftBarButtonItem = iksoButono
 		
 		view.addSubview(serchilo)

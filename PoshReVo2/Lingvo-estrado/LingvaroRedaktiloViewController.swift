@@ -16,7 +16,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 			target: self,
 			action: #selector(Self.premisIkson)
 		)
-		butono.tintColor = stilo.navigaciilaTeksto
+		butono.tintColor = stilo.surkoloraTeksto
 		return butono
 	}()
 	
@@ -27,7 +27,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 			target: self,
 			action: #selector(Self.premisRedakti)
 		)
-		butono.tintColor = stilo.navigaciilaTeksto
+		butono.tintColor = stilo.surkoloraTeksto
 		return butono
 	}()
 	
