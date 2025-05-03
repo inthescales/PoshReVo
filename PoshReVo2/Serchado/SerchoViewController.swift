@@ -10,8 +10,8 @@ final class SerchoViewController: UIViewController {
 		tekstoShanghighis: { teksto in }
 	)
 	
-	lazy var lingvoBreto: LingvoBretoView = {
-		LingvoBretoView(
+	lazy var lingvoBreto: LingvoBretoViewController = {
+		LingvoBretoViewController(
 			lingvoj: komencajLingvoj,
 			elektisLingvon: { lingvo in },
 			redaktisLingvojn: { lingvoj in }
@@ -41,8 +41,9 @@ final class SerchoViewController: UIViewController {
 			make.top.left.right.equalToSuperview()
 		}
 		
-		view.addSubview(lingvoBreto)
-		lingvoBreto.snp.makeConstraints { make in
+		addChild(lingvoBreto)
+		view.addSubview(lingvoBreto.view)
+		lingvoBreto.view.snp.makeConstraints { make in
 			make.left.right.equalToSuperview()
 			make.top.equalTo(serchilo.snp.bottom)
 		}
@@ -50,7 +51,7 @@ final class SerchoViewController: UIViewController {
 		addChild(rezultoTabelo)
 		view.addSubview(rezultoTabelo.view)
 		rezultoTabelo.view.snp.makeConstraints { make in
-			make.top.equalTo(lingvoBreto.snp.bottom)
+			make.top.equalTo(lingvoBreto.view.snp.bottom)
 			make.left.right.bottom.equalToSuperview()
 		}
 	}

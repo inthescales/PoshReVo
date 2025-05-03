@@ -3,7 +3,7 @@ import UIKit
 import ReVoDatumbazo
 
 /// Montras breton de la uzantaj lingvoj, kaj ebligas elekton inter ili
-final class LingvoBretoView: UIView {
+final class LingvoBretoViewController: UIViewController {
 	private enum Konstantoj {
 		/// Spaco dekstre kaj maldekstre de ĉiuj butonoj
 		static let butonoBufro: CGFloat = 16.0
@@ -55,6 +55,7 @@ final class LingvoBretoView: UIView {
 		let butono = UIButton()
 		butono.setTitle(Tekstoj.pli, for: .normal)
 		butono.setTitleColor(stilo.surkoloraTeksto, for: .normal)
+		butono.addTarget(self, action: #selector(premisPli), for: .touchUpInside)
 		return butono
 	}()
 	
@@ -81,6 +82,8 @@ final class LingvoBretoView: UIView {
 	
 	let redaktisLingvojn: ([Lingvo]) -> ()
 	
+	let kunordigilo: Kunordigilo
+	
 	var stilo: InterfacStilo
 	
 	//
@@ -89,60 +92,63 @@ final class LingvoBretoView: UIView {
 		lingvoj: [Lingvo],
 		elektisLingvon: @escaping  (Lingvo) -> (),
 		redaktisLingvojn: @escaping ([Lingvo]) -> (),
+		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = .nuna
 	) {
 		self.elektita = lingvoj.first
 		self.lingvoj = lingvoj
 		self.elektisLingvon = elektisLingvon
 		self.redaktisLingvojn = redaktisLingvojn
+		self.kunordigilo = kunordigilo
 		self.stilo = stilo
-		super.init(frame: .zero)
-		
-		backgroundColor = self.stilo.koloraFono
-		translatesAutoresizingMaskIntoConstraints = false
-		
-		addSubview(malaktivaSubstreko)
-		malaktivaSubstreko.snp.makeConstraints { make in
-			make.left.right.bottom.equalToSuperview()
-			make.height.equalTo(1)
-		}
-		
-		addSubview(rulumejo)
-		rulumejo.snp.makeConstraints { make in
-			make.top.left.bottom.equalToSuperview()
-		}
-		
-		addSubview(pliButono)
-		pliButono.snp.makeConstraints { make in
-			make.top.bottom.equalToSuperview()
-			make.right.equalToSuperview().offset(-Konstantoj.butonoBufro)
-			make.left.equalTo(rulumejo.snp.right).offset(Konstantoj.butonoBufro)
-		}
-		
-		ghisdatigi(lingvojn: lingvoj, elektita: elektita)
-		substreki(indekson: 0, animacii: false)
+		super.init(nibName: nil, bundle: nil)
 	}
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) ne realas")
 	}
 	
-	override func layoutSubviews() {
-		super.layoutSubviews()
+	override func viewDidLoad() {
+		view.backgroundColor = self.stilo.koloraFono
+		view.translatesAutoresizingMaskIntoConstraints = false
 		
-		rulumejo.layoutSubviews() // Necesas por ke lingvoStaplu havu sian grandecon
-		rulumejo.contentSize = CGSize(
-			width: lingvoStaplo.bounds.width + Konstantoj.butonoBufro,
-			height: lingvoStaplo.bounds.height
-		)
+		view.addSubview(malaktivaSubstreko)
+		malaktivaSubstreko.snp.makeConstraints { make in
+			make.left.right.bottom.equalToSuperview()
+			make.height.equalTo(1)
+		}
+		
+		view.addSubview(rulumejo)
+		rulumejo.snp.makeConstraints { make in
+			make.top.left.bottom.equalToSuperview()
+		}
+		
+		view.addSubview(pliButono)
+		pliButono.snp.makeConstraints { make in
+			make.top.bottom.equalToSuperview()
+			make.right.equalToSuperview().offset(-Konstantoj.butonoBufro)
+			make.left.equalTo(rulumejo.snp.right).offset(Konstantoj.butonoBufro)
+		}
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		ghisdatigi(lingvojn: lingvoj) // Vokita ĉi tie por ke grandecoj estu jam fiksitaj
 	}
 	
 	// MARK: Ĝisdatigado
 	
 	/// Ĝisdatigas la liston da lingvoj
-	private func ghisdatigi(lingvojn lingvoj: [Lingvo], elektita: Lingvo?) {
+	private func ghisdatigi(lingvojn lingvoj: [Lingvo]) {
+		self.lingvoj = lingvoj
+		if elektita == nil || (elektita.flatMap { lingvoj.contains($0) } != true) {
+			elektita = lingvoj.first
+		}
+		
+		// Renovigi butonojn
 		for view in lingvoStaplo.arrangedSubviews {
 			lingvoStaplo.removeArrangedSubview(view)
+			view.removeFromSuperview()
 		}
 		
 		for i in 0..<lingvoj.count {
@@ -157,6 +163,20 @@ final class LingvoBretoView: UIView {
 			etikedo.translatesAutoresizingMaskIntoConstraints = false
 			
 			lingvoStaplo.addArrangedSubview(etikedo)
+		}
+		
+		// Doni larĝon al la rulumejo
+		lingvoStaplo.layoutSubviews()
+		rulumejo.layoutSubviews() // Necesas por ke lingvoStaplu havu sian grandecon
+		rulumejo.contentSize = CGSize(
+			width: lingvoStaplo.bounds.width + Konstantoj.butonoBufro * 2,
+			height: lingvoStaplo.bounds.height
+		)
+		
+		// Ĝisdatigi elekto-staton
+		if let elektitaIndekso {
+			substreki(indekson: elektitaIndekso, animacii: false)
+			rulumi(al: elektitaIndekso, animacii: false)
 		}
 	}
 	
@@ -237,7 +257,7 @@ final class LingvoBretoView: UIView {
 			delay: 0.0,
 			options: .curveEaseOut
 		) { [weak self] in
-			self?.layoutIfNeeded()
+			self?.view.layoutIfNeeded()
 		}
 	}
 	
@@ -249,5 +269,13 @@ final class LingvoBretoView: UIView {
 		}
 		
 		return lingvoStaplo.arrangedSubviews[indekso] as? UIButton
+	}
+	
+	@objc private func premisPli() {
+		let vc = kunordigilo.fariLingvoElektilon { [weak self] novajLingvoj in
+			self?.ghisdatigi(lingvojn: novajLingvoj)
+		}
+		vc.modalPresentationStyle = .fullScreen
+		navigationController?.present(vc, animated: true)
 	}
 }

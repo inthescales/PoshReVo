@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
 		// UzantDatumaro.starigi()
 		
-		// let vc = LingvaroRedaktiloViewController(lingvaro: [Lingvo.esperanto], kompleti: { _ in })
 		let vc = SerchoViewController(serchLingvoj: [
 			Lingvo.esperanto,
 			Lingvo(kodo: "en", nomo: "angla"),
