@@ -2,13 +2,17 @@ import UIKit
 
 import ReVoDatumbazo
 
+/// Montras breton de la uzantaj lingvoj, kaj ebligas elekton inter ili
 final class LingvoBretoView: UIView {
 	private enum Konstantoj {
 		/// Spaco dekstre kaj maldekstre de ĉiuj butonoj
 		static let butonoBufro: CGFloat = 16.0
 		
 		/// Alteco de la substrek sub la elektita lingvo
-		static let strekAlteco: CGFloat = 2.0
+		static let strekAlteco: CGFloat = 1.0
+		
+		/// Daŭro de la elekta animaciado
+		static let animaciaDauro: CGFloat = 0.2
 	}
 	
 	// MARK: Interfaceroj
@@ -23,10 +27,12 @@ final class LingvoBretoView: UIView {
 	
 	lazy var substreko: UIView = {
 		let strek = UIView()
+		
 		strek.backgroundColor = stilo.surkoloraTeksto
 		strek.snp.makeConstraints { make in
 			make.height.equalTo(Konstantoj.strekAlteco)
 		}
+		
 		return strek
 	}()
 	
@@ -40,6 +46,7 @@ final class LingvoBretoView: UIView {
 			make.left.equalTo(lingvoStaplo).offset(-Konstantoj.butonoBufro)
 		}
 		ejo.addSubview(substreko)
+		ejo.delaysContentTouches = true
 
 		return ejo
 	}()
@@ -51,11 +58,22 @@ final class LingvoBretoView: UIView {
 		return butono
 	}()
 	
+	lazy var malaktivaSubstreko: UIView = {
+		let strek = UIView()
+		strek.backgroundColor = stilo.surkoloraMalaktiva
+		return strek
+	}()
+	
 	// MARK: Stato
 	
 	var elektita: Lingvo?
 	
 	var lingvoj: [Lingvo]
+	
+	/// La indekso de la nune elektita lingvo
+	var elektitaIndekso: Int? {
+		elektita.flatMap { lingvoj.firstIndex(of: $0) }
+	}
 	
 	// MARK: Agordoj
 	
@@ -81,6 +99,13 @@ final class LingvoBretoView: UIView {
 		super.init(frame: .zero)
 		
 		backgroundColor = self.stilo.koloraFono
+		translatesAutoresizingMaskIntoConstraints = false
+		
+		addSubview(malaktivaSubstreko)
+		malaktivaSubstreko.snp.makeConstraints { make in
+			make.left.right.bottom.equalToSuperview()
+			make.height.equalTo(1)
+		}
 		
 		addSubview(rulumejo)
 		rulumejo.snp.makeConstraints { make in
@@ -95,7 +120,7 @@ final class LingvoBretoView: UIView {
 		}
 		
 		ghisdatigi(lingvojn: lingvoj, elektita: elektita)
-		substreki(indekson: 1, animacii: false)
+		substreki(indekson: 0, animacii: false)
 	}
 	
 	required init?(coder: NSCoder) {
@@ -114,6 +139,7 @@ final class LingvoBretoView: UIView {
 	
 	// MARK: Ĝisdatigado
 	
+	/// Ĝisdatigas la liston da lingvoj
 	private func ghisdatigi(lingvojn lingvoj: [Lingvo], elektita: Lingvo?) {
 		for view in lingvoStaplo.arrangedSubviews {
 			lingvoStaplo.removeArrangedSubview(view)
@@ -124,7 +150,8 @@ final class LingvoBretoView: UIView {
 			
 			let etikedo = UIButton()
 			etikedo.setTitle(lingvo.nomo, for: .normal)
-			etikedo.tintColor = stilo.surkoloraTeksto
+			let koloro = (elektita == lingvo) ? stilo.surkoloraTeksto : stilo.surkoloraMalaktiva
+			etikedo.setTitleColor(koloro, for: .normal)
 			etikedo.addTarget(self, action: #selector(elektisLingvon(sender:)), for: .touchUpInside)
 			etikedo.tag = i
 			etikedo.translatesAutoresizingMaskIntoConstraints = false
@@ -133,24 +160,94 @@ final class LingvoBretoView: UIView {
 		}
 	}
 	
+	/// Vokota kiam la uzanto elektas lingvon
 	@objc private func elektisLingvon(sender: UIButton) {
-		substreki(indekson: sender.tag, animacii: true)
-	}
-	
-	private func substreki(indekson indekso: Int, animacii: Bool) {
-		guard indekso < lingvoj.count else {
-			fatalError("Butona indekso estas tro granda")
+		let indekso = sender.tag
+		let malnovaIndekso = elektitaIndekso
+		
+		guard indekso != malnovaIndekso else {
+			return
 		}
 		
-		let etikedo = lingvoStaplo.arrangedSubviews[indekso]
+		elektita = lingvoj[indekso]
+		
+		if let malnovaIndekso {
+			rekolorigi(aktiva: indekso, malaktiva: malnovaIndekso, animacii: true)
+		}
+		rulumi(al: indekso, animacii: true)
+		substreki(indekson: indekso, animacii: false)
+	}
+	
+	/// Ŝanĝas kolorojn de la aktiva kaj nove-malaktiva butonoj
+	private func rekolorigi(aktiva: Int, malaktiva: Int, animacii: Bool) {
+		guard let aktivaButono = butono(por: aktiva),
+			  let malaktivaButono = butono(por: malaktiva) else {
+			return
+		}
+		
+		let dauro = animacii ? Konstantoj.animaciaDauro : 0.0
+		UIView.animate(
+			withDuration: dauro,
+			delay: 0.0,
+			options: .curveEaseOut
+		) { [weak self] in
+			aktivaButono.setTitleColor(self?.stilo.surkoloraTeksto, for: .normal)
+			malaktivaButono.setTitleColor(self?.stilo.surkoloraMalaktiva, for: .normal)
+		}
+	}
+	
+	/// Rulumas la rulumejon tiel ke la nove elektita lingvo estu tute legebla
+	private func rulumi(al indekso: Int, animacii: Bool) {
+		let dauro = animacii ? Konstantoj.animaciaDauro : 0.0
+		UIView.animate(
+			withDuration: dauro,
+			delay: 0.0,
+			options: .curveEaseOut
+		) { [weak self] in
+			guard let self,
+				  let butono = butono(por: indekso) else {
+				return
+			}
+			
+			let troMaldekstra = butono.frame.minX < rulumejo.contentOffset.x
+			let troDekstra = butono.frame.maxX > rulumejo.contentOffset.x + rulumejo.bounds.width
+			if troMaldekstra {
+					rulumejo.contentOffset.x = butono.frame.minX
+			} else if troDekstra {
+				rulumejo.contentOffset.x = butono.frame.maxX - rulumejo.bounds.width + Konstantoj.butonoBufro * 2
+			}
+		}
+	}
+	
+	/// Movas substrekon por ke ĝi restu sub la nun-elektita lingvo
+	private func substreki(indekson indekso: Int, animacii: Bool) {
+		guard let butono = butono(por: indekso) else {
+			fatalError("Butono ne ekzistas")
+		}
 		
 		substreko.snp.remakeConstraints { make in
-			make.left.right.equalTo(etikedo).inset(-4)
+			make.left.right.equalTo(butono).inset(-4)
 			make.bottom.equalToSuperview()
 			make.height.equalTo(Konstantoj.strekAlteco)
 		}
-		UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut) { [weak self] in
+		
+		let dauro = animacii ? Konstantoj.animaciaDauro : 0.0
+		UIView.animate(
+			withDuration: dauro,
+			delay: 0.0,
+			options: .curveEaseOut
+		) { [weak self] in
 			self?.layoutIfNeeded()
 		}
+	}
+	
+	// MARK: Helpiloj
+	
+	private func butono(por indekso: Int) -> UIButton? {
+		guard indekso < lingvoStaplo.arrangedSubviews.count else {
+			return nil
+		}
+		
+		return lingvoStaplo.arrangedSubviews[indekso] as? UIButton
 	}
 }
