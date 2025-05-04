@@ -20,7 +20,7 @@ final class DatumbazFariloTestoj: XCTestCase {
 		}
 	}
 	
-	/// Testi serchvortojn
+	/// Testi serĉvortojn
 	func testiSerchVortojn() throws {
 		for rezulto in TestDatumoj.komuna.rezultoj {
 			assertSnapshot(matching: rezulto.serchVortoj, as: .json, named: rezulto.artikolo.titolo)

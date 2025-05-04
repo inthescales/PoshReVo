@@ -69,22 +69,22 @@ final class LingvoBretoViewController: UIViewController {
 	
 	var elektita: Lingvo?
 	
-	var lingvoj: [Lingvo]
+	private var lingvoj: [Lingvo]
 	
 	/// La indekso de la nune elektita lingvo
-	var elektitaIndekso: Int? {
+	private var elektitaIndekso: Int? {
 		elektita.flatMap { lingvoj.firstIndex(of: $0) }
 	}
 	
 	// MARK: Agordoj
 	
-	let elektisLingvon: (Lingvo) -> ()
+	private let elektisLingvon: (Lingvo) -> ()
 	
-	let redaktisLingvojn: ([Lingvo]) -> ()
+	private let redaktisLingvojn: ([Lingvo]) -> ()
 	
-	let kunordigilo: Kunordigilo
+	private let kunordigilo: Kunordigilo
 	
-	var stilo: InterfacStilo
+	private var stilo: InterfacStilo
 	
 	//
 	
@@ -139,7 +139,7 @@ final class LingvoBretoViewController: UIViewController {
 	// MARK: Ĝisdatigado
 	
 	/// Ĝisdatigas la liston da lingvoj
-	private func ghisdatigi(lingvojn lingvoj: [Lingvo]) {
+	func ghisdatigi(lingvojn lingvoj: [Lingvo]) {
 		self.lingvoj = lingvoj
 		if elektita == nil || (elektita.flatMap { lingvoj.contains($0) } != true) {
 			elektita = lingvoj.first

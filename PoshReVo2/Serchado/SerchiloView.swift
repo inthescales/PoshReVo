@@ -12,6 +12,7 @@ final class SerchiloView: UIView {
 		serchilo.delegate = self
 		serchilo.placeholder = lokokupaTeksto
 		serchilo.searchTextField.backgroundColor = InterfacStilo.nuna.senkoloraFono
+		serchilo.searchTextField.autocapitalizationType = .none
 		
 		// Ŝajne, ĉio ĉi frenezaĵo necesas por nevidebligi la fonon malantaŭ la tekstejo
 		serchilo.backgroundColor = .clear
@@ -33,7 +34,7 @@ final class SerchiloView: UIView {
 		return serchilo
 	}()
 	
-	// Agordoj
+	// MARK: Agordoj
 	
 	/// Lokokupa teksto kiu aperos en la serĉtabulo se uzanto jam ne tajpis
 	private let lokokupaTeksto: String
@@ -73,7 +74,7 @@ extension SerchiloView: UISearchBarDelegate {
 		if iksumi
 			&& text == "x"
 			&& teksto.count > 0 {
-			if let iksumita = tekstHelpiloj.iksumiFinan(teksto) {
+			if let iksumita = TekstHelpiloj.iksumiFinan(teksto) {
 				searchBar.text = iksumita
 				self.searchBar(searchBar, textDidChange: iksumita)
 				return false
@@ -84,7 +85,7 @@ extension SerchiloView: UISearchBarDelegate {
 	}
 	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-		searchBar.text = searchBar.text?.lowercased()
+		searchBar.text = searchText
 		
 		// TODO: Provu japanajn tekstojn, ĉar io speciala necesis en v1
 		

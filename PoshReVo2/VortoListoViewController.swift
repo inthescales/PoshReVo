@@ -17,7 +17,7 @@ final class VortoListoViewController: UIViewController {
 		return tabelo
 	}()
 	
-	var listeroj: [Listero] = []
+	private var listeroj: [Listero] = []
 	
 	override func viewDidLoad() {
 		view.addEdgeMatchedSubview(tabelo)

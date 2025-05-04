@@ -1,7 +1,7 @@
 import CoreData
 
 extension DatumbazAlirilo {
-	/// Kreas TrieIterator-on kiu montrols rezultojn el certa loko en lingva prefiksarbo
+	/// Kreas TrieIterator-on kiu montros rezultojn el certa loko en lingva prefiksarbo
     func starigiIteraciilon(lingvo lingvoKodo: String, peto: String) -> PrefiksArboIteraciilo? {
         guard peto.count > 0,
 			  let lingvo = lingvo(kodo: lingvoKodo),

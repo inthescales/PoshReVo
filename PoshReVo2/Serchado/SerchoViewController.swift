@@ -3,32 +3,53 @@ import UIKit
 import ReVoDatumbazo
 
 final class SerchoViewController: UIViewController {
+	private enum Konstantoj {
+		/// Maksimuma kvanto da serĉrezultoj prezentotaj
+		static let serchLimo = 32
+	}
+	
 	// MARK: Interfaceroj
-	lazy var serchilo = SerchiloView(
+	
+	private lazy var serchilo = SerchiloView(
 		lokokupaTeksto: Tekstoj.serchiVortonAuFrazon,
 		iksumi: true, // TODO: Nur se neesperanta lingvo uziĝas
-		tekstoShanghighis: { teksto in }
+		tekstoShanghighis: { [weak self] teksto in
+			self?.tajpis(tekston: teksto)
+		}
 	)
 	
-	lazy var lingvoBreto: LingvoBretoViewController = {
+	private lazy var lingvoBreto: LingvoBretoViewController = {
 		LingvoBretoViewController(
-			lingvoj: komencajLingvoj,
+			lingvoj: [],
 			elektisLingvon: { lingvo in },
 			redaktisLingvojn: { lingvoj in }
 		)
 	}()
 	
-	lazy var rezultoTabelo = VortoListoViewController()
+	private lazy var rezultoTabelo = VortoListoViewController()
+	
+	// MARK: Stato
+	
+	/// Stato de la nune-prezentita serĉo
+	private var serchStato: SerchStato?
+	
+	/// Datumoj pri la lasta serĉo antaŭ la nuna
+	private var lastaSercho: (Lingvo, String)? = nil
 	
 	// MARK: Agordoj
-		
-	let komencajLingvoj: [Lingvo] // TODO: Injekcii datumaron
+	
+	private var stilo: InterfacStilo
 	
 	//
 	
-	init(serchLingvoj: [Lingvo]) {
-		self.komencajLingvoj = serchLingvoj
+	init(
+		serchLingvoj: [Lingvo],
+		stilo: InterfacStilo = .nuna
+	) {
+		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
+		
+		lingvoBreto.ghisdatigi(lingvojn: serchLingvoj)
 	}
 	
 	required init?(coder: NSCoder) {
@@ -36,6 +57,8 @@ final class SerchoViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
+		view.backgroundColor = stilo.koloraFono
+		
 		view.addSubview(serchilo)
 		serchilo.snp.makeConstraints { make in
 			make.top.left.right.equalToSuperview()
@@ -54,5 +77,89 @@ final class SerchoViewController: UIViewController {
 			make.top.equalTo(lingvoBreto.view.snp.bottom)
 			make.left.right.bottom.equalToSuperview()
 		}
+	}
+	
+	// MARK: Interagado
+	
+	private func tajpis(tekston teksto: String) {
+		if !teksto.isEmpty {
+			fariSerchon(teksto: teksto)
+		} else {
+			serchStato = nil
+			lastaSercho = nil
+			rezultoTabelo.montri(listerojn: [])
+		}
+	}
+	
+	// MARK: Serĉado
+	
+	private func fariSerchon(teksto: String) {
+		guard let serchLingvo = lingvoBreto.elektita else {
+			return
+		}
+		
+		let novaSercho = serchLingvo != lastaSercho?.0 || teksto != lastaSercho?.1
+		if novaSercho {
+			let novaStato = VortaroDatumbazo.komuna.komenciSerchon(
+				lingvo: serchLingvo,
+				teksto: teksto,
+				komenco: 0,
+				limo: Konstantoj.serchLimo
+			)
+			
+			serchStato = novaStato
+			lastaSercho = (serchLingvo, teksto)
+			rezultoTabelo.montri(listerojn: tabeloListeroj(por: novaStato))
+		}
+	}
+	
+	private func venigiPli() {
+		if let stato = serchStato, !stato.atingisFinon {
+			let novaStato = VortaroDatumbazo.komuna.daurigiSerchon(
+				stato: stato,
+				limo: Konstantoj.serchLimo
+			)
+			
+			serchStato = novaStato
+			DispatchQueue.main.async { [weak self] in
+				guard let self else {
+					return
+				}
+				
+				rezultoTabelo.montri(listerojn: tabeloListeroj(por: novaStato))
+			}
+		}
+	}
+	
+	// MARK: Helpiloj
+	
+	func tabeloListeroj(por stato: SerchStato) -> [VortoListoViewController.Listero] {
+		stato.rezultoj.map { rezulto in
+			VortoListoViewController.Listero(
+				teksto: rezulto.teksto,
+				subteksto: tekstoPorDestinoj(destinoj: rezulto.destinoj),
+				destinoj: rezulto.destinoj
+			)
+		}
+	}
+	
+	/// Teksto mentrota kiel rezult-listera subteksto
+	func tekstoPorDestinoj(destinoj: [Destino]) -> String? {
+		if destinoj.count == 1,
+		   let destino = destinoj.first {
+			var teksto = destino.subteksto?.components(separatedBy: ", ").first ?? ""
+			
+			if let senco = destino.senco,
+			   senco != "0",
+			   let indico = TekstHelpiloj.indico(por: senco) {
+				teksto += indico
+			}
+			
+			return teksto
+		} else if destinoj.count > 1 {
+			return String(destinoj.count) + " rezultoj"
+		}
+		
+		return nil
 	}
 }
