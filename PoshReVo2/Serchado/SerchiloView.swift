@@ -34,6 +34,12 @@ final class SerchiloView: UIView {
 		return serchilo
 	}()
 	
+	// MARK: Stato
+	
+	var teksto: String? {
+		serchilo.text
+	}
+	
 	// MARK: Agordoj
 	
 	/// Lokokupa teksto kiu aperos en la serĉtabulo se uzanto jam ne tajpis

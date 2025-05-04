@@ -14,15 +14,22 @@ final class SerchoViewController: UIViewController {
 		lokokupaTeksto: Tekstoj.serchiVortonAuFrazon,
 		iksumi: true, // TODO: Nur se neesperanta lingvo uziĝas
 		tekstoShanghighis: { [weak self] teksto in
-			self?.tajpis(tekston: teksto)
+			self?.farisPeton(teksto: teksto, serchLingvo: self?.serchLingvo)
 		}
 	)
 	
 	private lazy var lingvoBreto: LingvoBretoViewController = {
 		LingvoBretoViewController(
 			lingvoj: [],
-			elektisLingvon: { lingvo in },
-			redaktisLingvojn: { lingvoj in }
+			elektisLingvon: { [weak self] lingvo in
+				self?.farisPeton(teksto: self?.serchTeksto, serchLingvo: lingvo)
+			},
+			redaktisLingvojn: { [weak self] lingvoj in
+				self?.farisPeton(
+					teksto: self?.serchTeksto,
+					serchLingvo: self?.serchLingvo
+				)
+			}
 		)
 	}()
 	
@@ -34,6 +41,14 @@ final class SerchoViewController: UIViewController {
 	}()
 	
 	// MARK: Stato
+	
+	private var serchTeksto: String? {
+		serchilo.teksto
+	}
+	
+	private var serchLingvo: Lingvo? {
+		lingvoBreto.elektita
+	}
 	
 	/// Stato de la nune-prezentita serĉo
 	private var serchStato: SerchStato?
@@ -90,16 +105,6 @@ final class SerchoViewController: UIViewController {
 	
 	// MARK: Interagado
 	
-	private func tajpis(tekston teksto: String) {
-		if !teksto.isEmpty {
-			fariSerchon(teksto: teksto)
-		} else {
-			serchStato = nil
-			lastaSercho = nil
-			rezultoTabelo.montri(listerojn: [])
-		}
-	}
-	
 	private func elektis(_ listero: VortoListoViewController.Listero) {
 		if listero.destinoj.count == 1,
 		   let destino = listero.destinoj.first {
@@ -121,11 +126,17 @@ final class SerchoViewController: UIViewController {
 	
 	// MARK: Serĉado
 	
-	private func fariSerchon(teksto: String) {
-		guard let serchLingvo = lingvoBreto.elektita else {
-			return
+	private func farisPeton(teksto: String?, serchLingvo: Lingvo?) {
+		if let teksto,
+		   !teksto.isEmpty,
+		   let lingvo = serchLingvo {
+			fariSerchon(teksto: teksto, serchLingvo: lingvo)
+		} else {
+			nuligiSerchon()
 		}
-		
+	}
+	
+	private func fariSerchon(teksto: String, serchLingvo: Lingvo) {
 		let novaSercho = serchLingvo != lastaSercho?.0 || teksto != lastaSercho?.1
 		if novaSercho {
 			let novaStato = VortaroDatumbazo.komuna.komenciSerchon(
@@ -139,6 +150,12 @@ final class SerchoViewController: UIViewController {
 			lastaSercho = (serchLingvo, teksto)
 			rezultoTabelo.montri(listerojn: tabeloListeroj(por: novaStato))
 		}
+	}
+	
+	private func nuligiSerchon() {
+		serchStato = nil
+		lastaSercho = nil
+		rezultoTabelo.montri(listerojn: [])
 	}
 	
 	private func venigiPli() {

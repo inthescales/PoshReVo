@@ -46,9 +46,8 @@ final class Kunordigilo {
 		elektis: @escaping (Destino) -> ()
 	) -> VortoListoViewController {
 		let disigilo = VortoListoViewController(
-			elektis: { [weak self] listero in
-				guard let self,
-					  let destino = listero.destinoj.first else {
+			elektis: { listero in
+				guard let destino = listero.destinoj.first else {
 					return
 				}
 				

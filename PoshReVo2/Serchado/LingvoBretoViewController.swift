@@ -178,6 +178,8 @@ final class LingvoBretoViewController: UIViewController {
 			substreki(indekson: elektitaIndekso, animacii: false)
 			rulumi(al: elektitaIndekso, animacii: false)
 		}
+		
+		redaktisLingvojn(lingvoj)
 	}
 	
 	/// Vokota kiam la uzanto elektas lingvon
@@ -196,6 +198,8 @@ final class LingvoBretoViewController: UIViewController {
 		}
 		rulumi(al: indekso, animacii: true)
 		substreki(indekson: indekso, animacii: false)
+		
+		elektita.flatMap { elektisLingvon($0) }
 	}
 	
 	/// Ŝanĝas kolorojn de la aktiva kaj nove-malaktiva butonoj
