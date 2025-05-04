@@ -26,7 +26,9 @@ final class SerchoViewController: UIViewController {
 		)
 	}()
 	
-	private lazy var rezultoTabelo = VortoListoViewController()
+	private lazy var rezultoTabelo: VortoListoViewController = {
+		return VortoListoViewController(elektis: elektis)
+	}()
 	
 	// MARK: Stato
 	
@@ -38,14 +40,18 @@ final class SerchoViewController: UIViewController {
 	
 	// MARK: Agordoj
 	
+	private var kunordigilo: Kunordigilo
+	
 	private var stilo: InterfacStilo
 	
 	//
 	
 	init(
 		serchLingvoj: [Lingvo],
+		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = .nuna
 	) {
+		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 		
@@ -88,6 +94,25 @@ final class SerchoViewController: UIViewController {
 			serchStato = nil
 			lastaSercho = nil
 			rezultoTabelo.montri(listerojn: [])
+		}
+	}
+	
+	private func elektis(_ listero: VortoListoViewController.Listero) {
+		if listero.destinoj.count == 1,
+		   let destino = listero.destinoj.first {
+			let pagho = kunordigilo.fariArtikoloPaghon(el: destino)
+			navigationController?.pushViewController(pagho, animated: true)
+		} else if listero.destinoj.count > 1 {
+			let disigilo = kunordigilo.fariDisigiloPaghon(
+				por: listero.destinoj,
+				elektis: { [weak self] destino in
+					guard let self else { return }
+					
+					let pagho = kunordigilo.fariArtikoloPaghon(el: destino)
+					navigationController?.pushViewController(pagho, animated: true)
+				}
+			)
+			navigationController?.pushViewController(disigilo, animated: true)
 		}
 	}
 	

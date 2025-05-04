@@ -17,7 +17,24 @@ final class VortoListoViewController: UIViewController {
 		return tabelo
 	}()
 	
+	// MARK: Stato
+	
 	private var listeroj: [Listero] = []
+	
+	// MARK: Agordoj
+	
+	private let elektis: (Listero) -> ()
+	
+	//
+	
+	init(elektis: @escaping (Listero) -> ()) {
+		self.elektis = elektis
+		super.init(nibName: nil, bundle: nil)
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) ne realas")
+	}
 	
 	override func viewDidLoad() {
 		view.addEdgeMatchedSubview(tabelo)
@@ -31,7 +48,7 @@ final class VortoListoViewController: UIViewController {
 
 extension VortoListoViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		//
+		elektis(listeroj[indexPath.row])
 	}
 }
 
