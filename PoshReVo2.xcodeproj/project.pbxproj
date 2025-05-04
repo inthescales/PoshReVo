@@ -31,6 +31,9 @@
 		00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B252DC6B73F00526F82 /* Kunordigilo.swift */; };
 		00B27B282DC6B77A00526F82 /* UzantDatumaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */; };
 		00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */; };
+		00B27B2D2DC8165A00526F82 /* ArtikolTitoloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */; };
+		00B27B2F2DC8188800526F82 /* DerivajhoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B2E2DC8188800526F82 /* DerivajhoChelo.swift */; };
+		00B27B312DC81C0400526F82 /* ArtikolTekstoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B302DC81C0400526F82 /* ArtikolTekstoChelo.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		00B27B252DC6B73F00526F82 /* Kunordigilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kunordigilo.swift; sourceTree = "<group>"; };
 		00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumaro.swift; sourceTree = "<group>"; };
 		00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikoloViewController.swift; sourceTree = "<group>"; };
+		00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolTitoloView.swift; sourceTree = "<group>"; };
+		00B27B2E2DC8188800526F82 /* DerivajhoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerivajhoChelo.swift; sourceTree = "<group>"; };
+		00B27B302DC81C0400526F82 /* ArtikolTekstoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolTekstoChelo.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */,
+				00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */,
+				00B27B2E2DC8188800526F82 /* DerivajhoChelo.swift */,
+				00B27B302DC81C0400526F82 /* ArtikolTekstoChelo.swift */,
 			);
 			path = Artikoloj;
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 				00B27B1C2DC2B0DE00526F82 /* LingvaroRedaktiloViewController.swift in Sources */,
 				00B27B0F2DC2648200526F82 /* LingvoElektiloViewController.swift in Sources */,
 				00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */,
+				00B27B312DC81C0400526F82 /* ArtikolTekstoChelo.swift in Sources */,
 				00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */,
 				00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */,
 				000DA6D82D8F31CF0026CBA0 /* AppDelegate.swift in Sources */,
@@ -336,6 +346,8 @@
 				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* AranghHelpiloj.swift in Sources */,
 				000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */,
+				00B27B2F2DC8188800526F82 /* DerivajhoChelo.swift in Sources */,
+				00B27B2D2DC8165A00526F82 /* ArtikolTitoloView.swift in Sources */,
 				00B27B172DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift in Sources */,
 				000DA6FD2D908F680026CBA0 /* ChefaNavigationController.swift in Sources */,
 				00B27B202DC3F9F700526F82 /* LingvoBretoViewController.swift in Sources */,
