@@ -2,6 +2,8 @@ import UIKit
 
 import ReVoDatumbazo
 
+import TTTAttributedLabel
+
 final class ArtikoloViewController: UIViewController {
 	private enum Konstantoj {
 		static let subartikoloChelIdentigilo = "subartikoloChelo"
@@ -126,5 +128,30 @@ extension ArtikoloViewController: UITableViewDataSource {
 		}
 		
 		return chelo
+	}
+}
+
+extension ArtikoloViewController: TTTAttributedLabelDelegate {
+	
+	// Uzanto premis ligilon - iri al la dezirata sekcio de la artikolo, au montri novan artikolon
+	func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL?) {
+		
+//		let marko = url?.absoluteString ?? ""
+//		let partoj = marko.components(separatedBy: ".")
+//		
+//		if partoj.count == 0 {
+//			return
+//		}
+//		
+//		if partoj[0] == artikolo?.indekso {
+//			if partoj.count >= 2 {
+//				saltiAlMarko(partoj[0] + "." + partoj[1], animacii: true)
+//			}
+//		} else {
+//			if let artikolo =  VortaroDatumbazo.komuna.artikolo(indekso: partoj[0]) {
+//				navigationItem.backBarButtonItem = UIBarButtonItem(title: self.artikolo?.titolo, style: .plain, target: nil, action: nil)
+//				(self.navigationController as? ChefaNavigationController)?.montriArtikolon(artikolo, marko: marko)
+//			}
+//		}
 	}
 }
