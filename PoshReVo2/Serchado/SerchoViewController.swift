@@ -27,7 +27,10 @@ final class SerchoViewController: UIViewController {
 	}()
 	
 	private lazy var rezultoTabelo: VortoListoViewController = {
-		return VortoListoViewController(elektis: elektis)
+		return VortoListoViewController(
+			elektis: elektis,
+			alvenasFinon: venigiPli
+		)
 	}()
 	
 	// MARK: Stato
@@ -147,9 +150,7 @@ final class SerchoViewController: UIViewController {
 			
 			serchStato = novaStato
 			DispatchQueue.main.async { [weak self] in
-				guard let self else {
-					return
-				}
+				guard let self else { return }
 				
 				rezultoTabelo.montri(listerojn: tabeloListeroj(por: novaStato))
 			}

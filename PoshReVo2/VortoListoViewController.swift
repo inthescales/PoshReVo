@@ -4,6 +4,11 @@ import ReVoDatumbazo
 
 /// Reprezentas iun ajn ekranon kiu prezentas liston da vortoj. Ekz. serĉrezultoj, fakvortoj, ktp.
 final class VortoListoViewController: UIViewController {
+	private enum Konstantoj {
+		/// Kiam ĉi-kvanto da listeroj restas, sciigu ke la uzanto alvenas la finon de la listo
+		static let finaRegiono = 5
+	}
+	
 	struct Listero {
 		let teksto: String
 		let subteksto: String?
@@ -25,10 +30,16 @@ final class VortoListoViewController: UIViewController {
 	
 	private let elektis: (Listero) -> ()
 	
+	private let alvenasFinon: (() -> ())?
+	
 	//
 	
-	init(elektis: @escaping (Listero) -> ()) {
+	init(
+		elektis: @escaping (Listero) -> (),
+		alvenasFinon: (() -> ())? = nil
+	) {
 		self.elektis = elektis
+		self.alvenasFinon = alvenasFinon
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -71,6 +82,11 @@ extension VortoListoViewController: UITableViewDataSource {
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "vortoListo")
 		novaChelo.textLabel?.text = listero.teksto
 		novaChelo.detailTextLabel?.text = listero.subteksto
+		
+		if indexPath.row > tableView.numberOfRows(inSection: indexPath.section) - Konstantoj.finaRegiono {
+			alvenasFinon?()
+		}
+		
 		return novaChelo
 	}
 	
