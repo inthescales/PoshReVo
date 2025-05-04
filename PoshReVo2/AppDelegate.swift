@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			Lingvo(kodo: "fr", nomo: "franca"),
 			Lingvo(kodo: "is", nomo: "islanda")
 		])
+		
 		let navigaciilo = ChefaNavigationController(rootViewController: vc)
 		
 		fenestro = UIWindow(frame: UIScreen.main.bounds)
