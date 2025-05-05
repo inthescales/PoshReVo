@@ -33,22 +33,25 @@ final class Kunordigilo {
 		return navigaciilo
 	}
 	
-	func fariArtikoloPaghon(el destino: Destino) -> ArtikoloViewController {
+	func prezentiArtikoloPaghon(el destino: Destino, prezentilo: UINavigationController) {
 		guard let artikolo = VortaroDatumbazo.komuna.artikolo(de: destino) else {
 			fatalError("Artikolo ne ekzistas") // TODO: Ŝanĝi tion ĉi
 		}
 		
-		return ArtikoloViewController(artikolo: artikolo)
+		let vc = ArtikoloViewController(artikolo: artikolo)
+		prezentilo.pushViewController(vc, animated: true)
 	}
 	
-	func fariArtikoloPaghon(el artikolo: Artikolo) -> ArtikoloViewController {
-		return ArtikoloViewController(artikolo: artikolo)
+	func prezentiArtikoloPaghon(el artikolo: Artikolo, prezentilo: UINavigationController) {
+		let vc = ArtikoloViewController(artikolo: artikolo)
+		prezentilo.pushViewController(vc, animated: true)
 	}
 	
-	func fariDisigiloPaghon(
+	func prezentiDisigiloPaghon(
 		por destinoj: [Destino],
+		prezentilo: UINavigationController,
 		elektis: @escaping (Destino) -> ()
-	) -> VortoListoViewController {
+	) {
 		let disigilo = VortoListoViewController(
 			elektis: { listero in
 				guard let destino = listero.destinoj.first else {
@@ -64,6 +67,6 @@ final class Kunordigilo {
 		}
 		disigilo.montri(listerojn: listeroj)
 		
-		return disigilo
+		prezentilo.pushViewController(disigilo, animated: true)
 	}
 }

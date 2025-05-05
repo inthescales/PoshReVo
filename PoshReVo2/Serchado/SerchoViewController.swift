@@ -106,21 +106,21 @@ final class SerchoViewController: UIViewController {
 	// MARK: Interagado
 	
 	private func elektis(_ listero: VortoListoViewController.Listero) {
+		guard let prezentilo = navigationController else {
+			return
+		}
+		
 		if listero.destinoj.count == 1,
 		   let destino = listero.destinoj.first {
-			let pagho = kunordigilo.fariArtikoloPaghon(el: destino)
-			navigationController?.pushViewController(pagho, animated: true)
+			kunordigilo.prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
 		} else if listero.destinoj.count > 1 {
-			let disigilo = kunordigilo.fariDisigiloPaghon(
+			kunordigilo.prezentiDisigiloPaghon(
 				por: listero.destinoj,
+				prezentilo: prezentilo,
 				elektis: { [weak self] destino in
-					guard let self else { return }
-					
-					let pagho = kunordigilo.fariArtikoloPaghon(el: destino)
-					navigationController?.pushViewController(pagho, animated: true)
+					self?.kunordigilo.prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
 				}
 			)
-			navigationController?.pushViewController(disigilo, animated: true)
 		}
 	}
 	

@@ -97,29 +97,23 @@ final class ArtikoloViewController: UIViewController {
 	
 	// MARK: Agoj
 	
-	// Haste movi la ekranon al la dezirata vorto en la artikolo
+	/// Haste rulumi al la celata marko
 	private func saltiAlMarko(_ marko: String, animacii: Bool) {
-		
-		var sumo = 0
-		for subartikolo in artikolo.subartikoloj {
-			
-			if artikolo.subartikoloj.count > 1 { sumo += 1 }
-			
-			for vorto in subartikolo.vortoj {
-				
+		for (i, datumo) in cheloDatumoj.enumerated() {
+			switch datumo {
+			case .derivajho(let vorto):
 				if vorto.marko == marko {
-					
-					tabelo.scrollToRow(at: IndexPath(row: sumo, section: 0), at: .top, animated: animacii)
-					return
+					tabelo.scrollToRow(at: IndexPath(row: i, section: 0), at: .top, animated: animacii)
 				}
-				
-				sumo += 1
+			default:
+				break
 			}
 		}
 	}
 	
 	// MARK: Helpiloj
 	
+	/// Kreas datumojn pri prezentotaj ĉeloj laŭ la artikolo
 	private static func cheloDatumoj(el artikolo: Artikolo) -> [CheloDatumo] {
 		var datumoj: [CheloDatumo] = []
 		
@@ -173,20 +167,20 @@ extension ArtikoloViewController : TTTAttributedLabelDelegate {
 	// Ankaŭ esplorinda: https://stackoverflow.com/questions/22379595/uitextview-link-tap-recognition-is-delayed
 	func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
 		let marko = url.absoluteString
-		let partoj = marko.components(separatedBy: ".")
+		let markeroj = marko.components(separatedBy: ".")
 		
-		guard partoj.count > 1 else {
+		guard markeroj.count > 1 else {
 			return
 		}
 		
-		if partoj[0] == artikolo.indekso {
-			if partoj.count >= 2 {
-				saltiAlMarko(partoj[0] + "." + partoj[1], animacii: true)
-			}
+		if markeroj[0] == artikolo.indekso
+			&& markeroj.count >= 2 {
+			saltiAlMarko(markeroj[0] + "." + markeroj[1], animacii: true)
 		} else {
-			if let artikolo =  VortaroDatumbazo.komuna.artikolo(indekso: partoj[0]) {
-				let novaVC = kunordigilo.fariArtikoloPaghon(el: artikolo)
-				navigationController?.pushViewController(novaVC, animated: true)
+			if let artikolo = VortaroDatumbazo.komuna.artikolo(indekso: markeroj[0]),
+				let navigaciilo = navigationController {
+				kunordigilo.prezentiArtikoloPaghon(el: artikolo, prezentilo: navigaciilo)
+				// TODO: Salti ene de artikolo?
 			}
 		}
 	}
