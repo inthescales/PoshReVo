@@ -13,7 +13,10 @@ final class Kunordigilo {
 	
 	// MARK: Paĝo-kreado
 	
-	func fariLingvoElektilon(kompleti: @escaping ([Lingvo]) -> ()) -> UINavigationController {
+	func prezentiLingvoElektilon(
+		prezentilo: UINavigationController,
+		kompleti: @escaping ([Lingvo]) -> ()
+	) {
 		let navigaciilo = UINavigationController()
 		navigaciilo.navigationBar.isTranslucent = false
 		navigaciilo.navigationBar.backgroundColor = InterfacStilo.nuna.koloraFono // TODO: movi, korekti stilon
@@ -29,8 +32,9 @@ final class Kunordigilo {
 		)
 		
 		navigaciilo.viewControllers = [redaktilo]
+		navigaciilo.modalPresentationStyle = .fullScreen
 		
-		return navigaciilo
+		prezentilo.present(navigaciilo, animated: true)
 	}
 	
 	func prezentiArtikoloPaghon(el destino: Destino, prezentilo: UINavigationController) {

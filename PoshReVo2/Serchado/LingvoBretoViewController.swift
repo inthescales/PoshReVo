@@ -276,10 +276,12 @@ final class LingvoBretoViewController: UIViewController {
 	}
 	
 	@objc private func premisPli() {
-		let vc = kunordigilo.fariLingvoElektilon { [weak self] novajLingvoj in
+		guard let navigaciilo = navigationController else {
+			return
+		}
+		
+		kunordigilo.prezentiLingvoElektilon(prezentilo: navigaciilo) { [weak self] novajLingvoj in
 			self?.ghisdatigi(lingvojn: novajLingvoj)
 		}
-		vc.modalPresentationStyle = .fullScreen
-		navigationController?.present(vc, animated: true)
 	}
 }

@@ -126,6 +126,7 @@ final class SerchoViewController: UIViewController {
 	
 	// MARK: Serĉado
 	
+	/// Uzanto metis serĉ-parametrojn, tiel ke ni eble volas ekserĉi
 	private func farisPeton(teksto: String?, serchLingvo: Lingvo?) {
 		if let teksto,
 		   !teksto.isEmpty,
@@ -136,6 +137,7 @@ final class SerchoViewController: UIViewController {
 		}
 	}
 	
+	/// Fari serĉon laŭ la parametroj
 	private func fariSerchon(teksto: String, serchLingvo: Lingvo) {
 		let novaSercho = serchLingvo != lastaSercho?.0 || teksto != lastaSercho?.1
 		if novaSercho {
@@ -152,12 +154,14 @@ final class SerchoViewController: UIViewController {
 		}
 	}
 	
+	/// Nuligi serĉstaton
 	private func nuligiSerchon() {
 		serchStato = nil
 		lastaSercho = nil
 		rezultoTabelo.montri(listerojn: [])
 	}
 	
+	/// Venigi pli da serĉrezultoj, ekz kiam uzanto rulumis malsupren
 	private func venigiPli() {
 		if let stato = serchStato, !stato.atingisFinon {
 			let novaStato = VortaroDatumbazo.komuna.daurigiSerchon(
@@ -176,6 +180,7 @@ final class SerchoViewController: UIViewController {
 	
 	// MARK: Helpiloj
 	
+	/// Fari listerojn kiujn la tabelo montru
 	func tabeloListeroj(por stato: SerchStato) -> [VortoListoViewController.Listero] {
 		stato.rezultoj.map { rezulto in
 			VortoListoViewController.Listero(

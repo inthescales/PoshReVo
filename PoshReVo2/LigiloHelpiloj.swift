@@ -1,31 +1,44 @@
 import Foundation
 import UIKit
 
-// TODO: Reverki ĉion
 enum LigiloHelpiloj {
-	static let markoLigoKlavo = "ligo"
-	static let markoAkcentoKlavo = "akcento"
-	static let markoFortoKlavo = "forto"
-	static let markoSuperKlavo = "super"
-	static let markoSubKlavo = "sub"
+	private enum Klavoj {
+		static let ligo = "ligo"
+		static let akcento = "akcento"
+		static let forta = "forto"
+		static let supera = "super"
+		static let suba = "sub"
+	}
 	
-	/*
-		Legi la tekston kaj trovi markojn reprezentata de HTML kodoj.
-		Tiu trovos:
-			<i>...</i> por akcentaj tekstoj
-			<b>...</b> por fortaj tekstoj
-			<a href="...">...</a> por ligoj
+	enum TekstStilo {
+		case ligo
+		case akcento
+		case forta
+		case supera
+		case suba
+	}
 	
-		La rezulto estas aro de listo de trovajhoj, en la form do (komenca loko, fina loko, ligo-teksto)
-	*/
+	struct StiloMarko {
+		let komencIndekso: Int
+		let finIndekso: Int
+		let ligoTeksto: String?
+	}
+
+	/// Legi la tekston kaj trovi markojn en formo de HTML-kodoj.
+	/// Troviĝos:
+	///	<i>...</i> por akcentaj tekstoj
+	///	<b>...</b> por fortaj tekstoj
+	///	<a href="...">...</a> por ligoj
+	///
+	/// Liveras aron da listoj de trovajhoj, en la form de (komenca loko, fina loko, ligo-teksto)
 	static func troviMarkojn(teksto: String) -> [String : [(Int, Int, String)]] {
 		
 		var rez = [String : [(Int, Int, String)]]()
-		rez[markoAkcentoKlavo] = [(Int, Int, String)]()
-		rez[markoFortoKlavo] = [(Int, Int, String)]()
-		rez[markoLigoKlavo] = [(Int, Int, String)]()
-		rez[markoSuperKlavo] = [(Int, Int, String)]()
-		rez[markoSubKlavo] = [(Int, Int, String)]()
+		rez[Klavoj.akcento] = [(Int, Int, String)]()
+		rez[Klavoj.forta] = [(Int, Int, String)]()
+		rez[Klavoj.ligo] = [(Int, Int, String)]()
+		rez[Klavoj.supera] = [(Int, Int, String)]()
+		rez[Klavoj.suba] = [(Int, Int, String)]()
 		
 		let regesp = try! NSRegularExpression(pattern: "<(/?([ikbga]|sup|sub|frm))( (href|am)=\"(.*?)\")?>")
 		let matches = regesp.matches(in: teksto, range: NSRange(teksto.startIndex..., in: teksto))
@@ -48,7 +61,7 @@ enum LigiloHelpiloj {
 			}
 			else if klavo == "/i" || klavo == "/k" {
 				if let nombro = akcentoStako.popLast() {
-					rez[markoAkcentoKlavo]?.append((nombro, loko, ""))
+					rez[Klavoj.akcento]?.append((nombro, loko, ""))
 				}
 			}
 			else if klavo == "b" || klavo == "g" {
@@ -56,7 +69,7 @@ enum LigiloHelpiloj {
 			}
 			else if klavo == "/b" || klavo == "/g" {
 				if let nombro = fortoStako.popLast() {
-					rez[markoFortoKlavo]?.append((nombro, loko, ""))
+					rez[Klavoj.forta]?.append((nombro, loko, ""))
 				}
 			}
 			else if klavo == "sup" {
@@ -64,7 +77,7 @@ enum LigiloHelpiloj {
 			}
 			else if klavo == "/sup" {
 				if let nombro = superStako.popLast() {
-					rez[markoSuperKlavo]?.append((nombro, loko, ""))
+					rez[Klavoj.supera]?.append((nombro, loko, ""))
 				}
 			}
 			else if klavo == "sub" {
@@ -72,13 +85,13 @@ enum LigiloHelpiloj {
 			}
 			else if klavo == "/sub" {
 				if let nombro = subStako.popLast() {
-					rez[markoSubKlavo]?.append((nombro, loko, ""))
+					rez[Klavoj.suba]?.append((nombro, loko, ""))
 				}
 			}
 			else if klavo == "/a" {
 				if let ligo = ligoStako.popLast() {
 					let nombro = ligo.0, celo = ligo.1
-					rez[markoLigoKlavo]?.append((nombro, loko, celo))
+					rez[Klavoj.ligo]?.append((nombro, loko, celo))
 				}
 			}
 			else if klavo == "a" && match.numberOfRanges >= 4 {
@@ -167,13 +180,13 @@ enum LigiloHelpiloj {
 		mutaciaTeksto.addAttribute(.font, value: tekstStilo, range: NSMakeRange(0, mutaciaTeksto.length))
 		mutaciaTeksto.addAttribute(.foregroundColor, value: InterfacStilo.nuna.teksto, range: NSMakeRange(0, mutaciaTeksto.length)) // TODO: Injekcii stilon
 		
-		for akcentMarko in markoj[markoAkcentoKlavo]! {
+		for akcentMarko in markoj[Klavoj.akcento]! {
 			guard akcentMarko.0 >= 0 && akcentMarko.1 <= mutaciaTeksto.length else { continue }
 			
 			mutaciaTeksto.addAttribute(.font, value: akcentaTeksto, range: NSMakeRange(akcentMarko.0, akcentMarko.1 - akcentMarko.0))
 		}
 		
-		for fortMarko in markoj[markoFortoKlavo]! {
+		for fortMarko in markoj[Klavoj.forta]! {
 			guard fortMarko.0 >= 0 && fortMarko.1 <= mutaciaTeksto.length else { continue }
 			
 			var fortaRange = NSMakeRange(fortMarko.0, fortMarko.1 - fortMarko.0)
@@ -185,13 +198,13 @@ enum LigiloHelpiloj {
 			}
 		}
 		
-		for superMarko in markoj[markoSuperKlavo]! {
+		for superMarko in markoj[Klavoj.supera]! {
 			guard superMarko.0 >= 0 && superMarko.1 <= mutaciaTeksto.length else { continue }
 			
 			mutaciaTeksto.addAttribute(kCTSuperscriptAttributeName as NSAttributedString.Key, value: 2, range: NSMakeRange(superMarko.0, superMarko.1 - superMarko.0))
 		}
 
-		for subMarko in markoj[markoSubKlavo]! {
+		for subMarko in markoj[Klavoj.suba]! {
 			guard subMarko.0 >= 0 && subMarko.1 <= mutaciaTeksto.length else { continue }
 			
 			mutaciaTeksto.addAttribute(kCTSuperscriptAttributeName as NSAttributedString.Key, value: -2, range: NSMakeRange(subMarko.0, subMarko.1 - subMarko.0))
