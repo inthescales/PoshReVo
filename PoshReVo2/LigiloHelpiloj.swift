@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 
+// TODO: Reverki ĉion
 enum LigiloHelpiloj {
 	static let markoLigoKlavo = "ligo"
 	static let markoAkcentoKlavo = "akcento"
@@ -197,6 +198,5 @@ enum LigiloHelpiloj {
 		}
 		
 		return mutaciaTeksto
-		
 	}
 }

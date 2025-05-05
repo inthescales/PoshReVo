@@ -41,6 +41,10 @@ final class Kunordigilo {
 		return ArtikoloViewController(artikolo: artikolo)
 	}
 	
+	func fariArtikoloPaghon(el artikolo: Artikolo) -> ArtikoloViewController {
+		return ArtikoloViewController(artikolo: artikolo)
+	}
+	
 	func fariDisigiloPaghon(
 		por destinoj: [Destino],
 		elektis: @escaping (Destino) -> ()

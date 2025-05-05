@@ -37,6 +37,7 @@ final class ArtikoloViewController: UIViewController {
 	
 	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
+		tabelo.delegate = self
 		tabelo.dataSource = self
 		tabelo.register(
 			ArtikolTekstoChelo.self,
@@ -57,15 +58,19 @@ final class ArtikoloViewController: UIViewController {
 	
 	private let artikolo: Artikolo
 	
+	private let kunordigilo: Kunordigilo
+	
 	private var stilo: InterfacStilo
 	
 	//
 	
 	init(
 		artikolo: Artikolo,
+		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = .nuna
 	) {
 		self.artikolo = artikolo
+		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		self.cheloDatumoj = Self.cheloDatumoj(el: artikolo)
 		super.init(nibName: nil, bundle: nil)
@@ -109,6 +114,12 @@ final class ArtikoloViewController: UIViewController {
 	}
 }
 
+extension ArtikoloViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+		return nil
+	}
+}
+
 extension ArtikoloViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		cheloDatumoj.count
@@ -122,36 +133,38 @@ extension ArtikoloViewController: UITableViewDataSource {
 		
 		switch datumero {
 		case .derivajho(let vorto):
-			(chelo as? DerivajhoChelo)?.agordi(vorto: vorto, stilo: stilo)
+			(chelo as? DerivajhoChelo)?.agordi(vorto: vorto, liganto: self, stilo: stilo)
 		case .subartikolo(let subartikolo):
 			(chelo as? ArtikolTekstoChelo)?.agordi(teksto: subartikolo.teksto, stilo: stilo)
 		}
+		chelo.selectionStyle = .none
 		
 		return chelo
 	}
 }
 
-extension ArtikoloViewController: TTTAttributedLabelDelegate {
-	
-	// Uzanto premis ligilon - iri al la dezirata sekcio de la artikolo, au montri novan artikolon
-	func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL?) {
+extension ArtikoloViewController : TTTAttributedLabelDelegate {
+	// NOTU: Eblas aldoni ĉi tiun saman kapablon per UITextView anstataŭ TTTAttributedLabel.
+	// Vidu https://www.kodeco.com/2587-easily-overlooked-new-features-in-ios-7?page=4#toc-anchor-025
+	// TAMEN, mi ankoraŭ uzas TTT ĉar la ligado per tio estas multe pli rapida
+	// Ankaŭ esplorinda: https://stackoverflow.com/questions/22379595/uitextview-link-tap-recognition-is-delayed
+	func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
+		let marko = url.absoluteString
+		let partoj = marko.components(separatedBy: ".")
 		
-//		let marko = url?.absoluteString ?? ""
-//		let partoj = marko.components(separatedBy: ".")
-//		
-//		if partoj.count == 0 {
-//			return
-//		}
-//		
-//		if partoj[0] == artikolo?.indekso {
-//			if partoj.count >= 2 {
-//				saltiAlMarko(partoj[0] + "." + partoj[1], animacii: true)
-//			}
-//		} else {
-//			if let artikolo =  VortaroDatumbazo.komuna.artikolo(indekso: partoj[0]) {
-//				navigationItem.backBarButtonItem = UIBarButtonItem(title: self.artikolo?.titolo, style: .plain, target: nil, action: nil)
-//				(self.navigationController as? ChefaNavigationController)?.montriArtikolon(artikolo, marko: marko)
-//			}
-//		}
+		guard partoj.count > 1 else {
+			return
+		}
+		
+		if partoj[0] == artikolo.indekso {
+			if partoj.count >= 2 {
+				// saltiAlMarko(partoj[0] + "." + partoj[1], animacii: true)
+			}
+		} else {
+			if let artikolo =  VortaroDatumbazo.komuna.artikolo(indekso: partoj[0]) {
+				let novaVC = kunordigilo.fariArtikoloPaghon(el: artikolo)
+				navigationController?.pushViewController(novaVC, animated: true)
+			}
+		}
 	}
 }

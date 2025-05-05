@@ -446,10 +446,8 @@ extension ArtikoloViewController {
 // MARK: - TTTAttributedLabelDelegate
 
 extension ArtikoloViewController : TTTAttributedLabelDelegate {
-    
     // Uzanto premis ligilon - iri al la dezirata sekcio de la artikolo, au montri novan artikolon
     func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL?) {
-        
         let marko = url?.absoluteString ?? ""
         let partoj = marko.components(separatedBy: ".")
         

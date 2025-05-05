@@ -15,6 +15,7 @@ final class DerivajhoChelo: UITableViewCell {
 	private lazy var difinoEtikedo: TTTAttributedLabel = {
 		let etikedo = TTTAttributedLabel(frame: .zero)
 		etikedo.numberOfLines = 0
+		
 		return etikedo
 	}()
 	
@@ -27,12 +28,12 @@ final class DerivajhoChelo: UITableViewCell {
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
-		addSubview(titoloEtikedo)
+		contentView.addSubview(titoloEtikedo)
 		titoloEtikedo.snp.makeConstraints { make in
 			make.top.left.right.equalToSuperview()
 		}
 		
-		addSubview(difinoEtikedo)
+		contentView.addSubview(difinoEtikedo)
 		difinoEtikedo.snp.makeConstraints { make in
 			make.left.right.bottom.equalToSuperview()
 			make.top.equalTo(titoloEtikedo.snp.bottom)
@@ -45,32 +46,39 @@ final class DerivajhoChelo: UITableViewCell {
 	
 	// MARK: Agoj
 	
-	func agordi(vorto: Vorto, stilo: InterfacStilo) {
+	func agordi(
+		vorto: Vorto,
+		liganto: TTTAttributedLabelDelegate,
+		stilo: InterfacStilo
+	) {
 		self.stilo = stilo
 		
 		titoloEtikedo.text = vorto.titolo
 		titoloEtikedo.textColor = self.stilo?.teksto
 		
-		// difinoEtikedo.setText(prepari(teksto: vorto.teksto))
 		difinoEtikedo.textColor = self.stilo?.teksto
-		if let koloro = self.stilo?.ligilo {
+		difinoEtikedo.delegate = liganto
+		
+		//difinoTekstejo.delegate = liganto
+		
+		if let koloro = self.stilo?.ligilo,
+		   let aktivaKoloro = self.stilo?.koloraFono {
 			difinoEtikedo.linkAttributes = [
 				kCTForegroundColorAttributeName : koloro,
 				kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 			]
 			difinoEtikedo.activeLinkAttributes = [
-				kCTForegroundColorAttributeName : koloro,
+				kCTForegroundColorAttributeName : aktivaKoloro,
 				kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 			]
 		}
+		
 		prepari(teksto: vorto.teksto) // TODO: Renomi
 	}
 	
 	// MARK: Helpiloj
 	
 	func prepari(teksto: String) {
-		difinoEtikedo.text = LigiloHelpiloj.forigiAngulojn(teksto: teksto)
-		
 		let markoj = LigiloHelpiloj.troviMarkojn(teksto: teksto)
 		difinoEtikedo.setText(LigiloHelpiloj.pretigiTekston(teksto, kunMarkoj: markoj))
 		

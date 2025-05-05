@@ -18,7 +18,7 @@ class ArtikoloTableViewCell : UITableViewCell, Stilplena {
     
     var subart: Bool = false
     
-    func prepari(titolo: String, teksto: String) {
+	func prepari(titolo: String, teksto: String) {
         
         titolaEtikedo?.setText(titolo)
         titolaEtikedo?.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body);
