@@ -95,6 +95,29 @@ final class ArtikoloViewController: UIViewController {
 		}
 	}
 	
+	// MARK: Agoj
+	
+	// Haste movi la ekranon al la dezirata vorto en la artikolo
+	private func saltiAlMarko(_ marko: String, animacii: Bool) {
+		
+		var sumo = 0
+		for subartikolo in artikolo.subartikoloj {
+			
+			if artikolo.subartikoloj.count > 1 { sumo += 1 }
+			
+			for vorto in subartikolo.vortoj {
+				
+				if vorto.marko == marko {
+					
+					tabelo.scrollToRow(at: IndexPath(row: sumo, section: 0), at: .top, animated: animacii)
+					return
+				}
+				
+				sumo += 1
+			}
+		}
+	}
+	
 	// MARK: Helpiloj
 	
 	private static func cheloDatumoj(el artikolo: Artikolo) -> [CheloDatumo] {
@@ -158,7 +181,7 @@ extension ArtikoloViewController : TTTAttributedLabelDelegate {
 		
 		if partoj[0] == artikolo.indekso {
 			if partoj.count >= 2 {
-				// saltiAlMarko(partoj[0] + "." + partoj[1], animacii: true)
+				saltiAlMarko(partoj[0] + "." + partoj[1], animacii: true)
 			}
 		} else {
 			if let artikolo =  VortaroDatumbazo.komuna.artikolo(indekso: partoj[0]) {

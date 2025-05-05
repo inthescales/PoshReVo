@@ -59,8 +59,6 @@ final class DerivajhoChelo: UITableViewCell {
 		difinoEtikedo.textColor = self.stilo?.teksto
 		difinoEtikedo.delegate = liganto
 		
-		//difinoTekstejo.delegate = liganto
-		
 		if let koloro = self.stilo?.ligilo,
 		   let aktivaKoloro = self.stilo?.koloraFono {
 			difinoEtikedo.linkAttributes = [
