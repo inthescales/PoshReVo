@@ -78,7 +78,7 @@ final class DerivajhoChelo: UITableViewCell {
 	
 	func prepari(teksto: String) {
 		let markoj = LigiloHelpiloj.troviMarkojn(teksto: teksto)
-		difinoEtikedo.setText(LigiloHelpiloj.pretigiTekston(teksto, kunMarkoj: markoj))
+		difinoEtikedo.setText(LigiloHelpiloj.atributaTeksto(por: teksto, kun: markoj))
 		
 		let markoLigoKlavo = "ligo" // TODO: Faru alimaniere
 		for ligMarko in markoj[markoLigoKlavo]! {

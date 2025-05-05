@@ -4,16 +4,16 @@ import UIKit
 enum LigiloHelpiloj {
 	private enum Klavoj {
 		static let ligo = "ligo"
-		static let akcento = "akcento"
-		static let forta = "forto"
+		static let kursiva = "kursiva"
+		static let grasa = "grasa"
 		static let supera = "super"
 		static let suba = "sub"
 	}
 	
 	enum TekstStilo {
 		case ligo
-		case akcento
-		case forta
+		case kursiva
+		case grasa
 		case supera
 		case suba
 	}
@@ -26,16 +26,16 @@ enum LigiloHelpiloj {
 
 	/// Legi la tekston kaj trovi markojn en formo de HTML-kodoj.
 	/// Troviĝos:
-	///	<i>...</i> por akcentaj tekstoj
-	///	<b>...</b> por fortaj tekstoj
+	///	<i>...</i> por kursivaj tekstoj
+	///	<b>...</b> por grasaj tekstoj
 	///	<a href="...">...</a> por ligoj
 	///
 	/// Liveras aron da listoj de trovajhoj, en la form de (komenca loko, fina loko, ligo-teksto)
 	static func troviMarkojn(teksto: String) -> [String : [(Int, Int, String)]] {
 		
 		var rez = [String : [(Int, Int, String)]]()
-		rez[Klavoj.akcento] = [(Int, Int, String)]()
-		rez[Klavoj.forta] = [(Int, Int, String)]()
+		rez[Klavoj.kursiva] = [(Int, Int, String)]()
+		rez[Klavoj.grasa] = [(Int, Int, String)]()
 		rez[Klavoj.ligo] = [(Int, Int, String)]()
 		rez[Klavoj.supera] = [(Int, Int, String)]()
 		rez[Klavoj.suba] = [(Int, Int, String)]()
@@ -61,7 +61,7 @@ enum LigiloHelpiloj {
 			}
 			else if klavo == "/i" || klavo == "/k" {
 				if let nombro = akcentoStako.popLast() {
-					rez[Klavoj.akcento]?.append((nombro, loko, ""))
+					rez[Klavoj.kursiva]?.append((nombro, loko, ""))
 				}
 			}
 			else if klavo == "b" || klavo == "g" {
@@ -69,7 +69,7 @@ enum LigiloHelpiloj {
 			}
 			else if klavo == "/b" || klavo == "/g" {
 				if let nombro = fortoStako.popLast() {
-					rez[Klavoj.forta]?.append((nombro, loko, ""))
+					rez[Klavoj.grasa]?.append((nombro, loko, ""))
 				}
 			}
 			else if klavo == "sup" {
@@ -166,50 +166,68 @@ enum LigiloHelpiloj {
 	
 	// Pretigi NSAttributedString kun la akcentoj, fortaj regionoj, kaj ligoj kiujn uzas artikoloj ktp.
 	// Chi tiu funkciono uzas la rezultojn de la troviMarkojn funkcio
-	static func pretigiTekston(_ teksto: String, kunMarkoj markoj: [String : [(Int, Int, String)]] ) -> NSMutableAttributedString {
+	static func atributaTeksto(por teksto: String, kun markoj: [String : [(Int, Int, String)]] ) -> NSMutableAttributedString {
 		
-		let mutaciaTeksto: NSMutableAttributedString = NSMutableAttributedString(string: forigiAngulojn(teksto: teksto))
+		let atributaTeksto = NSMutableAttributedString(string: forigiAngulojn(teksto: teksto))
+		
+		// Prepari tekst-stilojn
 		let tekstGrandeco = UIFont.preferredFont(forTextStyle: .body).pointSize
 		let tekstStilo = UIFont.systemFont(ofSize: tekstGrandeco)
-		let fortaTeksto = UIFont.boldSystemFont(ofSize: tekstGrandeco)
-		let akcentaTeksto = UIFont.italicSystemFont(ofSize: tekstGrandeco)
-
-		let fortaAkcentaDescriptor = fortaTeksto.fontDescriptor.withSymbolicTraits([.traitItalic, .traitBold])!
-		let fortaAkcentaTeksto = UIFont(descriptor: fortaAkcentaDescriptor, size: tekstGrandeco)
+		let grasaStilo = UIFont.boldSystemFont(ofSize: tekstGrandeco)
+		let kursivaStilo = UIFont.italicSystemFont(ofSize: tekstGrandeco)
+		let grasKursivaTeksto = UIFont(
+			descriptor: grasaStilo.fontDescriptor.withSymbolicTraits([.traitItalic, .traitBold])!,
+			size: tekstGrandeco
+		)
 	
-		mutaciaTeksto.addAttribute(.font, value: tekstStilo, range: NSMakeRange(0, mutaciaTeksto.length))
-		mutaciaTeksto.addAttribute(.foregroundColor, value: InterfacStilo.nuna.teksto, range: NSMakeRange(0, mutaciaTeksto.length)) // TODO: Injekcii stilon
+		// Meti bazan tiparon kaj koloron
+		atributaTeksto.addAttribute(
+			.font,
+			value: tekstStilo,
+			range: NSMakeRange(0, atributaTeksto.length)
+		)
+		// TODO: Injekcii stilon
+		atributaTeksto.addAttribute(
+			.foregroundColor,
+			value: InterfacStilo.nuna.teksto,
+			range: NSMakeRange(0, atributaTeksto.length)
+		)
 		
-		for akcentMarko in markoj[Klavoj.akcento]! {
-			guard akcentMarko.0 >= 0 && akcentMarko.1 <= mutaciaTeksto.length else { continue }
+		for kursivaMarko in markoj[Klavoj.kursiva]! {
+			guard kursivaMarko.0 >= 0 && kursivaMarko.1 <= atributaTeksto.length else { continue }
 			
-			mutaciaTeksto.addAttribute(.font, value: akcentaTeksto, range: NSMakeRange(akcentMarko.0, akcentMarko.1 - akcentMarko.0))
+			atributaTeksto.addAttribute(
+				.font,
+				value: kursivaStilo,
+				range: NSMakeRange(kursivaMarko.0, kursivaMarko.1 - kursivaMarko.0)
+			)
 		}
 		
-		for fortMarko in markoj[Klavoj.forta]! {
-			guard fortMarko.0 >= 0 && fortMarko.1 <= mutaciaTeksto.length else { continue }
+		for grasaMarko in markoj[Klavoj.grasa]! {
+			guard grasaMarko.0 >= 0 && grasaMarko.1 <= atributaTeksto.length else { continue }
 			
-			var fortaRange = NSMakeRange(fortMarko.0, fortMarko.1 - fortMarko.0)
-			let attributes = mutaciaTeksto.attributes(at: fortMarko.0, effectiveRange: &fortaRange)
-			if attributes[.font] as! UIFont == akcentaTeksto {
-				mutaciaTeksto.addAttribute(.font, value: fortaAkcentaTeksto, range: NSMakeRange(fortMarko.0, fortMarko.1 - fortMarko.0))
+			var fortaRange = NSMakeRange(grasaMarko.0, grasaMarko.1 - grasaMarko.0)
+			let attributes = atributaTeksto.attributes(at: grasaMarko.0, effectiveRange: &fortaRange)
+			
+			if attributes[.font] as! UIFont == kursivaStilo {
+				atributaTeksto.addAttribute(.font, value: grasKursivaTeksto, range: NSMakeRange(grasaMarko.0, grasaMarko.1 - grasaMarko.0))
 			} else {
-				mutaciaTeksto.addAttribute(.font, value: fortaTeksto, range: NSMakeRange(fortMarko.0, fortMarko.1 - fortMarko.0))
+				atributaTeksto.addAttribute(.font, value: grasaStilo, range: NSMakeRange(grasaMarko.0, grasaMarko.1 - grasaMarko.0))
 			}
 		}
 		
 		for superMarko in markoj[Klavoj.supera]! {
-			guard superMarko.0 >= 0 && superMarko.1 <= mutaciaTeksto.length else { continue }
+			guard superMarko.0 >= 0 && superMarko.1 <= atributaTeksto.length else { continue }
 			
-			mutaciaTeksto.addAttribute(kCTSuperscriptAttributeName as NSAttributedString.Key, value: 2, range: NSMakeRange(superMarko.0, superMarko.1 - superMarko.0))
+			atributaTeksto.addAttribute(kCTSuperscriptAttributeName as NSAttributedString.Key, value: 2, range: NSMakeRange(superMarko.0, superMarko.1 - superMarko.0))
 		}
 
 		for subMarko in markoj[Klavoj.suba]! {
-			guard subMarko.0 >= 0 && subMarko.1 <= mutaciaTeksto.length else { continue }
+			guard subMarko.0 >= 0 && subMarko.1 <= atributaTeksto.length else { continue }
 			
-			mutaciaTeksto.addAttribute(kCTSuperscriptAttributeName as NSAttributedString.Key, value: -2, range: NSMakeRange(subMarko.0, subMarko.1 - subMarko.0))
+			atributaTeksto.addAttribute(kCTSuperscriptAttributeName as NSAttributedString.Key, value: -2, range: NSMakeRange(subMarko.0, subMarko.1 - subMarko.0))
 		}
 		
-		return mutaciaTeksto
+		return atributaTeksto
 	}
 }
