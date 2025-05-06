@@ -1,6 +1,8 @@
 import Foundation
 import UIKit
 
+import TTTAttributedLabel
+
 enum TekstAtributoHelpiloj {
 	private enum Klavoj {
 		static let ligo = "ligo"
@@ -44,16 +46,17 @@ enum TekstAtributoHelpiloj {
 		rez[Klavoj.suba] = [(Int, Int, String)]()
 		
 		let regesp = try! NSRegularExpression(pattern: "<(/?([ikbga]|sup|sub|frm))( (href|am)=\"(.*?)\")?>")
-		let matches = regesp.matches(in: teksto, range: NSRange(teksto.startIndex..., in: teksto))
+		let trovajhoj = regesp.matches(in: teksto, range: NSRange(teksto.startIndex..., in: teksto))
 		
-		var rubo = 0
+		var enangulajSignoj = 0 // Ni ignoru signojn ene de anguloj kiam ni kalkulas atributo-lokojn
 		var staplo: [(AtributSpeco, Int)] = []
-		for match in matches {
-			let range = match.range
-			let klavo = String(teksto[Range(match.range(at: 1), in: teksto)!])
-			let loko = range.location - rubo
+		for trovajho in trovajhoj {
+			let range = trovajho.range
+			let klavo = String(teksto[Range(trovajho.range(at: 1), in: teksto)!])
+			let loko = range.location - enangulajSignoj
 			
 			if klavo.first != "/" {
+				// etikedo komencas
 				switch klavo {
 				case "i", "k":
 					staplo.append((.kursiva, loko))
@@ -64,7 +67,7 @@ enum TekstAtributoHelpiloj {
 				case "sub":
 					staplo.append((.suba, loko))
 				case "a":
-					let ligLoko = match.range(at: 5)
+					let ligLoko = trovajho.range(at: 5)
 					if ligLoko.location != NSNotFound {
 						let ligCelo = String(teksto[Range(ligLoko, in: teksto)!])
 						staplo.append((.ligo(celo: ligCelo), loko))
@@ -73,6 +76,7 @@ enum TekstAtributoHelpiloj {
 					break
 				}
 			} else if let lasta = staplo.popLast() {
+				// etikedo finiĝas
 				switch klavo {
 				case "/i", "/k":
 					if staplo.contains(where: { $0.0 == .grasa }) {
@@ -98,7 +102,8 @@ enum TekstAtributoHelpiloj {
 					break
 				}
 			}
-			rubo += range.length
+			
+			enangulajSignoj += range.length
 		}
 		
 		return rez
@@ -237,5 +242,18 @@ enum TekstAtributoHelpiloj {
 		}
 		
 		return atributaTeksto
+	}
+	
+	/// Legas certajn HTML-ajn kodojn el la teksto, produktas tekst-atributojn laŭ ties instrukcio, kaj ŝarĝas la etikedon je tiuj
+	static func provizi(etikedon etikedo: TTTAttributedLabel, per teksto: String) {
+		let markoj = TekstAtributoHelpiloj.troviMarkojn(teksto: teksto)
+		etikedo.setText(TekstAtributoHelpiloj.atributaTeksto(por: teksto, kun: markoj))
+		
+		markoj[Klavoj.ligo]?.forEach { ligMarko in
+			etikedo.addLink(
+				to: URL(string: ligMarko.2),
+				with: NSMakeRange(ligMarko.0, ligMarko.1 - ligMarko.0)
+			)
+		}
 	}
 }

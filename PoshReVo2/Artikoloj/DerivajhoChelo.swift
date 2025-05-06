@@ -71,21 +71,6 @@ final class DerivajhoChelo: UITableViewCell {
 			]
 		}
 		
-		prepari(teksto: vorto.teksto) // TODO: Renomi
-	}
-	
-	// MARK: Helpiloj
-	
-	func prepari(teksto: String) {
-		let markoj = TekstAtributoHelpiloj.troviMarkojn(teksto: teksto)
-		difinoEtikedo.setText(TekstAtributoHelpiloj.atributaTeksto(por: teksto, kun: markoj))
-		
-		let markoLigoKlavo = "ligo" // TODO: Faru alimaniere
-		for ligMarko in markoj[markoLigoKlavo]! {
-			difinoEtikedo.addLink(
-				to: URL(string: ligMarko.2),
-				with: NSMakeRange(ligMarko.0, ligMarko.1 - ligMarko.0)
-			)
-		}
+		TekstAtributoHelpiloj.provizi(etikedon: difinoEtikedo, per: vorto.teksto)
 	}
 }
