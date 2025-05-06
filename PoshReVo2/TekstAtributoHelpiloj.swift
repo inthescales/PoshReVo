@@ -4,16 +4,8 @@ import UIKit
 import TTTAttributedLabel
 
 enum TekstAtributoHelpiloj {
-	private enum Klavoj {
-		static let ligo = "ligo"
-		static let kursiva = "kursiva"
-		static let grasa = "grasa"
-		static let grasKursiva = "grasKursiva"
-		static let supera = "super"
-		static let suba = "sub"
-	}
-	
-	enum AtributSpeco: Equatable {
+	/// Specoj de tekstatribuoj, aldoneblaj al ĉenoj
+	private enum AtributSpeco: Equatable {
 		case ligo(celo: String)
 		case kursiva
 		case grasa
@@ -22,28 +14,16 @@ enum TekstAtributoHelpiloj {
 		case suba
 	}
 	
-	struct Atributo {
+	/// Kazo de tekstatributo aldonota al ĉeno
+	private struct Atributo {
 		let speco: AtributSpeco
 		let komenco: Int
 		let fino: Int
 	}
 
-	/// Legi la tekston kaj trovi markojn en formo de HTML-kodoj.
-	/// Troviĝos:
-	///	<i>...</i> por kursivaj tekstoj
-	///	<b>...</b> por grasaj tekstoj
-	///	<a href="...">...</a> por ligoj
-	///
-	/// Liveras aron da listoj de trovajhoj, en la form de (komenca loko, fina loko, ligo-teksto)
-	static func troviMarkojn(teksto: String) -> [String : [(Int, Int, String)]] {
-		
-		var rez = [String : [(Int, Int, String)]]()
-		rez[Klavoj.kursiva] = [(Int, Int, String)]()
-		rez[Klavoj.grasa] = [(Int, Int, String)]()
-		rez[Klavoj.grasKursiva] = [(Int, Int, String)]()
-		rez[Klavoj.ligo] = [(Int, Int, String)]()
-		rez[Klavoj.supera] = [(Int, Int, String)]()
-		rez[Klavoj.suba] = [(Int, Int, String)]()
+	/// Liveras ĉiujn tekstatributojn aldonendajn al la ĉeno
+	private static func kreiAtributojn(por teksto: String) -> [Atributo] {
+		var atributoj: [Atributo] = []
 		
 		let regesp = try! NSRegularExpression(pattern: "<(/?([ikbga]|sup|sub|frm))( (href|am)=\"(.*?)\")?>")
 		let trovajhoj = regesp.matches(in: teksto, range: NSRange(teksto.startIndex..., in: teksto))
@@ -56,7 +36,7 @@ enum TekstAtributoHelpiloj {
 			let loko = range.location - enangulajSignoj
 			
 			if klavo.first != "/" {
-				// etikedo komencas
+				// etikedo komencas – notu ĝin
 				switch klavo {
 				case "i", "k":
 					staplo.append((.kursiva, loko))
@@ -76,99 +56,48 @@ enum TekstAtributoHelpiloj {
 					break
 				}
 			} else if let lasta = staplo.popLast() {
-				// etikedo finiĝas
-				switch klavo {
-				case "/i", "/k":
-					if staplo.contains(where: { $0.0 == .grasa }) {
-						rez[Klavoj.grasKursiva]?.append((lasta.1, loko, ""))
-					} else {
-						rez[Klavoj.kursiva]?.append((lasta.1, loko, ""))
-					}
-				case "/b", "/g":
-					if staplo.contains(where: { $0.0 == .kursiva }) {
-						rez[Klavoj.grasKursiva]?.append((lasta.1, loko, ""))
-					} else {
-						rez[Klavoj.grasa]?.append((lasta.1, loko, ""))
-					}
-				case "/sup":
-					rez[Klavoj.supera]?.append((lasta.1, loko, ""))
-				case "/sub":
-					rez[Klavoj.suba]?.append((lasta.1, loko, ""))
-				case "/a":
-					if case let .ligo(celo) = lasta.0 {
-						rez[Klavoj.ligo]?.append((lasta.1, loko, celo))
-					}
-				default:
-					break
+				// etikedo finiĝas – marki ĉi atributo-regionon
+				if ["/i", "/k"].contains(klavo)
+					&& staplo.contains(where: { $0.0 == .grasa }) {
+					
+					atributoj.append(Atributo(speco: .grasKursiva, komenco: lasta.1, fino: loko))
+				} else if ["/b", "/g"].contains(klavo)
+					&& staplo.contains(where: { $0.0 == .grasa }) {
+					
+					atributoj.append(Atributo(speco: .grasKursiva, komenco: lasta.1, fino: loko))
+				} else {
+					atributoj.append(Atributo(speco: lasta.0, komenco: lasta.1, fino: loko))
 				}
 			}
 			
 			enangulajSignoj += range.length
 		}
 		
-		return rez
+		return atributoj
 	}
 
 	/// Forigi la HTML kodojn el la teksto, por ke ĝi aperu nude
 	static func forigiAngulojn(teksto: String) -> String {
-		var rez: String = ""
-		var en: Bool = false
-		var enhavoj: String = ""
-		for literoScalar in teksto.unicodeScalars {
-			
-			let litero = String(literoScalar)
-			
-			if litero == "<" {
-				en = true
-				enhavoj.append(litero)
-			} else if litero == ">" {
-				en = false
-				enhavoj.append(litero)
-
-				do {
-					let regesp = try NSRegularExpression(pattern: "(<a href=\"(.*?)\">)|(<frm am=\".*?\">)", options: NSRegularExpression.Options())
-					let trovoj = regesp.matches(in: enhavoj, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, enhavoj.count))
-					if trovoj.count > 0 {
-						// Fari nenion
-					} else if enhavoj == "<i>"    ||
-							  enhavoj == "</i>"   ||
-							  enhavoj == "<k>"    ||
-							  enhavoj == "</k>"   ||
-							  enhavoj == "<b>"    ||
-							  enhavoj == "</b>"   ||
-							  enhavoj == "<g>"    ||
-							  enhavoj == "</g>"   ||
-							  enhavoj == "<sup>"  ||
-							  enhavoj == "</sup>" ||
-							  enhavoj == "<sub>"  ||
-							  enhavoj == "</sub>" ||
-							  enhavoj == "</a>" ||
-							  enhavoj == "<frm>" ||
-							  enhavoj == "</frm>" {
-								// Fari nenion
-					} else {
-						rez += enhavoj
-					}
-					
-					enhavoj = ""
-				} catch { }
-			} else if en {
-				enhavoj.append(litero)
-			} else {
-				rez.append(litero)
-			}
-		}
-		
-		return rez
+		let regesp = try! NSRegularExpression(
+			pattern: "<(/?([ikbga]|sup|sub|frm))( (href|am)=\"(.*?)\")?>"
+		)
+		return regesp.stringByReplacingMatches(
+			in: teksto,
+			range: NSMakeRange(0, teksto.count),
+			withTemplate: ""
+		)
 	}
 	
-	// Pretigi NSAttributedString kun la akcentoj, fortaj regionoj, kaj ligoj kiujn uzas artikoloj ktp.
-	// Chi tiu funkciono uzas la rezultojn de la troviMarkojn funkcio
-	static func atributaTeksto(por teksto: String, kun markoj: [String : [(Int, Int, String)]] ) -> NSMutableAttributedString {
+	/// Aldoni tekstatributojn al la ĉeno
+	private static func atributaTeksto(
+		por teksto: String,
+		kun atributoj: [Atributo]
+	) -> NSMutableAttributedString {
 		
 		let atributaTeksto = NSMutableAttributedString(string: forigiAngulojn(teksto: teksto))
 		
 		// Prepari tekst-stilojn
+		// TODO: Pliklarigi kie kaj kiel tiparo estas elektita kaj metita
 		let tekstGrandeco = UIFont.preferredFont(forTextStyle: .body).pointSize
 		let tekstStilo = UIFont.systemFont(ofSize: tekstGrandeco)
 		let grasaStilo = UIFont.boldSystemFont(ofSize: tekstGrandeco)
@@ -184,6 +113,7 @@ enum TekstAtributoHelpiloj {
 			value: tekstStilo,
 			range: NSMakeRange(0, atributaTeksto.length)
 		)
+		
 		// TODO: Injekcii stilon
 		atributaTeksto.addAttribute(
 			.foregroundColor,
@@ -191,54 +121,49 @@ enum TekstAtributoHelpiloj {
 			range: NSMakeRange(0, atributaTeksto.length)
 		)
 		
-		for kursivaMarko in markoj[Klavoj.kursiva]! {
-			guard kursivaMarko.0 >= 0 && kursivaMarko.1 <= atributaTeksto.length else { continue }
-			
-			atributaTeksto.addAttribute(
-				.font,
-				value: kursivaStilo,
-				range: NSMakeRange(kursivaMarko.0, kursivaMarko.1 - kursivaMarko.0)
-			)
-		}
-		
-		for grasaMarko in markoj[Klavoj.grasa]! {
-			guard grasaMarko.0 >= 0 && grasaMarko.1 <= atributaTeksto.length else { continue }
-			
-			atributaTeksto.addAttribute(
-				.font,
-				value: grasaStilo,
-				range: NSMakeRange(grasaMarko.0, grasaMarko.1 - grasaMarko.0)
-			)
-		}
-		
-		for grasKursivaMarko in markoj[Klavoj.grasKursiva]! {
-			guard grasKursivaMarko.0 >= 0 && grasKursivaMarko.1 <= atributaTeksto.length else { continue }
-			
-			atributaTeksto.addAttribute(
-				.font,
-				value: grasKursivaStilo,
-				range: NSMakeRange(grasKursivaMarko.0, grasKursivaMarko.1 - grasKursivaMarko.0)
-			)
-		}
-		
-		for superMarko in markoj[Klavoj.supera]! {
-			guard superMarko.0 >= 0 && superMarko.1 <= atributaTeksto.length else { continue }
-			
-			atributaTeksto.addAttribute(
-				kCTSuperscriptAttributeName as NSAttributedString.Key,
-				value: 2,
-				range: NSMakeRange(superMarko.0, superMarko.1 - superMarko.0)
-			)
-		}
+		for atributo in atributoj.reversed() {
+			guard atributo.komenco >= 0 && atributo.fino <= atributaTeksto.length else { continue }
 
-		for subMarko in markoj[Klavoj.suba]! {
-			guard subMarko.0 >= 0 && subMarko.1 <= atributaTeksto.length else { continue }
-			
-			atributaTeksto.addAttribute(
-				kCTSuperscriptAttributeName as NSAttributedString.Key,
-				value: -2,
-				range: NSMakeRange(subMarko.0, subMarko.1 - subMarko.0)
-			)
+			let regiono = NSMakeRange(atributo.komenco, atributo.fino - atributo.komenco)
+			switch atributo.speco {
+			case .kursiva:
+				atributaTeksto.addAttribute(
+					.font,
+					value: kursivaStilo,
+					range: regiono
+				)
+				
+			case .grasa:
+				atributaTeksto.addAttribute(
+					.font,
+					value: grasaStilo,
+					range: regiono
+				)
+				
+			case .grasKursiva:
+				atributaTeksto.addAttribute(
+					.font,
+					value: grasKursivaStilo,
+					range: regiono
+				)
+				
+			case .supera:
+				atributaTeksto.addAttribute(
+					kCTSuperscriptAttributeName as NSAttributedString.Key,
+					value: 2, // TODO: Kial "2"?
+					range: regiono
+				)
+				
+			case .suba:
+				atributaTeksto.addAttribute(
+					kCTSuperscriptAttributeName as NSAttributedString.Key,
+					value: -2, // TODO: Kial "-2"?
+					range: regiono
+				)
+			case .ligo:
+				// Ligoj aldoniĝos aliloke
+				break
+			}
 		}
 		
 		return atributaTeksto
@@ -246,14 +171,19 @@ enum TekstAtributoHelpiloj {
 	
 	/// Legas certajn HTML-ajn kodojn el la teksto, produktas tekst-atributojn laŭ ties instrukcio, kaj ŝarĝas la etikedon je tiuj
 	static func provizi(etikedon etikedo: TTTAttributedLabel, per teksto: String) {
-		let markoj = TekstAtributoHelpiloj.troviMarkojn(teksto: teksto)
-		etikedo.setText(TekstAtributoHelpiloj.atributaTeksto(por: teksto, kun: markoj))
+		let atributoj = TekstAtributoHelpiloj.kreiAtributojn(por: teksto)
+		etikedo.setText(TekstAtributoHelpiloj.atributaTeksto(por: teksto, kun: atributoj))
 		
-		markoj[Klavoj.ligo]?.forEach { ligMarko in
-			etikedo.addLink(
-				to: URL(string: ligMarko.2),
-				with: NSMakeRange(ligMarko.0, ligMarko.1 - ligMarko.0)
-			)
+		// Ŝajne ne eblas aldoni ligilojn kiel tekst-atributoj je TTTAttributedLabel.
+		// Kiam mi provis, la ligiloj funkciis, tamen mi ne sukcesis meti la ĝustajn kolorojn.
+		// Mi ne scias kial.
+		for atributo in atributoj {
+			if case let .ligo(celo) = atributo.speco {
+				etikedo.addLink(
+					to: URL(string: celo),
+					with: NSMakeRange(atributo.komenco, atributo.fino - atributo.komenco)
+				)
+			}
 		}
 	}
 }
