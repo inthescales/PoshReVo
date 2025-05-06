@@ -1,27 +1,29 @@
 import Foundation
 import UIKit
 
-enum LigiloHelpiloj {
+enum TekstAtributoHelpiloj {
 	private enum Klavoj {
 		static let ligo = "ligo"
 		static let kursiva = "kursiva"
 		static let grasa = "grasa"
+		static let grasKursiva = "grasKursiva"
 		static let supera = "super"
 		static let suba = "sub"
 	}
 	
-	enum TekstStilo {
-		case ligo
+	enum AtributSpeco: Equatable {
+		case ligo(celo: String)
 		case kursiva
 		case grasa
+		case grasKursiva
 		case supera
 		case suba
 	}
 	
-	struct StiloMarko {
-		let komencIndekso: Int
-		let finIndekso: Int
-		let ligoTeksto: String?
+	struct Atributo {
+		let speco: AtributSpeco
+		let komenco: Int
+		let fino: Int
 	}
 
 	/// Legi la tekston kaj trovi markojn en formo de HTML-kodoj.
@@ -36,6 +38,7 @@ enum LigiloHelpiloj {
 		var rez = [String : [(Int, Int, String)]]()
 		rez[Klavoj.kursiva] = [(Int, Int, String)]()
 		rez[Klavoj.grasa] = [(Int, Int, String)]()
+		rez[Klavoj.grasKursiva] = [(Int, Int, String)]()
 		rez[Klavoj.ligo] = [(Int, Int, String)]()
 		rez[Klavoj.supera] = [(Int, Int, String)]()
 		rez[Klavoj.suba] = [(Int, Int, String)]()
@@ -44,75 +47,65 @@ enum LigiloHelpiloj {
 		let matches = regesp.matches(in: teksto, range: NSRange(teksto.startIndex..., in: teksto))
 		
 		var rubo = 0
-		var ligoStako = [(Int, String)]()
-		var akcentoStako = [Int]()
-		var fortoStako = [Int]()
-		var superStako = [Int]()
-		var subStako = [Int]()
-		
+		var staplo: [(AtributSpeco, Int)] = []
 		for match in matches {
-			
 			let range = match.range
 			let klavo = String(teksto[Range(match.range(at: 1), in: teksto)!])
 			let loko = range.location - rubo
 			
-			if klavo == "i" || klavo == "k" {
-				akcentoStako.append(loko)
-			}
-			else if klavo == "/i" || klavo == "/k" {
-				if let nombro = akcentoStako.popLast() {
-					rez[Klavoj.kursiva]?.append((nombro, loko, ""))
+			if klavo.first != "/" {
+				switch klavo {
+				case "i", "k":
+					staplo.append((.kursiva, loko))
+				case "b", "g":
+					staplo.append((.grasa, loko))
+				case "sup":
+					staplo.append((.supera, loko))
+				case "sub":
+					staplo.append((.suba, loko))
+				case "a":
+					let ligLoko = match.range(at: 5)
+					if ligLoko.location != NSNotFound {
+						let ligCelo = String(teksto[Range(ligLoko, in: teksto)!])
+						staplo.append((.ligo(celo: ligCelo), loko))
+					}
+				default:
+					break
+				}
+			} else if let lasta = staplo.popLast() {
+				switch klavo {
+				case "/i", "/k":
+					if staplo.contains(where: { $0.0 == .grasa }) {
+						rez[Klavoj.grasKursiva]?.append((lasta.1, loko, ""))
+					} else {
+						rez[Klavoj.kursiva]?.append((lasta.1, loko, ""))
+					}
+				case "/b", "/g":
+					if staplo.contains(where: { $0.0 == .kursiva }) {
+						rez[Klavoj.grasKursiva]?.append((lasta.1, loko, ""))
+					} else {
+						rez[Klavoj.grasa]?.append((lasta.1, loko, ""))
+					}
+				case "/sup":
+					rez[Klavoj.supera]?.append((lasta.1, loko, ""))
+				case "/sub":
+					rez[Klavoj.suba]?.append((lasta.1, loko, ""))
+				case "/a":
+					if case let .ligo(celo) = lasta.0 {
+						rez[Klavoj.ligo]?.append((lasta.1, loko, celo))
+					}
+				default:
+					break
 				}
 			}
-			else if klavo == "b" || klavo == "g" {
-				fortoStako.append(loko)
-			}
-			else if klavo == "/b" || klavo == "/g" {
-				if let nombro = fortoStako.popLast() {
-					rez[Klavoj.grasa]?.append((nombro, loko, ""))
-				}
-			}
-			else if klavo == "sup" {
-				superStako.append(loko)
-			}
-			else if klavo == "/sup" {
-				if let nombro = superStako.popLast() {
-					rez[Klavoj.supera]?.append((nombro, loko, ""))
-				}
-			}
-			else if klavo == "sub" {
-				subStako.append(loko)
-			}
-			else if klavo == "/sub" {
-				if let nombro = subStako.popLast() {
-					rez[Klavoj.suba]?.append((nombro, loko, ""))
-				}
-			}
-			else if klavo == "/a" {
-				if let ligo = ligoStako.popLast() {
-					let nombro = ligo.0, celo = ligo.1
-					rez[Klavoj.ligo]?.append((nombro, loko, celo))
-				}
-			}
-			else if klavo == "a" && match.numberOfRanges >= 4 {
-				let ligLoko = match.range(at: 5)
-				if ligLoko.location != NSNotFound {
-					let ligCelo = String(teksto[Range(ligLoko, in: teksto)!])
-					ligoStako.append((loko, ligCelo))
-				}
-			} else {
-
-			}
-				
 			rubo += range.length
 		}
 		
 		return rez
 	}
 
-	// Forigi la HTML kodojn el la teksto, por ke ghi povu montriĝi nude
+	/// Forigi la HTML kodojn el la teksto, por ke ĝi aperu nude
 	static func forigiAngulojn(teksto: String) -> String {
-		
 		var rez: String = ""
 		var en: Bool = false
 		var enhavoj: String = ""
@@ -175,7 +168,7 @@ enum LigiloHelpiloj {
 		let tekstStilo = UIFont.systemFont(ofSize: tekstGrandeco)
 		let grasaStilo = UIFont.boldSystemFont(ofSize: tekstGrandeco)
 		let kursivaStilo = UIFont.italicSystemFont(ofSize: tekstGrandeco)
-		let grasKursivaTeksto = UIFont(
+		let grasKursivaStilo = UIFont(
 			descriptor: grasaStilo.fontDescriptor.withSymbolicTraits([.traitItalic, .traitBold])!,
 			size: tekstGrandeco
 		)
@@ -206,26 +199,41 @@ enum LigiloHelpiloj {
 		for grasaMarko in markoj[Klavoj.grasa]! {
 			guard grasaMarko.0 >= 0 && grasaMarko.1 <= atributaTeksto.length else { continue }
 			
-			var fortaRange = NSMakeRange(grasaMarko.0, grasaMarko.1 - grasaMarko.0)
-			let attributes = atributaTeksto.attributes(at: grasaMarko.0, effectiveRange: &fortaRange)
+			atributaTeksto.addAttribute(
+				.font,
+				value: grasaStilo,
+				range: NSMakeRange(grasaMarko.0, grasaMarko.1 - grasaMarko.0)
+			)
+		}
+		
+		for grasKursivaMarko in markoj[Klavoj.grasKursiva]! {
+			guard grasKursivaMarko.0 >= 0 && grasKursivaMarko.1 <= atributaTeksto.length else { continue }
 			
-			if attributes[.font] as! UIFont == kursivaStilo {
-				atributaTeksto.addAttribute(.font, value: grasKursivaTeksto, range: NSMakeRange(grasaMarko.0, grasaMarko.1 - grasaMarko.0))
-			} else {
-				atributaTeksto.addAttribute(.font, value: grasaStilo, range: NSMakeRange(grasaMarko.0, grasaMarko.1 - grasaMarko.0))
-			}
+			atributaTeksto.addAttribute(
+				.font,
+				value: grasKursivaStilo,
+				range: NSMakeRange(grasKursivaMarko.0, grasKursivaMarko.1 - grasKursivaMarko.0)
+			)
 		}
 		
 		for superMarko in markoj[Klavoj.supera]! {
 			guard superMarko.0 >= 0 && superMarko.1 <= atributaTeksto.length else { continue }
 			
-			atributaTeksto.addAttribute(kCTSuperscriptAttributeName as NSAttributedString.Key, value: 2, range: NSMakeRange(superMarko.0, superMarko.1 - superMarko.0))
+			atributaTeksto.addAttribute(
+				kCTSuperscriptAttributeName as NSAttributedString.Key,
+				value: 2,
+				range: NSMakeRange(superMarko.0, superMarko.1 - superMarko.0)
+			)
 		}
 
 		for subMarko in markoj[Klavoj.suba]! {
 			guard subMarko.0 >= 0 && subMarko.1 <= atributaTeksto.length else { continue }
 			
-			atributaTeksto.addAttribute(kCTSuperscriptAttributeName as NSAttributedString.Key, value: -2, range: NSMakeRange(subMarko.0, subMarko.1 - subMarko.0))
+			atributaTeksto.addAttribute(
+				kCTSuperscriptAttributeName as NSAttributedString.Key,
+				value: -2,
+				range: NSMakeRange(subMarko.0, subMarko.1 - subMarko.0)
+			)
 		}
 		
 		return atributaTeksto
