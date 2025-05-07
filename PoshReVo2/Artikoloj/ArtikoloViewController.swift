@@ -32,6 +32,17 @@ final class ArtikoloViewController: UIViewController {
 	
 	// MARK: Interfaceroj
 	
+	lazy var lupeoButono = {
+		let butono = UIBarButtonItem.init(
+			image: UIImage(named: "lupeo"),
+			style: .plain,
+			target: self,
+			action: #selector(Self.premisLupeon)
+		)
+		butono.tintColor = stilo.surkoloraTeksto
+		return butono
+	}()
+	
 	private lazy var titoloEtikedo: ArtikolTitoloView = {
 		let etikedo = ArtikolTitoloView(
 			artikolo: artikolo,
@@ -79,6 +90,8 @@ final class ArtikoloViewController: UIViewController {
 	
 	private let artikolo: Artikolo
 	
+	private let aperis: (() -> ())?
+	
 	private let kunordigilo: Kunordigilo
 	
 	private var stilo: InterfacStilo
@@ -88,11 +101,13 @@ final class ArtikoloViewController: UIViewController {
 	init(
 		artikolo: Artikolo,
 		tradukLingvoj: [Lingvo] = [],
+		aperis: (() -> ())?,
 		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = .nuna
 	) {
 		self.artikolo = artikolo
 		self.tradukLingvoj = tradukLingvoj
+		self.aperis = aperis
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		
@@ -118,6 +133,24 @@ final class ArtikoloViewController: UIViewController {
 			make.left.right.bottom.equalToSuperview()
 			make.top.equalTo(titoloEtikedo.snp.bottom)
 		}
+		
+		navigationItem.rightBarButtonItem = lupeoButono
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		aperis?()
+	}
+	
+	// MARK: Uzantaj agoj
+	
+	@objc private func premisLupeon() {
+		guard let navigaciilo = navigationController else {
+			return
+		}
+		
+		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo)
 	}
 	
 	// MARK: Agoj

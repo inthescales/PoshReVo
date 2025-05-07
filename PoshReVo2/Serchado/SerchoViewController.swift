@@ -58,6 +58,9 @@ final class SerchoViewController: UIViewController {
 	
 	// MARK: Agordoj
 	
+	/// Ĉu ĉi-paĝo komencis serĉfadenon
+	let radika: Bool
+	
 	private var kunordigilo: Kunordigilo
 	
 	private var stilo: InterfacStilo
@@ -66,9 +69,11 @@ final class SerchoViewController: UIViewController {
 	
 	init(
 		serchLingvoj: [Lingvo],
+		radika: Bool = false,
 		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = .nuna
 	) {
+		self.radika = radika
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)

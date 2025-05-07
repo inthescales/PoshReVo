@@ -44,13 +44,22 @@ final class Kunordigilo {
 		
 		let vc = ArtikoloViewController(
 			artikolo: artikolo,
-			tradukLingvoj: uzantDatumaro.lingvoj
+			tradukLingvoj: uzantDatumaro.lingvoj,
+			aperis: { [weak self] in
+				self?.purigi(prezentilon: prezentilo)
+			}
 		)
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
 	func prezentiArtikoloPaghon(el artikolo: Artikolo, prezentilo: UINavigationController) {
-		let vc = ArtikoloViewController(artikolo: artikolo)
+		let vc = ArtikoloViewController(
+			artikolo: artikolo,
+			tradukLingvoj: uzantDatumaro.lingvoj,
+			aperis: { [weak self] in
+				self?.purigi(prezentilon: prezentilo)
+			}
+		)
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
@@ -75,5 +84,28 @@ final class Kunordigilo {
 		disigilo.montri(listerojn: listeroj)
 		
 		prezentilo.pushViewController(disigilo, animated: true)
+	}
+	
+	func prezentiSerchPaghon(prezentilo: UINavigationController, radika: Bool = false) {
+		let serchilo = SerchoViewController(
+			serchLingvoj: uzantDatumaro.lingvoj,
+			radika: radika
+		)
+		prezentilo.pushViewController(
+			serchilo,
+			animated: true
+		)
+	}
+	
+	// MARK: Helpiloj
+	
+	private func purigi(prezentilon prezentilo: UINavigationController) {
+		prezentilo.viewControllers = prezentilo.viewControllers.filter { vc in
+			if let serchilo = vc as? SerchoViewController {
+				return serchilo.radika
+			}
+			
+			return true
+		}
 	}
 }
