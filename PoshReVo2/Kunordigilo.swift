@@ -99,10 +99,17 @@ final class Kunordigilo {
 	
 	// MARK: Helpiloj
 	
+	/// Forigi kromajn serĉpaĝojn en la staplo da view controller-oj.
+	/// Serĉilo restos se ĝi 1) estas la originala 'radika' serĉilo, aŭ 2) ĝi estas la plej lasta, starante antaŭ nune montrata artikolo
 	private func purigi(prezentilon prezentilo: UINavigationController) {
+		guard prezentilo.viewControllers.count >= 2 else {
+			return
+		}
+		
+		let antaulasta = prezentilo.viewControllers[prezentilo.viewControllers.count - 2]
 		prezentilo.viewControllers = prezentilo.viewControllers.filter { vc in
 			if let serchilo = vc as? SerchoViewController {
-				return serchilo.radika
+				return serchilo.radika || serchilo == antaulasta
 			}
 			
 			return true
