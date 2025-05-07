@@ -42,7 +42,10 @@ final class Kunordigilo {
 			fatalError("Artikolo ne ekzistas") // TODO: Ŝanĝi tion ĉi
 		}
 		
-		let vc = ArtikoloViewController(artikolo: artikolo)
+		let vc = ArtikoloViewController(
+			artikolo: artikolo,
+			tradukLingvoj: uzantDatumaro.lingvoj
+		)
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	

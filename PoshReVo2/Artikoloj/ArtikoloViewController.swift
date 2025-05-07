@@ -9,11 +9,14 @@ final class ArtikoloViewController: UIViewController {
 		static let subartikoloChelIdentigilo = "subartikoloChelo"
 		
 		static let derivajhoChelIdentigilo = "derivajhoChelo"
+		
+		static let tradukoChelIdentigilo = "tradukoChelo"
 	}
 	
 	private enum CheloDatumo {
 		case subartikolo(Subartikolo)
 		case derivajho(Vorto)
+		case traduko(Traduko)
 		
 		var identigilo: String {
 			switch self {
@@ -21,6 +24,8 @@ final class ArtikoloViewController: UIViewController {
 				return Konstantoj.subartikoloChelIdentigilo
 			case .derivajho:
 				return Konstantoj.derivajhoChelIdentigilo
+			case .traduko:
+				return Konstantoj.tradukoChelIdentigilo
 			}
 		}
 	}
@@ -47,12 +52,28 @@ final class ArtikoloViewController: UIViewController {
 			DerivajhoChelo.self,
 			forCellReuseIdentifier: Konstantoj.derivajhoChelIdentigilo
 		)
+		tabelo.register(
+			TradukoChelo.self,
+			forCellReuseIdentifier: Konstantoj.tradukoChelIdentigilo
+		)
 		return tabelo
 	}()
 	
 	// MARK: Stato
 	
 	private var cheloDatumoj: [CheloDatumo]
+	
+	private var tradukoj: [Traduko] {
+		tradukLingvoj.compactMap { lingvo in
+			artikolo.tradukoj.first(where: { $0.lingvo == lingvo })
+		}
+	}
+	
+	private var tradukLingvoj: [Lingvo] {
+		didSet {
+			tabelo.reloadData()
+		}
+	}
 	
 	// MARK: Agordoj
 	
@@ -66,13 +87,17 @@ final class ArtikoloViewController: UIViewController {
 	
 	init(
 		artikolo: Artikolo,
+		tradukLingvoj: [Lingvo] = [],
 		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = .nuna
 	) {
 		self.artikolo = artikolo
+		self.tradukLingvoj = tradukLingvoj
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
+		
 		self.cheloDatumoj = Self.cheloDatumoj(el: artikolo)
+		
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -132,6 +157,10 @@ final class ArtikoloViewController: UIViewController {
 }
 
 extension ArtikoloViewController: UITableViewDelegate {
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return 2
+	}
+	
 	func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
 		return nil
 	}
@@ -139,11 +168,35 @@ extension ArtikoloViewController: UITableViewDelegate {
 
 extension ArtikoloViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		cheloDatumoj.count
+		switch section {
+		case 0:
+			return cheloDatumoj.count
+		case 1:
+			return tradukoj.count
+		default:
+			return 0
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		if section == 1 {
+			return UITableView.automaticDimension
+		} else {
+			return 0
+		}
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let datumero = cheloDatumoj[indexPath.row]
+		let datumero: CheloDatumo
+		switch indexPath.section {
+		case 0:
+			datumero = cheloDatumoj[indexPath.row]
+		case 1:
+			datumero = .traduko(tradukoj[indexPath.row])
+		default:
+			fatalError("Malsukcesis identigi chelodatumojn")
+		}
+		
 		guard let chelo = tabelo.dequeueReusableCell(withIdentifier: datumero.identigilo) else {
 			fatalError("Malsukcesis krei ĉelon")
 		}
@@ -153,10 +206,43 @@ extension ArtikoloViewController: UITableViewDataSource {
 			(chelo as? DerivajhoChelo)?.agordi(vorto: vorto, liganto: self, stilo: stilo)
 		case .subartikolo(let subartikolo):
 			(chelo as? ArtikolTekstoChelo)?.agordi(teksto: subartikolo.teksto, stilo: stilo)
+		case .traduko(let traduko):
+			(chelo as? TradukoChelo)?.agordi(traduko: traduko, liganto: self, stilo: stilo)
 		}
+		
 		chelo.selectionStyle = .none
 		
 		return chelo
+	}
+	
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		if section == 1 {
+			return TradukojKapoView()
+		} else {
+			return nil
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+		if section == 1 {
+			return TradukojPiedoView(
+				ago: { [weak self] in
+					guard let self,
+						  let navigaciilo = navigationController else {
+						return
+					}
+					
+					kunordigilo.prezentiLingvoElektilon(
+						prezentilo: navigaciilo,
+						kompleti: { [weak self] lingvoj in
+							self?.tradukLingvoj = lingvoj
+						})
+				}
+				,stilo: stilo
+			)
+		} else {
+			return nil
+		}
 	}
 }
 

@@ -15,4 +15,6 @@ enum Tekstoj {
 	
 	static let rezigni = "Rezigni"
 	static let fini = "Fini"
+	
+	static let montriPliajnLingvoj = "Montri Pliajn Lingvojn"
 }
