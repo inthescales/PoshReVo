@@ -29,6 +29,7 @@ final class TradukojPiedoView: UICollectionReusableView {
 		self.stilo = stilo
 		super.init(frame: .zero)
 		
+		backgroundColor = self.stilo.senkoloraFono
 		addEdgeMatchedSubview(butono)
 	}
 	

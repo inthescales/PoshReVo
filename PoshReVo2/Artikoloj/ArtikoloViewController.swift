@@ -135,6 +135,12 @@ final class ArtikoloViewController: UIViewController {
 		}
 		
 		navigationItem.rightBarButtonItem = lupeoButono
+		
+		let butono = UIButton(type: .system)
+		butono.addTarget(self, action: #selector(premisHejmon), for: .touchUpInside)
+		butono.setImage(UIImage(named: "libro")!, for: .normal)
+		butono.tintColor = InterfacStilo.nuna.senkoloraFono // TODO: Ŝanĝi
+		navigationItem.titleView = butono
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -151,6 +157,10 @@ final class ArtikoloViewController: UIViewController {
 		}
 		
 		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo)
+	}
+	
+	@objc private func premisHejmon() {
+		navigationController?.popToRootViewController(animated: true)
 	}
 	
 	// MARK: Agoj
@@ -211,14 +221,6 @@ extension ArtikoloViewController: UITableViewDataSource {
 		}
 	}
 	
-	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		if section == 1 {
-			return UITableView.automaticDimension
-		} else {
-			return 0
-		}
-	}
-	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let datumero: CheloDatumo
 		switch indexPath.section {
@@ -275,6 +277,22 @@ extension ArtikoloViewController: UITableViewDataSource {
 			)
 		} else {
 			return nil
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		if section == 1 {
+			return UITableView.automaticDimension
+		} else {
+			return 0
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+		if section == 1 {
+			return UITableView.automaticDimension
+		} else {
+			return 0
 		}
 	}
 }
