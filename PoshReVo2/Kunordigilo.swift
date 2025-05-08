@@ -7,10 +7,13 @@ final class Kunordigilo {
 	
 	// MARK: Sub-kunordigiloj
 	
-	lazy var vortListoj = VortListoKunordigilo { [weak self] destino, prezentilo in
-		guard let self else { return }
-		prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
-	}
+	lazy var vortListoj: VortListoKunordigilo = {
+		let kunordigilo = VortListoKunordigilo(
+			prezentiArtikolon: prezentiArtikoloPaghon,
+			prezentiArtikolonElDestino: prezentiArtikoloPaghon
+		)
+		return kunordigilo
+	}()
 	
 	// MARK: Agordoj
 	

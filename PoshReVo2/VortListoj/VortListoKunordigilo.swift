@@ -5,18 +5,28 @@ import ReVoDatumbazo
 final class VortListoKunordigilo {
 	// MARK: Agordoj
 	
-	let prezentiArtikolon: (Destino, UINavigationController) -> ()
+	let prezentiArtikolon: (Artikolo, UINavigationController) -> ()
+	
+	let prezentiArtikolonElDestino: (Destino, UINavigationController) -> ()
+	
+	let datumbazo: VortaroDatumbazo
 	
 	//
 	
-	init(prezentiArtikolon: @escaping (Destino, UINavigationController) -> ()) {
+	init(
+		prezentiArtikolon: @escaping (Artikolo, UINavigationController) -> (),
+		prezentiArtikolonElDestino: @escaping (Destino, UINavigationController) -> (),
+		datumbazo: VortaroDatumbazo = .komuna
+	) {
 		self.prezentiArtikolon = prezentiArtikolon
+		self.prezentiArtikolonElDestino = prezentiArtikolonElDestino
+		self.datumbazo = datumbazo
 	}
 	
 	// MARK: Fakoj
 	
 	func prezentiFakoListon(prezentilo: UINavigationController) {
-		let listeroj = VortaroDatumbazo.komuna.chiujFakoj.map { fako in
+		let listeroj = datumbazo.chiujFakoj.map { fako in
 			KategoriaViewController.Listero(
 				teksto: fako.nomo,
 				celPagho: { [unowned self] in
@@ -39,10 +49,10 @@ final class VortListoKunordigilo {
 				return
 			}
 			
-			prezentiArtikolon(celo, prezentilo)
+			prezentiArtikolonElDestino(celo, prezentilo)
 		}
 		
-		let destinoj = VortaroDatumbazo.komuna.fakVortoj(fako: fako.kodo)
+		let destinoj = datumbazo.fakVortoj(fako: fako.kodo)
 		vc.montri(listerojn: destinoj.map {
 			VortoListoViewController.Listero(
 				teksto: $0.teksto,
@@ -57,7 +67,7 @@ final class VortListoKunordigilo {
 	// MARK: Oficialecoj
 	
 	func prezentiOficialecoListon(prezentilo: UINavigationController) {
-		let listeroj = VortaroDatumbazo.komuna.chiujOficialecoj.map { ofc in
+		let listeroj = datumbazo.chiujOficialecoj.map { ofc in
 			KategoriaViewController.Listero(
 				teksto: ofc.nomo,
 				celPagho: { [unowned self] in
@@ -80,10 +90,10 @@ final class VortListoKunordigilo {
 				return
 			}
 			
-			prezentiArtikolon(celo, prezentilo)
+			prezentiArtikolonElDestino(celo, prezentilo)
 		}
 		
-		let destinoj = VortaroDatumbazo.komuna.ofcVortoj(oficialeco: ofc.kodo)
+		let destinoj = datumbazo.ofcVortoj(oficialeco: ofc.kodo)
 		vc.montri(listerojn: destinoj.map {
 			VortoListoViewController.Listero(
 				teksto: $0.teksto,
@@ -93,5 +103,12 @@ final class VortListoKunordigilo {
 		})
 		
 		return vc
+	}
+	
+	// MARK: Alia
+	
+	func prezentiHazardanArtikolon(prezentilo: UINavigationController) {
+		guard let artikolo = datumbazo.iuAjnArtikolo() else { return }
+		prezentiArtikolon(artikolo, prezentilo)
 	}
 }
