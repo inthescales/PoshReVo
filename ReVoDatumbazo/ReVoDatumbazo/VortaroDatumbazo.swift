@@ -104,7 +104,7 @@ public final class VortaroDatumbazo {
     }
 	
 	/// Ĉiuj oficialecoj
-	public lazy var chiujOficialecoj: [Oficialeco]? = {
+	public lazy var chiujOficialecoj: [Oficialeco] = {
         alirilo.chiujOficialecoj().compactMap { objekto in
             Oficialeco.el(objekto)
         }.sorted { (lhs, rhs) -> Bool in
