@@ -38,6 +38,7 @@
 		00B27B372DCAC35C00526F82 /* TradukojKapoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B362DCAC35C00526F82 /* TradukojKapoView.swift */; };
 		00B27B392DCAC42300526F82 /* TradukojPiedoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B382DCAC42300526F82 /* TradukojPiedoView.swift */; };
 		00B27B3B2DCBBC6600526F82 /* TradukoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3A2DCBBC6600526F82 /* TradukoChelo.swift */; };
+		00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3C2DCC040800526F82 /* Avizoj.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		00B27B362DCAC35C00526F82 /* TradukojKapoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukojKapoView.swift; sourceTree = "<group>"; };
 		00B27B382DCAC42300526F82 /* TradukojPiedoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukojPiedoView.swift; sourceTree = "<group>"; };
 		00B27B3A2DCBBC6600526F82 /* TradukoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukoChelo.swift; sourceTree = "<group>"; };
+		00B27B3C2DCC040800526F82 /* Avizoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avizoj.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */,
 				00B27B292DC7CF8B00526F82 /* Artikoloj */,
 				00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */,
+				00B27B3C2DCC040800526F82 /* Avizoj.swift */,
 				00B27B182DC2800500526F82 /* Risurcoj */,
 			);
 			path = PoshReVo2;
@@ -343,6 +346,7 @@
 			files = (
 				00B27B1C2DC2B0DE00526F82 /* LingvaroRedaktiloViewController.swift in Sources */,
 				00B27B0F2DC2648200526F82 /* LingvoElektiloViewController.swift in Sources */,
+				00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */,
 				00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */,
 				00B27B312DC81C0400526F82 /* ArtikolTekstoChelo.swift in Sources */,
 				00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */,

@@ -120,6 +120,10 @@ final class ArtikoloViewController: UIViewController {
 		fatalError("init(coder:) ne realas")
 	}
 	
+	deinit {
+		NotificationCenter.default.removeObserver(self)
+	}
+	
 	override func viewDidLoad() {
 		view.backgroundColor = stilo.senkoloraFono
 		
@@ -141,6 +145,13 @@ final class ArtikoloViewController: UIViewController {
 		butono.setImage(UIImage(named: "libro")!, for: .normal)
 		butono.tintColor = InterfacStilo.nuna.senkoloraFono // TODO: Ŝanĝi
 		navigationItem.titleView = butono
+		
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(lingvojShanghighis(_:)),
+			name: Avizoj.uzantajLingvojShanghighis,
+			object: nil
+		)
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -161,6 +172,13 @@ final class ArtikoloViewController: UIViewController {
 	
 	@objc private func premisHejmon() {
 		navigationController?.popToRootViewController(animated: true)
+	}
+	
+	// MARK: Avizoj
+	
+	@objc private func lingvojShanghighis(_ avizo: Notification) {
+		guard let lingvoj = avizo.object as? [Lingvo] else { return }
+		tradukLingvoj = lingvoj
 	}
 	
 	// MARK: Agoj
@@ -267,7 +285,7 @@ extension ArtikoloViewController: UITableViewDataSource {
 						return
 					}
 					
-					kunordigilo.prezentiLingvoElektilon(
+					kunordigilo.prezentiLingvoRedaktilon(
 						prezentilo: navigaciilo,
 						kompleti: { [weak self] lingvoj in
 							self?.tradukLingvoj = lingvoj

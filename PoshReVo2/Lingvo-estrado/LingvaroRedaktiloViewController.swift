@@ -52,7 +52,11 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	
 	let kompleti: ([Lingvo]) -> ()
 	
-	init(lingvaro: [Lingvo], kompleti: @escaping ([Lingvo]) -> (), stilo: InterfacStilo = .nuna) {
+	init(
+		lingvaro: [Lingvo],
+		kompleti: @escaping ([Lingvo]) -> (),
+		stilo: InterfacStilo = .nuna
+	) {
 		self.lingvaro = lingvaro
 		self.kompleti = kompleti
 		self.stilo = stilo

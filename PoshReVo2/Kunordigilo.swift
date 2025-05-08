@@ -11,9 +11,26 @@ final class Kunordigilo {
 		self.uzantDatumaro = uzantDatumaro
 	}
 	
+	// MARK: Interfaceroj
+	
+	func fariLingvoBreton(
+		elektisLingvon: @escaping (Lingvo) -> (),
+		redaktisLingvojn: @escaping([Lingvo]) -> ()
+	) -> LingvoBretoViewController {
+		return LingvoBretoViewController(
+			elektisLingvon: { [weak self] lingvo in
+				self?.uzantDatumaro.elektis(lingvon: lingvo)
+				elektisLingvon(lingvo)
+			},
+			redaktisLingvojn: { lingvoj in
+				redaktisLingvojn(lingvoj)
+			}
+		)
+	}
+	
 	// MARK: Paĝo-kreado
 	
-	func prezentiLingvoElektilon(
+	func prezentiLingvoRedaktilon(
 		prezentilo: UINavigationController,
 		kompleti: @escaping ([Lingvo]) -> ()
 	) {
@@ -24,8 +41,8 @@ final class Kunordigilo {
 		
 		let redaktilo = LingvaroRedaktiloViewController(
 			lingvaro: uzantDatumaro.lingvoj,
-			kompleti: { [unowned self] novaj in
-				uzantDatumaro.redaktisLingvojn(novaj: novaj)
+			kompleti: { [weak self] novaj in
+				self?.uzantDatumaro.redaktisLingvojn(novaj: novaj)
 				kompleti(novaj)
 				navigaciilo.dismiss(animated: true)
 			}

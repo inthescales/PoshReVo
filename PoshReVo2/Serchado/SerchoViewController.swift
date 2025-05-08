@@ -19,8 +19,7 @@ final class SerchoViewController: UIViewController {
 	)
 	
 	private lazy var lingvoBreto: LingvoBretoViewController = {
-		LingvoBretoViewController(
-			lingvoj: [],
+		kunordigilo.fariLingvoBreton(
 			elektisLingvon: { [weak self] lingvo in
 				self?.farisPeton(teksto: self?.serchTeksto, serchLingvo: lingvo)
 			},
@@ -77,12 +76,14 @@ final class SerchoViewController: UIViewController {
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
-		
-		lingvoBreto.ghisdatigi(lingvojn: serchLingvoj)
 	}
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) ne realas")
+	}
+	
+	deinit {
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 	override func viewDidLoad() {
@@ -106,6 +107,30 @@ final class SerchoViewController: UIViewController {
 			make.top.equalTo(lingvoBreto.view.snp.bottom)
 			make.left.right.bottom.equalToSuperview()
 		}
+		
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(lingvoAvizo(_:)),
+			name: Avizoj.elektitaLingvoShanghighis,
+			object: nil
+		)
+		
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(lingvaroAvizo(_:)),
+			name: Avizoj.uzantajLingvojShanghighis,
+			object: nil
+		)
+	}
+	
+	@objc func lingvoAvizo(_ avizo: Notification) {
+		guard let elektita = avizo.object as? Lingvo else { return }
+		lingvoBreto.ghisdatigi(elektitan: elektita)
+	}
+	
+	@objc func lingvaroAvizo(_ avizo: Notification) {
+		guard let lingvaro = avizo.object as? [Lingvo] else { return }
+		lingvoBreto.ghisdatigi(lingvaron: lingvaro)
 	}
 	
 	// MARK: Interagado

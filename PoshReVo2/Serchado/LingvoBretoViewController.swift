@@ -67,13 +67,17 @@ final class LingvoBretoViewController: UIViewController {
 	
 	// MARK: Stato
 	
-	var elektita: Lingvo?
+	private(set) var elektita: Lingvo {
+		didSet {
+			renovigiInterfacon()
+		}
+	}
 	
-	private var lingvoj: [Lingvo]
+	private(set) var lingvoj: [Lingvo]
 	
 	/// La indekso de la nune elektita lingvo
 	private var elektitaIndekso: Int? {
-		elektita.flatMap { lingvoj.firstIndex(of: $0) }
+		lingvoj.firstIndex(of: elektita)
 	}
 	
 	// MARK: Agordoj
@@ -89,19 +93,37 @@ final class LingvoBretoViewController: UIViewController {
 	//
 	
 	init(
+		elektitaLingvo: Lingvo,
 		lingvoj: [Lingvo],
 		elektisLingvon: @escaping  (Lingvo) -> (),
 		redaktisLingvojn: @escaping ([Lingvo]) -> (),
-		kunordigilo: Kunordigilo = .komuna,
-		stilo: InterfacStilo = .nuna
+		kunordigilo: Kunordigilo,
+		stilo: InterfacStilo
 	) {
-		self.elektita = lingvoj.first
+		self.elektita = elektitaLingvo
 		self.lingvoj = lingvoj
 		self.elektisLingvon = elektisLingvon
 		self.redaktisLingvojn = redaktisLingvojn
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
+	}
+	
+	convenience init(
+		elektisLingvon: @escaping  (Lingvo) -> (),
+		redaktisLingvojn: @escaping ([Lingvo]) -> (),
+		uzantDatumaro: UzantDatumaro = .komuna,
+		kunordigilo: Kunordigilo = .komuna,
+		stilo: InterfacStilo = .nuna
+	) {
+		self.init(
+			elektitaLingvo: uzantDatumaro.elektitaLingvo,
+			lingvoj: uzantDatumaro.lingvoj,
+			elektisLingvon: elektisLingvon,
+			redaktisLingvojn: redaktisLingvojn,
+			kunordigilo: kunordigilo,
+			stilo: stilo
+		)
 	}
 	
 	required init?(coder: NSCoder) {
@@ -133,18 +155,48 @@ final class LingvoBretoViewController: UIViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		ghisdatigi(lingvojn: lingvoj) // Vokita ĉi tie por ke grandecoj estu jam fiksitaj
+		
+		// Vokita ĉi tie por ke grandecoj estu jam fiksitaj
+		renovigiInterfacon()
+	}
+	
+	// MARK: Uzantaj agoj
+	
+	/// Vokota kiam la uzanto elektas lingvon
+	@objc private func premisLingvon(sender: UIButton) {
+		let indekso = sender.tag
+		elektita = lingvoj[indekso]
+		montriElekton(je: indekso)
+		
+		elektisLingvon(elektita)
+		NotificationCenter.default.post(name: Avizoj.elektitaLingvoShanghighis, object: elektita)
+	}
+	
+	private func shanghis(lingvaron lingvaro: [Lingvo]) {
+		lingvoj = lingvaro
+		if !lingvaro.contains(elektita) {
+			elektita = lingvaro.first!
+		}
+		
+		renovigiInterfacon()
+	}
+	
+	// MARK: Ekstera regado
+	
+	func ghisdatigi(elektitan novelektita: Lingvo) {
+		guard let indekso = lingvoj.firstIndex(of: novelektita) else { return }
+		elektita = lingvoj[indekso]
+		montriElekton(je: indekso)
+	}
+	
+	func ghisdatigi(lingvaron lingvaro: [Lingvo]) {
+		shanghis(lingvaron: lingvaro)
 	}
 	
 	// MARK: Ĝisdatigado
 	
 	/// Ĝisdatigas la liston da lingvoj
-	func ghisdatigi(lingvojn lingvoj: [Lingvo]) {
-		self.lingvoj = lingvoj
-		if elektita == nil || (elektita.flatMap { lingvoj.contains($0) } != true) {
-			elektita = lingvoj.first
-		}
-		
+	func renovigiInterfacon() {
 		// Renovigi butonojn
 		for view in lingvoStaplo.arrangedSubviews {
 			lingvoStaplo.removeArrangedSubview(view)
@@ -158,7 +210,7 @@ final class LingvoBretoViewController: UIViewController {
 			etikedo.setTitle(lingvo.nomo, for: .normal)
 			let koloro = (elektita == lingvo) ? stilo.surkoloraTeksto : stilo.surkoloraMalaktiva
 			etikedo.setTitleColor(koloro, for: .normal)
-			etikedo.addTarget(self, action: #selector(elektisLingvon(sender:)), for: .touchUpInside)
+			etikedo.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
 			etikedo.tag = i
 			etikedo.translatesAutoresizingMaskIntoConstraints = false
 			
@@ -178,29 +230,21 @@ final class LingvoBretoViewController: UIViewController {
 			substreki(indekson: elektitaIndekso, animacii: false)
 			rulumi(al: elektitaIndekso, animacii: false)
 		}
-		
-		redaktisLingvojn(lingvoj)
 	}
 	
-	/// Vokota kiam la uzanto elektas lingvon
-	@objc private func elektisLingvon(sender: UIButton) {
-		let indekso = sender.tag
+	private func montriElekton(je indekso: Int) {
 		let malnovaIndekso = elektitaIndekso
-		
 		guard indekso != malnovaIndekso else {
 			return
 		}
-		
-		elektita = lingvoj[indekso]
 		
 		if let malnovaIndekso {
 			rekolorigi(aktiva: indekso, malaktiva: malnovaIndekso, animacii: true)
 		}
 		rulumi(al: indekso, animacii: true)
 		substreki(indekson: indekso, animacii: false)
-		
-		elektita.flatMap { elektisLingvon($0) }
 	}
+	
 	
 	/// Ŝanĝas kolorojn de la aktiva kaj nove-malaktiva butonoj
 	private func rekolorigi(aktiva: Int, malaktiva: Int, animacii: Bool) {
@@ -236,7 +280,7 @@ final class LingvoBretoViewController: UIViewController {
 			let troMaldekstra = butono.frame.minX < rulumejo.contentOffset.x
 			let troDekstra = butono.frame.maxX > rulumejo.contentOffset.x + rulumejo.bounds.width
 			if troMaldekstra {
-					rulumejo.contentOffset.x = butono.frame.minX
+				rulumejo.contentOffset.x = butono.frame.minX
 			} else if troDekstra {
 				rulumejo.contentOffset.x = butono.frame.maxX - rulumejo.bounds.width + Konstantoj.butonoBufro * 2
 			}
@@ -280,8 +324,10 @@ final class LingvoBretoViewController: UIViewController {
 			return
 		}
 		
-		kunordigilo.prezentiLingvoElektilon(prezentilo: navigaciilo) { [weak self] novajLingvoj in
-			self?.ghisdatigi(lingvojn: novajLingvoj)
+		kunordigilo.prezentiLingvoRedaktilon(prezentilo: navigaciilo) { [weak self] novajLingvoj in
+			guard let self else { return }
+			shanghis(lingvaron: novajLingvoj)
+			redaktisLingvojn(novajLingvoj)
 		}
 	}
 }
