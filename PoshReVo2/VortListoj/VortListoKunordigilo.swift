@@ -11,21 +11,45 @@ final class VortListoKunordigilo {
 	
 	let datumbazo: VortaroDatumbazo
 	
+	let uzantDatumaro: UzantDatumaro
+	
 	//
 	
 	init(
 		prezentiArtikolon: @escaping (Artikolo, UINavigationController) -> (),
 		prezentiArtikolonElDestino: @escaping (Destino, UINavigationController) -> (),
-		datumbazo: VortaroDatumbazo = .komuna
+		datumbazo: VortaroDatumbazo = .komuna,
+		uzantDatumaro: UzantDatumaro = .komuna
 	) {
 		self.prezentiArtikolon = prezentiArtikolon
 		self.prezentiArtikolonElDestino = prezentiArtikolonElDestino
 		self.datumbazo = datumbazo
+		self.uzantDatumaro = uzantDatumaro
+	}
+	
+	func prezentiEsplorMenuon(prezentilo: UINavigationController) {
+		let listeroj: [KategoriaViewController.Listero] = [
+			.init(
+				teksto: "Fakoj",
+				celPagho: { [unowned self] in fariFakListon(prezentilo: prezentilo) }
+			),
+			.init(
+				teksto: "Vortoj Laŭ Oficialeco",
+				celPagho: { [unowned self] in fariOficialecoListon(prezentilo: prezentilo) }
+			),
+			. init(
+				teksto: "Hazarda Artikolo",
+				celPagho: { [unowned self] in fariHazardanArtikolon() }
+			)
+		]
+		
+		let vc = KategoriaViewController(listeroj: listeroj)
+		prezentilo.pushViewController(vc, animated: true)
 	}
 	
 	// MARK: Fakoj
 	
-	func prezentiFakoListon(prezentilo: UINavigationController) {
+	func fariFakListon(prezentilo: UINavigationController) -> KategoriaViewController {
 		let listeroj = datumbazo.chiujFakoj.map { fako in
 			KategoriaViewController.Listero(
 				teksto: fako.nomo,
@@ -34,8 +58,7 @@ final class VortListoKunordigilo {
 				}
 			)
 		}
-		let vc = KategoriaViewController(listeroj: listeroj)
-		prezentilo.pushViewController(vc, animated: true)
+		return KategoriaViewController(listeroj: listeroj)
 	}
 	
 	func fariFakVortliston(
@@ -66,7 +89,7 @@ final class VortListoKunordigilo {
 	
 	// MARK: Oficialecoj
 	
-	func prezentiOficialecoListon(prezentilo: UINavigationController) {
+	func fariOficialecoListon(prezentilo: UINavigationController) -> KategoriaViewController {
 		let listeroj = datumbazo.chiujOficialecoj.map { ofc in
 			KategoriaViewController.Listero(
 				teksto: ofc.nomo,
@@ -75,8 +98,7 @@ final class VortListoKunordigilo {
 				}
 			)
 		}
-		let vc = KategoriaViewController(listeroj: listeroj)
-		prezentilo.pushViewController(vc, animated: true)
+		return KategoriaViewController(listeroj: listeroj)
 	}
 	
 	func fariOficialecaVortliston(
@@ -107,8 +129,13 @@ final class VortListoKunordigilo {
 	
 	// MARK: Alia
 	
-	func prezentiHazardanArtikolon(prezentilo: UINavigationController) {
-		guard let artikolo = datumbazo.iuAjnArtikolo() else { return }
-		prezentiArtikolon(artikolo, prezentilo)
+	func fariHazardanArtikolon() -> ArtikoloViewController {
+		let artikolo = datumbazo.iuAjnArtikolo()!
+		
+		return ArtikoloViewController(
+			artikolo: artikolo,
+			tradukLingvoj: uzantDatumaro.lingvoj,
+			aperis: nil
+		)
 	}
 }
