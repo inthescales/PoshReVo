@@ -21,18 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
 		// UzantDatumaro.starigi()
 		
-		let vc = SerchoViewController(
-			serchLingvoj: [
-				Lingvo.esperanto,
-				Lingvo(kodo: "en", nomo: "angla"),
-				Lingvo(kodo: "es", nomo: "hispana"),
-				Lingvo(kodo: "de", nomo: "germana"),
-				Lingvo(kodo: "fr", nomo: "franca"),
-				Lingvo(kodo: "is", nomo: "islanda")
-			],
-			radika: true
-		)
-		
+		let vc = HejmaViewController()
 		let navigaciilo = ChefaNavigationController(rootViewController: vc)
 		
 		fenestro = UIWindow(frame: UIScreen.main.bounds)

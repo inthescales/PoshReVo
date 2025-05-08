@@ -3,14 +3,16 @@ import UIKit
 import SnapKit
 
 final class HejmaViewController: UIViewController {
-	var stilo: InterfacStilo
+	// MARK: Interfaceroj
 	
 	lazy var serchButono: SurkoloraButton = {
 		return SurkoloraButton(teksto: Tekstoj.serchi)
 	}()
 	
 	lazy var esplorButono: SurkoloraButton = {
-		return SurkoloraButton(teksto: Tekstoj.esplori)
+		let butono = SurkoloraButton(teksto: Tekstoj.esplori)
+		butono.addTarget(self, action: #selector(premisEsplori), for: .touchUpInside)
+		return butono
 	}()
 	
 	lazy var konservitajButono: SurkoloraButton = {
@@ -33,7 +35,17 @@ final class HejmaViewController: UIViewController {
 		return staplo
 	}()
 	
-	init(stilo: InterfacStilo = .nuna) {
+	// MARK: Agordoj
+	
+	let kunordigilo: Kunordigilo
+	
+	var stilo: InterfacStilo
+	
+	init(
+		kunordigilo: Kunordigilo = .komuna,
+		stilo: InterfacStilo = .nuna
+	) {
+		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		
 		super.init(nibName: nil, bundle: nil)
@@ -48,5 +60,12 @@ final class HejmaViewController: UIViewController {
 		butonStaplo.snp.makeConstraints { make in
 			make.center.equalTo(view)
 		}
+	}
+	
+	// MARK: Uzantaj agoj
+	
+	@objc private func premisEsplori() {
+		guard let navigaciilo = navigationController else { return }
+		kunordigilo.vortListoj.prezentiOficialecoListon(prezentilo: navigaciilo)
 	}
 }

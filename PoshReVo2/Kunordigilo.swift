@@ -5,7 +5,18 @@ import ReVoDatumbazo
 final class Kunordigilo {
 	static var komuna = Kunordigilo(uzantDatumaro: .komuna)
 	
+	// MARK: Sub-kunordigiloj
+	
+	lazy var vortListoj = VortListoKunordigilo { [weak self] destino, prezentilo in
+		guard let self else { return }
+		prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
+	}
+	
+	// MARK: Agordoj
+	
 	let uzantDatumaro: UzantDatumaro
+	
+	//
 	
 	init(uzantDatumaro: UzantDatumaro) {
 		self.uzantDatumaro = uzantDatumaro
