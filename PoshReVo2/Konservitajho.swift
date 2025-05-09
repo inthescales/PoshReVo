@@ -1,7 +1,7 @@
 import ReVoDatumbazo
 
 /// Reprezentas ligon al konservita artikolo
-final class Konservitajho: Codable {
+struct Konservitajho: Equatable, Codable {
 	let nomo: String
 	let indekso: String
 	

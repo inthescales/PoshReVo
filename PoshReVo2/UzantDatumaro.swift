@@ -43,12 +43,17 @@ final class UzantDatumaro {
 	}
 	
 	func vizitis(artikolon artikolo: Artikolo) {
-		historio.append(Konservitajho(el: artikolo))
+		let vizitito = Konservitajho(el: artikolo)
+		guard !historio.contains(vizitito) else {
+			return
+		}
+		
+		historio.append(vizitito)
 		while historio.count > Konstantoj.historioLimo {
 			historio.remove(at: 0)
 		}
 		
-		NotificationCenter.default.post(name: Avizoj.historioShanghighis, object: konservitaj)
+		NotificationCenter.default.post(name: Avizoj.historioShanghighis, object: historio)
 	}
 	
 	func konservi(artikolon artikolo: Artikolo) {

@@ -18,7 +18,7 @@ final class HistorioViewController: UIViewController {
 		self.elektis = elektis
 		super.init(nibName: nil, bundle: nil)
 		
-		tabelo.montri(listerojn: lastaj.map { Uzantlistero(el: $0) })
+		montri(lastaj)
 	}
 	
 	convenience init(elektis: @escaping (Uzantlistero) -> (), uzantDatumaro: UzantDatumaro = .komuna) {
@@ -47,6 +47,12 @@ final class HistorioViewController: UIViewController {
 		)
 	}
 	
+	// MARK: - Agordado
+	
+	private func montri(_ historio: [Konservitajho]) {
+		tabelo.montri(listerojn: historio.reversed().map { Uzantlistero(el: $0) })
+	}
+	
 	// MARK: - Reagoj
 	
 	@objc private func historioShanghighis(_ avizo: Notification) {
@@ -54,6 +60,6 @@ final class HistorioViewController: UIViewController {
 			return
 		}
 		
-		tabelo.montri(listerojn: novlastaj.map { Uzantlistero(el: $0) })
+		montri(novlastaj)
 	}
 }
