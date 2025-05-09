@@ -37,4 +37,8 @@ final class Uzantlistero: Vortlistero {
 		self.teksto = teksto
 		self.indekso = indekso
 	}
+	
+	convenience init(el konservita: Konservitajho) {
+		self.init(teksto: konservita.nomo, indekso: konservita.indekso)
+	}
 }
