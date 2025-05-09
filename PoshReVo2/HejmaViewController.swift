@@ -24,7 +24,9 @@ final class HejmaViewController: UIViewController {
 	}()
 	
 	lazy var historioButono: SurkoloraButton = {
-		return SurkoloraButton(teksto: Tekstoj.historio)
+		let butono = SurkoloraButton(teksto: Tekstoj.historio)
+		butono.addTarget(self, action: #selector(premisHistorio), for: .touchUpInside)
+		return butono
 	}()
 	
 	lazy var butonStaplo: UIStackView = {
@@ -76,6 +78,11 @@ final class HejmaViewController: UIViewController {
 	@objc private func premisEsplori() {
 		guard let navigaciilo = navigationController else { return }
 		kunordigilo.prezentiEsplorMenuon(prezentilo: navigaciilo)
+	}
+
+	@objc private func premisHistorio() {
+		guard let navigaciilo = navigationController else { return }
+		kunordigilo.prezentiHistorion(prezentilo: navigaciilo)
 	}
 	
 	@objc private func premisKonservitaj() {

@@ -66,42 +66,12 @@ final class Kunordigilo {
 			fatalError("Artikolo ne ekzistas") // TODO: Ŝanĝi tion ĉi
 		}
 		
-		let vc = ArtikoloViewController(
-			artikolo: artikolo,
-			aperis: { [weak self] in
-				self?.purigi(prezentilon: prezentilo)
-			},
-			konservis: { [weak self] konservita in
-				guard let self else { return }
-				
-				if konservita {
-					uzantDatumaro.konservi(artikolon: artikolo)
-				} else {
-					uzantDatumaro.malkonservi(artikolon: artikolo)
-				}
-			},
-			uzantDatumaro: uzantDatumaro
-		)
+		let vc = fariArtikoloPaghon(el: artikolo, prezentilo: prezentilo)
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
 	func prezentiArtikoloPaghon(el artikolo: Artikolo, prezentilo: UINavigationController) {
-		let vc = ArtikoloViewController(
-			artikolo: artikolo,
-			aperis: { [weak self] in
-				self?.purigi(prezentilon: prezentilo)
-			},
-			konservis: { [weak self] konservita in
-				guard let self else { return }
-				
-				if konservita {
-					uzantDatumaro.konservi(artikolon: artikolo)
-				} else {
-					uzantDatumaro.malkonservi(artikolon: artikolo)
-				}
-			},
-			uzantDatumaro: uzantDatumaro
-		)
+		let vc = fariArtikoloPaghon(el: artikolo, prezentilo: prezentilo)
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
@@ -159,6 +129,21 @@ final class Kunordigilo {
 	}
 	
 	// MARK: - Uzantaj vortlistoj
+	
+	func prezentiHistorion(prezentilo: UINavigationController) {
+		let vc = HistorioViewController(
+			elektis: { [weak self] listero in
+				guard let self,
+					  let artikolo = vortaro.artikolo(indekso: listero.indekso) else {
+					return
+				}
+				
+				prezentiArtikoloPaghon(el: artikolo, prezentilo: prezentilo)
+			},
+			uzantDatumaro: uzantDatumaro
+		)
+		prezentilo.pushViewController(vc, animated: true)
+	}
 	
 	func prezentiKonservitajn(prezentilo: UINavigationController) {
 		let vc = KonservitajViewController(
@@ -274,7 +259,32 @@ final class Kunordigilo {
 		
 		return ArtikoloViewController(
 			artikolo: artikolo,
-			aperis: nil,
+			aperis: { [weak self] in self?.uzantDatumaro.vizitis(artikolon: artikolo) },
+			konservis: { [weak self] konservita in
+				guard let self else { return }
+				
+				if konservita {
+					uzantDatumaro.konservi(artikolon: artikolo)
+				} else {
+					uzantDatumaro.malkonservi(artikolon: artikolo)
+				}
+			},
+			uzantDatumaro: uzantDatumaro
+		)
+	}
+	
+	// MARK: - Paĝhelpiloj
+	
+	private func fariArtikoloPaghon(
+		el artikolo: Artikolo,
+		prezentilo: UINavigationController
+	) -> ArtikoloViewController {
+		ArtikoloViewController(
+			artikolo: artikolo,
+			aperis: { [weak self] in
+				self?.uzantDatumaro.vizitis(artikolon: artikolo)
+				self?.purigi(prezentilon: prezentilo)
+			},
 			konservis: { [weak self] konservita in
 				guard let self else { return }
 				

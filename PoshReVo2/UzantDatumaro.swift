@@ -6,9 +6,13 @@ extension Avizoj {
 	static let elektitaLingvoShanghighis = NSNotification.Name("elektitaLingvoShanghighis")
 	static let uzantajLingvojShanghighis = NSNotification.Name("uzantajLingvojShanghighis")
 	static let konservitajShanghighis = NSNotification.Name("konservitajShanghighis")
+	static let historioShanghighis = NSNotification.Name("historioShanghighis")
 }
 
 final class UzantDatumaro {
+	private enum Konstantoj {
+		static let historioLimo = 100
+	}
 	static var komuna: UzantDatumaro = {
 		elKonservitajAgordoj()
 	}()
@@ -17,11 +21,14 @@ final class UzantDatumaro {
 	
 	private(set) var lingvoj: [Lingvo]
 	
+	private(set) var historio: [Konservitajho]
+	
 	private(set) var konservitaj: [Konservitajho]
 	
 	init(lingvoj: [Lingvo]) {
 		self.elektitaLingvo = lingvoj.first!
 		self.lingvoj = lingvoj
+		self.historio = []
 		self.konservitaj = []
 	}
 	
@@ -33,6 +40,15 @@ final class UzantDatumaro {
 	func redaktisLingvojn(novaj: [Lingvo]) {
 		lingvoj = novaj
 		NotificationCenter.default.post(name: Avizoj.uzantajLingvojShanghighis, object: lingvoj)
+	}
+	
+	func vizitis(artikolon artikolo: Artikolo) {
+		historio.append(Konservitajho(el: artikolo))
+		while historio.count > Konstantoj.historioLimo {
+			historio.remove(at: 0)
+		}
+		
+		NotificationCenter.default.post(name: Avizoj.historioShanghighis, object: konservitaj)
 	}
 	
 	func konservi(artikolon artikolo: Artikolo) {
