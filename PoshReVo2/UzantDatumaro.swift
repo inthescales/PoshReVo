@@ -5,6 +5,7 @@ import ReVoDatumbazo
 extension Avizoj {
 	static let elektitaLingvoShanghighis = NSNotification.Name("elektitaLingvoShanghighis")
 	static let uzantajLingvojShanghighis = NSNotification.Name("uzantajLingvojShanghighis")
+	static let konservitajShanghighis = NSNotification.Name("konservitajShanghighis")
 }
 
 final class UzantDatumaro {
@@ -12,11 +13,11 @@ final class UzantDatumaro {
 		elKonservitajAgordoj()
 	}()
 	
-	var elektitaLingvo: Lingvo
+	private(set) var elektitaLingvo: Lingvo
 	
-	var lingvoj: [Lingvo]
+	private(set) var lingvoj: [Lingvo]
 	
-	var konservitaj: [Konservitajho]
+	private(set) var konservitaj: [Konservitajho]
 	
 	init(lingvoj: [Lingvo]) {
 		self.elektitaLingvo = lingvoj.first!
@@ -38,6 +39,7 @@ final class UzantDatumaro {
 		guard !estasKonservita(artikolo: artikolo) else { return }
 		
 		konservitaj.append(Konservitajho(el: artikolo))
+		NotificationCenter.default.post(name: Avizoj.konservitajShanghighis, object: konservitaj)
 	}
 	
 	func malkonservi(artikolon artikolo: Artikolo) {
@@ -46,6 +48,7 @@ final class UzantDatumaro {
 		) else { return }
 		
 		konservitaj.remove(at: indekso)
+		NotificationCenter.default.post(name: Avizoj.konservitajShanghighis, object: konservitaj)
 	}
 	
 	func estasKonservita(artikolo: Artikolo) -> Bool {
