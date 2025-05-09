@@ -9,12 +9,6 @@ final class VortoListoViewController: UIViewController {
 		static let finaRegiono = 5
 	}
 	
-	struct Listero {
-		let teksto: String
-		let subteksto: String?
-		let destinoj: [Destino]
-	}
-	
 	lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
 		tabelo.delegate = self
@@ -24,18 +18,18 @@ final class VortoListoViewController: UIViewController {
 	
 	// MARK: Stato
 	
-	private var listeroj: [Listero] = []
+	private var listeroj: [Vortlistero] = []
 	
 	// MARK: Agordoj
 	
-	private let elektis: (Listero) -> ()
+	private let elektis: (Vortlistero) -> ()
 	
 	private let alvenasFinon: (() -> ())?
 	
 	//
 	
 	init(
-		elektis: @escaping (Listero) -> (),
+		elektis: @escaping (Vortlistero) -> (),
 		alvenasFinon: (() -> ())? = nil
 	) {
 		self.elektis = elektis
@@ -51,7 +45,7 @@ final class VortoListoViewController: UIViewController {
 		view.addEdgeMatchedSubview(tabelo)
 	}
 	
-	func montri(listerojn listeroj: [Listero]) {
+	func montri(listerojn listeroj: [Vortlistero]) {
 		self.listeroj = listeroj
 		tabelo.reloadData()
 	}

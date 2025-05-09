@@ -43,9 +43,10 @@ final class ArtikoloViewController: UIViewController {
 		return butono
 	}()
 	
-	private lazy var titoloEtikedo: ArtikolTitoloView = {
+	private lazy var titolejo: ArtikolTitoloView = {
 		let etikedo = ArtikolTitoloView(
 			artikolo: artikolo,
+			konservis: konservis,
 			stilo: stilo
 		)
 		return etikedo
@@ -92,6 +93,8 @@ final class ArtikoloViewController: UIViewController {
 	
 	private let aperis: (() -> ())?
 	
+	private let konservis: (Bool) -> ()
+	
 	private let kunordigilo: Kunordigilo
 	
 	private var stilo: InterfacStilo
@@ -100,20 +103,41 @@ final class ArtikoloViewController: UIViewController {
 	
 	init(
 		artikolo: Artikolo,
+		konservita: Bool,
 		tradukLingvoj: [Lingvo] = [],
 		aperis: (() -> ())?,
+		konservis: @escaping (Bool) -> (),
 		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = .nuna
 	) {
 		self.artikolo = artikolo
 		self.tradukLingvoj = tradukLingvoj
 		self.aperis = aperis
+		self.konservis = konservis
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		
 		self.cheloDatumoj = Self.cheloDatumoj(el: artikolo)
 		
 		super.init(nibName: nil, bundle: nil)
+		
+		titolejo.agordi(konservita: konservita)
+	}
+	
+	convenience init(
+		artikolo: Artikolo,
+		aperis: (() -> ())?,
+		konservis: @escaping (Bool) -> (),
+		uzantDatumaro: UzantDatumaro = .komuna,
+		kunordigilo: Kunordigilo = .komuna,
+		stilo: InterfacStilo = .nuna
+	) {
+		self.init(
+			artikolo: artikolo,
+			konservita: uzantDatumaro.estasKonservita(artikolo: artikolo),
+			aperis: aperis,
+			konservis: konservis
+		)
 	}
 	
 	required init?(coder: NSCoder) {
@@ -127,15 +151,15 @@ final class ArtikoloViewController: UIViewController {
 	override func viewDidLoad() {
 		view.backgroundColor = stilo.senkoloraFono
 		
-		view.addSubview(titoloEtikedo)
-		titoloEtikedo.snp.makeConstraints { make in
+		view.addSubview(titolejo)
+		titolejo.snp.makeConstraints { make in
 			make.top.left.right.equalToSuperview()
 		}
 		
 		view.addSubview(tabelo)
 		tabelo.snp.makeConstraints { make in
 			make.left.right.bottom.equalToSuperview()
-			make.top.equalTo(titoloEtikedo.snp.bottom)
+			make.top.equalTo(titolejo.snp.bottom)
 		}
 		
 		navigationItem.rightBarButtonItem = lupeoButono

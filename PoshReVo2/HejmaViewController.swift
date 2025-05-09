@@ -66,6 +66,6 @@ final class HejmaViewController: UIViewController {
 	
 	@objc private func premisEsplori() {
 		guard let navigaciilo = navigationController else { return }
-		kunordigilo.vortListoj.prezentiEsplorMenuon(prezentilo: navigaciilo)
+		kunordigilo.prezentiEsplorMenuon(prezentilo: navigaciilo)
 	}
 }

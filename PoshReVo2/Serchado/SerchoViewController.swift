@@ -135,7 +135,7 @@ final class SerchoViewController: UIViewController {
 	
 	// MARK: Interagado
 	
-	private func elektis(_ listero: VortoListoViewController.Listero) {
+	private func elektis(_ listero: Vortlistero) {
 		guard let prezentilo = navigationController else {
 			return
 		}
@@ -211,9 +211,9 @@ final class SerchoViewController: UIViewController {
 	// MARK: Helpiloj
 	
 	/// Fari listerojn kiujn la tabelo montru
-	func tabeloListeroj(por stato: SerchStato) -> [VortoListoViewController.Listero] {
+	func tabeloListeroj(por stato: SerchStato) -> [Vortlistero] {
 		stato.rezultoj.map { rezulto in
-			VortoListoViewController.Listero(
+			Vortlistero(
 				teksto: rezulto.teksto,
 				subteksto: tekstoPorDestinoj(destinoj: rezulto.destinoj),
 				destinoj: rezulto.destinoj

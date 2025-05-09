@@ -16,9 +16,12 @@ final class UzantDatumaro {
 	
 	var lingvoj: [Lingvo]
 	
+	var konservitaj: [Konservitajho]
+	
 	init(lingvoj: [Lingvo]) {
 		self.elektitaLingvo = lingvoj.first!
 		self.lingvoj = lingvoj
+		self.konservitaj = []
 	}
 	
 	func elektis(lingvon novaLingvo: Lingvo) {
@@ -29,6 +32,24 @@ final class UzantDatumaro {
 	func redaktisLingvojn(novaj: [Lingvo]) {
 		lingvoj = novaj
 		NotificationCenter.default.post(name: Avizoj.uzantajLingvojShanghighis, object: lingvoj)
+	}
+	
+	func konservi(artikolon artikolo: Artikolo) {
+		guard !estasKonservita(artikolo: artikolo) else { return }
+		
+		konservitaj.append(Konservitajho(el: artikolo))
+	}
+	
+	func malkonservi(artikolon artikolo: Artikolo) {
+		guard let indekso = konservitaj.firstIndex(
+			where: { $0.indekso == artikolo.indekso }
+		) else { return }
+		
+		konservitaj.remove(at: indekso)
+	}
+	
+	func estasKonservita(artikolo: Artikolo) -> Bool {
+		konservitaj.contains(where: { $0.indekso == artikolo.indekso })
 	}
 	
 	static func elKonservitajAgordoj() -> UzantDatumaro {

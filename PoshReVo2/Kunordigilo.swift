@@ -3,26 +3,19 @@ import UIKit
 import ReVoDatumbazo
 
 final class Kunordigilo {
-	static var komuna = Kunordigilo(uzantDatumaro: .komuna)
-	
-	// MARK: Sub-kunordigiloj
-	
-	lazy var vortListoj: VortListoKunordigilo = {
-		let kunordigilo = VortListoKunordigilo(
-			prezentiArtikolon: prezentiArtikoloPaghon,
-			prezentiArtikolonElDestino: prezentiArtikoloPaghon
-		)
-		return kunordigilo
-	}()
-	
+	static var komuna = Kunordigilo(uzantDatumaro: .komuna, vortaro: .komuna)
+		
 	// MARK: Agordoj
 	
 	let uzantDatumaro: UzantDatumaro
 	
+	let vortaro: VortaroDatumbazo
+	
 	//
 	
-	init(uzantDatumaro: UzantDatumaro) {
+	init(uzantDatumaro: UzantDatumaro, vortaro: VortaroDatumbazo) {
 		self.uzantDatumaro = uzantDatumaro
+		self.vortaro = vortaro
 	}
 	
 	// MARK: Interfaceroj
@@ -75,10 +68,19 @@ final class Kunordigilo {
 		
 		let vc = ArtikoloViewController(
 			artikolo: artikolo,
-			tradukLingvoj: uzantDatumaro.lingvoj,
 			aperis: { [weak self] in
 				self?.purigi(prezentilon: prezentilo)
-			}
+			},
+			konservis: { [weak self] konservita in
+				guard let self else { return }
+				
+				if konservita {
+					uzantDatumaro.konservi(artikolon: artikolo)
+				} else {
+					uzantDatumaro.malkonservi(artikolon: artikolo)
+				}
+			},
+			uzantDatumaro: uzantDatumaro
 		)
 		prezentilo.pushViewController(vc, animated: true)
 	}
@@ -86,10 +88,19 @@ final class Kunordigilo {
 	func prezentiArtikoloPaghon(el artikolo: Artikolo, prezentilo: UINavigationController) {
 		let vc = ArtikoloViewController(
 			artikolo: artikolo,
-			tradukLingvoj: uzantDatumaro.lingvoj,
 			aperis: { [weak self] in
 				self?.purigi(prezentilon: prezentilo)
-			}
+			},
+			konservis: { [weak self] konservita in
+				guard let self else { return }
+				
+				if konservita {
+					uzantDatumaro.konservi(artikolon: artikolo)
+				} else {
+					uzantDatumaro.malkonservi(artikolon: artikolo)
+				}
+			},
+			uzantDatumaro: uzantDatumaro
 		)
 		prezentilo.pushViewController(vc, animated: true)
 	}
@@ -110,7 +121,7 @@ final class Kunordigilo {
 		)
 		
 		let listeroj = destinoj.map { destino in
-			VortoListoViewController.Listero(teksto: destino.teksto, subteksto: destino.subteksto, destinoj: [destino])
+			Vortlistero(teksto: destino.teksto, subteksto: destino.subteksto, destinoj: [destino])
 		}
 		disigilo.montri(listerojn: listeroj)
 		
@@ -146,4 +157,135 @@ final class Kunordigilo {
 			return true
 		}
 	}
+	
+	// MARK: - Uzantaj vortlistoj
+	
+	func prezentiKonservitajn(prezentilo: UINavigationController) {
+
+	}
+	
+	// MARK: - Esploraĵoj
+	
+	func prezentiEsplorMenuon(prezentilo: UINavigationController) {
+		let listeroj: [KategoriaViewController.Listero] = [
+			.init(
+				teksto: "Fakoj",
+				celPagho: { [unowned self] in fariFakListon(prezentilo: prezentilo) }
+			),
+			.init(
+				teksto: "Vortoj Laŭ Oficialeco",
+				celPagho: { [unowned self] in fariOficialecoListon(prezentilo: prezentilo) }
+			),
+			. init(
+				teksto: "Hazarda Artikolo",
+				celPagho: { [unowned self] in fariHazardanArtikolon() }
+			)
+		]
+		
+		let vc = KategoriaViewController(listeroj: listeroj)
+		prezentilo.pushViewController(vc, animated: true)
+	}
+	
+	// MARK: Fakoj
+	
+	func fariFakListon(prezentilo: UINavigationController) -> KategoriaViewController {
+		let listeroj = vortaro.chiujFakoj.map { fako in
+			KategoriaViewController.Listero(
+				teksto: fako.nomo,
+				celPagho: { [unowned self] in
+					fariFakVortliston(por: fako, prezentilo: prezentilo)
+				}
+			)
+		}
+		return KategoriaViewController(listeroj: listeroj)
+	}
+	
+	func fariFakVortliston(
+		por fako: Fako,
+		prezentilo: UINavigationController
+	) -> VortoListoViewController {
+		let vc = VortoListoViewController { [weak self] listero in
+			guard let self,
+				  listero.destinoj.count == 1,
+				  let celo = listero.destinoj.first else {
+				return
+			}
+			
+			prezentiArtikoloPaghon(el: celo, prezentilo: prezentilo)
+		}
+		
+		let destinoj = vortaro.fakVortoj(fako: fako.kodo)
+		vc.montri(listerojn: destinoj.map {
+			Vortlistero(
+				teksto: $0.teksto,
+				subteksto: nil,
+				destinoj: [$0]
+			)
+		})
+		
+		return vc
+	}
+	
+	// MARK: Oficialecoj
+	
+	func fariOficialecoListon(prezentilo: UINavigationController) -> KategoriaViewController {
+		let listeroj = vortaro.chiujOficialecoj.map { ofc in
+			KategoriaViewController.Listero(
+				teksto: ofc.nomo,
+				celPagho: { [unowned self] in
+					fariOficialecaVortliston(por: ofc, prezentilo: prezentilo)
+				}
+			)
+		}
+		return KategoriaViewController(listeroj: listeroj)
+	}
+	
+	func fariOficialecaVortliston(
+		por ofc: Oficialeco,
+		prezentilo: UINavigationController
+	) -> VortoListoViewController {
+		let vc = VortoListoViewController { [weak self] listero in
+			guard let self,
+				  listero.destinoj.count == 1,
+				  let celo = listero.destinoj.first else {
+				return
+			}
+			
+			prezentiArtikoloPaghon(el: celo, prezentilo: prezentilo)
+		}
+		
+		let destinoj = vortaro.ofcVortoj(oficialeco: ofc.kodo)
+		vc.montri(listerojn: destinoj.map {
+			Vortlistero(
+				teksto: $0.teksto,
+				subteksto: nil,
+				destinoj: [$0]
+			)
+		})
+		
+		return vc
+	}
+	
+	// MARK: Alia
+	
+	func fariHazardanArtikolon() -> ArtikoloViewController {
+		let artikolo = vortaro.iuAjnArtikolo()!
+		
+		return ArtikoloViewController(
+			artikolo: artikolo,
+			aperis: nil,
+			konservis: { [weak self] konservita in
+				guard let self else { return }
+				
+				if konservita {
+					uzantDatumaro.konservi(artikolon: artikolo)
+				} else {
+					uzantDatumaro.malkonservi(artikolon: artikolo)
+				}
+			},
+			uzantDatumaro: uzantDatumaro
+		)
+	}
+	
+	// MARK: - Agohelpiloj
 }

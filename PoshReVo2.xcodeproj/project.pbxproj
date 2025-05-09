@@ -40,7 +40,8 @@
 		00B27B3B2DCBBC6600526F82 /* TradukoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3A2DCBBC6600526F82 /* TradukoChelo.swift */; };
 		00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3C2DCC040800526F82 /* Avizoj.swift */; };
 		00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */; };
-		00B27B422DCD100000526F82 /* VortListoKunordigilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B412DCD100000526F82 /* VortListoKunordigilo.swift */; };
+		00B27B442DCD281C00526F82 /* Konservitajho.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B432DCD281C00526F82 /* Konservitajho.swift */; };
+		00B27B472DCE636400526F82 /* Vortlistero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B462DCE636400526F82 /* Vortlistero.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,7 +93,8 @@
 		00B27B3A2DCBBC6600526F82 /* TradukoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukoChelo.swift; sourceTree = "<group>"; };
 		00B27B3C2DCC040800526F82 /* Avizoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avizoj.swift; sourceTree = "<group>"; };
 		00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriaViewController.swift; sourceTree = "<group>"; };
-		00B27B412DCD100000526F82 /* VortListoKunordigilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortListoKunordigilo.swift; sourceTree = "<group>"; };
+		00B27B432DCD281C00526F82 /* Konservitajho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Konservitajho.swift; sourceTree = "<group>"; };
+		00B27B462DCE636400526F82 /* Vortlistero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vortlistero.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,18 +137,19 @@
 				000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */,
 				000DA6FC2D908F680026CBA0 /* ChefaNavigationController.swift */,
 				000DA6EB2D8F32360026CBA0 /* HejmaViewController.swift */,
-				00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */,
+				00B27B452DCE633100526F82 /* Vortlisto */,
 				00B27B252DC6B73F00526F82 /* Kunordigilo.swift */,
 				00B27B212DC3FCF700526F82 /* Serchado */,
 				00B27B222DC3FD0600526F82 /* Lingvo-estrado */,
 				00B27B232DC3FD2600526F82 /* Interfacajhoj */,
 				00B27B242DC3FD5800526F82 /* Interfaceroj */,
 				00B27B292DC7CF8B00526F82 /* Artikoloj */,
-				00B27B3E2DCD0DD400526F82 /* VortListoj */,
+				00B27B3E2DCD0DD400526F82 /* Esplorado */,
 				00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */,
 				00B27B142DC2682200526F82 /* TekstHelpiloj.swift */,
 				00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */,
 				00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */,
+				00B27B432DCD281C00526F82 /* Konservitajho.swift */,
 				00B27B3C2DCC040800526F82 /* Avizoj.swift */,
 				00B27B182DC2800500526F82 /* Risurcoj */,
 			);
@@ -224,13 +227,21 @@
 			path = Artikoloj;
 			sourceTree = "<group>";
 		};
-		00B27B3E2DCD0DD400526F82 /* VortListoj */ = {
+		00B27B3E2DCD0DD400526F82 /* Esplorado */ = {
 			isa = PBXGroup;
 			children = (
-				00B27B412DCD100000526F82 /* VortListoKunordigilo.swift */,
 				00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */,
 			);
-			path = VortListoj;
+			path = Esplorado;
+			sourceTree = "<group>";
+		};
+		00B27B452DCE633100526F82 /* Vortlisto */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */,
+				00B27B462DCE636400526F82 /* Vortlistero.swift */,
+			);
+			path = Vortlisto;
 			sourceTree = "<group>";
 		};
 		90F3C80E6330F4395B924C94 /* Pods */ = {
@@ -365,6 +376,7 @@
 				00B27B312DC81C0400526F82 /* ArtikolTekstoChelo.swift in Sources */,
 				00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */,
 				00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */,
+				00B27B442DCD281C00526F82 /* Konservitajho.swift in Sources */,
 				000DA6D82D8F31CF0026CBA0 /* AppDelegate.swift in Sources */,
 				00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */,
 				00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */,
@@ -373,8 +385,8 @@
 				000DA6FF2D9099670026CBA0 /* SurkoloraButton.swift in Sources */,
 				00B27B392DCAC42300526F82 /* TradukojPiedoView.swift in Sources */,
 				00B27B132DC2650800526F82 /* LingvoListoViewController.swift in Sources */,
+				00B27B472DCE636400526F82 /* Vortlistero.swift in Sources */,
 				00B27B112DC264A100526F82 /* Tekstoj.swift in Sources */,
-				00B27B422DCD100000526F82 /* VortListoKunordigilo.swift in Sources */,
 				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* AranghHelpiloj.swift in Sources */,
 				000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */,
