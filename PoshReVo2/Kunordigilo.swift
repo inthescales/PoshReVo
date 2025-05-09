@@ -161,7 +161,20 @@ final class Kunordigilo {
 	// MARK: - Uzantaj vortlistoj
 	
 	func prezentiKonservitajn(prezentilo: UINavigationController) {
-
+		let vc = VortoListoViewController<Uzantlistero> { [weak self] listero in
+			guard let self,
+				  let artikolo = vortaro.artikolo(indekso: listero.indekso) else {
+				return
+			}
+			
+			prezentiArtikoloPaghon(el: artikolo, prezentilo: prezentilo)
+		}
+		let listeroj = uzantDatumaro.konservitaj.map {
+			Uzantlistero(teksto: $0.nomo, indekso: $0.indekso)
+		}
+		vc.montri(listerojn: listeroj)
+		prezentilo.pushViewController(vc, animated: true)
+		
 	}
 	
 	// MARK: - Esploraĵoj

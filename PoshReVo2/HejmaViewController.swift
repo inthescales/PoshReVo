@@ -18,7 +18,9 @@ final class HejmaViewController: UIViewController {
 	}()
 	
 	lazy var konservitajButono: SurkoloraButton = {
-		return SurkoloraButton(teksto: Tekstoj.konservitaj)
+		let butono = SurkoloraButton(teksto: Tekstoj.konservitaj)
+		butono.addTarget(self, action: #selector(premisKonservitaj), for: .touchUpInside)
+		return butono
 	}()
 	
 	lazy var historioButono: SurkoloraButton = {
@@ -74,5 +76,10 @@ final class HejmaViewController: UIViewController {
 	@objc private func premisEsplori() {
 		guard let navigaciilo = navigationController else { return }
 		kunordigilo.prezentiEsplorMenuon(prezentilo: navigaciilo)
+	}
+	
+	@objc private func premisKonservitaj() {
+		guard let navigaciilo = navigationController else { return }
+		kunordigilo.prezentiKonservitajn(prezentilo: navigaciilo)
 	}
 }
