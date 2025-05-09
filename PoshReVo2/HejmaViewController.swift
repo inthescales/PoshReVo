@@ -6,7 +6,9 @@ final class HejmaViewController: UIViewController {
 	// MARK: Interfaceroj
 	
 	lazy var serchButono: SurkoloraButton = {
-		return SurkoloraButton(teksto: Tekstoj.serchi)
+		let butono = SurkoloraButton(teksto: Tekstoj.serchi)
+		butono.addTarget(self, action: #selector(premisSerchi), for: .touchUpInside)
+		return butono
 	}()
 	
 	lazy var esplorButono: SurkoloraButton = {
@@ -63,6 +65,11 @@ final class HejmaViewController: UIViewController {
 	}
 	
 	// MARK: Uzantaj agoj
+	
+	@objc private func premisSerchi() {
+		guard let navigaciilo = navigationController else { return }
+		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo, radika: true)
+	}
 	
 	@objc private func premisEsplori() {
 		guard let navigaciilo = navigationController else { return }

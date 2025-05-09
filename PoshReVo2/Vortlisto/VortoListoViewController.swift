@@ -2,12 +2,17 @@ import UIKit
 
 import ReVoDatumbazo
 
+//MARK: - Konstantoj
+
+// Ĉi tie ekster la klaso por ke "generic" klaso ne povas enhavi ĝin
+fileprivate enum Konstantoj {
+	/// Kiam ĉi-kvanto da listeroj restas, sciigu ke la uzanto alvenas la finon de la listo
+	static let finaRegiono = 5
+}
+
 /// Reprezentas iun ajn ekranon kiu prezentas liston da vortoj. Ekz. serĉrezultoj, fakvortoj, ktp.
-final class VortoListoViewController: UIViewController {
-	private enum Konstantoj {
-		/// Kiam ĉi-kvanto da listeroj restas, sciigu ke la uzanto alvenas la finon de la listo
-		static let finaRegiono = 5
-	}
+final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableViewDelegate, UITableViewDataSource {
+	// MARK: - Interfaceroj
 	
 	lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
@@ -16,20 +21,20 @@ final class VortoListoViewController: UIViewController {
 		return tabelo
 	}()
 	
-	// MARK: Stato
+	// MARK: - Stato
 	
-	private var listeroj: [Vortlistero] = []
+	private var listeroj: [L] = []
 	
-	// MARK: Agordoj
+	// MARK: - Agordoj
 	
-	private let elektis: (Vortlistero) -> ()
+	private let elektis: (L) -> ()
 	
 	private let alvenasFinon: (() -> ())?
 	
-	//
+	// MARK: - Pravalorizado
 	
 	init(
-		elektis: @escaping (Vortlistero) -> (),
+		elektis: @escaping (L) -> (),
 		alvenasFinon: (() -> ())? = nil
 	) {
 		self.elektis = elektis
@@ -45,19 +50,19 @@ final class VortoListoViewController: UIViewController {
 		view.addEdgeMatchedSubview(tabelo)
 	}
 	
-	func montri(listerojn listeroj: [Vortlistero]) {
+	func montri(listerojn listeroj: [L]) {
 		self.listeroj = listeroj
 		tabelo.reloadData()
 	}
-}
-
-extension VortoListoViewController: UITableViewDelegate {
+	
+	// MARK: - UITableViewDelegate
+	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		elektis(listeroj[indexPath.row])
 	}
-}
 
-extension VortoListoViewController: UITableViewDataSource {
+	// MARK: - UITableViewDataSource
+	
 	func numberOfSections(in tableView: UITableView) -> Int {
 		1
 	}
@@ -83,6 +88,4 @@ extension VortoListoViewController: UITableViewDataSource {
 		
 		return novaChelo
 	}
-	
-	
 }

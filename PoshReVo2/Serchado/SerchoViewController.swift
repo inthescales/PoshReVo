@@ -33,7 +33,7 @@ final class SerchoViewController: UIViewController {
 	}()
 	
 	private lazy var rezultoTabelo: VortoListoViewController = {
-		return VortoListoViewController(
+		return VortoListoViewController<Serchlistero>(
 			elektis: elektis,
 			alvenasFinon: venigiPli
 		)
@@ -135,7 +135,7 @@ final class SerchoViewController: UIViewController {
 	
 	// MARK: Interagado
 	
-	private func elektis(_ listero: Vortlistero) {
+	private func elektis(_ listero: Serchlistero) {
 		guard let prezentilo = navigationController else {
 			return
 		}
@@ -211,9 +211,9 @@ final class SerchoViewController: UIViewController {
 	// MARK: Helpiloj
 	
 	/// Fari listerojn kiujn la tabelo montru
-	func tabeloListeroj(por stato: SerchStato) -> [Vortlistero] {
+	func tabeloListeroj(por stato: SerchStato) -> [Serchlistero] {
 		stato.rezultoj.map { rezulto in
-			Vortlistero(
+			Serchlistero(
 				teksto: rezulto.teksto,
 				subteksto: tekstoPorDestinoj(destinoj: rezulto.destinoj),
 				destinoj: rezulto.destinoj

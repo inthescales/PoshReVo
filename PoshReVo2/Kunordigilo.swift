@@ -18,7 +18,7 @@ final class Kunordigilo {
 		self.vortaro = vortaro
 	}
 	
-	// MARK: Interfaceroj
+	// MARK: - Interfaceroj
 	
 	func fariLingvoBreton(
 		elektisLingvon: @escaping (Lingvo) -> (),
@@ -110,7 +110,7 @@ final class Kunordigilo {
 		prezentilo: UINavigationController,
 		elektis: @escaping (Destino) -> ()
 	) {
-		let disigilo = VortoListoViewController(
+		let disigilo = VortoListoViewController<Serchlistero>(
 			elektis: { listero in
 				guard let destino = listero.destinoj.first else {
 					return
@@ -121,7 +121,7 @@ final class Kunordigilo {
 		)
 		
 		let listeroj = destinoj.map { destino in
-			Vortlistero(teksto: destino.teksto, subteksto: destino.subteksto, destinoj: [destino])
+			Serchlistero(teksto: destino.teksto, subteksto: destino.subteksto, destinoj: [destino])
 		}
 		disigilo.montri(listerojn: listeroj)
 		
@@ -203,23 +203,18 @@ final class Kunordigilo {
 	func fariFakVortliston(
 		por fako: Fako,
 		prezentilo: UINavigationController
-	) -> VortoListoViewController {
-		let vc = VortoListoViewController { [weak self] listero in
-			guard let self,
-				  listero.destinoj.count == 1,
-				  let celo = listero.destinoj.first else {
-				return
-			}
+	) -> VortoListoViewController<Esplorlistero> {
+		let vc = VortoListoViewController<Esplorlistero> { [weak self] listero in
+			guard let self else { return }
 			
-			prezentiArtikoloPaghon(el: celo, prezentilo: prezentilo)
+			prezentiArtikoloPaghon(el: listero.destino, prezentilo: prezentilo)
 		}
 		
 		let destinoj = vortaro.fakVortoj(fako: fako.kodo)
 		vc.montri(listerojn: destinoj.map {
-			Vortlistero(
+			Esplorlistero(
 				teksto: $0.teksto,
-				subteksto: nil,
-				destinoj: [$0]
+				destino: $0
 			)
 		})
 		
@@ -243,23 +238,18 @@ final class Kunordigilo {
 	func fariOficialecaVortliston(
 		por ofc: Oficialeco,
 		prezentilo: UINavigationController
-	) -> VortoListoViewController {
-		let vc = VortoListoViewController { [weak self] listero in
-			guard let self,
-				  listero.destinoj.count == 1,
-				  let celo = listero.destinoj.first else {
-				return
-			}
+	) -> VortoListoViewController<Esplorlistero> {
+		let vc = VortoListoViewController<Esplorlistero> { [weak self] listero in
+			guard let self else { return }
 			
-			prezentiArtikoloPaghon(el: celo, prezentilo: prezentilo)
+			prezentiArtikoloPaghon(el: listero.destino, prezentilo: prezentilo)
 		}
 		
 		let destinoj = vortaro.ofcVortoj(oficialeco: ofc.kodo)
 		vc.montri(listerojn: destinoj.map {
-			Vortlistero(
+			Esplorlistero(
 				teksto: $0.teksto,
-				subteksto: nil,
-				destinoj: [$0]
+				destino: $0
 			)
 		})
 		
@@ -286,6 +276,4 @@ final class Kunordigilo {
 			uzantDatumaro: uzantDatumaro
 		)
 	}
-	
-	// MARK: - Agohelpiloj
 }
