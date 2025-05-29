@@ -5,6 +5,17 @@ import SnapKit
 final class HejmaViewController: UIViewController {
 	// MARK: Interfaceroj
 	
+	lazy var tripunktoButono = {
+		let butono = UIBarButtonItem.init(
+			image: UIImage(named: "tripunkto"),
+			style: .plain,
+			target: self,
+			action: #selector(Self.premisTripunkton)
+		)
+		butono.tintColor = stilo.surkoloraTeksto
+		return butono
+	}()
+	
 	lazy var serchButono: SurkoloraButton = {
 		let butono = SurkoloraButton(teksto: Tekstoj.serchi)
 		butono.addTarget(self, action: #selector(premisSerchi), for: .touchUpInside)
@@ -62,6 +73,8 @@ final class HejmaViewController: UIViewController {
 	override func viewDidLoad() {
 		view.backgroundColor = stilo.koloraFono
 		
+		navigationItem.rightBarButtonItem = tripunktoButono
+		
 		view.addSubview(butonStaplo)
 		butonStaplo.snp.makeConstraints { make in
 			make.center.equalTo(view)
@@ -70,6 +83,11 @@ final class HejmaViewController: UIViewController {
 	
 	// MARK: Uzantaj agoj
 	
+	@objc private func premisTripunkton() {
+		guard let navigaciilo = navigationController else { return }
+		kunordigilo.prezentiAgordMenuon(prezentilo: navigaciilo)
+	}
+
 	@objc private func premisSerchi() {
 		guard let navigaciilo = navigationController else { return }
 		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo, radika: true)

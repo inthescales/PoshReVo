@@ -42,6 +42,8 @@ final class UzantDatumaro {
 		NotificationCenter.default.post(name: Avizoj.uzantajLingvojShanghighis, object: lingvoj)
 	}
 	
+	// MARK: - Historio
+	
 	func vizitis(artikolon artikolo: Artikolo) {
 		let vizitito = Konservitajho(el: artikolo)
 		guard !historio.contains(vizitito) else {
@@ -55,6 +57,12 @@ final class UzantDatumaro {
 		
 		NotificationCenter.default.post(name: Avizoj.historioShanghighis, object: historio)
 	}
+	
+	func forigiHistorion() {
+		historio = []
+	}
+	
+	// MARK: - Konservadon
 	
 	func konservi(artikolon artikolo: Artikolo) {
 		guard !estasKonservita(artikolo: artikolo) else { return }
@@ -75,6 +83,12 @@ final class UzantDatumaro {
 	func estasKonservita(artikolo: Artikolo) -> Bool {
 		konservitaj.contains(where: { $0.indekso == artikolo.indekso })
 	}
+	
+	func forigiKonservitajn() {
+		konservitaj = []
+	}
+	
+	// MARK: - Starigado
 	
 	static func elKonservitajAgordoj() -> UzantDatumaro {
 		return UzantDatumaro(

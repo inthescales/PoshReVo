@@ -37,6 +37,13 @@ final class Kunordigilo {
 	
 	// MARK: Paĝo-kreado
 	
+	func prezentiAgordMenuon(
+		prezentilo: UINavigationController
+	) {
+		let agordilo = AgordojViewController()
+		prezentilo.pushViewController(agordilo, animated: true)
+	}
+	
 	func prezentiLingvoRedaktilon(
 		prezentilo: UINavigationController,
 		kompleti: @escaping ([Lingvo]) -> ()

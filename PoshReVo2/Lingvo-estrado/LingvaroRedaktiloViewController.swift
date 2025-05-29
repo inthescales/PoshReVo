@@ -68,7 +68,9 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-		navigationItem.leftBarButtonItem = iksoButono
+		if navigationController?.viewControllers.count == 1 {
+			navigationItem.leftBarButtonItem = iksoButono
+		}
 		navigationItem.rightBarButtonItem = redaktButono
 		
 		view.addEdgeMatchedSubview(tabelo)
