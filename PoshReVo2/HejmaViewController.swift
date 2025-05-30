@@ -12,7 +12,7 @@ final class HejmaViewController: UIViewController {
 			target: self,
 			action: #selector(Self.premisTripunkton)
 		)
-		butono.tintColor = stilo.surkoloraTeksto
+		butono.tintColor = DinamikaStilo.surkoloraTeksto
 		return butono
 	}()
 	
@@ -56,14 +56,10 @@ final class HejmaViewController: UIViewController {
 	
 	let kunordigilo: Kunordigilo
 	
-	var stilo: InterfacStilo
-	
 	init(
-		kunordigilo: Kunordigilo = .komuna,
-		stilo: InterfacStilo = .nuna
+		kunordigilo: Kunordigilo = .komuna
 	) {
 		self.kunordigilo = kunordigilo
-		self.stilo = stilo
 		
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -71,7 +67,7 @@ final class HejmaViewController: UIViewController {
 	required init?(coder: NSCoder) { fatalError("init(coder:) ne realas") }
 	
 	override func viewDidLoad() {
-		view.backgroundColor = stilo.koloraFono
+		view.backgroundColor = DinamikaStilo.koloraFono
 		
 		navigationItem.rightBarButtonItem = tripunktoButono
 		

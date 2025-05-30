@@ -1,5 +1,16 @@
 import UIKit
 
+// TODO: Unuigi stilojn? (t.e., uzu nur dinamka aŭ nur simpla)
+struct DinamikaStilo {
+	static var senkoloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.senkoloraFono})
+	static var koloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.koloraFono})
+	static var teksto = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.teksto})
+	static var ligilo = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.ligilo})
+	static var surkoloraButono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.surkoloraButono})
+	static var surkoloraTeksto = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.surkoloraTeksto})
+	static var surkoloraMalaktiva = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.surkoloraMalaktiva})
+}
+
 struct InterfacStilo {
 	let nomo: String
 	
@@ -38,10 +49,33 @@ struct InterfacStilo {
 		)
 	)
 	
+	static let verda = InterfacStilo(
+		nomo: "verda",
+		hela: Koloraro(
+			senkoloraFono: .white,
+			koloraFono: .green,
+			teksto: .black,
+			ligilo: .green,
+			surkoloraButono: .white,
+			surkoloraTeksto: .white,
+			surkoloraMalaktiva: .green
+		),
+		malhela: Koloraro(
+			senkoloraFono: .black,
+			koloraFono: .green,
+			teksto: .white,
+			ligilo: .green,
+			surkoloraButono: .black,
+			surkoloraTeksto: .white,
+			surkoloraMalaktiva: .green
+		)
+	)
+	
 	static var nuna: InterfacStilo = .karamela
 	
 	static var chiuj: [InterfacStilo] = [
-		.karamela
+		.karamela,
+		.verda
 	]
 }
 

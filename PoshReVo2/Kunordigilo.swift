@@ -52,8 +52,12 @@ final class Kunordigilo {
 		navigaciilo.navigationBar.backgroundColor = InterfacStilo.nuna.koloraFono // TODO: movi, korekti stilon
 		navigaciilo.modalPresentationStyle = .fullScreen
 		
-		let elektilo = StiloElektiloViewController() { _ in
+		let elektilo = StiloElektiloViewController() { novaStilo in
 			navigaciilo.dismiss(animated: true)
+			
+			if let novaStilo {
+				InterfacStilo.nuna = novaStilo
+			}
 		}
 		navigaciilo.viewControllers = [elektilo]
 		navigaciilo.modalPresentationStyle = .fullScreen
