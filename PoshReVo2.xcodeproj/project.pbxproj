@@ -45,6 +45,7 @@
 		00B27B492DCE721600526F82 /* KonservitajViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B482DCE721600526F82 /* KonservitajViewController.swift */; };
 		00B27B4B2DCE758B00526F82 /* HistorioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */; };
 		00B27B4D2DCE792C00526F82 /* AgordojViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B4C2DCE792C00526F82 /* AgordojViewController.swift */; };
+		00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B4F2DE8D5F600526F82 /* StiloElektiloViewController.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		00B27B482DCE721600526F82 /* KonservitajViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonservitajViewController.swift; sourceTree = "<group>"; };
 		00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorioViewController.swift; sourceTree = "<group>"; };
 		00B27B4C2DCE792C00526F82 /* AgordojViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgordojViewController.swift; sourceTree = "<group>"; };
+		00B27B4F2DE8D5F600526F82 /* StiloElektiloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloElektiloViewController.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 				00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */,
 				00B27B432DCD281C00526F82 /* Konservitajho.swift */,
 				00B27B3C2DCC040800526F82 /* Avizoj.swift */,
-				00B27B4C2DCE792C00526F82 /* AgordojViewController.swift */,
+				00B27B4E2DE8D5E400526F82 /* Agordoj */,
 				00B27B182DC2800500526F82 /* Risurcoj */,
 			);
 			path = PoshReVo2;
@@ -251,6 +253,15 @@
 				00B27B462DCE636400526F82 /* Vortlistero.swift */,
 			);
 			path = Vortlisto;
+			sourceTree = "<group>";
+		};
+		00B27B4E2DE8D5E400526F82 /* Agordoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B4C2DCE792C00526F82 /* AgordojViewController.swift */,
+				00B27B4F2DE8D5F600526F82 /* StiloElektiloViewController.swift */,
+			);
+			path = Agordoj;
 			sourceTree = "<group>";
 		};
 		90F3C80E6330F4395B924C94 /* Pods */ = {
@@ -399,6 +410,7 @@
 				00B27B132DC2650800526F82 /* LingvoListoViewController.swift in Sources */,
 				00B27B472DCE636400526F82 /* Vortlistero.swift in Sources */,
 				00B27B112DC264A100526F82 /* Tekstoj.swift in Sources */,
+				00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */,
 				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* AranghHelpiloj.swift in Sources */,
 				000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */,

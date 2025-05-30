@@ -44,6 +44,23 @@ final class Kunordigilo {
 		prezentilo.pushViewController(agordilo, animated: true)
 	}
 	
+	func prezentiStiloelektilon(
+		prezentilo: UINavigationController
+	) {
+		let navigaciilo = UINavigationController()
+		navigaciilo.navigationBar.isTranslucent = false
+		navigaciilo.navigationBar.backgroundColor = InterfacStilo.nuna.koloraFono // TODO: movi, korekti stilon
+		navigaciilo.modalPresentationStyle = .fullScreen
+		
+		let elektilo = StiloElektiloViewController() { _ in
+			navigaciilo.dismiss(animated: true)
+		}
+		navigaciilo.viewControllers = [elektilo]
+		navigaciilo.modalPresentationStyle = .fullScreen
+		
+		prezentilo.present(navigaciilo, animated: true)
+	}
+	
 	func prezentiLingvoRedaktilon(
 		prezentilo: UINavigationController,
 		kompleti: @escaping ([Lingvo]) -> ()

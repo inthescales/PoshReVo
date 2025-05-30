@@ -2,7 +2,8 @@ import UIKit
 
 final class AgordojViewController: UIViewController {
 	private enum Konstantoj {
-		static let chelidentigilo = "agordoj"
+		static let chelidentigiloBaza = "agordojBaza"
+		static let chelidentigiloEtikeda = "agordojEtikedhava"
 	}
 	
 	lazy var tabelo = {
@@ -110,11 +111,16 @@ extension AgordojViewController: UITableViewDelegate {
 		case (1, 1):
 			premisforigiKonservitajn()
 		case (2, 0):
-			// TODO: Aldoni stilo-elektilon
-			break
+			guard let navigaciilo = navigationController else {
+				break
+			}
+			
+			kunordigilo.prezentiStiloelektilon(prezentilo: navigaciilo)
 		default:
 			break
 		}
+		
+		tabelo.deselectRow(at: indexPath, animated: true)
 	}
 }
 
@@ -140,23 +146,23 @@ extension AgordojViewController: UITableViewDataSource {
 		let cell: UITableViewCell
 		switch (indexPath.section, indexPath.row) {
 		case (0, 0):
-			cell = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigilo)
+			cell = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
 			cell.textLabel?.text = "Viaj Lingvoj"
 			cell.detailTextLabel?.text = String(uzantDatumaro.lingvoj.count) + Tekstoj._lingvoj
 		case (1, 0):
-			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigilo)
+			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			cell.textLabel?.text = "Forigi Historion"
 			cell.accessoryType = .none
 		case (1, 1):
-			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigilo)
+			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			cell.textLabel?.text = "Forigi Konservitajn"
 			cell.accessoryType = .none
 		case (2, 0):
-			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigilo)
+			cell = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
 			cell.textLabel?.text = "Ŝanĝi Stilon"
-			cell.accessoryType = .disclosureIndicator
+			cell.detailTextLabel?.text = InterfacStilo.nuna.nomo
 		default:
-			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigilo)
+			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			break
 		}
 		

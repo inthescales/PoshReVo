@@ -1,6 +1,8 @@
 import UIKit
 
 struct InterfacStilo {
+	let nomo: String
+	
 	private var hela: Koloraro
 	private var malhela: Koloraro
 	
@@ -15,6 +17,7 @@ struct InterfacStilo {
 	lazy var surkoloraMalaktiva = UIColor(hela: hela.surkoloraMalaktiva, malhela: malhela.surkoloraMalaktiva)
 	
 	static let karamela = InterfacStilo(
+		nomo: "karamela",
 		hela: Koloraro(
 			senkoloraFono: .white,
 			koloraFono: .orange,
@@ -36,6 +39,10 @@ struct InterfacStilo {
 	)
 	
 	static var nuna: InterfacStilo = .karamela
+	
+	static var chiuj: [InterfacStilo] = [
+		.karamela
+	]
 }
 
 struct Koloraro {
