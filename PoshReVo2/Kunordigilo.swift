@@ -44,6 +44,39 @@ final class Kunordigilo {
 		prezentilo.pushViewController(agordilo, animated: true)
 	}
 	
+	func prezentiMallongigoMenuon(prezentilo: UINavigationController) {
+		let provaj = [
+			MallongigoListoViewController.Ero(mallongigo: "k.s.", signifo: "kaj similaj"),
+			MallongigoListoViewController.Ero(mallongigo: "ktp.", signifo: "kaj tiel plu"),
+			MallongigoListoViewController.Ero(mallongigo: "t.e.", signifo: "tio estas")
+		]
+		let provaj2 = [
+			MallongigoListoViewController.Ero(mallongigo: "MAŜ", signifo: "maŝinoj"),
+			MallongigoListoViewController.Ero(mallongigo: "SPO", signifo: "sporto, ludoj"),
+			MallongigoListoViewController.Ero(mallongigo: "TEKS", signifo: "teksoarto"),
+		]
+		let listeroj: [KategoriaViewController.Listero] = [
+			.init(
+				teksto: "Vortaraj Mallongigoj",
+				celPagho: { MallongigoListoViewController(eroj: provaj) }
+			),
+			.init(
+				teksto: "Fakaj Mallongigoj",
+				celPagho: { MallongigoListoViewController(eroj: provaj2) }
+			)
+		]
+		
+		let vc = KategoriaViewController(listeroj: listeroj)
+		prezentilo.pushViewController(vc, animated: true)
+	}
+	
+	func fariMallongigoPaghon(
+		mallongigoj: [MallongigoListoViewController.Ero],
+		prezentilo: UINavigationController
+	) -> MallongigoListoViewController {
+		return MallongigoListoViewController(eroj: mallongigoj)
+	}
+	
 	func prezentiInformoPaghon(
 		prezentilo: UINavigationController
 	) {
