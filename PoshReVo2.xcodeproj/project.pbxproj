@@ -48,6 +48,7 @@
 		00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B4F2DE8D5F600526F82 /* StiloElektiloViewController.swift */; };
 		00B27B522DEA3ED300526F82 /* ShovMenuoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B512DEA3ED300526F82 /* ShovMenuoViewController.swift */; };
 		00B27B552DEF743500526F82 /* InformojViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B542DEF743500526F82 /* InformojViewController.swift */; };
+		00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		00B27B4F2DE8D5F600526F82 /* StiloElektiloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloElektiloViewController.swift; sourceTree = "<group>"; };
 		00B27B512DEA3ED300526F82 /* ShovMenuoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShovMenuoViewController.swift; sourceTree = "<group>"; };
 		00B27B542DEF743500526F82 /* InformojViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformojViewController.swift; sourceTree = "<group>"; };
+		00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformoSekcio.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				00B27B542DEF743500526F82 /* InformojViewController.swift */,
+				00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */,
 			);
 			path = Informoj;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				00B27B372DCAC35C00526F82 /* TradukojKapoView.swift in Sources */,
 				00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */,
 				00B27B2F2DC8188800526F82 /* DerivajhoChelo.swift in Sources */,
+				00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */,
 				00B27B2D2DC8165A00526F82 /* ArtikolTitoloView.swift in Sources */,
 				00B27B172DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift in Sources */,
 				000DA6FD2D908F680026CBA0 /* ChefaNavigationController.swift in Sources */,
