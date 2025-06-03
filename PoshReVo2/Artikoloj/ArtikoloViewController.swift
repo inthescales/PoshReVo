@@ -339,7 +339,7 @@ extension ArtikoloViewController: UITableViewDataSource {
 	}
 }
 
-extension ArtikoloViewController : TTTAttributedLabelDelegate {
+extension ArtikoloViewController: TTTAttributedLabelDelegate {
 	// NOTU: Eblas aldoni ĉi tiun saman kapablon per UITextView anstataŭ TTTAttributedLabel.
 	// Vidu https://www.kodeco.com/2587-easily-overlooked-new-features-in-ios-7?page=4#toc-anchor-025
 	// TAMEN, mi ankoraŭ uzas TTT ĉar la ligado per tio estas multe pli rapida

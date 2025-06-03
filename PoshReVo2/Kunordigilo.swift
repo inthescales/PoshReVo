@@ -44,6 +44,13 @@ final class Kunordigilo {
 		prezentilo.pushViewController(agordilo, animated: true)
 	}
 	
+	func prezentiInformoPaghon(
+		prezentilo: UINavigationController
+	) {
+		let agordilo = InformojViewController()
+		prezentilo.pushViewController(agordilo, animated: true)
+	}
+	
 	func prezentiStiloelektilon(
 		prezentilo: UINavigationController
 	) {

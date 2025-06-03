@@ -85,6 +85,10 @@ final class HejmaViewController: UIViewController {
 				ShovMenuoViewController.Menuero(
 					teksto: "Agordoj",
 					ago: { [weak self] in self?.premisAgordoj()}
+				),
+				ShovMenuoViewController.Menuero(
+					teksto: "Informoj",
+					ago: { [weak self] in self?.premisInformoj()}
 				)
 			],
 			navigaciilaAlto: navigationController?.navigationBar.bounds.height ?? 0.0,
@@ -119,5 +123,10 @@ final class HejmaViewController: UIViewController {
 	private func premisAgordoj() {
 		guard let navigaciilo = navigationController else { return }
 		kunordigilo.prezentiAgordMenuon(prezentilo: navigaciilo)
+	}
+	
+	private func premisInformoj() {
+		guard let navigaciilo = navigationController else { return }
+		kunordigilo.prezentiInformoPaghon(prezentilo: navigaciilo)
 	}
 }
