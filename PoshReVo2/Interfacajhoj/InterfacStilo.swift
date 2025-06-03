@@ -5,6 +5,10 @@ import UIKit
 // Ambaŭ, laŭ la protokolo, havos variablojn reprezentantajn ĉiujn diversajn kolorojn.
 // Konkreta, laŭ la nuna 'InterfacStilo', enhavos listojn da helaj kaj malhelaj koloroj.
 // Dinamika, laŭ la nuna, ĉerpos la ĝustajn kolorojn el la nune elektita konkreta stilo
+//
+// Ve, ŝajnas ke tiu supra ideo ne funkcios, ĉar la UIColor.dynamicProvider ne ĝisdatiĝas
+// kiam la uzanto elektos novan stilon (ŝajne nur kiam la UITraitCollection ŝanĝiĝas).
+// Kelkaj eblecoj ĉi tie: https://christianselig.com/2022/02/difficulty-theming-ios/
 struct DinamikaStilo {
 	static var senkoloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.senkoloraFono})
 	static var koloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.koloraFono})
