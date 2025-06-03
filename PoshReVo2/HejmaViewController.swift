@@ -80,8 +80,20 @@ final class HejmaViewController: UIViewController {
 	// MARK: Uzantaj agoj
 	
 	@objc private func premisTripunkton() {
-		guard let navigaciilo = navigationController else { return }
-		kunordigilo.prezentiAgordMenuon(prezentilo: navigaciilo)
+		let menuo = ShovMenuoViewController(
+			eroj: [
+				ShovMenuoViewController.Menuero(
+					teksto: "Agordoj",
+					ago: { [weak self] in self?.premisAgordoj()}
+				)
+			],
+			navigaciilaAlto: navigationController?.navigationBar.bounds.height ?? 0.0,
+			forigi: { [weak self] in
+				self?.dismiss(animated: false)
+			}
+		)
+		menuo.modalPresentationStyle = .overFullScreen
+		present(menuo, animated: false)
 	}
 
 	@objc private func premisSerchi() {
@@ -102,5 +114,10 @@ final class HejmaViewController: UIViewController {
 	@objc private func premisKonservitaj() {
 		guard let navigaciilo = navigationController else { return }
 		kunordigilo.prezentiKonservitajn(prezentilo: navigaciilo)
+	}
+	
+	private func premisAgordoj() {
+		guard let navigaciilo = navigationController else { return }
+		kunordigilo.prezentiAgordMenuon(prezentilo: navigaciilo)
 	}
 }

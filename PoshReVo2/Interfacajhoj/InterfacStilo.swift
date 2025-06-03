@@ -1,6 +1,10 @@
 import UIKit
 
 // TODO: Unuigi stilojn? (t.e., uzu nur dinamka aŭ nur simpla)
+// SOLVO: Faru protokolon kiu unuigos klasojn 'DinamikaStilo' kaj 'KonkretaStilo'.
+// Ambaŭ, laŭ la protokolo, havos variablojn reprezentantajn ĉiujn diversajn kolorojn.
+// Konkreta, laŭ la nuna 'InterfacStilo', enhavos listojn da helaj kaj malhelaj koloroj.
+// Dinamika, laŭ la nuna, ĉerpos la ĝustajn kolorojn el la nune elektita konkreta stilo
 struct DinamikaStilo {
 	static var senkoloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.senkoloraFono})
 	static var koloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.koloraFono})
