@@ -1,5 +1,8 @@
 import UIKit
 
+// TODO: Aldoni serchilon
+
+/// Pagho montranta liston da mallongigoj
 final class MallongigoListoViewController: UIViewController {
 	private enum Konstantoj {
 		static let identigilo = "mallongigoIdentigilo"

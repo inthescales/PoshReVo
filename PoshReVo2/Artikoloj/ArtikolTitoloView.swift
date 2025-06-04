@@ -25,16 +25,40 @@ final class ArtikolTitoloView: UIView {
 			UIImage(named: "plenaStelo")?.withRenderingMode(.alwaysTemplate),
 			for: .selected
 		)
+		butono.tintColor = stilo.ligilo
 		butono.addTarget(self, action: #selector(premisKonservi), for: .touchUpInside)
-		butono.tintColor = stilo.koloraFono
 		return butono
+	}()
+	
+	private lazy var saltiButono: UIButton = {
+		let butono = UIButton()
+		butono.setImage(
+			UIImage(named: "saltosago")?.withRenderingMode(.alwaysTemplate),
+			for: .normal
+		)
+		butono.tintColor = stilo.ligilo
+		butono.addTarget(self, action: #selector(premisSalti), for: .touchUpInside)
+		return butono
+	}()
+	
+	private lazy var butonoStaplo: UIStackView = {
+		let staplo = UIStackView()
+		staplo.axis = .horizontal
+		
+		[konserviButono, saltiButono].forEach { butono in
+			staplo.addArrangedSubview(butono)
+		}
+		
+		return staplo
 	}()
 	
 	// MARK: Agordoj
 	
 	private let artikolo: Artikolo
 	
-	private let konservis: (Bool) -> ()
+	private let konservis: (Bool) -> Void
+	
+	private let salti: () -> Void
 	
 	private var stilo: InterfacStilo
 	
@@ -42,11 +66,13 @@ final class ArtikolTitoloView: UIView {
 	
 	init(
 		artikolo: Artikolo,
-		konservis: @escaping (Bool) -> (),
+		konservis: @escaping (Bool) -> Void,
+		salti: @escaping () -> Void,
 		stilo: InterfacStilo
 	) {
 		self.artikolo = artikolo
 		self.konservis = konservis
+		self.salti = salti
 		self.stilo = stilo
 		super.init(frame: .zero)
 		
@@ -57,8 +83,8 @@ final class ArtikolTitoloView: UIView {
 			make.top.bottom.left.equalToSuperview().inset(Konstantoj.margheno)
 		}
 		
-		addSubview(konserviButono)
-		konserviButono.snp.makeConstraints { make in
+		addSubview(butonoStaplo)
+		butonoStaplo.snp.makeConstraints { make in
 			make.top.bottom.right.equalToSuperview().inset(Konstantoj.margheno)
 		}
 	}
@@ -76,5 +102,9 @@ final class ArtikolTitoloView: UIView {
 	@objc private func premisKonservi() {
 		konserviButono.isSelected = !konserviButono.isSelected
 		konservis(konserviButono.isSelected)
+	}
+	
+	@objc private func premisSalti() {
+		salti()
 	}
 }

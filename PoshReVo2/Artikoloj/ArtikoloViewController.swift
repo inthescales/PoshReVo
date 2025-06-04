@@ -47,6 +47,7 @@ final class ArtikoloViewController: UIViewController {
 		let etikedo = ArtikolTitoloView(
 			artikolo: artikolo,
 			konservis: konservis,
+			salti: premisSalti,
 			stilo: stilo
 		)
 		return etikedo
@@ -206,6 +207,36 @@ final class ArtikoloViewController: UIViewController {
 	}
 	
 	// MARK: Agoj
+	
+	private func premisSalti() {
+		let eroj: [ShovMenuoViewController.Menuero] = cheloDatumoj.compactMap {
+			switch $0 {
+			case .subartikolo(let subartikolo):
+				return ShovMenuoViewController.Menuero(teksto: "---") {}
+			case .derivajho(let vorto):
+				return ShovMenuoViewController.Menuero(teksto: vorto.titolo) { [weak self] in
+					guard let self, let marko = vorto.marko else {
+						return
+					}
+					
+					saltiAlMarko(marko, animacii: true)
+				}
+			case .traduko:
+				return nil
+			}
+		}
+		
+		let menuo = ShovMenuoViewController(
+			eroj: eroj,
+			navigaciilaAlto: navigationController?.navigationBar.bounds.height ?? 0.0,
+			forigi: { [weak self] in
+				self?.dismiss(animated: false)
+			}
+		)
+		
+		menuo.modalPresentationStyle = .overFullScreen
+		navigationController?.present(menuo, animated: false)
+	}
 	
 	/// Haste rulumi al la celata marko
 	private func saltiAlMarko(_ marko: String, animacii: Bool) {
