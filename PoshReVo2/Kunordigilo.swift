@@ -3,18 +3,18 @@ import UIKit
 import ReVoDatumbazo
 
 final class Kunordigilo {
-	static var komuna = Kunordigilo(uzantDatumaro: .komuna, vortaro: .komuna)
+	static var komuna = Kunordigilo(datumRegilo: .komuna, vortaro: .komuna)
 		
 	// MARK: Agordoj
 	
-	let uzantDatumaro: UzantDatumaro
+	let datumRegilo: UzantDatumoRegilo
 	
 	let vortaro: VortaroDatumbazo
 	
 	//
 	
-	init(uzantDatumaro: UzantDatumaro, vortaro: VortaroDatumbazo) {
-		self.uzantDatumaro = uzantDatumaro
+	init(datumRegilo: UzantDatumoRegilo, vortaro: VortaroDatumbazo) {
+		self.datumRegilo = datumRegilo
 		self.vortaro = vortaro
 	}
 	
@@ -26,7 +26,7 @@ final class Kunordigilo {
 	) -> LingvoBretoViewController {
 		return LingvoBretoViewController(
 			elektisLingvon: { [weak self] lingvo in
-				self?.uzantDatumaro.elektis(lingvon: lingvo)
+				self?.datumRegilo.elektis(lingvon: lingvo)
 				elektisLingvon(lingvo)
 			},
 			redaktisLingvojn: { lingvoj in
@@ -105,9 +105,9 @@ final class Kunordigilo {
 		navigaciilo.modalPresentationStyle = .fullScreen
 		
 		let redaktilo = LingvaroRedaktiloViewController(
-			lingvaro: uzantDatumaro.lingvoj,
+			lingvaro: datumRegilo.datumaro.lingvoj,
 			kompleti: { [weak self] novaj in
-				self?.uzantDatumaro.redaktisLingvojn(novaj: novaj)
+				self?.datumRegilo.redaktisLingvojn(novaj: novaj)
 				kompleti(novaj)
 				navigaciilo.dismiss(animated: true)
 			}
@@ -158,7 +158,7 @@ final class Kunordigilo {
 	
 	func prezentiSerchPaghon(prezentilo: UINavigationController, radika: Bool = false) {
 		let serchilo = SerchoViewController(
-			serchLingvoj: uzantDatumaro.lingvoj,
+			serchLingvoj: datumRegilo.datumaro.lingvoj,
 			radika: radika
 		)
 		prezentilo.pushViewController(
@@ -198,7 +198,7 @@ final class Kunordigilo {
 				
 				prezentiArtikoloPaghon(el: artikolo, prezentilo: prezentilo)
 			},
-			uzantDatumaro: uzantDatumaro
+			uzantDatumaro: datumRegilo.datumaro
 		)
 		prezentilo.pushViewController(vc, animated: true)
 	}
@@ -213,7 +213,7 @@ final class Kunordigilo {
 				
 				prezentiArtikoloPaghon(el: artikolo, prezentilo: prezentilo)
 			},
-			uzantDatumaro: uzantDatumaro
+			uzantDatumaro: datumRegilo.datumaro
 		)
 		prezentilo.pushViewController(vc, animated: true)
 	}
@@ -317,17 +317,17 @@ final class Kunordigilo {
 		
 		return ArtikoloViewController(
 			artikolo: artikolo,
-			aperis: { [weak self] in self?.uzantDatumaro.vizitis(artikolon: artikolo) },
+			aperis: { [weak self] in self?.datumRegilo.markiVizititan(artikolon: artikolo) },
 			konservis: { [weak self] konservita in
 				guard let self else { return }
 				
 				if konservita {
-					uzantDatumaro.konservi(artikolon: artikolo)
+					datumRegilo.konservi(artikolon: artikolo)
 				} else {
-					uzantDatumaro.malkonservi(artikolon: artikolo)
+					datumRegilo.malkonservi(artikolon: artikolo)
 				}
 			},
-			uzantDatumaro: uzantDatumaro
+			uzantDatumaro: datumRegilo.datumaro
 		)
 	}
 	
@@ -340,19 +340,19 @@ final class Kunordigilo {
 		ArtikoloViewController(
 			artikolo: artikolo,
 			aperis: { [weak self] in
-				self?.uzantDatumaro.vizitis(artikolon: artikolo)
+				self?.datumRegilo.markiVizititan(artikolon: artikolo)
 				self?.purigi(prezentilon: prezentilo)
 			},
 			konservis: { [weak self] konservita in
 				guard let self else { return }
 				
 				if konservita {
-					uzantDatumaro.konservi(artikolon: artikolo)
+					datumRegilo.konservi(artikolon: artikolo)
 				} else {
-					uzantDatumaro.malkonservi(artikolon: artikolo)
+					datumRegilo.malkonservi(artikolon: artikolo)
 				}
 			},
-			uzantDatumaro: uzantDatumaro
+			uzantDatumaro: datumRegilo.datumaro
 		)
 	}
 }

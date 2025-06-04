@@ -135,7 +135,7 @@ final class ArtikoloViewController: UIViewController {
 	) {
 		self.init(
 			artikolo: artikolo,
-			konservita: uzantDatumaro.estasKonservita(artikolo: artikolo),
+			konservita: uzantDatumaro.chuKonservita(artikolo: artikolo),
 			aperis: aperis,
 			konservis: konservis
 		)

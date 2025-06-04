@@ -17,7 +17,7 @@ final class AgordojViewController: UIViewController {
 		
 	let kunordigilo: Kunordigilo
 	
-	let uzantDatumaro: UzantDatumaro
+	let datumRegilo: UzantDatumoRegilo
 	
 	var stilo: InterfacStilo
 	
@@ -25,11 +25,11 @@ final class AgordojViewController: UIViewController {
 	
 	init(
 		kunordigilo: Kunordigilo = .komuna,
-		uzantDatumaro: UzantDatumaro = .komuna,
+		datumRegilo: UzantDatumoRegilo = .komuna,
 		stilo: InterfacStilo = .nuna
 	) {
 		self.kunordigilo = kunordigilo
-		self.uzantDatumaro = uzantDatumaro
+		self.datumRegilo = datumRegilo
 		self.stilo = stilo
 		
 		super.init(nibName: nil, bundle: nil)
@@ -48,13 +48,13 @@ final class AgordojViewController: UIViewController {
 	
 	private func premisforigiHistorion() {
 		prezentiKonfirmilon(teksto: Tekstoj.forigiHistorionDemand) { [weak self] in
-			self?.uzantDatumaro.forigiHistorion()
+			self?.datumRegilo.forigiHistorion()
 		}
 	}
 	
 	private func premisforigiKonservitajn() {
 		prezentiKonfirmilon(teksto: Tekstoj.forigiHistorionDemand) { [weak self] in
-			self?.uzantDatumaro.forigiKonservitajn()
+			self?.datumRegilo.forigiKonservitajn()
 		}
 	}
 	
@@ -148,7 +148,7 @@ extension AgordojViewController: UITableViewDataSource {
 		case (0, 0):
 			cell = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
 			cell.textLabel?.text = "Viaj Lingvoj"
-			cell.detailTextLabel?.text = String(uzantDatumaro.lingvoj.count) + Tekstoj._lingvoj
+			cell.detailTextLabel?.text = String(datumRegilo.datumaro.lingvoj.count) + Tekstoj._lingvoj
 		case (1, 0):
 			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			cell.textLabel?.text = "Forigi Historion"
