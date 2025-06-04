@@ -31,6 +31,14 @@ final class ShovMenuoViewController: UIViewController {
 		return view
 	}()
 	
+	private lazy var rulumejo: UIScrollView = {
+		let ejo = UIScrollView()
+		ejo.isScrollEnabled = true
+		ejo.showsHorizontalScrollIndicator = false
+		ejo.contentInset = UIEdgeInsets(top: navigaciilaAlto, left: 0, bottom: 0, right: 0)
+		return ejo
+	}()
+	
 	private lazy var elektoStaplo: UIStackView = {
 		let staplo = UIStackView()
 		staplo.backgroundColor = stilo.senkoloraFono
@@ -82,10 +90,10 @@ final class ShovMenuoViewController: UIViewController {
 			dekstraLigo = make.left.equalTo(view.snp.right).constraint
 		}
 		
-		menuejo.addSubview(elektoStaplo)
-		elektoStaplo.snp.makeConstraints { make in
-			make.left.right.equalToSuperview()
-			make.top.equalToSuperview().offset(navigaciilaAlto)
+		menuejo.addEdgeMatchedSubview(rulumejo)
+		rulumejo.addEdgeMatchedSubview(elektoStaplo)
+		rulumejo.snp.makeConstraints { make in
+			make.width.equalTo(elektoStaplo.snp.width)
 		}
 	}
 	
@@ -97,6 +105,8 @@ final class ShovMenuoViewController: UIViewController {
 			self?.view.layoutIfNeeded()
 			self?.ombroView.alpha = Konstantoj.ombroMalhelo
 		}
+		
+		rulumejo.contentSize = elektoStaplo.bounds.size
 	}
 	
 	// MARK: - InterfacHelpiloj
