@@ -23,7 +23,7 @@
 		007983722D67C6B60021FD4C /* SerchRezulto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007983712D67C6B60021FD4C /* SerchRezulto.swift */; };
 		0099FC252D65058C0033EC11 /* PrefiksArboFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */; };
 		0099FC262D65058C0033EC11 /* VortListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCE2D65058B0033EC11 /* VortListoj.swift */; };
-		0099FC282D65058C0033EC11 /* TekstFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD02D65058B0033EC11 /* TekstFarilo.swift */; };
+		0099FC282D65058C0033EC11 /* MallongigoListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD02D65058B0033EC11 /* MallongigoListoj.swift */; };
 		0099FC292D65058C0033EC11 /* ArtikolTeksto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */; };
 		0099FC2A2D65058C0033EC11 /* Interpreti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD22D65058C0033EC11 /* Interpreti.swift */; };
 		0099FC2B2D65058C0033EC11 /* String+Aldonoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */; };
@@ -150,7 +150,7 @@
 		0099FCE92D6506580033EC11 /* testiSerchVortojn.Om-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCB32D6506580033EC11 /* testiSerchVortojn.Om-o.json */; };
 		0099FCEA2D6506580033EC11 /* testiSerchVortojn.per.json in Resources */ = {isa = PBXBuildFile; fileRef = 0099FCB42D6506580033EC11 /* testiSerchVortojn.per.json */; };
 		0099FCEB2D6506580033EC11 /* DatumbazFariloTestoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FCB72D6506580033EC11 /* DatumbazFariloTestoj.swift */; };
-		0099FCEC2D65067F0033EC11 /* TekstFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD02D65058B0033EC11 /* TekstFarilo.swift */; };
+		0099FCEC2D65067F0033EC11 /* MallongigoListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD02D65058B0033EC11 /* MallongigoListoj.swift */; };
 		0099FCEE2D65067F0033EC11 /* VortListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCE2D65058B0033EC11 /* VortListoj.swift */; };
 		0099FCEF2D65067F0033EC11 /* PrefiksArboFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */; };
 		0099FCF02D65067F0033EC11 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC232D65058C0033EC11 /* main.swift */; };
@@ -312,7 +312,7 @@
 		0099FBC52D6505330033EC11 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
 		0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefiksArboFarilo.swift; sourceTree = "<group>"; };
 		0099FBCE2D65058B0033EC11 /* VortListoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VortListoj.swift; sourceTree = "<group>"; };
-		0099FBD02D65058B0033EC11 /* TekstFarilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TekstFarilo.swift; sourceTree = "<group>"; };
+		0099FBD02D65058B0033EC11 /* MallongigoListoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallongigoListoj.swift; sourceTree = "<group>"; };
 		0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolTeksto.swift; sourceTree = "<group>"; };
 		0099FBD22D65058C0033EC11 /* Interpreti.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpreti.swift; sourceTree = "<group>"; };
 		0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Aldonoj.swift"; sourceTree = "<group>"; };
@@ -564,8 +564,8 @@
 				0099FC152D65058C0033EC11 /* Artikoloj */,
 				0099FC172D65058C0033EC11 /* ModelAldonoj */,
 				0099FBCE2D65058B0033EC11 /* VortListoj.swift */,
+				0099FBD02D65058B0033EC11 /* MallongigoListoj.swift */,
 				0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */,
-				0099FBD02D65058B0033EC11 /* TekstFarilo.swift */,
 				0099FC232D65058C0033EC11 /* main.swift */,
 			);
 			path = DatumbazFarilo;
@@ -1190,7 +1190,7 @@
 				0099FC652D65058C0033EC11 /* ArtikolAnalizilo.swift in Sources */,
 				000DA6C82D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				0099FC372D65058C0033EC11 /* Stato.swift in Sources */,
-				0099FC282D65058C0033EC11 /* TekstFarilo.swift in Sources */,
+				0099FC282D65058C0033EC11 /* MallongigoListoj.swift in Sources */,
 				0099FC5C2D65058C0033EC11 /* TraktiTradukon.swift in Sources */,
 				0099FC6C2D65058C0033EC11 /* FakoAnalizilo.swift in Sources */,
 				00B2972E2D65534600264431 /* Stilo.swift in Sources */,
@@ -1221,7 +1221,7 @@
 				0099FD2A2D6506940033EC11 /* ArtikolNodo.swift in Sources */,
 				0099FD2B2D6506940033EC11 /* FakVorto.swift in Sources */,
 				0099FD2C2D6506940033EC11 /* SerchTraduko.swift in Sources */,
-				0099FCEC2D65067F0033EC11 /* TekstFarilo.swift in Sources */,
+				0099FCEC2D65067F0033EC11 /* MallongigoListoj.swift in Sources */,
 				00B297332D65572700264431 /* Mallongigo.swift in Sources */,
 				00B297262D654FCF00264431 /* Lingvo+Datumbazo.swift in Sources */,
 				0099FCEE2D65067F0033EC11 /* VortListoj.swift in Sources */,
@@ -1495,6 +1495,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZ3WYZWA8F;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1517,6 +1518,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZ3WYZWA8F;
 				ENABLE_HARDENED_RUNTIME = YES;

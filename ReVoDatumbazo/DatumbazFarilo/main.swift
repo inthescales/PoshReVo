@@ -59,7 +59,11 @@ prefiksArboFarilo.skribi(en: konteksto)
 
 // Generi tekstojn
 
-// TekstFarilo.generiTekstojn(fakoj: fakoj, mallongigoj: mallongigoj, destinIndiko: produktajhIndiko)
+MallongigoListoj.generiDosieron(
+	fakoj: grundo.fakoj,
+	mallongigoj: grundo.mallongigojVortaraj,
+	destinIndiko: produktajhIndiko
+)
 
 print("Ĉion finis :)")
 

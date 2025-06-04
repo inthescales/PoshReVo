@@ -8,10 +8,7 @@ final class MallongigoListoViewController: UIViewController {
 		static let identigilo = "mallongigoIdentigilo"
 	}
 	
-	struct Ero {
-		let mallongigo: String
-		let signifo: String
-	}
+	typealias Ero = (mallongigo: String, signifo: String)
 	
 	// MARK: - Interfaceroj
 	
@@ -19,7 +16,7 @@ final class MallongigoListoViewController: UIViewController {
 		let serchilo = SerchiloView(
 			lokokupaTeksto: Tekstoj.serchiMallongigojn,
 			iksumi: true,
-			tekstoShanghighis: filtro(teksto:)
+			tekstoShanghighis: filtri(teksto:)
 		)
 		return serchilo
 	}()
@@ -70,7 +67,7 @@ final class MallongigoListoViewController: UIViewController {
 		}
 	}
 	
-	private func filtro(teksto: String) {
+	private func filtri(teksto: String) {
 		guard !teksto.isEmpty else {
 			videblajEroj = eroj
 			tabelo.reloadData()
