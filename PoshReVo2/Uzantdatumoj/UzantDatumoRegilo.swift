@@ -18,14 +18,18 @@ final class UzantDatumoRegilo {
 	
 	private(set) var datumaro: UzantDatumaro
 	
+	private let tenilo: UzantDatumoTenilo = UserDefaultsUzantDatumoTenilo()
+	
 	init() {
-		datumaro = UserDefaultsUzantDatumoTenado.legiDatumaron()
+		datumaro = tenilo.legiDatumaron()
 	}
 	
 	// MARK: - Lingvoj
 	
 	func elektis(lingvon novaLingvo: Lingvo) {
 		datumaro.elektitaLingvo = novaLingvo
+		tenilo.skribi(datumaron: datumaro)
+		
 		NotificationCenter.default.post(
 			name: Avizoj.elektitaLingvoShanghighis,
 			object: novaLingvo
@@ -34,6 +38,8 @@ final class UzantDatumoRegilo {
 	
 	func redaktisLingvojn(novaj: [Lingvo]) {
 		datumaro.lingvoj = novaj
+		tenilo.skribi(datumaron: datumaro)
+		
 		NotificationCenter.default.post(
 			name: Avizoj.uzantajLingvojShanghighis,
 			object: novaj
@@ -53,6 +59,8 @@ final class UzantDatumoRegilo {
 			datumaro.historio.remove(at: 0)
 		}
 		
+		tenilo.skribi(datumaron: datumaro)
+		
 		NotificationCenter.default.post(
 			name: Avizoj.historioShanghighis,
 			object: datumaro.historio
@@ -61,6 +69,7 @@ final class UzantDatumoRegilo {
 	
 	func forigiHistorion() {
 		datumaro.historio = []
+		tenilo.skribi(datumaron: datumaro)
 	}
 	
 	// MARK: - Konservado
@@ -69,6 +78,8 @@ final class UzantDatumoRegilo {
 		guard !datumaro.chuKonservita(artikolo: artikolo) else { return }
 		
 		datumaro.konservitaj.append(Konservitajho(el: artikolo))
+		tenilo.skribi(datumaron: datumaro)
+		
 		NotificationCenter.default.post(
 			name: Avizoj.konservitajShanghighis,
 			object: datumaro.konservitaj
@@ -81,6 +92,8 @@ final class UzantDatumoRegilo {
 		) else { return }
 		
 		datumaro.konservitaj.remove(at: indekso)
+		tenilo.skribi(datumaron: datumaro)
+		
 		NotificationCenter.default.post(
 			name: Avizoj.konservitajShanghighis,
 			object: datumaro.konservitaj
@@ -89,5 +102,6 @@ final class UzantDatumoRegilo {
 	
 	func forigiKonservitajn() {
 		datumaro.konservitaj = []
+		tenilo.skribi(datumaron: datumaro)
 	}
 }

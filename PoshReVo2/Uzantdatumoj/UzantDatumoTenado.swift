@@ -2,26 +2,26 @@ import Foundation
 
 import ReVoDatumbazo
 
-protocol UzantDatumoTenado {
-	static func skribi(datumaron: UzantDatumaro)
+protocol UzantDatumoTenilo {
+	func skribi(datumaron: UzantDatumaro)
 	
-	static func legiDatumaron() -> UzantDatumaro
+	func legiDatumaron() -> UzantDatumaro
 }
 
-final class UserDefaultsUzantDatumoTenado: UzantDatumoTenado {
+final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 	private enum Klavoj {
 		static let lingvoj = "lingvoj"
 		static let historio = "historio"
 		static let konservitaj = "konservitaj"
 	}
 	
-	private static var lasta: UzantDatumaro?
+	private var lasta: UzantDatumaro?
 	
 	init() {}
 	
 	// MARK: - Defaultaj valoroj
 	
-	static var defaultajLingvoj: [Lingvo] {
+	private var defaultajLingvoj: [Lingvo] {
 		let aparatajLingvoj = NSLocale.preferredLanguages.compactMap { kodo in
 			let bazo = kodo.components(separatedBy: "-").first
 			return VortaroDatumbazo.komuna.lingvo(kodo: bazo ?? kodo)
@@ -34,7 +34,7 @@ final class UserDefaultsUzantDatumoTenado: UzantDatumoTenado {
 	
 	// MARK: - Skribado kaj Legado
 	
-	static func skribi(datumaron datumaro: UzantDatumaro) {
+	func skribi(datumaron datumaro: UzantDatumaro) {
 		let defaults = UserDefaults.standard
 		let kodigilo = JSONEncoder()
 	
@@ -62,7 +62,7 @@ final class UserDefaultsUzantDatumoTenado: UzantDatumoTenado {
 		lasta = datumaro
 	}
 	
-	static func legiDatumaron() -> UzantDatumaro {
+	func legiDatumaron() -> UzantDatumaro {
 		let defaults = UserDefaults.standard
 		let malkodigilo = JSONDecoder()
 		
