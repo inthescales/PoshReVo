@@ -51,7 +51,8 @@
 		00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */; };
 		00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */; };
 		00B27B5C2DF0A77500526F82 /* MallongigoListo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5B2DF0A77500526F82 /* MallongigoListo.swift */; };
-		00B27B5F2DF0AF9A00526F82 /* UzantDatumoSkribado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5E2DF0AF9A00526F82 /* UzantDatumoSkribado.swift */; };
+		00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenado.swift */; };
+		00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,7 +115,8 @@
 		00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformoSekcio.swift; sourceTree = "<group>"; };
 		00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoListoViewController.swift; sourceTree = "<group>"; };
 		00B27B5B2DF0A77500526F82 /* MallongigoListo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallongigoListo.swift; sourceTree = "<group>"; };
-		00B27B5E2DF0AF9A00526F82 /* UzantDatumoSkribado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoSkribado.swift; sourceTree = "<group>"; };
+		00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoTenado.swift; sourceTree = "<group>"; };
+		00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoRegilo.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -301,7 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */,
-				00B27B5E2DF0AF9A00526F82 /* UzantDatumoSkribado.swift */,
+				00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */,
+				00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenado.swift */,
 			);
 			path = Uzantdatumoj;
 			sourceTree = "<group>";
@@ -444,7 +447,7 @@
 				00B27B492DCE721600526F82 /* KonservitajViewController.swift in Sources */,
 				00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */,
 				00B27B5C2DF0A77500526F82 /* MallongigoListo.swift in Sources */,
-				00B27B5F2DF0AF9A00526F82 /* UzantDatumoSkribado.swift in Sources */,
+				00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenado.swift in Sources */,
 				00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */,
 				000DA6F92D906C6E0026CBA0 /* InterfacStilo.swift in Sources */,
 				00B27B522DEA3ED300526F82 /* ShovMenuoViewController.swift in Sources */,
@@ -469,6 +472,7 @@
 				000DA6FD2D908F680026CBA0 /* ChefaNavigationController.swift in Sources */,
 				00B27B202DC3F9F700526F82 /* LingvoBretoViewController.swift in Sources */,
 				00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */,
+				00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */,
 				00B27B332DC8212C00526F82 /* TekstAtributoHelpiloj.swift in Sources */,
 				00B27B282DC6B77A00526F82 /* UzantDatumaro.swift in Sources */,
 				00B27B3B2DCBBC6600526F82 /* TradukoChelo.swift in Sources */,
