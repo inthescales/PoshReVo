@@ -18,7 +18,7 @@ enum Tekstoj {
 	
 	static let montriPliajnLingvoj = "Montri Pliajn Lingvojn"
 	
-	// MARK: Agordoj
+	// MARK: - Agordoj
 	
 	static let _lingvoj = " lingvoj"
 	static let forigiHistorionDemand = "Forigi historion?"
@@ -26,4 +26,8 @@ enum Tekstoj {
 	
 	static let jes = "Jes"
 	static let ne = "Ne"
+	
+	// MARK: - Mallongigoj
+	
+	static let serchiMallongigojn = "Serĉi mallongigojn"
 }

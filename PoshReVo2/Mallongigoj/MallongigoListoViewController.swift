@@ -15,6 +15,15 @@ final class MallongigoListoViewController: UIViewController {
 	
 	// MARK: - Interfaceroj
 	
+	private lazy var serchilo: SerchiloView = {
+		let serchilo = SerchiloView(
+			lokokupaTeksto: Tekstoj.serchiMallongigojn,
+			iksumi: true,
+			tekstoShanghighis: filtro(teksto:)
+		)
+		return serchilo
+	}()
+	
 	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
 		tabelo.delegate = self
@@ -22,6 +31,10 @@ final class MallongigoListoViewController: UIViewController {
 		tabelo.register(MallongigoChelo.self, forCellReuseIdentifier: Konstantoj.identigilo)
 		return tabelo
 	}()
+	
+	// MARK: - Stato
+	
+	private var videblajEroj: [Ero]
 	
 	// MARK: - Agordoj
 	
@@ -31,6 +44,7 @@ final class MallongigoListoViewController: UIViewController {
 	
 	init(eroj: [Ero], stilo: InterfacStilo = .nuna) {
 		self.eroj = eroj
+		self.videblajEroj = eroj
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -42,7 +56,32 @@ final class MallongigoListoViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		view.addEdgeMatchedSubview(tabelo)
+		view.backgroundColor = stilo.koloraFono
+		
+		view.addSubview(serchilo)
+		serchilo.snp.makeConstraints { make in
+			make.top.left.right.equalToSuperview()
+		}
+		
+		view.addSubview(tabelo)
+		tabelo.snp.makeConstraints { make in
+			make.left.right.bottom.equalToSuperview()
+			make.top.equalTo(serchilo.snp.bottom)
+		}
+	}
+	
+	private func filtro(teksto: String) {
+		guard !teksto.isEmpty else {
+			videblajEroj = eroj
+			tabelo.reloadData()
+			return
+		}
+		
+		videblajEroj = eroj.filter { ero in
+			ero.mallongigo.contains(teksto) || ero.signifo.contains(teksto)
+		}
+		
+		tabelo.reloadData()
 	}
 }
 
@@ -54,11 +93,11 @@ extension MallongigoListoViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		eroj.count
+		videblajEroj.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let ero = eroj[indexPath.row]
+		let ero = videblajEroj[indexPath.row]
 		guard let chelo = tableView.dequeueReusableCell(withIdentifier: Konstantoj.identigilo, for: indexPath) as? MallongigoChelo else {
 			fatalError("Ricevis malĝustan ĉelspecon")
 		}
