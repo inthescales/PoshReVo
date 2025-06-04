@@ -43,7 +43,7 @@ final class LingvoElektiloViewController: UIViewController {
 	/// Vokota kiam uzanto elektos lingvon
 	let elektisLingvon: (Lingvo) -> ()
 	
-	var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	//
 	

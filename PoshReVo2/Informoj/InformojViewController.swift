@@ -21,7 +21,7 @@ final class InformojViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
-	var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	init(stilo: InterfacStilo = .nuna) {
 		self.stilo = stilo

@@ -15,11 +15,11 @@ final class AgordojViewController: UIViewController {
 	
 	// MARK: Agordoj
 		
-	let kunordigilo: Kunordigilo
+	private let kunordigilo: Kunordigilo
 	
-	let datumRegilo: UzantDatumoRegilo
+	private let datumRegilo: UzantDatumoRegilo
 	
-	var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	//
 	

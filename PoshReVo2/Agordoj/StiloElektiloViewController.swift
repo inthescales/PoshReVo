@@ -26,13 +26,13 @@ final class StiloElektiloViewController: UIViewController {
 	
 	// MARK: Agordoj
 	
-	let kompleti: (InterfacStilo?) -> ()
+	private let kompleti: (InterfacStilo?) -> ()
 		
-	let kunordigilo: Kunordigilo
+	private let kunordigilo: Kunordigilo
 	
-	let uzantDatumaro: UzantDatumaro
+	private let uzantDatumaro: UzantDatumaro
 	
-	var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	//
 	

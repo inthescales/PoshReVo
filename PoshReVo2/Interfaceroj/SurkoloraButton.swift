@@ -1,7 +1,7 @@
 import UIKit
 
 final class SurkoloraButton: UIButton {
-	var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	init(teksto: String, stilo: InterfacStilo = .nuna) {
 		self.stilo = stilo

@@ -9,10 +9,6 @@ final class ArtikolTekstoChelo: UITableViewCell {
 		return etikedo
 	}()
 	
-	// MARK: Agordoj
-	
-	var stilo: InterfacStilo?
-	
 	//
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -28,9 +24,7 @@ final class ArtikolTekstoChelo: UITableViewCell {
 	// MARK: Agoj
 	
 	func agordi(teksto: String, stilo: InterfacStilo) {
-		self.stilo = stilo
-		
 		tekstoEtikedo.text = teksto
-		tekstoEtikedo.textColor = self.stilo?.teksto
+		tekstoEtikedo.textColor = stilo.teksto
 	}
 }

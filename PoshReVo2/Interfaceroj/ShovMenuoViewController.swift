@@ -60,7 +60,7 @@ final class ShovMenuoViewController: UIViewController {
 	
 	let foriri: () -> Void
 	
-	var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	init(
 		eroj: [Menuero],

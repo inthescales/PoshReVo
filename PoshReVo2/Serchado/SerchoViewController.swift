@@ -62,7 +62,7 @@ final class SerchoViewController: UIViewController {
 	
 	private var kunordigilo: Kunordigilo
 	
-	private var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	//
 	

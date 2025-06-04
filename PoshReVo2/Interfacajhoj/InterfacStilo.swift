@@ -9,7 +9,7 @@ import UIKit
 // Ve, ŝajnas ke tiu supra ideo ne funkcios, ĉar la UIColor.dynamicProvider ne ĝisdatiĝas
 // kiam la uzanto elektos novan stilon (ŝajne nur kiam la UITraitCollection ŝanĝiĝas).
 // Kelkaj eblecoj ĉi tie: https://christianselig.com/2022/02/difficulty-theming-ios/
-struct DinamikaStilo {
+class DinamikaStilo {
 	static var senkoloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.senkoloraFono})
 	static var koloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.koloraFono})
 	static var teksto = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.teksto})
@@ -19,7 +19,7 @@ struct DinamikaStilo {
 	static var surkoloraMalaktiva = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.surkoloraMalaktiva})
 }
 
-struct InterfacStilo {
+class InterfacStilo {
 	let nomo: String
 	
 	private var hela: Koloraro
@@ -34,6 +34,12 @@ struct InterfacStilo {
 	lazy var surkoloraButono = UIColor(hela: hela.surkoloraButono, malhela: malhela.surkoloraButono)
 	lazy var surkoloraTeksto = UIColor(hela: hela.surkoloraTeksto, malhela: malhela.surkoloraTeksto)
 	lazy var surkoloraMalaktiva = UIColor(hela: hela.surkoloraMalaktiva, malhela: malhela.surkoloraMalaktiva)
+	
+	init(nomo: String, hela: Koloraro, malhela: Koloraro) {
+		self.nomo = nomo
+		self.hela = hela
+		self.malhela = malhela
+	}
 	
 	static let karamela = InterfacStilo(
 		nomo: "karamela",

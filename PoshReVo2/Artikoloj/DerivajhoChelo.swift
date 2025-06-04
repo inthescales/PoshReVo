@@ -19,10 +19,6 @@ final class DerivajhoChelo: UITableViewCell {
 		return etikedo
 	}()
 	
-	// MARK: Agordoj
-	
-	var stilo: InterfacStilo?
-	
 	//
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -51,25 +47,20 @@ final class DerivajhoChelo: UITableViewCell {
 		liganto: TTTAttributedLabelDelegate,
 		stilo: InterfacStilo
 	) {
-		self.stilo = stilo
-		
 		titoloEtikedo.text = vorto.titolo
-		titoloEtikedo.textColor = self.stilo?.teksto
+		titoloEtikedo.textColor = stilo.teksto
 		
-		difinoEtikedo.textColor = self.stilo?.teksto
+		difinoEtikedo.textColor = stilo.teksto
 		difinoEtikedo.delegate = liganto
 		
-		if let koloro = self.stilo?.ligilo,
-		   let aktivaKoloro = self.stilo?.koloraFono {
-			difinoEtikedo.linkAttributes = [
-				kCTForegroundColorAttributeName : koloro,
-				kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
-			]
-			difinoEtikedo.activeLinkAttributes = [
-				kCTForegroundColorAttributeName : aktivaKoloro,
-				kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
-			]
-		}
+		difinoEtikedo.linkAttributes = [
+			kCTForegroundColorAttributeName : stilo.ligilo,
+			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
+		]
+		difinoEtikedo.activeLinkAttributes = [
+			kCTForegroundColorAttributeName : stilo.koloraFono,
+			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
+		]
 		
 		TekstAtributoHelpiloj.provizi(etikedon: difinoEtikedo, per: vorto.teksto)
 	}

@@ -21,7 +21,7 @@ final class LingvoListoViewController: UIViewController {
 	
 	private let elektisLingvon: (Lingvo) -> ()
 	
-	private var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	//
 	

@@ -17,7 +17,7 @@ final class TradukojPiedoView: UICollectionReusableView {
 	
 	private let ago: () ->()
 	
-	private var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	//
 	

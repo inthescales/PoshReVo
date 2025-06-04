@@ -60,7 +60,7 @@ final class ArtikolTitoloView: UIView {
 	
 	private let salti: () -> Void
 	
-	private var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	//
 	

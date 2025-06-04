@@ -48,7 +48,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	
 	// MARK: Agordoj
 	
-	var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	let kompleti: ([Lingvo]) -> ()
 	

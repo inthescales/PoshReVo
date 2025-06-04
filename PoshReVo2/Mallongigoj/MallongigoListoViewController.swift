@@ -37,7 +37,7 @@ final class MallongigoListoViewController: UIViewController {
 	
 	private let eroj: [Ero]
 	
-	private var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	init(eroj: [Ero], stilo: InterfacStilo = .nuna) {
 		self.eroj = eroj
@@ -136,8 +136,6 @@ final class MallongigoChelo: UITableViewCell {
 	}
 	
 	func agordi(mallongigo: String, signifo: String, stilo: InterfacStilo) {
-		var stilo = stilo
-		
 		mallongigoEtikedo.text = mallongigo
 		mallongigoEtikedo.textColor = stilo.teksto
 		

@@ -98,7 +98,7 @@ final class ArtikoloViewController: UIViewController {
 	
 	private let kunordigilo: Kunordigilo
 	
-	private var stilo: InterfacStilo
+	private let stilo: InterfacStilo
 	
 	//
 	
