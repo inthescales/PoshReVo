@@ -66,7 +66,7 @@ final class ShovMenuoViewController: UIViewController {
 		eroj: [Menuero],
 		navigaciilaAlto: CGFloat,
 		forigi foriri: @escaping () -> Void,
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.eroj = eroj
 		self.navigaciilaAlto = navigaciilaAlto

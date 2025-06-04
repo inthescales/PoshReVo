@@ -21,10 +21,14 @@ final class InformoSekcio: UIView {
 		return etikedo
 	}()
 	
-	init(titolo: String?, teksto: String, delegate: TTTAttributedLabelDelegate) {
+	init(
+		titolo: String?,
+		teksto: String,
+		delegate: TTTAttributedLabelDelegate,
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
+	) {
 		super.init(frame: .zero)
 		
-		var stilo = InterfacStilo.nuna
 		if let titolo {
 			titolEtikedo.text = titolo
 			titolEtikedo.font = .systemFont(ofSize: 20, weight: .bold)

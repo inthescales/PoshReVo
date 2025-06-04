@@ -70,7 +70,7 @@ final class SerchoViewController: UIViewController {
 		serchLingvoj: [Lingvo],
 		radika: Bool = false,
 		kunordigilo: Kunordigilo = .komuna,
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.radika = radika
 		self.kunordigilo = kunordigilo

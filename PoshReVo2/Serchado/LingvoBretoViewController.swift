@@ -114,7 +114,7 @@ final class LingvoBretoViewController: UIViewController {
 		redaktisLingvojn: @escaping ([Lingvo]) -> (),
 		uzantDatumaro: UzantDatumaro = .komuna,
 		kunordigilo: Kunordigilo = .komuna,
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.init(
 			elektitaLingvo: uzantDatumaro.elektitaLingvo,

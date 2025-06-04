@@ -10,17 +10,22 @@ import UIKit
 // kiam la uzanto elektos novan stilon (ŝajne nur kiam la UITraitCollection ŝanĝiĝas).
 // Kelkaj eblecoj ĉi tie: https://christianselig.com/2022/02/difficulty-theming-ios/
 class DinamikaStilo {
-	static var senkoloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.senkoloraFono})
-	static var koloraFono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.koloraFono})
-	static var teksto = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.teksto})
-	static var ligilo = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.ligilo})
-	static var surkoloraButono = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.surkoloraButono})
-	static var surkoloraTeksto = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.surkoloraTeksto})
-	static var surkoloraMalaktiva = UIColor(dynamicProvider: { _ in InterfacStilo.nuna.surkoloraMalaktiva})
+	private static var konkretaStilo: InterfacStilo {
+		UzantDatumaro.komuna.stilo
+	}
+	
+	static var senkoloraFono = UIColor(dynamicProvider: { _ in konkretaStilo.senkoloraFono})
+	static var koloraFono = UIColor(dynamicProvider: { _ in konkretaStilo.koloraFono})
+	static var teksto = UIColor(dynamicProvider: { _ in konkretaStilo.teksto})
+	static var ligilo = UIColor(dynamicProvider: { _ in konkretaStilo.ligilo})
+	static var surkoloraButono = UIColor(dynamicProvider: { _ in konkretaStilo.surkoloraButono})
+	static var surkoloraTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.surkoloraTeksto})
+	static var surkoloraMalaktiva = UIColor(dynamicProvider: { _ in konkretaStilo.surkoloraMalaktiva})
 }
 
 class InterfacStilo {
 	let nomo: String
+	let identigilo: String
 	
 	private var hela: Koloraro
 	private var malhela: Koloraro
@@ -35,14 +40,20 @@ class InterfacStilo {
 	lazy var surkoloraTeksto = UIColor(hela: hela.surkoloraTeksto, malhela: malhela.surkoloraTeksto)
 	lazy var surkoloraMalaktiva = UIColor(hela: hela.surkoloraMalaktiva, malhela: malhela.surkoloraMalaktiva)
 	
-	init(nomo: String, hela: Koloraro, malhela: Koloraro) {
+	init(nomo: String, identigilo: String, hela: Koloraro, malhela: Koloraro) {
 		self.nomo = nomo
+		self.identigilo = identigilo
 		self.hela = hela
 		self.malhela = malhela
 	}
 	
+	static func kun(nomo: String) -> InterfacStilo? {
+		return .chiuj.first(where: { stilo in stilo.nomo == nomo })
+	}
+	
 	static let karamela = InterfacStilo(
 		nomo: "karamela",
+		identigilo: "karamela",
 		hela: Koloraro(
 			senkoloraFono: .white,
 			koloraFono: .orange,
@@ -65,6 +76,7 @@ class InterfacStilo {
 	
 	static let verda = InterfacStilo(
 		nomo: "verda",
+		identigilo: "verda",
 		hela: Koloraro(
 			senkoloraFono: .white,
 			koloraFono: .green,
@@ -84,8 +96,6 @@ class InterfacStilo {
 			surkoloraMalaktiva: .green
 		)
 	)
-	
-	static var nuna: InterfacStilo = .karamela
 	
 	static var chiuj: [InterfacStilo] = [
 		.karamela,

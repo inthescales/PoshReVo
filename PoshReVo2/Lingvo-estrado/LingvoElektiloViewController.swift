@@ -51,7 +51,7 @@ final class LingvoElektiloViewController: UIViewController {
 		kromEsperanto: Bool = false,
 		jamElektitaj: [Lingvo],
 		elektisLingvon: @escaping (Lingvo) -> (),
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		lingvaro = kromEsperanto
 			? VortaroDatumbazo.komuna.neesperantajLingvoj

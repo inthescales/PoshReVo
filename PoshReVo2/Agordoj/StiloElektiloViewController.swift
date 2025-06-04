@@ -40,7 +40,7 @@ final class StiloElektiloViewController: UIViewController {
 		kompleti: @escaping (InterfacStilo?) -> (),
 		kunordigilo: Kunordigilo = .komuna,
 		uzantDatumaro: UzantDatumaro = .komuna,
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.kompleti = kompleti
 		self.kunordigilo = kunordigilo

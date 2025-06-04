@@ -3,7 +3,7 @@ import UIKit
 final class SurkoloraButton: UIButton {
 	private let stilo: InterfacStilo
 	
-	init(teksto: String, stilo: InterfacStilo = .nuna) {
+	init(teksto: String, stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
 		self.stilo = stilo
 		super.init(frame: .zero)
 	

@@ -9,6 +9,8 @@ struct UzantDatumaro {
 	
 	var konservitaj: [Konservitajho]
 	
+	var stilo: InterfacStilo
+	
 	func chuKonservita(artikolo: Artikolo) -> Bool {
 		konservitaj.contains(where: { $0.indekso == artikolo.indekso })
 	}

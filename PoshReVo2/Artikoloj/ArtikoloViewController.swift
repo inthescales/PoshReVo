@@ -109,7 +109,7 @@ final class ArtikoloViewController: UIViewController {
 		aperis: (() -> ())?,
 		konservis: @escaping (Bool) -> (),
 		kunordigilo: Kunordigilo = .komuna,
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.artikolo = artikolo
 		self.tradukLingvoj = tradukLingvoj
@@ -131,7 +131,7 @@ final class ArtikoloViewController: UIViewController {
 		konservis: @escaping (Bool) -> (),
 		uzantDatumaro: UzantDatumaro = .komuna,
 		kunordigilo: Kunordigilo = .komuna,
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.init(
 			artikolo: artikolo,
@@ -168,7 +168,7 @@ final class ArtikoloViewController: UIViewController {
 		let butono = UIButton(type: .system)
 		butono.addTarget(self, action: #selector(premisHejmon), for: .touchUpInside)
 		butono.setImage(UIImage(named: "libro")!, for: .normal)
-		butono.tintColor = InterfacStilo.nuna.senkoloraFono // TODO: Ŝanĝi
+		butono.tintColor = stilo.senkoloraFono
 		navigationItem.titleView = butono
 		
 		NotificationCenter.default.addObserver(

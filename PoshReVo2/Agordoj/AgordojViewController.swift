@@ -26,7 +26,7 @@ final class AgordojViewController: UIViewController {
 	init(
 		kunordigilo: Kunordigilo = .komuna,
 		datumRegilo: UzantDatumoRegilo = .komuna,
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.kunordigilo = kunordigilo
 		self.datumRegilo = datumRegilo
@@ -160,7 +160,7 @@ extension AgordojViewController: UITableViewDataSource {
 		case (2, 0):
 			cell = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
 			cell.textLabel?.text = "Ŝanĝi Stilon"
-			cell.detailTextLabel?.text = InterfacStilo.nuna.nomo
+			cell.detailTextLabel?.text = stilo.nomo // TODO: Ĝisdatigi post elekto
 		default:
 			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			break

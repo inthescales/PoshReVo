@@ -29,7 +29,7 @@ final class LingvoListoViewController: UIViewController {
 		lingvoj: [Lingvo],
 		jamElektitaj: [Lingvo],
 		elektisLingvon: @escaping (Lingvo) -> (),
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.lingvoj = lingvoj
 		self.jamElektitaj = jamElektitaj

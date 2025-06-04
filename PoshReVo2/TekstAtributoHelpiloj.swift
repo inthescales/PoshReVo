@@ -91,7 +91,8 @@ enum TekstAtributoHelpiloj {
 	/// Aldoni tekstatributojn al la ĉeno
 	private static func atributaTeksto(
 		por teksto: String,
-		kun atributoj: [Atributo]
+		kun atributoj: [Atributo],
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) -> NSMutableAttributedString {
 		
 		let atributaTeksto = NSMutableAttributedString(string: forigiAngulojn(teksto: teksto))
@@ -117,7 +118,7 @@ enum TekstAtributoHelpiloj {
 		// TODO: Injekcii stilon
 		atributaTeksto.addAttribute(
 			.foregroundColor,
-			value: InterfacStilo.nuna.teksto,
+			value: stilo.teksto,
 			range: NSMakeRange(0, atributaTeksto.length)
 		)
 		

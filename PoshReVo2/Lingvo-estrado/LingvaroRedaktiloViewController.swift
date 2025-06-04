@@ -55,7 +55,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	init(
 		lingvaro: [Lingvo],
 		kompleti: @escaping ([Lingvo]) -> (),
-		stilo: InterfacStilo = .nuna
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.lingvaro = lingvaro
 		self.kompleti = kompleti

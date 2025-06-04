@@ -11,7 +11,7 @@ final class SerchiloView: UIView {
 		let serchilo = UISearchBar()
 		serchilo.delegate = self
 		serchilo.placeholder = lokokupaTeksto
-		serchilo.searchTextField.backgroundColor = InterfacStilo.nuna.senkoloraFono
+		serchilo.searchTextField.backgroundColor = stilo.senkoloraFono
 		serchilo.searchTextField.autocapitalizationType = .none
 		
 		// Ŝajne, ĉio ĉi frenezaĵo necesas por nevidebligi la fonon malantaŭ la tekstejo
@@ -51,14 +51,18 @@ final class SerchiloView: UIView {
 	/// Vokotas kiam teksto ŝanĝiĝos
 	private let tekstoShanghighis: (String) -> ()
 	
+	private let stilo: InterfacStilo
+	
 	init(
 		lokokupaTeksto: String,
 		iksumi: Bool,
-		tekstoShanghighis: @escaping (String) -> ()
+		tekstoShanghighis: @escaping (String) -> (),
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.lokokupaTeksto = lokokupaTeksto
 		self.iksumi = iksumi
 		self.tekstoShanghighis = tekstoShanghighis
+		self.stilo = stilo
 		super.init(frame: .zero)
 		
 		addSubview(staplo)

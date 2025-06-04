@@ -39,7 +39,7 @@ final class MallongigoListoViewController: UIViewController {
 	
 	private let stilo: InterfacStilo
 	
-	init(eroj: [Ero], stilo: InterfacStilo = .nuna) {
+	init(eroj: [Ero], stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
 		self.eroj = eroj
 		self.videblajEroj = eroj
 		self.stilo = stilo

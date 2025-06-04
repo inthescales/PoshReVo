@@ -104,4 +104,11 @@ final class UzantDatumoRegilo {
 		datumaro.konservitaj = []
 		tenilo.skribi(datumaron: datumaro)
 	}
+	
+	// MARK: - Stilo
+	
+	func meti(stilon stilo: InterfacStilo) {
+		datumaro.stilo = stilo
+		tenilo.skribi(datumaron: datumaro)
+	}
 }

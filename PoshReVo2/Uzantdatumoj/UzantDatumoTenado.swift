@@ -13,6 +13,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		static let lingvoj = "lingvoj"
 		static let historio = "historio"
 		static let konservitaj = "konservitaj"
+		static let stilo = "stilo"
 	}
 	
 	private var lasta: UzantDatumaro?
@@ -31,6 +32,8 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		
 		return [.esperanto] + aparatajLingvoj
 	}
+	
+	private var defaultaStilo: InterfacStilo = .karamela
 	
 	// MARK: - Skribado kaj Legado
 	
@@ -56,7 +59,11 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 			defaults.set(datumoj, forKey: Klavoj.konservitaj)
 		}
 
-		// TODO: Konservi stilon
+		// Skribi stilon
+		if lasta?.stilo.identigilo != datumaro.stilo.identigilo {
+			let datumoj = try? kodigilo.encode(datumaro.stilo.identigilo)
+			defaults.set(datumoj, forKey: Klavoj.stilo)
+		}
 
 		defaults.synchronize()
 		lasta = datumaro
@@ -90,11 +97,21 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 			konservitaj = []
 		}
 		
+		let stilo: InterfacStilo
+		if let datumoj = defaults.object(forKey: Klavoj.stilo) as? Data,
+		   let malkodigitaNomo = try? malkodigilo.decode(String.self, from: datumoj),
+		   let stiloElIdentigilo = InterfacStilo.kun(nomo: malkodigitaNomo) {
+			stilo = stiloElIdentigilo
+		} else {
+			stilo = defaultaStilo
+		}
+		
 		return UzantDatumaro(
 			elektitaLingvo: lingvoj.first!,
 			lingvoj: lingvoj,
 			historio: historio,
-			konservitaj: konservitaj
+			konservitaj: konservitaj,
+			stilo: stilo
 		)
 	}
 }

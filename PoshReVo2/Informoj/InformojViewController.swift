@@ -23,7 +23,7 @@ final class InformojViewController: UIViewController {
 	
 	private let stilo: InterfacStilo
 	
-	init(stilo: InterfacStilo = .nuna) {
+	init(stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
