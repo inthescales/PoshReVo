@@ -22,6 +22,8 @@ final class UzantDatumoRegilo {
 	
 	init() {
 		datumaro = tenilo.legiDatumaron()
+			?? V1UzantDatumoTenilo.legiV1Datumaron()
+			?? UzantDatumaro.defaulta()
 	}
 	
 	// MARK: - Lingvoj

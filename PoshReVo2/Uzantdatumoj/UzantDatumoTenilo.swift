@@ -5,7 +5,7 @@ import ReVoDatumbazo
 protocol UzantDatumoTenilo {
 	func skribi(datumaron: UzantDatumaro)
 	
-	func legiDatumaron() -> UzantDatumaro
+	func legiDatumaron() -> UzantDatumaro?
 }
 
 final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
@@ -19,31 +19,6 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 	private var lasta: UzantDatumaro?
 	
 	init() {}
-	
-	// MARK: - Defaultaj valoroj
-	
-	private var defaultajLingvoj: [Lingvo] {
-		let aparatajLingvoj = NSLocale.preferredLanguages.compactMap { kodo in
-			let bazo = kodo.components(separatedBy: "-").first
-			return VortaroDatumbazo.komuna.lingvo(kodo: bazo ?? kodo)
-		}.filter { lingvo in
-			lingvo != Lingvo.esperanto
-		}
-		
-		return [.esperanto] + aparatajLingvoj
-	}
-	
-	private var defaultaStilo: InterfacStilo = .karamela
-	
-	private func defaulta() -> UzantDatumaro {
-		UzantDatumaro(
-			elektitaLingvo: defaultajLingvoj.first!,
-			lingvoj: defaultajLingvoj,
-			historio: [],
-			konservitaj: [],
-			stilo: defaultaStilo
-		)
-	}
 	
 	// MARK: - Skribado kaj Legado
 	
@@ -79,7 +54,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		lasta = datumaro
 	}
 	
-	func legiDatumaron() -> UzantDatumaro {
+	func legiDatumaron() -> UzantDatumaro? {
 		let defaults = UserDefaults.standard
 		let malkodigilo = JSONDecoder()
 		
@@ -88,7 +63,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		   let malkodigita = try? malkodigilo.decode([Lingvo].self, from: datumoj) {
 			lingvoj = malkodigita
 		} else {
-			return V1UzantDatumoTenilo.legiV1Datumaron() ?? defaulta()
+			return nil
 		}
 
 		let historio: [Konservitajho]
@@ -96,7 +71,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		   let malkodigita = try? malkodigilo.decode([Konservitajho].self, from: datumoj) {
 			historio = malkodigita
 		} else {
-			return V1UzantDatumoTenilo.legiV1Datumaron() ?? defaulta()
+			return nil
 		}
 
 		let konservitaj: [Konservitajho]
@@ -104,7 +79,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		   let malkodigita = try? malkodigilo.decode([Konservitajho].self, from: datumoj) {
 			konservitaj = malkodigita
 		} else {
-			return V1UzantDatumoTenilo.legiV1Datumaron() ?? defaulta()
+			return nil
 		}
 		
 		let stilo: InterfacStilo
@@ -113,7 +88,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		   let stiloElIdentigilo = InterfacStilo.kun(nomo: malkodigitaNomo) {
 			stilo = stiloElIdentigilo
 		} else {
-			return V1UzantDatumoTenilo.legiV1Datumaron() ?? defaulta()
+			return nil
 		}
 		
 		return UzantDatumaro(
