@@ -10,10 +10,10 @@ protocol UzantDatumoTenilo {
 
 final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 	private enum Klavoj {
-		static let lingvoj = "lingvoj"
-		static let historio = "historio"
-		static let konservitaj = "konservitaj"
-		static let stilo = "stilo"
+		static let lingvoj = "v2.0_lingvoj"
+		static let historio = "v2.0_historio"
+		static let konservitaj = "v2.0_konservitaj"
+		static let stilo = "v2.0_stilo"
 	}
 	
 	private var lasta: UzantDatumaro?
@@ -34,6 +34,16 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 	}
 	
 	private var defaultaStilo: InterfacStilo = .karamela
+	
+	private func defaulta() -> UzantDatumaro {
+		UzantDatumaro(
+			elektitaLingvo: defaultajLingvoj.first!,
+			lingvoj: defaultajLingvoj,
+			historio: [],
+			konservitaj: [],
+			stilo: defaultaStilo
+		)
+	}
 	
 	// MARK: - Skribado kaj Legado
 	
@@ -78,7 +88,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		   let malkodigita = try? malkodigilo.decode([Lingvo].self, from: datumoj) {
 			lingvoj = malkodigita
 		} else {
-			lingvoj = defaultajLingvoj
+			return V1UzantDatumoTenilo.legiV1Datumaron() ?? defaulta()
 		}
 
 		let historio: [Konservitajho]
@@ -86,7 +96,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		   let malkodigita = try? malkodigilo.decode([Konservitajho].self, from: datumoj) {
 			historio = malkodigita
 		} else {
-			historio = []
+			return V1UzantDatumoTenilo.legiV1Datumaron() ?? defaulta()
 		}
 
 		let konservitaj: [Konservitajho]
@@ -94,7 +104,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		   let malkodigita = try? malkodigilo.decode([Konservitajho].self, from: datumoj) {
 			konservitaj = malkodigita
 		} else {
-			konservitaj = []
+			return V1UzantDatumoTenilo.legiV1Datumaron() ?? defaulta()
 		}
 		
 		let stilo: InterfacStilo
@@ -103,7 +113,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		   let stiloElIdentigilo = InterfacStilo.kun(nomo: malkodigitaNomo) {
 			stilo = stiloElIdentigilo
 		} else {
-			stilo = defaultaStilo
+			return V1UzantDatumoTenilo.legiV1Datumaron() ?? defaulta()
 		}
 		
 		return UzantDatumaro(

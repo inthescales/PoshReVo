@@ -1,7 +1,9 @@
 import Foundation
 
+// TODO: Faru strukt-on anstatau class-on post kiam ni ne plu subtenos konservitajn uzantdatumojn el V1
+
 /// Lingvo en kiu tradukoj ekzistas
-public struct Lingvo: Codable, Hashable {
+public class Lingvo: NSObject, Codable, NSSecureCoding {
     public let kodo: String
     public let nomo: String
     
@@ -12,6 +14,25 @@ public struct Lingvo: Codable, Hashable {
 	
 	public static var esperanto: Lingvo {
 		return Lingvo(kodo: "eo", nomo: "Esperanto")
+	}
+	
+	// MARK: - NSSecureCoding
+	// Necesas nur dum ni legas konservitajn uzantdatumojn de V1
+
+	public static var supportsSecureCoding = true
+
+	public required convenience init?(coder aDecoder: NSCoder) {
+		if let enkodo = aDecoder.decodeObject(forKey: "kodo") as? String,
+		   let ennomo = aDecoder.decodeObject(forKey: "nomo") as? String {
+			self.init(kodo: enkodo, nomo: ennomo)
+		} else {
+			return nil
+		}
+	}
+
+	public func encode(with aCoder: NSCoder) {
+		aCoder.encode(kodo, forKey: "kodo")
+		aCoder.encode(nomo, forKey: "nomo")
 	}
 }
 
@@ -27,4 +48,3 @@ extension Lingvo: Comparable {
 		) == .orderedAscending
     }
 }
-

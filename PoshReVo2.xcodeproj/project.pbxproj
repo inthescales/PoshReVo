@@ -51,8 +51,10 @@
 		00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */; };
 		00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */; };
 		00B27B5C2DF0A77500526F82 /* MallongigoListo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5B2DF0A77500526F82 /* MallongigoListo.swift */; };
-		00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenado.swift */; };
+		00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenilo.swift */; };
 		00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */; };
+		00B27B632DF206D600526F82 /* V1UzantDatumoTenilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B622DF206D600526F82 /* V1UzantDatumoTenilo.swift */; };
+		00B27B692DF209EC00526F82 /* Listero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B682DF209EC00526F82 /* Listero.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,8 +117,10 @@
 		00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformoSekcio.swift; sourceTree = "<group>"; };
 		00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoListoViewController.swift; sourceTree = "<group>"; };
 		00B27B5B2DF0A77500526F82 /* MallongigoListo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallongigoListo.swift; sourceTree = "<group>"; };
-		00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoTenado.swift; sourceTree = "<group>"; };
+		00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoTenilo.swift; sourceTree = "<group>"; };
 		00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoRegilo.swift; sourceTree = "<group>"; };
+		00B27B622DF206D600526F82 /* V1UzantDatumoTenilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V1UzantDatumoTenilo.swift; sourceTree = "<group>"; };
+		00B27B682DF209EC00526F82 /* Listero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listero.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -304,9 +308,27 @@
 			children = (
 				00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */,
 				00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */,
-				00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenado.swift */,
+				00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenilo.swift */,
+				00B27B642DF208D800526F82 /* V1 */,
 			);
 			path = Uzantdatumoj;
+			sourceTree = "<group>";
+		};
+		00B27B642DF208D800526F82 /* V1 */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B672DF209D200526F82 /* Modeloj */,
+				00B27B622DF206D600526F82 /* V1UzantDatumoTenilo.swift */,
+			);
+			path = V1;
+			sourceTree = "<group>";
+		};
+		00B27B672DF209D200526F82 /* Modeloj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B682DF209EC00526F82 /* Listero.swift */,
+			);
+			path = Modeloj;
 			sourceTree = "<group>";
 		};
 		90F3C80E6330F4395B924C94 /* Pods */ = {
@@ -447,7 +469,7 @@
 				00B27B492DCE721600526F82 /* KonservitajViewController.swift in Sources */,
 				00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */,
 				00B27B5C2DF0A77500526F82 /* MallongigoListo.swift in Sources */,
-				00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenado.swift in Sources */,
+				00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenilo.swift in Sources */,
 				00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */,
 				000DA6F92D906C6E0026CBA0 /* InterfacStilo.swift in Sources */,
 				00B27B522DEA3ED300526F82 /* ShovMenuoViewController.swift in Sources */,
@@ -467,7 +489,9 @@
 				00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */,
 				00B27B2F2DC8188800526F82 /* DerivajhoChelo.swift in Sources */,
 				00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */,
+				00B27B692DF209EC00526F82 /* Listero.swift in Sources */,
 				00B27B2D2DC8165A00526F82 /* ArtikolTitoloView.swift in Sources */,
+				00B27B632DF206D600526F82 /* V1UzantDatumoTenilo.swift in Sources */,
 				00B27B172DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift in Sources */,
 				000DA6FD2D908F680026CBA0 /* ChefaNavigationController.swift in Sources */,
 				00B27B202DC3F9F700526F82 /* LingvoBretoViewController.swift in Sources */,
@@ -616,7 +640,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "PoŝReVo";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -651,7 +674,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "PoŝReVo";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

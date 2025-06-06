@@ -1,6 +1,7 @@
 import ReVoDatumbazo
 
 struct UzantDatumaro {
+	
 	var elektitaLingvo: Lingvo
 	
 	var lingvoj: [Lingvo]
