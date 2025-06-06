@@ -9,11 +9,15 @@ protocol UzantDatumoTenilo {
 }
 
 final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
+	private enum DatumoVersio: String {
+		case v2_0 = "2.0"
+		
+		static var lasta: DatumoVersio = .v2_0
+	}
+
 	private enum Klavoj {
-		static let lingvoj = "v2.0_lingvoj"
-		static let historio = "v2.0_historio"
-		static let konservitaj = "v2.0_konservitaj"
-		static let stilo = "v2.0_stilo"
+		static let datumoVersio = "v2_versio"
+		static let datumaro = "v2_datumaro"
 	}
 	
 	private var lasta: UzantDatumaro?
@@ -26,30 +30,16 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		let defaults = UserDefaults.standard
 		let kodigilo = JSONEncoder()
 	
-		// Skribi lingvojn
-		if lasta?.lingvoj != datumaro.lingvoj {
-			let datumoj = try? kodigilo.encode(datumaro.lingvoj)
-			defaults.set(datumoj, forKey: Klavoj.lingvoj)
+		// Skribi datumoversion
+		let datumoj = try? kodigilo.encode(DatumoVersio.lasta.rawValue)
+		defaults.set(datumoj, forKey: Klavoj.datumoVersio)
+		
+		// Skribi datumojn
+		if lasta != datumaro {
+			let datumoj = try? kodigilo.encode(datumaro)
+			defaults.set(datumoj, forKey: Klavoj.datumaro)
 		}
-
-		// Skribi historion
-		if lasta?.historio != datumaro.historio {
-			let datumoj = try? kodigilo.encode(datumaro.historio)
-			defaults.set(datumoj, forKey: Klavoj.historio)
-		}
-
-		// Skribi konservitajn artikolojn
-		if lasta?.konservitaj != datumaro.konservitaj {
-			let datumoj = try? kodigilo.encode(datumaro.konservitaj)
-			defaults.set(datumoj, forKey: Klavoj.konservitaj)
-		}
-
-		// Skribi stilon
-		if lasta?.stilo.identigilo != datumaro.stilo.identigilo {
-			let datumoj = try? kodigilo.encode(datumaro.stilo.identigilo)
-			defaults.set(datumoj, forKey: Klavoj.stilo)
-		}
-
+		
 		defaults.synchronize()
 		lasta = datumaro
 	}
@@ -58,45 +48,30 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 		let defaults = UserDefaults.standard
 		let malkodigilo = JSONDecoder()
 		
-		let lingvoj: [Lingvo]
-		if let datumoj = defaults.object(forKey: Klavoj.lingvoj) as? Data,
-		   let malkodigita = try? malkodigilo.decode([Lingvo].self, from: datumoj) {
-			lingvoj = malkodigita
-		} else {
-			return nil
+		// Legi datumoversion
+		var versio: DatumoVersio?
+		if let datumoj = defaults.object(forKey: Klavoj.datumoVersio) as? Data,
+		   let malkodigita = try? malkodigilo.decode(String.self, from: datumoj) {
+			versio = DatumoVersio(rawValue: malkodigita)
 		}
-
-		let historio: [Konservitajho]
-		if let datumoj = defaults.object(forKey: Klavoj.historio) as? Data,
-		   let malkodigita = try? malkodigilo.decode([Konservitajho].self, from: datumoj) {
-			historio = malkodigita
-		} else {
-			return nil
-		}
-
-		let konservitaj: [Konservitajho]
-		if let datumoj = defaults.object(forKey: Klavoj.konservitaj) as? Data,
-		   let malkodigita = try? malkodigilo.decode([Konservitajho].self, from: datumoj) {
-			konservitaj = malkodigita
-		} else {
+		
+		guard let versio else {
 			return nil
 		}
 		
-		let stilo: InterfacStilo
-		if let datumoj = defaults.object(forKey: Klavoj.stilo) as? Data,
-		   let malkodigitaNomo = try? malkodigilo.decode(String.self, from: datumoj),
-		   let stiloElIdentigilo = InterfacStilo.kun(nomo: malkodigitaNomo) {
-			stilo = stiloElIdentigilo
-		} else {
-			return nil
+		// Legi datumojn laŭ versio
+		if let datumoj = defaults.object(forKey: Klavoj.datumaro) as? Data {
+			switch versio {
+			case .v2_0:
+				return malkodiDatumaron_v2_0(datumoj: datumoj, malkodigilo: malkodigilo)
+			}
 		}
 		
-		return UzantDatumaro(
-			elektitaLingvo: lingvoj.first!,
-			lingvoj: lingvoj,
-			historio: historio,
-			konservitaj: konservitaj,
-			stilo: stilo
-		)
+		return nil
+	}
+	
+	// MARK: - Legado de individuaj versioj
+	private func malkodiDatumaron_v2_0(datumoj: Data, malkodigilo: JSONDecoder) -> UzantDatumaro? {
+		try? malkodigilo.decode(UzantDatumaro.self, from: datumoj)
 	}
 }
