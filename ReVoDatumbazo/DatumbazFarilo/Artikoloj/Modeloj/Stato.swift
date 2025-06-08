@@ -118,7 +118,13 @@ extension ArboAnalizilo {
 		/// Aldonas serĉtradukon
 		func aldoni(derivajhTradukon traduko: ArtikolTraduko, lingvo: String) {
 			if derivajhTradukoj[lingvo] == nil { derivajhTradukoj[lingvo] = [] }
-			derivajhTradukoj[lingvo]?.append(traduko)
+			
+			if traduko.senco != nil {
+				derivajhTradukoj[lingvo]?.append(traduko)
+			} else {
+				let indekso = derivajhTradukoj[lingvo]?.firstIndex(where: { $0.senco != nil }) ?? 0
+				derivajhTradukoj[lingvo]?.insert(traduko, at: indekso)
+			}
 		}
 		
 		/// Aldonas serĉtradukon

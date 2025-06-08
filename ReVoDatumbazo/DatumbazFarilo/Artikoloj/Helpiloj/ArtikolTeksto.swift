@@ -103,29 +103,34 @@ enum ArtikolTeksto {
 	}
 	
 	// MARK: - Formatoj
-	
+
 	/// Liveras tekston, ĝuste kiel ĝi aperu en artikolo, por ĉiuj tradukoj de unu lingvo
 	static func tradukTeksto(por tradukoj: [ArtikolTraduko]) -> String {
 		var teksto = ""
-		var montriSencon = false
 		
 		for (i, nuna) in tradukoj.enumerated() {
 			let lasta = (i > 0) ? tradukoj[i-1]: nil
 						
-			// Se teksto malsamalas ol antaŭa traduko, necesas decidi ĉu etikedo necesas
-			let novaTeksto = lasta.flatMap { lasta in lasta.nomo != nuna.nomo } ?? true
-			if novaTeksto {
-				montriSencon = false
-				
-				// Nur montru senc-etikedojn se venonta traduko havas malsaman sencon
-				for estonta in tradukoj[(i + 1)...] {
-					if nuna.nomo != estonta.nomo
-						&& !estonta.transpasNomo {
-						break
-					}
-					else if nuna.senco != estonta.senco {
-						montriSencon = true
-						break
+			var montriSencon = false
+			
+			// Montri sencon se 1. la nuna traduko havas malsaman sencon ol lasta,
+			// aŭ 2. la nuna traduko havas malsaman sencon ol iu ajn venonta.
+			// - 2. necesas por ke tradukoj de la unua senco montru senc-numeron,
+			// - 1. necesas por ke tradukoj sekvanta sensencan tradukon montru ĝin
+			if nuna.senco != nil {
+				if let lasta,
+				   nuna.senco != lasta.senco {
+					montriSencon = true
+				} else {
+					for estonta in tradukoj[(i + 1)...] {
+						if nuna.nomo != estonta.nomo
+							&& !estonta.transpasNomo {
+							break
+						}
+						else if nuna.senco != estonta.senco {
+							montriSencon = true
+							break
+						}
 					}
 				}
 			}
@@ -137,35 +142,32 @@ enum ArtikolTeksto {
 				// Aldonu komon se la traduko apartenas al la sama grupo ol la antaŭa
 				teksto += ", "
 			} else {
-				if !teksto.isEmpty {
-					teksto += "; "
+				if i > 0 {
+					teksto += " "
 				}
 				
 				let montriSubsencon = nuna.subsenco != nil && !nuna.transpasNomo
-				
-				// Konstrui etikedon
-				teksto += "<a href=\"" + nuna.marko + "\">" + nuna.nomo
-				
+
 				if montriSencon || montriSubsencon,
 				   let senco = nuna.senco,
 				   senco > 0 {
-					teksto += " " + String(senco)
+					teksto += String(senco) + "."
 				}
 				
 				// Ĉiam montru subsencon, se ĉeestas
 				if montriSubsencon,
 				   let subsenco = nuna.subsenco,
 				   let litero = subsencLitero(por: subsenco) {
-					teksto += "." + litero
+					teksto += litero
 				}
 				
-				teksto += "</a>: "
+				if montriSencon || montriSubsencon {
+					teksto += " "
+				}
 			}
 			
 			teksto += nuna.teksto
 		}
-		
-		teksto += "."
 		
 		return teksto
 	}
