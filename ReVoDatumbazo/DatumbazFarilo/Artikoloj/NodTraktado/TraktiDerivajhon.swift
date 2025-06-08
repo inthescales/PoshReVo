@@ -1,7 +1,7 @@
 extension ArboAnalizilo {
 	static func trakti(derivajhon derivajho: ArtikolNodo, marko: String, stato: Stato) {
-		stato.vortoFabriko = VortoFabriko()
-		stato.vortoFabriko?.marko = marko
+		var kapTeksto = ""
+		var oficialeco: String?
 		
 		var teksto = ""
 		let sencKvanto = derivajho.filoj.map { if case .snc = $0.tipo { return 1 } else { return 0 }}.reduce(0, +)
@@ -29,6 +29,9 @@ extension ArboAnalizilo {
 				teksto += trakti(gramatikon: filo, stato: stato)
 			case .kap:
 				let kapRezulto = trakti(kapon: filo, stato: stato)
+				kapTeksto = kapRezulto.teksto
+				oficialeco = kapRezulto.oficialeco
+				
 				if let indekso = stato.artikolIndekso,
 				   let marko = stato.marko {
 					for variajho in kapRezulto.formoj {
@@ -94,18 +97,28 @@ extension ArboAnalizilo {
 			}
 		}
 		
-		stato.vortoFabriko?.teksto = teksto.kunpremi().tondi()
+		let titoloBloko: ArtikolBloko = .derivajhTitola(teksto: kapTeksto, ofc: oficialeco, marko: marko)
 		
-		if stato.subartikoloFabriko == nil {
-			stato.subartikoloFabriko = SubartikoloFabriko()
+		// TODO: Dividi tekstblokojn
+		let tekstoBloko: ArtikolBloko = .teksta(teksto: teksto.kunpremi().tondi())
+						
+		var tradukoj: [Traduko] = []
+		for (lingvoKodo, trdoj) in stato.derivajhTradukoj {
+			let teksto = ArtikolTeksto.tradukTeksto(por: trdoj)
+			let trd = Traduko(
+				lingvo: stato.lingvoj[lingvoKodo]!,
+				teksto: teksto
+			)
+			tradukoj.append(trd)
 		}
+		let tradukoBloko: ArtikolBloko = .traduka(tradukoj: tradukoj)
 		
-		let novaVorto = stato.vortoFabriko?.fabriki()
-		stato.subartikoloFabriko?.vortoj.append(novaVorto!)
+		stato.artikolFabriko.blokoj += [titoloBloko, tekstoBloko, tradukoBloko]
 		
 		// Eliras derivaĵon
 		stato.derivajhNomo = nil
 		stato.derivajhTildo = nil
+		stato.derivajhTradukoj = [:]
 		stato.lastaSenco = nil
 	}
 }

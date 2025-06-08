@@ -42,7 +42,7 @@ extension ArboAnalizilo {
 				subsenco: stato.nunaSubsenco,
 				transpasNomo: transpasIndekso != nil
 			)
-			stato.aldoni(artikolTradukon: artikolTraduko, lingvo: lingvo)
+			stato.aldoni(derivajhTradukon: artikolTraduko, lingvo: lingvo)
 			
 			let serchTraduko = SerchTraduko(
 				serchTeksto: serchTeksto,

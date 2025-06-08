@@ -1,10 +1,15 @@
 extension ArboAnalizilo {
-	static func trakti(subartikolon subartikolo: ArtikolNodo, stato: Stato) {
-		
-		let subartNumero = stato.artikolFabriko.subartikoloj.count + 1
-		
-		stato.subartikoloFabriko = SubartikoloFabriko()
+	static func trakti(subartikolon subartikolo: ArtikolNodo, numero: Int, stato: Stato) {
+		stato.artikolFabriko.blokoj.append(.subartikolTitola(teksto: ArtikolTeksto.romajCiferoj(por: numero) + "."))
+
 		var teksto = ""
+		
+		func malbufrigi() {
+			if !teksto.isEmpty {
+				stato.artikolFabriko.blokoj.append(.teksta(teksto: teksto))
+				teksto = ""
+			}
+		}
 		
 		traktiFilojn(de: subartikolo, stato: stato) { filo in
 			switch filo.tipo {
@@ -13,6 +18,7 @@ extension ArboAnalizilo {
 			case .dif:
 				teksto += trakti(difinon: filo, stato: stato)
 			case .drv(let mrk):
+				malbufrigi()
 				trakti(derivajhon: filo, marko: mrk, stato: stato)
 			case .gra:
 				teksto += trakti(gramatikon: filo, stato: stato)
@@ -33,13 +39,6 @@ extension ArboAnalizilo {
 			}
 		}
 		
-		teksto = ArtikolTeksto.romajCiferoj(por: subartNumero) + "." + (teksto.isEmpty ? "" : " ") + teksto
-		
-		stato.subartikoloFabriko?.teksto = teksto
-		
-		if let subartikolo = stato.subartikoloFabriko?.fabriki() {
-			stato.artikolFabriko.subartikoloj.append(subartikolo)
-			stato.subartikoloFabriko = nil
-		}
+		malbufrigi()
 	}
 }

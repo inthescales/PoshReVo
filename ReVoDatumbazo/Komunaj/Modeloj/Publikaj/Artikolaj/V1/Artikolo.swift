@@ -2,7 +2,7 @@ import Foundation
 import CoreData
 
 /// Ĉiuj enhavoj de unu vortara artikolo
-public final class Artikolo: Codable {
+public final class ArtikoloV1: Codable {
 	/// Titolo de la artikolo – kutime la radiko kaj ĝia baza formo
     public let titolo: String
 	

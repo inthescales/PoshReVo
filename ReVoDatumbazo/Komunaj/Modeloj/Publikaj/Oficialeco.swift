@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Oficialeco {
+public struct Oficialeco: Codable {
 	/// Kodo kiu reprezentas ĉi-oficialeco
 	public let kodo: String
 	

@@ -1,5 +1,7 @@
 extension ArboAnalizilo {
 	static func trakti(artikolon artikolo: ArtikolNodo, marko: String?, stato: Stato) {
+		var subartikoloNumero = 0
+		
 		traktiFilojn(de: artikolo, stato: stato) { filo in
 			switch filo.tipo {
 			case .adm:
@@ -30,7 +32,8 @@ extension ArboAnalizilo {
 				// vd. premi
 				break
 			case .subart:
-				trakti(subartikolon: filo, stato: stato)
+				trakti(subartikolon: filo, numero: subartikoloNumero, stato: stato)
+				subartikoloNumero += 1
 			case .teksto:
 				break
 			case .trd(let lng):
@@ -48,11 +51,6 @@ extension ArboAnalizilo {
 			default:
 				assert(false, "Neatendita filo")
 			}
-		}
-		
-		if stato.subartikoloFabriko != nil {
-			let novaSubartikolo = stato.subartikoloFabriko?.fabriki()
-			stato.artikolFabriko.subartikoloj.append(novaSubartikolo!)
 		}
 	}
 }

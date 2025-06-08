@@ -8,3 +8,9 @@ public struct Traduko: Codable {
 	/// Tutan tekston de la traduko, kiu povas enhavi kelkajn vortojn kaj terminojn
     public let teksto: String
 }
+
+extension Traduko: Comparable {
+	public static func < (lhs: Traduko, rhs: Traduko) -> Bool {
+		lhs.lingvo < rhs.lingvo
+	}
+}

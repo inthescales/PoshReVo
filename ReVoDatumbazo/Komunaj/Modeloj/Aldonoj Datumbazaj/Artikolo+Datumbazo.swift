@@ -10,11 +10,8 @@ extension Artikolo {
 		dbObjekto.setValue(ofc, forKey: "ofc")
 		dbObjekto.setValue(numero, forKey: "numero")
 		
-		let vortoJSON = try! JSONEncoder().encode(subartikoloj)
-		dbObjekto.setValue(vortoJSON, forKey: "vortoj")
-		
-		let tradukoJSON = try! JSONEncoder().encode(tradukoj)
-		dbObjekto.setValue(tradukoJSON, forKey: "tradukoj")
+		let blokoJSON = try! JSONEncoder().encode(blokoj)
+		dbObjekto.setValue(blokoJSON, forKey: "blokoj")
 		
 		try! konteksto.save()
 		
@@ -28,23 +25,20 @@ extension Artikolo {
 		guard let titolo = objekto.value(forKey: "titolo") as? String,
 			  let radiko = objekto.value(forKey: "radiko") as? String,
 			  let indekso = objekto.value(forKey: "indekso") as? String,
-			  let vortoDatumoj = objekto.value(forKey: "vortoj") as? Data,
-			  let tradukDatumoj = objekto.value(forKey: "tradukoj") as? Data else {
+			  let blokDatumoj = objekto.value(forKey: "blokoj") as? Data else {
 			return nil
 		}
 		
 		let oficialeco = objekto.value(forKey: "ofc") as? String
 		
-		let subartikoloj = try! JSONDecoder().decode([Subartikolo].self, from: vortoDatumoj)
-		let tradukoj = try! JSONDecoder().decode([Traduko].self, from: tradukDatumoj)
+		let blokoj = try! JSONDecoder().decode([ArtikolBloko].self, from: blokDatumoj)
 
 		return Artikolo(
 			titolo: titolo,
 			radiko: radiko,
 			indekso: indekso,
 			ofc: oficialeco,
-			subartikoloj: subartikoloj,
-			tradukoj: tradukoj
+			blokoj: blokoj
 		)
 	}
 }

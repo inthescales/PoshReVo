@@ -3,22 +3,20 @@ import Foundation
 extension ArboAnalizilo {
 	/// Stato de artikol-traktado
 	final class Stato {
-		init(stiloj: [String: String]) {
+		init(lingvoj: [String: Lingvo], stiloj: [String: String]) {
+			self.lingvoj = lingvoj
 			self.stiloj = stiloj
 		}
 		
 		/// Fabriko kiu fabrikos la nune traktatan artikolon
 		var artikolFabriko = ArtikolFabriko()
 		
-		/// Fabriko kiu fabrikos la nune traktatan subartikolon, se tio ekzistas
-		var subartikoloFabriko: SubartikoloFabriko?
-		
-		/// Fabriko kiu fabrikos la nune traktatan derivaĵon, se tio ekzistas
-		var vortoFabriko: VortoFabriko?
-		
 		// MARK: Grundaĵoj
 		
-		/// Stilaj tekstoj kaj siaj kodoj
+		/// Lingvoj laŭ iliaj kodoj
+		let lingvoj: [String: Lingvo]
+		
+		/// Stilaj tekstoj kaj iliaj kodoj
 		let stiloj: [String: String]
 		
 		// MARK: Artikol-informoj
@@ -99,7 +97,11 @@ extension ArboAnalizilo {
 		/// Por ĉiu marko kiu aperas en senco, la numero de tiu senco (por resolvi 'sncref'-ojn)
 		var markSencoj: [String: Int] = [:]
 		
-		// MARK: Tradukoj
+		// MARK: Tradukoj kaj vortlisteroj
+		
+		/// Ĝisnunaj ĉi-derivaĵaj tradukoj
+		var derivajhTradukoj: [String: [ArtikolTraduko]] = [:]
+		// TODO: Testi ĉu aro necesas, aŭ ĉu lingvoj havas nur unu traduko po derivaĵo
 		
 		/// Ĉiuj jam-konstruitaj serĉtradukoj
 		var serchTradukoj: [String: [SerchTraduko]] = [:]
@@ -113,10 +115,10 @@ extension ArboAnalizilo {
 		/// Vortoj laŭ oficialeco
 		var ofcVortoj: [String: [OfcVorto]] = [:]
 		
-		/// Aldonas artikolan tradukoj
-		func aldoni(artikolTradukon traduko: ArtikolTraduko, lingvo: String) {
-			if artikolFabriko.tradukoj[lingvo] == nil { artikolFabriko.tradukoj[lingvo] = [] }
-			artikolFabriko.tradukoj[lingvo]?.append(traduko)
+		/// Aldonas serĉtradukon
+		func aldoni(derivajhTradukon traduko: ArtikolTraduko, lingvo: String) {
+			if derivajhTradukoj[lingvo] == nil { derivajhTradukoj[lingvo] = [] }
+			derivajhTradukoj[lingvo]?.append(traduko)
 		}
 		
 		/// Aldonas serĉtradukon

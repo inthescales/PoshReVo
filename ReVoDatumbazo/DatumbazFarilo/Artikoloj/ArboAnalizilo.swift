@@ -26,12 +26,12 @@ enum ArboAnalizilo {
 		lingvoj: [String: Lingvo],
 		stiloj: [String: String]
 	) -> Rezulto? {
-		let stato = Stato(stiloj: stiloj)
+		let stato = Stato(lingvoj: lingvoj, stiloj: stiloj)
 		stato.artikolFabriko.indekso = indekso
 		
 		trakti(arbon: arbo, stato: stato)
 		
-		return rezulto(stato: stato, lingvoj: lingvoj)
+		return rezulto(stato: stato)
 	}
 	
 	static func trakti(arbon arbo: ArtikolNodo, stato: Stato) {
@@ -46,8 +46,8 @@ enum ArboAnalizilo {
 	}
 	
 	/// La finaj rezultoj de la artikol-traktado
-	static func rezulto(stato: Stato, lingvoj: [String: Lingvo]) -> Rezulto? {
-		guard let artikolo = stato.artikolFabriko.fabriki(lingvoj: lingvoj) else {
+	static func rezulto(stato: Stato) -> Rezulto? {
+		guard let artikolo = stato.artikolFabriko.fabriki() else {
 			return nil
 		}
 		

@@ -71,6 +71,7 @@ final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
 	}
 	
 	// MARK: - Legado de individuaj versioj
+	
 	private func malkodiDatumaron_v2_0(datumoj: Data, malkodigilo: JSONDecoder) -> UzantDatumaro? {
 		try? malkodigilo.decode(UzantDatumaro.self, from: datumoj)
 	}

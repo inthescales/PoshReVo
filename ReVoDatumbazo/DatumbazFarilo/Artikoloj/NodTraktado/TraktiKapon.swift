@@ -8,11 +8,15 @@ extension ArboAnalizilo {
 		
 		/// Ĉiuj variaĵoj de la kapvorto, el kiuj ĉiuj estu serĉeblaj
 		let formoj: [String]
+		
+		/// Oficialeco indikta en kapo
+		let oficialeco: String?
 	}
 	
 	static func trakti(kapon kapo: ArtikolNodo, stato: Stato) -> KapRezulto {
 		var teksto = ""
 		var tildTeksto = ""
+		var oficialeco: String?
 		
 		switch stato.cheno.last {
 		case .art:
@@ -60,7 +64,8 @@ extension ArboAnalizilo {
 			return KapRezulto(
 				teksto: teksto,
 				tildTeksto: tildTeksto,
-				formoj: ArtikolTeksto.kapFormoj(por: teksto)
+				formoj: ArtikolTeksto.kapFormoj(por: teksto),
+				oficialeco: oficialeco
 			)
 		case .drv:
 			traktiFilojn(de: kapo, stato: stato) { filo in
@@ -68,7 +73,7 @@ extension ArboAnalizilo {
 				case .fnt:
 					break
 				case .ofc:
-					stato.vortoFabriko?.ofc = trakti(oficialecon: filo, stato: stato)
+					oficialeco = trakti(oficialecon: filo, stato: stato)
 				case .teksto(let filTeksto):
 					teksto += filTeksto.prepari().kunpremi()
 					tildTeksto += filTeksto
@@ -86,14 +91,14 @@ extension ArboAnalizilo {
 			teksto = teksto.prepari().tondi()
 			tildTeksto = tildTeksto.prepari().tondi()
 			
-			stato.vortoFabriko?.titolo = teksto
 			stato.derivajhNomo = teksto
 			stato.derivajhTildo = tildTeksto
 			
 			return KapRezulto(
 				teksto: teksto,
 				tildTeksto: tildTeksto,
-				formoj: ArtikolTeksto.kapFormoj(por: teksto)
+				formoj: ArtikolTeksto.kapFormoj(por: teksto),
+				oficialeco: oficialeco
 			)
 		case .vari:
 			traktiFilojn(de: kapo, stato: stato) { filo in
@@ -102,9 +107,7 @@ extension ArboAnalizilo {
 					teksto = teksto.tondi()
 					tildTeksto = tildTeksto.tondi()
 				case .ofc:
-					if stato.vortoFabriko?.ofc == nil {
-						stato.vortoFabriko?.ofc = trakti(oficialecon: filo, stato: stato)
-					}
+					oficialeco = trakti(oficialecon: filo, stato: stato)
 				case .rad(let vari):
 					let filTeksto = trakti(radikon: filo, variajho: vari, stato: stato)
 					teksto += filTeksto
@@ -126,11 +129,12 @@ extension ArboAnalizilo {
 			return KapRezulto(
 				teksto: teksto,
 				tildTeksto: tildTeksto,
-				formoj: ArtikolTeksto.kapFormoj(por: teksto)
+				formoj: ArtikolTeksto.kapFormoj(por: teksto),
+				oficialeco: oficialeco
 			)
 		default:
 			assert(false, "Neatendita cheno")
-			return KapRezulto(teksto: "", tildTeksto: "", formoj: [])
+			return KapRezulto(teksto: "", tildTeksto: "", formoj: [], oficialeco: nil)
 		}
 	}
 }

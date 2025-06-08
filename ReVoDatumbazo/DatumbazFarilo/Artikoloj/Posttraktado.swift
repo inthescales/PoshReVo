@@ -17,21 +17,27 @@ enum Posttraktado {
 			}
 		}
 		
-		var novajSubartikoloj: [Subartikolo] = []
-		for subartikolo in artikolo.subartikoloj {
-			var novajVortoj: [Vorto] = []
-			for vorto in subartikolo.vortoj {
-				let novaVorto = vorto.kopio(teksto: anstataui(en: vorto.teksto))
-				novajVortoj.append(novaVorto)
+		var novajBlokoj: [ArtikolBloko] = []
+		for bloko in artikolo.blokoj {
+			let novaBloko: ArtikolBloko
+			switch bloko {
+			case .subartikolTitola(let teksto):
+				novaBloko = .subartikolTitola(teksto: anstataui(en: teksto))
+			case .derivajhTitola(let teksto, let ofc, let marko):
+				novaBloko = .derivajhTitola(teksto: anstataui(en: teksto), ofc: ofc, marko: marko)
+			case .ekzempla(let ekzemploj):
+				novaBloko = .ekzempla(ekzemploj: ekzemploj.map { anstataui(en: $0)})
+			case .teksta(let teksto):
+				novaBloko = .teksta(teksto: anstataui(en: teksto))
+			case .traduka(let tradukoj):
+				let novajTradukoj = tradukoj.map { Traduko(lingvo: $0.lingvo, teksto: anstataui(en: $0.teksto)) }
+				novaBloko = .traduka(tradukoj: novajTradukoj)
 			}
-			let novaSubartikolo = Subartikolo(
-				teksto: anstataui(en: subartikolo.teksto),
-				vortoj: novajVortoj
-			)
-			novajSubartikoloj.append(novaSubartikolo)
+			
+			novajBlokoj.append(novaBloko)
 		}
 		
-		return artikolo.kopio(subartikoloj: novajSubartikoloj)
+		return artikolo.kopio(blokoj: novajBlokoj)
 	}
 }
 
@@ -47,14 +53,13 @@ private extension Vorto {
 }
 
 private extension Artikolo {
-	func kopio(subartikoloj: [Subartikolo]) -> Artikolo {
+	func kopio(blokoj: [ArtikolBloko]) -> Artikolo {
 		return Artikolo(
 			titolo: self.titolo,
 			radiko: self.radiko,
 			indekso: self.indekso,
 			ofc: self.ofc,
-			subartikoloj: subartikoloj,
-			tradukoj: self.tradukoj
+			blokoj: blokoj
 		)
 	}
 }
