@@ -45,7 +45,7 @@ final class ArtikoloViewController: UIViewController {
 			forCellReuseIdentifier: Konstantoj.derivajhTitoloIdentigilo
 		)
 		tabelo.register(
-			DerivajhTitoloChelo.self,
+			SubartikoloTitoloChelo.self,
 			forCellReuseIdentifier: Konstantoj.subartikolTitoloIdentigilo
 		)
 		tabelo.register(
@@ -192,34 +192,34 @@ final class ArtikoloViewController: UIViewController {
 	// MARK: Agoj
 	
 	private func premisSalti() {
-		// TODO: Refaru saltadon
-//		let eroj: [ShovMenuoViewController.Menuero] = cheloDatumoj.compactMap {
-//			switch $0 {
-//			case .subartikolo(let subartikolo):
-//				return ShovMenuoViewController.Menuero(teksto: "---") {}
-//			case .derivajho(let vorto):
-//				return ShovMenuoViewController.Menuero(teksto: vorto.titolo) { [weak self] in
-//					guard let self, let marko = vorto.marko else {
-//						return
-//					}
-//					
-//					saltiAlMarko(marko, animacii: true)
-//				}
-//			case .traduko:
-//				return nil
-//			}
-//		}
-//		
-//		let menuo = ShovMenuoViewController(
-//			eroj: eroj,
-//			navigaciilaAlto: navigationController?.navigationBar.bounds.height ?? 0.0,
-//			forigi: { [weak self] in
-//				self?.dismiss(animated: false)
-//			}
-//		)
-//		
-//		menuo.modalPresentationStyle = .overFullScreen
-//		navigationController?.present(menuo, animated: false)
+		let eroj: [ShovMenuoViewController.Menuero] = artikolo.blokoj.compactMap {
+			switch $0 {
+			case .subartikolTitola:
+				return ShovMenuoViewController.Menuero(teksto: "---") {}
+			case .derivajhTitola(let teksto, _, let marko):
+				return ShovMenuoViewController.Menuero(teksto: teksto) { [weak self] in
+					guard let self,
+						  let marko else {
+						return
+					}
+					
+					saltiAlMarko(marko, animacii: true)
+				}
+			default:
+				return nil
+			}
+		}
+		
+		let menuo = ShovMenuoViewController(
+			eroj: eroj,
+			navigaciilaAlto: navigationController?.navigationBar.bounds.height ?? 0.0,
+			forigi: { [weak self] in
+				self?.dismiss(animated: false)
+			}
+		)
+		
+		menuo.modalPresentationStyle = .overFullScreen
+		navigationController?.present(menuo, animated: false)
 	}
 	
 	/// Haste rulumi al la celata marko
@@ -273,8 +273,8 @@ extension ArtikoloViewController: UITableViewDataSource {
 		
 		switch bloko {
 		case .subartikolTitola(teksto: let teksto):
-			(chelo as? DerivajhTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
-		case .derivajhTitola(teksto: let teksto, ofc: let ofc, _):
+			(chelo as? SubartikoloTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
+		case .derivajhTitola(teksto: let teksto, _, _):
 			(chelo as? DerivajhTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
 		case .ekzempla(ekzemploj: let ekzemploj):
 			let teksto = ekzemploj.joined(separator: "; ")

@@ -124,6 +124,7 @@ final class Kunordigilo {
 			fatalError("Artikolo ne ekzistas") // TODO: Ŝanĝi tion ĉi
 		}
 		
+		// TODO: Salti al destina marko (e.g. serĉo por 'amkanto')
 		let vc = fariArtikoloPaghon(el: artikolo, prezentilo: prezentilo)
 		prezentilo.pushViewController(vc, animated: true)
 	}

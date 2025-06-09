@@ -13,7 +13,7 @@ final class TekstoChelo: UITableViewCell {
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
-		addEdgeMatchedSubview(etikedo)
+		contentView.addEdgeMatchedSubview(etikedo)
 	}
 	
 	required init?(coder: NSCoder) {

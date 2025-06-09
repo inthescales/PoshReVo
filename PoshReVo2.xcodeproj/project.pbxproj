@@ -58,6 +58,7 @@
 		00B27B782DF74E5900526F82 /* TekstoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B772DF74E5900526F82 /* TekstoChelo.swift */; };
 		00B27B7A2DF7512F00526F82 /* DerivajhTitoloChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B792DF7512F00526F82 /* DerivajhTitoloChelo.swift */; };
 		00B27B7C2DF751FE00526F82 /* TradukaroChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B7B2DF751FE00526F82 /* TradukaroChelo.swift */; };
+		00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +128,7 @@
 		00B27B772DF74E5900526F82 /* TekstoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstoChelo.swift; sourceTree = "<group>"; };
 		00B27B792DF7512F00526F82 /* DerivajhTitoloChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerivajhTitoloChelo.swift; sourceTree = "<group>"; };
 		00B27B7B2DF751FE00526F82 /* TradukaroChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukaroChelo.swift; sourceTree = "<group>"; };
+		00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubartikoloTitoloChelo.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,8 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */,
-				00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */,
 				00B27B762DF74E4F00526F82 /* Cheloj */,
+				00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */,
 				00B27B2E2DC8188800526F82 /* DerivajhoChelo.swift */,
 				00B27B302DC81C0400526F82 /* ArtikolTekstoChelo.swift */,
 				00B27B362DCAC35C00526F82 /* TradukojKapoView.swift */,
@@ -341,8 +343,9 @@
 		00B27B762DF74E4F00526F82 /* Cheloj */ = {
 			isa = PBXGroup;
 			children = (
-				00B27B772DF74E5900526F82 /* TekstoChelo.swift */,
 				00B27B792DF7512F00526F82 /* DerivajhTitoloChelo.swift */,
+				00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */,
+				00B27B772DF74E5900526F82 /* TekstoChelo.swift */,
 				00B27B7B2DF751FE00526F82 /* TradukaroChelo.swift */,
 			);
 			path = Cheloj;
@@ -501,6 +504,7 @@
 				00B27B112DC264A100526F82 /* Tekstoj.swift in Sources */,
 				00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */,
 				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
+				00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* AranghHelpiloj.swift in Sources */,
 				000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */,
 				00B27B372DCAC35C00526F82 /* TradukojKapoView.swift in Sources */,

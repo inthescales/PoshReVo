@@ -14,19 +14,7 @@ final class TradukaroChelo: UITableViewCell {
 	//
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-		super.init(style: style, reuseIdentifier: reuseIdentifier)
-		
-//		contentView.addSubview(lingvoStaplo)
-//		lingvoStaplo.snp.makeConstraints { make in
-//			make.top.left.bottom.equalToSuperview()
-//		}
-//		
-//		contentView.addSubview(tekstoStaplo)
-//		tekstoStaplo.snp.makeConstraints { make in
-//			make.top.right.bottom.equalToSuperview()
-//			make.left.equalTo(lingvoStaplo.snp.right)
-//		}
-		
+		super.init(style: style, reuseIdentifier: reuseIdentifier)		
 		contentView.addEdgeMatchedSubview(staplo)
 	}
 	
@@ -50,9 +38,8 @@ final class TradukaroChelo: UITableViewCell {
 		
 		for traduko in tradukoj {
 			let lingvoEtikedo = UILabel()
-			lingvoEtikedo.font = .boldSystemFont(ofSize: 20)
-			lingvoEtikedo.text = traduko.lingvo.nomo
-			lingvoEtikedo.textColor = stilo.teksto
+			lingvoEtikedo.text = traduko.lingvo.adverbo + ":"
+			lingvoEtikedo.textColor = stilo.ligilo
 			lingvoEtikedo.numberOfLines = 0
 			lingvoEtikedo.translatesAutoresizingMaskIntoConstraints = false
 			lingvoEtikedo.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)

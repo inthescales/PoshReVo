@@ -7,13 +7,17 @@ public class Lingvo: NSObject, Codable, NSSecureCoding {
     public let kodo: String
     public let nomo: String
     
+	public static var esperanto: Lingvo {
+		return Lingvo(kodo: "eo", nomo: "Esperanto")
+	}
+	
     public init(kodo: String, nomo: String) {
         self.kodo = kodo
         self.nomo = nomo
     }
 	
-	public static var esperanto: Lingvo {
-		return Lingvo(kodo: "eo", nomo: "Esperanto")
+	public var adverbo: String {
+		return nomo.prefix(nomo.count - 1) + "e"
 	}
 	
 	// MARK: - NSSecureCoding
