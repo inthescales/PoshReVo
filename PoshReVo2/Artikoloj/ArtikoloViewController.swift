@@ -6,28 +6,11 @@ import TTTAttributedLabel
 
 final class ArtikoloViewController: UIViewController {
 	private enum Konstantoj {
-		static let subartikoloChelIdentigilo = "subartikoloChelo"
-		
-		static let derivajhoChelIdentigilo = "derivajhoChelo"
-		
-		static let tradukoChelIdentigilo = "tradukoChelo"
-	}
-	
-	private enum CheloDatumo {
-		case subartikolo(Subartikolo)
-		case derivajho(Vorto)
-		case traduko(Traduko)
-		
-		var identigilo: String {
-			switch self {
-			case .subartikolo:
-				return Konstantoj.subartikoloChelIdentigilo
-			case .derivajho:
-				return Konstantoj.derivajhoChelIdentigilo
-			case .traduko:
-				return Konstantoj.tradukoChelIdentigilo
-			}
-		}
+		static let derivajhTitoloIdentigilo = "derivajhTitolaIdentigilo"
+		static let ekzemplaroIdentigilo = "ekzemplaIdentigilo"
+		static let subartikolTitoloIdentigilo = "subartikolTitolaIdentigilo"
+		static let tekstoIdentigilo = "tekstaIdentigilo"
+		static let tradukaroIdentigilo = "tradukaIdentigilo"
 	}
 	
 	// MARK: Interfaceroj
@@ -58,29 +41,30 @@ final class ArtikoloViewController: UIViewController {
 		tabelo.delegate = self
 		tabelo.dataSource = self
 		tabelo.register(
-			ArtikolTekstoChelo.self,
-			forCellReuseIdentifier: Konstantoj.subartikoloChelIdentigilo
+			DerivajhTitoloChelo.self,
+			forCellReuseIdentifier: Konstantoj.derivajhTitoloIdentigilo
 		)
 		tabelo.register(
-			DerivajhoChelo.self,
-			forCellReuseIdentifier: Konstantoj.derivajhoChelIdentigilo
+			DerivajhTitoloChelo.self,
+			forCellReuseIdentifier: Konstantoj.subartikolTitoloIdentigilo
 		)
 		tabelo.register(
-			TradukoChelo.self,
-			forCellReuseIdentifier: Konstantoj.tradukoChelIdentigilo
+			TekstoChelo.self,
+			forCellReuseIdentifier: Konstantoj.tekstoIdentigilo
 		)
+		tabelo.register(
+			TekstoChelo.self,
+			forCellReuseIdentifier: Konstantoj.ekzemplaroIdentigilo
+		)
+		tabelo.register(
+			TradukaroChelo.self,
+			forCellReuseIdentifier: Konstantoj.tradukaroIdentigilo
+		)
+		
 		return tabelo
 	}()
 	
 	// MARK: Stato
-	
-	private var cheloDatumoj: [CheloDatumo]
-	
-	private var tradukoj: [Traduko] {
-		tradukLingvoj.compactMap { lingvo in
-			artikolo.tradukoj.first(where: { $0.lingvo == lingvo })
-		}
-	}
 	
 	private var tradukLingvoj: [Lingvo] {
 		didSet {
@@ -118,8 +102,6 @@ final class ArtikoloViewController: UIViewController {
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		
-		self.cheloDatumoj = Self.cheloDatumoj(el: artikolo)
-		
 		super.init(nibName: nil, bundle: nil)
 		
 		titolejo.agordi(konservita: konservita)
@@ -136,6 +118,7 @@ final class ArtikoloViewController: UIViewController {
 		self.init(
 			artikolo: artikolo,
 			konservita: uzantDatumaro.chuKonservita(artikolo: artikolo),
+			tradukLingvoj: uzantDatumaro.lingvoj,
 			aperis: aperis,
 			konservis: konservis
 		)
@@ -209,41 +192,42 @@ final class ArtikoloViewController: UIViewController {
 	// MARK: Agoj
 	
 	private func premisSalti() {
-		let eroj: [ShovMenuoViewController.Menuero] = cheloDatumoj.compactMap {
-			switch $0 {
-			case .subartikolo(let subartikolo):
-				return ShovMenuoViewController.Menuero(teksto: "---") {}
-			case .derivajho(let vorto):
-				return ShovMenuoViewController.Menuero(teksto: vorto.titolo) { [weak self] in
-					guard let self, let marko = vorto.marko else {
-						return
-					}
-					
-					saltiAlMarko(marko, animacii: true)
-				}
-			case .traduko:
-				return nil
-			}
-		}
-		
-		let menuo = ShovMenuoViewController(
-			eroj: eroj,
-			navigaciilaAlto: navigationController?.navigationBar.bounds.height ?? 0.0,
-			forigi: { [weak self] in
-				self?.dismiss(animated: false)
-			}
-		)
-		
-		menuo.modalPresentationStyle = .overFullScreen
-		navigationController?.present(menuo, animated: false)
+		// TODO: Refaru saltadon
+//		let eroj: [ShovMenuoViewController.Menuero] = cheloDatumoj.compactMap {
+//			switch $0 {
+//			case .subartikolo(let subartikolo):
+//				return ShovMenuoViewController.Menuero(teksto: "---") {}
+//			case .derivajho(let vorto):
+//				return ShovMenuoViewController.Menuero(teksto: vorto.titolo) { [weak self] in
+//					guard let self, let marko = vorto.marko else {
+//						return
+//					}
+//					
+//					saltiAlMarko(marko, animacii: true)
+//				}
+//			case .traduko:
+//				return nil
+//			}
+//		}
+//		
+//		let menuo = ShovMenuoViewController(
+//			eroj: eroj,
+//			navigaciilaAlto: navigationController?.navigationBar.bounds.height ?? 0.0,
+//			forigi: { [weak self] in
+//				self?.dismiss(animated: false)
+//			}
+//		)
+//		
+//		menuo.modalPresentationStyle = .overFullScreen
+//		navigationController?.present(menuo, animated: false)
 	}
 	
 	/// Haste rulumi al la celata marko
 	private func saltiAlMarko(_ marko: String, animacii: Bool) {
-		for (i, datumo) in cheloDatumoj.enumerated() {
-			switch datumo {
-			case .derivajho(let vorto):
-				if vorto.marko == marko {
+		for (i, bloko) in artikolo.blokoj.enumerated() {
+			switch bloko {
+			case .derivajhTitola(_, _, let blokMarko):
+				if blokMarko == marko {
 					tabelo.scrollToRow(at: IndexPath(row: i, section: 0), at: .top, animated: animacii)
 				}
 			default:
@@ -252,31 +236,25 @@ final class ArtikoloViewController: UIViewController {
 		}
 	}
 	
-	// MARK: Helpiloj
+	// MARK: - Helpiloj
 	
-	/// Kreas datumojn pri prezentotaj ĉeloj laŭ la artikolo
-	private static func cheloDatumoj(el artikolo: Artikolo) -> [CheloDatumo] {
-		var datumoj: [CheloDatumo] = []
-		
-		for subartikolo in artikolo.subartikoloj {
-			if !subartikolo.teksto.isEmpty {
-				datumoj.append(.subartikolo(subartikolo))
-			}
-			
-			for vorto in subartikolo.vortoj {
-				datumoj.append(.derivajho(vorto))
-			}
+	func chelIdentigilo(por bloko: ArtikolBloko) -> String {
+		switch bloko {
+		case .derivajhTitola:
+			Konstantoj.derivajhTitoloIdentigilo
+		case .ekzempla:
+			Konstantoj.ekzemplaroIdentigilo
+		case .subartikolTitola:
+			Konstantoj.subartikolTitoloIdentigilo
+		case .teksta:
+			Konstantoj.tekstoIdentigilo
+		case .traduka:
+			Konstantoj.tradukaroIdentigilo
 		}
-		
-		return datumoj
 	}
 }
 
 extension ArtikoloViewController: UITableViewDelegate {
-	func numberOfSections(in tableView: UITableView) -> Int {
-		return 2
-	}
-	
 	func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
 		return nil
 	}
@@ -284,89 +262,35 @@ extension ArtikoloViewController: UITableViewDelegate {
 
 extension ArtikoloViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		switch section {
-		case 0:
-			return cheloDatumoj.count
-		case 1:
-			return tradukoj.count
-		default:
-			return 0
-		}
+		return artikolo.blokoj.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let datumero: CheloDatumo
-		switch indexPath.section {
-		case 0:
-			datumero = cheloDatumoj[indexPath.row]
-		case 1:
-			datumero = .traduko(tradukoj[indexPath.row])
-		default:
-			fatalError("Malsukcesis identigi chelodatumojn")
-		}
-		
-		guard let chelo = tabelo.dequeueReusableCell(withIdentifier: datumero.identigilo) else {
+		let bloko = artikolo.blokoj[indexPath.row]
+		guard let chelo = tabelo.dequeueReusableCell(withIdentifier: chelIdentigilo(por: bloko)) else {
 			fatalError("Malsukcesis krei ĉelon")
 		}
 		
-		switch datumero {
-		case .derivajho(let vorto):
-			(chelo as? DerivajhoChelo)?.agordi(vorto: vorto, liganto: self, stilo: stilo)
-		case .subartikolo(let subartikolo):
-			(chelo as? ArtikolTekstoChelo)?.agordi(teksto: subartikolo.teksto, stilo: stilo)
-		case .traduko(let traduko):
-			(chelo as? TradukoChelo)?.agordi(traduko: traduko, liganto: self, stilo: stilo)
+		switch bloko {
+		case .subartikolTitola(teksto: let teksto):
+			(chelo as? DerivajhTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
+		case .derivajhTitola(teksto: let teksto, ofc: let ofc, _):
+			(chelo as? DerivajhTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
+		case .ekzempla(ekzemploj: let ekzemploj):
+			let teksto = ekzemploj.joined(separator: "; ")
+			(chelo as? TekstoChelo)?.agordi(teksto: teksto, liganto: self, stilo: stilo)
+		case .teksta(let teksto):
+			(chelo as? TekstoChelo)?.agordi(teksto: teksto, liganto: self, stilo: stilo)
+		case .traduka(let tradukoj):
+			// TODO: Ŝanĝu post kiam lingvo estos denove struct
+			let tradukKodoj = tradukLingvoj.map { $0.kodo }
+			let montrotaj = tradukoj
+				.filter { tradukKodoj.contains($0.lingvo.kodo) }
+			(chelo as? TradukaroChelo)?.agordi(tradukoj: montrotaj, liganto: self, stilo: stilo)
 		}
-		
 		chelo.selectionStyle = .none
 		
 		return chelo
-	}
-	
-	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-		if section == 1 {
-			return TradukojKapoView()
-		} else {
-			return nil
-		}
-	}
-	
-	func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-		if section == 1 {
-			return TradukojPiedoView(
-				ago: { [weak self] in
-					guard let self,
-						  let navigaciilo = navigationController else {
-						return
-					}
-					
-					kunordigilo.prezentiLingvoRedaktilon(
-						prezentilo: navigaciilo,
-						kompleti: { [weak self] lingvoj in
-							self?.tradukLingvoj = lingvoj
-						})
-				}
-				,stilo: stilo
-			)
-		} else {
-			return nil
-		}
-	}
-	
-	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		if section == 1 {
-			return UITableView.automaticDimension
-		} else {
-			return 0
-		}
-	}
-	
-	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-		if section == 1 {
-			return UITableView.automaticDimension
-		} else {
-			return 0
-		}
 	}
 }
 
