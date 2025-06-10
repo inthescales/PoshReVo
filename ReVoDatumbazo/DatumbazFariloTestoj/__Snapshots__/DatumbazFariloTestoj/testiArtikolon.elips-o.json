@@ -1,132 +1,137 @@
 {
+  "blokoj" : [
+    {
+      "derivajhTitola" : {
+        "marko" : "elips.0o",
+        "teksto" : "elipso"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "[MAT]<a href=\"konik.0o\">Koniko<\/a> kun discentreco malpli granda ol unu: \n · <ekzemplo><b>elips<\/b>o havas du fokusojn kaj la sumo de la distancoj de ĉiu punkto de la <b>elips<\/b>o al ĝiaj fokusoj estas konstanta;<\/ekzemplo> \n · <ekzemplo>la ombro horizonta de la ombroĵetilo IZ trairas la <b>elips<\/b>on en la punkto M;<\/ekzemplo> \n · <ekzemplo>la (sunsistemaj) planedoj laŭiras <b>elips<\/b>ojn, kies unu el la fokusoj okupas la suno (unua <a href=\"kepler.k0a\">keplera<\/a> leĝo);<\/ekzemplo> \n · <ekzemplo>la kartezia ekvacio de <b>elips<\/b>o estas de la tipo (x\/a)<sup>2<\/sup>+(y\/b)<sup>2<\/sup> = 1.<\/ekzemplo>\n➞ Atributoj de elipso: <a href=\"centr.0o.elipso\">centro<\/a>, <a href=\"aks.0o.simetrio\">aksoj<\/a> (fokusa kaj nefokusa), <a href=\"aks.grandaduon0o\">granda duonakso<\/a>, <a href=\"aks.malgrandaduon0o\">malgranda duonakso<\/a>; ➞ <a href=\"oval.0o\">ovalo<\/a>, <a href=\"orbit.0o\">orbito<\/a>\n<b>Rim<\/b>: En lingvouzo ellaso de iuj negravaj vortoj nomiĝas ankaŭ <a href=\"elips1.0o\">elipso<\/a>."
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "ellipse"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "эліпс"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "bg",
+              "nomo" : "bulgara"
+            },
+            "teksto" : "елипса"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "výpustka"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "椭圆 [tuǒyuán], 椭 [tuǒ]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "ellipse (math., gram.)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Ellipse"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "elipse"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "楕円 [だえん], 省略 [しょうりゃく]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "ellips"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fa",
+              "nomo" : "persa"
+            },
+            "teksto" : "بیضی"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "elipsa 1. elipsa"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "elipse"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "эллипс"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "výpustka"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "еліпсис, еліпс"
+          }
+        ]
+      }
+    }
+  ],
   "indekso" : "elips",
   "ofc" : "1",
   "radiko" : "elips",
-  "subartikoloj" : [
-    {
-      "teksto" : "",
-      "vortoj" : [
-        {
-          "marko" : "elips.0o",
-          "teksto" : "[MAT]<a href=\"konik.0o\">Koniko<\/a> kun discentreco malpli granda ol unu: <i><b>elips<\/b>o havas du fokusojn kaj la sumo de la distancoj de ĉiu punkto de la <b>elips<\/b>o al ĝiaj fokusoj estas konstanta;<\/i> <i>la ombro horizonta de la ombroĵetilo IZ trairas la <b>elips<\/b>on en la punkto M;<\/i> <i>la (sunsistemaj) planedoj laŭiras <b>elips<\/b>ojn, kies unu el la fokusoj okupas la suno (unua <a href=\"kepler.k0a\">keplera<\/a> leĝo);<\/i> <i>la kartezia ekvacio de <b>elips<\/b>o estas de la tipo (x\/a)<sup>2<\/sup>+(y\/b)<sup>2<\/sup> = 1.<\/i>\n➞ Atributoj de elipso: <a href=\"centr.0o.elipso\">centro<\/a>, <a href=\"aks.0o.simetrio\">aksoj<\/a> (fokusa kaj nefokusa), <a href=\"aks.grandaduon0o\">granda duonakso<\/a>, <a href=\"aks.malgrandaduon0o\">malgranda duonakso<\/a>; ➞ <a href=\"oval.0o\">ovalo<\/a>, <a href=\"orbit.0o\">orbito<\/a>\n<b>Rim<\/b>: En lingvouzo ellaso de iuj negravaj vortoj nomiĝas ankaŭ <a href=\"elips1.0o\">elipso<\/a>.",
-          "titolo" : "elipso"
-        }
-      ]
-    }
-  ],
-  "titolo" : "elips\/o",
-  "tradukoj" : [
-    {
-      "lingvo" : {
-        "kodo" : "en",
-        "nomo" : "angla"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: ellipse."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "be",
-        "nomo" : "belorusa"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: эліпс."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "bg",
-        "nomo" : "bulgara"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: елипса."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "cs",
-        "nomo" : "ĉeĥa"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: výpustka."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "zh",
-        "nomo" : "ĉina"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: 椭圆 [tuǒyuán], 椭 [tuǒ]."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "fr",
-        "nomo" : "franca"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: ellipse (math., gram.)."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "de",
-        "nomo" : "germana"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: Ellipse."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "es",
-        "nomo" : "hispana"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: elipse."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ja",
-        "nomo" : "japana"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: 省略 [しょうりゃく], 楕円 [だえん]."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "nl",
-        "nomo" : "nederlanda"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: ellips."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "fa",
-        "nomo" : "persa"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: بیضی."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "pl",
-        "nomo" : "pola"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o 1<\/a>: elipsa; <a href=\"elips.0o\">~o<\/a>: elipsa."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "pt",
-        "nomo" : "portugala"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: elipse."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ru",
-        "nomo" : "rusa"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: эллипс."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sk",
-        "nomo" : "slovaka"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: výpustka."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "uk",
-        "nomo" : "ukraina"
-      },
-      "teksto" : "<a href=\"elips.0o\">~o<\/a>: еліпс, еліпсис."
-    }
-  ]
+  "titolo" : "elips\/o"
 }

@@ -1,5 +1,5 @@
 extension ArboAnalizilo {
-	static func trakti(ekzemplon ekzemplo: ArtikolNodo, stato: Stato) -> String {
+	static func trakti(ekzemplon ekzemplo: ArtikolNodo, stila: Bool = true, stato: Stato) -> String {
 		var teksto = ""
 		var indeksajho: IndeksRezulto?
 		
@@ -53,6 +53,11 @@ extension ArboAnalizilo {
 				assert(false, "Neatendita filo")
 			}
 		}
-		return "\n · <ekzemplo>" + teksto.kunpremi().tondi() + "</ekzemplo>"
+		
+		if stila {
+			return "\n · <ekzemplo>" + teksto.kunpremi().tondi() + "</ekzemplo>"
+		} else {
+			return teksto.kunpremi().tondi()
+		}
 	}
 }

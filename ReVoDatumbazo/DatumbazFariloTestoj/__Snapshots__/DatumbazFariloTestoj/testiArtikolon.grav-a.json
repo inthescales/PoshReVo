@@ -1,211 +1,1148 @@
 {
+  "blokoj" : [
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.0a",
+        "ofc" : "*",
+        "teksto" : "grava"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Atentinda pro sia granda influo aŭ siaj grandaj sekvoj: \n · <ekzemplo>ili foriris de li, lasinte lin en <b>grav<\/b>a malsano;<\/ekzemplo> \n · <ekzemplo>la plej <b>grav<\/b>aj plejaĝuloj;<\/ekzemplo> \n · <ekzemplo>[ili] staris ĉirkaŭe, akuzante lin pri […] <b>grav<\/b>aj kulpoj;<\/ekzemplo> \n · <ekzemplo>la plej <b>grav<\/b>aj krimuloj;<\/ekzemplo> \n · <ekzemplo>la homo estis tre riĉe vestita, li estis videble <b>grav<\/b>a persono;<\/ekzemplo> \n · <ekzemplo>li dancas belege, […] sed egale <b>grav<\/b>a demando estas, ĉu li estas sufiĉe instruita;<\/ekzemplo> \n · <ekzemplo><b>grav<\/b>a festotago;<\/ekzemplo> \n · <ekzemplo>estis konfirmado […], tio estis ja <b>grav<\/b>a tago por ili, el infanoj ili subite fariĝis plenkreskaj homoj;<\/ekzemplo> \n · <ekzemplo>aŭskultu, ĉar mi parolos gravaĵon;<\/ekzemplo> \n · <ekzemplo>ofte de kaŭzo senenhava venas efiko plej <b>grav<\/b>a.<\/ekzemplo>\n➞ <a href=\"pez.0a.multe0a\">peza<\/a>, <a href=\"serioz.0a\">serioza<\/a>, <a href=\"signif.0a.FIG\">signifa<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "important"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "варты ўвагі, сур'ёзны, істотны, значны, важны"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "bg",
+              "nomo" : "bulgara"
+            },
+            "teksto" : "съществен, важен"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "závažný, vážný, těžký (důležitý), povážlivý, hrubý (vážný), důležitý, důležitý"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "要 [yào], 重要 [zhōngyào], 有地位 [yǒudìwèi], 重 [zhòng]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "important, grave, gros (important), marquant 1. chose importante"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "bedeutend, wichtig"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "importante"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "fontos, súlyos (átv.) 1. fontos dolog"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "penting 1. hal penting"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "深刻な [しんこくな], 重大な [じゅうだいな], 重要な [じゅうような]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "belangrijk, gewichtig, aanzienlijk 1. iets belangrijks"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "serio (pot.), doniosły, znaczący, znaczny, istotny, ważny"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "importante, grave"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "существенный, серьёзный, значительный, важный"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "závažný, vážny, povážlivý, dôležitý"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sv",
+              "nomo" : "sveda"
+            },
+            "teksto" : "viktig"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "bo",
+              "nomo" : "tibeta"
+            },
+            "teksto" : "གལ་ཆེན་པོ་"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tok",
+              "nomo" : "tokipona"
+            },
+            "teksto" : "suli"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "поважний, серйозний, значущий, значний, важливий"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.0e",
+        "teksto" : "grave"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Laŭ grava maniero: \n · <ekzemplo>mi estas <b>grav<\/b>e vundita;<\/ekzemplo> \n · <ekzemplo>se mi jam tiel longe kuŝis, ne estas ja <b>grav<\/b>e kuŝi ankoraŭ iom pli!<\/ekzemplo> \n · <ekzemplo>por li estis <b>grav<\/b>e havi la lastan vorton;<\/ekzemplo> \n · <ekzemplo><b>grav<\/b>e maloportuna;<\/ekzemplo> \n · <ekzemplo>ne <b>grav<\/b>e, ne <b>grav<\/b>e, diris Mefres.<\/ekzemplo>\n➞ <a href=\"fort.0e.multe\">forte<\/a>, <a href=\"mult.0e\">multe<\/a>, <a href=\"tre.0\">tre<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "сур'ёзна, істотна, значна, важна"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "vážně, těžce, důležitě"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "gravement"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "gravierend, bedeutend, wichtig"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "komolyan, súlyosan, fontosan"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "重く [おもく], ひどく"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "serio (pot.), doniośle, znacząco, znacznie, istotnie, ważnie"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "gravemente"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "серьёзно, значительно, важно"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "vážne, dôležito"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sv",
+              "nomo" : "sveda"
+            },
+            "teksto" : "viktigt"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "поважно, серйозно, важливо"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.0i",
+        "teksto" : "gravi"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "(ntr)\nEsti grava: \n · <ekzemplo>sed tio ne gravas!<\/ekzemplo> \n · <ekzemplo>ne <b>grav<\/b>as, ne <b>grav<\/b>as, respondis la etulo;<\/ekzemplo> \n · <ekzemplo>tio ĉi neniel <b>grav<\/b>as;<\/ekzemplo> \n · <ekzemplo>la sumeto ne tre <b>grav<\/b>as;<\/ekzemplo> \n · <ekzemplo>por tiuj, kiuj suferis la militon, <b>grav<\/b>as haltigi ĝin.<\/ekzemplo>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "matter"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "значыць, быць важным"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "být důležitý"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "importer, compter (importer), convenir (de), falloir, être grave, peser (importer) 1. mais ça ne fait rien, mais peu importe"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "wichtig sein, bedeutend sein 1. aber das macht nichts"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "importar"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "fontos 1. de ez egyáltalán nem fontos"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "penting"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "重要である [じゅうようである], 重大である [じゅうだいである]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "belangrijk zijn, gewichtig zijn 1. maar dat is niet erg"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "być serio (pot.), być doniosłe, mieć znaczenie, być znaczącym, być znacznym, być istotnym, być ważnym"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "ser importante, importar (ter valor)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "иметь значение, быть важным"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "byť dôležitý"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sv",
+              "nomo" : "sveda"
+            },
+            "teksto" : "spela roll, vara viktig"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "бути важливим, мати значення"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.0igi",
+        "teksto" : "gravigi, pligravigi"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Igi pli grava, prezenti kiel grava: \n · <ekzemplo>la malfeliĉa virino estas enprofundigita en doloron, […] kiun hieraŭ via ĉeesto ankoraŭ pli<b>grav<\/b>igis;<\/ekzemplo> \n · <ekzemplo>la publiko […] per sia konduto <b>grav<\/b>igas aŭ mal<b>grav<\/b>igas la esprimitajn ideojn;<\/ekzemplo> \n · <ekzemplo>la diferencon [inter ili] <b>grav<\/b>igas ne nur aparta parolo, sed konkura kredo.<\/ekzemplo>\n➞ <a href=\"akcent.0i.KOMUNE\">akcenti<\/a>, <a href=\"star.el0igi\">elstarigi<\/a>, <a href=\"emfaz.0i.FIG\">emfazi<\/a>, <a href=\"fort.0igi\">plifortigi<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "падкрэсьліваць важнасьць, надаваць значэньне"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "注重 [zhùzhòng], 強調指出 [qiángdiàozhǐchū]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "verstärken"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "mementingkan"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "より深刻化する [よりしんこくかする], いっそう重大化する [いっそうじゅうだいかする]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "робити значущим, робити важливим, надаватизначущості, надавативажливості, надавати значення"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.0eco",
+        "teksto" : "graveco"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Eco de io grava: \n · <ekzemplo>al li tiuj figuroj ŝajnis […] havantaj la plej altan <b>grav<\/b>econ;<\/ekzemplo> \n · <ekzemplo>pompa parolado pri la <b>grav<\/b>eco de l' sciencoj;<\/ekzemplo> \n · <ekzemplo>tute specialan <b>grav<\/b>econ li atribuis al la historio;<\/ekzemplo> \n · <ekzemplo>tiu titolo donis al li <b>grav<\/b>econ, kiu kvazaŭ plifortigis lin en liaj altaj oficoj.<\/ekzemplo>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "importance"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "каштоўнасьць, важнасьць"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "závažnost, důležitost"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "涉 [shè], 关照 [guānzhào], 重要性 [zhòngyàoxìng], 眷 [juàn], 輕重 [qīngzhòng], 意函 [yìhán], 要紧 [yàojǐn]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "importance, gravité"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Bedeutung, Wichtigkeit"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "jelentősség, fontosság"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "kepentingan, pentingnya"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "重大さ [じゅうだいさ], 重要性 [じゅうようせい]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "betekenis (belang), belang, belangrijkheid"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "doniosłość, znaczenia, istota, waga"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "importância (adj.), gravidade (adj.)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "значительность, важность"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "závažnosť, dôležitosť"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sv",
+              "nomo" : "sveda"
+            },
+            "teksto" : "betydelse, viktighet"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tok",
+              "nomo" : "tokipona"
+            },
+            "teksto" : "suli"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "серйозність, значущість, важливість"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.0ulo",
+        "teksto" : "gravulo"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Homo grava en iu socia medio pro distinga influo, decidpovo aŭ scio, alta posteno ks: \n · <ekzemplo>la negoco estis <b>grav<\/b>a kaj tre esperiga, la <b>grav<\/b>uloj interkonsiliĝis en la interna ĉambro;<\/ekzemplo> \n · <ekzemplo>multaj <b>grav<\/b>uloj, i.a. pluraj ministroj, venis ĉi tien;<\/ekzemplo> \n · <ekzemplo><b>grav<\/b>uloj aŭ eminentuloj, ― preskaŭ ĉiam inter la aŭskultantoj troviĝas unu aŭ pluraj aparte <a href=\"star.el0a\">elstara<\/a>j personoj, kiuj ludas certan rolon en la urbo;<\/ekzemplo> \n · <ekzemplo>[iu] denuncis Patrikson kaj lin al iu <b>grav<\/b>ulo en la drogreto;<\/ekzemplo> \n · <ekzemplo>el <b>grav<\/b>uloj de la Esperanto-Movado kaj verkistoj, aperis […] Kalocsay kaj Baghy […], Grabowski kaj Kabe […], Hodler, […].<\/ekzemplo>\n⇒ <a href=\"distin.0ito\">distingito<\/a>, <a href=\"eminen1.0ulo\">eminentulo<\/a> ⇘ <a href=\"estr.0o\">estro<\/a>, <a href=\"kurato.0o.POL\">kuratoro<\/a>, <a href=\"mecena.0o\">mecenato<\/a>, <a href=\"patron.0o\">patrono<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "VIP"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "ВІП, важная асоба"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "名人 [míngrén]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Würdenträger, Entscheider, Berühmtheit, wichtige Persönlichkeit"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "VIP, naratama, orang penting"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "重要人物 [じゅうようじんぶつ]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "поважний чин, поважна особа"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.mal0a",
+        "teksto" : "malgrava"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Bagatela, ne meritanta atenton: \n · <ekzemplo>ili fariĝis kiel herbo de kampo, kiel mal<b>grav<\/b>a verdaĵo;<\/ekzemplo> \n · <ekzemplo>trompi lin […] en mal<b>grav<\/b>aj aferoj;<\/ekzemplo> \n · <ekzemplo>li havas mienon, kvazaŭ lia trumpetado estas io <b>grav<\/b>a, sed ĝi estas tute mal<b>grav<\/b>a;<\/ekzemplo> \n · <ekzemplo>se mi eĉ havos la plej mal<b>grav<\/b>an pozicion, tamen se tio, kion mi faros, estos bona, ĝi ĉiam havos ian valoron;<\/ekzemplo> \n · <ekzemplo>malgranda, mal<b>grav<\/b>aspekta dometo.<\/ekzemplo>\n⇒ <a href=\"bagate.0a\">bagatela<\/a> ➞ <a href=\"banal.0a\">banala<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "unimportant"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "нязначны, неістотны, няважны"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "lehký, bezvýznamný"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "无几 [wújǐ], 无关紧要 [wúguānjǐnyào], 小可 [xiǎokě], 无意义 [wúyìyì], 可忽視 [kěhūshì]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "insignifiant, sans importance, bénin, anodin"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "bedeutungslos, unwichtig"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "bagatell, jelentéktelen, lényegtelen"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "sepele, remeh"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "取るに足りない [とるにたりない], ささいな"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "onbelangrijk"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "nieznaczący, nieznaczny, nieistotny, nieważny"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "fútil, sem importância"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "несущественный, незначительный, неважный"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "nedôležitý, bezvýznamný"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sv",
+              "nomo" : "sveda"
+            },
+            "teksto" : "betydelselös, oviktig"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tok",
+              "nomo" : "tokipona"
+            },
+            "teksto" : "suli ala"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "дріб’язковий, дрібний, неважливий"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.mal0ajxo",
+        "teksto" : "malgravaĵo"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Ne atentinda afero: \n · <ekzemplo>gloro, potenco – vanta fumo! mal<b>grav<\/b>aĵo!<\/ekzemplo> \n · <ekzemplo>la parolanto ne kapablas distingi mal<b>grav<\/b>aĵon de <b>grav<\/b>aĵo;<\/ekzemplo> \n · <ekzemplo>li rapide ekscitiĝas pro mal<b>grav<\/b>aĵoj.<\/ekzemplo>\n⇒ <a href=\"bagate.0o\">bagatelo<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "peanut, trifle"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "пусьцяковіна, драбніца, дробязь"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "枝節 [zhījié]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "broutille, bagatelle"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Bagatelle, Nebensächlichkeit"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "csekélység, bagatell dolog, potomság"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "tetek bengek, hal remeh, hal sepele"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "ささいな事 [ささいなこと]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "iets onbelangrijks, futiliteit, kleinigheid, bagatel"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "bagatela, błahostka, drobiazg"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "bagatela"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "пустяк, мелочь"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tok",
+              "nomo" : "tokipona"
+            },
+            "teksto" : "ijo pi suli ala"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "дріб’язок, дрібниця, дріб’язкова справа, неважлива річ"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.mal0igi",
+        "teksto" : "malgravigi"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "(tr)\nIgi malpli grava, rigardi, prezenti kiel ne tiom gravan: \n · <ekzemplo>tio ne estas menciita por mal<b>grav<\/b>igi [la] signifon;<\/ekzemplo> \n · <ekzemplo>la domvendisto, iom embarasita, provas mal<b>grav<\/b>igi la fenomenon: „vi sciu, oni aŭdas tiun bruon nur la unuajn du aŭ tri tagojn“;<\/ekzemplo> \n · <ekzemplo>li finis per supera gesto de mal<b>grav<\/b>igo;<\/ekzemplo> \n · <ekzemplo>la teknologia evoluo mal<b>grav<\/b>igas distancojn kaj oficialajn strukturojn.<\/ekzemplo>\n➞ <a href=\"bagate.0igi\">bagateligi<\/a>, <a href=\"redukt.0i.FIG\">redukti<\/a>, <a href=\"relati.0igi\">relativigi<\/a>, <a href=\"taks.sub0i\">subtaksi<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "understate, downplay"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "прадстаўляць няважным, прыніжаць значэньне"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "znevážit"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "貶低 [biǎndī]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "minorer (l'importance de), minimiser"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "abwinken, kleinreden, herunterspielen"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "meremehkan"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "pozbawiać ważności, pozbawiać znaczenia, marginalizować, bagatelizować, umniejszać wagę, znaczenie (czegoś)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "znevážiť"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tok",
+              "nomo" : "tokipona"
+            },
+            "teksto" : "suli ala e ijo"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "применшувати вагу, применшувати значення"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.malpli0igi",
+        "teksto" : "malpligravigi"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Fari malpli grava: \n · <ekzemplo>malpli<b>grav<\/b>igi sian kulpon per pento.<\/ekzemplo> \n · <ekzemplo>[la] ministro […] en masklisma maniero ne hezitis malpli<b>grav<\/b>igi la okazaĵon deklarante ke „nu, neniu mortis“;<\/ekzemplo> \n · <ekzemplo>estas malpermes[ita] vidigi aŭ porti religiajn signojn ene de registaraj konstruaĵoj aŭ lokoj, kie religio estas periferia aŭ malpli<b>grav<\/b>igita en la publika sfero.<\/ekzemplo>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "прымяншаць"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "minimiser (rendre moins important)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "herunterspielen, untertreiben"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "lekicsinyel, (el)bagatelizál"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "酌量する [しゃくりょうする], 軽く見なす [かるくみなす]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "futiliseren, bagatelliseren, minimaliseren"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "marginalizować, bagatelizować, umniejszać wagę, znaczenie (czegoś)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "atenuar"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "облегчить, уменьшить"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "grav.vivo0a",
+        "teksto" : "vivgrava, vivograva"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Tre grava en ies vivo, por ies daŭra vivado: \n · <ekzemplo>la estraro de la banko ne konsideras la aferon viv<b>grav<\/b>a, eĉ se la banko pro tia malzorgemo devos ĉesigi sian funkcion;<\/ekzemplo> \n · <ekzemplo>li finfine laboris […] por trovi en tiu laboro iun kontentigan kaj vivo<b>grav<\/b>an;<\/ekzemplo> \n · <ekzemplo>li verkis bonegajn artikolojn pri la viv<b>grav<\/b>aj problemoj de la terlaboristoj.<\/ekzemplo>\n➞ <a href=\"esenc.0a\">esenca<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "essential, existential"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "жыцьцёва важны"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "生死攸关 [shēngsǐyōuguān], 极其重要 [jíqízhòngyào], 生活必需 [shēnghuóbìxū], 基本 [jīběn]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "vital, existenciel, essentiel"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "lebenswichtig, überlebenswichtig, lebensnotwendig, existentiell"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "vital, hakiki, esensial"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "egzystencjalny, życiowy"
+          }
+        ]
+      }
+    }
+  ],
   "indekso" : "grav",
   "ofc" : "*",
   "radiko" : "grav",
-  "subartikoloj" : [
-    {
-      "teksto" : "",
-      "vortoj" : [
-        {
-          "marko" : "grav.0a",
-          "ofc" : "*",
-          "teksto" : "Atentinda pro sia granda influo aŭ siaj grandaj sekvoj: <i>ili foriris de li, lasinte lin en <b>grav<\/b>a malsano;<\/i> <i>la plej <b>grav<\/b>aj plejaĝuloj;<\/i> <i>[ili] staris ĉirkaŭe, akuzante lin pri […] <b>grav<\/b>aj kulpoj;<\/i> <i>la plej <b>grav<\/b>aj krimuloj;<\/i> <i>la homo estis tre riĉe vestita, li estis videble <b>grav<\/b>a persono;<\/i> <i>li dancas belege, […] sed egale <b>grav<\/b>a demando estas, ĉu li estas sufiĉe instruita;<\/i> <i><b>grav<\/b>a festotago;<\/i> <i>estis konfirmado […], tio estis ja <b>grav<\/b>a tago por ili, el infanoj ili subite fariĝis plenkreskaj homoj;<\/i> <i>aŭskultu, ĉar mi parolos gravaĵon;<\/i> <i>ofte de kaŭzo senenhava venas efiko plej <b>grav<\/b>a.<\/i>\n➞ <a href=\"pez.0a.multe0a\">peza<\/a>, <a href=\"serioz.0a\">serioza<\/a>, <a href=\"signif.0a.FIG\">signifa<\/a>",
-          "titolo" : "grava"
-        },
-        {
-          "marko" : "grav.0e",
-          "teksto" : "Laŭ grava maniero: <i>mi estas <b>grav<\/b>e vundita;<\/i> <i>se mi jam tiel longe kuŝis, ne estas ja <b>grav<\/b>e kuŝi ankoraŭ iom pli!<\/i> <i>por li estis <b>grav<\/b>e havi la lastan vorton;<\/i> <i><b>grav<\/b>e maloportuna;<\/i> <i>ne <b>grav<\/b>e, ne <b>grav<\/b>e, diris Mefres.<\/i>\n➞ <a href=\"fort.0e.multe\">forte<\/a>, <a href=\"mult.0e\">multe<\/a>, <a href=\"tre.0\">tre<\/a>",
-          "titolo" : "grave"
-        },
-        {
-          "marko" : "grav.0i",
-          "teksto" : "(ntr)\nEsti grava: <i>sed tio ne gravas!<\/i> <i>ne <b>grav<\/b>as, ne <b>grav<\/b>as, respondis la etulo;<\/i> <i>tio ĉi neniel <b>grav<\/b>as;<\/i> <i>la sumeto ne tre <b>grav<\/b>as;<\/i> <i>por tiuj, kiuj suferis la militon, <b>grav<\/b>as haltigi ĝin.<\/i>",
-          "titolo" : "gravi"
-        },
-        {
-          "marko" : "grav.0igi",
-          "teksto" : "Igi pli grava, prezenti kiel grava: <i>la malfeliĉa virino estas enprofundigita en doloron, […] kiun hieraŭ via ĉeesto ankoraŭ pli<b>grav<\/b>igis;<\/i> <i>la publiko […] per sia konduto <b>grav<\/b>igas aŭ mal<b>grav<\/b>igas la esprimitajn ideojn;<\/i> <i>la diferencon [inter ili] <b>grav<\/b>igas ne nur aparta parolo, sed konkura kredo.<\/i>\n➞ <a href=\"akcent.0i.KOMUNE\">akcenti<\/a>, <a href=\"star.el0igi\">elstarigi<\/a>, <a href=\"emfaz.0i.FIG\">emfazi<\/a>, <a href=\"fort.0igi\">plifortigi<\/a>",
-          "titolo" : "gravigi, pligravigi"
-        },
-        {
-          "marko" : "grav.0eco",
-          "teksto" : "Eco de io grava: <i>al li tiuj figuroj ŝajnis […] havantaj la plej altan <b>grav<\/b>econ;<\/i> <i>pompa parolado pri la <b>grav<\/b>eco de l' sciencoj;<\/i> <i>tute specialan <b>grav<\/b>econ li atribuis al la historio;<\/i> <i>tiu titolo donis al li <b>grav<\/b>econ, kiu kvazaŭ plifortigis lin en liaj altaj oficoj.<\/i>",
-          "titolo" : "graveco"
-        },
-        {
-          "marko" : "grav.0ulo",
-          "teksto" : "Homo grava en iu socia medio pro distinga influo, decidpovo aŭ scio, alta posteno ks: <i>la negoco estis <b>grav<\/b>a kaj tre esperiga, la <b>grav<\/b>uloj interkonsiliĝis en la interna ĉambro;<\/i> <i>multaj <b>grav<\/b>uloj, i.a. pluraj ministroj, venis ĉi tien;<\/i> <i><b>grav<\/b>uloj aŭ eminentuloj, ― preskaŭ ĉiam inter la aŭskultantoj troviĝas unu aŭ pluraj aparte <a href=\"star.el0a\">elstara<\/a>j personoj, kiuj ludas certan rolon en la urbo;<\/i> <i>[iu] denuncis Patrikson kaj lin al iu <b>grav<\/b>ulo en la drogreto;<\/i> <i>el <b>grav<\/b>uloj de la Esperanto-Movado kaj verkistoj, aperis […] Kalocsay kaj Baghy […], Grabowski kaj Kabe […], Hodler, […].<\/i>\n⇒ <a href=\"distin.0ito\">distingito<\/a>, <a href=\"eminen1.0ulo\">eminentulo<\/a> ⇘ <a href=\"estr.0o\">estro<\/a>, <a href=\"kurato.0o.POL\">kuratoro<\/a>, <a href=\"mecena.0o\">mecenato<\/a>, <a href=\"patron.0o\">patrono<\/a>",
-          "titolo" : "gravulo"
-        },
-        {
-          "marko" : "grav.mal0a",
-          "teksto" : "Bagatela, ne meritanta atenton: <i>ili fariĝis kiel herbo de kampo, kiel mal<b>grav<\/b>a verdaĵo;<\/i> <i>trompi lin […] en mal<b>grav<\/b>aj aferoj;<\/i> <i>li havas mienon, kvazaŭ lia trumpetado estas io <b>grav<\/b>a, sed ĝi estas tute mal<b>grav<\/b>a;<\/i> <i>se mi eĉ havos la plej mal<b>grav<\/b>an pozicion, tamen se tio, kion mi faros, estos bona, ĝi ĉiam havos ian valoron;<\/i> <i>malgranda, mal<b>grav<\/b>aspekta dometo.<\/i>\n⇒ <a href=\"bagate.0a\">bagatela<\/a> ➞ <a href=\"banal.0a\">banala<\/a>",
-          "titolo" : "malgrava"
-        },
-        {
-          "marko" : "grav.mal0ajxo",
-          "teksto" : "Ne atentinda afero: <i>gloro, potenco – vanta fumo! mal<b>grav<\/b>aĵo!<\/i> <i>la parolanto ne kapablas distingi mal<b>grav<\/b>aĵon de <b>grav<\/b>aĵo;<\/i> <i>li rapide ekscitiĝas pro mal<b>grav<\/b>aĵoj.<\/i>\n⇒ <a href=\"bagate.0o\">bagatelo<\/a>",
-          "titolo" : "malgravaĵo"
-        },
-        {
-          "marko" : "grav.mal0igi",
-          "teksto" : "(tr)\nIgi malpli grava, rigardi, prezenti kiel ne tiom gravan: <i>tio ne estas menciita por mal<b>grav<\/b>igi [la] signifon;<\/i> <i>la domvendisto, iom embarasita, provas mal<b>grav<\/b>igi la fenomenon: „vi sciu, oni aŭdas tiun bruon nur la unuajn du aŭ tri tagojn“;<\/i> <i>li finis per supera gesto de mal<b>grav<\/b>igo;<\/i> <i>la teknologia evoluo mal<b>grav<\/b>igas distancojn kaj oficialajn strukturojn.<\/i>\n➞ <a href=\"bagate.0igi\">bagateligi<\/a>, <a href=\"redukt.0i.FIG\">redukti<\/a>, <a href=\"relati.0igi\">relativigi<\/a>, <a href=\"taks.sub0i\">subtaksi<\/a>",
-          "titolo" : "malgravigi"
-        },
-        {
-          "marko" : "grav.malpli0igi",
-          "teksto" : "Fari malpli grava: <i>malpli<b>grav<\/b>igi sian kulpon per pento.<\/i> <i>[la] ministro […] en masklisma maniero ne hezitis malpli<b>grav<\/b>igi la okazaĵon deklarante ke „nu, neniu mortis“;<\/i> <i>estas malpermes[ita] vidigi aŭ porti religiajn signojn ene de registaraj konstruaĵoj aŭ lokoj, kie religio estas periferia aŭ malpli<b>grav<\/b>igita en la publika sfero.<\/i>",
-          "titolo" : "malpligravigi"
-        },
-        {
-          "marko" : "grav.vivo0a",
-          "teksto" : "Tre grava en ies vivo, por ies daŭra vivado: <i>la estraro de la banko ne konsideras la aferon viv<b>grav<\/b>a, eĉ se la banko pro tia malzorgemo devos ĉesigi sian funkcion;<\/i> <i>li finfine laboris […] por trovi en tiu laboro iun kontentigan kaj vivo<b>grav<\/b>an;<\/i> <i>li verkis bonegajn artikolojn pri la viv<b>grav<\/b>aj problemoj de la terlaboristoj.<\/i>\n➞ <a href=\"esenc.0a\">esenca<\/a>",
-          "titolo" : "vivgrava, vivograva"
-        }
-      ]
-    }
-  ],
-  "titolo" : "grav\/a",
-  "tradukoj" : [
-    {
-      "lingvo" : {
-        "kodo" : "en",
-        "nomo" : "angla"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: important; <a href=\"grav.0i\">~i<\/a>: matter; <a href=\"grav.0eco\">~eco<\/a>: importance; <a href=\"grav.0ulo\">~ulo<\/a>: VIP; <a href=\"grav.mal0a\">mal~a<\/a>: unimportant; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: trifle, peanut; <a href=\"grav.mal0igi\">mal~igi<\/a>: downplay, understate; <a href=\"grav.vivo0a\">viv~a, vivo~a<\/a>: existential, essential."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "be",
-        "nomo" : "belorusa"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: важны, значны, істотны, сур'ёзны, варты ўвагі; <a href=\"grav.0e\">~e<\/a>: важна, значна, істотна, сур'ёзна; <a href=\"grav.0i\">~i<\/a>: быць важным, значыць; <a href=\"grav.0igi\">~igi, pli~igi<\/a>: надаваць значэньне, падкрэсьліваць важнасьць; <a href=\"grav.0eco\">~eco<\/a>: важнасьць, каштоўнасьць; <a href=\"grav.0ulo\">~ulo<\/a>: важная асоба, ВІП; <a href=\"grav.mal0a\">mal~a<\/a>: няважны, неістотны, нязначны; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: дробязь, драбніца, пусьцяковіна; <a href=\"grav.mal0igi\">mal~igi<\/a>: прыніжаць значэньне, прадстаўляць няважным; <a href=\"grav.malpli0igi\">malpli~igi<\/a>: прымяншаць; <a href=\"grav.vivo0a\">viv~a, vivo~a<\/a>: жыцьцёва важны."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "bg",
-        "nomo" : "bulgara"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: важен, съществен."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "cs",
-        "nomo" : "ĉeĥa"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: důležitý, důležitý, hrubý (vážný), povážlivý, těžký (důležitý), vážný, závažný; <a href=\"grav.0e\">~e<\/a>: důležitě, těžce, vážně; <a href=\"grav.0i\">~i<\/a>: být důležitý; <a href=\"grav.0eco\">~eco<\/a>: důležitost, závažnost; <a href=\"grav.mal0a\">mal~a<\/a>: bezvýznamný, lehký; <a href=\"grav.mal0igi\">mal~igi<\/a>: znevážit."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "zh",
-        "nomo" : "ĉina"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: 重 [zhòng], 有地位 [yǒudìwèi], 重要 [zhōngyào], 要 [yào]; <a href=\"grav.0igi\">~igi, pli~igi<\/a>: 強調指出 [qiángdiàozhǐchū], 注重 [zhùzhòng]; <a href=\"grav.0eco\">~eco<\/a>: 要紧 [yàojǐn], 意函 [yìhán], 輕重 [qīngzhòng], 眷 [juàn], 重要性 [zhòngyàoxìng], 关照 [guānzhào], 涉 [shè]; <a href=\"grav.0ulo\">~ulo<\/a>: 名人 [míngrén]; <a href=\"grav.mal0a\">mal~a<\/a>: 可忽視 [kěhūshì], 无意义 [wúyìyì], 小可 [xiǎokě], 无关紧要 [wúguānjǐnyào], 无几 [wújǐ]; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: 枝節 [zhījié]; <a href=\"grav.mal0igi\">mal~igi<\/a>: 貶低 [biǎndī]; <a href=\"grav.vivo0a\">viv~a, vivo~a<\/a>: 生死攸关 [shēngsǐyōuguān], 极其重要 [jíqízhòngyào], 生活必需 [shēnghuóbìxū], 基本 [jīběn]."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "fr",
-        "nomo" : "franca"
-      },
-      "teksto" : "<a href=\"grav.0a\">~aĵo<\/a>: chose importante; <a href=\"grav.0a\">~a<\/a>: important, grave, gros (important), marquant; <a href=\"grav.0e\">~e<\/a>: gravement; <a href=\"grav.0i\">…ne ~as<\/a>: mais ça ne fait rien, mais peu importe; <a href=\"grav.0i\">~i<\/a>: importer, compter (importer), convenir (de), falloir, être grave, peser (importer); <a href=\"grav.0eco\">~eco<\/a>: gravité, importance; <a href=\"grav.mal0a\">mal~a<\/a>: anodin, bénin, sans importance, insignifiant; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: bagatelle, broutille; <a href=\"grav.mal0igi\">mal~igi<\/a>: minimiser, minorer (l'importance de); <a href=\"grav.malpli0igi\">malpli~igi<\/a>: minimiser (rendre moins important); <a href=\"grav.vivo0a\">viv~a, vivo~a<\/a>: essentiel, existenciel, vital."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "de",
-        "nomo" : "germana"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: wichtig, bedeutend; <a href=\"grav.0e\">~e<\/a>: wichtig, bedeutend, gravierend; <a href=\"grav.0i\">…ne ~as<\/a>: aber das macht nichts; <a href=\"grav.0i\">~i<\/a>: wichtig sein, bedeutend sein; <a href=\"grav.0igi\">~igi, pli~igi<\/a>: verstärken; <a href=\"grav.0eco\">~eco<\/a>: Wichtigkeit, Bedeutung; <a href=\"grav.0ulo\">~ulo<\/a>: wichtige Persönlichkeit, Berühmtheit, Entscheider, Würdenträger; <a href=\"grav.mal0a\">mal~a<\/a>: unwichtig, bedeutungslos; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: Nebensächlichkeit, Bagatelle; <a href=\"grav.mal0igi\">mal~igi<\/a>: herunterspielen, kleinreden, abwinken; <a href=\"grav.malpli0igi\">malpli~igi<\/a>: untertreiben, herunterspielen; <a href=\"grav.vivo0a\">viv~a, vivo~a<\/a>: lebenswichtig, überlebenswichtig, lebensnotwendig, existentiell."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "es",
-        "nomo" : "hispana"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: importante; <a href=\"grav.0i\">~i<\/a>: importar."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "hu",
-        "nomo" : "hungara"
-      },
-      "teksto" : "<a href=\"grav.0a\">~aĵo<\/a>: fontos dolog; <a href=\"grav.0a\">~a<\/a>: fontos, súlyos (átv.); <a href=\"grav.0e\">~e<\/a>: fontosan, súlyosan, komolyan; <a href=\"grav.0i\">…ne ~as<\/a>: de ez egyáltalán nem fontos; <a href=\"grav.0i\">~i<\/a>: fontos; <a href=\"grav.0eco\">~eco<\/a>: fontosság, jelentősség; <a href=\"grav.mal0a\">mal~a<\/a>: lényegtelen, jelentéktelen, bagatell; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: potomság, bagatell dolog, csekélység; <a href=\"grav.malpli0igi\">malpli~igi<\/a>: (el)bagatelizál, lekicsinyel."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "id",
-        "nomo" : "indonezia"
-      },
-      "teksto" : "<a href=\"grav.0a\">~aĵo<\/a>: hal penting; <a href=\"grav.0a\">~a<\/a>: penting; <a href=\"grav.0i\">~i<\/a>: penting; <a href=\"grav.0igi\">~igi, pli~igi<\/a>: mementingkan; <a href=\"grav.0eco\">~eco<\/a>: pentingnya, kepentingan; <a href=\"grav.0ulo\">~ulo<\/a>: orang penting, naratama, VIP; <a href=\"grav.mal0a\">mal~a<\/a>: remeh, sepele; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: hal sepele, hal remeh, tetek bengek; <a href=\"grav.mal0igi\">mal~igi<\/a>: meremehkan; <a href=\"grav.vivo0a\">viv~a, vivo~a<\/a>: esensial, hakiki, vital."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ja",
-        "nomo" : "japana"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: 重要な [じゅうような], 重大な [じゅうだいな], 深刻な [しんこくな]; <a href=\"grav.0e\">~e<\/a>: ひどく, 重く [おもく]; <a href=\"grav.0i\">~i<\/a>: 重大である [じゅうだいである], 重要である [じゅうようである]; <a href=\"grav.0igi\">~igi, pli~igi<\/a>: いっそう重大化する [いっそうじゅうだいかする], より深刻化する [よりしんこくかする]; <a href=\"grav.0eco\">~eco<\/a>: 重要性 [じゅうようせい], 重大さ [じゅうだいさ]; <a href=\"grav.0ulo\">~ulo<\/a>: 重要人物 [じゅうようじんぶつ]; <a href=\"grav.mal0a\">mal~a<\/a>: ささいな, 取るに足りない [とるにたりない]; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: ささいな事 [ささいなこと]; <a href=\"grav.malpli0igi\">malpli~igi<\/a>: 軽く見なす [かるくみなす], 酌量する [しゃくりょうする]."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "nl",
-        "nomo" : "nederlanda"
-      },
-      "teksto" : "<a href=\"grav.0a\">~aĵo<\/a>: iets belangrijks; <a href=\"grav.0a\">~a<\/a>: belangrijk, gewichtig, aanzienlijk; <a href=\"grav.0i\">…ne ~as<\/a>: maar dat is niet erg; <a href=\"grav.0i\">~i<\/a>: belangrijk zijn, gewichtig zijn; <a href=\"grav.0eco\">~eco<\/a>: belangrijkheid, belang, betekenis (belang); <a href=\"grav.mal0a\">mal~a<\/a>: onbelangrijk; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: bagatel, kleinigheid, futiliteit, iets onbelangrijks; <a href=\"grav.malpli0igi\">malpli~igi<\/a>: minimaliseren, bagatelliseren, futiliseren."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "pl",
-        "nomo" : "pola"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: ważny, istotny, znaczny, znaczący, doniosły, serio (pot.); <a href=\"grav.0e\">~e<\/a>: ważnie, istotnie, znacznie, znacząco, doniośle, serio (pot.); <a href=\"grav.0i\">~i<\/a>: być ważnym, być istotnym, być znacznym, być znaczącym, mieć znaczenie, być doniosłe, być serio (pot.); <a href=\"grav.0eco\">~eco<\/a>: waga, istota, znaczenia, doniosłość; <a href=\"grav.mal0a\">mal~a<\/a>: nieważny, nieistotny, nieznaczny, nieznaczący; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: drobiazg, błahostka, bagatela; <a href=\"grav.mal0igi\">mal~igi<\/a>: umniejszać wagę, znaczenie (czegoś), bagatelizować, marginalizować, pozbawiać znaczenia, pozbawiać ważności; <a href=\"grav.malpli0igi\">malpli~igi<\/a>: umniejszać wagę, znaczenie (czegoś), bagatelizować, marginalizować; <a href=\"grav.vivo0a\">viv~a, vivo~a<\/a>: życiowy, egzystencjalny."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "pt",
-        "nomo" : "portugala"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: grave, importante; <a href=\"grav.0e\">~e<\/a>: gravemente; <a href=\"grav.0i\">~i<\/a>: importar (ter valor), ser importante; <a href=\"grav.0eco\">~eco<\/a>: gravidade (adj.), importância (adj.); <a href=\"grav.mal0a\">mal~a<\/a>: sem importância, fútil; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: bagatela; <a href=\"grav.malpli0igi\">malpli~igi<\/a>: atenuar."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ru",
-        "nomo" : "rusa"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: важный, значительный, серьёзный, существенный; <a href=\"grav.0e\">~e<\/a>: важно, значительно, серьёзно; <a href=\"grav.0i\">~i<\/a>: быть важным, иметь значение; <a href=\"grav.0eco\">~eco<\/a>: важность, значительность; <a href=\"grav.mal0a\">mal~a<\/a>: неважный, незначительный, несущественный; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: мелочь, пустяк; <a href=\"grav.malpli0igi\">malpli~igi<\/a>: уменьшить, облегчить."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sk",
-        "nomo" : "slovaka"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: dôležitý, povážlivý, vážny, závažný; <a href=\"grav.0e\">~e<\/a>: dôležito, vážne; <a href=\"grav.0i\">~i<\/a>: byť dôležitý; <a href=\"grav.0eco\">~eco<\/a>: dôležitosť, závažnosť; <a href=\"grav.mal0a\">mal~a<\/a>: bezvýznamný, nedôležitý; <a href=\"grav.mal0igi\">mal~igi<\/a>: znevážiť."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sv",
-        "nomo" : "sveda"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: viktig; <a href=\"grav.0e\">~e<\/a>: viktigt; <a href=\"grav.0i\">~i<\/a>: vara viktig, spela roll; <a href=\"grav.0eco\">~eco<\/a>: viktighet, betydelse; <a href=\"grav.mal0a\">mal~a<\/a>: oviktig, betydelselös."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "bo",
-        "nomo" : "tibeta"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: གལ་ཆེན་པོ་."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "tok",
-        "nomo" : "tokipona"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: suli; <a href=\"grav.0eco\">~eco<\/a>: suli; <a href=\"grav.mal0a\">mal~a<\/a>: suli ala; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: ijo pi suli ala; <a href=\"grav.mal0igi\">mal~igi<\/a>: suli ala e ijo."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "uk",
-        "nomo" : "ukraina"
-      },
-      "teksto" : "<a href=\"grav.0a\">~a<\/a>: важливий, значний, значущий, серйозний, поважний; <a href=\"grav.0e\">~e<\/a>: важливо, серйозно, поважно; <a href=\"grav.0i\">~i<\/a>: мати значення, бути важливим; <a href=\"grav.0igi\">~igi, pli~igi<\/a>: надавати значення, надавативажливості, надаватизначущості, робити важливим, робити значущим; <a href=\"grav.0eco\">~eco<\/a>: важливість, значущість, серйозність; <a href=\"grav.0ulo\">~ulo<\/a>: поважна особа, поважний чин; <a href=\"grav.mal0a\">mal~a<\/a>: неважливий, дрібний, дріб’язковий; <a href=\"grav.mal0ajxo\">mal~aĵo<\/a>: неважлива річ, дріб’язкова справа, дрібниця, дріб’язок; <a href=\"grav.mal0igi\">mal~igi<\/a>: применшувати значення, применшувати вагу."
-    }
-  ]
+  "titolo" : "grav\/a"
 }

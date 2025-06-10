@@ -1,664 +1,1221 @@
 {
+  "blokoj" : [
+    {
+      "derivajhTitola" : {
+        "marko" : "not.0i",
+        "ofc" : "*",
+        "teksto" : "noti"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "(tr)\n1. <a href=\"skrib.0i.signojn\">Skribi<\/a> pri io mallongan memorigan resumon: \n · <ekzemplo><b>not<\/b>u la daton;<\/ekzemplo> \n · <ekzemplo>dika nigra libro, en kiu oni <b>not<\/b>is malaperintajn ŝipojn.<\/ekzemplo>\n\n2. (figure) Priatenti kaj konservi en sia memoro: \n · <ekzemplo>ni petas vin <b>not<\/b>i al vi en la memoro tiun konkludon;<\/ekzemplo> \n · <ekzemplo>la estraro havas konsiderojn subtilajn: malgraŭ ke estas malproksime, ĝi tamen <b>not<\/b>as al si en la cerbo;<\/ekzemplo> \n · <ekzemplo><b>not<\/b>u ke mi venos.<\/ekzemplo>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "note"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "занатаваць, заўважыць, зацеміць, пазначыць, адзначыць"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "br",
+              "nomo" : "bretona"
+            },
+            "teksto" : "notennañ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "zaznamenat, vzít na vědomí, poznačit, poznamenat si"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "1. 記下 [jìxià], 记下 [jìxià], 开价 [kāijià], 開價 [kāijià] 2. 注 [zhù], 註 [zhù]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "noter"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "1. notieren, vermerken 2. merken"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "anotar"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "1. feljegyez, lejegyez 2. megjegyez"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "1. メモする [めもする], 覚書する [おぼえがきする] 2. 記憶に留める [きおくにとどめる], 気に留める [きにとどめる]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "noteren"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "1. notować, robić notatki 2. notować, zanotować"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "anotar"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "сделать заметку, отметить, пометить"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "značiť, zaznačiť"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "записувати, робити нотатки, занотовувати, нотувати"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "not.0o",
+        "ofc" : "*",
+        "teksto" : "noto"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "1. Mallonga enskribo memoriga aŭ komenta: \n · <ekzemplo>fari, konservi <b>not<\/b>ojn pri fakto, parolado, adreso, dato;<\/ekzemplo> \n · <ekzemplo>mallongaj <b>not<\/b>oj komercaj.<\/ekzemplo> \n · <ekzemplo>la diversloke en la kajeroj troviĝantaj <b>not<\/b>oj;<\/ekzemplo> \n · <ekzemplo>presigi <b>not<\/b>ojn pri lingvo internacia.<\/ekzemplo>\n\n2. [MUZ] Skriba signo lokita sur muzika liniaro por montri la altecon kaj daŭron de la tono.\n\na) La sono mem, prezentata per noto<sup>2<\/sup>, en kantado aŭ en muzikila plenumo: \n · <ekzemplo>la fingroj trovu la ekzaktan lokon por ludi ekzaktan <b>not<\/b>on;<\/ekzemplo> \n · <ekzemplo>falsa noto<\/ekzemplo> .\n\nb) (figure) Aparta distingiga eco aŭ nuanco (laŭ noto): \n · <ekzemplo>lia stilo havas tre personan <b>not<\/b>on;<\/ekzemplo> \n · <ekzemplo>tio portis funebran <b>not<\/b>on en la ĝojan feston.<\/ekzemplo>\n\n3. [PED] Oficiale uzata signo por indiki takson de scioj aŭ konduto de lernanto: \n · <ekzemplo>ĉiuj, kiuj havis la <b>not<\/b>on „tre bone“ aŭ „bonege“, ricevis lokon;<\/ekzemplo> \n · <ekzemplo>ricevi bonan <b>not<\/b>on pri matematiko.<\/ekzemplo>\n⇗ <a href=\"poent.0o\">poento<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "af",
+              "nomo" : "afrikansa"
+            },
+            "teksto" : "noot"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sq",
+              "nomo" : "albana"
+            },
+            "teksto" : "shënim"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "am",
+              "nomo" : "amhara"
+            },
+            "teksto" : "ማስታወሻ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "1. note 2. note 3. (school) grade, mark (e.g. at school)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ar",
+              "nomo" : "araba"
+            },
+            "teksto" : "مذكرة"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hy",
+              "nomo" : "armena"
+            },
+            "teksto" : "նշում"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "az",
+              "nomo" : "azerbajĝana"
+            },
+            "teksto" : "qeyd"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "1. нататка, заўвага, зацемка 2. фальшывая нота 2. нота 3. адзнака"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "bn",
+              "nomo" : "bengala"
+            },
+            "teksto" : "নোট"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "my",
+              "nomo" : "birma"
+            },
+            "teksto" : "မှတ်ချက်"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "br",
+              "nomo" : "bretona"
+            },
+            "teksto" : "notenn"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "záznam, zápisek, známka, rys, poznámka, hodnocení, charakter"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "1. 手記 [shǒujì], 手记 [shǒujì], 便条 [biàntiáo], 便條 [biàntiáo], 方便貼 [fāngbiàntiē], 方便贴 [fāngbiàntiē], 備忘錄 [bèiwànglù], 备忘录 [bèiwànglù], 便笺 [biànjiān], 便箋 [biànjiān] 2. 声调 [shēngdiào], 聲調 [shēngdiào] 3. 評分 [píngfēn], 评分 [píngfēn], 比分 [bǐfēn], 成績 [chéngjì], 成绩 [chéngjì]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "da",
+              "nomo" : "dana"
+            },
+            "teksto" : "notat"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "et",
+              "nomo" : "estona"
+            },
+            "teksto" : "märkus"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "eu",
+              "nomo" : "eŭska"
+            },
+            "teksto" : "ohar"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tl",
+              "nomo" : "filipina"
+            },
+            "teksto" : "tala"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "note"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "gl",
+              "nomo" : "galega"
+            },
+            "teksto" : "nota"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "1. Vermerk, Notiz 2.b Note 2. Note 3. Note (z. B. in der Schule), Schulnote"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "gu",
+              "nomo" : "guĝarata"
+            },
+            "teksto" : "નોંધ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ht",
+              "nomo" : "haitia"
+            },
+            "teksto" : "nòt"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ha",
+              "nomo" : "haŭsa"
+            },
+            "teksto" : "bayanin kula"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hi",
+              "nomo" : "hinda"
+            },
+            "teksto" : "नोट"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "nota (de un libro, musical, docente)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "1. feljegyzés, megjegyzés, jegyzet 2. hamis hang 2.a hangjegy 2.b tónus 3. érdemjegy, osztályzat"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ig",
+              "nomo" : "igba"
+            },
+            "teksto" : "dee"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ga",
+              "nomo" : "irlanda"
+            },
+            "teksto" : "nóta"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "is",
+              "nomo" : "islanda"
+            },
+            "teksto" : "minnismiða"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "1. メモ [めも], 覚書 [おぼえがき], 注釈 [ちゅうしゃく] 2. 音符 [おんぷ] 3. (学業の)成績 [せいせき], (学業の)評点 [ひょうてん], (テストの)点数 [てんすう]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "jv",
+              "nomo" : "java"
+            },
+            "teksto" : "cathetan"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "yi",
+              "nomo" : "jida"
+            },
+            "teksto" : "צעטל"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "yo",
+              "nomo" : "joruba"
+            },
+            "teksto" : "akọsilẹ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "kn",
+              "nomo" : "kanara"
+            },
+            "teksto" : "ಟಿಪ್ಪಣಿ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ka",
+              "nomo" : "kartvela"
+            },
+            "teksto" : "შენიშვნა"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "kk",
+              "nomo" : "kazaĥa"
+            },
+            "teksto" : "ескерту"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cy",
+              "nomo" : "kimra"
+            },
+            "teksto" : "nodyn"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ky",
+              "nomo" : "kirgiza"
+            },
+            "teksto" : "Эскертүү"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "km",
+              "nomo" : "kmera"
+            },
+            "teksto" : "ចំណាំ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ko",
+              "nomo" : "korea"
+            },
+            "teksto" : "주의"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "co",
+              "nomo" : "korsika"
+            },
+            "teksto" : "vascia"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "xh",
+              "nomo" : "kosa"
+            },
+            "teksto" : "phawula"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hr",
+              "nomo" : "kroata"
+            },
+            "teksto" : "bilješka"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ku",
+              "nomo" : "kurda"
+            },
+            "teksto" : "not"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "lv",
+              "nomo" : "latva"
+            },
+            "teksto" : "piezīme"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "lo",
+              "nomo" : "laŭa"
+            },
+            "teksto" : "ຫມາຍເຫດ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "lt",
+              "nomo" : "litova"
+            },
+            "teksto" : "pastaba"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mk",
+              "nomo" : "makedona"
+            },
+            "teksto" : "белешка"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mg",
+              "nomo" : "malagasa"
+            },
+            "teksto" : "fanamarihana"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ms",
+              "nomo" : "malaja"
+            },
+            "teksto" : "nota"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ml",
+              "nomo" : "malajalama"
+            },
+            "teksto" : "കുറിപ്പ്"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mt",
+              "nomo" : "malta"
+            },
+            "teksto" : "nota"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mi",
+              "nomo" : "maoria"
+            },
+            "teksto" : "tuhipoka"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mr",
+              "nomo" : "marata"
+            },
+            "teksto" : "टीप"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hmn",
+              "nomo" : "monga"
+            },
+            "teksto" : "daim ntawv"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mn",
+              "nomo" : "mongola"
+            },
+            "teksto" : "тэмдэглэл"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "1. aantekening, noot, notitie 2. valse noot 2.a noot, muzieknoot 2.b noot 3. (school)cijfer, beoordeling (m.n. van leerlingen)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ne",
+              "nomo" : "nepala"
+            },
+            "teksto" : "सूचना"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ny",
+              "nomo" : "njanĝa"
+            },
+            "teksto" : "zindikirani"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fy",
+              "nomo" : "okcidentfrisa"
+            },
+            "teksto" : "noat"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pa",
+              "nomo" : "panĝaba"
+            },
+            "teksto" : "ਨੋਟ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ps",
+              "nomo" : "paŝtua"
+            },
+            "teksto" : "یادښت"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "1. notatka, notka, adnotacja, dopisek, zapis, zapisek 2. fałszywa nuta 2.a nuta 2.b nuta 3. nota, ocena, stopień"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "nota"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "rw",
+              "nomo" : "ruanda"
+            },
+            "teksto" : "icyitonderwa"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "1. заметка, примечание 2. фальшивая нота 2.b нота 2. нота (музыкальная) 3. оценка, отметка"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sm",
+              "nomo" : "samoa"
+            },
+            "teksto" : "tusi"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sd",
+              "nomo" : "sinda"
+            },
+            "teksto" : "نوٽ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "si",
+              "nomo" : "sinhala"
+            },
+            "teksto" : "සටහන"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "záznam, známka (na vysvedčení), poznámka"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sl",
+              "nomo" : "slovena"
+            },
+            "teksto" : "opomba"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "so",
+              "nomo" : "somala"
+            },
+            "teksto" : "qorid"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "st",
+              "nomo" : "sota"
+            },
+            "teksto" : "hlokomela"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "su",
+              "nomo" : "sunda"
+            },
+            "teksto" : "catetan"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sn",
+              "nomo" : "ŝona"
+            },
+            "teksto" : "chitsamba"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tg",
+              "nomo" : "taĝika"
+            },
+            "teksto" : "шарҳ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "th",
+              "nomo" : "taja"
+            },
+            "teksto" : "บันทึก"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ta",
+              "nomo" : "tamila"
+            },
+            "teksto" : "குறிப்பு"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tt",
+              "nomo" : "tatara"
+            },
+            "teksto" : "Тамга"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "te",
+              "nomo" : "telugua"
+            },
+            "teksto" : "గమనిక"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "примітка"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ur",
+              "nomo" : "urdua"
+            },
+            "teksto" : "نوٹ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uz",
+              "nomo" : "uzbeka"
+            },
+            "teksto" : "eslatma"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "vi",
+              "nomo" : "vjetnama"
+            },
+            "teksto" : "ghi"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zu",
+              "nomo" : "zulua"
+            },
+            "teksto" : "inothi"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "not.0oj",
+        "teksto" : "notoj"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "[MUZ] Teksto de muzika verko prezentita per notoj<sup>2<\/sup>: \n · <ekzemplo>ŝi konservis ĉion, kio lin povis rememorigi: la librojn, de li iam legitajn, […] <b>not<\/b>ojn kaj versojn, kiujn li por ŝi transskribis;<\/ekzemplo> \n · <ekzemplo><b>not<\/b>fako en biblioteko.<\/ekzemplo>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "sheet music"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "ноты"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "br",
+              "nomo" : "bretona"
+            },
+            "teksto" : "skrid-sonerezh, kevrollenn"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "樂譜 [yuèpǔ], 乐谱 [yuèpǔ]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "partition"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Noten"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "partitura (composición de notas musicales)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "kotta"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "楽譜 [がくふ]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "bladmuziek, noten"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "partytura, nuty"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "ноты"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "not.pri0o",
+        "teksto" : "prinoto"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "[TIP] Komenta <a href=\"not.0o.memoriga\">noto<\/a> pri iu temo, informo, afero…: \n · <ekzemplo>la rakonto estas skribita el miaj pri<b>not<\/b>oj kaj kun mia propra stilo;<\/ekzemplo> \n · <ekzemplo>pri<b>not<\/b>o al ekspozicio en Centra oficejo de Unesko.<\/ekzemplo>\n➞ <a href=\"glos.0o\">gloso<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "нататка, заўвага, зацемка"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "注释者 [zhùshìzhě], 註釋者 [zhùshìzhě], 詁 [gǔ], 诂 [gǔ], 評論員 [pínglùnyuán], 评论员 [pínglùnyuán], 注 [zhù], 註 [zhù], 注释 [zhùshì], 注釋 [zhùshì], 注释 [zhùshì], 註釋 [zhùshì], 題解 [tíjiě], 题解 [tíjiě]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "note explicative, glose, annotation"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Anmerkung, Kommentar, Stellungnahme"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "notatka, przypis"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "not.bank0o",
+        "teksto" : "banknoto"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "[EKON] (evitinde) <a href=\"bilet.mon0o\">Monbileto<\/a>: \n · <ekzemplo>li […] metis kun nerifuzebla gesto dudolaran bank<b>not<\/b>on en mian manon;<\/ekzemplo> \n · <ekzemplo>li faradis flugludilojn el spesmilaj bank<b>not<\/b>oj, kaj en la lagon li ĵetadis orajn monerojn anstataŭ ŝtonetoj;<\/ekzemplo> \n · <ekzemplo>oni ja diras, ke ĝi signifas novan feliĉon, kiam la bank<b>not<\/b>oj estas novaj.<\/ekzemplo>\n<b>Rim<\/b>: Tiu signifo kiel nacilingva paŭsaĵo estas apenaŭ rilatigebla al noti (memorfiksi). Por registri homonimon ĝi aperas tro malofte kaj ja ekzistas preferebla kaj klara termino „monbileto“. [Wolfram Diestel]"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "not.diplomatia0o",
+        "teksto" : "diplomatia noto"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "[POL] Oficiala diplomatia dokumento, formale avizanta pri problemo en interŝtataj rilatoj (protesto, sciigo pri iu incidento ktp): \n · <ekzemplo>diplomatia <b>not<\/b>o […] direktita de diplomatia misio en la Ministerio de Eksteraj Aferoj.<\/ekzemplo>\n➞ <a href=\"memora.0o\">memorando<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "дыпляматычная нота"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "br",
+              "nomo" : "bretona"
+            },
+            "teksto" : "notenn diplomatel"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "通牒 [tōngdié]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "note diplomatique"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "diplomatische Note"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "diplomáciai jegyzék"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "diplomatieke nota"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "nota dyplomatyczna"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "дипломатичес кая нота"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "not.kurz0o",
+        "teksto" : "kurznoto"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "[EKON] Ĉiutaga fikso de valoro de kurzo en la borso.\n⇒ <a href=\"kvot.0igo\">kvotigo<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "катыроўка (біржавая)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "引用句 [yǐnyòngjù]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Kursstellung, Kursnotierung, Börsenkursnotierung"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "árfolyamjegyzés"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "koersnotering"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "korekta notowań, korekta kursu"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ro",
+              "nomo" : "rumana"
+            },
+            "teksto" : "cotizație bursieră"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "not.pied0i",
+        "teksto" : "piednoti"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "(x)\nKrei piednoton: \n · <ekzemplo>pri personaj nomoj ofte uzataj en ĉi tiu libro mi pied<b>not<\/b>as nur unufoje;<\/ekzemplo> \n · <ekzemplo>ioma pied<b>not<\/b>ado necesas por averaĝaj legantoj.<\/ekzemplo>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "дадаваць зноску"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "annoter (par note en pied de page)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "anmerken (per Fußnote)"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "not.pied0o",
+        "teksto" : "piednoto"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "[TIP] Komenta <a href=\"not.0o.memoriga\">noto<\/a> de skriba verko, kiu aperas en la malsupra, pieda parto de paĝo: \n · <ekzemplo>la nun aĉetebla eldono de 1954 enhavas multajn pied<b>not<\/b>ojn;<\/ekzemplo> \n · <ekzemplo>aperis nur unu pied<b>not<\/b>o sub legantoletero dum ĉi tiuj preskaŭ tri jaroj;<\/ekzemplo> \n · <ekzemplo>(figure) Irako fariĝas nura pied<b>not<\/b>o (negravaĵo) en televidaj novaĵbultenoj, duonkolumna kromaĵo eĉ en „seriozaj“ gazetoj;<\/ekzemplo> \n · <ekzemplo>enhava ĝustigo de Brian plenumita en la teksto, kvankam mi preferus pied<b>not<\/b>igi ĝin.<\/ekzemplo>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "footnote"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "зноска (у тэксьце)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "br",
+              "nomo" : "bretona"
+            },
+            "teksto" : "notenn diaz ar bajenn"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "poznámka pod čarou"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "腳註 [jiǎozhù], 脚注 [jiǎozhù], 尾註 [wěizhù], 尾注 [wěizhù], 腳注 [jiǎozhù], 脚注 [jiǎozhù], 註腳 [zhùjiǎo], 注脚 [zhùjiǎo]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "note de bas de page"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Fußnote"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "nota al pie"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "脚注 [ちゃくちゅう]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "voetnoot"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "przypis, stopka"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "сноска"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "poznámka pod čiarou"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "виноска (в кінці сторінки)"
+          }
+        ]
+      }
+    }
+  ],
   "indekso" : "not",
   "ofc" : "*",
   "radiko" : "not",
-  "subartikoloj" : [
-    {
-      "teksto" : "",
-      "vortoj" : [
-        {
-          "marko" : "not.0i",
-          "ofc" : "*",
-          "teksto" : "(tr)\n1. <a href=\"skrib.0i.signojn\">Skribi<\/a> pri io mallongan memorigan resumon: <i><b>not<\/b>u la daton;<\/i> <i>dika nigra libro, en kiu oni <b>not<\/b>is malaperintajn ŝipojn.<\/i>\n\n2. (figure) Priatenti kaj konservi en sia memoro: <i>ni petas vin <b>not<\/b>i al vi en la memoro tiun konkludon;<\/i> <i>la estraro havas konsiderojn subtilajn: malgraŭ ke estas malproksime, ĝi tamen <b>not<\/b>as al si en la cerbo;<\/i> <i><b>not<\/b>u ke mi venos.<\/i>",
-          "titolo" : "noti"
-        },
-        {
-          "marko" : "not.0o",
-          "ofc" : "*",
-          "teksto" : "1. Mallonga enskribo memoriga aŭ komenta: <i>fari, konservi <b>not<\/b>ojn pri fakto, parolado, adreso, dato;<\/i> <i>mallongaj <b>not<\/b>oj komercaj.<\/i> <i>la diversloke en la kajeroj troviĝantaj <b>not<\/b>oj;<\/i> <i>presigi <b>not<\/b>ojn pri lingvo internacia.<\/i>\n\n2. [MUZ] Skriba signo lokita sur muzika liniaro por montri la altecon kaj daŭron de la tono.\n\na) La sono mem, prezentata per noto<sup>2<\/sup>, en kantado aŭ en muzikila plenumo: <i>la fingroj trovu la ekzaktan lokon por ludi ekzaktan <b>not<\/b>on;<\/i> <i>falsa noto<\/i> .\n\nb) (figure) Aparta distingiga eco aŭ nuanco (laŭ noto): <i>lia stilo havas tre personan <b>not<\/b>on;<\/i> <i>tio portis funebran <b>not<\/b>on en la ĝojan feston.<\/i>\n\n3. [PED] Oficiale uzata signo por indiki takson de scioj aŭ konduto de lernanto: <i>ĉiuj, kiuj havis la <b>not<\/b>on „tre bone“ aŭ „bonege“, ricevis lokon;<\/i> <i>ricevi bonan <b>not<\/b>on pri matematiko.<\/i>\n⇗ <a href=\"poent.0o\">poento<\/a>",
-          "titolo" : "noto"
-        },
-        {
-          "marko" : "not.0oj",
-          "teksto" : "[MUZ] Teksto de muzika verko prezentita per notoj<sup>2<\/sup>: <i>ŝi konservis ĉion, kio lin povis rememorigi: la librojn, de li iam legitajn, […] <b>not<\/b>ojn kaj versojn, kiujn li por ŝi transskribis;<\/i> <i><b>not<\/b>fako en biblioteko.<\/i>",
-          "titolo" : "notoj"
-        },
-        {
-          "marko" : "not.pri0o",
-          "teksto" : "[TIP] Komenta <a href=\"not.0o.memoriga\">noto<\/a> pri iu temo, informo, afero…: <i>la rakonto estas skribita el miaj pri<b>not<\/b>oj kaj kun mia propra stilo;<\/i> <i>pri<b>not<\/b>o al ekspozicio en Centra oficejo de Unesko.<\/i>\n➞ <a href=\"glos.0o\">gloso<\/a>",
-          "titolo" : "prinoto"
-        },
-        {
-          "marko" : "not.bank0o",
-          "teksto" : "[EKON] (evitinde) <a href=\"bilet.mon0o\">Monbileto<\/a>: <i>li […] metis kun nerifuzebla gesto dudolaran bank<b>not<\/b>on en mian manon;<\/i> <i>li faradis flugludilojn el spesmilaj bank<b>not<\/b>oj, kaj en la lagon li ĵetadis orajn monerojn anstataŭ ŝtonetoj;<\/i> <i>oni ja diras, ke ĝi signifas novan feliĉon, kiam la bank<b>not<\/b>oj estas novaj.<\/i>\n<b>Rim<\/b>: Tiu signifo kiel nacilingva paŭsaĵo estas apenaŭ rilatigebla al noti (memorfiksi). Por registri homonimon ĝi aperas tro malofte kaj ja ekzistas preferebla kaj klara termino „monbileto“. [Wolfram Diestel]",
-          "titolo" : "banknoto"
-        },
-        {
-          "marko" : "not.diplomatia0o",
-          "teksto" : "[POL] Oficiala diplomatia dokumento, formale avizanta pri problemo en interŝtataj rilatoj (protesto, sciigo pri iu incidento ktp): <i>diplomatia <b>not<\/b>o […] direktita de diplomatia misio en la Ministerio de Eksteraj Aferoj.<\/i>\n➞ <a href=\"memora.0o\">memorando<\/a>",
-          "titolo" : "diplomatia noto"
-        },
-        {
-          "marko" : "not.kurz0o",
-          "teksto" : "[EKON] Ĉiutaga fikso de valoro de kurzo en la borso.\n⇒ <a href=\"kvot.0igo\">kvotigo<\/a>",
-          "titolo" : "kurznoto"
-        },
-        {
-          "marko" : "not.pied0i",
-          "teksto" : "(x)\nKrei piednoton: <i>pri personaj nomoj ofte uzataj en ĉi tiu libro mi pied<b>not<\/b>as nur unufoje;<\/i> <i>ioma pied<b>not<\/b>ado necesas por averaĝaj legantoj.<\/i>",
-          "titolo" : "piednoti"
-        },
-        {
-          "marko" : "not.pied0o",
-          "teksto" : "[TIP] Komenta <a href=\"not.0o.memoriga\">noto<\/a> de skriba verko, kiu aperas en la malsupra, pieda parto de paĝo: <i>la nun aĉetebla eldono de 1954 enhavas multajn pied<b>not<\/b>ojn;<\/i> <i>aperis nur unu pied<b>not<\/b>o sub legantoletero dum ĉi tiuj preskaŭ tri jaroj;<\/i> <i>(figure) Irako fariĝas nura pied<b>not<\/b>o (negravaĵo) en televidaj novaĵbultenoj, duonkolumna kromaĵo eĉ en „seriozaj“ gazetoj;<\/i> <i>enhava ĝustigo de Brian plenumita en la teksto, kvankam mi preferus pied<b>not<\/b>igi ĝin.<\/i>",
-          "titolo" : "piednoto"
-        }
-      ]
-    }
-  ],
-  "titolo" : "not\/i",
-  "tradukoj" : [
-    {
-      "lingvo" : {
-        "kodo" : "af",
-        "nomo" : "afrikansa"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: noot."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sq",
-        "nomo" : "albana"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: shënim."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "am",
-        "nomo" : "amhara"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: ማስታወሻ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "en",
-        "nomo" : "angla"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: note; <a href=\"not.0o\">~o 1<\/a>: note; <a href=\"not.0o\">~o 2<\/a>: note; <a href=\"not.0o\">~o 3<\/a>: (school) grade, mark (e.g. at school); <a href=\"not.0oj\">~oj<\/a>: sheet music; <a href=\"not.pied0o\">pied~o<\/a>: footnote."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ar",
-        "nomo" : "araba"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: مذكرة."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "hy",
-        "nomo" : "armena"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: նշում."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "az",
-        "nomo" : "azerbajĝana"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: qeyd."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "be",
-        "nomo" : "belorusa"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: адзначыць, пазначыць, зацеміць, заўважыць, занатаваць; <a href=\"not.0o\">~o 1<\/a>: нататка, заўвага, зацемка; <a href=\"not.0o\">falsa ~o<\/a>: фальшывая нота; <a href=\"not.0o\">~o 2<\/a>: нота; <a href=\"not.0o\">~o 3<\/a>: адзнака; <a href=\"not.0oj\">~oj<\/a>: ноты; <a href=\"not.pri0o\">pri~o<\/a>: зацемка, заўвага, нататка; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: дыпляматычная нота; <a href=\"not.kurz0o\">kurz~o<\/a>: катыроўка (біржавая); <a href=\"not.pied0i\">pied~i<\/a>: дадаваць зноску; <a href=\"not.pied0o\">pied~o<\/a>: зноска (у тэксьце)."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "bn",
-        "nomo" : "bengala"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: নোট."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "my",
-        "nomo" : "birma"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: မှတ်ချက်."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "br",
-        "nomo" : "bretona"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: notennañ; <a href=\"not.0o\">~o<\/a>: notenn; <a href=\"not.0oj\">~oj<\/a>: kevrollenn, skrid-sonerezh; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: notenn diplomatel; <a href=\"not.pied0o\">pied~o<\/a>: notenn diaz ar bajenn."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "cs",
-        "nomo" : "ĉeĥa"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: poznamenat si, poznačit, vzít na vědomí, zaznamenat; <a href=\"not.0o\">~o<\/a>: charakter, hodnocení, poznámka, rys, známka, zápisek, záznam; <a href=\"not.pied0o\">pied~o<\/a>: poznámka pod čarou."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "zh",
-        "nomo" : "ĉina"
-      },
-      "teksto" : "<a href=\"not.0i\">~i 1<\/a>: 記下 [jìxià], 记下 [jìxià], 开价 [kāijià], 開價 [kāijià]; <a href=\"not.0i\">~i 2<\/a>: 注 [zhù], 註 [zhù]; <a href=\"not.0o\">~o 1<\/a>: 手記 [shǒujì], 手记 [shǒujì], 便条 [biàntiáo], 便條 [biàntiáo], 方便貼 [fāngbiàntiē], 方便贴 [fāngbiàntiē], 備忘錄 [bèiwànglù], 备忘录 [bèiwànglù], 便笺 [biànjiān], 便箋 [biànjiān]; <a href=\"not.0o\">~o 2<\/a>: 声调 [shēngdiào], 聲調 [shēngdiào]; <a href=\"not.0o\">~o 3<\/a>: 評分 [píngfēn], 评分 [píngfēn], 比分 [bǐfēn], 成績 [chéngjì], 成绩 [chéngjì]; <a href=\"not.0oj\">~oj<\/a>: 乐谱 [yuèpǔ], 樂譜 [yuèpǔ]; <a href=\"not.pri0o\">pri~o<\/a>: 注释者 [zhùshìzhě], 註釋者 [zhùshìzhě], 詁 [gǔ], 诂 [gǔ], 評論員 [pínglùnyuán], 评论员 [pínglùnyuán], 注 [zhù], 註 [zhù], 注释 [zhùshì], 注釋 [zhùshì], 注释 [zhùshì], 註釋 [zhùshì], 題解 [tíjiě], 题解 [tíjiě]; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: 通牒 [tōngdié]; <a href=\"not.kurz0o\">kurz~o<\/a>: 引用句 [yǐnyòngjù]; <a href=\"not.pied0o\">pied~o<\/a>: 注脚 [zhùjiǎo], 註腳 [zhùjiǎo], 脚注 [jiǎozhù], 腳注 [jiǎozhù], 尾注 [wěizhù], 尾註 [wěizhù], 脚注 [jiǎozhù], 腳註 [jiǎozhù]."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "da",
-        "nomo" : "dana"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: notat."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "et",
-        "nomo" : "estona"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: märkus."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "eu",
-        "nomo" : "eŭska"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: ohar."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "tl",
-        "nomo" : "filipina"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: tala."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "fr",
-        "nomo" : "franca"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: noter; <a href=\"not.0o\">~o<\/a>: note; <a href=\"not.0oj\">~oj<\/a>: partition; <a href=\"not.pri0o\">pri~o<\/a>: annotation, glose, note explicative; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: note diplomatique; <a href=\"not.pied0i\">pied~i<\/a>: annoter (par note en pied de page); <a href=\"not.pied0o\">pied~o<\/a>: note de bas de page."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "gl",
-        "nomo" : "galega"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: nota."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "de",
-        "nomo" : "germana"
-      },
-      "teksto" : "<a href=\"not.0i\">~i 1<\/a>: notieren, vermerken; <a href=\"not.0i\">~i 2<\/a>: merken; <a href=\"not.0o\">~o 1<\/a>: Vermerk, Notiz; <a href=\"not.0o\">~o 2.b<\/a>: Note; <a href=\"not.0o\">~o 2<\/a>: Note; <a href=\"not.0o\">~o 3<\/a>: Note (z. B. in der Schule), Schulnote; <a href=\"not.0oj\">~oj<\/a>: Noten; <a href=\"not.pri0o\">pri~o<\/a>: Anmerkung, Kommentar, Stellungnahme; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: diplomatische Note; <a href=\"not.kurz0o\">kurz~o<\/a>: Börsenkursnotierung, Kursnotierung, Kursstellung; <a href=\"not.pied0i\">pied~i<\/a>: anmerken (per Fußnote); <a href=\"not.pied0o\">pied~o<\/a>: Fußnote."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "gu",
-        "nomo" : "guĝarata"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: નોંધ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ht",
-        "nomo" : "haitia"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: nòt."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ha",
-        "nomo" : "haŭsa"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: bayanin kula."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "hi",
-        "nomo" : "hinda"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: नोट."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "es",
-        "nomo" : "hispana"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: anotar; <a href=\"not.0o\">~o<\/a>: nota (de un libro, musical, docente); <a href=\"not.0oj\">~oj<\/a>: partitura (composición de notas musicales); <a href=\"not.pied0o\">pied~o<\/a>: nota al pie."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "hu",
-        "nomo" : "hungara"
-      },
-      "teksto" : "<a href=\"not.0i\">~i 1<\/a>: feljegyez, lejegyez; <a href=\"not.0i\">~i 2<\/a>: megjegyez; <a href=\"not.0o\">~o 1<\/a>: feljegyzés, megjegyzés, jegyzet; <a href=\"not.0o\">falsa ~o<\/a>: hamis hang; <a href=\"not.0o\">~o 2.a<\/a>: hangjegy; <a href=\"not.0o\">~o 2.b<\/a>: tónus; <a href=\"not.0o\">~o 3<\/a>: érdemjegy, osztályzat; <a href=\"not.0oj\">~oj<\/a>: kotta; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: diplomáciai jegyzék; <a href=\"not.kurz0o\">kurz~o<\/a>: árfolyamjegyzés."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ig",
-        "nomo" : "igba"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: dee."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ga",
-        "nomo" : "irlanda"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: nóta."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "is",
-        "nomo" : "islanda"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: minnismiða."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ja",
-        "nomo" : "japana"
-      },
-      "teksto" : "<a href=\"not.0i\">~i 1<\/a>: メモする [めもする], 覚書する [おぼえがきする]; <a href=\"not.0i\">~i 2<\/a>: 記憶に留める [きおくにとどめる], 気に留める [きにとどめる]; <a href=\"not.0o\">~o 1<\/a>: メモ [めも], 覚書 [おぼえがき], 注釈 [ちゅうしゃく]; <a href=\"not.0o\">~o 2<\/a>: 音符 [おんぷ]; <a href=\"not.0o\">~o 3<\/a>: (学業の)成績 [せいせき], (学業の)評点 [ひょうてん], (テストの)点数 [てんすう]; <a href=\"not.0oj\">~oj<\/a>: 楽譜 [がくふ]; <a href=\"not.pied0o\">pied~o<\/a>: 脚注 [ちゃくちゅう]."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "jv",
-        "nomo" : "java"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: cathetan."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "yi",
-        "nomo" : "jida"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: צעטל."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "yo",
-        "nomo" : "joruba"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: akọsilẹ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "kn",
-        "nomo" : "kanara"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: ಟಿಪ್ಪಣಿ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ka",
-        "nomo" : "kartvela"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: შენიშვნა."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "kk",
-        "nomo" : "kazaĥa"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: ескерту."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "cy",
-        "nomo" : "kimra"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: nodyn."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ky",
-        "nomo" : "kirgiza"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: Эскертүү."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "km",
-        "nomo" : "kmera"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: ចំណាំ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ko",
-        "nomo" : "korea"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: 주의."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "co",
-        "nomo" : "korsika"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: vascia."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "xh",
-        "nomo" : "kosa"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: phawula."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "hr",
-        "nomo" : "kroata"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: bilješka."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ku",
-        "nomo" : "kurda"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: not."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "lv",
-        "nomo" : "latva"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: piezīme."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "lo",
-        "nomo" : "laŭa"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: ຫມາຍເຫດ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "lt",
-        "nomo" : "litova"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: pastaba."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "mk",
-        "nomo" : "makedona"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: белешка."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "mg",
-        "nomo" : "malagasa"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: fanamarihana."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ms",
-        "nomo" : "malaja"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: nota."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ml",
-        "nomo" : "malajalama"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: കുറിപ്പ്."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "mt",
-        "nomo" : "malta"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: nota."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "mi",
-        "nomo" : "maoria"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: tuhipoka."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "mr",
-        "nomo" : "marata"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: टीप."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "hmn",
-        "nomo" : "monga"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: daim ntawv."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "mn",
-        "nomo" : "mongola"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: тэмдэглэл."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "nl",
-        "nomo" : "nederlanda"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: noteren; <a href=\"not.0o\">~o 1<\/a>: aantekening, noot, notitie; <a href=\"not.0o\">falsa ~o<\/a>: valse noot; <a href=\"not.0o\">~o 2.a<\/a>: noot, muzieknoot; <a href=\"not.0o\">~o 2.b<\/a>: noot; <a href=\"not.0o\">~o 3<\/a>: (school)cijfer, beoordeling (m.n. van leerlingen); <a href=\"not.0oj\">~oj<\/a>: noten, bladmuziek; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: diplomatieke nota; <a href=\"not.kurz0o\">kurz~o<\/a>: koersnotering; <a href=\"not.pied0o\">pied~o<\/a>: voetnoot."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ne",
-        "nomo" : "nepala"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: सूचना."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ny",
-        "nomo" : "njanĝa"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: zindikirani."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "fy",
-        "nomo" : "okcidentfrisa"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: noat."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "pa",
-        "nomo" : "panĝaba"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: ਨੋਟ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ps",
-        "nomo" : "paŝtua"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: یادښت."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "pl",
-        "nomo" : "pola"
-      },
-      "teksto" : "<a href=\"not.0i\">~i 1<\/a>: notować, robić notatki; <a href=\"not.0i\">~i 2<\/a>: notować, zanotować; <a href=\"not.0o\">~o 1<\/a>: notatka, notka, adnotacja, dopisek, zapis, zapisek; <a href=\"not.0o\">falsa ~o<\/a>: fałszywa nuta; <a href=\"not.0o\">~o 2.a<\/a>: nuta; <a href=\"not.0o\">~o 2.b<\/a>: nuta; <a href=\"not.0o\">~o 3<\/a>: nota, ocena, stopień; <a href=\"not.0oj\">~oj<\/a>: nuty, partytura; <a href=\"not.pri0o\">pri~o<\/a>: przypis, notatka; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: nota dyplomatyczna; <a href=\"not.kurz0o\">kurz~o<\/a>: korekta kursu, korekta notowań; <a href=\"not.pied0o\">pied~o<\/a>: stopka, przypis."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "pt",
-        "nomo" : "portugala"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: anotar; <a href=\"not.0o\">~o<\/a>: nota."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "rw",
-        "nomo" : "ruanda"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: icyitonderwa."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ro",
-        "nomo" : "rumana"
-      },
-      "teksto" : "<a href=\"not.kurz0o\">kurz~o<\/a>: cotizație bursieră."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ru",
-        "nomo" : "rusa"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: пометить, отметить, сделать заметку; <a href=\"not.0o\">~o 1<\/a>: заметка, примечание; <a href=\"not.0o\">falsa ~o<\/a>: фальшивая нота; <a href=\"not.0o\">~o 2.b<\/a>: нота; <a href=\"not.0o\">~o 2<\/a>: нота (музыкальная); <a href=\"not.0o\">~o 3<\/a>: оценка, отметка; <a href=\"not.0oj\">~oj<\/a>: ноты; <a href=\"not.diplomatia0o\">diplomatia ~o<\/a>: дипломатичес кая нота; <a href=\"not.pied0o\">pied~o<\/a>: сноска."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sm",
-        "nomo" : "samoa"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: tusi."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sd",
-        "nomo" : "sinda"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: نوٽ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "si",
-        "nomo" : "sinhala"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: සටහන."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sk",
-        "nomo" : "slovaka"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: zaznačiť, značiť; <a href=\"not.0o\">~o<\/a>: poznámka, známka (na vysvedčení), záznam; <a href=\"not.pied0o\">pied~o<\/a>: poznámka pod čiarou."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sl",
-        "nomo" : "slovena"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: opomba."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "so",
-        "nomo" : "somala"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: qorid."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "st",
-        "nomo" : "sota"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: hlokomela."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "su",
-        "nomo" : "sunda"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: catetan."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sn",
-        "nomo" : "ŝona"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: chitsamba."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "tg",
-        "nomo" : "taĝika"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: шарҳ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "th",
-        "nomo" : "taja"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: บันทึก."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ta",
-        "nomo" : "tamila"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: குறிப்பு."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "tt",
-        "nomo" : "tatara"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: Тамга."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "te",
-        "nomo" : "telugua"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: గమనిక."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "uk",
-        "nomo" : "ukraina"
-      },
-      "teksto" : "<a href=\"not.0i\">~i<\/a>: нотувати, занотовувати, робити нотатки, записувати; <a href=\"not.0o\">~o<\/a>: примітка; <a href=\"not.pied0o\">pied~o<\/a>: виноска (в кінці сторінки)."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ur",
-        "nomo" : "urdua"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: نوٹ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "uz",
-        "nomo" : "uzbeka"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: eslatma."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "vi",
-        "nomo" : "vjetnama"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: ghi."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "zu",
-        "nomo" : "zulua"
-      },
-      "teksto" : "<a href=\"not.0o\">~o<\/a>: inothi."
-    }
-  ]
+  "titolo" : "not\/i"
 }

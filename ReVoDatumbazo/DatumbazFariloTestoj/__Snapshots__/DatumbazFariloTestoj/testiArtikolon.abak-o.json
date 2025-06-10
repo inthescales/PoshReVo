@@ -1,201 +1,206 @@
 {
-  "indekso" : "abak",
-  "radiko" : "abak",
-  "subartikoloj" : [
+  "blokoj" : [
     {
-      "teksto" : "",
-      "vortoj" : [
-        {
-          "marko" : "abak.0o",
-          "teksto" : "1. [ARKI] Supera plata parto de kolona <a href=\"kapite.0o\">kapitelo<\/a>.\n\n2. [MAT]<a href=\"kalkul.0ilo\">kalkulilo<\/a> por plenumi aritmetikajn operaciojn, konsistanta ĉefe el buletoj ŝoveblaj sur stangetoj: <i>vi mispuŝas globetojn de via <b>abak<\/b>o;<\/i> <i>en sia animo li restis ĉeflibrotenisto, kaj nun al li mankis <b>abak<\/b>o.<\/i>\n⇘ <a href=\"soroban.0o\">sorobano<\/a>\n\n3. [MAT]Grafikaĵo aŭ tabelo, uzata por anstataŭi kalkulon en la solvo de kelkaj matematikaj aŭ teĥnikaj problemoj.",
-          "titolo" : "abako"
-        }
-      ]
+      "derivajhTitola" : {
+        "marko" : "abak.0o",
+        "teksto" : "abako"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "1. [ARKI] Supera plata parto de kolona <a href=\"kapite.0o\">kapitelo<\/a>.\n\n2. [MAT]<a href=\"kalkul.0ilo\">kalkulilo<\/a> por plenumi aritmetikajn operaciojn, konsistanta ĉefe el buletoj ŝoveblaj sur stangetoj: \n · <ekzemplo>vi mispuŝas globetojn de via <b>abak<\/b>o;<\/ekzemplo> \n · <ekzemplo>en sia animo li restis ĉeflibrotenisto, kaj nun al li mankis <b>abak<\/b>o.<\/ekzemplo>\n⇘ <a href=\"soroban.0o\">sorobano<\/a>\n\n3. [MAT]Grafikaĵo aŭ tabelo, uzata por anstataŭi kalkulon en la solvo de kelkaj matematikaj aŭ teĥnikaj problemoj."
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "1. abacus 2. abacus, calculating frame 3. nomogram, chart"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "1. абак, абака 2. лічыльнікі 3. намаграма, матэматычная табліца"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "bg",
+              "nomo" : "bulgara"
+            },
+            "teksto" : "абакус"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "nomogram, abak"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "算盤 [suànpán], 算盘 [suànpán]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "da",
+              "nomo" : "dana"
+            },
+            "teksto" : "1. abacus 2. regnebræt, kugleramme 3. nomogram"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fi",
+              "nomo" : "finna"
+            },
+            "teksto" : "1. abakus 2. helmitaulu 3. nomogrammi, laskutaulukko"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "1. abaque (architecture) 2. abaque (boulier), boulier 3. nomogramme, abaque (nomogramme), table (nomogramme)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "1. Säulenplatte, Kapitelldeckplatte 2. Rechenbrett, Abakus 3. Rechentafel"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "el",
+              "nomo" : "greka"
+            },
+            "teksto" : "άβαξ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "he",
+              "nomo" : "hebrea"
+            },
+            "teksto" : "חשבוניה"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "ábaco"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "1. abakusz, fejlemez (oszlopfőn) 2. abakusz, számológép 3. nomogram, számolótábla"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "it",
+              "nomo" : "itala"
+            },
+            "teksto" : "1. abaco 2. abaco, pallottoliere 3. abaco, nomogramma, nomografo"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "1. 冠板 [かむりいた] 2. 計算盤 [けいさんばん], そろばん"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ca",
+              "nomo" : "kataluna"
+            },
+            "teksto" : "1. àbac 2. àbac 3. nomograma, àbac, gràfic"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hr",
+              "nomo" : "kroata"
+            },
+            "teksto" : "1. abak 2. abak"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "1. abacus 2. abacus, telraam 3. abacus"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fa",
+              "nomo" : "persa"
+            },
+            "teksto" : "1. سرستونی 2. چتکه, چرتکه 3. دستورنگار, نوموگرام"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "1. abakus, abak, płyta głowicowa (kolumny) 2. abakus, liczydło, tabliczka Pitagorasa 3. nomogram"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "1. ábaco 2. ábaco 3. ábaco"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "1. абака 2. счёты 3. номограмма, математические таблицы"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "guľkové počítadlo, guľkové počítadlo, abakus 1. abakus 2. počítadlo (guličkové) 3. matematická tabuľka"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "th",
+              "nomo" : "taja"
+            },
+            "teksto" : "ลูกคิด"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tr",
+              "nomo" : "turka"
+            },
+            "teksto" : "abaküs"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "абак"
+          }
+        ]
+      }
     }
   ],
-  "titolo" : "abak\/o",
-  "tradukoj" : [
-    {
-      "lingvo" : {
-        "kodo" : "en",
-        "nomo" : "angla"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abacus; <a href=\"abak.0o\">~o 2<\/a>: abacus, calculating frame; <a href=\"abak.0o\">~o 3<\/a>: nomogram, chart."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "be",
-        "nomo" : "belorusa"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: абак, абака; <a href=\"abak.0o\">~o 2<\/a>: лічыльнікі; <a href=\"abak.0o\">~o 3<\/a>: намаграма, матэматычная табліца."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "bg",
-        "nomo" : "bulgara"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o<\/a>: абакус."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "cs",
-        "nomo" : "ĉeĥa"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o<\/a>: abak, nomogram."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "zh",
-        "nomo" : "ĉina"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o<\/a>: 算盘 [suànpán], 算盤 [suànpán]."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "da",
-        "nomo" : "dana"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abacus; <a href=\"abak.0o\">~o 2<\/a>: regnebræt, kugleramme; <a href=\"abak.0o\">~o 3<\/a>: nomogram."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "fi",
-        "nomo" : "finna"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abakus; <a href=\"abak.0o\">~o 2<\/a>: helmitaulu; <a href=\"abak.0o\">~o 3<\/a>: nomogrammi, laskutaulukko."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "fr",
-        "nomo" : "franca"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abaque (architecture); <a href=\"abak.0o\">~o 2<\/a>: abaque (boulier), boulier; <a href=\"abak.0o\">~o 3<\/a>: nomogramme, abaque (nomogramme), table (nomogramme)."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "de",
-        "nomo" : "germana"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: Säulenplatte, Kapitelldeckplatte; <a href=\"abak.0o\">~o 2<\/a>: Rechenbrett, Abakus; <a href=\"abak.0o\">~o 3<\/a>: Rechentafel."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "el",
-        "nomo" : "greka"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o<\/a>: άβαξ."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "he",
-        "nomo" : "hebrea"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o<\/a>: חשבוניה."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "es",
-        "nomo" : "hispana"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o<\/a>: ábaco."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "hu",
-        "nomo" : "hungara"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abakusz, fejlemez (oszlopfőn); <a href=\"abak.0o\">~o 2<\/a>: abakusz, számológép; <a href=\"abak.0o\">~o 3<\/a>: nomogram, számolótábla."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "it",
-        "nomo" : "itala"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abaco; <a href=\"abak.0o\">~o 2<\/a>: abaco, pallottoliere; <a href=\"abak.0o\">~o 3<\/a>: abaco, nomogramma, nomografo."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ja",
-        "nomo" : "japana"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: 冠板 [かむりいた]; <a href=\"abak.0o\">~o 2<\/a>: 計算盤 [けいさんばん], そろばん."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ca",
-        "nomo" : "kataluna"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: àbac; <a href=\"abak.0o\">~o 2<\/a>: àbac; <a href=\"abak.0o\">~o 3<\/a>: nomograma, àbac, gràfic."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "hr",
-        "nomo" : "kroata"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abak; <a href=\"abak.0o\">~o 2<\/a>: abak."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "nl",
-        "nomo" : "nederlanda"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abacus; <a href=\"abak.0o\">~o 2<\/a>: abacus, telraam; <a href=\"abak.0o\">~o 3<\/a>: abacus."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "fa",
-        "nomo" : "persa"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: سرستونی; <a href=\"abak.0o\">~o 2<\/a>: چتکه, چرتکه; <a href=\"abak.0o\">~o 3<\/a>: دستورنگار, نوموگرام."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "pl",
-        "nomo" : "pola"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abakus, abak, płyta głowicowa (kolumny); <a href=\"abak.0o\">~o 2<\/a>: abakus, liczydło, tabliczka Pitagorasa; <a href=\"abak.0o\">~o 3<\/a>: nomogram."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "pt",
-        "nomo" : "portugala"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: ábaco; <a href=\"abak.0o\">~o 2<\/a>: ábaco; <a href=\"abak.0o\">~o 3<\/a>: ábaco."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "ru",
-        "nomo" : "rusa"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: абака; <a href=\"abak.0o\">~o 2<\/a>: счёты; <a href=\"abak.0o\">~o 3<\/a>: номограмма, математические таблицы."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "sk",
-        "nomo" : "slovaka"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o 1<\/a>: abakus; <a href=\"abak.0o\">~o 2<\/a>: počítadlo (guličkové); <a href=\"abak.0o\">~o 3<\/a>: matematická tabuľka; <a href=\"abak.0o\">~o<\/a>: guľkové počítadlo, guľkové počítadlo, abakus."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "th",
-        "nomo" : "taja"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o<\/a>: ลูกคิด."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "tr",
-        "nomo" : "turka"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o<\/a>: abaküs."
-    },
-    {
-      "lingvo" : {
-        "kodo" : "uk",
-        "nomo" : "ukraina"
-      },
-      "teksto" : "<a href=\"abak.0o\">~o<\/a>: абак."
-    }
-  ]
+  "indekso" : "abak",
+  "radiko" : "abak",
+  "titolo" : "abak\/o"
 }
