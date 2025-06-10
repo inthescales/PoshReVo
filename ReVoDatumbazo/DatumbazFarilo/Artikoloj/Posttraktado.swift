@@ -41,17 +41,6 @@ enum Posttraktado {
 	}
 }
 
-private extension Vorto {
-	func kopio(teksto: String) -> Vorto {
-		return Vorto(
-			titolo: self.titolo,
-			teksto: teksto,
-			marko: self.marko,
-			ofc: self.ofc
-		)
-	}
-}
-
 private extension Artikolo {
 	func kopio(blokoj: [ArtikolBloko]) -> Artikolo {
 		return Artikolo(

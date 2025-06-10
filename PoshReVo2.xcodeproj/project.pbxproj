@@ -32,12 +32,7 @@
 		00B27B282DC6B77A00526F82 /* UzantDatumaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */; };
 		00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */; };
 		00B27B2D2DC8165A00526F82 /* ArtikolTitoloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */; };
-		00B27B2F2DC8188800526F82 /* DerivajhoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B2E2DC8188800526F82 /* DerivajhoChelo.swift */; };
-		00B27B312DC81C0400526F82 /* ArtikolTekstoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B302DC81C0400526F82 /* ArtikolTekstoChelo.swift */; };
 		00B27B332DC8212C00526F82 /* TekstAtributoHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */; };
-		00B27B372DCAC35C00526F82 /* TradukojKapoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B362DCAC35C00526F82 /* TradukojKapoView.swift */; };
-		00B27B392DCAC42300526F82 /* TradukojPiedoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B382DCAC42300526F82 /* TradukojPiedoView.swift */; };
-		00B27B3B2DCBBC6600526F82 /* TradukoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3A2DCBBC6600526F82 /* TradukoChelo.swift */; };
 		00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3C2DCC040800526F82 /* Avizoj.swift */; };
 		00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */; };
 		00B27B442DCD281C00526F82 /* Konservitajho.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B432DCD281C00526F82 /* Konservitajho.swift */; };
@@ -102,12 +97,7 @@
 		00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumaro.swift; sourceTree = "<group>"; };
 		00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikoloViewController.swift; sourceTree = "<group>"; };
 		00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolTitoloView.swift; sourceTree = "<group>"; };
-		00B27B2E2DC8188800526F82 /* DerivajhoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerivajhoChelo.swift; sourceTree = "<group>"; };
-		00B27B302DC81C0400526F82 /* ArtikolTekstoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolTekstoChelo.swift; sourceTree = "<group>"; };
 		00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstAtributoHelpiloj.swift; sourceTree = "<group>"; };
-		00B27B362DCAC35C00526F82 /* TradukojKapoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukojKapoView.swift; sourceTree = "<group>"; };
-		00B27B382DCAC42300526F82 /* TradukojPiedoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukojPiedoView.swift; sourceTree = "<group>"; };
-		00B27B3A2DCBBC6600526F82 /* TradukoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukoChelo.swift; sourceTree = "<group>"; };
 		00B27B3C2DCC040800526F82 /* Avizoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avizoj.swift; sourceTree = "<group>"; };
 		00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriaViewController.swift; sourceTree = "<group>"; };
 		00B27B432DCD281C00526F82 /* Konservitajho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Konservitajho.swift; sourceTree = "<group>"; };
@@ -260,11 +250,6 @@
 				00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */,
 				00B27B762DF74E4F00526F82 /* Cheloj */,
 				00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */,
-				00B27B2E2DC8188800526F82 /* DerivajhoChelo.swift */,
-				00B27B302DC81C0400526F82 /* ArtikolTekstoChelo.swift */,
-				00B27B362DCAC35C00526F82 /* TradukojKapoView.swift */,
-				00B27B382DCAC42300526F82 /* TradukojPiedoView.swift */,
-				00B27B3A2DCBBC6600526F82 /* TradukoChelo.swift */,
 			);
 			path = Artikoloj;
 			sourceTree = "<group>";
@@ -482,7 +467,6 @@
 				00B27B0F2DC2648200526F82 /* LingvoElektiloViewController.swift in Sources */,
 				00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */,
 				00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */,
-				00B27B312DC81C0400526F82 /* ArtikolTekstoChelo.swift in Sources */,
 				00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */,
 				00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */,
 				00B27B442DCD281C00526F82 /* Konservitajho.swift in Sources */,
@@ -496,7 +480,6 @@
 				00B27B522DEA3ED300526F82 /* ShovMenuoViewController.swift in Sources */,
 				000DA6FB2D90898C0026CBA0 /* SerchiloView.swift in Sources */,
 				000DA6FF2D9099670026CBA0 /* SurkoloraButton.swift in Sources */,
-				00B27B392DCAC42300526F82 /* TradukojPiedoView.swift in Sources */,
 				00B27B4D2DCE792C00526F82 /* AgordojViewController.swift in Sources */,
 				00B27B132DC2650800526F82 /* LingvoListoViewController.swift in Sources */,
 				00B27B472DCE636400526F82 /* Vortlistero.swift in Sources */,
@@ -507,9 +490,7 @@
 				00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* AranghHelpiloj.swift in Sources */,
 				000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */,
-				00B27B372DCAC35C00526F82 /* TradukojKapoView.swift in Sources */,
 				00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */,
-				00B27B2F2DC8188800526F82 /* DerivajhoChelo.swift in Sources */,
 				00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */,
 				00B27B692DF209EC00526F82 /* Listero.swift in Sources */,
 				00B27B2D2DC8165A00526F82 /* ArtikolTitoloView.swift in Sources */,
@@ -523,7 +504,6 @@
 				00B27B7C2DF751FE00526F82 /* TradukaroChelo.swift in Sources */,
 				00B27B332DC8212C00526F82 /* TekstAtributoHelpiloj.swift in Sources */,
 				00B27B282DC6B77A00526F82 /* UzantDatumaro.swift in Sources */,
-				00B27B3B2DCBBC6600526F82 /* TradukoChelo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
