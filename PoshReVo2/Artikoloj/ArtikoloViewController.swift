@@ -40,6 +40,8 @@ final class ArtikoloViewController: UIViewController {
 		let tabelo = UITableView()
 		tabelo.delegate = self
 		tabelo.dataSource = self
+		tabelo.rowHeight = UITableView.automaticDimension
+		tabelo.estimatedRowHeight = 100
 		tabelo.register(
 			DerivajhTitoloChelo.self,
 			forCellReuseIdentifier: Konstantoj.derivajhTitoloIdentigilo
