@@ -32,6 +32,7 @@ enum ArtikolTeksto {
 		var rezulto = ""
 		var komenca = nombro
 		
+		// TODO: Ne funkcias. Riparu, kaj aldonu teston
 		for j in 0..<romiaj.count {
 			let litero = romiaj[j]
 			let arabaSumo = arabaj[j]

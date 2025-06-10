@@ -12,6 +12,7 @@ enum TekstAtributoHelpiloj {
 		case grasKursiva
 		case supera
 		case suba
+		case ekzemplo
 	}
 	
 	/// Kazo de tekstatributo aldonota al ĉeno
@@ -25,7 +26,7 @@ enum TekstAtributoHelpiloj {
 	private static func kreiAtributojn(por teksto: String) -> [Atributo] {
 		var atributoj: [Atributo] = []
 		
-		let regesp = try! NSRegularExpression(pattern: "<(/?([ikbga]|sup|sub|frm))( (href|am)=\"(.*?)\")?>")
+		let regesp = try! NSRegularExpression(pattern: "<(/?([ikbga]|sup|sub|frm|ekzemplo))( (href|am)=\"(.*?)\")?>")
 		let trovajhoj = regesp.matches(in: teksto, range: NSRange(teksto.startIndex..., in: teksto))
 		
 		var enangulajSignoj = 0 // Ni ignoru signojn ene de anguloj kiam ni kalkulas atributo-lokojn
@@ -52,6 +53,8 @@ enum TekstAtributoHelpiloj {
 						let ligCelo = String(teksto[Range(ligLoko, in: teksto)!])
 						staplo.append((.ligo(celo: ligCelo), loko))
 					}
+				case "ekzemplo":
+					staplo.append((.ekzemplo, loko))
 				default:
 					break
 				}
@@ -79,7 +82,7 @@ enum TekstAtributoHelpiloj {
 	/// Forigi la HTML kodojn el la teksto, por ke ĝi aperu nude
 	static func forigiAngulojn(teksto: String) -> String {
 		let regesp = try! NSRegularExpression(
-			pattern: "<(/?([ikbga]|sup|sub|frm))( (href|am)=\"(.*?)\")?>"
+			pattern: "<(/?([ikbga]|sup|sub|frm|ekzemplo))( (href|am)=\"(.*?)\")?>"
 		)
 		return regesp.stringByReplacingMatches(
 			in: teksto,
@@ -161,6 +164,18 @@ enum TekstAtributoHelpiloj {
 					value: -2, // TODO: Kial "-2"?
 					range: regiono
 				)
+			case .ekzemplo:
+				atributaTeksto.addAttribute(
+					.font,
+					value: kursivaStilo,
+					range: regiono
+				)
+				atributaTeksto.addAttribute(
+					.foregroundColor,
+					value: stilo.ligilo,
+					range: regiono
+				)
+				
 			case .ligo:
 				// Ligoj aldoniĝos aliloke
 				break

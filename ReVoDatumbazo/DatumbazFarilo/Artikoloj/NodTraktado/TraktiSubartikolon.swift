@@ -1,6 +1,6 @@
 extension ArboAnalizilo {
 	static func trakti(subartikolon subartikolo: ArtikolNodo, numero: Int, stato: Stato) {
-		stato.artikolFabriko.blokoj.append(.subartikolTitola(teksto: ArtikolTeksto.romajCiferoj(por: numero) + "."))
+		stato.artikolFabriko.blokoj.append(.subartikolTitola(teksto: ArtikolTeksto.romajCiferoj(por: numero + 1) + "."))
 
 		var teksto = ""
 		

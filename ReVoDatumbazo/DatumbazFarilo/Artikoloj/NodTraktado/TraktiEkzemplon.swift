@@ -53,6 +53,6 @@ extension ArboAnalizilo {
 				assert(false, "Neatendita filo")
 			}
 		}
-		return "<i>" + teksto.kunpremi().tondi() + "</i>"
+		return "\n · <ekzemplo>" + teksto.kunpremi().tondi() + "</ekzemplo>"
 	}
 }
