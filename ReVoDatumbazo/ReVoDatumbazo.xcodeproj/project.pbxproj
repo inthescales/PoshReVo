@@ -236,6 +236,9 @@
 		00B27B832DF8F4F700526F82 /* Traduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B822DF8F4F700526F82 /* Traduko.swift */; };
 		00B27B842DF8F4F700526F82 /* Traduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B822DF8F4F700526F82 /* Traduko.swift */; };
 		00B27B852DF8F4F700526F82 /* Traduko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B822DF8F4F700526F82 /* Traduko.swift */; };
+		00B27B872DFB757900526F82 /* BlokAkumulilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B862DFB757900526F82 /* BlokAkumulilo.swift */; };
+		00B27B882DFB757900526F82 /* BlokAkumulilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B862DFB757900526F82 /* BlokAkumulilo.swift */; };
+		00B27B892DFB757900526F82 /* BlokAkumulilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B862DFB757900526F82 /* BlokAkumulilo.swift */; };
 		00B297192D650F5100264431 /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		00B2971A2D6511CA00264431 /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		00B2971B2D65122B00264431 /* Artikolo+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+Datumbazo.swift */; };
@@ -438,6 +441,7 @@
 		00B27B6E2DF38FB800526F82 /* Artikolo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artikolo.swift; sourceTree = "<group>"; };
 		00B27B702DF3905A00526F82 /* ArtikolBloko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolBloko.swift; sourceTree = "<group>"; };
 		00B27B822DF8F4F700526F82 /* Traduko.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Traduko.swift; sourceTree = "<group>"; };
+		00B27B862DFB757900526F82 /* BlokAkumulilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlokAkumulilo.swift; sourceTree = "<group>"; };
 		00B2972D2D65534600264431 /* Stilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stilo.swift; sourceTree = "<group>"; };
 		00B297312D6556EF00264431 /* Mallongigo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mallongigo.swift; sourceTree = "<group>"; };
 		00B2973A2D6625A300264431 /* Fako.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fako.swift; sourceTree = "<group>"; };
@@ -649,6 +653,7 @@
 				0099FC112D65058C0033EC11 /* ArtikolAnalizilo.swift */,
 				0099FC122D65058C0033EC11 /* Artikolaro.swift */,
 				0099FC132D65058C0033EC11 /* ArtikolKonvertilo.swift */,
+				00B27B862DFB757900526F82 /* BlokAkumulilo.swift */,
 				0099FC142D65058C0033EC11 /* Posttraktado.swift */,
 			);
 			path = Artikoloj;
@@ -1076,6 +1081,7 @@
 				007983722D67C6B60021FD4C /* SerchRezulto.swift in Sources */,
 				00B27B832DF8F4F700526F82 /* Traduko.swift in Sources */,
 				000DA6C22D8DD3E00026CBA0 /* ReVoDatumbazo.swift in Sources */,
+				00B27B872DFB757900526F82 /* BlokAkumulilo.swift in Sources */,
 				003657142309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1104,6 +1110,7 @@
 				0099FC382D65058C0033EC11 /* TraktiAltigitan.swift in Sources */,
 				0099FC522D65058C0033EC11 /* TraktiReferencGrupon.swift in Sources */,
 				0099FC392D65058C0033EC11 /* TraktiArtikolon.swift in Sources */,
+				00B27B882DFB757900526F82 /* BlokAkumulilo.swift in Sources */,
 				0099FC3A2D65058C0033EC11 /* TraktiAutoron.swift in Sources */,
 				0099FC4C2D65058C0033EC11 /* TraktiMisstilan.swift in Sources */,
 				0099FC642D65058C0033EC11 /* ArboAnalizilo.swift in Sources */,
@@ -1266,6 +1273,7 @@
 				0099FD1A2D65068E0033EC11 /* TraktiKursivan.swift in Sources */,
 				0099FD1B2D65068E0033EC11 /* TraktiSencReferencon.swift in Sources */,
 				0099FD1C2D65068E0033EC11 /* TraktiTrastrekitan.swift in Sources */,
+				00B27B892DFB757900526F82 /* BlokAkumulilo.swift in Sources */,
 				0099FD1D2D65068E0033EC11 /* TraktiUzon.swift in Sources */,
 				0099FD1E2D65068E0033EC11 /* TraktiPrononcon.swift in Sources */,
 				0099FD1F2D65068E0033EC11 /* TraktiVariajhon.swift in Sources */,

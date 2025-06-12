@@ -1,31 +1,26 @@
 extension ArboAnalizilo {
-	static func trakti(subartikolon subartikolo: ArtikolNodo, numero: Int, stato: Stato) {
-		stato.artikolFabriko.blokoj.append(.subartikolTitola(teksto: ArtikolTeksto.romajCiferoj(por: numero + 1) + "."))
-
-		var teksto = ""
-		
-		func malbufrigi() {
-			if !teksto.isEmpty {
-				stato.artikolFabriko.blokoj.append(.teksta(teksto: teksto))
-				teksto = ""
-			}
-		}
+	static func trakti(
+		subartikolon subartikolo: ArtikolNodo,
+		numero: Int,
+		stato: Stato
+	) -> [ArtikolBloko] {
+		let akumulilo = BlokAkumulilo()
+		akumulilo.aldoni(blokojn: [.subartikolTitola(teksto: ArtikolTeksto.romajCiferoj(por: numero + 1) + ".")])
 		
 		traktiFilojn(de: subartikolo, stato: stato) { filo in
 			switch filo.tipo {
 			case .adm:
 				break
 			case .dif:
-				teksto += trakti(difinon: filo, stato: stato)
+				akumulilo.aldoni(tekston: trakti(difinon: filo, stato: stato))
 			case .drv(let mrk):
-				malbufrigi()
-				trakti(derivajhon: filo, marko: mrk, stato: stato)
+				akumulilo.aldoni(blokojn: trakti(derivajhon: filo, marko: mrk, stato: stato))
 			case .gra:
-				teksto += trakti(gramatikon: filo, stato: stato)
+				akumulilo.aldoni(tekston: trakti(gramatikon: filo, stato: stato))
 			case .rim:
-				teksto += trakti(rimarkon: filo, stato: stato)
+				akumulilo.aldoni(tekston: trakti(rimarkon: filo, stato: stato))
 			case .snc(let mrk):
-				teksto += trakti(sencon: filo, marko: mrk, stato: stato)
+				akumulilo.aldoni(tekston: trakti(sencon: filo, marko: mrk, stato: stato))
 			case .teksto:
 				break
 			case .trd(let lng):
@@ -33,12 +28,12 @@ extension ArboAnalizilo {
 			case .trdgrp(let lng):
 				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
 			case .uzo(let tip):
-				teksto += trakti(uzon: filo, tipo: tip, stato: stato)
+				akumulilo.aldoni(tekston:  trakti(uzon: filo, tipo: tip, stato: stato))
 			default:
 				assert(false, "Neatendita filo")
 			}
 		}
 		
-		malbufrigi()
+		return akumulilo.fariBlokojn()
 	}
 }

@@ -29,17 +29,17 @@ enum ArboAnalizilo {
 		let stato = Stato(lingvoj: lingvoj, stiloj: stiloj)
 		stato.artikolFabriko.indekso = indekso
 		
-		trakti(arbon: arbo, stato: stato)
+		stato.artikolFabriko.blokoj = trakti(arbon: arbo, stato: stato)
 		
 		return rezulto(stato: stato)
 	}
 	
-	static func trakti(arbon arbo: ArtikolNodo, stato: Stato) {
+	static func trakti(arbon arbo: ArtikolNodo, stato: Stato) -> [ArtikolBloko] {
 		assert(arbo.filoj.count == 1, "Tro da filoj en arboradiko")
 		let filo = arbo.filoj.first!
 		switch filo.tipo {
 		case .vortaro:
-			trakti(vortaron: filo, stato: stato)
+			return trakti(vortaron: filo, stato: stato)
 		default:
 			assert(false, "Neatendita filo")
 		}

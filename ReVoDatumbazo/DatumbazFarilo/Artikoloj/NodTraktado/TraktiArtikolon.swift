@@ -1,6 +1,12 @@
 extension ArboAnalizilo {
-	static func trakti(artikolon artikolo: ArtikolNodo, marko: String?, stato: Stato) {
+	static func trakti(
+		artikolon artikolo: ArtikolNodo,
+		marko: String?,
+		stato: Stato
+	) -> [ArtikolBloko] {
 		var subartikoloNumero = 0
+		
+		let akumulilo = BlokAkumulilo()
 		
 		traktiFilojn(de: artikolo, stato: stato) { filo in
 			switch filo.tipo {
@@ -14,7 +20,7 @@ extension ArboAnalizilo {
 				// vd. -ig
 				break
 			case .drv(let mrk):
-				trakti(derivajhon: filo, marko: mrk, stato: stato)
+				akumulilo.aldoni(blokojn: trakti(derivajhon: filo, marko: mrk, stato: stato))
 			case .fnt:
 				// Se estontece artikolojn rekte enhavos tekstojn, tondu ĉi tie
 				break
@@ -32,7 +38,7 @@ extension ArboAnalizilo {
 				// vd. premi
 				break
 			case .subart:
-				trakti(subartikolon: filo, numero: subartikoloNumero, stato: stato)
+				akumulilo.aldoni(blokojn: trakti(subartikolon: filo, numero: subartikoloNumero, stato: stato))
 				subartikoloNumero += 1
 			case .teksto:
 				break
@@ -52,5 +58,7 @@ extension ArboAnalizilo {
 				assert(false, "Neatendita filo")
 			}
 		}
+		
+		return akumulilo.fariBlokojn()
 	}
 }
