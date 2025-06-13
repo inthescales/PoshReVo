@@ -75,7 +75,8 @@ final class Kunordigilo {
 	}
 	
 	func prezentiStiloelektilon(
-		prezentilo: UINavigationController
+		prezentilo: UINavigationController,
+		elektis: @escaping (InterfacStilo) -> Void
 	) {
 		let navigaciilo = UINavigationController()
 		navigaciilo.navigationBar.isTranslucent = false
@@ -87,6 +88,7 @@ final class Kunordigilo {
 			
 			if let novaStilo {
 				self?.datumRegilo.meti(stilon: novaStilo)
+				elektis(novaStilo)
 			}
 		}
 		navigaciilo.viewControllers = [elektilo]

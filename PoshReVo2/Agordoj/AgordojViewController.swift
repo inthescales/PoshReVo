@@ -19,7 +19,7 @@ final class AgordojViewController: UIViewController {
 	
 	private let datumRegilo: UzantDatumoRegilo
 	
-	private let stilo: InterfacStilo
+	private var stilo: InterfacStilo
 	
 	//
 	
@@ -115,7 +115,13 @@ extension AgordojViewController: UITableViewDelegate {
 				break
 			}
 			
-			kunordigilo.prezentiStiloelektilon(prezentilo: navigaciilo)
+			kunordigilo.prezentiStiloelektilon(
+				prezentilo: navigaciilo,
+				elektis: { [weak self] novaStilo in
+					self?.stilo = novaStilo
+					self?.tabelo.reloadData()
+				}
+			)
 		default:
 			break
 		}
@@ -160,7 +166,7 @@ extension AgordojViewController: UITableViewDataSource {
 		case (2, 0):
 			cell = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
 			cell.textLabel?.text = "Ŝanĝi Stilon"
-			cell.detailTextLabel?.text = stilo.nomo // TODO: Ĝisdatigi post elekto
+			cell.detailTextLabel?.text = stilo.nomo
 		default:
 			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			break
