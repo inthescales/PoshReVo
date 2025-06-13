@@ -322,10 +322,12 @@ extension ArtikoloViewController: TTTAttributedLabelDelegate {
 			&& markeroj.count >= 2 {
 			saltiAlMarko(markeroj[0] + "." + markeroj[1], animacii: true)
 		} else {
-			if let artikolo = VortaroDatumbazo.komuna.artikolo(indekso: markeroj[0]),
+			if markeroj[0] == artikolo.indekso {
+				saltiAlMarko(marko, animacii: true)
+			}
+			else if let artikolo = VortaroDatumbazo.komuna.artikolo(indekso: markeroj[0]),
 				let navigaciilo = navigationController {
 				kunordigilo.prezentiArtikoloPaghon(el: artikolo, prezentilo: navigaciilo)
-				// TODO: Salti ene de artikolo?
 			}
 		}
 	}
