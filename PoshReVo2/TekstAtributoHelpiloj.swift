@@ -4,6 +4,14 @@ import UIKit
 import TTTAttributedLabel
 
 enum TekstAtributoHelpiloj {
+	private enum Konstantoj {
+		/// Kiel alte superskriptoj sidu
+		static let superskriptSupreco = 2
+		
+		/// Kiel malalte subskriptoj sidu
+		static let subskriptMalsupreco = -2
+		
+	}
 	/// Specoj de tekstatribuoj, aldoneblaj al ĉenoj
 	private enum AtributSpeco: Equatable {
 		case ligo(celo: String)
@@ -154,14 +162,14 @@ enum TekstAtributoHelpiloj {
 			case .supera:
 				atributaTeksto.addAttribute(
 					kCTSuperscriptAttributeName as NSAttributedString.Key,
-					value: 2, // TODO: Kial "2"?
+					value: Konstantoj.superskriptSupreco,
 					range: regiono
 				)
 				
 			case .suba:
 				atributaTeksto.addAttribute(
 					kCTSuperscriptAttributeName as NSAttributedString.Key,
-					value: -2, // TODO: Kial "-2"?
+					value: Konstantoj.subskriptMalsupreco,
 					range: regiono
 				)
 			case .ekzemplo:
