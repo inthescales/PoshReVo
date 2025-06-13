@@ -124,8 +124,7 @@ final class Kunordigilo {
 			fatalError("Artikolo ne ekzistas") // TODO: Ŝanĝi tion ĉi
 		}
 		
-		// TODO: Salti al destina marko (e.g. serĉo por 'amkanto')
-		let vc = fariArtikoloPaghon(el: artikolo, prezentilo: prezentilo)
+		let vc = fariArtikoloPaghon(el: artikolo, marko: destino.marko, prezentilo: prezentilo)
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
@@ -336,10 +335,12 @@ final class Kunordigilo {
 	
 	private func fariArtikoloPaghon(
 		el artikolo: Artikolo,
+		marko: String? = nil,
 		prezentilo: UINavigationController
 	) -> ArtikoloViewController {
 		ArtikoloViewController(
 			artikolo: artikolo,
+			marko: marko,
 			aperis: { [weak self] in
 				self?.datumRegilo.markiVizititan(artikolon: artikolo)
 				self?.purigi(prezentilon: prezentilo)

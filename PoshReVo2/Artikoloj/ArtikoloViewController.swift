@@ -78,6 +78,8 @@ final class ArtikoloViewController: UIViewController {
 	
 	private let artikolo: Artikolo
 	
+	private let komencaMarko: String?
+	
 	private let aperis: (() -> ())?
 	
 	private let konservis: (Bool) -> ()
@@ -90,6 +92,7 @@ final class ArtikoloViewController: UIViewController {
 	
 	init(
 		artikolo: Artikolo,
+		marko: String? = nil,
 		konservita: Bool,
 		tradukLingvoj: [Lingvo] = [],
 		aperis: (() -> ())?,
@@ -98,6 +101,7 @@ final class ArtikoloViewController: UIViewController {
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.artikolo = artikolo
+		self.komencaMarko = marko
 		self.tradukLingvoj = tradukLingvoj
 		self.aperis = aperis
 		self.konservis = konservis
@@ -111,6 +115,7 @@ final class ArtikoloViewController: UIViewController {
 	
 	convenience init(
 		artikolo: Artikolo,
+		marko: String? = nil,
 		aperis: (() -> ())?,
 		konservis: @escaping (Bool) -> (),
 		uzantDatumaro: UzantDatumaro = .komuna,
@@ -119,6 +124,7 @@ final class ArtikoloViewController: UIViewController {
 	) {
 		self.init(
 			artikolo: artikolo,
+			marko: marko,
 			konservita: uzantDatumaro.chuKonservita(artikolo: artikolo),
 			tradukLingvoj: uzantDatumaro.lingvoj,
 			aperis: aperis,
@@ -162,6 +168,14 @@ final class ArtikoloViewController: UIViewController {
 			name: Avizoj.uzantajLingvojShanghighis,
 			object: nil
 		)
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		if let marko = komencaMarko {
+			saltiAlMarko(marko, animacii: false)
+		}
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
