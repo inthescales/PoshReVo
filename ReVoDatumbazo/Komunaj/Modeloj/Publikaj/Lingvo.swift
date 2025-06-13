@@ -20,6 +20,10 @@ public class Lingvo: NSObject, Codable, NSSecureCoding {
 		return nomo.prefix(nomo.count - 1) + "e"
 	}
 	
+	public var estasEsperanto: Bool {
+		self.kodo == "eo"
+	}
+	
 	// MARK: - NSSecureCoding
 	// Necesas nur dum ni legas konservitajn uzantdatumojn de V1
 

@@ -12,7 +12,7 @@ final class SerchoViewController: UIViewController {
 	
 	private lazy var serchilo = SerchiloView(
 		lokokupaTeksto: Tekstoj.serchiVortonAuFrazon,
-		iksumi: true, // TODO: Nur se neesperanta lingvo uziĝas
+		iksumi: serchLingvo?.estasEsperanto ?? false,
 		tekstoShanghighis: { [weak self] teksto in
 			self?.farisPeton(teksto: teksto, serchLingvo: self?.serchLingvo)
 		}
@@ -21,6 +21,7 @@ final class SerchoViewController: UIViewController {
 	private lazy var lingvoBreto: LingvoBretoViewController = {
 		kunordigilo.fariLingvoBreton(
 			elektisLingvon: { [weak self] lingvo in
+				self?.serchilo.iksumi = self?.serchLingvo?.estasEsperanto ?? false
 				self?.farisPeton(teksto: self?.serchTeksto, serchLingvo: lingvo)
 			},
 			redaktisLingvojn: { [weak self] lingvoj in

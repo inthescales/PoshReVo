@@ -40,13 +40,13 @@ final class SerchiloView: UIView {
 		serchilo.text
 	}
 	
+	/// Ĉu 'x'-klako aldonu ĉapelon aŭ hokon
+	var iksumi: Bool
+	
 	// MARK: Agordoj
 	
 	/// Lokokupa teksto kiu aperos en la serĉtabulo se uzanto jam ne tajpis
 	private let lokokupaTeksto: String
-	
-	/// Ĉu 'x'-klako aldonu ĉaplon aŭ hokon
-	private let iksumi: Bool
 	
 	/// Vokotas kiam teksto ŝanĝiĝos
 	private let tekstoShanghighis: (String) -> ()
