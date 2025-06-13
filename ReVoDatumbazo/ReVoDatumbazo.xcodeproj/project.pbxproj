@@ -239,6 +239,7 @@
 		00B27B872DFB757900526F82 /* BlokAkumulilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B862DFB757900526F82 /* BlokAkumulilo.swift */; };
 		00B27B882DFB757900526F82 /* BlokAkumulilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B862DFB757900526F82 /* BlokAkumulilo.swift */; };
 		00B27B892DFB757900526F82 /* BlokAkumulilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B862DFB757900526F82 /* BlokAkumulilo.swift */; };
+		00B27B8A2DFB863D00526F82 /* String+Aldonoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */; };
 		00B297192D650F5100264431 /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		00B2971A2D6511CA00264431 /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		00B2971B2D65122B00264431 /* Artikolo+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+Datumbazo.swift */; };
@@ -1065,6 +1066,7 @@
 			files = (
 				00B27B6F2DF38FB800526F82 /* Artikolo.swift in Sources */,
 				003657172309CE250028C21F /* VortaroDatumbazo.swift in Sources */,
+				00B27B8A2DFB863D00526F82 /* String+Aldonoj.swift in Sources */,
 				000DA6C72D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld in Sources */,
 				000F784724F1B47400F918C9 /* Oficialeco+Datumbazo.swift in Sources */,
 				00A47A5B24AFDFEB00EA9DCF /* Artikolo+Datumbazo.swift in Sources */,

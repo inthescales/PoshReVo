@@ -16,26 +16,29 @@ extension ArboAnalizilo {
 				// vd. bugenvilo
 				break
 			case .dif:
-				// TODO: Nuna apo-interfaco ne povas montri tekstajn materialojn artikol-fine. Aldonu tion.
 				// vd. -ig
+				akumulilo.aldoni(tekston: trakti(difinon: filo, stato: stato))
 				break
 			case .drv(let mrk):
 				akumulilo.aldoni(blokojn: trakti(derivajhon: filo, marko: mrk, stato: stato))
 			case .fnt:
 				// Se estontece artikolojn rekte enhavos tekstojn, tondu ĉi tie
+				akumulilo.tondiTekston()
 				break
 			case .kap:
 				_ = trakti(kapon: filo, stato: stato)
-			case .ref:
-				// TODO: Nuna apo-interfaco ne povas montri tekstajn materialojn artikol-fine. Aldonu tion.
-				break
-			case .refgrp:
+			case .ref(let tipo, let celo):
+				// vd. don1 (Don/o)
+				// Mankas sagon
+				akumulilo.aldoni(tekston: trakti(referencon: filo, tipo: tipo, celo: celo, stato: stato))
+			case .refgrp(let tipo):
 				// TODO: Nuna apo-interfaco ne povas montri tekstajn materialojn artikol-fine. Aldonu tion.
 				// vd. apriora
-				break
+				// Troa linio
+				akumulilo.aldoni(tekston: trakti(referencGrupon: filo, tipo: tipo, stato: stato))
 			case .rim:
-				// TODO: Nuna apo-interfaco ne povas montri tekstajn materialojn artikol-fine. Aldonu tion.
 				// vd. premi
+				akumulilo.aldoni(tekston: trakti(rimarkon: filo, stato: stato))
 				break
 			case .subart:
 				akumulilo.aldoni(blokojn: trakti(subartikolon: filo, numero: subartikoloNumero, stato: stato))
@@ -46,14 +49,12 @@ extension ArboAnalizilo {
 				trakti(tradukon: filo, lingvo: lng!, stato: stato)
 			case .trdgrp(let lng):
 				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
-			case .url:
-				// TODO: Nuna apo-interfaco ne povas montri tekstajn materialojn artikol-fine. Aldonu tion.
+			case .url(let ref):
 				// vd. 'dateno'
-				break
-			case .uzo:
-				// TODO: Nuna apo-interfaco ne povas montri tekstajn materialojn artikol-fine. Aldonu tion.
+				akumulilo.aldoni(tekston: trakti(URLon: filo, referenco: ref, stato: stato))
+			case .uzo(let tipo):
 				// vd. 'asembli'
-				break
+				akumulilo.aldoni(tekston: trakti(uzon: filo, tipo: tipo, stato: stato))
 			default:
 				assert(false, "Neatendita filo")
 			}
