@@ -8,7 +8,7 @@ final class ArtikoloViewController: UIViewController {
 	private enum Konstantoj {
 		static let derivajhTitoloIdentigilo = "derivajhTitolaIdentigilo"
 		static let ekzemplaroIdentigilo = "ekzemplaIdentigilo"
-		static let subartikolTitoloIdentigilo = "subartikolTitolaIdentigilo"
+		static let dividiloIdentigilo = "dividiloIdentigilo"
 		static let tekstoIdentigilo = "tekstaIdentigilo"
 		static let tradukaroIdentigilo = "tradukaIdentigilo"
 	}
@@ -48,7 +48,7 @@ final class ArtikoloViewController: UIViewController {
 		)
 		tabelo.register(
 			SubartikoloTitoloChelo.self,
-			forCellReuseIdentifier: Konstantoj.subartikolTitoloIdentigilo
+			forCellReuseIdentifier: Konstantoj.dividiloIdentigilo
 		)
 		tabelo.register(
 			TekstoChelo.self,
@@ -196,7 +196,7 @@ final class ArtikoloViewController: UIViewController {
 	private func premisSalti() {
 		let eroj: [ShovMenuoViewController.Menuero] = artikolo.blokoj.compactMap {
 			switch $0 {
-			case .subartikolTitola:
+			case .dividila:
 				return ShovMenuoViewController.Menuero(teksto: "---") {}
 			case .derivajhTitola(let teksto, _, let marko):
 				return ShovMenuoViewController.Menuero(teksto: teksto) { [weak self] in
@@ -244,10 +244,8 @@ final class ArtikoloViewController: UIViewController {
 		switch bloko {
 		case .derivajhTitola:
 			Konstantoj.derivajhTitoloIdentigilo
-		case .ekzempla:
-			Konstantoj.ekzemplaroIdentigilo
-		case .subartikolTitola:
-			Konstantoj.subartikolTitoloIdentigilo
+		case .dividila:
+			Konstantoj.dividiloIdentigilo
 		case .teksta:
 			Konstantoj.tekstoIdentigilo
 		case .traduka:
@@ -274,13 +272,10 @@ extension ArtikoloViewController: UITableViewDataSource {
 		}
 		
 		switch bloko {
-		case .subartikolTitola(teksto: let teksto):
+		case .dividila(teksto: let teksto):
 			(chelo as? SubartikoloTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
 		case .derivajhTitola(teksto: let teksto, _, _):
 			(chelo as? DerivajhTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
-		case .ekzempla(ekzemploj: let ekzemploj):
-			let teksto = ekzemploj.joined(separator: "; ")
-			(chelo as? TekstoChelo)?.agordi(teksto: teksto, liganto: self, stilo: stilo)
 		case .teksta(let teksto):
 			(chelo as? TekstoChelo)?.agordi(teksto: teksto, liganto: self, stilo: stilo)
 		case .traduka(let tradukoj):

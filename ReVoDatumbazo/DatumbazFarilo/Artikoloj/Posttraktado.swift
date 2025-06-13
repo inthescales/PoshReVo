@@ -21,12 +21,10 @@ enum Posttraktado {
 		for bloko in artikolo.blokoj {
 			let novaBloko: ArtikolBloko
 			switch bloko {
-			case .subartikolTitola(let teksto):
-				novaBloko = .subartikolTitola(teksto: anstataui(en: teksto))
+			case .dividila(let teksto):
+				novaBloko = .dividila(teksto: anstataui(en: teksto))
 			case .derivajhTitola(let teksto, let ofc, let marko):
 				novaBloko = .derivajhTitola(teksto: anstataui(en: teksto), ofc: ofc, marko: marko)
-			case .ekzempla(let ekzemploj):
-				novaBloko = .ekzempla(ekzemploj: ekzemploj.map { anstataui(en: $0)})
 			case .teksta(let teksto):
 				novaBloko = .teksta(teksto: anstataui(en: teksto))
 			case .traduka(let tradukoj):

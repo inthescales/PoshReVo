@@ -26,21 +26,29 @@ enum ArtikolTeksto {
 	
 	/// Romaj cierfoj kiel ĝi aperu antaŭ subartikoloj (ekz. "I.", "II.", ktp.)
 	static func romajCiferoj(por nombro: Int) -> String {
-		let arabaj = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-		let romiaj = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+		let paroj: [(kvanto: Int, roma: String)] = [
+			(1000, "M"),
+			(900, "CM"),
+			(500, "D"),
+			(400, "CD"),
+			(100, "C"),
+			(90, "XC"),
+			(50, "L"),
+			(40, "XL"),
+			(10, "X"),
+			(9, "IX"),
+			(5, "V"),
+			(4, "IV"),
+			(1, "I")
+		]
 		
 		var rezulto = ""
-		var komenca = nombro
+		var valoro = nombro
 		
-		// TODO: Ne funkcias. Riparu, kaj aldonu teston
-		for j in 0..<romiaj.count {
-			let litero = romiaj[j]
-			let arabaSumo = arabaj[j]
-			let div = komenca / arabaSumo
-			
-			if div > 0 {
-				rezulto += litero
-				komenca -= arabaSumo * div
+		for paro in paroj {
+			while paro.kvanto <= valoro {
+				rezulto += paro.roma
+				valoro -= paro.kvanto
 			}
 		}
 		

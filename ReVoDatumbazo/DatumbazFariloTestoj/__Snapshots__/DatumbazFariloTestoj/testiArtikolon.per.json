@@ -1,8 +1,8 @@
 {
   "blokoj" : [
     {
-      "subartikolTitola" : {
-        "teksto" : "I."
+      "dividila" : {
+        "teksto" : "I"
       }
     },
     {
@@ -605,8 +605,8 @@
       }
     },
     {
-      "subartikolTitola" : {
-        "teksto" : "I."
+      "dividila" : {
+        "teksto" : "II"
       }
     },
     {
@@ -1641,8 +1641,8 @@
       }
     },
     {
-      "subartikolTitola" : {
-        "teksto" : "I."
+      "dividila" : {
+        "teksto" : "III"
       }
     },
     {

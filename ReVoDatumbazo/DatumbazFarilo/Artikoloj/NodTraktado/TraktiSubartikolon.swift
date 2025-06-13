@@ -5,7 +5,9 @@ extension ArboAnalizilo {
 		stato: Stato
 	) -> [ArtikolBloko] {
 		let akumulilo = BlokAkumulilo()
-		akumulilo.aldoni(blokojn: [.subartikolTitola(teksto: ArtikolTeksto.romajCiferoj(por: numero + 1) + ".")])
+		akumulilo.aldoni(blokojn: [
+			.dividila(teksto: ArtikolTeksto.romajCiferoj(por: numero + 1))
+		])
 		
 		traktiFilojn(de: subartikolo, stato: stato) { filo in
 			switch filo.tipo {
