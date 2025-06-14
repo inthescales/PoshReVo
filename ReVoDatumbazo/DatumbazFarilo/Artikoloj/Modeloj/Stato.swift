@@ -113,7 +113,7 @@ extension ArboAnalizilo {
 		var fakVortoj: [String: [FakVorto]] = [:]
 		
 		/// Vortoj laŭ oficialeco
-		var ofcVortoj: [String: [OfcVorto]] = [:]
+		var ofcVortoj: [Oficialeco: [OfcVorto]] = [:]
 		
 		/// Aldonas serĉtradukon
 		func aldoni(derivajhTradukon traduko: ArtikolTraduko, lingvo: String) {
@@ -145,7 +145,7 @@ extension ArboAnalizilo {
 		}
 		
 		/// Aldonas ofcvorton
-		func aldoni(ofcVorton ofcVorto: OfcVorto, oficialeco: String) {
+		func aldoni(ofcVorton ofcVorto: OfcVorto, oficialeco: Oficialeco) {
 			if ofcVortoj[oficialeco] == nil { ofcVortoj[oficialeco] = [] }
 			ofcVortoj[oficialeco]?.append(ofcVorto)
 		}

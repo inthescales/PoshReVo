@@ -46,7 +46,6 @@
 		0097B1C522E7DBD9003DEDC4 /* SubArtikoloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0097B1C422E7DBD9003DEDC4 /* SubArtikoloTableViewCell.swift */; };
 		0097B1C722E7DC8F003DEDC4 /* SubArtikoloTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0097B1C622E7DC8F003DEDC4 /* SubArtikoloTableViewCell.xib */; };
 		00A2525424606F65000759B9 /* Listero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2524B24606F65000759B9 /* Listero.swift */; };
-		00A47A5824AFDDCD00EA9DCF /* Vorto+Helpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5724AFDDCD00EA9DCF /* Vorto+Helpiloj.swift */; };
 		00A83A462461D96200AC2E20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00477A6E227654B700515416 /* Localizable.strings */; };
 		00A83A472461D96200AC2E20 /* Generataj.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0036572023132E8F0028C21F /* Generataj.strings */; };
 		00A869BB2276497000A856E9 /* SerchPaghoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0084893E226385200071CEC2 /* SerchPaghoViewController.xib */; };
@@ -174,7 +173,6 @@
 		00A2522024606724000759B9 /* PoshReVoUnuopTestoj.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoshReVoUnuopTestoj.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A2522424606724000759B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00A2524B24606F65000759B9 /* Listero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listero.swift; sourceTree = "<group>"; };
-		00A47A5724AFDDCD00EA9DCF /* Vorto+Helpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vorto+Helpiloj.swift"; sourceTree = "<group>"; };
 		00A869CD22764B3500A856E9 /* PoshReVoDatumbazo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoshReVoDatumbazo.sqlite; sourceTree = "<group>"; };
 		00AF852D24CDFFFF0037E93E /* ArtikoloNevideblaTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikoloNevideblaTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
 		00B2C2B624B92639002CEE64 /* OficialecoListoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OficialecoListoTableViewController.swift; sourceTree = "<group>"; };
@@ -449,18 +447,9 @@
 		00A2522A24606767000759B9 /* Modeloj */ = {
 			isa = PBXGroup;
 			children = (
-				00A47A5624AFDDBA00EA9DCF /* Aldonoj */,
 				00A2524B24606F65000759B9 /* Listero.swift */,
 			);
 			path = Modeloj;
-			sourceTree = "<group>";
-		};
-		00A47A5624AFDDBA00EA9DCF /* Aldonoj */ = {
-			isa = PBXGroup;
-			children = (
-				00A47A5724AFDDCD00EA9DCF /* Vorto+Helpiloj.swift */,
-			);
-			path = Aldonoj;
 			sourceTree = "<group>";
 		};
 		00D0B71722D1473300814637 /* Pagharo */ = {
@@ -713,7 +702,6 @@
 				0097B1BE22E53228003DEDC4 /* BazStilaTableViewController.swift in Sources */,
 				00AF852E24CDFFFF0037E93E /* ArtikoloNevideblaTableViewHeaderFooterView.swift in Sources */,
 				0036571D2309DBF10028C21F /* VortaroDatumbazo+Komuna.swift in Sources */,
-				00A47A5824AFDDCD00EA9DCF /* Vorto+Helpiloj.swift in Sources */,
 				00848951226385200071CEC2 /* Iloj.swift in Sources */,
 				0084897E226385200071CEC2 /* AppDelegate.swift in Sources */,
 				0084895D226385200071CEC2 /* ArtikoloPiedButonoTableViewHeaderFooterView.swift in Sources */,

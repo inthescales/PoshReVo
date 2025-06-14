@@ -9,14 +9,14 @@ enum Artikolaro {
 		var tradukoj: [String: [SerchTraduko]]
 		var serchVortoj: [SerchVorto]
 		var fakVortoj: [String: [FakVorto]]
-		var ofcVortoj: [String: [OfcVorto]]
+		var ofcVortoj: [Oficialeco: [OfcVorto]]
 		
 		init(
 			artikoloj: [Artikolo],
 			tradukoj: [String: [SerchTraduko]],
 			serchVortoj: [SerchVorto],
 			fakVortoj: [String: [FakVorto]],
-			ofcVortoj: [String: [OfcVorto]]
+			ofcVortoj: [Oficialeco: [OfcVorto]]
 		) {
 			self.artikoloj = artikoloj
 			self.tradukoj = tradukoj
@@ -63,7 +63,7 @@ enum Artikolaro {
 		var tradukoj: [String: [SerchTraduko]] = [:]
 		var serchVortoj: [SerchVorto] = []
 		var fakVortoj: [String: [FakVorto]] = [:]
-		var ofcVortoj: [String: [OfcVorto]] = [:]
+		var ofcVortoj: [Oficialeco: [OfcVorto]] = [:]
 		var markSencoj: [String: Int] = [:]
 
 		for indiko in legotaj {

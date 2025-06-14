@@ -52,8 +52,8 @@ extension ArboAnalizilo {
 			stato.artikolFabriko.titolo = teksto
 			
 			// Krei ofcvortojn
-			let ofc = ArtikolTeksto.konservOficialeco(ofc: stato.artikolFabriko.ofc)
-			if let artikolIndekso = stato.artikolIndekso {
+			if let artikolIndekso = stato.artikolIndekso,
+			   let ofc = Oficialeco.kun(kodo: stato.artikolFabriko.ofc) {
 				let ofcVorto = OfcVorto(
 					teksto: teksto,
 					indekso: artikolIndekso

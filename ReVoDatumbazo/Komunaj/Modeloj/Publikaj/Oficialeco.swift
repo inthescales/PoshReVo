@@ -14,6 +14,14 @@ public struct Oficialeco: Codable {
 	public let vico: Int
 }
 
+// MARK: - Hashable
+
+extension Oficialeco: Hashable {
+	public func hash(into hasher: inout Hasher) {
+		hasher.combine(kodo)
+	}
+}
+
 // MARK: - Comparable
 
 extension Oficialeco: Comparable {

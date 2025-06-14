@@ -2,14 +2,14 @@ import Foundation
 import CoreData
 
 enum Oficialecoj {
-	private static var fundamento = Oficialeco(
+	static var fundamento = Oficialeco(
 		kodo: "*",
 		indikilo: "*",
 		nomo: "fundamento",
 		vico: 0
 	)
 	
-	private static func aldono(numero: Int) -> Oficialeco {
+	static func aldono(numero: Int) -> Oficialeco {
 		Oficialeco(
 			kodo: "\(numero)",
 			indikilo: "\(numero)",
@@ -18,14 +18,14 @@ enum Oficialecoj {
 		)
 	}
 	
-	private static var alia = Oficialeco(
+	static var alia = Oficialeco(
 		kodo: "a",
 		indikilo: nil,
 		nomo: "alia oficialigo",
 		vico: oficialajAldonoj + 1
 	)
 	
-	private static var neoficiala = Oficialeco(
+	static var neoficiala = Oficialeco(
 		kodo: "n",
 		indikilo: nil,
 		nomo: "neoficialaj",
@@ -52,5 +52,20 @@ enum Oficialecoj {
 		try! konteksto.save()
 		
 		print("Aldonis \(Oficialecoj.oficialecoj.count) oficialecojn")
+	}
+}
+
+extension Oficialeco {
+	static func kun(kodo: String?) -> Oficialeco? {
+		switch kodo {
+		case nil:
+			return Oficialecoj.neoficiala
+		case "*":
+			return Oficialecoj.fundamento
+		case "1", "2", "3", "4", "5", "6", "7", "8", "9", "10":
+			return Oficialecoj.aldono(numero: Int(kodo!)!)
+		default:
+			return Oficialecoj.alia
+		}
 	}
 }

@@ -14,7 +14,7 @@ enum ArboAnalizilo {
 		let fakVortoj: [String: [FakVorto]]
 		
 		/// Vortoj aperontaj en listo da vortoj laŭ oficialeco
-		let ofcVortoj: [String: [OfcVorto]]
+		let ofcVortoj: [Oficialeco: [OfcVorto]]
 		
 		/// Markoj kaj siaj kunligitaj sencoj
 		let markSencoj: [String: Int]

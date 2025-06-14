@@ -47,7 +47,7 @@ enum TekstHelpiloj {
 		return indicoj[nombro]
 	}
 	
-	/// Liveras indican ĉenon por senco, oficialeco, ks
+	/// Liveras indico-ĉenon por senco, oficialeco, ks
 	static func indico(por cheno: String) -> String? {
 		if cheno == "*" {
 			return "*"

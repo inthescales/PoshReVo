@@ -55,19 +55,6 @@ enum ArtikolTeksto {
 		return rezulto
 	}
 	
-	/// Oficialeco, en la formo per kiu ĝi estu konserivita en ofcvortoj
-	static func konservOficialeco(ofc: String?) -> String {
-		// TODO: Movi al ReVoModeloj, en nova enum-tipon
-		switch ofc {
-		case nil:
-			return "n"
-		case "*", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10":
-			return ofc!
-		default:
-			return "a"
-		}
-	}
-	
 	/// Simbolo kiuj aperu antaŭ referenco, aŭ grupo da referencoj.
 	static func refSimbolo(tipo: String) -> String? {
 		switch tipo {

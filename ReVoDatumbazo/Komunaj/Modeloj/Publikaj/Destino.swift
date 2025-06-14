@@ -11,7 +11,7 @@ public struct Destino {
     public let subteksto: String?
 	
 	/// Marko ene de artikolo (pli ofte je derivaĵo)
-    public let marko: String? // TODO: Int anstataŭ String?
+    public let marko: String?
 	
 	/// Senco ene artikolero
     public let senco: String?

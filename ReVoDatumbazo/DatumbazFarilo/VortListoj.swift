@@ -29,14 +29,14 @@ enum VortListoj {
 	}
 	
 	static func skribi(
-		ofcVortojn ofcVortoj: [String: [OfcVorto]],
+		ofcVortojn ofcVortoj: [Oficialeco: [OfcVorto]],
 		artikolObjektoj: [String: NSManagedObject]? = nil,
 		en konteksto: NSManagedObjectContext
 	) {
 		let alirilo = DatumbazAlirilo(konteksto: konteksto)
 		for (ofc, vortoListo) in ofcVortoj {
 			print("Skribas oficialecon \(ofc)")
-			let oficialeco = alirilo.oficialeco(kodo: ofc)!
+			let oficialeco = alirilo.oficialeco(kodo: ofc.kodo)!
 			
 			for ofcVorto in vortoListo {
 				
