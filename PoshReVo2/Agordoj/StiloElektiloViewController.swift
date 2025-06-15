@@ -4,19 +4,7 @@ final class StiloElektiloViewController: UIViewController {
 	private enum Konstantoj {
 		static let chelidentigilo = "stiloElektilo"
 	}
-	
-	// TODO: Unuigu ĉispecajn butonojn
-	lazy var iksoButono = {
-		let butono = UIBarButtonItem.init(
-			title: "IKSO",
-			style: .plain,
-			target: self,
-			action: #selector(Self.premisIkson)
-		)
-		butono.tintColor = stilo.surkoloraTeksto
-		return butono
-	}()
-	
+
 	lazy var tabelo = {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
@@ -56,7 +44,10 @@ final class StiloElektiloViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		navigationController?.navigationBar.tintColor = stilo.surkoloraTeksto
-		navigationItem.leftBarButtonItem = iksoButono
+		navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.iksoButono(
+			ago: #selector(premisIkson),
+			stilo: stilo
+		)
 		
 		view.addEdgeMatchedSubview(tabelo)
 	}

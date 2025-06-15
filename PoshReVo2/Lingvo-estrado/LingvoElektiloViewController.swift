@@ -70,15 +70,10 @@ final class LingvoElektiloViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		view.backgroundColor = stilo.koloraFono
-		
-		let iksoButono = UIBarButtonItem(
-			title: Tekstoj.rezigni,
-			style: .plain,
-			target: self,
-			action: #selector(Self.malaperi)
+		navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.iksoButono(
+			ago: #selector(Self.malaperi),
+			stilo: stilo
 		)
-		iksoButono.tintColor = stilo.surkoloraTeksto
-		navigationItem.leftBarButtonItem = iksoButono
 		
 		view.addSubview(serchilo)
 		serchilo.snp.makeConstraints { make in

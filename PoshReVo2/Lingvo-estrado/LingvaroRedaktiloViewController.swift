@@ -9,17 +9,6 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	
 	// MARK: Interfacaĵoj
 	
-	lazy var iksoButono = {
-		let butono = UIBarButtonItem.init(
-			title: "IKSO",
-			style: .plain,
-			target: self,
-			action: #selector(Self.premisIkson)
-		)
-		butono.tintColor = stilo.surkoloraTeksto
-		return butono
-	}()
-	
 	lazy var redaktButono = {
 		let butono = UIBarButtonItem.init(
 			title: Tekstoj.redakti,
@@ -69,7 +58,10 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		if navigationController?.viewControllers.count == 1 {
-			navigationItem.leftBarButtonItem = iksoButono
+			navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.iksoButono(
+				ago: #selector(premisIkson),
+				stilo: stilo
+			)
 		}
 		navigationItem.rightBarButtonItem = redaktButono
 		
