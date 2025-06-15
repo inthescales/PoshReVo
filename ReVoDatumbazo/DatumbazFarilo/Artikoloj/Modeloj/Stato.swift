@@ -129,7 +129,21 @@ extension ArboAnalizilo {
 				sensencajDerivajhTradukoj[lingvo]?.append(traduko)
 			} else {
 				if sencajDerivajhTradukoj[lingvo] == nil { sencajDerivajhTradukoj[lingvo] = [] }
-				sencajDerivajhTradukoj[lingvo]?.append(traduko)
+
+				// Ĉi-strangaĵo certigas ke tradukoj ene de ekzemploj aperu POST ne-ekzemplaj
+				// tradukoj de la sama senco/subsenco
+				
+				var indekso = (sencajDerivajhTradukoj[lingvo]?.endIndex)!
+				while indekso > 0,
+					  let nuna = sencajDerivajhTradukoj[lingvo]?[indekso - 1],
+					  traduko.transpasNomo == false
+						&& nuna.transpasNomo == true
+						&& nuna.senco == traduko.senco
+						&& nuna.subsenco == traduko.subsenco {
+					indekso -= 1
+				}
+				
+				sencajDerivajhTradukoj[lingvo]?.insert(traduko, at: indekso)
 			}
 		}
 		

@@ -325,7 +325,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "1. feljegyzés, megjegyzés, jegyzet · falsa ~o: hamis hang 2.a hangjegy 2.b tónus 3. érdemjegy, osztályzat"
+            "teksto" : "1. feljegyzés, megjegyzés, jegyzet 2.a hangjegy · falsa ~o: hamis hang 2.b tónus 3. érdemjegy, osztályzat"
           },
           {
             "lingvo" : {
@@ -542,7 +542,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "1. aantekening, noot, notitie · falsa ~o: valse noot 2.a noot, muzieknoot 2.b noot 3. (school)cijfer, beoordeling (m.n. van leerlingen)"
+            "teksto" : "1. aantekening, noot, notitie 2.a noot, muzieknoot · falsa ~o: valse noot 2.b noot 3. (school)cijfer, beoordeling (m.n. van leerlingen)"
           },
           {
             "lingvo" : {
@@ -584,7 +584,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "1. notatka, notka, adnotacja, dopisek, zapis, zapisek · falsa ~o: fałszywa nuta 2.a nuta 2.b nuta 3. nota, ocena, stopień"
+            "teksto" : "1. notatka, notka, adnotacja, dopisek, zapis, zapisek 2.a nuta · falsa ~o: fałszywa nuta 2.b nuta 3. nota, ocena, stopień"
           },
           {
             "lingvo" : {
