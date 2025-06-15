@@ -64,6 +64,8 @@ enum ArtikolTeksto {
 			return "⇝"
 		case "dif":
 			return "="
+		case "hom":
+			return "↔"
 		case "super":
 			return "⇗"
 		case "sub":

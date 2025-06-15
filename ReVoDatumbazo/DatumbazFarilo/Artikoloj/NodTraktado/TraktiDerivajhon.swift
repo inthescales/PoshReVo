@@ -50,6 +50,7 @@ extension ArboAnalizilo {
 			case .mlg:
 				// TODO: Trakti kapajn mallongigojn
 				// Endos aldoni ion al vorto-modelo
+				// Vidu 'Om/o'
 				break
 			case .lstref(let lst):
 				akumulilo.aldoni(tekston: trakti(listReferencon: filo, listo: lst, stato: stato))

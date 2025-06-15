@@ -102,7 +102,7 @@ class ChefaNavigationController : SlideNavigationController, Stilplena {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 
-        //subLinio?.hidden = true TODO
+        //subLinio?.hidden = true TODO:
         closeMenu(completion: nil)
         
         weak var malforta = self

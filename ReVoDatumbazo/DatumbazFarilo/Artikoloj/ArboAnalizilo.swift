@@ -148,4 +148,3 @@ enum ArboAnalizilo {
 		_ = stato.sibStako.popLast()
 	}
 }
-// TODO: En 'provludi' - tradukoj ekzistas por 'prov~o', kiu NE APERAS KIEL DERIVAĴO

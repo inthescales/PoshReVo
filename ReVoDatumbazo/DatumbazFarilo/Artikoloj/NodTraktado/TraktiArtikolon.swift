@@ -29,12 +29,9 @@ extension ArboAnalizilo {
 				_ = trakti(kapon: filo, stato: stato)
 			case .ref(let tipo, let celo):
 				// vd. don1 (Don/o)
-				// Mankas sagon
 				akumulilo.aldoni(tekston: trakti(referencon: filo, tipo: tipo, celo: celo, stato: stato))
 			case .refgrp(let tipo):
-				// TODO: Nuna apo-interfaco ne povas montri tekstajn materialojn artikol-fine. Aldonu tion.
 				// vd. apriora
-				// Troa linio
 				akumulilo.aldoni(tekston: trakti(referencGrupon: filo, tipo: tipo, stato: stato))
 			case .rim:
 				// vd. premi

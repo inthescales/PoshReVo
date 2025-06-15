@@ -53,8 +53,8 @@ enum Artikolaro {
 		mallongigoj: [String: String],
 		urloj: [String: String]
 	) -> Rezulto {
-		let legotaj = ["lud.xml"]
-		// let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
+		// let legotaj = ["lud.xml"]
+		let legotaj = try! FileManager.default.contentsOfDirectory(atPath: indikilo)
 			.filter { $0.hasSuffix(".xml") }
 		
 		// Legi artikolojn
