@@ -46,7 +46,7 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "via, through, with, by"
+            "teksto" : "by, with, through, via"
           },
           {
             "lingvo" : {
@@ -74,7 +74,7 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "з дапамогай, пры дапамозе, праз"
+            "teksto" : "праз, пры дапамозе, з дапамогай"
           },
           {
             "lingvo" : {
@@ -102,7 +102,7 @@
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "na, lomeno"
+            "teksto" : "lomeno, na"
           },
           {
             "lingvo" : {
@@ -158,7 +158,7 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "mittels, mit (mittels)"
+            "teksto" : "mit (mittels), mittels"
           },
           {
             "lingvo" : {
@@ -193,7 +193,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "segítségével, révén, -vel(eszközhatározó), -val(eszközhatározó)"
+            "teksto" : "-val(eszközhatározó), -vel(eszközhatározó), révén, segítségével"
           },
           {
             "lingvo" : {
@@ -438,7 +438,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "dzięki (komuś\/czemuś), za pomocą, z pomocą, poprzez, przez"
+            "teksto" : "przez, poprzez, z pomocą, za pomocą, dzięki (komuś\/czemuś)"
           },
           {
             "lingvo" : {
@@ -452,14 +452,14 @@
               "kodo" : "ro",
               "nomo" : "rumana"
             },
-            "teksto" : "prin, peste"
+            "teksto" : "peste, prin"
           },
           {
             "lingvo" : {
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "при помощи, посредством"
+            "teksto" : "посредством, при помощи"
           },
           {
             "lingvo" : {
@@ -634,7 +634,7 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "aided, indirect"
+            "teksto" : "indirect, aided"
           },
           {
             "lingvo" : {
@@ -648,14 +648,14 @@
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "zprostředkovaný, nepřímý"
+            "teksto" : "nepřímý, zprostředkovaný"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "非直接 [fēizhíjiē], 斡旋 [wòxuán], 间接 [jiànjiē], 間接 [jiànjiē]"
+            "teksto" : "間接 [jiànjiē], 间接 [jiànjiē], 斡旋 [wòxuán], 非直接 [fēizhíjiē]"
           },
           {
             "lingvo" : {
@@ -669,7 +669,7 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "indirekt, vermittelnd"
+            "teksto" : "vermittelnd, indirekt"
           },
           {
             "lingvo" : {
@@ -690,14 +690,14 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "仲介の [ちゅうかいの], 間接の [かんせつの]"
+            "teksto" : "間接の [かんせつの], 仲介の [ちゅうかいの]"
           },
           {
             "lingvo" : {
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "met, door middel van, door"
+            "teksto" : "door, door middel van, met"
           },
           {
             "lingvo" : {
@@ -718,21 +718,21 @@
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "непрямой, опосредованный"
+            "teksto" : "опосредованный, непрямой"
           },
           {
             "lingvo" : {
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "sprostredkovaný, nepriamy"
+            "teksto" : "nepriamy, sprostredkovaný"
           },
           {
             "lingvo" : {
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "непрямий, опосередкований"
+            "teksto" : "опосередкований, непрямий"
           }
         ]
       }
@@ -771,7 +771,7 @@
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "zprostředkovat, prostředkovat, dohodit"
+            "teksto" : "dohodit, prostředkovat, zprostředkovat"
           },
           {
             "lingvo" : {
@@ -785,7 +785,7 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "procurer, fournir, faire avoir, s'entremettre"
+            "teksto" : "s'entremettre, faire avoir, fournir, procurer"
           },
           {
             "lingvo" : {
@@ -813,7 +813,7 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "取り次ぐ [とりつぐ], 仲介する [ちゅうかいする]"
+            "teksto" : "仲介する [ちゅうかいする], 取り次ぐ [とりつぐ]"
           },
           {
             "lingvo" : {
@@ -848,7 +848,7 @@
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "tlmočiť, sprostredkovať"
+            "teksto" : "sprostredkovať, tlmočiť"
           },
           {
             "lingvo" : {
@@ -879,7 +879,7 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "mediation, agency"
+            "teksto" : "agency, mediation"
           },
           {
             "lingvo" : {
@@ -900,7 +900,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "调停 [tiáotíng], 調停 [tiáotíng], 中介所 [zhōngjièsuǒ], 中介 [zhōngjiè]"
+            "teksto" : "中介 [zhōngjiè], 中介所 [zhōngjièsuǒ], 調停 [tiáotíng], 调停 [tiáotíng]"
           },
           {
             "lingvo" : {
@@ -928,14 +928,14 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "jószolgálat, közvetítés"
+            "teksto" : "közvetítés, jószolgálat"
           },
           {
             "lingvo" : {
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "取次 [とりつぎ], 仲介 [ちゅうかい]"
+            "teksto" : "仲介 [ちゅうかい], 取次 [とりつぎ]"
           },
           {
             "lingvo" : {
@@ -1001,28 +1001,28 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "mediator, intermediary, agent"
+            "teksto" : "agent, intermediary, mediator"
           },
           {
             "lingvo" : {
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "правайдар, пасярэднік"
+            "teksto" : "пасярэднік, правайдар"
           },
           {
             "lingvo" : {
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "zástupce, prostředník"
+            "teksto" : "prostředník, zástupce"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "调解人 [tiáojiěrén], 調解人 [tiáojiěrén], 调停人 [tiáotíngrén], 調停人 [tiáotíngrén], 介绍人 [jièshàorén], 介紹人 [jièshàorén], 仲介 [zhòngjiè], 调停者 [tiáotíngzhě], 調停者 [tiáotíngzhě], 经纪人 [jīngjìrén], 經紀人 [jīngjìrén], 中间人 [zhōngjiānrén], 中間人 [zhōngjiānrén], 中人 [zhōngrén], 媒 [méi]"
+            "teksto" : "媒 [méi], 中人 [zhōngrén], 中間人 [zhōngjiānrén], 中间人 [zhōngjiānrén], 經紀人 [jīngjìrén], 经纪人 [jīngjìrén], 調停者 [tiáotíngzhě], 调停者 [tiáotíngzhě], 仲介 [zhòngjiè], 介紹人 [jièshàorén], 介绍人 [jièshàorén], 調停人 [tiáotíngrén], 调停人 [tiáotíngrén], 調解人 [tiáojiěrén], 调解人 [tiáojiěrén]"
           },
           {
             "lingvo" : {
@@ -1036,7 +1036,7 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "Mittler, Vermittler"
+            "teksto" : "Vermittler, Mittler"
           },
           {
             "lingvo" : {
@@ -1057,28 +1057,28 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "取次者 [とりつぎしゃ], 仲介者 [ちゅうかいしゃ]"
+            "teksto" : "仲介者 [ちゅうかいしゃ], 取次者 [とりつぎしゃ]"
           },
           {
             "lingvo" : {
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "provider, bemiddelaar"
+            "teksto" : "bemiddelaar, provider"
           },
           {
             "lingvo" : {
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "faktor, pośrednik"
+            "teksto" : "pośrednik, faktor"
           },
           {
             "lingvo" : {
               "kodo" : "ro",
               "nomo" : "rumana"
             },
-            "teksto" : "factor, broker, misit"
+            "teksto" : "misit, broker, factor"
           },
           {
             "lingvo" : {
@@ -1092,7 +1092,7 @@
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "zástupca, prostredník"
+            "teksto" : "prostredník, zástupca"
           },
           {
             "lingvo" : {
@@ -1147,7 +1147,7 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "medium, instrument, means, agent, agency"
+            "teksto" : "agency, agent, means, instrument, medium"
           },
           {
             "lingvo" : {
@@ -1161,21 +1161,21 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "媒介 [méijiè], 介质 [jièzhì], 介質 [jièzhì], 中介 [zhōngjiè]"
+            "teksto" : "中介 [zhōngjiè], 介質 [jièzhì], 介质 [jièzhì], 媒介 [méijiè]"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "Vermittlung, Mittel"
+            "teksto" : "Mittel, Vermittlung"
           },
           {
             "lingvo" : {
               "kodo" : "es",
               "nomo" : "hispana"
             },
-            "teksto" : "medio, instrumento, agente, agencia"
+            "teksto" : "agencia, agente, instrumento, medio"
           },
           {
             "lingvo" : {
@@ -1189,7 +1189,7 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "媒体 [ばいたい], 手段 [しゅだん]"
+            "teksto" : "手段 [しゅだん], 媒体 [ばいたい]"
           },
           {
             "lingvo" : {
@@ -1227,7 +1227,7 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "by this agency, by this means"
+            "teksto" : "by this means, by this agency"
           },
           {
             "lingvo" : {
@@ -1241,7 +1241,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "特此 [tècǐ], 茲 [zī], 兹 [zī]"
+            "teksto" : "兹 [zī], 茲 [zī], 特此 [tècǐ]"
           },
           {
             "lingvo" : {
@@ -1269,14 +1269,14 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "w ten sposób, niniejszym"
+            "teksto" : "niniejszym, w ten sposób"
           },
           {
             "lingvo" : {
               "kodo" : "ro",
               "nomo" : "rumana"
             },
-            "teksto" : "în acest fel, prin aceasta"
+            "teksto" : "prin aceasta, în acest fel"
           }
         ]
       }
@@ -1300,28 +1300,28 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "agentless, independent, direct, unaided"
+            "teksto" : "unaided, direct, independent, agentless"
           },
           {
             "lingvo" : {
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "беспасярэдні, непасрэдны"
+            "teksto" : "непасрэдны, беспасярэдні"
           },
           {
             "lingvo" : {
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "přímý, bezprostřední"
+            "teksto" : "bezprostřední, přímý"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "直按 [zhíàn], 照直 [zhàozhí], 成方形 [chéngfāngxíng], 徑直 [jìngzhí], 径直 [jìngzhí], 直接 [zhíjiē], 逕直 [jìngzhí], 迳直 [jìngzhí]"
+            "teksto" : "迳直 [jìngzhí], 逕直 [jìngzhí], 直接 [zhíjiē], 径直 [jìngzhí], 徑直 [jìngzhí], 成方形 [chéngfāngxíng], 照直 [zhàozhí], 直按 [zhíàn]"
           },
           {
             "lingvo" : {
@@ -1349,7 +1349,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "direkt, közvetlen"
+            "teksto" : "közvetlen, direkt"
           },
           {
             "lingvo" : {
@@ -1363,14 +1363,14 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "direct, rechtstreeks"
+            "teksto" : "rechtstreeks, direct"
           },
           {
             "lingvo" : {
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "natychmiastowy, bezzwłoczny, bezpośredni"
+            "teksto" : "bezpośredni, bezzwłoczny, natychmiastowy"
           },
           {
             "lingvo" : {
@@ -1391,7 +1391,7 @@
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "priamy, bezprostredný"
+            "teksto" : "bezprostredný, priamy"
           },
           {
             "lingvo" : {
@@ -1405,7 +1405,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "прямий, безпосередній"
+            "teksto" : "безпосередній, прямий"
           }
         ]
       }
@@ -1429,77 +1429,77 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "unaidedly, independently, directly"
+            "teksto" : "directly, independently, unaidedly"
           },
           {
             "lingvo" : {
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "беспасярэдне, непасрэдна"
+            "teksto" : "непасрэдна, беспасярэдне"
           },
           {
             "lingvo" : {
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "přímo, bezprostředně"
+            "teksto" : "bezprostředně, přímo"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "迎面而来 [yíngmiànérlái], 迎面而來 [yíngmiànérlái], 直 [zhí], 一徑 [yījìng], 一径 [yījìng]"
+            "teksto" : "一径 [yījìng], 一徑 [yījìng], 直 [zhí], 迎面而來 [yíngmiànérlái], 迎面而来 [yíngmiànérlái]"
           },
           {
             "lingvo" : {
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "immédiatement (sans intermédiaire), directement"
+            "teksto" : "directement, immédiatement (sans intermédiaire)"
           },
           {
             "lingvo" : {
               "kodo" : "es",
               "nomo" : "hispana"
             },
-            "teksto" : "immediatamente (sin intermediario), directamente"
+            "teksto" : "directamente, immediatamente (sin intermediario)"
           },
           {
             "lingvo" : {
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "egyenesen, közvetlenül"
+            "teksto" : "közvetlenül, egyenesen"
           },
           {
             "lingvo" : {
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "じかに, 直接に [ちょくせつに]"
+            "teksto" : "直接に [ちょくせつに], じかに"
           },
           {
             "lingvo" : {
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "direct, rechtstreeks"
+            "teksto" : "rechtstreeks, direct"
           },
           {
             "lingvo" : {
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "wprost, bezpośrednio"
+            "teksto" : "bezpośrednio, wprost"
           },
           {
             "lingvo" : {
               "kodo" : "ro",
               "nomo" : "rumana"
             },
-            "teksto" : "imediat, explicit"
+            "teksto" : "explicit, imediat"
           },
           {
             "lingvo" : {
@@ -1513,7 +1513,7 @@
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "rovno, priamo, bezprostredne"
+            "teksto" : "bezprostredne, priamo, rovno"
           },
           {
             "lingvo" : {
@@ -1527,7 +1527,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "прямо, безпосередньо"
+            "teksto" : "безпосередньо, прямо"
           }
         ]
       }
@@ -1558,49 +1558,49 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "з дапамогай, праз"
+            "teksto" : "праз, з дапамогай"
           },
           {
             "lingvo" : {
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "prostřednictvím něčeho, něčím"
+            "teksto" : "něčím, prostřednictvím něčeho"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "藉著 [jièzhe], 藉着 [jièzhe], 憑靠 [píngkào], 凭靠 [píngkào], 憑借 [píngjiè], 凭借 [píngjiè], 藉由 [jièyóu]"
+            "teksto" : "藉由 [jièyóu], 凭借 [píngjiè], 憑借 [píngjiè], 凭靠 [píngkào], 憑靠 [píngkào], 藉着 [jièzhe], 藉著 [jièzhe]"
           },
           {
             "lingvo" : {
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "par l'intermédiaire de, au moyen de"
+            "teksto" : "au moyen de, par l'intermédiaire de"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "mit, mithilfe von, vermittels"
+            "teksto" : "vermittels, mithilfe von, mit"
           },
           {
             "lingvo" : {
               "kodo" : "es",
               "nomo" : "hispana"
             },
-            "teksto" : "a través de, por medio de, mediante"
+            "teksto" : "mediante, por medio de, a través de"
           },
           {
             "lingvo" : {
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "közvetítésével, révén, által"
+            "teksto" : "által, révén, közvetítésével"
           },
           {
             "lingvo" : {
@@ -1621,7 +1621,7 @@
               "kodo" : "ro",
               "nomo" : "rumana"
             },
-            "teksto" : "cu ajutorul, prin intermediul"
+            "teksto" : "prin intermediul, cu ajutorul"
           },
           {
             "lingvo" : {
@@ -1635,7 +1635,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "через, за допомогою"
+            "teksto" : "за допомогою, через"
           }
         ]
       }
@@ -1664,14 +1664,14 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "mit, mittels, per, durch"
+            "teksto" : "durch, per, mittels, mit"
           },
           {
             "lingvo" : {
               "kodo" : "es",
               "nomo" : "hispana"
             },
-            "teksto" : "por, con, por medio de"
+            "teksto" : "por medio de, con, por"
           },
           {
             "lingvo" : {

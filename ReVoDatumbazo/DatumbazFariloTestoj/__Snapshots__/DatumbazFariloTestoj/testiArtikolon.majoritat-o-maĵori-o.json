@@ -33,21 +33,21 @@
               "kodo" : "bg",
               "nomo" : "bulgara"
             },
-            "teksto" : "болшинство, мнозинство"
+            "teksto" : "мнозинство, болшинство"
           },
           {
             "lingvo" : {
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "většina, majorita"
+            "teksto" : "majorita, většina"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "大部分 [dàbùfen], 大部份 [dàbùfen], 多數 [duōshù], 多数 [duōshù], 大多數 [dàduōshù], 大多数 [dàduōshù]"
+            "teksto" : "大多数 [dàduōshù], 大多數 [dàduōshù], 多数 [duōshù], 多數 [duōshù], 大部份 [dàbùfen], 大部分 [dàbùfen]"
           },
           {
             "lingvo" : {
@@ -89,7 +89,7 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "マジョリティー, 多数派 [たすうは]"
+            "teksto" : "多数派 [たすうは], マジョリティー"
           },
           {
             "lingvo" : {
@@ -131,14 +131,14 @@
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "väčšina, majorita"
+            "teksto" : "majorita, väčšina"
           },
           {
             "lingvo" : {
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "більшість, повноліття"
+            "teksto" : "повноліття, більшість"
           }
         ]
       }

@@ -102,6 +102,7 @@ enum ArtikolTeksto {
 
 	/// Liveras tekston, ĝuste kiel ĝi aperu en artikolo, por ĉiuj tradukoj de unu lingvo
 	static func tradukTeksto(por tradukoj: [ArtikolTraduko]) -> String {
+		// TODO: Aldoni koloron al numeroj kaj transpasnomoj
 		var teksto = ""
 		
 		for (i, nuna) in tradukoj.enumerated() {

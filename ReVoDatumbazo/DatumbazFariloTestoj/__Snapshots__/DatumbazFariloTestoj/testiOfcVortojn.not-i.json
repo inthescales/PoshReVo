@@ -1,8 +1,14 @@
-{
-  "*" : [
+[
+  {
+    "indikilo" : "*",
+    "kodo" : "*",
+    "nomo" : "fundamento",
+    "vico" : 0
+  },
+  [
     {
       "indekso" : "not",
       "teksto" : "not\/i"
     }
   ]
-}
+]

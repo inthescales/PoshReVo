@@ -1,8 +1,14 @@
-{
-  "1" : [
+[
+  {
+    "indikilo" : "1",
+    "kodo" : "1",
+    "nomo" : "1a aldono",
+    "vico" : 1
+  },
+  [
     {
       "indekso" : "elips",
       "teksto" : "elips\/o"
     }
   ]
-}
+]

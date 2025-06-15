@@ -124,7 +124,7 @@ extension ArboAnalizilo {
 		// Eliras derivaĵon
 		stato.derivajhNomo = nil
 		stato.derivajhTildo = nil
-		stato.derivajhTradukoj = [:]
+		stato.forigiDerivajhTradukojn()
 		stato.lastaSenco = nil
 		
 		return blokoj

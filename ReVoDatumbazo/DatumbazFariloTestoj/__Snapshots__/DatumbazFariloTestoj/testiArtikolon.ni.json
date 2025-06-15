@@ -111,7 +111,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "tr. 我們 [wǒmen], 我们"
+            "teksto" : "我们, tr. 我們 [wǒmen]"
           },
           {
             "lingvo" : {
@@ -202,7 +202,7 @@
               "kodo" : "he",
               "nomo" : "hebrea"
             },
-            "teksto" : "אנחנו, אנו"
+            "teksto" : "אנו, אנחנו"
           },
           {
             "lingvo" : {
@@ -244,7 +244,7 @@
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "kita, kami"
+            "teksto" : "kami, kita"
           },
           {
             "lingvo" : {
@@ -272,7 +272,7 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "われわれ, 私たち [わたしたち]"
+            "teksto" : "私たち [わたしたち], われわれ"
           },
           {
             "lingvo" : {
@@ -321,7 +321,7 @@
               "kodo" : "kek",
               "nomo" : "kekĉia"
             },
-            "teksto" : "laaʼo, haʼo, aaʼo"
+            "teksto" : "aaʼo, haʼo, laaʼo"
           },
           {
             "lingvo" : {
@@ -671,7 +671,7 @@
               "kodo" : "tok",
               "nomo" : "tokipona"
             },
-            "teksto" : "mi mute (plurnombra), mi tu (dunombra), mi (ajnnombra)"
+            "teksto" : "mi (ajnnombra), mi tu (dunombra), mi mute (plurnombra)"
           },
           {
             "lingvo" : {
@@ -787,7 +787,7 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "наша, наш"
+            "teksto" : "наш, наша"
           },
           {
             "lingvo" : {
@@ -815,7 +815,7 @@
               "kodo" : "br",
               "nomo" : "bretona"
             },
-            "teksto" : "hor, hon, hol"
+            "teksto" : "hol, hon, hor"
           },
           {
             "lingvo" : {
@@ -829,7 +829,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "tr. 我們的 [wǒmende], 我们的"
+            "teksto" : "我们的, tr. 我們的 [wǒmende]"
           },
           {
             "lingvo" : {
@@ -864,7 +864,7 @@
               "kodo" : "fi",
               "nomo" : "finna"
             },
-            "teksto" : "-mme, meidän -mme, meidän"
+            "teksto" : "meidän, meidän -mme, -mme"
           },
           {
             "lingvo" : {
@@ -941,7 +941,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "miénk, mi -nk"
+            "teksto" : "mi -nk, miénk"
           },
           {
             "lingvo" : {
@@ -962,7 +962,7 @@
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "milik kita, milik kami"
+            "teksto" : "milik kami, milik kita"
           },
           {
             "lingvo" : {
@@ -990,7 +990,7 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "われわれの, 私たちの [わたしたちの]"
+            "teksto" : "私たちの [わたしたちの], われわれの"
           },
           {
             "lingvo" : {
@@ -1228,7 +1228,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "nasi, nasze, nasz"
+            "teksto" : "nasz, nasze, nasi"
           },
           {
             "lingvo" : {
@@ -1249,7 +1249,7 @@
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "наши, наше, наша, наш"
+            "teksto" : "наш, наша, наше, наши"
           },
           {
             "lingvo" : {
@@ -1368,7 +1368,7 @@
               "kodo" : "tok",
               "nomo" : "tokipona"
             },
-            "teksto" : "pi mi mute (plurnombra), pi mi tu (dunombra), mi (ajnnombra)"
+            "teksto" : "mi (ajnnombra), pi mi tu (dunombra), pi mi mute (plurnombra)"
           },
           {
             "lingvo" : {
@@ -1403,7 +1403,7 @@
               "kodo" : "vo",
               "nomo" : "volapuka"
             },
-            "teksto" : "obsa, obsik"
+            "teksto" : "obsik, obsa"
           },
           {
             "lingvo" : {

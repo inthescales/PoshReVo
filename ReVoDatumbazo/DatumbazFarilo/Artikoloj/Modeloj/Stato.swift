@@ -100,8 +100,19 @@ extension ArboAnalizilo {
 		// MARK: Tradukoj kaj vortlisteroj
 		
 		/// Ĝisnunaj ĉi-derivaĵaj tradukoj
-		var derivajhTradukoj: [String: [ArtikolTraduko]] = [:]
-		// TODO: Testi ĉu aro necesas, aŭ ĉu lingvoj havas nur unu traduko po derivaĵo
+		private var sensencajDerivajhTradukoj: [String: [ArtikolTraduko]] = [:]
+		private var sencajDerivajhTradukoj: [String: [ArtikolTraduko]] = [:]
+		private var transpasajDerivajhTradukoj: [String: [ArtikolTraduko]] = [:]
+		
+		var derivajhTradukoj: [String: [ArtikolTraduko]] {
+			sensencajDerivajhTradukoj
+				.merging(sencajDerivajhTradukoj) { malnovaj, novaj in
+					malnovaj + novaj
+				}
+				.merging(transpasajDerivajhTradukoj) { malnovaj, novaj in
+					malnovaj + novaj
+				}
+		}
 		
 		/// Ĉiuj jam-konstruitaj serĉtradukoj
 		var serchTradukoj: [String: [SerchTraduko]] = [:]
@@ -117,14 +128,22 @@ extension ArboAnalizilo {
 		
 		/// Aldonas serĉtradukon
 		func aldoni(derivajhTradukon traduko: ArtikolTraduko, lingvo: String) {
-			if derivajhTradukoj[lingvo] == nil { derivajhTradukoj[lingvo] = [] }
-			
-			if traduko.senco != nil {
-				derivajhTradukoj[lingvo]?.append(traduko)
+			if traduko.transpasNomo == true {
+				if transpasajDerivajhTradukoj[lingvo] == nil { transpasajDerivajhTradukoj[lingvo] = [] }
+				transpasajDerivajhTradukoj[lingvo]?.append(traduko)
+			} else if traduko.senco == nil {
+				if sensencajDerivajhTradukoj[lingvo] == nil { sensencajDerivajhTradukoj[lingvo] = [] }
+				sensencajDerivajhTradukoj[lingvo]?.append(traduko)
 			} else {
-				let indekso = derivajhTradukoj[lingvo]?.firstIndex(where: { $0.senco != nil }) ?? 0
-				derivajhTradukoj[lingvo]?.insert(traduko, at: indekso)
+				if sencajDerivajhTradukoj[lingvo] == nil { sencajDerivajhTradukoj[lingvo] = [] }
+				sencajDerivajhTradukoj[lingvo]?.append(traduko)
 			}
+		}
+		
+		func forigiDerivajhTradukojn() {
+			transpasajDerivajhTradukoj = [:]
+			sensencajDerivajhTradukoj = [:]
+			sencajDerivajhTradukoj = [:]
 		}
 		
 		/// Aldonas serĉtradukon

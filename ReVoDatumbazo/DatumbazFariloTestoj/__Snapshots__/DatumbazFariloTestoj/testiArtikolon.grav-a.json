@@ -27,28 +27,28 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "варты ўвагі, сур'ёзны, істотны, значны, важны"
+            "teksto" : "важны, значны, істотны, сур'ёзны, варты ўвагі"
           },
           {
             "lingvo" : {
               "kodo" : "bg",
               "nomo" : "bulgara"
             },
-            "teksto" : "съществен, важен"
+            "teksto" : "важен, съществен"
           },
           {
             "lingvo" : {
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "závažný, vážný, těžký (důležitý), povážlivý, hrubý (vážný), důležitý, důležitý"
+            "teksto" : "důležitý, důležitý, hrubý (vážný), povážlivý, těžký (důležitý), vážný, závažný"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "要 [yào], 重要 [zhōngyào], 有地位 [yǒudìwèi], 重 [zhòng]"
+            "teksto" : "重 [zhòng], 有地位 [yǒudìwèi], 重要 [zhōngyào], 要 [yào]"
           },
           {
             "lingvo" : {
@@ -62,7 +62,7 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "bedeutend, wichtig"
+            "teksto" : "wichtig, bedeutend"
           },
           {
             "lingvo" : {
@@ -90,7 +90,7 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "深刻な [しんこくな], 重大な [じゅうだいな], 重要な [じゅうような]"
+            "teksto" : "重要な [じゅうような], 重大な [じゅうだいな], 深刻な [しんこくな]"
           },
           {
             "lingvo" : {
@@ -104,28 +104,28 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "serio (pot.), doniosły, znaczący, znaczny, istotny, ważny"
+            "teksto" : "ważny, istotny, znaczny, znaczący, doniosły, serio (pot.)"
           },
           {
             "lingvo" : {
               "kodo" : "pt",
               "nomo" : "portugala"
             },
-            "teksto" : "importante, grave"
+            "teksto" : "grave, importante"
           },
           {
             "lingvo" : {
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "существенный, серьёзный, значительный, важный"
+            "teksto" : "важный, значительный, серьёзный, существенный"
           },
           {
             "lingvo" : {
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "závažný, vážny, povážlivý, dôležitý"
+            "teksto" : "dôležitý, povážlivý, vážny, závažný"
           },
           {
             "lingvo" : {
@@ -153,7 +153,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "поважний, серйозний, значущий, значний, важливий"
+            "teksto" : "важливий, значний, значущий, серйозний, поважний"
           }
         ]
       }
@@ -177,14 +177,14 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "сур'ёзна, істотна, значна, важна"
+            "teksto" : "важна, значна, істотна, сур'ёзна"
           },
           {
             "lingvo" : {
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "vážně, těžce, důležitě"
+            "teksto" : "důležitě, těžce, vážně"
           },
           {
             "lingvo" : {
@@ -198,28 +198,28 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "gravierend, bedeutend, wichtig"
+            "teksto" : "wichtig, bedeutend, gravierend"
           },
           {
             "lingvo" : {
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "komolyan, súlyosan, fontosan"
+            "teksto" : "fontosan, súlyosan, komolyan"
           },
           {
             "lingvo" : {
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "重く [おもく], ひどく"
+            "teksto" : "ひどく, 重く [おもく]"
           },
           {
             "lingvo" : {
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "serio (pot.), doniośle, znacząco, znacznie, istotnie, ważnie"
+            "teksto" : "ważnie, istotnie, znacznie, znacząco, doniośle, serio (pot.)"
           },
           {
             "lingvo" : {
@@ -233,14 +233,14 @@
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "серьёзно, значительно, важно"
+            "teksto" : "важно, значительно, серьёзно"
           },
           {
             "lingvo" : {
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "vážne, dôležito"
+            "teksto" : "dôležito, vážne"
           },
           {
             "lingvo" : {
@@ -254,7 +254,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "поважно, серйозно, важливо"
+            "teksto" : "важливо, серйозно, поважно"
           }
         ]
       }
@@ -285,7 +285,7 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "значыць, быць важным"
+            "teksto" : "быць важным, значыць"
           },
           {
             "lingvo" : {
@@ -334,7 +334,7 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "重要である [じゅうようである], 重大である [じゅうだいである]"
+            "teksto" : "重大である [じゅうだいである], 重要である [じゅうようである]"
           },
           {
             "lingvo" : {
@@ -348,21 +348,21 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "być serio (pot.), być doniosłe, mieć znaczenie, być znaczącym, być znacznym, być istotnym, być ważnym"
+            "teksto" : "być ważnym, być istotnym, być znacznym, być znaczącym, mieć znaczenie, być doniosłe, być serio (pot.)"
           },
           {
             "lingvo" : {
               "kodo" : "pt",
               "nomo" : "portugala"
             },
-            "teksto" : "ser importante, importar (ter valor)"
+            "teksto" : "importar (ter valor), ser importante"
           },
           {
             "lingvo" : {
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "иметь значение, быть важным"
+            "teksto" : "быть важным, иметь значение"
           },
           {
             "lingvo" : {
@@ -376,14 +376,14 @@
               "kodo" : "sv",
               "nomo" : "sveda"
             },
-            "teksto" : "spela roll, vara viktig"
+            "teksto" : "vara viktig, spela roll"
           },
           {
             "lingvo" : {
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "бути важливим, мати значення"
+            "teksto" : "мати значення, бути важливим"
           }
         ]
       }
@@ -407,14 +407,14 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "падкрэсьліваць важнасьць, надаваць значэньне"
+            "teksto" : "надаваць значэньне, падкрэсьліваць важнасьць"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "注重 [zhùzhòng], 強調指出 [qiángdiàozhǐchū]"
+            "teksto" : "強調指出 [qiángdiàozhǐchū], 注重 [zhùzhòng]"
           },
           {
             "lingvo" : {
@@ -435,14 +435,14 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "より深刻化する [よりしんこくかする], いっそう重大化する [いっそうじゅうだいかする]"
+            "teksto" : "いっそう重大化する [いっそうじゅうだいかする], より深刻化する [よりしんこくかする]"
           },
           {
             "lingvo" : {
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "робити значущим, робити важливим, надаватизначущості, надавативажливості, надавати значення"
+            "teksto" : "надавати значення, надавативажливості, надаватизначущості, робити важливим, робити значущим"
           }
         ]
       }
@@ -473,98 +473,98 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "каштоўнасьць, важнасьць"
+            "teksto" : "важнасьць, каштоўнасьць"
           },
           {
             "lingvo" : {
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "závažnost, důležitost"
+            "teksto" : "důležitost, závažnost"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "涉 [shè], 关照 [guānzhào], 重要性 [zhòngyàoxìng], 眷 [juàn], 輕重 [qīngzhòng], 意函 [yìhán], 要紧 [yàojǐn]"
+            "teksto" : "要紧 [yàojǐn], 意函 [yìhán], 輕重 [qīngzhòng], 眷 [juàn], 重要性 [zhòngyàoxìng], 关照 [guānzhào], 涉 [shè]"
           },
           {
             "lingvo" : {
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "importance, gravité"
+            "teksto" : "gravité, importance"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "Bedeutung, Wichtigkeit"
+            "teksto" : "Wichtigkeit, Bedeutung"
           },
           {
             "lingvo" : {
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "jelentősség, fontosság"
+            "teksto" : "fontosság, jelentősség"
           },
           {
             "lingvo" : {
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "kepentingan, pentingnya"
+            "teksto" : "pentingnya, kepentingan"
           },
           {
             "lingvo" : {
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "重大さ [じゅうだいさ], 重要性 [じゅうようせい]"
+            "teksto" : "重要性 [じゅうようせい], 重大さ [じゅうだいさ]"
           },
           {
             "lingvo" : {
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "betekenis (belang), belang, belangrijkheid"
+            "teksto" : "belangrijkheid, belang, betekenis (belang)"
           },
           {
             "lingvo" : {
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "doniosłość, znaczenia, istota, waga"
+            "teksto" : "waga, istota, znaczenia, doniosłość"
           },
           {
             "lingvo" : {
               "kodo" : "pt",
               "nomo" : "portugala"
             },
-            "teksto" : "importância (adj.), gravidade (adj.)"
+            "teksto" : "gravidade (adj.), importância (adj.)"
           },
           {
             "lingvo" : {
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "значительность, важность"
+            "teksto" : "важность, значительность"
           },
           {
             "lingvo" : {
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "závažnosť, dôležitosť"
+            "teksto" : "dôležitosť, závažnosť"
           },
           {
             "lingvo" : {
               "kodo" : "sv",
               "nomo" : "sveda"
             },
-            "teksto" : "betydelse, viktighet"
+            "teksto" : "viktighet, betydelse"
           },
           {
             "lingvo" : {
@@ -578,7 +578,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "серйозність, значущість, важливість"
+            "teksto" : "важливість, значущість, серйозність"
           }
         ]
       }
@@ -609,7 +609,7 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "ВІП, важная асоба"
+            "teksto" : "важная асоба, ВІП"
           },
           {
             "lingvo" : {
@@ -623,14 +623,14 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "Würdenträger, Entscheider, Berühmtheit, wichtige Persönlichkeit"
+            "teksto" : "wichtige Persönlichkeit, Berühmtheit, Entscheider, Würdenträger"
           },
           {
             "lingvo" : {
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "VIP, naratama, orang penting"
+            "teksto" : "orang penting, naratama, VIP"
           },
           {
             "lingvo" : {
@@ -644,7 +644,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "поважний чин, поважна особа"
+            "teksto" : "поважна особа, поважний чин"
           }
         ]
       }
@@ -675,56 +675,56 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "нязначны, неістотны, няважны"
+            "teksto" : "няважны, неістотны, нязначны"
           },
           {
             "lingvo" : {
               "kodo" : "cs",
               "nomo" : "ĉeĥa"
             },
-            "teksto" : "lehký, bezvýznamný"
+            "teksto" : "bezvýznamný, lehký"
           },
           {
             "lingvo" : {
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "无几 [wújǐ], 无关紧要 [wúguānjǐnyào], 小可 [xiǎokě], 无意义 [wúyìyì], 可忽視 [kěhūshì]"
+            "teksto" : "可忽視 [kěhūshì], 无意义 [wúyìyì], 小可 [xiǎokě], 无关紧要 [wúguānjǐnyào], 无几 [wújǐ]"
           },
           {
             "lingvo" : {
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "insignifiant, sans importance, bénin, anodin"
+            "teksto" : "anodin, bénin, sans importance, insignifiant"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "bedeutungslos, unwichtig"
+            "teksto" : "unwichtig, bedeutungslos"
           },
           {
             "lingvo" : {
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "bagatell, jelentéktelen, lényegtelen"
+            "teksto" : "lényegtelen, jelentéktelen, bagatell"
           },
           {
             "lingvo" : {
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "sepele, remeh"
+            "teksto" : "remeh, sepele"
           },
           {
             "lingvo" : {
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "取るに足りない [とるにたりない], ささいな"
+            "teksto" : "ささいな, 取るに足りない [とるにたりない]"
           },
           {
             "lingvo" : {
@@ -738,35 +738,35 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "nieznaczący, nieznaczny, nieistotny, nieważny"
+            "teksto" : "nieważny, nieistotny, nieznaczny, nieznaczący"
           },
           {
             "lingvo" : {
               "kodo" : "pt",
               "nomo" : "portugala"
             },
-            "teksto" : "fútil, sem importância"
+            "teksto" : "sem importância, fútil"
           },
           {
             "lingvo" : {
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "несущественный, незначительный, неважный"
+            "teksto" : "неважный, незначительный, несущественный"
           },
           {
             "lingvo" : {
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "nedôležitý, bezvýznamný"
+            "teksto" : "bezvýznamný, nedôležitý"
           },
           {
             "lingvo" : {
               "kodo" : "sv",
               "nomo" : "sveda"
             },
-            "teksto" : "betydelselös, oviktig"
+            "teksto" : "oviktig, betydelselös"
           },
           {
             "lingvo" : {
@@ -780,7 +780,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "дріб’язковий, дрібний, неважливий"
+            "teksto" : "неважливий, дрібний, дріб’язковий"
           }
         ]
       }
@@ -804,14 +804,14 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "peanut, trifle"
+            "teksto" : "trifle, peanut"
           },
           {
             "lingvo" : {
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "пусьцяковіна, драбніца, дробязь"
+            "teksto" : "дробязь, драбніца, пусьцяковіна"
           },
           {
             "lingvo" : {
@@ -825,28 +825,28 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "broutille, bagatelle"
+            "teksto" : "bagatelle, broutille"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "Bagatelle, Nebensächlichkeit"
+            "teksto" : "Nebensächlichkeit, Bagatelle"
           },
           {
             "lingvo" : {
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "csekélység, bagatell dolog, potomság"
+            "teksto" : "potomság, bagatell dolog, csekélység"
           },
           {
             "lingvo" : {
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "tetek bengek, hal remeh, hal sepele"
+            "teksto" : "hal sepele, hal remeh, tetek bengek"
           },
           {
             "lingvo" : {
@@ -860,14 +860,14 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "iets onbelangrijks, futiliteit, kleinigheid, bagatel"
+            "teksto" : "bagatel, kleinigheid, futiliteit, iets onbelangrijks"
           },
           {
             "lingvo" : {
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "bagatela, błahostka, drobiazg"
+            "teksto" : "drobiazg, błahostka, bagatela"
           },
           {
             "lingvo" : {
@@ -881,7 +881,7 @@
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "пустяк, мелочь"
+            "teksto" : "мелочь, пустяк"
           },
           {
             "lingvo" : {
@@ -895,7 +895,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "дріб’язок, дрібниця, дріб’язкова справа, неважлива річ"
+            "teksto" : "неважлива річ, дріб’язкова справа, дрібниця, дріб’язок"
           }
         ]
       }
@@ -919,14 +919,14 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "understate, downplay"
+            "teksto" : "downplay, understate"
           },
           {
             "lingvo" : {
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "прадстаўляць няважным, прыніжаць значэньне"
+            "teksto" : "прыніжаць значэньне, прадстаўляць няважным"
           },
           {
             "lingvo" : {
@@ -947,14 +947,14 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "minorer (l'importance de), minimiser"
+            "teksto" : "minimiser, minorer (l'importance de)"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "abwinken, kleinreden, herunterspielen"
+            "teksto" : "herunterspielen, kleinreden, abwinken"
           },
           {
             "lingvo" : {
@@ -968,7 +968,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "pozbawiać ważności, pozbawiać znaczenia, marginalizować, bagatelizować, umniejszać wagę, znaczenie (czegoś)"
+            "teksto" : "umniejszać wagę, znaczenie (czegoś), bagatelizować, marginalizować, pozbawiać znaczenia, pozbawiać ważności"
           },
           {
             "lingvo" : {
@@ -989,7 +989,7 @@
               "kodo" : "uk",
               "nomo" : "ukraina"
             },
-            "teksto" : "применшувати вагу, применшувати значення"
+            "teksto" : "применшувати значення, применшувати вагу"
           }
         ]
       }
@@ -1027,35 +1027,35 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "herunterspielen, untertreiben"
+            "teksto" : "untertreiben, herunterspielen"
           },
           {
             "lingvo" : {
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "lekicsinyel, (el)bagatelizál"
+            "teksto" : "(el)bagatelizál, lekicsinyel"
           },
           {
             "lingvo" : {
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "酌量する [しゃくりょうする], 軽く見なす [かるくみなす]"
+            "teksto" : "軽く見なす [かるくみなす], 酌量する [しゃくりょうする]"
           },
           {
             "lingvo" : {
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "futiliseren, bagatelliseren, minimaliseren"
+            "teksto" : "minimaliseren, bagatelliseren, futiliseren"
           },
           {
             "lingvo" : {
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "marginalizować, bagatelizować, umniejszać wagę, znaczenie (czegoś)"
+            "teksto" : "umniejszać wagę, znaczenie (czegoś), bagatelizować, marginalizować"
           },
           {
             "lingvo" : {
@@ -1069,7 +1069,7 @@
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "облегчить, уменьшить"
+            "teksto" : "уменьшить, облегчить"
           }
         ]
       }
@@ -1093,7 +1093,7 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "essential, existential"
+            "teksto" : "existential, essential"
           },
           {
             "lingvo" : {
@@ -1114,7 +1114,7 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "vital, existenciel, essentiel"
+            "teksto" : "essentiel, existenciel, vital"
           },
           {
             "lingvo" : {
@@ -1128,14 +1128,14 @@
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "vital, hakiki, esensial"
+            "teksto" : "esensial, hakiki, vital"
           },
           {
             "lingvo" : {
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "egzystencjalny, życiowy"
+            "teksto" : "życiowy, egzystencjalny"
           }
         ]
       }

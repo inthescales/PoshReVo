@@ -1,8 +1,13 @@
-{
-  "n" : [
+[
+  {
+    "kodo" : "n",
+    "nomo" : "neoficialaj",
+    "vico" : 12
+  },
+  [
     {
       "indekso" : "majoritat",
       "teksto" : "majoritat\/o, maĵori\/o"
     }
   ]
-}
+]

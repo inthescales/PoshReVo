@@ -40,7 +40,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "格奧爾格歐姆 [géàoěrgéōumǔ], 格奥尔格欧姆 [géàoěrgéōumǔ], 喬治西蒙歐姆 [qiáozhìxīméngōumǔ], 乔治西蒙欧姆 [qiáozhìxīméngōumǔ]"
+            "teksto" : "乔治西蒙欧姆 [qiáozhìxīméngōumǔ], 喬治西蒙歐姆 [qiáozhìxīméngōumǔ], 格奥尔格欧姆 [géàoěrgéōumǔ], 格奧爾格歐姆 [géàoěrgéōumǔ]"
           },
           {
             "lingvo" : {
@@ -148,7 +148,7 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "ом, ом (адзінка вымярэньня)"
+            "teksto" : "ом (адзінка вымярэньня), ом"
           },
           {
             "lingvo" : {
@@ -162,7 +162,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "歐姆 [ōumǔ], 欧姆 [ōumǔ]"
+            "teksto" : "欧姆 [ōumǔ], 歐姆 [ōumǔ]"
           },
           {
             "lingvo" : {

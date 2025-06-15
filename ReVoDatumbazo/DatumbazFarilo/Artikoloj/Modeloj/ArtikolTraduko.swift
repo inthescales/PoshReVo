@@ -16,6 +16,6 @@ struct ArtikolTraduko {
 	/// Subsenco al kiu la traduko apartenas, se estas.
 	let subsenco: Int?
 	
-	/// Ĉu transpasa nomo uziĝas (ekz. je tradukoj ene de ekzemplot).
+	/// Ĉu transpasa nomo uziĝas (ekz. je tradukoj ene de ekzemploj).
 	let transpasNomo: Bool
 }
