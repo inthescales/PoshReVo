@@ -102,14 +102,10 @@ extension ArboAnalizilo {
 		/// Ĝisnunaj ĉi-derivaĵaj tradukoj
 		private var sensencajDerivajhTradukoj: [String: [ArtikolTraduko]] = [:]
 		private var sencajDerivajhTradukoj: [String: [ArtikolTraduko]] = [:]
-		private var transpasajDerivajhTradukoj: [String: [ArtikolTraduko]] = [:]
 		
 		var derivajhTradukoj: [String: [ArtikolTraduko]] {
 			sensencajDerivajhTradukoj
 				.merging(sencajDerivajhTradukoj) { malnovaj, novaj in
-					malnovaj + novaj
-				}
-				.merging(transpasajDerivajhTradukoj) { malnovaj, novaj in
 					malnovaj + novaj
 				}
 		}
@@ -128,10 +124,7 @@ extension ArboAnalizilo {
 		
 		/// Aldonas serĉtradukon
 		func aldoni(derivajhTradukon traduko: ArtikolTraduko, lingvo: String) {
-			if traduko.transpasNomo == true {
-				if transpasajDerivajhTradukoj[lingvo] == nil { transpasajDerivajhTradukoj[lingvo] = [] }
-				transpasajDerivajhTradukoj[lingvo]?.append(traduko)
-			} else if traduko.senco == nil {
+			if traduko.senco == nil {
 				if sensencajDerivajhTradukoj[lingvo] == nil { sensencajDerivajhTradukoj[lingvo] = [] }
 				sensencajDerivajhTradukoj[lingvo]?.append(traduko)
 			} else {
@@ -141,7 +134,6 @@ extension ArboAnalizilo {
 		}
 		
 		func forigiDerivajhTradukojn() {
-			transpasajDerivajhTradukoj = [:]
 			sensencajDerivajhTradukoj = [:]
 			sencajDerivajhTradukoj = [:]
 		}

@@ -109,12 +109,15 @@ enum ArtikolTeksto {
 			let lasta = (i > 0) ? tradukoj[i-1]: nil
 						
 			var montriSencon = false
+			var montriNomon = false
 			
 			// Montri sencon se 1. la nuna traduko havas malsaman sencon ol lasta,
 			// aŭ 2. la nuna traduko havas malsaman sencon ol iu ajn venonta.
 			// - 2. necesas por ke tradukoj de la unua senco montru senc-numeron,
 			// - 1. necesas por ke tradukoj sekvanta sensencan tradukon montru ĝin
-			if nuna.senco != nil {
+			if nuna.transpasNomo == true && lasta?.nomo != nuna.nomo {
+				montriNomon = true
+			} else if nuna.senco != nil {
 				if let lasta,
 				   nuna.senco != lasta.senco {
 					montriSencon = true
@@ -132,7 +135,17 @@ enum ArtikolTeksto {
 				}
 			}
 			
-			if let lasta,
+			if montriNomon {
+				teksto += " · " + nuna.nomo + ": "
+			} else if let lasta,
+					  lasta.transpasNomo == true,
+					  lasta.nomo != nuna.nomo,
+					  !montriSencon {
+				// Aldoni punkton se la antaŭa traduko montris transpasan nomon, kiuj estas
+				// alia ol la nuna nomo, kaj ni ne montros senc-numeron.
+				// Mi jam ne renkontis ekzemplon de ĉi-situacio, tamen jen mia preparaĵo
+				teksto += " · "
+			} else if let lasta,
 				lasta.nomo == nuna.nomo
 				&& lasta.senco == nuna.senco
 				&& lasta.subsenco == nuna.subsenco {

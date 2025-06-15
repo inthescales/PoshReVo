@@ -55,7 +55,7 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "important, grave, gros (important), marquant 1. chose importante"
+            "teksto" : "important, grave, gros (important), marquant · ~aĵo: chose importante"
           },
           {
             "lingvo" : {
@@ -76,14 +76,14 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "fontos, súlyos (átv.) 1. fontos dolog"
+            "teksto" : "fontos, súlyos (átv.) · ~aĵo: fontos dolog"
           },
           {
             "lingvo" : {
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "penting 1. hal penting"
+            "teksto" : "penting · ~aĵo: hal penting"
           },
           {
             "lingvo" : {
@@ -97,7 +97,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "belangrijk, gewichtig, aanzienlijk 1. iets belangrijks"
+            "teksto" : "belangrijk, gewichtig, aanzienlijk · ~aĵo: iets belangrijks"
           },
           {
             "lingvo" : {
@@ -299,14 +299,14 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "importer, compter (importer), convenir (de), falloir, être grave, peser (importer) 1. mais ça ne fait rien, mais peu importe"
+            "teksto" : "importer, compter (importer), convenir (de), falloir, être grave, peser (importer) · …ne ~as: mais ça ne fait rien, mais peu importe"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "wichtig sein, bedeutend sein 1. aber das macht nichts"
+            "teksto" : "wichtig sein, bedeutend sein · …ne ~as: aber das macht nichts"
           },
           {
             "lingvo" : {
@@ -320,7 +320,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "fontos 1. de ez egyáltalán nem fontos"
+            "teksto" : "fontos · …ne ~as: de ez egyáltalán nem fontos"
           },
           {
             "lingvo" : {
@@ -341,7 +341,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "belangrijk zijn, gewichtig zijn 1. maar dat is niet erg"
+            "teksto" : "belangrijk zijn, gewichtig zijn · …ne ~as: maar dat is niet erg"
           },
           {
             "lingvo" : {

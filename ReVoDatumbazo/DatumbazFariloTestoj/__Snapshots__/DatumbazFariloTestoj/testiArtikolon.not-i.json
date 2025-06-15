@@ -199,7 +199,7 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "1. нататка, заўвага, зацемка 2. нота 3. адзнака 2. фальшывая нота"
+            "teksto" : "1. нататка, заўвага, зацемка · falsa ~o: фальшывая нота 2. нота 3. адзнака"
           },
           {
             "lingvo" : {
@@ -325,7 +325,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "1. feljegyzés, megjegyzés, jegyzet 2.a hangjegy 2.b tónus 3. érdemjegy, osztályzat 2. hamis hang"
+            "teksto" : "1. feljegyzés, megjegyzés, jegyzet · falsa ~o: hamis hang 2.a hangjegy 2.b tónus 3. érdemjegy, osztályzat"
           },
           {
             "lingvo" : {
@@ -542,7 +542,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "1. aantekening, noot, notitie 2.a noot, muzieknoot 2.b noot 3. (school)cijfer, beoordeling (m.n. van leerlingen) 2. valse noot"
+            "teksto" : "1. aantekening, noot, notitie · falsa ~o: valse noot 2.a noot, muzieknoot 2.b noot 3. (school)cijfer, beoordeling (m.n. van leerlingen)"
           },
           {
             "lingvo" : {
@@ -584,7 +584,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "1. notatka, notka, adnotacja, dopisek, zapis, zapisek 2.a nuta 2.b nuta 3. nota, ocena, stopień 2. fałszywa nuta"
+            "teksto" : "1. notatka, notka, adnotacja, dopisek, zapis, zapisek · falsa ~o: fałszywa nuta 2.a nuta 2.b nuta 3. nota, ocena, stopień"
           },
           {
             "lingvo" : {
@@ -605,7 +605,7 @@
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "1. заметка, примечание 2.b нота 2. нота (музыкальная) 3. оценка, отметка 2. фальшивая нота"
+            "teksto" : "1. заметка, примечание · falsa ~o: фальшивая нота 2.b нота 2. нота (музыкальная) 3. оценка, отметка"
           },
           {
             "lingvo" : {
