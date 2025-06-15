@@ -45,6 +45,7 @@ final class StiloElektiloViewController: UIViewController {
 	override func viewDidLoad() {
 		navigationController?.navigationBar.tintColor = stilo.surkoloraTeksto
 		navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.iksoButono(
+			por: self,
 			ago: #selector(premisIkson),
 			stilo: stilo
 		)

@@ -156,11 +156,11 @@ final class ArtikoloViewController: UIViewController {
 		
 		navigationItem.rightBarButtonItem = lupeoButono
 		
-		let butono = UIButton(type: .system)
-		butono.addTarget(self, action: #selector(premisHejmon), for: .touchUpInside)
-		butono.setImage(UIImage(named: "libro")!, for: .normal)
-		butono.tintColor = stilo.senkoloraFono
-		navigationItem.titleView = butono
+		navigationItem.titleView = NavigaciiloHelpiloj.hejmoButono(
+			por: self,
+			ago: #selector(premisHejmon),
+			stilo: stilo
+		)
 		
 		NotificationCenter.default.addObserver(
 			self,
