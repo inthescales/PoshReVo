@@ -48,7 +48,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "1. 記下 [jìxià], 记下 [jìxià], 开价 [kāijià], 開價 [kāijià] 2. 注 [zhù], 註 [zhù]"
+            "teksto" : "<traduknumero>1.<\/traduknumero> 記下 [jìxià], 记下 [jìxià], 开价 [kāijià], 開價 [kāijià] <traduknumero>2.<\/traduknumero> 注 [zhù], 註 [zhù]"
           },
           {
             "lingvo" : {
@@ -62,7 +62,7 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "1. notieren, vermerken 2. merken"
+            "teksto" : "<traduknumero>1.<\/traduknumero> notieren, vermerken <traduknumero>2.<\/traduknumero> merken"
           },
           {
             "lingvo" : {
@@ -76,14 +76,14 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "1. feljegyez, lejegyez 2. megjegyez"
+            "teksto" : "<traduknumero>1.<\/traduknumero> feljegyez, lejegyez <traduknumero>2.<\/traduknumero> megjegyez"
           },
           {
             "lingvo" : {
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "1. メモする [めもする], 覚書する [おぼえがきする] 2. 記憶に留める [きおくにとどめる], 気に留める [きにとどめる]"
+            "teksto" : "<traduknumero>1.<\/traduknumero> メモする [めもする], 覚書する [おぼえがきする] <traduknumero>2.<\/traduknumero> 記憶に留める [きおくにとどめる], 気に留める [きにとどめる]"
           },
           {
             "lingvo" : {
@@ -97,7 +97,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "1. notować, robić notatki 2. notować, zanotować"
+            "teksto" : "<traduknumero>1.<\/traduknumero> notować, robić notatki <traduknumero>2.<\/traduknumero> notować, zanotować"
           },
           {
             "lingvo" : {
@@ -171,7 +171,7 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "1. note 2. note 3. (school) grade, mark (e.g. at school)"
+            "teksto" : "<traduknumero>1.<\/traduknumero> note <traduknumero>2.<\/traduknumero> note <traduknumero>3.<\/traduknumero> (school) grade, mark (e.g. at school)"
           },
           {
             "lingvo" : {
@@ -199,7 +199,7 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "1. нататка, заўвага, зацемка · falsa ~o: фальшывая нота 2. нота 3. адзнака"
+            "teksto" : "<traduknumero>1.<\/traduknumero> нататка, заўвага, зацемка<traduknumero> · falsa ~o: <\/traduknumero>фальшывая нота <traduknumero>2.<\/traduknumero> нота <traduknumero>3.<\/traduknumero> адзнака"
           },
           {
             "lingvo" : {
@@ -234,7 +234,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "1. 手記 [shǒujì], 手记 [shǒujì], 便条 [biàntiáo], 便條 [biàntiáo], 方便貼 [fāngbiàntiē], 方便贴 [fāngbiàntiē], 備忘錄 [bèiwànglù], 备忘录 [bèiwànglù], 便笺 [biànjiān], 便箋 [biànjiān] 2. 声调 [shēngdiào], 聲調 [shēngdiào] 3. 評分 [píngfēn], 评分 [píngfēn], 比分 [bǐfēn], 成績 [chéngjì], 成绩 [chéngjì]"
+            "teksto" : "<traduknumero>1.<\/traduknumero> 手記 [shǒujì], 手记 [shǒujì], 便条 [biàntiáo], 便條 [biàntiáo], 方便貼 [fāngbiàntiē], 方便贴 [fāngbiàntiē], 備忘錄 [bèiwànglù], 备忘录 [bèiwànglù], 便笺 [biànjiān], 便箋 [biànjiān] <traduknumero>2.<\/traduknumero> 声调 [shēngdiào], 聲調 [shēngdiào] <traduknumero>3.<\/traduknumero> 評分 [píngfēn], 评分 [píngfēn], 比分 [bǐfēn], 成績 [chéngjì], 成绩 [chéngjì]"
           },
           {
             "lingvo" : {
@@ -283,7 +283,7 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "1. Vermerk, Notiz 2.b Note 2. Note 3. Note (z. B. in der Schule), Schulnote"
+            "teksto" : "<traduknumero>1.<\/traduknumero> Vermerk, Notiz <traduknumero>2.b<\/traduknumero> Note <traduknumero>2.<\/traduknumero> Note <traduknumero>3.<\/traduknumero> Note (z. B. in der Schule), Schulnote"
           },
           {
             "lingvo" : {
@@ -325,7 +325,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "1. feljegyzés, megjegyzés, jegyzet 2.a hangjegy · falsa ~o: hamis hang 2.b tónus 3. érdemjegy, osztályzat"
+            "teksto" : "<traduknumero>1.<\/traduknumero> feljegyzés, megjegyzés, jegyzet <traduknumero>2.a<\/traduknumero> hangjegy<traduknumero> · falsa ~o: <\/traduknumero>hamis hang <traduknumero>2.b<\/traduknumero> tónus <traduknumero>3.<\/traduknumero> érdemjegy, osztályzat"
           },
           {
             "lingvo" : {
@@ -353,7 +353,7 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "1. メモ [めも], 覚書 [おぼえがき], 注釈 [ちゅうしゃく] 2. 音符 [おんぷ] 3. (学業の)成績 [せいせき], (学業の)評点 [ひょうてん], (テストの)点数 [てんすう]"
+            "teksto" : "<traduknumero>1.<\/traduknumero> メモ [めも], 覚書 [おぼえがき], 注釈 [ちゅうしゃく] <traduknumero>2.<\/traduknumero> 音符 [おんぷ] <traduknumero>3.<\/traduknumero> (学業の)成績 [せいせき], (学業の)評点 [ひょうてん], (テストの)点数 [てんすう]"
           },
           {
             "lingvo" : {
@@ -542,7 +542,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "1. aantekening, noot, notitie 2.a noot, muzieknoot · falsa ~o: valse noot 2.b noot 3. (school)cijfer, beoordeling (m.n. van leerlingen)"
+            "teksto" : "<traduknumero>1.<\/traduknumero> aantekening, noot, notitie <traduknumero>2.a<\/traduknumero> noot, muzieknoot<traduknumero> · falsa ~o: <\/traduknumero>valse noot <traduknumero>2.b<\/traduknumero> noot <traduknumero>3.<\/traduknumero> (school)cijfer, beoordeling (m.n. van leerlingen)"
           },
           {
             "lingvo" : {
@@ -584,7 +584,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "1. notatka, notka, adnotacja, dopisek, zapis, zapisek 2.a nuta · falsa ~o: fałszywa nuta 2.b nuta 3. nota, ocena, stopień"
+            "teksto" : "<traduknumero>1.<\/traduknumero> notatka, notka, adnotacja, dopisek, zapis, zapisek <traduknumero>2.a<\/traduknumero> nuta<traduknumero> · falsa ~o: <\/traduknumero>fałszywa nuta <traduknumero>2.b<\/traduknumero> nuta <traduknumero>3.<\/traduknumero> nota, ocena, stopień"
           },
           {
             "lingvo" : {
@@ -605,7 +605,7 @@
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "1. заметка, примечание · falsa ~o: фальшивая нота 2.b нота 2. нота (музыкальная) 3. оценка, отметка"
+            "teksto" : "<traduknumero>1.<\/traduknumero> заметка, примечание<traduknumero> · falsa ~o: <\/traduknumero>фальшивая нота <traduknumero>2.b<\/traduknumero> нота <traduknumero>2.<\/traduknumero> нота (музыкальная) <traduknumero>3.<\/traduknumero> оценка, отметка"
           },
           {
             "lingvo" : {

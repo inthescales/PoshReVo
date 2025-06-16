@@ -109,7 +109,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "藉着 [jièzhe], 藉著 [jièzhe], 以心 [yǐxīn] 6. 藉由 [jièyóu]"
+            "teksto" : "藉着 [jièzhe], 藉著 [jièzhe], 以心 [yǐxīn] <traduknumero>6.<\/traduknumero> 藉由 [jièyóu]"
           },
           {
             "lingvo" : {
@@ -757,7 +757,7 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "1.a to mediate, act as agent 1.b to procure, provide, supply"
+            "teksto" : "<traduknumero>1.a<\/traduknumero> to mediate, act as agent <traduknumero>1.b<\/traduknumero> to procure, provide, supply"
           },
           {
             "lingvo" : {
@@ -799,14 +799,14 @@
               "kodo" : "es",
               "nomo" : "hispana"
             },
-            "teksto" : "intermediar, proporcionar, procurar 1.a mediar, actuar como agente 1.b procurar, proveer, suministrar"
+            "teksto" : "intermediar, proporcionar, procurar <traduknumero>1.a<\/traduknumero> mediar, actuar como agente <traduknumero>1.b<\/traduknumero> procurar, proveer, suministrar"
           },
           {
             "lingvo" : {
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "1.a közvetít 1.b közvetít, szolgáltat"
+            "teksto" : "<traduknumero>1.a<\/traduknumero> közvetít <traduknumero>1.b<\/traduknumero> közvetít, szolgáltat"
           },
           {
             "lingvo" : {
@@ -1678,7 +1678,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : " · ~voĉdona: szavazásos · ~flati: kihízeleg"
+            "teksto" : "<traduknumero> · ~voĉdona: <\/traduknumero>szavazásos<traduknumero> · ~flati: <\/traduknumero>kihízeleg"
           },
           {
             "lingvo" : {

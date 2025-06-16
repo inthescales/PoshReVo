@@ -96,7 +96,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "elipsa 1. elipsa"
+            "teksto" : "elipsa <traduknumero>1.<\/traduknumero> elipsa"
           },
           {
             "lingvo" : {

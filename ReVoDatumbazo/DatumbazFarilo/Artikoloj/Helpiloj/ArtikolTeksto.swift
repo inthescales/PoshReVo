@@ -2,6 +2,10 @@ import Foundation
 
 /// Helpiloj kiuj faras kaj formas tekstojn tiel kiel ĝi aperu en artikoloj
 enum ArtikolTeksto {
+	private enum Konstantoj {
+		static let numeroEtikedo = "traduknumero"
+	}
+	
 	// MARK: - Simboloj kaj sekcio-etikedoj
 	
 	/// Supozante ke la ĉeno estas kapteksto havanta plurajn formojn, liveras array-on da formoj
@@ -138,7 +142,7 @@ enum ArtikolTeksto {
 			}
 			
 			if montriNomon {
-				teksto += " · " + nuna.nomo + ": "
+				teksto += kolorEtikedi(" · " + nuna.nomo + ": ")
 			} else if let lasta,
 					  lasta.transpasNomo == true,
 					  lasta.nomo != nuna.nomo,
@@ -146,7 +150,7 @@ enum ArtikolTeksto {
 				// Aldoni punkton se la antaŭa traduko montris transpasan nomon, kiuj estas
 				// alia ol la nuna nomo, kaj ni ne montros senc-numeron.
 				// Mi jam ne renkontis ekzemplon de ĉi-situacio, tamen jen mia preparaĵo
-				teksto += " · "
+				teksto += kolorEtikedi(" · ")
 			} else if let lasta,
 				lasta.nomo == nuna.nomo
 				&& lasta.senco == nuna.senco
@@ -163,7 +167,7 @@ enum ArtikolTeksto {
 				if montriSencon || montriSubsencon,
 				   let senco = nuna.senco,
 				   senco > 0 {
-					teksto += String(senco) + "."
+					teksto += "<" + Konstantoj.numeroEtikedo + ">" + String(senco) + "."
 				}
 				
 				// Ĉiam montru subsencon, se ĉeestas
@@ -174,7 +178,7 @@ enum ArtikolTeksto {
 				}
 				
 				if montriSencon || montriSubsencon {
-					teksto += " "
+					teksto += "</" + Konstantoj.numeroEtikedo + "> "
 				}
 			}
 			
@@ -182,5 +186,11 @@ enum ArtikolTeksto {
 		}
 		
 		return teksto
+	}
+	
+	// MARK: - Helpiloj
+	
+	private static func kolorEtikedi(_ enhavoj: String) -> String {
+		return "<" + Konstantoj.numeroEtikedo + ">" + enhavoj + "</" + Konstantoj.numeroEtikedo + ">"
 	}
 }
