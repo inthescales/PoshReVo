@@ -9,7 +9,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Atentinda pro sia granda influo aŭ siaj grandaj sekvoj: \n · <ekzemplo>ili foriris de li, lasinte lin en <b>grav<\/b>a malsano;<\/ekzemplo> \n · <ekzemplo>la plej <b>grav<\/b>aj plejaĝuloj;<\/ekzemplo> \n · <ekzemplo>[ili] staris ĉirkaŭe, akuzante lin pri […] <b>grav<\/b>aj kulpoj;<\/ekzemplo> \n · <ekzemplo>la plej <b>grav<\/b>aj krimuloj;<\/ekzemplo> \n · <ekzemplo>la homo estis tre riĉe vestita, li estis videble <b>grav<\/b>a persono;<\/ekzemplo> \n · <ekzemplo>li dancas belege, […] sed egale <b>grav<\/b>a demando estas, ĉu li estas sufiĉe instruita;<\/ekzemplo> \n · <ekzemplo><b>grav<\/b>a festotago;<\/ekzemplo> \n · <ekzemplo>estis konfirmado […], tio estis ja <b>grav<\/b>a tago por ili, el infanoj ili subite fariĝis plenkreskaj homoj;<\/ekzemplo> \n · <ekzemplo>aŭskultu, ĉar mi parolos gravaĵon;<\/ekzemplo> \n · <ekzemplo>ofte de kaŭzo senenhava venas efiko plej <b>grav<\/b>a.<\/ekzemplo>\n➞ <a href=\"pez.0a.multe0a\">peza<\/a>, <a href=\"serioz.0a\">serioza<\/a>, <a href=\"signif.0a.FIG\">signifa<\/a>"
+        "teksto" : "Atentinda pro sia granda influo aŭ siaj grandaj sekvoj: \n<ekzemplo> · ili foriris de li, lasinte lin en <g>grav<\/g>a malsano;<\/ekzemplo> \n<ekzemplo> · la plej <g>grav<\/g>aj plejaĝuloj;<\/ekzemplo> \n<ekzemplo> · [ili] staris ĉirkaŭe, akuzante lin pri […] <g>grav<\/g>aj kulpoj;<\/ekzemplo> \n<ekzemplo> · la plej <g>grav<\/g>aj krimuloj;<\/ekzemplo> \n<ekzemplo> · la homo estis tre riĉe vestita, li estis videble <g>grav<\/g>a persono;<\/ekzemplo> \n<ekzemplo> · li dancas belege, […] sed egale <g>grav<\/g>a demando estas, ĉu li estas sufiĉe instruita;<\/ekzemplo> \n<ekzemplo> · <g>grav<\/g>a festotago;<\/ekzemplo> \n<ekzemplo> · estis konfirmado […], tio estis ja <g>grav<\/g>a tago por ili, el infanoj ili subite fariĝis plenkreskaj homoj;<\/ekzemplo> \n<ekzemplo> · aŭskultu, ĉar mi parolos gravaĵon;<\/ekzemplo> \n<ekzemplo> · ofte de kaŭzo senenhava venas efiko plej <g>grav<\/g>a.<\/ekzemplo>\n➞ <a href=\"pez.0a.multe0a\">peza<\/a>, <a href=\"serioz.0a\">serioza<\/a>, <a href=\"signif.0a.FIG\">signifa<\/a>"
       }
     },
     {
@@ -166,7 +166,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Laŭ grava maniero: \n · <ekzemplo>mi estas <b>grav<\/b>e vundita;<\/ekzemplo> \n · <ekzemplo>se mi jam tiel longe kuŝis, ne estas ja <b>grav<\/b>e kuŝi ankoraŭ iom pli!<\/ekzemplo> \n · <ekzemplo>por li estis <b>grav<\/b>e havi la lastan vorton;<\/ekzemplo> \n · <ekzemplo><b>grav<\/b>e maloportuna;<\/ekzemplo> \n · <ekzemplo>ne <b>grav<\/b>e, ne <b>grav<\/b>e, diris Mefres.<\/ekzemplo>\n➞ <a href=\"fort.0e.multe\">forte<\/a>, <a href=\"mult.0e\">multe<\/a>, <a href=\"tre.0\">tre<\/a>"
+        "teksto" : "Laŭ grava maniero: \n<ekzemplo> · mi estas <g>grav<\/g>e vundita;<\/ekzemplo> \n<ekzemplo> · se mi jam tiel longe kuŝis, ne estas ja <g>grav<\/g>e kuŝi ankoraŭ iom pli!<\/ekzemplo> \n<ekzemplo> · por li estis <g>grav<\/g>e havi la lastan vorton;<\/ekzemplo> \n<ekzemplo> · <g>grav<\/g>e maloportuna;<\/ekzemplo> \n<ekzemplo> · ne <g>grav<\/g>e, ne <g>grav<\/g>e, diris Mefres.<\/ekzemplo>\n➞ <a href=\"fort.0e.multe\">forte<\/a>, <a href=\"mult.0e\">multe<\/a>, <a href=\"tre.0\">tre<\/a>"
       }
     },
     {
@@ -267,7 +267,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "(ntr)\nEsti grava: \n · <ekzemplo>sed tio ne gravas!<\/ekzemplo> \n · <ekzemplo>ne <b>grav<\/b>as, ne <b>grav<\/b>as, respondis la etulo;<\/ekzemplo> \n · <ekzemplo>tio ĉi neniel <b>grav<\/b>as;<\/ekzemplo> \n · <ekzemplo>la sumeto ne tre <b>grav<\/b>as;<\/ekzemplo> \n · <ekzemplo>por tiuj, kiuj suferis la militon, <b>grav<\/b>as haltigi ĝin.<\/ekzemplo>"
+        "teksto" : "(ntr)\nEsti grava: \n<ekzemplo> · sed tio ne gravas!<\/ekzemplo> \n<ekzemplo> · ne <g>grav<\/g>as, ne <g>grav<\/g>as, respondis la etulo;<\/ekzemplo> \n<ekzemplo> · tio ĉi neniel <g>grav<\/g>as;<\/ekzemplo> \n<ekzemplo> · la sumeto ne tre <g>grav<\/g>as;<\/ekzemplo> \n<ekzemplo> · por tiuj, kiuj suferis la militon, <g>grav<\/g>as haltigi ĝin.<\/ekzemplo>"
       }
     },
     {
@@ -396,7 +396,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Igi pli grava, prezenti kiel grava: \n · <ekzemplo>la malfeliĉa virino estas enprofundigita en doloron, […] kiun hieraŭ via ĉeesto ankoraŭ pli<b>grav<\/b>igis;<\/ekzemplo> \n · <ekzemplo>la publiko […] per sia konduto <b>grav<\/b>igas aŭ mal<b>grav<\/b>igas la esprimitajn ideojn;<\/ekzemplo> \n · <ekzemplo>la diferencon [inter ili] <b>grav<\/b>igas ne nur aparta parolo, sed konkura kredo.<\/ekzemplo>\n➞ <a href=\"akcent.0i.KOMUNE\">akcenti<\/a>, <a href=\"star.el0igi\">elstarigi<\/a>, <a href=\"emfaz.0i.FIG\">emfazi<\/a>, <a href=\"fort.0igi\">plifortigi<\/a>"
+        "teksto" : "Igi pli grava, prezenti kiel grava: \n<ekzemplo> · la malfeliĉa virino estas enprofundigita en doloron, […] kiun hieraŭ via ĉeesto ankoraŭ pli<g>grav<\/g>igis;<\/ekzemplo> \n<ekzemplo> · la publiko […] per sia konduto <g>grav<\/g>igas aŭ mal<g>grav<\/g>igas la esprimitajn ideojn;<\/ekzemplo> \n<ekzemplo> · la diferencon [inter ili] <g>grav<\/g>igas ne nur aparta parolo, sed konkura kredo.<\/ekzemplo>\n➞ <a href=\"akcent.0i.KOMUNE\">akcenti<\/a>, <a href=\"star.el0igi\">elstarigi<\/a>, <a href=\"emfaz.0i.FIG\">emfazi<\/a>, <a href=\"fort.0igi\">plifortigi<\/a>"
       }
     },
     {
@@ -455,7 +455,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Eco de io grava: \n · <ekzemplo>al li tiuj figuroj ŝajnis […] havantaj la plej altan <b>grav<\/b>econ;<\/ekzemplo> \n · <ekzemplo>pompa parolado pri la <b>grav<\/b>eco de l' sciencoj;<\/ekzemplo> \n · <ekzemplo>tute specialan <b>grav<\/b>econ li atribuis al la historio;<\/ekzemplo> \n · <ekzemplo>tiu titolo donis al li <b>grav<\/b>econ, kiu kvazaŭ plifortigis lin en liaj altaj oficoj.<\/ekzemplo>"
+        "teksto" : "Eco de io grava: \n<ekzemplo> · al li tiuj figuroj ŝajnis […] havantaj la plej altan <g>grav<\/g>econ;<\/ekzemplo> \n<ekzemplo> · pompa parolado pri la <g>grav<\/g>eco de l' sciencoj;<\/ekzemplo> \n<ekzemplo> · tute specialan <g>grav<\/g>econ li atribuis al la historio;<\/ekzemplo> \n<ekzemplo> · tiu titolo donis al li <g>grav<\/g>econ, kiu kvazaŭ plifortigis lin en liaj altaj oficoj.<\/ekzemplo>"
       }
     },
     {
@@ -591,7 +591,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Homo grava en iu socia medio pro distinga influo, decidpovo aŭ scio, alta posteno ks: \n · <ekzemplo>la negoco estis <b>grav<\/b>a kaj tre esperiga, la <b>grav<\/b>uloj interkonsiliĝis en la interna ĉambro;<\/ekzemplo> \n · <ekzemplo>multaj <b>grav<\/b>uloj, i.a. pluraj ministroj, venis ĉi tien;<\/ekzemplo> \n · <ekzemplo><b>grav<\/b>uloj aŭ eminentuloj, ― preskaŭ ĉiam inter la aŭskultantoj troviĝas unu aŭ pluraj aparte <a href=\"star.el0a\">elstara<\/a>j personoj, kiuj ludas certan rolon en la urbo;<\/ekzemplo> \n · <ekzemplo>[iu] denuncis Patrikson kaj lin al iu <b>grav<\/b>ulo en la drogreto;<\/ekzemplo> \n · <ekzemplo>el <b>grav<\/b>uloj de la Esperanto-Movado kaj verkistoj, aperis […] Kalocsay kaj Baghy […], Grabowski kaj Kabe […], Hodler, […].<\/ekzemplo>\n⇒ <a href=\"distin.0ito\">distingito<\/a>, <a href=\"eminen1.0ulo\">eminentulo<\/a> ⇘ <a href=\"estr.0o\">estro<\/a>, <a href=\"kurato.0o.POL\">kuratoro<\/a>, <a href=\"mecena.0o\">mecenato<\/a>, <a href=\"patron.0o\">patrono<\/a>"
+        "teksto" : "Homo grava en iu socia medio pro distinga influo, decidpovo aŭ scio, alta posteno ks: \n<ekzemplo> · la negoco estis <g>grav<\/g>a kaj tre esperiga, la <g>grav<\/g>uloj interkonsiliĝis en la interna ĉambro;<\/ekzemplo> \n<ekzemplo> · multaj <g>grav<\/g>uloj, i.a. pluraj ministroj, venis ĉi tien;<\/ekzemplo> \n<ekzemplo> · <g>grav<\/g>uloj aŭ eminentuloj, ― preskaŭ ĉiam inter la aŭskultantoj troviĝas unu aŭ pluraj aparte <a href=\"star.el0a\">elstara<\/a>j personoj, kiuj ludas certan rolon en la urbo;<\/ekzemplo> \n<ekzemplo> · [iu] denuncis Patrikson kaj lin al iu <g>grav<\/g>ulo en la drogreto;<\/ekzemplo> \n<ekzemplo> · el <g>grav<\/g>uloj de la Esperanto-Movado kaj verkistoj, aperis […] Kalocsay kaj Baghy […], Grabowski kaj Kabe […], Hodler, […].<\/ekzemplo>\n⇒ <a href=\"distin.0ito\">distingito<\/a>, <a href=\"eminen1.0ulo\">eminentulo<\/a> ⇘ <a href=\"estr.0o\">estro<\/a>, <a href=\"kurato.0o.POL\">kuratoro<\/a>, <a href=\"mecena.0o\">mecenato<\/a>, <a href=\"patron.0o\">patrono<\/a>"
       }
     },
     {
@@ -657,7 +657,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Bagatela, ne meritanta atenton: \n · <ekzemplo>ili fariĝis kiel herbo de kampo, kiel mal<b>grav<\/b>a verdaĵo;<\/ekzemplo> \n · <ekzemplo>trompi lin […] en mal<b>grav<\/b>aj aferoj;<\/ekzemplo> \n · <ekzemplo>li havas mienon, kvazaŭ lia trumpetado estas io <b>grav<\/b>a, sed ĝi estas tute mal<b>grav<\/b>a;<\/ekzemplo> \n · <ekzemplo>se mi eĉ havos la plej mal<b>grav<\/b>an pozicion, tamen se tio, kion mi faros, estos bona, ĝi ĉiam havos ian valoron;<\/ekzemplo> \n · <ekzemplo>malgranda, mal<b>grav<\/b>aspekta dometo.<\/ekzemplo>\n⇒ <a href=\"bagate.0a\">bagatela<\/a> ➞ <a href=\"banal.0a\">banala<\/a>"
+        "teksto" : "Bagatela, ne meritanta atenton: \n<ekzemplo> · ili fariĝis kiel herbo de kampo, kiel mal<g>grav<\/g>a verdaĵo;<\/ekzemplo> \n<ekzemplo> · trompi lin […] en mal<g>grav<\/g>aj aferoj;<\/ekzemplo> \n<ekzemplo> · li havas mienon, kvazaŭ lia trumpetado estas io <g>grav<\/g>a, sed ĝi estas tute mal<g>grav<\/g>a;<\/ekzemplo> \n<ekzemplo> · se mi eĉ havos la plej mal<g>grav<\/g>an pozicion, tamen se tio, kion mi faros, estos bona, ĝi ĉiam havos ian valoron;<\/ekzemplo> \n<ekzemplo> · malgranda, mal<g>grav<\/g>aspekta dometo.<\/ekzemplo>\n⇒ <a href=\"bagate.0a\">bagatela<\/a> ➞ <a href=\"banal.0a\">banala<\/a>"
       }
     },
     {
@@ -793,7 +793,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Ne atentinda afero: \n · <ekzemplo>gloro, potenco – vanta fumo! mal<b>grav<\/b>aĵo!<\/ekzemplo> \n · <ekzemplo>la parolanto ne kapablas distingi mal<b>grav<\/b>aĵon de <b>grav<\/b>aĵo;<\/ekzemplo> \n · <ekzemplo>li rapide ekscitiĝas pro mal<b>grav<\/b>aĵoj.<\/ekzemplo>\n⇒ <a href=\"bagate.0o\">bagatelo<\/a>"
+        "teksto" : "Ne atentinda afero: \n<ekzemplo> · gloro, potenco – vanta fumo! mal<g>grav<\/g>aĵo!<\/ekzemplo> \n<ekzemplo> · la parolanto ne kapablas distingi mal<g>grav<\/g>aĵon de <g>grav<\/g>aĵo;<\/ekzemplo> \n<ekzemplo> · li rapide ekscitiĝas pro mal<g>grav<\/g>aĵoj.<\/ekzemplo>\n⇒ <a href=\"bagate.0o\">bagatelo<\/a>"
       }
     },
     {
@@ -908,7 +908,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "(tr)\nIgi malpli grava, rigardi, prezenti kiel ne tiom gravan: \n · <ekzemplo>tio ne estas menciita por mal<b>grav<\/b>igi [la] signifon;<\/ekzemplo> \n · <ekzemplo>la domvendisto, iom embarasita, provas mal<b>grav<\/b>igi la fenomenon: „vi sciu, oni aŭdas tiun bruon nur la unuajn du aŭ tri tagojn“;<\/ekzemplo> \n · <ekzemplo>li finis per supera gesto de mal<b>grav<\/b>igo;<\/ekzemplo> \n · <ekzemplo>la teknologia evoluo mal<b>grav<\/b>igas distancojn kaj oficialajn strukturojn.<\/ekzemplo>\n➞ <a href=\"bagate.0igi\">bagateligi<\/a>, <a href=\"redukt.0i.FIG\">redukti<\/a>, <a href=\"relati.0igi\">relativigi<\/a>, <a href=\"taks.sub0i\">subtaksi<\/a>"
+        "teksto" : "(tr)\nIgi malpli grava, rigardi, prezenti kiel ne tiom gravan: \n<ekzemplo> · tio ne estas menciita por mal<g>grav<\/g>igi [la] signifon;<\/ekzemplo> \n<ekzemplo> · la domvendisto, iom embarasita, provas mal<g>grav<\/g>igi la fenomenon: „vi sciu, oni aŭdas tiun bruon nur la unuajn du aŭ tri tagojn“;<\/ekzemplo> \n<ekzemplo> · li finis per supera gesto de mal<g>grav<\/g>igo;<\/ekzemplo> \n<ekzemplo> · la teknologia evoluo mal<g>grav<\/g>igas distancojn kaj oficialajn strukturojn.<\/ekzemplo>\n➞ <a href=\"bagate.0igi\">bagateligi<\/a>, <a href=\"redukt.0i.FIG\">redukti<\/a>, <a href=\"relati.0igi\">relativigi<\/a>, <a href=\"taks.sub0i\">subtaksi<\/a>"
       }
     },
     {
@@ -1002,7 +1002,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Fari malpli grava: \n · <ekzemplo>malpli<b>grav<\/b>igi sian kulpon per pento.<\/ekzemplo> \n · <ekzemplo>[la] ministro […] en masklisma maniero ne hezitis malpli<b>grav<\/b>igi la okazaĵon deklarante ke „nu, neniu mortis“;<\/ekzemplo> \n · <ekzemplo>estas malpermes[ita] vidigi aŭ porti religiajn signojn ene de registaraj konstruaĵoj aŭ lokoj, kie religio estas periferia aŭ malpli<b>grav<\/b>igita en la publika sfero.<\/ekzemplo>"
+        "teksto" : "Fari malpli grava: \n<ekzemplo> · malpli<g>grav<\/g>igi sian kulpon per pento.<\/ekzemplo> \n<ekzemplo> · [la] ministro […] en masklisma maniero ne hezitis malpli<g>grav<\/g>igi la okazaĵon deklarante ke „nu, neniu mortis“;<\/ekzemplo> \n<ekzemplo> · estas malpermes[ita] vidigi aŭ porti religiajn signojn ene de registaraj konstruaĵoj aŭ lokoj, kie religio estas periferia aŭ malpli<g>grav<\/g>igita en la publika sfero.<\/ekzemplo>"
       }
     },
     {
@@ -1082,7 +1082,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Tre grava en ies vivo, por ies daŭra vivado: \n · <ekzemplo>la estraro de la banko ne konsideras la aferon viv<b>grav<\/b>a, eĉ se la banko pro tia malzorgemo devos ĉesigi sian funkcion;<\/ekzemplo> \n · <ekzemplo>li finfine laboris […] por trovi en tiu laboro iun kontentigan kaj vivo<b>grav<\/b>an;<\/ekzemplo> \n · <ekzemplo>li verkis bonegajn artikolojn pri la viv<b>grav<\/b>aj problemoj de la terlaboristoj.<\/ekzemplo>\n➞ <a href=\"esenc.0a\">esenca<\/a>"
+        "teksto" : "Tre grava en ies vivo, por ies daŭra vivado: \n<ekzemplo> · la estraro de la banko ne konsideras la aferon viv<g>grav<\/g>a, eĉ se la banko pro tia malzorgemo devos ĉesigi sian funkcion;<\/ekzemplo> \n<ekzemplo> · li finfine laboris […] por trovi en tiu laboro iun kontentigan kaj vivo<g>grav<\/g>an;<\/ekzemplo> \n<ekzemplo> · li verkis bonegajn artikolojn pri la viv<g>grav<\/g>aj problemoj de la terlaboristoj.<\/ekzemplo>\n➞ <a href=\"esenc.0a\">esenca<\/a>"
       }
     },
     {

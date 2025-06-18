@@ -1,6 +1,9 @@
 extension ArboAnalizilo {
 	static func trakti(altigitan altigita: ArtikolNodo, stato: Stato) -> String {
-		let teksto = "<sup>" + akumuliTekstojn(de: altigita, stato: stato).tondi() + "</sup>"
+		let teksto = TekstoAtributo.volvi(
+			tekston: akumuliTekstojn(de: altigita, stato: stato).tondi(),
+			per: .supera
+		)
 		return teksto.kunpremi()
 	}
 }

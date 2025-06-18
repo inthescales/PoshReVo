@@ -9,7 +9,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "<a href=\"pronom.0o\">Pronomo<\/a> de la unua persono en pluralo, t.e. mi kaj alia(j), do vi, li, ŝi resp. ili: \n · <ekzemplo><b>ni<\/b> estas fratoj;<\/ekzemplo> \n · <ekzemplo>al <b>ni<\/b> apartenas la akvo;<\/ekzemplo> \n · <ekzemplo>aŭskultu <b>ni<\/b>n;<\/ekzemplo> \n · <ekzemplo><b>ni<\/b> konstruu al <b>ni<\/b> urbon;<\/ekzemplo> \n · <ekzemplo>vivanton <b>ni<\/b> malhonoras, mortinton <b>ni<\/b> adoras (kp <a href=\"oni.0\">oni<\/a>);<\/ekzemplo> \n · <ekzemplo><b>ni<\/b>n ĉiam ravas, kion <b>ni<\/b> ne havas.<\/ekzemplo>"
+        "teksto" : "<a href=\"pronom.0o\">Pronomo<\/a> de la unua persono en pluralo, t.e. mi kaj alia(j), do vi, li, ŝi resp. ili: \n<ekzemplo> · <g>ni<\/g> estas fratoj;<\/ekzemplo> \n<ekzemplo> · al <g>ni<\/g> apartenas la akvo;<\/ekzemplo> \n<ekzemplo> · aŭskultu <g>ni<\/g>n;<\/ekzemplo> \n<ekzemplo> · <g>ni<\/g> konstruu al <g>ni<\/g> urbon;<\/ekzemplo> \n<ekzemplo> · vivanton <g>ni<\/g> malhonoras, mortinton <g>ni<\/g> adoras (kp <a href=\"oni.0\">oni<\/a>);<\/ekzemplo> \n<ekzemplo> · <g>ni<\/g>n ĉiam ravas, kion <g>ni<\/g> ne havas.<\/ekzemplo>"
       }
     },
     {
@@ -727,7 +727,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Poseda adjektivo aŭ pronomo signifanta: „posedata de ni, rilata al ni“: \n · <ekzemplo><b>ni<\/b>a patro, <b>ni<\/b>aj infanoj;<\/ekzemplo> \n · <ekzemplo><b>ni<\/b>aj parencoj;<\/ekzemplo> \n · <ekzemplo><b>ni<\/b>a familio;<\/ekzemplo> \n · <ekzemplo><b>ni<\/b>aj malamikoj;<\/ekzemplo> \n · <ekzemplo><b>ni<\/b>a Dio;<\/ekzemplo> \n · <ekzemplo><b>ni<\/b>aj faroj;<\/ekzemplo> \n · <ekzemplo>malproksima de <b>ni<\/b>a domo;<\/ekzemplo> \n · <ekzemplo>en <b>ni<\/b>a loko ne estas […];<\/ekzemplo> \n · <ekzemplo><b>ni<\/b> donos al vi <b>ni<\/b>an konsenton, se vi […];<\/ekzemplo> \n · <ekzemplo>li signifoklarigis al <b>ni<\/b> <b>ni<\/b>ajn sonĝojn, al ĉiu li klarigis laŭ lia sonĝo.<\/ekzemplo>"
+        "teksto" : "Poseda adjektivo aŭ pronomo signifanta: „posedata de ni, rilata al ni“: \n<ekzemplo> · <g>ni<\/g>a patro, <g>ni<\/g>aj infanoj;<\/ekzemplo> \n<ekzemplo> · <g>ni<\/g>aj parencoj;<\/ekzemplo> \n<ekzemplo> · <g>ni<\/g>a familio;<\/ekzemplo> \n<ekzemplo> · <g>ni<\/g>aj malamikoj;<\/ekzemplo> \n<ekzemplo> · <g>ni<\/g>a Dio;<\/ekzemplo> \n<ekzemplo> · <g>ni<\/g>aj faroj;<\/ekzemplo> \n<ekzemplo> · malproksima de <g>ni<\/g>a domo;<\/ekzemplo> \n<ekzemplo> · en <g>ni<\/g>a loko ne estas […];<\/ekzemplo> \n<ekzemplo> · <g>ni<\/g> donos al vi <g>ni<\/g>an konsenton, se vi […];<\/ekzemplo> \n<ekzemplo> · li signifoklarigis al <g>ni<\/g> <g>ni<\/g>ajn sonĝojn, al ĉiu li klarigis laŭ lia sonĝo.<\/ekzemplo>"
       }
     },
     {

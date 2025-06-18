@@ -9,7 +9,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "(tr)\n1. <a href=\"skrib.0i.signojn\">Skribi<\/a> pri io mallongan memorigan resumon: \n · <ekzemplo><b>not<\/b>u la daton;<\/ekzemplo> \n · <ekzemplo>dika nigra libro, en kiu oni <b>not<\/b>is malaperintajn ŝipojn.<\/ekzemplo>\n\n2. (figure) Priatenti kaj konservi en sia memoro: \n · <ekzemplo>ni petas vin <b>not<\/b>i al vi en la memoro tiun konkludon;<\/ekzemplo> \n · <ekzemplo>la estraro havas konsiderojn subtilajn: malgraŭ ke estas malproksime, ĝi tamen <b>not<\/b>as al si en la cerbo;<\/ekzemplo> \n · <ekzemplo><b>not<\/b>u ke mi venos.<\/ekzemplo>"
+        "teksto" : "(tr)\n1. <a href=\"skrib.0i.signojn\">Skribi<\/a> pri io mallongan memorigan resumon: \n<ekzemplo> · <g>not<\/g>u la daton;<\/ekzemplo> \n<ekzemplo> · dika nigra libro, en kiu oni <g>not<\/g>is malaperintajn ŝipojn.<\/ekzemplo>\n\n2. (figure) Priatenti kaj konservi en sia memoro: \n<ekzemplo> · ni petas vin <g>not<\/g>i al vi en la memoro tiun konkludon;<\/ekzemplo> \n<ekzemplo> · la estraro havas konsiderojn subtilajn: malgraŭ ke estas malproksime, ĝi tamen <g>not<\/g>as al si en la cerbo;<\/ekzemplo> \n<ekzemplo> · <g>not<\/g>u ke mi venos.<\/ekzemplo>"
       }
     },
     {
@@ -139,7 +139,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "1. Mallonga enskribo memoriga aŭ komenta: \n · <ekzemplo>fari, konservi <b>not<\/b>ojn pri fakto, parolado, adreso, dato;<\/ekzemplo> \n · <ekzemplo>mallongaj <b>not<\/b>oj komercaj.<\/ekzemplo> \n · <ekzemplo>la diversloke en la kajeroj troviĝantaj <b>not<\/b>oj;<\/ekzemplo> \n · <ekzemplo>presigi <b>not<\/b>ojn pri lingvo internacia.<\/ekzemplo>\n\n2. [MUZ] Skriba signo lokita sur muzika liniaro por montri la altecon kaj daŭron de la tono.\n\na) La sono mem, prezentata per noto<sup>2<\/sup>, en kantado aŭ en muzikila plenumo: \n · <ekzemplo>la fingroj trovu la ekzaktan lokon por ludi ekzaktan <b>not<\/b>on;<\/ekzemplo> \n · <ekzemplo>falsa noto<\/ekzemplo> .\n\nb) (figure) Aparta distingiga eco aŭ nuanco (laŭ noto): \n · <ekzemplo>lia stilo havas tre personan <b>not<\/b>on;<\/ekzemplo> \n · <ekzemplo>tio portis funebran <b>not<\/b>on en la ĝojan feston.<\/ekzemplo>\n\n3. [PED] Oficiale uzata signo por indiki takson de scioj aŭ konduto de lernanto: \n · <ekzemplo>ĉiuj, kiuj havis la <b>not<\/b>on „tre bone“ aŭ „bonege“, ricevis lokon;<\/ekzemplo> \n · <ekzemplo>ricevi bonan <b>not<\/b>on pri matematiko.<\/ekzemplo>\n⇗ <a href=\"poent.0o\">poento<\/a>"
+        "teksto" : "1. Mallonga enskribo memoriga aŭ komenta: \n<ekzemplo> · fari, konservi <g>not<\/g>ojn pri fakto, parolado, adreso, dato;<\/ekzemplo> \n<ekzemplo> · mallongaj <g>not<\/g>oj komercaj.<\/ekzemplo> \n<ekzemplo> · la diversloke en la kajeroj troviĝantaj <g>not<\/g>oj;<\/ekzemplo> \n<ekzemplo> · presigi <g>not<\/g>ojn pri lingvo internacia.<\/ekzemplo>\n\n2. [MUZ] Skriba signo lokita sur muzika liniaro por montri la altecon kaj daŭron de la tono.\n\na) La sono mem, prezentata per noto<sup>2<\/sup>, en kantado aŭ en muzikila plenumo: \n<ekzemplo> · la fingroj trovu la ekzaktan lokon por ludi ekzaktan <g>not<\/g>on;<\/ekzemplo> \n<ekzemplo> · falsa noto<\/ekzemplo> .\n\nb) (figure) Aparta distingiga eco aŭ nuanco (laŭ noto): \n<ekzemplo> · lia stilo havas tre personan <g>not<\/g>on;<\/ekzemplo> \n<ekzemplo> · tio portis funebran <g>not<\/g>on en la ĝojan feston.<\/ekzemplo>\n\n3. [PED] Oficiale uzata signo por indiki takson de scioj aŭ konduto de lernanto: \n<ekzemplo> · ĉiuj, kiuj havis la <g>not<\/g>on „tre bone“ aŭ „bonege“, ricevis lokon;<\/ekzemplo> \n<ekzemplo> · ricevi bonan <g>not<\/g>on pri matematiko.<\/ekzemplo>\n⇗ <a href=\"poent.0o\">poento<\/a>"
       }
     },
     {
@@ -751,7 +751,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "[MUZ] Teksto de muzika verko prezentita per notoj<sup>2<\/sup>: \n · <ekzemplo>ŝi konservis ĉion, kio lin povis rememorigi: la librojn, de li iam legitajn, […] <b>not<\/b>ojn kaj versojn, kiujn li por ŝi transskribis;<\/ekzemplo> \n · <ekzemplo><b>not<\/b>fako en biblioteko.<\/ekzemplo>"
+        "teksto" : "[MUZ] Teksto de muzika verko prezentita per notoj<sup>2<\/sup>: \n<ekzemplo> · ŝi konservis ĉion, kio lin povis rememorigi: la librojn, de li iam legitajn, […] <g>not<\/g>ojn kaj versojn, kiujn li por ŝi transskribis;<\/ekzemplo> \n<ekzemplo> · <g>not<\/g>fako en biblioteko.<\/ekzemplo>"
       }
     },
     {
@@ -852,7 +852,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "[TIP] Komenta <a href=\"not.0o.memoriga\">noto<\/a> pri iu temo, informo, afero…: \n · <ekzemplo>la rakonto estas skribita el miaj pri<b>not<\/b>oj kaj kun mia propra stilo;<\/ekzemplo> \n · <ekzemplo>pri<b>not<\/b>o al ekspozicio en Centra oficejo de Unesko.<\/ekzemplo>\n➞ <a href=\"glos.0o\">gloso<\/a>"
+        "teksto" : "[TIP] Komenta <a href=\"not.0o.memoriga\">noto<\/a> pri iu temo, informo, afero…: \n<ekzemplo> · la rakonto estas skribita el miaj pri<g>not<\/g>oj kaj kun mia propra stilo;<\/ekzemplo> \n<ekzemplo> · pri<g>not<\/g>o al ekspozicio en Centra oficejo de Unesko.<\/ekzemplo>\n➞ <a href=\"glos.0o\">gloso<\/a>"
       }
     },
     {
@@ -904,7 +904,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "[EKON] (evitinde) <a href=\"bilet.mon0o\">Monbileto<\/a>: \n · <ekzemplo>li […] metis kun nerifuzebla gesto dudolaran bank<b>not<\/b>on en mian manon;<\/ekzemplo> \n · <ekzemplo>li faradis flugludilojn el spesmilaj bank<b>not<\/b>oj, kaj en la lagon li ĵetadis orajn monerojn anstataŭ ŝtonetoj;<\/ekzemplo> \n · <ekzemplo>oni ja diras, ke ĝi signifas novan feliĉon, kiam la bank<b>not<\/b>oj estas novaj.<\/ekzemplo>\n<b>Rim<\/b>: Tiu signifo kiel nacilingva paŭsaĵo estas apenaŭ rilatigebla al noti (memorfiksi). Por registri homonimon ĝi aperas tro malofte kaj ja ekzistas preferebla kaj klara termino „monbileto“. [Wolfram Diestel]"
+        "teksto" : "[EKON] (evitinde) <a href=\"bilet.mon0o\">Monbileto<\/a>: \n<ekzemplo> · li […] metis kun nerifuzebla gesto dudolaran bank<g>not<\/g>on en mian manon;<\/ekzemplo> \n<ekzemplo> · li faradis flugludilojn el spesmilaj bank<g>not<\/g>oj, kaj en la lagon li ĵetadis orajn monerojn anstataŭ ŝtonetoj;<\/ekzemplo> \n<ekzemplo> · oni ja diras, ke ĝi signifas novan feliĉon, kiam la bank<g>not<\/g>oj estas novaj.<\/ekzemplo>\n<g>RIM<\/g>: Tiu signifo kiel nacilingva paŭsaĵo estas apenaŭ rilatigebla al noti (memorfiksi). Por registri homonimon ĝi aperas tro malofte kaj ja ekzistas preferebla kaj klara termino „monbileto“. [Wolfram Diestel]"
       }
     },
     {
@@ -922,7 +922,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "[POL] Oficiala diplomatia dokumento, formale avizanta pri problemo en interŝtataj rilatoj (protesto, sciigo pri iu incidento ktp): \n · <ekzemplo>diplomatia <b>not<\/b>o […] direktita de diplomatia misio en la Ministerio de Eksteraj Aferoj.<\/ekzemplo>\n➞ <a href=\"memora.0o\">memorando<\/a>"
+        "teksto" : "[POL] Oficiala diplomatia dokumento, formale avizanta pri problemo en interŝtataj rilatoj (protesto, sciigo pri iu incidento ktp): \n<ekzemplo> · diplomatia <g>not<\/g>o […] direktita de diplomatia misio en la Ministerio de Eksteraj Aferoj.<\/ekzemplo>\n➞ <a href=\"memora.0o\">memorando<\/a>"
       }
     },
     {
@@ -1068,7 +1068,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "(x)\nKrei piednoton: \n · <ekzemplo>pri personaj nomoj ofte uzataj en ĉi tiu libro mi pied<b>not<\/b>as nur unufoje;<\/ekzemplo> \n · <ekzemplo>ioma pied<b>not<\/b>ado necesas por averaĝaj legantoj.<\/ekzemplo>"
+        "teksto" : "(x)\nKrei piednoton: \n<ekzemplo> · pri personaj nomoj ofte uzataj en ĉi tiu libro mi pied<g>not<\/g>as nur unufoje;<\/ekzemplo> \n<ekzemplo> · ioma pied<g>not<\/g>ado necesas por averaĝaj legantoj.<\/ekzemplo>"
       }
     },
     {
@@ -1106,7 +1106,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "[TIP] Komenta <a href=\"not.0o.memoriga\">noto<\/a> de skriba verko, kiu aperas en la malsupra, pieda parto de paĝo: \n · <ekzemplo>la nun aĉetebla eldono de 1954 enhavas multajn pied<b>not<\/b>ojn;<\/ekzemplo> \n · <ekzemplo>aperis nur unu pied<b>not<\/b>o sub legantoletero dum ĉi tiuj preskaŭ tri jaroj;<\/ekzemplo> \n · <ekzemplo>(figure) Irako fariĝas nura pied<b>not<\/b>o (negravaĵo) en televidaj novaĵbultenoj, duonkolumna kromaĵo eĉ en „seriozaj“ gazetoj;<\/ekzemplo> \n · <ekzemplo>enhava ĝustigo de Brian plenumita en la teksto, kvankam mi preferus pied<b>not<\/b>igi ĝin.<\/ekzemplo>"
+        "teksto" : "[TIP] Komenta <a href=\"not.0o.memoriga\">noto<\/a> de skriba verko, kiu aperas en la malsupra, pieda parto de paĝo: \n<ekzemplo> · la nun aĉetebla eldono de 1954 enhavas multajn pied<g>not<\/g>ojn;<\/ekzemplo> \n<ekzemplo> · aperis nur unu pied<g>not<\/g>o sub legantoletero dum ĉi tiuj preskaŭ tri jaroj;<\/ekzemplo> \n<ekzemplo> · (figure) Irako fariĝas nura pied<g>not<\/g>o (negravaĵo) en televidaj novaĵbultenoj, duonkolumna kromaĵo eĉ en „seriozaj“ gazetoj;<\/ekzemplo> \n<ekzemplo> · enhava ĝustigo de Brian plenumita en la teksto, kvankam mi preferus pied<g>not<\/g>igi ĝin.<\/ekzemplo>"
       }
     },
     {

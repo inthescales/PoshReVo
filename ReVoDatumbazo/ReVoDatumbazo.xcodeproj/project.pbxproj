@@ -25,7 +25,7 @@
 		0099FC262D65058C0033EC11 /* VortListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCE2D65058B0033EC11 /* VortListoj.swift */; };
 		0099FC282D65058C0033EC11 /* MallongigoListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD02D65058B0033EC11 /* MallongigoListoj.swift */; };
 		0099FC292D65058C0033EC11 /* ArtikolTeksto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */; };
-		0099FC2A2D65058C0033EC11 /* Interpreti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD22D65058C0033EC11 /* Interpreti.swift */; };
+		0099FC2A2D65058C0033EC11 /* UnikodInterpretado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD22D65058C0033EC11 /* UnikodInterpretado.swift */; };
 		0099FC2B2D65058C0033EC11 /* String+Aldonoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */; };
 		0099FC2C2D65058C0033EC11 /* ArtikolFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD52D65058C0033EC11 /* ArtikolFabriko.swift */; };
 		0099FC2F2D65058C0033EC11 /* ArtikolNodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD92D65058C0033EC11 /* ArtikolNodo.swift */; };
@@ -213,7 +213,7 @@
 		0099FD2D2D6506980033EC11 /* ArtikolFabriko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD52D65058C0033EC11 /* ArtikolFabriko.swift */; };
 		0099FD302D65069D0033EC11 /* ArtikolTeksto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */; };
 		0099FD312D65069D0033EC11 /* String+Aldonoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */; };
-		0099FD322D65069D0033EC11 /* Interpreti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD22D65058C0033EC11 /* Interpreti.swift */; };
+		0099FD322D65069D0033EC11 /* UnikodInterpretado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD22D65058C0033EC11 /* UnikodInterpretado.swift */; };
 		0099FD332D6506A30033EC11 /* SignoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1F2D65058C0033EC11 /* SignoAnalizilo.swift */; };
 		0099FD342D6506A30033EC11 /* DTDAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1A2D65058C0033EC11 /* DTDAnalizilo.swift */; };
 		0099FD352D6506A30033EC11 /* FakoAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC1B2D65058C0033EC11 /* FakoAnalizilo.swift */; };
@@ -241,6 +241,9 @@
 		00B27B892DFB757900526F82 /* BlokAkumulilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B862DFB757900526F82 /* BlokAkumulilo.swift */; };
 		00B27B8A2DFB863D00526F82 /* String+Aldonoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */; };
 		00B27B922DFCDDB000526F82 /* TekstfaradoTestoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B8F2DFCDDB000526F82 /* TekstfaradoTestoj.swift */; };
+		00B27B962E00744E00526F82 /* TekstEtikedoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B952E00744E00526F82 /* TekstEtikedoj.swift */; };
+		00B27B972E00795B00526F82 /* TekstEtikedoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B952E00744E00526F82 /* TekstEtikedoj.swift */; };
+		00B27B982E00795D00526F82 /* TekstEtikedoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B952E00744E00526F82 /* TekstEtikedoj.swift */; };
 		00B297192D650F5100264431 /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		00B2971A2D6511CA00264431 /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
 		00B2971B2D65122B00264431 /* Artikolo+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A47A5A24AFDFEB00EA9DCF /* Artikolo+Datumbazo.swift */; };
@@ -312,7 +315,7 @@
 		0099FBCE2D65058B0033EC11 /* VortListoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VortListoj.swift; sourceTree = "<group>"; };
 		0099FBD02D65058B0033EC11 /* MallongigoListoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallongigoListoj.swift; sourceTree = "<group>"; };
 		0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolTeksto.swift; sourceTree = "<group>"; };
-		0099FBD22D65058C0033EC11 /* Interpreti.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpreti.swift; sourceTree = "<group>"; };
+		0099FBD22D65058C0033EC11 /* UnikodInterpretado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnikodInterpretado.swift; sourceTree = "<group>"; };
 		0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Aldonoj.swift"; sourceTree = "<group>"; };
 		0099FBD52D65058C0033EC11 /* ArtikolFabriko.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolFabriko.swift; sourceTree = "<group>"; };
 		0099FBD92D65058C0033EC11 /* ArtikolNodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtikolNodo.swift; sourceTree = "<group>"; };
@@ -445,6 +448,7 @@
 		00B27B822DF8F4F700526F82 /* Traduko.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Traduko.swift; sourceTree = "<group>"; };
 		00B27B862DFB757900526F82 /* BlokAkumulilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlokAkumulilo.swift; sourceTree = "<group>"; };
 		00B27B8F2DFCDDB000526F82 /* TekstfaradoTestoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstfaradoTestoj.swift; sourceTree = "<group>"; };
+		00B27B952E00744E00526F82 /* TekstEtikedoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstEtikedoj.swift; sourceTree = "<group>"; };
 		00B2972D2D65534600264431 /* Stilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stilo.swift; sourceTree = "<group>"; };
 		00B297312D6556EF00264431 /* Mallongigo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mallongigo.swift; sourceTree = "<group>"; };
 		00B2973A2D6625A300264431 /* Fako.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fako.swift; sourceTree = "<group>"; };
@@ -572,7 +576,8 @@
 			isa = PBXGroup;
 			children = (
 				0099FBD12D65058C0033EC11 /* ArtikolTeksto.swift */,
-				0099FBD22D65058C0033EC11 /* Interpreti.swift */,
+				00B27B952E00744E00526F82 /* TekstEtikedoj.swift */,
+				0099FBD22D65058C0033EC11 /* UnikodInterpretado.swift */,
 				0099FBD32D65058C0033EC11 /* String+Aldonoj.swift */,
 			);
 			path = Helpiloj;
@@ -1077,6 +1082,7 @@
 				0027816724B7CE7300DFD71F /* Destino.swift in Sources */,
 				00A47A6424AFF19D00EA9DCF /* Fako+Datumbazo.swift in Sources */,
 				0049B22124B154F000B81E15 /* PrefiksArboIteraciilo.swift in Sources */,
+				00B27B972E00795B00526F82 /* TekstEtikedoj.swift in Sources */,
 				00A47A5F24AFE34B00EA9DCF /* Lingvo+Datumbazo.swift in Sources */,
 				00B2974D2D6625A300264431 /* Lingvo.swift in Sources */,
 				0049B21624B0E67000B81E15 /* SerchStato.swift in Sources */,
@@ -1149,6 +1155,7 @@
 				0099FC722D65058C0033EC11 /* VortarajMallongigojAnalizilo.swift in Sources */,
 				0099FC6D2D65058C0033EC11 /* LingvoAnalizilo.swift in Sources */,
 				0099FC342D65058C0033EC11 /* Serchebla.swift in Sources */,
+				00B27B962E00744E00526F82 /* TekstEtikedoj.swift in Sources */,
 				0099FC592D65058C0033EC11 /* TraktiSubsencon.swift in Sources */,
 				0099FC512D65058C0033EC11 /* TraktiRadikon.swift in Sources */,
 				0099FC5E2D65058C0033EC11 /* TraktiURLon.swift in Sources */,
@@ -1159,7 +1166,7 @@
 				0099FC5B2D65058C0033EC11 /* TraktiTradukGrupon.swift in Sources */,
 				0099FC3C2D65058C0033EC11 /* TraktiDerivajhon.swift in Sources */,
 				0099FC332D65058C0033EC11 /* OfcVorto.swift in Sources */,
-				0099FC2A2D65058C0033EC11 /* Interpreti.swift in Sources */,
+				0099FC2A2D65058C0033EC11 /* UnikodInterpretado.swift in Sources */,
 				0099FC612D65058C0033EC11 /* TraktiVortaron.swift in Sources */,
 				0099FC662D65058C0033EC11 /* Artikolaro.swift in Sources */,
 				0099FC432D65058C0033EC11 /* TraktiGrasan.swift in Sources */,
@@ -1258,7 +1265,7 @@
 				0099FD0E2D65068E0033EC11 /* TraktiURLon.swift in Sources */,
 				0099FD302D65069D0033EC11 /* ArtikolTeksto.swift in Sources */,
 				0099FD312D65069D0033EC11 /* String+Aldonoj.swift in Sources */,
-				0099FD322D65069D0033EC11 /* Interpreti.swift in Sources */,
+				0099FD322D65069D0033EC11 /* UnikodInterpretado.swift in Sources */,
 				0099FD0F2D65068E0033EC11 /* TraktiCitilon.swift in Sources */,
 				0099FD102D65068E0033EC11 /* TraktiVortSpecon.swift in Sources */,
 				0099FD112D65068E0033EC11 /* TraktiAutoron.swift in Sources */,
@@ -1275,6 +1282,7 @@
 				0099FD172D65068E0033EC11 /* TraktiDerivajhon.swift in Sources */,
 				0099FD182D65068E0033EC11 /* TraktiGrasan.swift in Sources */,
 				00B297342D65579400264431 /* Stilo.swift in Sources */,
+				00B27B982E00795D00526F82 /* TekstEtikedoj.swift in Sources */,
 				0099FD192D65068E0033EC11 /* TraktiListReferencon.swift in Sources */,
 				0099FD1A2D65068E0033EC11 /* TraktiKursivan.swift in Sources */,
 				0099FD1B2D65068E0033EC11 /* TraktiSencReferencon.swift in Sources */,

@@ -1,9 +1,6 @@
 extension ArboAnalizilo {
 	static func traktiTildon(stato: Stato, litero: String?, variajho: String?) -> String {
 		var teksto = ""
-		if case .ekz = stato.cheno.last {
-			teksto += "<b>"
-		}
 		
 		let radiko: String
 		if variajho == nil,
@@ -24,7 +21,7 @@ extension ArboAnalizilo {
 		}
 		
 		if case .ekz = stato.cheno.last {
-			teksto += "</b>"
+			teksto = TekstoAtributo.volvi(tekston: teksto, per: .grasa)
 		}
 		
 		return teksto

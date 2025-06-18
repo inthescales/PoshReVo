@@ -1,6 +1,8 @@
 import Foundation
 import UIKit
 
+import ReVoDatumbazo
+
 import TTTAttributedLabel
 
 enum TekstAtributoHelpiloj {
@@ -12,21 +14,10 @@ enum TekstAtributoHelpiloj {
 		static let subskriptMalsupreco = -2
 		
 	}
-	/// Specoj de tekstatribuoj, aldoneblaj al ĉenoj
-	private enum AtributSpeco: Equatable {
-		case ligo(celo: String)
-		case kursiva
-		case grasa
-		case grasKursiva
-		case supera
-		case suba
-		case ekzemplo
-		case tradukNumero
-	}
 	
 	/// Kazo de tekstatributo aldonota al ĉeno
 	private struct Atributo {
-		let speco: AtributSpeco
+		let speco: TekstoAtributo
 		let komenco: Int
 		let fino: Int
 	}
@@ -35,11 +26,11 @@ enum TekstAtributoHelpiloj {
 	private static func kreiAtributojn(por teksto: String) -> [Atributo] {
 		var atributoj: [Atributo] = []
 		
-		let regesp = try! NSRegularExpression(pattern: "<(/?([ikbga]|sup|sub|frm|ekzemplo|traduknumero))( (href|am)=\"(.*?)\")?>")
+		let regesp = try! NSRegularExpression(pattern: TekstoAtributo.regulEsprimo)
 		let trovajhoj = regesp.matches(in: teksto, range: NSRange(teksto.startIndex..., in: teksto))
 		
 		var enangulajSignoj = 0 // Ni ignoru signojn ene de anguloj kiam ni kalkulas atributo-lokojn
-		var staplo: [(AtributSpeco, Int)] = []
+		var staplo: [(TekstoAtributo, Int)] = []
 		for trovajho in trovajhoj {
 			let range = trovajho.range
 			let klavo = String(teksto[Range(trovajho.range(at: 1), in: teksto)!])
@@ -47,41 +38,18 @@ enum TekstAtributoHelpiloj {
 			
 			if klavo.first != "/" {
 				// etikedo komencas – notu ĝin
-				switch klavo {
-				case "i", "k":
-					staplo.append((.kursiva, loko))
-				case "b", "g":
-					staplo.append((.grasa, loko))
-				case "sup":
-					staplo.append((.supera, loko))
-				case "sub":
-					staplo.append((.suba, loko))
-				case "a":
-					let ligLoko = trovajho.range(at: 5)
-					if ligLoko.location != NSNotFound {
-						let ligCelo = String(teksto[Range(ligLoko, in: teksto)!])
-						staplo.append((.ligo(celo: ligCelo), loko))
+				let ecejo = trovajho.range(at: 5)
+				if ecejo.location != NSNotFound {
+					let valoro = String(teksto[Range(ecejo, in: teksto)!])
+					if let atributo = TekstoAtributo(kodo: klavo, eco: valoro) {
+						staplo.append((atributo, loko))
 					}
-				case "ekzemplo":
-					staplo.append((.ekzemplo, loko))
-				case "traduknumero":
-					staplo.append((.tradukNumero, loko))
-				default:
-					break
+				} else if let atributo = TekstoAtributo(kodo: klavo) {
+					staplo.append((atributo, loko))
 				}
 			} else if let lasta = staplo.popLast() {
-				// etikedo finiĝas – marki ĉi atributo-regionon
-				if ["/i", "/k"].contains(klavo)
-					&& staplo.contains(where: { $0.0 == .grasa }) {
-					
-					atributoj.append(Atributo(speco: .grasKursiva, komenco: lasta.1, fino: loko))
-				} else if ["/b", "/g"].contains(klavo)
-					&& staplo.contains(where: { $0.0 == .grasa }) {
-					
-					atributoj.append(Atributo(speco: .grasKursiva, komenco: lasta.1, fino: loko))
-				} else {
-					atributoj.append(Atributo(speco: lasta.0, komenco: lasta.1, fino: loko))
-				}
+				// Etikedo fermiĝas. Aldonu atributon
+				atributoj.append(Atributo(speco: lasta.0, komenco: lasta.1, fino: loko))
 			}
 			
 			enangulajSignoj += range.length
@@ -92,9 +60,7 @@ enum TekstAtributoHelpiloj {
 
 	/// Forigi la HTML kodojn el la teksto, por ke ĝi aperu nude
 	static func forigiAngulojn(teksto: String) -> String {
-		let regesp = try! NSRegularExpression(
-			pattern: "<(/?([ikbga]|sup|sub|frm|ekzemplo|traduknumero))( (href|am)=\"(.*?)\")?>"
-		)
+		let regesp = try! NSRegularExpression(pattern: TekstoAtributo.regulEsprimo)
 		return regesp.stringByReplacingMatches(
 			in: teksto,
 			range: NSMakeRange(0, teksto.count),
@@ -141,33 +107,46 @@ enum TekstAtributoHelpiloj {
 			let regiono = NSMakeRange(atributo.komenco, atributo.fino - atributo.komenco)
 			switch atributo.speco {
 			case .kursiva:
-				atributaTeksto.addAttribute(
-					.font,
-					value: kursivaStilo,
-					range: regiono
-				)
-				
+				let komencatributoj = atributaTeksto.attributes(at: regiono.location, effectiveRange: nil)
+				if komencatributoj.contains(where: {
+					(($0.value as? UIFont)?.fontDescriptor.symbolicTraits.contains(.traitBold) ?? false)
+				}) {
+					// Ĉu ĉi-kazo iam efektivas?
+					atributaTeksto.addAttribute(
+						.font,
+						value: grasKursivaStilo,
+						range: regiono
+					)
+				} else {
+					atributaTeksto.addAttribute(
+						.font,
+						value: kursivaStilo,
+						range: regiono
+					)
+				}
 			case .grasa:
-				atributaTeksto.addAttribute(
-					.font,
-					value: grasaStilo,
-					range: regiono
-				)
-				
-			case .grasKursiva:
-				atributaTeksto.addAttribute(
-					.font,
-					value: grasKursivaStilo,
-					range: regiono
-				)
-				
+				let komencatributoj = atributaTeksto.attributes(at: regiono.location, effectiveRange: nil)
+				if komencatributoj.contains(where: {
+					(($0.value as? UIFont)?.fontDescriptor.symbolicTraits.contains(.traitItalic) ?? false)
+				}) {
+					atributaTeksto.addAttribute(
+						.font,
+						value: grasKursivaStilo,
+						range: regiono
+					)
+				} else {
+					atributaTeksto.addAttribute(
+						.font,
+						value: grasaStilo,
+						range: regiono
+					)
+				}
 			case .supera:
 				atributaTeksto.addAttribute(
 					kCTSuperscriptAttributeName as NSAttributedString.Key,
 					value: Konstantoj.superskriptSupreco,
 					range: regiono
 				)
-				
 			case .suba:
 				atributaTeksto.addAttribute(
 					kCTSuperscriptAttributeName as NSAttributedString.Key,

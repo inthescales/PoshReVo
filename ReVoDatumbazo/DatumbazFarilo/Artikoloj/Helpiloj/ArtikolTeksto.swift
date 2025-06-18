@@ -2,10 +2,6 @@ import Foundation
 
 /// Helpiloj kiuj faras kaj formas tekstojn tiel kiel ĝi aperu en artikoloj
 enum ArtikolTeksto {
-	private enum Konstantoj {
-		static let numeroEtikedo = "traduknumero"
-	}
-	
 	// MARK: - Simboloj kaj sekcio-etikedoj
 	
 	/// Supozante ke la ĉeno estas kapteksto havanta plurajn formojn, liveras array-on da formoj
@@ -167,7 +163,7 @@ enum ArtikolTeksto {
 				if montriSencon || montriSubsencon,
 				   let senco = nuna.senco,
 				   senco > 0 {
-					teksto += "<" + Konstantoj.numeroEtikedo + ">" + String(senco) + "."
+					teksto += TekstoAtributo.tradukNumero.malfermaEtikedo + String(senco) + "."
 				}
 				
 				// Ĉiam montru subsencon, se ĉeestas
@@ -178,7 +174,7 @@ enum ArtikolTeksto {
 				}
 				
 				if montriSencon || montriSubsencon {
-					teksto += "</" + Konstantoj.numeroEtikedo + "> "
+					teksto += TekstoAtributo.tradukNumero.fermaEtikedo + " "
 				}
 			}
 			
@@ -191,6 +187,6 @@ enum ArtikolTeksto {
 	// MARK: - Helpiloj
 	
 	private static func kolorEtikedi(_ enhavoj: String) -> String {
-		return "<" + Konstantoj.numeroEtikedo + ">" + enhavoj + "</" + Konstantoj.numeroEtikedo + ">"
+		return TekstoAtributo.volvi(tekston: enhavoj, per: .tradukNumero)
 	}
 }

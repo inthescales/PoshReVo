@@ -8,7 +8,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "1. [ARKI] Supera plata parto de kolona <a href=\"kapite.0o\">kapitelo<\/a>.\n\n2. [MAT]<a href=\"kalkul.0ilo\">kalkulilo<\/a> por plenumi aritmetikajn operaciojn, konsistanta ĉefe el buletoj ŝoveblaj sur stangetoj: \n · <ekzemplo>vi mispuŝas globetojn de via <b>abak<\/b>o;<\/ekzemplo> \n · <ekzemplo>en sia animo li restis ĉeflibrotenisto, kaj nun al li mankis <b>abak<\/b>o.<\/ekzemplo>\n⇘ <a href=\"soroban.0o\">sorobano<\/a>\n\n3. [MAT]Grafikaĵo aŭ tabelo, uzata por anstataŭi kalkulon en la solvo de kelkaj matematikaj aŭ teĥnikaj problemoj."
+        "teksto" : "1. [ARKI] Supera plata parto de kolona <a href=\"kapite.0o\">kapitelo<\/a>.\n\n2. [MAT]<a href=\"kalkul.0ilo\">kalkulilo<\/a> por plenumi aritmetikajn operaciojn, konsistanta ĉefe el buletoj ŝoveblaj sur stangetoj: \n<ekzemplo> · vi mispuŝas globetojn de via <g>abak<\/g>o;<\/ekzemplo> \n<ekzemplo> · en sia animo li restis ĉeflibrotenisto, kaj nun al li mankis <g>abak<\/g>o.<\/ekzemplo>\n⇘ <a href=\"soroban.0o\">sorobano<\/a>\n\n3. [MAT]Grafikaĵo aŭ tabelo, uzata por anstataŭi kalkulon en la solvo de kelkaj matematikaj aŭ teĥnikaj problemoj."
       }
     },
     {

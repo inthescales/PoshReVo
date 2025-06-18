@@ -11,10 +11,6 @@ extension String {
 		// Taboj estu forigitajn (dokumentaj marĝenoj ne gravas)
 		rezulto = rezulto.replacingOccurrences(of: "\t", with: "")
 		
-		// anstataŭi <em> etikedoj per <b>
-		rezulto = rezulto.replacingOccurrences(of: "<em>", with: "<b>")
-		rezulto = rezulto.replacingOccurrences(of: "</em>", with: "</b>")
-		
 		// Uzi tripunktan signon anstataŭ tri punktojn
 		rezulto = rezulto.replacingOccurrences(of: "...", with: "…")
 		
