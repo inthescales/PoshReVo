@@ -53,6 +53,7 @@ final class TradukaroChelo: UITableViewCell {
 			difinoEtikedo.translatesAutoresizingMaskIntoConstraints = false
 			difinoEtikedo.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 			difinoEtikedo.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+			difinoEtikedo.setContentHuggingPriority(.defaultLow, for: .horizontal)
 			
 			let etikedujo = UIView()
 			etikedujo.translatesAutoresizingMaskIntoConstraints = false
@@ -78,6 +79,8 @@ final class TradukaroChelo: UITableViewCell {
 					etikedo.snp.makeConstraints { make in
 						make.width.equalTo(plejGranda)
 					}
+				} else {
+					plejGranda.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 				}
 			}
 		}
