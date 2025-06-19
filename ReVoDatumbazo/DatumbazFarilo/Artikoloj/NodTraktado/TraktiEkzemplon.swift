@@ -55,7 +55,7 @@ extension ArboAnalizilo {
 		}
 		
 		if stila {
-			return "\n" + TekstoAtributo.volvi(tekston: " · " + teksto.kunpremi().tondi(), per: .ekzemplo)
+			return "\n" + TekstAtributo.volvi(tekston: " · " + teksto.kunpremi().tondi(), per: .ekzemplo)
 		} else {
 			return teksto.kunpremi().tondi()
 		}

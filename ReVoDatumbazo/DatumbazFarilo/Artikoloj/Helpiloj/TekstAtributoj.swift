@@ -1,4 +1,4 @@
-public enum TekstoAtributo: CaseIterable, Equatable {
+public enum TekstAtributo: CaseIterable, Equatable {
 	case ligo(celo: String)
 	case kursiva
 	case grasa
@@ -7,7 +7,7 @@ public enum TekstoAtributo: CaseIterable, Equatable {
 	case ekzemplo
 	case tradukNumero
 	
-	public static var allCases: [TekstoAtributo] {
+	public static var allCases: [TekstAtributo] {
 		[.ligo(celo: ""), .kursiva, .grasa, .supera, .suba, .ekzemplo, .tradukNumero]
 	}
 	
@@ -78,7 +78,7 @@ public enum TekstoAtributo: CaseIterable, Equatable {
 		return "</" + kodo + ">"
 	}
 	
-	public static func volvi(tekston teksto: String, per atributo: TekstoAtributo) -> String {
+	public static func volvi(tekston teksto: String, per atributo: TekstAtributo) -> String {
 		return atributo.malfermaEtikedo + teksto + atributo.fermaEtikedo
 	}
 	

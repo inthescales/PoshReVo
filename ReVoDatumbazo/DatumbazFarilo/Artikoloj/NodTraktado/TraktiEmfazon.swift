@@ -1,6 +1,6 @@
 extension ArboAnalizilo {
 	static func trakti(emfazon emfazo: ArtikolNodo, stato: Stato) -> String {
-		let teksto = TekstoAtributo.volvi(
+		let teksto = TekstAtributo.volvi(
 			tekston: akumuliTekstojn(de: emfazo, stato: stato).tondi(),
 			per: .grasa
 		)

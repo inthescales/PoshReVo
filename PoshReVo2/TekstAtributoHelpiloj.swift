@@ -16,21 +16,21 @@ enum TekstAtributoHelpiloj {
 	}
 	
 	/// Kazo de tekstatributo aldonota al ĉeno
-	private struct Atributo {
-		let speco: TekstoAtributo
+	private struct TekstAtributajho {
+		let speco: TekstAtributo
 		let komenco: Int
 		let fino: Int
 	}
 
 	/// Liveras ĉiujn tekstatributojn aldonendajn al la ĉeno
-	private static func kreiAtributojn(por teksto: String) -> [Atributo] {
-		var atributoj: [Atributo] = []
+	private static func kreiAtributojn(por teksto: String) -> [TekstAtributajho] {
+		var atributoj: [TekstAtributajho] = []
 		
-		let regesp = try! NSRegularExpression(pattern: TekstoAtributo.regulEsprimo)
+		let regesp = try! NSRegularExpression(pattern: TekstAtributo.regulEsprimo)
 		let trovajhoj = regesp.matches(in: teksto, range: NSRange(teksto.startIndex..., in: teksto))
 		
 		var enangulajSignoj = 0 // Ni ignoru signojn ene de anguloj kiam ni kalkulas atributo-lokojn
-		var staplo: [(TekstoAtributo, Int)] = []
+		var staplo: [(TekstAtributo, Int)] = []
 		for trovajho in trovajhoj {
 			let range = trovajho.range
 			let klavo = String(teksto[Range(trovajho.range(at: 1), in: teksto)!])
@@ -41,15 +41,15 @@ enum TekstAtributoHelpiloj {
 				let ecejo = trovajho.range(at: 5)
 				if ecejo.location != NSNotFound {
 					let valoro = String(teksto[Range(ecejo, in: teksto)!])
-					if let atributo = TekstoAtributo(kodo: klavo, eco: valoro) {
+					if let atributo = TekstAtributo(kodo: klavo, eco: valoro) {
 						staplo.append((atributo, loko))
 					}
-				} else if let atributo = TekstoAtributo(kodo: klavo) {
+				} else if let atributo = TekstAtributo(kodo: klavo) {
 					staplo.append((atributo, loko))
 				}
 			} else if let lasta = staplo.popLast() {
 				// Etikedo fermiĝas. Aldonu atributon
-				atributoj.append(Atributo(speco: lasta.0, komenco: lasta.1, fino: loko))
+				atributoj.append(TekstAtributajho(speco: lasta.0, komenco: lasta.1, fino: loko))
 			}
 			
 			enangulajSignoj += range.length
@@ -60,7 +60,7 @@ enum TekstAtributoHelpiloj {
 
 	/// Forigi la HTML kodojn el la teksto, por ke ĝi aperu nude
 	static func forigiAngulojn(teksto: String) -> String {
-		let regesp = try! NSRegularExpression(pattern: TekstoAtributo.regulEsprimo)
+		let regesp = try! NSRegularExpression(pattern: TekstAtributo.regulEsprimo)
 		return regesp.stringByReplacingMatches(
 			in: teksto,
 			range: NSMakeRange(0, teksto.count),
@@ -71,7 +71,7 @@ enum TekstAtributoHelpiloj {
 	/// Aldoni tekstatributojn al la ĉeno
 	private static func atributaTeksto(
 		por teksto: String,
-		kun atributoj: [Atributo],
+		kun atributoj: [TekstAtributajho],
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) -> NSMutableAttributedString {
 		
@@ -80,18 +80,12 @@ enum TekstAtributoHelpiloj {
 		// Prepari tekst-stilojn
 		// TODO: Pliklarigi kie kaj kiel tiparo estas elektita kaj metita
 		let tekstGrandeco = UIFont.preferredFont(forTextStyle: .body).pointSize
-		let tekstStilo = UIFont.systemFont(ofSize: tekstGrandeco)
-		let grasaStilo = UIFont.boldSystemFont(ofSize: tekstGrandeco)
-		let kursivaStilo = UIFont.italicSystemFont(ofSize: tekstGrandeco)
-		let grasKursivaStilo = UIFont(
-			descriptor: grasaStilo.fontDescriptor.withSymbolicTraits([.traitItalic, .traitBold])!,
-			size: tekstGrandeco
-		)
-	
+		let bazaTiparo = UIFont.systemFont(ofSize: tekstGrandeco)
+
 		// Meti bazan tiparon kaj koloron
 		atributaTeksto.addAttribute(
 			.font,
-			value: tekstStilo,
+			value: bazaTiparo,
 			range: NSMakeRange(0, atributaTeksto.length)
 		)
 		
@@ -105,42 +99,13 @@ enum TekstAtributoHelpiloj {
 			guard atributo.komenco >= 0 && atributo.fino <= atributaTeksto.length else { continue }
 
 			let regiono = NSMakeRange(atributo.komenco, atributo.fino - atributo.komenco)
+			var novajTrajtoj: UIFontDescriptor.SymbolicTraits?
+			
 			switch atributo.speco {
 			case .kursiva:
-				let komencatributoj = atributaTeksto.attributes(at: regiono.location, effectiveRange: nil)
-				if komencatributoj.contains(where: {
-					(($0.value as? UIFont)?.fontDescriptor.symbolicTraits.contains(.traitBold) ?? false)
-				}) {
-					// Ĉu ĉi-kazo iam efektivas?
-					atributaTeksto.addAttribute(
-						.font,
-						value: grasKursivaStilo,
-						range: regiono
-					)
-				} else {
-					atributaTeksto.addAttribute(
-						.font,
-						value: kursivaStilo,
-						range: regiono
-					)
-				}
+				novajTrajtoj = .traitItalic
 			case .grasa:
-				let komencatributoj = atributaTeksto.attributes(at: regiono.location, effectiveRange: nil)
-				if komencatributoj.contains(where: {
-					(($0.value as? UIFont)?.fontDescriptor.symbolicTraits.contains(.traitItalic) ?? false)
-				}) {
-					atributaTeksto.addAttribute(
-						.font,
-						value: grasKursivaStilo,
-						range: regiono
-					)
-				} else {
-					atributaTeksto.addAttribute(
-						.font,
-						value: grasaStilo,
-						range: regiono
-					)
-				}
+				novajTrajtoj = .traitBold
 			case .supera:
 				atributaTeksto.addAttribute(
 					kCTSuperscriptAttributeName as NSAttributedString.Key,
@@ -154,11 +119,7 @@ enum TekstAtributoHelpiloj {
 					range: regiono
 				)
 			case .ekzemplo:
-				atributaTeksto.addAttribute(
-					.font,
-					value: kursivaStilo,
-					range: regiono
-				)
+				novajTrajtoj = .traitItalic
 				atributaTeksto.addAttribute(
 					.foregroundColor,
 					value: stilo.ligilo,
@@ -173,6 +134,27 @@ enum TekstAtributoHelpiloj {
 			case .ligo:
 				// Ligoj aldoniĝos aliloke
 				break
+			}
+			
+			// Aldoni apartajn trajtojn al tiparo, se necesas
+			if let novajTrajtoj {
+				// Akiri trajtojn jam aldonita al la nuna loko, kaj aldoni la novajn
+				let lokajTrajtoj = atributaTeksto.attributes(at: regiono.location, effectiveRange: nil)
+					.map { ($0.value as? UIFont)?.fontDescriptor.symbolicTraits ?? [] }
+					.reduce(UIFontDescriptor.SymbolicTraits()) {
+						$0.union($1)
+					}
+				let trajtaro = lokajTrajtoj.union(novajTrajtoj)
+				
+				// Krei novan tiparon havantan la ĝustajn tratojn
+				if let priskribilo = bazaTiparo.fontDescriptor.withSymbolicTraits(trajtaro) {
+					let novaTiparo = UIFont(descriptor: priskribilo, size: bazaTiparo.pointSize)
+					atributaTeksto.addAttribute(
+						.font,
+						value: novaTiparo,
+						range: regiono
+					)
+				}
 			}
 		}
 		
