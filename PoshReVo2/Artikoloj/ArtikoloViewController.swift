@@ -310,7 +310,12 @@ extension ArtikoloViewController: UITableViewDataSource {
 				stilo: stilo
 			)
 		case .teksta(let teksto):
-			(chelo as? TekstoChelo)?.agordi(teksto: teksto, liganto: self, stilo: stilo)
+			(chelo as? TekstoChelo)?.agordi(
+				teksto: teksto,
+				liganto: self,
+				margheno: Konstantoj.margheno,
+				stilo: stilo
+			)
 		case .traduka(let tradukoj):
 			// TODO: Ŝanĝu post kiam lingvo estos denove struct
 			let tradukKodoj = tradukLingvoj.map { $0.kodo }

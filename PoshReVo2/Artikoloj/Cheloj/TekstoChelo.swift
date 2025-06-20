@@ -14,7 +14,7 @@ final class TekstoChelo: UITableViewCell {
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
-		contentView.addEdgeMatchedSubview(etikedo)
+		contentView.addSubview(etikedo)
 	}
 	
 	required init?(coder: NSCoder) {
@@ -26,6 +26,7 @@ final class TekstoChelo: UITableViewCell {
 	func agordi(
 		teksto: String,
 		liganto: TTTAttributedLabelDelegate,
+		margheno: CGFloat,
 		stilo: InterfacStilo
 	) {
 		etikedo.textColor = stilo.teksto
@@ -41,5 +42,10 @@ final class TekstoChelo: UITableViewCell {
 		]
 		
 		TekstAtributoHelpiloj.provizi(etikedon: etikedo, per: teksto)
+		
+		etikedo.snp.remakeConstraints { make in
+			make.top.bottom.equalToSuperview()
+			make.left.right.equalToSuperview().inset(margheno)
+		}
 	}
 }
