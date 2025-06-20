@@ -11,6 +11,8 @@ final class ArtikoloViewController: UIViewController {
 		static let dividiloIdentigilo = "dividiloIdentigilo"
 		static let tekstoIdentigilo = "tekstaIdentigilo"
 		static let tradukaroIdentigilo = "tradukaIdentigilo"
+		
+		static let margheno: CGFloat = 8
 	}
 	
 	// MARK: Interfaceroj
@@ -27,13 +29,18 @@ final class ArtikoloViewController: UIViewController {
 	}()
 	
 	private lazy var titolejo: ArtikolTitoloView = {
-		let etikedo = ArtikolTitoloView(
+		let ejo = ArtikolTitoloView(
 			artikolo: artikolo,
 			konservis: konservis,
 			salti: premisSalti,
+			margheno: Konstantoj.margheno,
 			stilo: stilo
 		)
-		return etikedo
+		ejo.layer.shadowOffset = CGSize(width: 0, height: 2)
+		ejo.layer.shadowRadius = 1
+		ejo.layer.shadowColor = UIColor.black.cgColor
+		ejo.layer.shadowOpacity = 0.2
+		return ejo
 	}()
 	
 	private lazy var tabelo: UITableView = {
@@ -42,6 +49,13 @@ final class ArtikoloViewController: UIViewController {
 		tabelo.dataSource = self
 		tabelo.rowHeight = UITableView.automaticDimension
 		tabelo.estimatedRowHeight = 100
+		tabelo.contentInset = UIEdgeInsets(
+			top: Konstantoj.margheno,
+			left: 0,
+			bottom: 0,
+			right: 0
+		)
+		
 		tabelo.register(
 			DerivajhTitoloChelo.self,
 			forCellReuseIdentifier: Konstantoj.derivajhTitoloIdentigilo
@@ -149,6 +163,7 @@ final class ArtikoloViewController: UIViewController {
 		}
 		
 		view.addSubview(tabelo)
+		view.sendSubviewToBack(tabelo)
 		tabelo.snp.makeConstraints { make in
 			make.left.right.bottom.equalToSuperview()
 			make.top.equalTo(titolejo.snp.bottom)

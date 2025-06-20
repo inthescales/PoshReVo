@@ -4,15 +4,40 @@ import ReVoDatumbazo
 
 final class ArtikolTitoloView: UIView {
 	private enum Konstantoj {
-		static let margheno: CGFloat = 16
+		static let flankaMargheno: CGFloat = 16
+		static let vertikalaMargheno: CGFloat = 8
+		static let internaMargheno: CGFloat = 8
+		static let angulRadiuso: CGFloat = 18
 	}
+	
+	// MARK: - Interfaceroj
+	
+	private lazy var fonoView: UIView = {
+		let fono = UIView()
+		fono.layer.cornerRadius = Konstantoj.angulRadiuso
+		fono.layer.shadowOffset = CGSize(width: 0, height: 2)
+		fono.layer.shadowRadius = 1
+		fono.layer.shadowColor = UIColor.black.cgColor
+		fono.layer.shadowOpacity = 0.2
+		fono.backgroundColor = stilo.koloraFono
+		return fono
+	}()
 	
 	private lazy var etikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.text = artikolo.titolo
-		etikedo.font = .systemFont(ofSize: 30, weight: .bold)
-		etikedo.textColor = stilo.teksto
+		etikedo.font = .systemFont(ofSize: 30, weight: .bold) // TODO: Tiparo
+		etikedo.textColor = stilo.surkoloraTeksto
 		return etikedo
+	}()
+	
+	private lazy var dividilo: UIView = {
+		let ilo = UIView()
+		ilo.snp.makeConstraints { make in
+			make.width.equalTo(1)
+		}
+		ilo.backgroundColor = stilo.surkoloraMalaktiva
+		return ilo
 	}()
 	
 	private lazy var konserviButono: UIButton = {
@@ -25,7 +50,7 @@ final class ArtikolTitoloView: UIView {
 			UIImage(named: "plenaStelo")?.withRenderingMode(.alwaysTemplate),
 			for: .selected
 		)
-		butono.tintColor = stilo.ligilo
+		butono.tintColor = stilo.surkoloraTeksto
 		butono.addTarget(self, action: #selector(premisKonservi), for: .touchUpInside)
 		return butono
 	}()
@@ -36,7 +61,7 @@ final class ArtikolTitoloView: UIView {
 			UIImage(named: "saltosago")?.withRenderingMode(.alwaysTemplate),
 			for: .normal
 		)
-		butono.tintColor = stilo.ligilo
+		butono.tintColor = stilo.surkoloraTeksto
 		butono.addTarget(self, action: #selector(premisSalti), for: .touchUpInside)
 		return butono
 	}()
@@ -44,6 +69,7 @@ final class ArtikolTitoloView: UIView {
 	private lazy var butonoStaplo: UIStackView = {
 		let staplo = UIStackView()
 		staplo.axis = .horizontal
+		staplo.spacing = Konstantoj.internaMargheno
 		
 		[konserviButono, saltiButono].forEach { butono in
 			staplo.addArrangedSubview(butono)
@@ -68,6 +94,7 @@ final class ArtikolTitoloView: UIView {
 		artikolo: Artikolo,
 		konservis: @escaping (Bool) -> Void,
 		salti: @escaping () -> Void,
+		margheno: CGFloat,
 		stilo: InterfacStilo
 	) {
 		self.artikolo = artikolo
@@ -76,16 +103,30 @@ final class ArtikolTitoloView: UIView {
 		self.stilo = stilo
 		super.init(frame: .zero)
 		
-		backgroundColor = self.stilo.senkoloraFono
+		backgroundColor = stilo.senkoloraFono
+		
+		addSubview(fonoView)
+		fonoView.snp.makeConstraints { make in
+			make.edges.equalToSuperview().inset(margheno)
+		}
 		
 		addSubview(etikedo)
 		etikedo.snp.makeConstraints { make in
-			make.top.bottom.left.equalToSuperview().inset(Konstantoj.margheno)
+			make.left.equalTo(fonoView).inset(Konstantoj.flankaMargheno)
+			make.top.bottom.equalTo(fonoView).inset(Konstantoj.vertikalaMargheno)
+		}
+		
+		addSubview(dividilo)
+		dividilo.snp.makeConstraints { make in
+			make.left.greaterThanOrEqualTo(etikedo.snp.right).offset(Konstantoj.internaMargheno * 2)
+			make.top.bottom.equalTo(fonoView).inset(Konstantoj.vertikalaMargheno)
 		}
 		
 		addSubview(butonoStaplo)
 		butonoStaplo.snp.makeConstraints { make in
-			make.top.bottom.right.equalToSuperview().inset(Konstantoj.margheno)
+			make.left.equalTo(dividilo.snp.right).offset(Konstantoj.internaMargheno * 2)
+			make.right.equalTo(fonoView).inset(Konstantoj.flankaMargheno)
+			make.top.bottom.equalTo(fonoView).inset(Konstantoj.vertikalaMargheno)
 		}
 	}
 	
