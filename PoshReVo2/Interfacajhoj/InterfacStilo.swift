@@ -17,6 +17,7 @@ class DinamikaStilo {
 	static var senkoloraFono = UIColor(dynamicProvider: { _ in konkretaStilo.senkoloraFono})
 	static var koloraFono = UIColor(dynamicProvider: { _ in konkretaStilo.koloraFono})
 	static var teksto = UIColor(dynamicProvider: { _ in konkretaStilo.teksto})
+	static var tekstDividilo = UIColor(dynamicProvider: { _ in konkretaStilo.tekstDividilo})
 	static var ligilo = UIColor(dynamicProvider: { _ in konkretaStilo.ligilo})
 	static var surkoloraButono = UIColor(dynamicProvider: { _ in konkretaStilo.surkoloraButono})
 	static var surkoloraTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.surkoloraTeksto})
@@ -34,6 +35,7 @@ class InterfacStilo {
 	lazy var koloraFono = UIColor(hela: hela.koloraFono, malhela: malhela.koloraFono)
 	
 	lazy var teksto = UIColor(hela: hela.teksto, malhela: malhela.teksto)
+	lazy var tekstDividilo = UIColor(hela: hela.tekstDividilo, malhela: malhela.tekstDividilo)
 	lazy var ligilo = UIColor(hela: hela.ligilo, malhela: malhela.ligilo)
 	
 	lazy var surkoloraButono = UIColor(hela: hela.surkoloraButono, malhela: malhela.surkoloraButono)
@@ -58,6 +60,7 @@ class InterfacStilo {
 			senkoloraFono: .white,
 			koloraFono: .orange,
 			teksto: .black,
+			tekstDividilo: .lightGray,
 			ligilo: .brown,
 			surkoloraButono: .white,
 			surkoloraTeksto: .white,
@@ -67,6 +70,7 @@ class InterfacStilo {
 			senkoloraFono: .black, 
 			koloraFono: .brown,
 			teksto: .white,
+			tekstDividilo: .gray,
 			ligilo: .brown,
 			surkoloraButono: .black,
 			surkoloraTeksto: .white,
@@ -81,6 +85,7 @@ class InterfacStilo {
 			senkoloraFono: .white,
 			koloraFono: .green,
 			teksto: .black,
+			tekstDividilo: .lightGray,
 			ligilo: .green,
 			surkoloraButono: .white,
 			surkoloraTeksto: .white,
@@ -90,6 +95,7 @@ class InterfacStilo {
 			senkoloraFono: .black,
 			koloraFono: .green,
 			teksto: .white,
+			tekstDividilo: .gray,
 			ligilo: .green,
 			surkoloraButono: .black,
 			surkoloraTeksto: .white,
@@ -107,6 +113,7 @@ struct Koloraro {
 	var senkoloraFono: UIColor
 	var koloraFono: UIColor
 	var teksto: UIColor
+	var tekstDividilo: UIColor
 	var ligilo: UIColor
 	var surkoloraButono: UIColor
 	var surkoloraTeksto: UIColor

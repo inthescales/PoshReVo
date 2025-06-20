@@ -304,7 +304,11 @@ extension ArtikoloViewController: UITableViewDataSource {
 		case .dividila(teksto: let teksto):
 			(chelo as? SubartikoloTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
 		case .derivajhTitola(teksto: let teksto, _, _):
-			(chelo as? DerivajhTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
+			(chelo as? DerivajhTitoloChelo)?.agordi(
+				teksto: teksto, 
+				margheno: Konstantoj.margheno,
+				stilo: stilo
+			)
 		case .teksta(let teksto):
 			(chelo as? TekstoChelo)?.agordi(teksto: teksto, liganto: self, stilo: stilo)
 		case .traduka(let tradukoj):
