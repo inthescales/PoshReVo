@@ -32,7 +32,7 @@ final class ArtikoloViewController: UIViewController {
 		let ejo = ArtikolTitoloView(
 			artikolo: artikolo,
 			konservis: konservis,
-			salti: premisSalti,
+			salti: { [weak self] in self?.premisSalti() },
 			margheno: Konstantoj.margheno,
 			stilo: stilo
 		)
@@ -321,7 +321,7 @@ extension ArtikoloViewController: UITableViewDataSource {
 			let tradukKodoj = tradukLingvoj.map { $0.kodo }
 			let montrotaj = tradukoj
 				.filter { tradukKodoj.contains($0.lingvo.kodo) }
-			(chelo as? TradukaroChelo)?.agordi(tradukoj: montrotaj, liganto: self, stilo: stilo)
+			(chelo as? TradukaroChelo)?.agordi(tradukoj: montrotaj, stilo: stilo)
 		}
 		chelo.selectionStyle = .none
 		

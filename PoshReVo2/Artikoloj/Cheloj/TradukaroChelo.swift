@@ -5,18 +5,10 @@ import ReVoDatumbazo
 import TTTAttributedLabel
 
 final class TradukaroChelo: UITableViewCell {
-	private lazy var staplo: UIStackView = {
-		let staplo = UIStackView()
-		staplo.axis = .vertical
-		staplo.alignment = .fill
-		return staplo
-	}()
-
 	//
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-		super.init(style: style, reuseIdentifier: reuseIdentifier)		
-		 contentView.addEdgeMatchedSubview(staplo)
+		super.init(style: style, reuseIdentifier: reuseIdentifier)
 	}
 	
 	required init?(coder: NSCoder) {
@@ -27,13 +19,16 @@ final class TradukaroChelo: UITableViewCell {
 	
 	func agordi(
 		tradukoj: [Traduko],
-		liganto: TTTAttributedLabelDelegate,
 		stilo: InterfacStilo
 	) {
-		staplo.arrangedSubviews.forEach {
-			staplo.removeArrangedSubview($0)
-			$0.removeFromSuperview()
-		}
+		contentView.subviews.forEach { $0.removeFromSuperview() }
+		contentView.addEdgeMatchedSubview(fariStaplon(tradukoj: tradukoj, stilo: stilo))
+	}
+	
+	private func fariStaplon(tradukoj: [Traduko], stilo: InterfacStilo) -> UIStackView {
+		let staplo = UIStackView()
+		staplo.axis = .vertical
+		staplo.alignment = .fill
 		
 		var lingvoEtikedoj: [UILabel] = []
 		
@@ -84,5 +79,7 @@ final class TradukaroChelo: UITableViewCell {
 				}
 			}
 		}
+		
+		return staplo
 	}
 }
