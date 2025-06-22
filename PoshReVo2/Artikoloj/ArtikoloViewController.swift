@@ -317,11 +317,19 @@ extension ArtikoloViewController: UITableViewDataSource {
 				stilo: stilo
 			)
 		case .traduka(let tradukoj):
-			// TODO: Ŝanĝu post kiam lingvo estos denove struct
-			let tradukKodoj = tradukLingvoj.map { $0.kodo }
-			let montrotaj = tradukoj
-				.filter { tradukKodoj.contains($0.lingvo.kodo) }
-			(chelo as? TradukaroChelo)?.agordi(tradukoj: montrotaj, stilo: stilo)
+			(chelo as? TradukaroChelo)?.agordi(
+				tradukoj: tradukoj,
+				tradukLingvoj: tradukLingvoj,
+				margheno: Konstantoj.margheno,
+				elekti: { [weak self] in
+					guard let navigaciilo = self?.navigationController else { return }
+					self?.kunordigilo.prezentiLingvoRedaktilon(
+						prezentilo: navigaciilo,
+						kompleti: { _ in }
+					)
+				},
+				stilo: stilo
+			)
 		}
 		chelo.selectionStyle = .none
 		

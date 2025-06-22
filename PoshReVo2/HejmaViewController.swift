@@ -83,15 +83,15 @@ final class HejmaViewController: UIViewController {
 		let menuo = ShovMenuoViewController(
 			eroj: [
 				ShovMenuoViewController.Menuero(
-					teksto: "Agordoj",
+					teksto: Tekstoj.agordoj,
 					ago: { [weak self] in self?.premisAgordoj() }
 				),
 				ShovMenuoViewController.Menuero(
-					teksto: "Mallongigoj",
+					teksto: Tekstoj.mallongigoj,
 					ago: { [weak self] in self?.premisMallongigoj() }
 				),
 				ShovMenuoViewController.Menuero(
-					teksto: "Pri PoŝReVo",
+					teksto: Tekstoj.priPoshReVo,
 					ago: { [weak self] in self?.premisInformoj() }
 				)
 			],
