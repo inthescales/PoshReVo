@@ -19,6 +19,7 @@ class DinamikaStilo {
 	static var navigaciaButono = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaButono})
 	static var navigaciaButonoMalaktiva = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaButonoMalaktiva})
 	static var dokumentaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaFono})
+	static var dokumentaAlternaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaAlternaFono})
 	static var dokumentaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaTeksto})
 	static var dokumentaDividilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaDividilo})
 	static var dokumentLigilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentLigilo})
@@ -37,6 +38,7 @@ class InterfacStilo {
 	lazy var navigaciaTeksto = UIColor(hela: hela.navigaciaTeksto, malhela: malhela.navigaciaTeksto)
 	
 	lazy var dokumentaFono = UIColor(hela: hela.dokumentaFono, malhela: malhela.dokumentaFono)
+	lazy var dokumentaAlternaFono = UIColor(hela: hela.dokumentaAlternaFono, malhela: malhela.dokumentaAlternaFono)
 	lazy var dokumentaTeksto = UIColor(hela: hela.dokumentaTeksto, malhela: malhela.dokumentaTeksto)
 	lazy var dokumentaDividilo = UIColor(hela: hela.dokumentaDividilo, malhela: malhela.dokumentaDividilo)
 	lazy var dokumentLigilo = UIColor(hela: hela.dokumentLigilo, malhela: malhela.dokumentLigilo)
@@ -61,6 +63,7 @@ class InterfacStilo {
 			navigaciaButono: .white,
 			navigaciaButonoMalaktiva: .brown,
 			dokumentaFono: .white,
+			dokumentaAlternaFono: .systemGroupedBackground,
 			dokumentaTeksto: .black,
 			dokumentaDividilo: .lightGray,
 			dokumentLigilo: .brown
@@ -71,6 +74,7 @@ class InterfacStilo {
 			navigaciaButono: .black,
 			navigaciaButonoMalaktiva: .brown,
 			dokumentaFono: .black,
+			dokumentaAlternaFono: .gray,
 			dokumentaTeksto: .white,
 			dokumentaDividilo: .gray,
 			dokumentLigilo: .brown
@@ -86,6 +90,7 @@ class InterfacStilo {
 			navigaciaButono: .white,
 			navigaciaButonoMalaktiva: .green,
 			dokumentaFono: .white,
+			dokumentaAlternaFono: .systemGroupedBackground,
 			dokumentaTeksto: .black,
 			dokumentaDividilo: .lightGray,
 			dokumentLigilo: .green
@@ -96,6 +101,7 @@ class InterfacStilo {
 			navigaciaButono: .white,
 			navigaciaButonoMalaktiva: .green,
 			dokumentaFono: .black,
+			dokumentaAlternaFono: .gray,
 			dokumentaTeksto: .white,
 			dokumentaDividilo: .gray,
 			dokumentLigilo: .green
@@ -114,6 +120,7 @@ struct Koloraro {
 	var navigaciaButono: UIColor
 	var navigaciaButonoMalaktiva: UIColor
 	var dokumentaFono: UIColor
+	var dokumentaAlternaFono: UIColor
 	var dokumentaTeksto: UIColor
 	var dokumentaDividilo: UIColor
 	var dokumentLigilo: UIColor

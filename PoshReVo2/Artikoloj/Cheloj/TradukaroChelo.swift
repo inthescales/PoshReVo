@@ -126,7 +126,7 @@ final class TradukaroChelo: UITableViewCell {
 		
 		var lingvoEtikedoj: [UILabel] = []
 		
-		for traduko in tradukoj {
+		for (i, traduko) in tradukoj.enumerated() {
 			let lingvoEtikedo = UILabel()
 			lingvoEtikedo.text = traduko.lingvo.adverbo + ":"
 			lingvoEtikedo.textColor = stilo.dokumentLigilo
@@ -145,6 +145,7 @@ final class TradukaroChelo: UITableViewCell {
 			
 			let etikedujo = UIView()
 			etikedujo.translatesAutoresizingMaskIntoConstraints = false
+			etikedujo.backgroundColor = (i % 2 == 0) ? stilo.dokumentaFono : stilo.dokumentaAlternaFono
 			[lingvoEtikedo, difinoEtikedo].forEach { etikedujo.addSubview($0) }
 			
 			lingvoEtikedo.snp.makeConstraints { make in
