@@ -16,13 +16,14 @@ enum Tekstoj {
 	
 	static let serchiLingvon = "Serĉi lingvon"
 	static let serchiVortonAuFrazon = "Serĉi vorton aŭ frazon"
-	static let pli = "Pli"
+	static let pli = "pli"
 	
 	// MARK: - Artikoloj
 	
+	static let enViajLingvoj = "En viaj lingvoj:"
 	static let neniujLingvoj = "Elekti lingvojn por vidi tradukojn"
 	static let neniujTradukoj = "Neniuj tradukoj en viaj lingvoj"
-	static let elekti = "Elekti"
+	static let elekti = "elekti"
 	
 	// MARK: - Agordoj
 	

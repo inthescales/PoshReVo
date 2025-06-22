@@ -5,6 +5,15 @@ import ReVoDatumbazo
 import TTTAttributedLabel
 
 final class TradukaroChelo: UITableViewCell {
+	private enum Konstantoj {
+		static let vertikalaMargheno = 8.0
+	}
+	
+	private enum TitolStilo {
+		case grasa
+		case kursiva
+	}
+	
 	// MARK: - Agordado
 	
 	private var elekti: (() -> Void)?
@@ -24,7 +33,7 @@ final class TradukaroChelo: UITableViewCell {
 	func agordi(
 		tradukoj: [Traduko],
 		tradukLingvoj: [Lingvo],
-		margheno: CGFloat,
+		margheno horizontalaMargheno: CGFloat,
 		elekti: @escaping () -> Void,
 		stilo: InterfacStilo
 	) {
@@ -39,28 +48,51 @@ final class TradukaroChelo: UITableViewCell {
 		let neniujLingvoj = tradukLingvoj.isEmpty
 			|| tradukLingvoj.count == 1 && tradukLingvoj.first?.kodo == "eo"
 		
+		let dividilo = UIView()
+		dividilo.backgroundColor = stilo.tekstDividilo
+		contentView.addSubview(dividilo)
+		dividilo.snp.makeConstraints { make in
+			make.top.equalToSuperview().offset(Konstantoj.vertikalaMargheno)
+			make.left.right.equalToSuperview().inset(horizontalaMargheno)
+			make.height.equalTo(1)
+		}
+		
 		if neniujLingvoj || montrotaj.isEmpty {
 			let teksto = neniujLingvoj ? Tekstoj.neniujLingvoj : Tekstoj.neniujTradukoj
-			let avizo = fariAvizon(teksto: teksto, stilo: stilo)
+			let avizo = fariAvizon(teksto: teksto, titolStilo: .kursiva, stilo: stilo)
 			contentView.addSubview(avizo)
 			avizo.snp.makeConstraints { make in
-				make.top.bottom.equalToSuperview()
-				make.left.right.equalToSuperview().inset(margheno)
+				make.top.equalTo(dividilo.snp.bottom)
+				make.bottom.equalToSuperview()
+				make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			}
 		} else {
+			let avizo = fariAvizon(teksto: Tekstoj.enViajLingvoj, titolStilo: .grasa, stilo: stilo)
+			contentView.addSubview(avizo)
+			avizo.snp.makeConstraints { make in
+				make.top.equalTo(dividilo.snp.bottom)
+				make.left.right.equalToSuperview().inset(horizontalaMargheno)
+			}
+			
 			let staplo = fariStaplon(tradukoj: montrotaj, stilo: stilo)
 			contentView.addSubview(staplo)
 			staplo.snp.makeConstraints { make in
-				make.top.bottom.equalToSuperview()
-				make.left.right.equalToSuperview().inset(margheno)
+				make.top.equalTo(avizo.snp.bottom)
+				make.bottom.equalToSuperview().offset(-Konstantoj.vertikalaMargheno)
+				make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			}
 		}
 	}
 		
-	private func fariAvizon(teksto: String, stilo: InterfacStilo) -> UIView {
+	private func fariAvizon(teksto: String, titolStilo: TitolStilo, stilo: InterfacStilo) -> UIView {
 		let etikedo = UILabel()
 		etikedo.text = teksto
-		etikedo.font = .italicSystemFont(ofSize: 16) // TODO: tiparo
+		switch titolStilo {
+		case .grasa:
+			etikedo.font = .boldSystemFont(ofSize: 16) // TODO: tiparo
+		case .kursiva:
+			etikedo.font = .italicSystemFont(ofSize: 16) // TODO: tiparo
+		}
 		etikedo.setContentHuggingPriority(.defaultLow, for: .horizontal)
 		
 		let butono = UIButton()
@@ -73,7 +105,8 @@ final class TradukaroChelo: UITableViewCell {
 
 		ujo.addSubview(etikedo)
 		etikedo.snp.makeConstraints { make in
-			make.top.bottom.left.equalToSuperview()
+			make.centerY.left.equalToSuperview()
+			make.height.lessThanOrEqualToSuperview()
 		}
 		
 		ujo.addSubview(butono)
