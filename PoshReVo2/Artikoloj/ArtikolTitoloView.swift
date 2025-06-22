@@ -19,7 +19,7 @@ final class ArtikolTitoloView: UIView {
 		fono.layer.shadowRadius = 1
 		fono.layer.shadowColor = UIColor.black.cgColor
 		fono.layer.shadowOpacity = 0.2
-		fono.backgroundColor = stilo.koloraFono
+		fono.backgroundColor = stilo.navigaciaFono
 		return fono
 	}()
 	
@@ -27,7 +27,7 @@ final class ArtikolTitoloView: UIView {
 		let etikedo = UILabel()
 		etikedo.text = artikolo.titolo
 		etikedo.font = .systemFont(ofSize: 30, weight: .bold) // TODO: Tiparo
-		etikedo.textColor = stilo.surkoloraTeksto
+		etikedo.textColor = stilo.navigaciaTeksto
 		return etikedo
 	}()
 	
@@ -36,7 +36,7 @@ final class ArtikolTitoloView: UIView {
 		ilo.snp.makeConstraints { make in
 			make.width.equalTo(1)
 		}
-		ilo.backgroundColor = stilo.surkoloraMalaktiva
+		ilo.backgroundColor = stilo.navigaciaButonoMalaktiva
 		return ilo
 	}()
 	
@@ -50,7 +50,7 @@ final class ArtikolTitoloView: UIView {
 			UIImage(named: "plenaStelo")?.withRenderingMode(.alwaysTemplate),
 			for: .selected
 		)
-		butono.tintColor = stilo.surkoloraTeksto
+		butono.tintColor = stilo.navigaciaTeksto
 		butono.addTarget(self, action: #selector(premisKonservi), for: .touchUpInside)
 		return butono
 	}()
@@ -61,7 +61,7 @@ final class ArtikolTitoloView: UIView {
 			UIImage(named: "saltosago")?.withRenderingMode(.alwaysTemplate),
 			for: .normal
 		)
-		butono.tintColor = stilo.surkoloraTeksto
+		butono.tintColor = stilo.navigaciaTeksto
 		butono.addTarget(self, action: #selector(premisSalti), for: .touchUpInside)
 		return butono
 	}()
@@ -103,7 +103,7 @@ final class ArtikolTitoloView: UIView {
 		self.stilo = stilo
 		super.init(frame: .zero)
 		
-		backgroundColor = stilo.senkoloraFono
+		backgroundColor = stilo.dokumentaFono
 		
 		addSubview(fonoView)
 		fonoView.snp.makeConstraints { make in

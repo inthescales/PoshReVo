@@ -40,7 +40,7 @@ final class AgordojViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-		navigationController?.navigationBar.tintColor = stilo.surkoloraTeksto
+		navigationController?.navigationBar.tintColor = stilo.navigaciaTeksto
 		view.addEdgeMatchedSubview(tabelo)
 	}
 	

@@ -88,7 +88,7 @@ final class SerchoViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-		view.backgroundColor = stilo.koloraFono
+		view.backgroundColor = stilo.navigaciaFono
 		
 		view.addSubview(serchilo)
 		serchilo.snp.makeConstraints { make in

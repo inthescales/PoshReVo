@@ -80,7 +80,7 @@ final class Kunordigilo {
 	) {
 		let navigaciilo = UINavigationController()
 		navigaciilo.navigationBar.isTranslucent = false
-		navigaciilo.navigationBar.backgroundColor = datumRegilo.datumaro.stilo.koloraFono // TODO: movi, korekti stilon
+		navigaciilo.navigationBar.backgroundColor = datumRegilo.datumaro.stilo.navigaciaFono // TODO: movi, korekti stilon
 		navigaciilo.modalPresentationStyle = .fullScreen
 		
 		let elektilo = StiloElektiloViewController() { [weak self] novaStilo in
@@ -103,7 +103,7 @@ final class Kunordigilo {
 	) {
 		let navigaciilo = UINavigationController()
 		navigaciilo.navigationBar.isTranslucent = false
-		navigaciilo.navigationBar.backgroundColor = datumRegilo.datumaro.stilo.koloraFono
+		navigaciilo.navigationBar.backgroundColor = datumRegilo.datumaro.stilo.navigaciaFono
 		navigaciilo.modalPresentationStyle = .fullScreen
 		
 		let redaktilo = LingvaroRedaktiloViewController(

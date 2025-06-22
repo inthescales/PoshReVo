@@ -1,6 +1,6 @@
 import UIKit
 
-final class SurkoloraButton: UIButton {
+final class HejmaNavigaciButton: UIButton {
 	private let stilo: InterfacStilo
 	
 	init(teksto: String, stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
@@ -8,8 +8,8 @@ final class SurkoloraButton: UIButton {
 		super.init(frame: .zero)
 	
 		setTitle(teksto, for: .normal)
-		setTitleColor(self.stilo.teksto, for: .normal)
-		backgroundColor = self.stilo.surkoloraButono
+		setTitleColor(self.stilo.dokumentaTeksto, for: .normal)
+		backgroundColor = self.stilo.navigaciaButono
 		
 		layer.cornerRadius = 24
 		snp.makeConstraints { make in

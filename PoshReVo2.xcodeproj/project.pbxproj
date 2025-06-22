@@ -15,7 +15,7 @@
 		000DA6F92D906C6E0026CBA0 /* InterfacStilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */; };
 		000DA6FB2D90898C0026CBA0 /* SerchiloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FA2D90898C0026CBA0 /* SerchiloView.swift */; };
 		000DA6FD2D908F680026CBA0 /* ChefaNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FC2D908F680026CBA0 /* ChefaNavigationController.swift */; };
-		000DA6FF2D9099670026CBA0 /* SurkoloraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FE2D9099670026CBA0 /* SurkoloraButton.swift */; };
+		000DA6FF2D9099670026CBA0 /* HejmaNavigaciButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FE2D9099670026CBA0 /* HejmaNavigaciButton.swift */; };
 		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
 		00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B082DC17EB600526F82 /* SerchoViewController.swift */; };
 		00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */; };
@@ -82,7 +82,7 @@
 		000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfacStilo.swift; sourceTree = "<group>"; };
 		000DA6FA2D90898C0026CBA0 /* SerchiloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchiloView.swift; sourceTree = "<group>"; };
 		000DA6FC2D908F680026CBA0 /* ChefaNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefaNavigationController.swift; sourceTree = "<group>"; };
-		000DA6FE2D9099670026CBA0 /* SurkoloraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurkoloraButton.swift; sourceTree = "<group>"; };
+		000DA6FE2D9099670026CBA0 /* HejmaNavigaciButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HejmaNavigaciButton.swift; sourceTree = "<group>"; };
 		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
 		00B27B082DC17EB600526F82 /* SerchoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchoViewController.swift; sourceTree = "<group>"; };
 		00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortoListoViewController.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 			children = (
 				00B27B512DEA3ED300526F82 /* ShovMenuoViewController.swift */,
 				00B27B9B2E08889000526F82 /* StrekoView.swift */,
-				000DA6FE2D9099670026CBA0 /* SurkoloraButton.swift */,
+				000DA6FE2D9099670026CBA0 /* HejmaNavigaciButton.swift */,
 			);
 			path = Interfaceroj;
 			sourceTree = "<group>";
@@ -485,7 +485,7 @@
 				000DA6F92D906C6E0026CBA0 /* InterfacStilo.swift in Sources */,
 				00B27B522DEA3ED300526F82 /* ShovMenuoViewController.swift in Sources */,
 				000DA6FB2D90898C0026CBA0 /* SerchiloView.swift in Sources */,
-				000DA6FF2D9099670026CBA0 /* SurkoloraButton.swift in Sources */,
+				000DA6FF2D9099670026CBA0 /* HejmaNavigaciButton.swift in Sources */,
 				00B27B4D2DCE792C00526F82 /* AgordojViewController.swift in Sources */,
 				00B27B132DC2650800526F82 /* LingvoListoViewController.swift in Sources */,
 				00B27B942DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift in Sources */,

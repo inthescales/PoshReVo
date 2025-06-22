@@ -49,7 +49,7 @@ final class TradukaroChelo: UITableViewCell {
 		let neniujLingvoj = tradukLingvoj.isEmpty
 			|| tradukLingvoj.count == 1 && tradukLingvoj.first?.kodo == "eo"
 		
-		let dividilo = StrekoView(koloro: stilo.tekstDividilo)
+		let dividilo = StrekoView(koloro: stilo.dokumentaDividilo)
 		contentView.addSubview(dividilo)
 		dividilo.snp.makeConstraints { make in
 			make.top.equalToSuperview().offset(Konstantoj.vertikalaMargheno)
@@ -97,7 +97,7 @@ final class TradukaroChelo: UITableViewCell {
 		
 		let butono = UIButton()
 		butono.setTitle(Tekstoj.elekti, for: .normal)
-		butono.setTitleColor(stilo.koloraFono, for: .normal) // TODO: Nova koloro
+		butono.setTitleColor(stilo.navigaciaFono, for: .normal) // TODO: Nova koloro
 		butono.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 		butono.addTarget(self, action: #selector(premisElekti), for: .touchUpInside)
 		butono.titleEdgeInsets = .zero
@@ -129,14 +129,14 @@ final class TradukaroChelo: UITableViewCell {
 		for traduko in tradukoj {
 			let lingvoEtikedo = UILabel()
 			lingvoEtikedo.text = traduko.lingvo.adverbo + ":"
-			lingvoEtikedo.textColor = stilo.ligilo
+			lingvoEtikedo.textColor = stilo.dokumentLigilo
 			lingvoEtikedo.numberOfLines = 1
 			lingvoEtikedo.translatesAutoresizingMaskIntoConstraints = false
 			lingvoEtikedo.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
 			
 			let difinoEtikedo = TTTAttributedLabel(frame: .zero)
 			TekstAtributoHelpiloj.provizi(etikedon: difinoEtikedo, per: traduko.teksto)
-			difinoEtikedo.textColor = stilo.teksto
+			difinoEtikedo.textColor = stilo.dokumentaTeksto
 			difinoEtikedo.numberOfLines = 0
 			difinoEtikedo.translatesAutoresizingMaskIntoConstraints = false
 			difinoEtikedo.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)

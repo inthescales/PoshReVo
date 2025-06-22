@@ -14,14 +14,14 @@ class DinamikaStilo {
 		UzantDatumaro.komuna.stilo
 	}
 	
-	static var senkoloraFono = UIColor(dynamicProvider: { _ in konkretaStilo.senkoloraFono})
-	static var koloraFono = UIColor(dynamicProvider: { _ in konkretaStilo.koloraFono})
-	static var teksto = UIColor(dynamicProvider: { _ in konkretaStilo.teksto})
-	static var tekstDividilo = UIColor(dynamicProvider: { _ in konkretaStilo.tekstDividilo})
-	static var ligilo = UIColor(dynamicProvider: { _ in konkretaStilo.ligilo})
-	static var surkoloraButono = UIColor(dynamicProvider: { _ in konkretaStilo.surkoloraButono})
-	static var surkoloraTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.surkoloraTeksto})
-	static var surkoloraMalaktiva = UIColor(dynamicProvider: { _ in konkretaStilo.surkoloraMalaktiva})
+	static var navigaciaFono = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaFono})
+	static var navigaciaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaTeksto})
+	static var navigaciaButono = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaButono})
+	static var navigaciaButonoMalaktiva = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaButonoMalaktiva})
+	static var dokumentaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaFono})
+	static var dokumentaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaTeksto})
+	static var dokumentaDividilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaDividilo})
+	static var dokumentLigilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentLigilo})
 }
 
 class InterfacStilo {
@@ -31,16 +31,15 @@ class InterfacStilo {
 	private var hela: Koloraro
 	private var malhela: Koloraro
 	
-	lazy var senkoloraFono = UIColor(hela: hela.senkoloraFono, malhela: malhela.senkoloraFono)
-	lazy var koloraFono = UIColor(hela: hela.koloraFono, malhela: malhela.koloraFono)
+	lazy var navigaciaFono = UIColor(hela: hela.navigaciaFono, malhela: malhela.navigaciaFono)
+	lazy var navigaciaButono = UIColor(hela: hela.navigaciaButono, malhela: malhela.navigaciaButono)
+	lazy var navigaciaButonoMalaktiva = UIColor(hela: hela.navigaciaButonoMalaktiva, malhela: malhela.navigaciaButonoMalaktiva)
+	lazy var navigaciaTeksto = UIColor(hela: hela.navigaciaTeksto, malhela: malhela.navigaciaTeksto)
 	
-	lazy var teksto = UIColor(hela: hela.teksto, malhela: malhela.teksto)
-	lazy var tekstDividilo = UIColor(hela: hela.tekstDividilo, malhela: malhela.tekstDividilo)
-	lazy var ligilo = UIColor(hela: hela.ligilo, malhela: malhela.ligilo)
-	
-	lazy var surkoloraButono = UIColor(hela: hela.surkoloraButono, malhela: malhela.surkoloraButono)
-	lazy var surkoloraTeksto = UIColor(hela: hela.surkoloraTeksto, malhela: malhela.surkoloraTeksto)
-	lazy var surkoloraMalaktiva = UIColor(hela: hela.surkoloraMalaktiva, malhela: malhela.surkoloraMalaktiva)
+	lazy var dokumentaFono = UIColor(hela: hela.dokumentaFono, malhela: malhela.dokumentaFono)
+	lazy var dokumentaTeksto = UIColor(hela: hela.dokumentaTeksto, malhela: malhela.dokumentaTeksto)
+	lazy var dokumentaDividilo = UIColor(hela: hela.dokumentaDividilo, malhela: malhela.dokumentaDividilo)
+	lazy var dokumentLigilo = UIColor(hela: hela.dokumentLigilo, malhela: malhela.dokumentLigilo)
 	
 	init(nomo: String, identigilo: String, hela: Koloraro, malhela: Koloraro) {
 		self.nomo = nomo
@@ -57,24 +56,24 @@ class InterfacStilo {
 		nomo: "karamela",
 		identigilo: "karamela",
 		hela: Koloraro(
-			senkoloraFono: .white,
-			koloraFono: .orange,
-			teksto: .black,
-			tekstDividilo: .lightGray,
-			ligilo: .brown,
-			surkoloraButono: .white,
-			surkoloraTeksto: .white,
-			surkoloraMalaktiva: .brown
+			navigaciaFono: .orange,
+			navigaciaTeksto: .white,
+			navigaciaButono: .white,
+			navigaciaButonoMalaktiva: .brown,
+			dokumentaFono: .white,
+			dokumentaTeksto: .black,
+			dokumentaDividilo: .lightGray,
+			dokumentLigilo: .brown
 		),
 		malhela: Koloraro(
-			senkoloraFono: .black, 
-			koloraFono: .brown,
-			teksto: .white,
-			tekstDividilo: .gray,
-			ligilo: .brown,
-			surkoloraButono: .black,
-			surkoloraTeksto: .white,
-			surkoloraMalaktiva: .brown
+			navigaciaFono: .brown,
+			navigaciaTeksto: .white,
+			navigaciaButono: .black,
+			navigaciaButonoMalaktiva: .brown,
+			dokumentaFono: .black,
+			dokumentaTeksto: .white,
+			dokumentaDividilo: .gray,
+			dokumentLigilo: .brown
 		)
 	)
 	
@@ -82,24 +81,24 @@ class InterfacStilo {
 		nomo: "verda",
 		identigilo: "verda",
 		hela: Koloraro(
-			senkoloraFono: .white,
-			koloraFono: .green,
-			teksto: .black,
-			tekstDividilo: .lightGray,
-			ligilo: .green,
-			surkoloraButono: .white,
-			surkoloraTeksto: .white,
-			surkoloraMalaktiva: .green
+			navigaciaFono: .green,
+			navigaciaTeksto: .white,
+			navigaciaButono: .white,
+			navigaciaButonoMalaktiva: .green,
+			dokumentaFono: .white,
+			dokumentaTeksto: .black,
+			dokumentaDividilo: .lightGray,
+			dokumentLigilo: .green
 		),
 		malhela: Koloraro(
-			senkoloraFono: .black,
-			koloraFono: .green,
-			teksto: .white,
-			tekstDividilo: .gray,
-			ligilo: .green,
-			surkoloraButono: .black,
-			surkoloraTeksto: .white,
-			surkoloraMalaktiva: .green
+			navigaciaFono: .green,
+			navigaciaTeksto: .white,
+			navigaciaButono: .white,
+			navigaciaButonoMalaktiva: .green,
+			dokumentaFono: .black,
+			dokumentaTeksto: .white,
+			dokumentaDividilo: .gray,
+			dokumentLigilo: .green
 		)
 	)
 	
@@ -110,17 +109,17 @@ class InterfacStilo {
 }
 
 struct Koloraro {
-	var senkoloraFono: UIColor
-	var koloraFono: UIColor
-	var teksto: UIColor
-	var tekstDividilo: UIColor
-	var ligilo: UIColor
-	var surkoloraButono: UIColor
-	var surkoloraTeksto: UIColor
-	var surkoloraMalaktiva: UIColor
+	var navigaciaFono: UIColor
+	var navigaciaTeksto: UIColor
+	var navigaciaButono: UIColor
+	var navigaciaButonoMalaktiva: UIColor
+	var dokumentaFono: UIColor
+	var dokumentaTeksto: UIColor
+	var dokumentaDividilo: UIColor
+	var dokumentLigilo: UIColor
 }
 
-// Helpiloj
+// MARK: - Helpiloj
 
 extension UIColor {
 	convenience init(hela: UIColor, malhela: UIColor) {

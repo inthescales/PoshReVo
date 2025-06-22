@@ -91,7 +91,7 @@ enum TekstAtributoHelpiloj {
 		
 		atributaTeksto.addAttribute(
 			.foregroundColor,
-			value: stilo.teksto,
+			value: stilo.dokumentaTeksto,
 			range: NSMakeRange(0, atributaTeksto.length)
 		)
 		
@@ -122,13 +122,13 @@ enum TekstAtributoHelpiloj {
 				novajTrajtoj = .traitItalic
 				atributaTeksto.addAttribute(
 					.foregroundColor,
-					value: stilo.ligilo,
+					value: stilo.dokumentLigilo,
 					range: regiono
 				)
 			case .tradukNumero:
 				atributaTeksto.addAttribute(
 					.foregroundColor,
-					value: stilo.ligilo,
+					value: stilo.dokumentLigilo,
 					range: regiono
 				)
 			case .ligo:

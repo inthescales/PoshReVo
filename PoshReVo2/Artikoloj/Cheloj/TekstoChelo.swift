@@ -29,15 +29,15 @@ final class TekstoChelo: UITableViewCell {
 		margheno: CGFloat,
 		stilo: InterfacStilo
 	) {
-		etikedo.textColor = stilo.teksto
+		etikedo.textColor = stilo.dokumentaTeksto
 		etikedo.delegate = liganto
 		
 		etikedo.linkAttributes = [
-			kCTForegroundColorAttributeName : stilo.ligilo,
+			kCTForegroundColorAttributeName : stilo.dokumentLigilo,
 			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 		]
 		etikedo.activeLinkAttributes = [
-			kCTForegroundColorAttributeName : stilo.koloraFono,
+			kCTForegroundColorAttributeName : stilo.navigaciaFono,
 			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 		]
 		

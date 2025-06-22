@@ -12,7 +12,7 @@ enum NavigaciiloHelpiloj {
 			target: vc,
 			action: ago
 		)
-		butono.tintColor = stilo.surkoloraTeksto
+		butono.tintColor = stilo.navigaciaTeksto
 		return butono
 	}
 	
@@ -20,7 +20,7 @@ enum NavigaciiloHelpiloj {
 		let butono = UIButton(type: .system)
 		butono.addTarget(vc, action: ago, for: .touchUpInside)
 		butono.setImage(UIImage(named: "libro")!, for: .normal)
-		butono.tintColor = stilo.surkoloraTeksto
+		butono.tintColor = stilo.navigaciaTeksto
 		return butono
 	}
 }

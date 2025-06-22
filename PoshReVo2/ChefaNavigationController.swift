@@ -6,7 +6,7 @@ final class ChefaNavigationController: UINavigationController {
 		
 		let navigacejAspekto = UINavigationBarAppearance()
 		navigacejAspekto.configureWithOpaqueBackground()
-		navigacejAspekto.backgroundColor = DinamikaStilo.koloraFono
+		navigacejAspekto.backgroundColor = DinamikaStilo.navigaciaFono
 		UINavigationBar.appearance().standardAppearance = navigacejAspekto
 		UINavigationBar.appearance().compactAppearance = navigacejAspekto
 		UINavigationBar.appearance().scrollEdgeAppearance = navigacejAspekto

@@ -80,7 +80,7 @@ extension LingvoListoViewController: UITableViewDataSource {
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "vortoListo")
 		novaChelo.textLabel?.text = lingvo.nomo
 		novaChelo.accessoryType = jamElektitaj.contains(lingvo) ? .checkmark : .none
-		novaChelo.tintColor = stilo.koloraFono
+		novaChelo.tintColor = stilo.navigaciaFono
 		
 		return novaChelo
 	}

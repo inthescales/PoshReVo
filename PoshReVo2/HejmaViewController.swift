@@ -12,30 +12,30 @@ final class HejmaViewController: UIViewController {
 			target: self,
 			action: #selector(Self.premisTripunkton)
 		)
-		butono.tintColor = DinamikaStilo.surkoloraTeksto
+		butono.tintColor = DinamikaStilo.navigaciaTeksto
 		return butono
 	}()
 	
-	lazy var serchButono: SurkoloraButton = {
-		let butono = SurkoloraButton(teksto: Tekstoj.serchi)
+	lazy var serchButono: HejmaNavigaciButton = {
+		let butono = HejmaNavigaciButton(teksto: Tekstoj.serchi)
 		butono.addTarget(self, action: #selector(premisSerchi), for: .touchUpInside)
 		return butono
 	}()
 	
-	lazy var esplorButono: SurkoloraButton = {
-		let butono = SurkoloraButton(teksto: Tekstoj.esplori)
+	lazy var esplorButono: HejmaNavigaciButton = {
+		let butono = HejmaNavigaciButton(teksto: Tekstoj.esplori)
 		butono.addTarget(self, action: #selector(premisEsplori), for: .touchUpInside)
 		return butono
 	}()
 	
-	lazy var konservitajButono: SurkoloraButton = {
-		let butono = SurkoloraButton(teksto: Tekstoj.konservitaj)
+	lazy var konservitajButono: HejmaNavigaciButton = {
+		let butono = HejmaNavigaciButton(teksto: Tekstoj.konservitaj)
 		butono.addTarget(self, action: #selector(premisKonservitaj), for: .touchUpInside)
 		return butono
 	}()
 	
-	lazy var historioButono: SurkoloraButton = {
-		let butono = SurkoloraButton(teksto: Tekstoj.historio)
+	lazy var historioButono: HejmaNavigaciButton = {
+		let butono = HejmaNavigaciButton(teksto: Tekstoj.historio)
 		butono.addTarget(self, action: #selector(premisHistorio), for: .touchUpInside)
 		return butono
 	}()
@@ -67,7 +67,7 @@ final class HejmaViewController: UIViewController {
 	required init?(coder: NSCoder) { fatalError("init(coder:) ne realas") }
 	
 	override func viewDidLoad() {
-		view.backgroundColor = DinamikaStilo.koloraFono
+		view.backgroundColor = DinamikaStilo.navigaciaFono
 		
 		navigationItem.rightBarButtonItem = tripunktoButono
 		

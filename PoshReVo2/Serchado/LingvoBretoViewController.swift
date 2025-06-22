@@ -28,7 +28,7 @@ final class LingvoBretoViewController: UIViewController {
 	lazy var substreko: UIView = {
 		let strek = UIView()
 		
-		strek.backgroundColor = stilo.surkoloraTeksto
+		strek.backgroundColor = stilo.navigaciaTeksto
 		strek.snp.makeConstraints { make in
 			make.height.equalTo(Konstantoj.strekAlteco)
 		}
@@ -54,14 +54,14 @@ final class LingvoBretoViewController: UIViewController {
 	lazy var pliButono: UIButton = {
 		let butono = UIButton()
 		butono.setTitle(Tekstoj.pli, for: .normal)
-		butono.setTitleColor(stilo.surkoloraTeksto, for: .normal)
+		butono.setTitleColor(stilo.navigaciaTeksto, for: .normal)
 		butono.addTarget(self, action: #selector(premisPli), for: .touchUpInside)
 		return butono
 	}()
 	
 	lazy var malaktivaSubstreko: UIView = {
 		let strek = UIView()
-		strek.backgroundColor = stilo.surkoloraMalaktiva
+		strek.backgroundColor = stilo.navigaciaButonoMalaktiva
 		return strek
 	}()
 	
@@ -131,7 +131,7 @@ final class LingvoBretoViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-		view.backgroundColor = self.stilo.koloraFono
+		view.backgroundColor = self.stilo.navigaciaFono
 		view.translatesAutoresizingMaskIntoConstraints = false
 		
 		view.addSubview(malaktivaSubstreko)
@@ -208,7 +208,7 @@ final class LingvoBretoViewController: UIViewController {
 			
 			let etikedo = UIButton()
 			etikedo.setTitle(lingvo.nomo, for: .normal)
-			let koloro = (elektita == lingvo) ? stilo.surkoloraTeksto : stilo.surkoloraMalaktiva
+			let koloro = (elektita == lingvo) ? stilo.navigaciaTeksto : stilo.navigaciaButonoMalaktiva
 			etikedo.setTitleColor(koloro, for: .normal)
 			etikedo.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
 			etikedo.tag = i
@@ -259,8 +259,8 @@ final class LingvoBretoViewController: UIViewController {
 			delay: 0.0,
 			options: .curveEaseOut
 		) { [weak self] in
-			aktivaButono.setTitleColor(self?.stilo.surkoloraTeksto, for: .normal)
-			malaktivaButono.setTitleColor(self?.stilo.surkoloraMalaktiva, for: .normal)
+			aktivaButono.setTitleColor(self?.stilo.navigaciaTeksto, for: .normal)
+			malaktivaButono.setTitleColor(self?.stilo.navigaciaButonoMalaktiva, for: .normal)
 		}
 	}
 	

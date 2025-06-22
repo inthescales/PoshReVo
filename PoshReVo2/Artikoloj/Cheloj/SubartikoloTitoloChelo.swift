@@ -50,8 +50,8 @@ final class SubartikoloTitoloChelo: UITableViewCell {
 		stilo: InterfacStilo
 	) {
 		etikedo.text = teksto
-		etikedo.textColor = stilo.teksto
+		etikedo.textColor = stilo.dokumentaTeksto
 		
-		linio.backgroundColor = stilo.teksto
+		linio.backgroundColor = stilo.dokumentaTeksto
 	}
 }

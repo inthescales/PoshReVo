@@ -32,7 +32,7 @@ final class InformoSekcio: UIView {
 		if let titolo {
 			titolEtikedo.text = titolo
 			titolEtikedo.font = .systemFont(ofSize: 20, weight: .bold)
-			titolEtikedo.textColor = stilo.teksto
+			titolEtikedo.textColor = stilo.dokumentaTeksto
 			
 			addSubview(titolEtikedo)
 			titolEtikedo.snp.makeConstraints { make in
@@ -47,7 +47,7 @@ final class InformoSekcio: UIView {
 			addEdgeMatchedSubview(tekstejo)
 		}
 		
-		tekstejo.textColor = stilo.teksto
+		tekstejo.textColor = stilo.dokumentaTeksto
 		tekstejo.delegate = delegate
 		TekstAtributoHelpiloj.provizi(etikedon: tekstejo, per: teksto)
 	}

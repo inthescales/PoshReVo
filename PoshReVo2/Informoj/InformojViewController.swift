@@ -35,7 +35,7 @@ final class InformojViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		view.backgroundColor = stilo.senkoloraFono
+		view.backgroundColor = stilo.dokumentaFono
 
 		view.addSubview(staplo)
 		staplo.snp.makeConstraints { make in

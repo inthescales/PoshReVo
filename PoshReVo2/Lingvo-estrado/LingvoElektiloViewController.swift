@@ -69,7 +69,7 @@ final class LingvoElektiloViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-		view.backgroundColor = stilo.koloraFono
+		view.backgroundColor = stilo.navigaciaFono
 		navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.iksoButono(
 			por: self,
 			ago: #selector(Self.malaperi),

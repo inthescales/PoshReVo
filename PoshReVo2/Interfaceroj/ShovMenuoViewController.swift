@@ -27,7 +27,7 @@ final class ShovMenuoViewController: UIViewController {
 	
 	private lazy var menuejo: UIView = {
 		let view = UIView()
-		view.backgroundColor = stilo.senkoloraFono
+		view.backgroundColor = stilo.dokumentaFono
 		return view
 	}()
 	
@@ -41,7 +41,7 @@ final class ShovMenuoViewController: UIViewController {
 	
 	private lazy var elektoStaplo: UIStackView = {
 		let staplo = UIStackView()
-		staplo.backgroundColor = stilo.senkoloraFono
+		staplo.backgroundColor = stilo.dokumentaFono
 		staplo.axis = .vertical
 		for (indekso, ero) in self.eroj.enumerated() {
 			let butono = fariButonon(el: ero, indekso: indekso)
@@ -114,8 +114,8 @@ final class ShovMenuoViewController: UIViewController {
 	private func fariButonon(el ero: Menuero, indekso: Int) -> UIButton {
 		let butono = UIButton()
 		butono.setTitle(ero.teksto, for: .normal)
-		butono.setTitleColor(stilo.ligilo, for: .normal)
-		butono.setTitleColor(stilo.surkoloraTeksto, for: .highlighted)
+		butono.setTitleColor(stilo.dokumentLigilo, for: .normal)
+		butono.setTitleColor(stilo.navigaciaTeksto, for: .highlighted)
 		butono.tag = indekso
 		butono.addTarget(self, action: #selector(ekpremis(butonon:)), for: .touchDown)
 		butono.addTarget(self, action: #selector(finpremis(butonon:)), for: .touchUpInside)
@@ -126,11 +126,11 @@ final class ShovMenuoViewController: UIViewController {
 	// MARK: - Agoj
 	
 	@objc private func ekpremis(butonon butono: UIButton) {
-		butono.backgroundColor = stilo.koloraFono
+		butono.backgroundColor = stilo.navigaciaFono
 	}
 	
 	@objc private func finpremis(butonon butono: UIButton) {
-		butono.backgroundColor = stilo.senkoloraFono
+		butono.backgroundColor = stilo.dokumentaFono
 		
 		if butono.tag < eroj.count {
 			eroj[butono.tag].ago()
@@ -140,7 +140,7 @@ final class ShovMenuoViewController: UIViewController {
 	}
 	
 	@objc private func ekstereFinpremis(butonon butono: UIButton) {
-		butono.backgroundColor = stilo.senkoloraFono
+		butono.backgroundColor = stilo.dokumentaFono
 	}
 	
 	@objc private func premisOmbron() {

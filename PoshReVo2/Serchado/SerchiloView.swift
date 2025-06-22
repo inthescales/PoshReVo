@@ -11,7 +11,7 @@ final class SerchiloView: UIView {
 		let serchilo = UISearchBar()
 		serchilo.delegate = self
 		serchilo.placeholder = lokokupaTeksto
-		serchilo.searchTextField.backgroundColor = stilo.senkoloraFono
+		serchilo.searchTextField.backgroundColor = stilo.dokumentaFono
 		serchilo.searchTextField.autocapitalizationType = .none
 		
 		// Ŝajne, ĉio ĉi frenezaĵo necesas por nevidebligi la fonon malantaŭ la tekstejo

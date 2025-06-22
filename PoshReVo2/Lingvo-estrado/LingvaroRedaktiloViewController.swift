@@ -16,7 +16,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 			target: self,
 			action: #selector(Self.premisRedakti)
 		)
-		butono.tintColor = stilo.surkoloraTeksto
+		butono.tintColor = stilo.navigaciaTeksto
 		return butono
 	}()
 	
@@ -129,7 +129,7 @@ extension LingvaroRedaktiloViewController: UITableViewDelegate {
 			)
 			let navigaciilo = UINavigationController(rootViewController: elektiloVC)
 			navigaciilo.navigationBar.isTranslucent = false
-			navigaciilo.navigationBar.backgroundColor = stilo.koloraFono // TODO: movi
+			navigaciilo.navigationBar.backgroundColor = stilo.navigaciaFono // TODO: movi
 			navigaciilo.modalPresentationStyle = .fullScreen
 			
 			present(navigaciilo, animated: true)

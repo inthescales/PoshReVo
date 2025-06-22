@@ -24,7 +24,7 @@ final class ArtikoloViewController: UIViewController {
 			target: self,
 			action: #selector(Self.premisLupeon)
 		)
-		butono.tintColor = stilo.surkoloraTeksto
+		butono.tintColor = stilo.navigaciaTeksto
 		return butono
 	}()
 	
@@ -156,7 +156,7 @@ final class ArtikoloViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-		view.backgroundColor = stilo.senkoloraFono
+		view.backgroundColor = stilo.dokumentaFono
 		
 		view.addSubview(titolejo)
 		titolejo.snp.makeConstraints { make in

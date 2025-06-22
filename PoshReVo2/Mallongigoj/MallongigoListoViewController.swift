@@ -51,7 +51,7 @@ final class MallongigoListoViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		view.backgroundColor = stilo.koloraFono
+		view.backgroundColor = stilo.navigaciaFono
 		
 		view.addSubview(serchilo)
 		serchilo.snp.makeConstraints { make in
@@ -135,9 +135,9 @@ final class MallongigoChelo: UITableViewCell {
 	
 	func agordi(mallongigo: String, signifo: String, stilo: InterfacStilo) {
 		mallongigoEtikedo.text = mallongigo
-		mallongigoEtikedo.textColor = stilo.teksto
+		mallongigoEtikedo.textColor = stilo.dokumentaTeksto
 		
 		signifoEtikedo.text = signifo
-		signifoEtikedo.textColor = stilo.teksto
+		signifoEtikedo.textColor = stilo.dokumentaTeksto
 	}
 }
