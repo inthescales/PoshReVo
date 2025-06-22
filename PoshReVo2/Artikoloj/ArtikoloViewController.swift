@@ -49,6 +49,7 @@ final class ArtikoloViewController: UIViewController {
 		tabelo.dataSource = self
 		tabelo.rowHeight = UITableView.automaticDimension
 		tabelo.estimatedRowHeight = 100
+		tabelo.separatorStyle = .none
 		tabelo.contentInset = UIEdgeInsets(
 			top: Konstantoj.margheno,
 			left: 0,

@@ -4,6 +4,7 @@ import ReVoDatumbazo
 
 import TTTAttributedLabel
 
+/// Artikolo-ĉelo montranta liston da tradukoj de unu vorto aŭ derivaĵo
 final class TradukaroChelo: UITableViewCell {
 	private enum Konstantoj {
 		static let vertikalaMargheno = 8.0
@@ -48,8 +49,7 @@ final class TradukaroChelo: UITableViewCell {
 		let neniujLingvoj = tradukLingvoj.isEmpty
 			|| tradukLingvoj.count == 1 && tradukLingvoj.first?.kodo == "eo"
 		
-		let dividilo = UIView()
-		dividilo.backgroundColor = stilo.tekstDividilo
+		let dividilo = StrekoView(koloro: stilo.tekstDividilo)
 		contentView.addSubview(dividilo)
 		dividilo.snp.makeConstraints { make in
 			make.top.equalToSuperview().offset(Konstantoj.vertikalaMargheno)
@@ -100,6 +100,7 @@ final class TradukaroChelo: UITableViewCell {
 		butono.setTitleColor(stilo.koloraFono, for: .normal) // TODO: Nova koloro
 		butono.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 		butono.addTarget(self, action: #selector(premisElekti), for: .touchUpInside)
+		butono.titleEdgeInsets = .zero
 		
 		let ujo = UIView()
 
