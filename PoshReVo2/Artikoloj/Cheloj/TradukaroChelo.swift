@@ -7,12 +7,14 @@ import TTTAttributedLabel
 /// Artikolo-ĉelo montranta liston da tradukoj de unu vorto aŭ derivaĵo
 final class TradukaroChelo: UITableViewCell {
 	private enum Konstantoj {
-		static let vertikalaMargheno = 8.0
+		static let vertikalaMargheno = 12.0
+		
+		static let tekstGrandeco: CGFloat = 18.0
 	}
 	
 	private enum TitolStilo {
-		case grasa
 		case kursiva
+		case grasKursiva
 	}
 	
 	// MARK: - Agordado
@@ -62,22 +64,22 @@ final class TradukaroChelo: UITableViewCell {
 			let avizo = fariAvizon(teksto: teksto, titolStilo: .kursiva, stilo: stilo)
 			contentView.addSubview(avizo)
 			avizo.snp.makeConstraints { make in
-				make.top.equalTo(dividilo.snp.bottom)
-				make.bottom.equalToSuperview()
+				make.top.equalTo(dividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
+				make.bottom.equalToSuperview().offset(-Konstantoj.vertikalaMargheno)
 				make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			}
 		} else {
-			let avizo = fariAvizon(teksto: Tekstoj.enViajLingvoj, titolStilo: .grasa, stilo: stilo)
+			let avizo = fariAvizon(teksto: Tekstoj.enViajLingvoj, titolStilo: .grasKursiva, stilo: stilo)
 			contentView.addSubview(avizo)
 			avizo.snp.makeConstraints { make in
-				make.top.equalTo(dividilo.snp.bottom)
+				make.top.equalTo(dividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
 				make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			}
 			
 			let staplo = fariStaplon(tradukoj: montrotaj, stilo: stilo)
 			contentView.addSubview(staplo)
 			staplo.snp.makeConstraints { make in
-				make.top.equalTo(avizo.snp.bottom)
+				make.top.equalTo(avizo.snp.bottom).offset(Konstantoj.vertikalaMargheno - Konstantoj.tekstGrandeco / 4)
 				make.bottom.equalToSuperview().offset(-Konstantoj.vertikalaMargheno)
 				make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			}
@@ -88,10 +90,13 @@ final class TradukaroChelo: UITableViewCell {
 		let etikedo = UILabel()
 		etikedo.text = teksto
 		switch titolStilo {
-		case .grasa:
-			etikedo.font = .boldSystemFont(ofSize: 16) // TODO: tiparo
 		case .kursiva:
-			etikedo.font = .italicSystemFont(ofSize: 16) // TODO: tiparo
+			etikedo.font = .italicSystemFont(ofSize: Konstantoj.tekstGrandeco) // TODO: tiparo
+		case .grasKursiva:
+			let priskribilo = UIFont.systemFont(ofSize: Konstantoj.tekstGrandeco)
+				.fontDescriptor
+				.withSymbolicTraits([.traitItalic, .traitBold])
+			etikedo.font = UIFont(descriptor: priskribilo!, size: Konstantoj.tekstGrandeco)
 		}
 		etikedo.setContentHuggingPriority(.defaultLow, for: .horizontal)
 		
@@ -107,13 +112,13 @@ final class TradukaroChelo: UITableViewCell {
 		ujo.addSubview(etikedo)
 		etikedo.snp.makeConstraints { make in
 			make.centerY.left.equalToSuperview()
-			make.height.lessThanOrEqualToSuperview()
+			make.top.bottom.equalToSuperview()
 		}
 		
 		ujo.addSubview(butono)
 		butono.snp.makeConstraints { make in
 			make.left.equalTo(etikedo.snp.right)
-			make.top.bottom.right.equalToSuperview()
+			make.centerY.right.equalToSuperview()
 		}
 		
 		return ujo
