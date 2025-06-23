@@ -35,6 +35,7 @@ extension Konservitajho {
 	init(nomo: String, indekso: String) {
 		self.nomo = nomo
 		self.indekso = indekso
+		self.marko = nil
 	}
 	
 	static func el(v1Listero listero: Listero) -> Konservitajho {
