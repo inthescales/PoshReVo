@@ -187,18 +187,14 @@ final class ArtikoloViewController: UIViewController {
 		)
 	}
 	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
 		
 		if let marko = komencaMarko,
 			!jamSaltis {
-			saltiAlMarko(marko, animacii: false)
+			saltiAlMarko(marko, animacii: true)
 			jamSaltis = true
 		}
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
 		
 		aperis?()
 	}
