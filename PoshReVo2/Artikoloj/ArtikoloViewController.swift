@@ -87,6 +87,9 @@ final class ArtikoloViewController: UIViewController {
 		}
 	}
 	
+	/// Ĉu la paĝo jam saltis al komenca marko dum apero
+	private var jamSaltis = false
+	
 	// MARK: Agordoj
 	
 	private let artikolo: Artikolo
@@ -187,8 +190,10 @@ final class ArtikoloViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		if let marko = komencaMarko {
+		if let marko = komencaMarko,
+			!jamSaltis {
 			saltiAlMarko(marko, animacii: false)
+			jamSaltis = true
 		}
 	}
 	
