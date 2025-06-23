@@ -95,7 +95,7 @@ final class HejmaViewController: UIViewController {
 					ago: { [weak self] in self?.premisInformoj() }
 				)
 			],
-			navigaciilaAlto: navigationController?.navigationBar.bounds.height ?? 0.0,
+			navigaciilaAlto: navigaciAlto,
 			forigi: { [weak self] in
 				self?.dismiss(animated: false)
 			}

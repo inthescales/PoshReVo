@@ -8,6 +8,8 @@ final class ShovMenuoViewController: UIViewController {
 		static let ombroMalhelo: CGFloat = 0.5
 		
 		static let flankaMargheno: CGFloat = 16.0
+		
+		static let vertikalaMargheno: CGFloat = 8.0
 	}
 	
 	struct Menuero {
@@ -27,6 +29,21 @@ final class ShovMenuoViewController: UIViewController {
 		return view
 	}()
 	
+	private lazy var navigaciejo: UIView = {
+		let ejo = UIView()
+		ejo.backgroundColor = stilo.navigaciaFono
+		
+		let dividilo = UIView()
+		dividilo.backgroundColor = stilo.navigaciaButonoMalaktiva
+		ejo.addSubview(dividilo)
+		dividilo.snp.makeConstraints { make in
+			make.left.right.bottom.equalToSuperview()
+			make.height.equalTo(1)
+		}
+		
+		return ejo
+	}()
+	
 	private lazy var menuejo: UIView = {
 		let view = UIView()
 		view.backgroundColor = stilo.dokumentaFono
@@ -37,7 +54,7 @@ final class ShovMenuoViewController: UIViewController {
 		let ejo = UIScrollView()
 		ejo.isScrollEnabled = true
 		ejo.showsHorizontalScrollIndicator = false
-		ejo.contentInset = UIEdgeInsets(top: navigaciilaAlto, left: 0, bottom: 0, right: 0)
+		ejo.backgroundColor = .systemGroupedBackground
 		return ejo
 	}()
 	
@@ -93,7 +110,18 @@ final class ShovMenuoViewController: UIViewController {
 			dekstraLigo = make.left.equalTo(view.snp.right).constraint
 		}
 		
-		menuejo.addEdgeMatchedSubview(rulumejo)
+		menuejo.addSubview(navigaciejo)
+		navigaciejo.snp.makeConstraints { make in
+			make.top.left.right.equalToSuperview()
+			make.height.equalTo(navigaciilaAlto)
+		}
+		
+		menuejo.addSubview(rulumejo)
+		rulumejo.snp.makeConstraints { make in
+			make.left.right.bottom.equalToSuperview()
+			make.top.equalTo(navigaciejo.snp.bottom)
+		}
+		
 		rulumejo.addEdgeMatchedSubview(elektoStaplo)
 		rulumejo.snp.makeConstraints { make in
 			make.width.equalTo(elektoStaplo.snp.width)
@@ -114,17 +142,36 @@ final class ShovMenuoViewController: UIViewController {
 	
 	// MARK: - InterfacHelpiloj
 	
-	private func fariButonon(el ero: Menuero, indekso: Int) -> UIButton {
+	private func fariButonon(el ero: Menuero, indekso: Int) -> UIView {
 		let butono = UIButton()
 		butono.setTitle(ero.teksto, for: .normal)
 		butono.setTitleColor(stilo.dokumentLigilo, for: .normal)
 		butono.setTitleColor(stilo.navigaciaTeksto, for: .highlighted)
+		butono.contentEdgeInsets = UIEdgeInsets(
+			top: Konstantoj.vertikalaMargheno,
+			left: Konstantoj.flankaMargheno,
+			bottom: Konstantoj.vertikalaMargheno,
+			right: Konstantoj.flankaMargheno
+		)
 		butono.tag = indekso
 		butono.addTarget(self, action: #selector(ekpremis(butonon:)), for: .touchDown)
 		butono.addTarget(self, action: #selector(finpremis(butonon:)), for: .touchUpInside)
 		butono.addTarget(self, action: #selector(ekstereFinpremis(butonon:)), for: .touchUpOutside)
 		butono.titleLabel?.lineBreakMode = .byTruncatingTail
-		return butono
+		
+		let dividilo = UIView()
+		dividilo.backgroundColor = .lightGray
+		dividilo.isUserInteractionEnabled = false
+		
+		let ujo = UIView()
+		ujo.addEdgeMatchedSubview(butono)
+		ujo.addSubview(dividilo)
+		dividilo.snp.makeConstraints { make in
+			make.left.right.bottom.equalToSuperview()
+			make.height.equalTo(1)
+		}
+
+		return ujo
 	}
 	
 	// MARK: - Agoj

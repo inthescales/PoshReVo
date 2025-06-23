@@ -248,7 +248,7 @@ final class ArtikoloViewController: UIViewController {
 		
 		let menuo = ShovMenuoViewController(
 			eroj: eroj,
-			navigaciilaAlto: navigationController?.navigationBar.bounds.height ?? 0.0,
+			navigaciilaAlto: navigaciAlto,
 			forigi: { [weak self] in
 				self?.dismiss(animated: false)
 			}
