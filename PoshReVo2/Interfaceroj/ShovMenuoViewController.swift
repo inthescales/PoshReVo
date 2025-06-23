@@ -6,6 +6,8 @@ final class ShovMenuoViewController: UIViewController {
 		static let animaciaDauro: TimeInterval = 0.2
 		
 		static let ombroMalhelo: CGFloat = 0.5
+		
+		static let flankaMargheno: CGFloat = 16.0
 	}
 	
 	struct Menuero {
@@ -87,6 +89,7 @@ final class ShovMenuoViewController: UIViewController {
 		view.addSubview(menuejo)
 		menuejo.snp.makeConstraints { make in
 			make.height.top.bottom.equalToSuperview()
+			make.width.lessThanOrEqualToSuperview().dividedBy(2)
 			dekstraLigo = make.left.equalTo(view.snp.right).constraint
 		}
 		
@@ -120,6 +123,7 @@ final class ShovMenuoViewController: UIViewController {
 		butono.addTarget(self, action: #selector(ekpremis(butonon:)), for: .touchDown)
 		butono.addTarget(self, action: #selector(finpremis(butonon:)), for: .touchUpInside)
 		butono.addTarget(self, action: #selector(ekstereFinpremis(butonon:)), for: .touchUpOutside)
+		butono.titleLabel?.lineBreakMode = .byTruncatingTail
 		return butono
 	}
 	
