@@ -23,6 +23,8 @@ final class ArtikolTitoloView: UIView {
 		return fono
 	}()
 	
+	private lazy var gradientejo = FadGradientoView(stilo: stilo)
+	
 	private lazy var etikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.text = artikolo.titolo
@@ -103,12 +105,19 @@ final class ArtikolTitoloView: UIView {
 		self.stilo = stilo
 		super.init(frame: .zero)
 		
-		backgroundColor = stilo.dokumentaFono
+		backgroundColor = .clear
 		
 		addSubview(fonoView)
 		fonoView.snp.makeConstraints { make in
 			make.edges.equalToSuperview().inset(margheno)
 		}
+		
+		addSubview(gradientejo)
+		gradientejo.snp.makeConstraints { make in
+			make.left.right.bottom.equalToSuperview()
+			make.height.equalTo(margheno + Konstantoj.angulRadiuso)
+		}
+		sendSubviewToBack(gradientejo)
 		
 		addSubview(etikedo)
 		etikedo.snp.makeConstraints { make in

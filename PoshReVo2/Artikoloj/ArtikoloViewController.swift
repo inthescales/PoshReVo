@@ -13,6 +13,8 @@ final class ArtikoloViewController: UIViewController {
 		static let tradukaroIdentigilo = "tradukaIdentigilo"
 		
 		static let margheno: CGFloat = 8
+		
+		static let titolaInterkovrajho: CGFloat = 16.0
 	}
 	
 	// MARK: Interfaceroj
@@ -36,10 +38,6 @@ final class ArtikoloViewController: UIViewController {
 			margheno: Konstantoj.margheno,
 			stilo: stilo
 		)
-		ejo.layer.shadowOffset = CGSize(width: 0, height: 2)
-		ejo.layer.shadowRadius = 1
-		ejo.layer.shadowColor = UIColor.black.cgColor
-		ejo.layer.shadowOpacity = 0.2
 		return ejo
 	}()
 	
@@ -51,7 +49,7 @@ final class ArtikoloViewController: UIViewController {
 		tabelo.estimatedRowHeight = 100
 		tabelo.separatorStyle = .none
 		tabelo.contentInset = UIEdgeInsets(
-			top: Konstantoj.margheno,
+			top: Konstantoj.titolaInterkovrajho,
 			left: 0,
 			bottom: 0,
 			right: 0
@@ -167,7 +165,7 @@ final class ArtikoloViewController: UIViewController {
 		view.sendSubviewToBack(tabelo)
 		tabelo.snp.makeConstraints { make in
 			make.left.right.bottom.equalToSuperview()
-			make.top.equalTo(titolejo.snp.bottom)
+			make.top.equalTo(titolejo.snp.bottom).offset(-Konstantoj.titolaInterkovrajho)
 		}
 		
 		navigationItem.rightBarButtonItem = lupeoButono

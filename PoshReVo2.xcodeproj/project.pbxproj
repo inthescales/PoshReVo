@@ -56,6 +56,7 @@
 		00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */; };
 		00B27B942DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B932DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift */; };
 		00B27B9C2E08889000526F82 /* StrekoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B9B2E08889000526F82 /* StrekoView.swift */; };
+		00B27B9E2E08D6F600526F82 /* FadGradientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B9D2E08D6F600526F82 /* FadGradientoView.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubartikoloTitoloChelo.swift; sourceTree = "<group>"; };
 		00B27B932DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigaciiloHelpiloj.swift; sourceTree = "<group>"; };
 		00B27B9B2E08889000526F82 /* StrekoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrekoView.swift; sourceTree = "<group>"; };
+		00B27B9D2E08D6F600526F82 /* FadGradientoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadGradientoView.swift; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				00B27B512DEA3ED300526F82 /* ShovMenuoViewController.swift */,
 				00B27B9B2E08889000526F82 /* StrekoView.swift */,
 				000DA6FE2D9099670026CBA0 /* HejmaNavigaciButton.swift */,
+				00B27B9D2E08D6F600526F82 /* FadGradientoView.swift */,
 			);
 			path = Interfaceroj;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */,
 				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
 				00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */,
+				00B27B9E2E08D6F600526F82 /* FadGradientoView.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* AranghHelpiloj.swift in Sources */,
 				000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */,
 				00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */,
