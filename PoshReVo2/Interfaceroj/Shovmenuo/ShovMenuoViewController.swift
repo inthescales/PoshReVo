@@ -2,6 +2,17 @@ import UIKit
 import SnapKit
 
 final class ShovMenuoViewController: UIViewController {
+	struct Agordoj {
+		let titolo: String?
+		let navigaciaKoloro: UIColor
+		let navigaciaTekstKoloro: UIColor
+		let navigaciaDividiloKoloro: UIColor
+		let menuaKoloro: UIColor
+		let malplenaKoloro: UIColor
+		let tekstKoloro: UIColor
+		let dividiloKoloro: UIColor
+	}
+	
 	private enum Konstantoj {
 		/// Minimuma larĝo de la menuejo
 		static let minimumaLarghoPorcio: CGFloat = 0.5
@@ -41,10 +52,10 @@ final class ShovMenuoViewController: UIViewController {
 	
 	private lazy var navigaciejo: UIView = {
 		let ejo = UIView()
-		ejo.backgroundColor = stilo.navigaciaFono
+		ejo.backgroundColor = agordoj.navigaciaKoloro
 		
 		let dividilo = UIView()
-		dividilo.backgroundColor = stilo.navigaciaButonoMalaktiva
+		dividilo.backgroundColor = agordoj.navigaciaDividiloKoloro
 		ejo.addSubview(dividilo)
 		dividilo.snp.makeConstraints { make in
 			make.left.right.bottom.equalToSuperview()
@@ -56,8 +67,8 @@ final class ShovMenuoViewController: UIViewController {
 	
 	private lazy var titolEtikedo: UILabel = {
 		let etikedo = UILabel()
-		etikedo.text = Tekstoj.saltiAl
-		etikedo.textColor = stilo.navigaciaTeksto
+		etikedo.text = agordoj.titolo
+		etikedo.textColor = agordoj.navigaciaTekstKoloro
 		etikedo.textAlignment = .center
 		etikedo.font = .boldSystemFont(ofSize: 18) // TODO: Tiparo
 		return etikedo
@@ -65,7 +76,7 @@ final class ShovMenuoViewController: UIViewController {
 	
 	private lazy var menuejo: UIView = {
 		let view = UIView()
-		view.backgroundColor = stilo.navigaciaFono
+		view.backgroundColor = agordoj.menuaKoloro
 		return view
 	}()
 	
@@ -73,13 +84,13 @@ final class ShovMenuoViewController: UIViewController {
 		let ejo = UIScrollView()
 		ejo.isScrollEnabled = true
 		ejo.showsHorizontalScrollIndicator = false
-		ejo.backgroundColor = stilo.navigaciaFono
+		ejo.backgroundColor = agordoj.menuaKoloro
 		return ejo
 	}()
 	
 	private lazy var elektoStaplo: UIStackView = {
 		let staplo = UIStackView()
-		staplo.backgroundColor = stilo.dokumentaFono
+		staplo.backgroundColor = agordoj.menuaKoloro
 		staplo.axis = .vertical
 		for (indekso, ero) in self.eroj.enumerated() {
 			let butono = fariButonon(el: ero, indekso: indekso)
@@ -94,22 +105,23 @@ final class ShovMenuoViewController: UIViewController {
 	
 	let eroj: [Menuero]
 	
+	let agordoj: Agordoj
+	
 	let navigaciilaAlto: CGFloat
 	
 	let foriri: () -> Void
 	
-	private let stilo: InterfacStilo
 	
 	init(
 		eroj: [Menuero],
+		agordoj: Agordoj,
 		navigaciilaAlto: CGFloat,
-		forigi foriri: @escaping () -> Void,
-		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
+		forigi foriri: @escaping () -> Void
 	) {
 		self.eroj = eroj
+		self.agordoj = agordoj
 		self.navigaciilaAlto = navigaciilaAlto
 		self.foriri = foriri
-		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -171,9 +183,9 @@ final class ShovMenuoViewController: UIViewController {
 	private func fariButonon(el ero: Menuero, indekso: Int) -> UIView {
 		let butono = UIButton()
 		butono.setTitle(ero.teksto, for: .normal)
-		butono.setTitleColor(stilo.navigaciaTeksto, for: .normal)
-		butono.setTitleColor(stilo.navigaciaTeksto, for: .highlighted)
-		butono.backgroundColor = stilo.navigaciaFono
+		butono.setTitleColor(agordoj.tekstKoloro, for: .normal)
+		butono.setTitleColor(agordoj.menuaKoloro, for: .highlighted)
+		butono.backgroundColor = agordoj.menuaKoloro
 		butono.titleLabel?.font = .systemFont(ofSize: 18) // TODO: tiparo
 		butono.contentEdgeInsets = UIEdgeInsets(
 			top: Konstantoj.vertikalaMargheno,
@@ -188,7 +200,7 @@ final class ShovMenuoViewController: UIViewController {
 		butono.titleLabel?.lineBreakMode = .byTruncatingTail
 		
 		let dividilo = UIView()
-		dividilo.backgroundColor = stilo.navigaciaTeksto // stilo.navigaciaButonoMalaktiva
+		dividilo.backgroundColor = agordoj.dividiloKoloro
 		dividilo.isUserInteractionEnabled = false
 		
 		let ujo = UIView()
@@ -206,11 +218,11 @@ final class ShovMenuoViewController: UIViewController {
 	// MARK: - Agoj
 	
 	@objc private func ekpremis(butonon butono: UIButton) {
-		butono.backgroundColor = stilo.navigaciaFono
+		butono.backgroundColor = agordoj.tekstKoloro
 	}
 	
 	@objc private func finpremis(butonon butono: UIButton) {
-		butono.backgroundColor = stilo.dokumentaFono
+		butono.backgroundColor = agordoj.menuaKoloro
 		
 		if butono.tag < eroj.count {
 			eroj[butono.tag].ago()
@@ -220,7 +232,7 @@ final class ShovMenuoViewController: UIViewController {
 	}
 	
 	@objc private func ekstereFinpremis(butonon butono: UIButton) {
-		butono.backgroundColor = stilo.navigaciaButonoMalaktiva
+		butono.backgroundColor = agordoj.menuaKoloro
 	}
 	
 	@objc private func premisOmbron() {

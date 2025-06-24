@@ -95,6 +95,16 @@ final class HejmaViewController: UIViewController {
 					ago: { [weak self] in self?.premisInformoj() }
 				)
 			],
+			agordoj: ShovMenuoViewController.Agordoj(
+				titolo: nil,
+				navigaciaKoloro: DinamikaStilo.navigaciaFono,
+				navigaciaTekstKoloro: DinamikaStilo.navigaciaTeksto,
+				navigaciaDividiloKoloro: DinamikaStilo.navigaciaTeksto.withAlphaComponent(0.3),
+				menuaKoloro: DinamikaStilo.navigaciaFono,
+				malplenaKoloro: DinamikaStilo.navigaciaFono,
+				tekstKoloro: DinamikaStilo.navigaciaTeksto,
+				dividiloKoloro: DinamikaStilo.navigaciaTeksto.withAlphaComponent(0.3)
+			),
 			navigaciilaAlto: navigaciAlto,
 			forigi: { [weak self] in
 				self?.dismiss(animated: false)
