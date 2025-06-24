@@ -77,6 +77,11 @@ final class ShovMenuoViewController: UIViewController {
 	private lazy var menuejo: UIView = {
 		let view = UIView()
 		view.backgroundColor = agordoj.menuaKoloro
+
+		let rekonilo = UIPanGestureRecognizer(target: self, action: #selector(shovis))
+		let rekonilego = UISwipeGestureRecognizer(target: self, action: #selector(shovegis))
+		[rekonilo, rekonilego].forEach { view.addGestureRecognizer($0) }
+		
 		return view
 	}()
 	
@@ -111,6 +116,7 @@ final class ShovMenuoViewController: UIViewController {
 	
 	let foriri: () -> Void
 	
+	// MARK: -
 	
 	init(
 		eroj: [Menuero],
@@ -169,11 +175,7 @@ final class ShovMenuoViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		UIView.animate(withDuration: Konstantoj.animaciaDauro) { [weak self] in
-			self?.dekstraLigo?.update(offset: -self!.menuejo.bounds.width)
-			self?.view.layoutIfNeeded()
-			self?.ombroView.alpha = Konstantoj.ombroMalhelo
-		}
+		malfermi()
 		
 		rulumejo.contentSize = elektoStaplo.bounds.size
 	}
@@ -217,6 +219,10 @@ final class ShovMenuoViewController: UIViewController {
 	
 	// MARK: - Agoj
 	
+	@objc private func premisOmbron() {
+		malaperi()
+	}
+	
 	@objc private func ekpremis(butonon butono: UIButton) {
 		butono.backgroundColor = agordoj.tekstKoloro
 	}
@@ -235,8 +241,35 @@ final class ShovMenuoViewController: UIViewController {
 		butono.backgroundColor = agordoj.menuaKoloro
 	}
 	
-	@objc private func premisOmbron() {
+	@objc private func shovis(_ rekonilo: UIPanGestureRecognizer) {
+		let movo = rekonilo.translation(in: menuejo)
+		
+		switch rekonilo.state {
+		case .began, .changed:
+			dekstraLigo?.update(offset: -menuejo.bounds.width + movo.x)
+		case .ended, .cancelled:
+			if menuejo.frame.minX < view.bounds.width - (menuejo.bounds.width / 2) {
+				malfermi()
+			} else {
+				malaperi()
+			}
+		default:
+			break
+		}
+	}
+	
+	@objc private func shovegis(_ rekonilo: UISwipeGestureRecognizer) {
 		malaperi()
+	}
+	
+	// MARK: -
+	
+	private func malfermi() {
+		UIView.animate(withDuration: Konstantoj.animaciaDauro) { [weak self] in
+			self?.dekstraLigo?.update(offset: -self!.menuejo.bounds.width)
+			self?.view.layoutIfNeeded()
+			self?.ombroView.alpha = Konstantoj.ombroMalhelo
+		}
 	}
 	
 	private func malaperi() {
