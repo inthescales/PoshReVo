@@ -24,6 +24,7 @@ enum Tekstoj {
 	static let neniujLingvoj = "Elekti lingvojn por vidi tradukojn"
 	static let neniujTradukoj = "Neniuj tradukoj en viaj lingvoj"
 	static let elekti = "elekti"
+	static let saltiAl = "Salti al:"
 	
 	// MARK: - Agordoj
 	

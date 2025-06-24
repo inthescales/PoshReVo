@@ -3,13 +3,23 @@ import SnapKit
 
 final class ShovMenuoViewController: UIViewController {
 	private enum Konstantoj {
+		/// Minimuma larĝo de la menuejo
+		static let minimumaLarghoPorcio: CGFloat = 0.5
+		
+		/// Maksimuma larĝo de la menuejo
+		static let maksimumaLarghoPorcio: CGFloat = 0.66
+		
+		/// Kiom longe animacioj daŭru
 		static let animaciaDauro: TimeInterval = 0.2
 		
+		/// Kiel forte la ombro sur la patra 'view' estu
 		static let ombroMalhelo: CGFloat = 0.5
 		
-		static let flankaMargheno: CGFloat = 16.0
+		/// Marĝeno flanke de menueraj titoloj
+		static let flankaMargheno: CGFloat = 32.0
 		
-		static let vertikalaMargheno: CGFloat = 8.0
+		/// Marĝeno supre kaj sube de menueraj titoloj
+		static let vertikalaMargheno: CGFloat = 12.0
 	}
 	
 	struct Menuero {
@@ -44,9 +54,18 @@ final class ShovMenuoViewController: UIViewController {
 		return ejo
 	}()
 	
+	private lazy var titolEtikedo: UILabel = {
+		let etikedo = UILabel()
+		etikedo.text = Tekstoj.saltiAl
+		etikedo.textColor = stilo.navigaciaTeksto
+		etikedo.textAlignment = .center
+		etikedo.font = .boldSystemFont(ofSize: 18) // TODO: Tiparo
+		return etikedo
+	}()
+	
 	private lazy var menuejo: UIView = {
 		let view = UIView()
-		view.backgroundColor = stilo.dokumentaFono
+		view.backgroundColor = stilo.navigaciaFono
 		return view
 	}()
 	
@@ -54,7 +73,7 @@ final class ShovMenuoViewController: UIViewController {
 		let ejo = UIScrollView()
 		ejo.isScrollEnabled = true
 		ejo.showsHorizontalScrollIndicator = false
-		ejo.backgroundColor = .systemGroupedBackground
+		ejo.backgroundColor = stilo.navigaciaFono
 		return ejo
 	}()
 	
@@ -106,7 +125,8 @@ final class ShovMenuoViewController: UIViewController {
 		view.addSubview(menuejo)
 		menuejo.snp.makeConstraints { make in
 			make.height.top.bottom.equalToSuperview()
-			make.width.lessThanOrEqualToSuperview().dividedBy(2)
+			make.width.lessThanOrEqualToSuperview().multipliedBy(Konstantoj.maksimumaLarghoPorcio)
+			make.width.greaterThanOrEqualToSuperview().multipliedBy(Konstantoj.minimumaLarghoPorcio)
 			dekstraLigo = make.left.equalTo(view.snp.right).constraint
 		}
 		
@@ -114,6 +134,12 @@ final class ShovMenuoViewController: UIViewController {
 		navigaciejo.snp.makeConstraints { make in
 			make.top.left.right.equalToSuperview()
 			make.height.equalTo(navigaciilaAlto)
+		}
+		
+		navigaciejo.addSubview(titolEtikedo)
+		titolEtikedo.snp.makeConstraints { make in
+			make.left.right.equalToSuperview()
+			make.bottom.equalToSuperview().offset(-8)
 		}
 		
 		menuejo.addSubview(rulumejo)
@@ -145,8 +171,10 @@ final class ShovMenuoViewController: UIViewController {
 	private func fariButonon(el ero: Menuero, indekso: Int) -> UIView {
 		let butono = UIButton()
 		butono.setTitle(ero.teksto, for: .normal)
-		butono.setTitleColor(stilo.dokumentLigilo, for: .normal)
+		butono.setTitleColor(stilo.navigaciaTeksto, for: .normal)
 		butono.setTitleColor(stilo.navigaciaTeksto, for: .highlighted)
+		butono.backgroundColor = stilo.navigaciaFono
+		butono.titleLabel?.font = .systemFont(ofSize: 18) // TODO: tiparo
 		butono.contentEdgeInsets = UIEdgeInsets(
 			top: Konstantoj.vertikalaMargheno,
 			left: Konstantoj.flankaMargheno,
@@ -160,14 +188,15 @@ final class ShovMenuoViewController: UIViewController {
 		butono.titleLabel?.lineBreakMode = .byTruncatingTail
 		
 		let dividilo = UIView()
-		dividilo.backgroundColor = .lightGray
+		dividilo.backgroundColor = stilo.navigaciaTeksto // stilo.navigaciaButonoMalaktiva
 		dividilo.isUserInteractionEnabled = false
 		
 		let ujo = UIView()
 		ujo.addEdgeMatchedSubview(butono)
 		ujo.addSubview(dividilo)
 		dividilo.snp.makeConstraints { make in
-			make.left.right.bottom.equalToSuperview()
+			make.right.bottom.equalToSuperview()
+			make.left.equalToSuperview().offset(16)
 			make.height.equalTo(1)
 		}
 
@@ -191,7 +220,7 @@ final class ShovMenuoViewController: UIViewController {
 	}
 	
 	@objc private func ekstereFinpremis(butonon butono: UIButton) {
-		butono.backgroundColor = stilo.dokumentaFono
+		butono.backgroundColor = stilo.navigaciaButonoMalaktiva
 	}
 	
 	@objc private func premisOmbron() {
