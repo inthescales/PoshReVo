@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 	) -> Bool {
 		VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
-		// UzantDatumaro.starigi()
 		
 		let vc = HejmaViewController()
 		let navigaciilo = ChefaNavigationController(rootViewController: vc)

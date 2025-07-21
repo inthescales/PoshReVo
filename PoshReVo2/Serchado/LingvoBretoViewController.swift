@@ -8,10 +8,10 @@ final class LingvoBretoViewController: UIViewController {
 		/// Spaco dekstre kaj maldekstre de ĉiuj butonoj
 		static let butonoBufro: CGFloat = 16.0
 		
-		/// Alteco de la substrek sub la elektita lingvo
+		/// Dikeco de la substreko sub la elektita lingvo
 		static let strekAlteco: CGFloat = 1.0
 		
-		/// Daŭro de la elekta animaciado
+		/// Daŭro de la elekta animacio
 		static let animaciaDauro: CGFloat = 0.2
 	}
 	
@@ -67,13 +67,11 @@ final class LingvoBretoViewController: UIViewController {
 	
 	// MARK: Stato
 	
-	private(set) var elektita: Lingvo {
-		didSet {
-			renovigiInterfacon()
-		}
-	}
+	private(set) var elektita: Lingvo
 	
 	private(set) var lingvoj: [Lingvo]
+	
+	// MARK: Kalkulitaj stataĵoj
 	
 	/// La indekso de la nune elektita lingvo
 	private var elektitaIndekso: Int? {
@@ -165,8 +163,10 @@ final class LingvoBretoViewController: UIViewController {
 	/// Vokota kiam la uzanto elektas lingvon
 	@objc private func premisLingvon(sender: UIButton) {
 		let indekso = sender.tag
+		let malnovaIndekso = elektitaIndekso
+		
 		elektita = lingvoj[indekso]
-		montriElekton(je: indekso)
+		montriElekton(de: malnovaIndekso, al: indekso)
 		
 		elektisLingvon(elektita)
 		NotificationCenter.default.post(name: Avizoj.elektitaLingvoShanghighis, object: elektita)
@@ -181,12 +181,13 @@ final class LingvoBretoViewController: UIViewController {
 		renovigiInterfacon()
 	}
 	
-	// MARK: Ekstera regado
+	// MARK: Ekstera regado - ekz. en kazo de ĝisdatigo pro avizo
 	
 	func ghisdatigi(elektitan novelektita: Lingvo) {
 		guard let indekso = lingvoj.firstIndex(of: novelektita) else { return }
+		let malnovaIndekso = elektitaIndekso
 		elektita = lingvoj[indekso]
-		montriElekton(je: indekso)
+		montriElekton(de: malnovaIndekso, al: indekso)
 	}
 	
 	func ghisdatigi(lingvaron lingvaro: [Lingvo]) {
@@ -232,15 +233,13 @@ final class LingvoBretoViewController: UIViewController {
 		}
 	}
 	
-	private func montriElekton(je indekso: Int) {
-		let malnovaIndekso = elektitaIndekso
-		guard indekso != malnovaIndekso else {
+	private func montriElekton(de malnovaIndekso: Int?, al indekso: Int) {
+		guard let malnovaIndekso,
+			  indekso != malnovaIndekso else {
 			return
 		}
 		
-		if let malnovaIndekso {
-			rekolorigi(aktiva: indekso, malaktiva: malnovaIndekso, animacii: true)
-		}
+		rekolorigi(aktiva: indekso, malaktiva: malnovaIndekso, animacii: true)
 		rulumi(al: indekso, animacii: true)
 		substreki(indekson: indekso, animacii: false)
 	}
