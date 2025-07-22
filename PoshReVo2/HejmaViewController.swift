@@ -3,6 +3,11 @@ import UIKit
 import SnapKit
 
 final class HejmaViewController: UIViewController {
+	private enum Konstantoj {
+		/// Vertikala spaco inter interfacaĵoj
+		static let vertikalaSpaco: CGFloat = 32.0
+	}
+	
 	// MARK: Interfaceroj
 	
 	lazy var tripunktoButono = {
@@ -48,12 +53,12 @@ final class HejmaViewController: UIViewController {
 	
 	lazy var butonStaplo: UIStackView = {
 		let staplo = UIStackView(arrangedSubviews: [
-			esplorButono,
+			historioButono,
 			konservitajButono,
-			historioButono
+			esplorButono
 		])
 		staplo.axis = .vertical
-		staplo.spacing = 32
+		staplo.spacing = Konstantoj.vertikalaSpaco
 		return staplo
 	}()
 	
@@ -84,7 +89,7 @@ final class HejmaViewController: UIViewController {
 		view.addSubview(butonStaplo)
 		butonStaplo.snp.makeConstraints { make in
 			make.centerX.equalTo(view)
-			make.top.equalTo(falsSerchilo.snp.bottom)
+			make.top.equalTo(falsSerchilo.snp.bottom).offset(Konstantoj.vertikalaSpaco)
 		}
 	}
 	

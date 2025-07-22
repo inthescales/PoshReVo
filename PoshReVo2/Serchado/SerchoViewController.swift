@@ -29,6 +29,7 @@ final class SerchoViewController: UIViewController {
 					teksto: self?.serchTeksto,
 					serchLingvo: self?.serchLingvo
 				)
+				// TODO: Enfokusigi serĉilonb
 			}
 		)
 	}()

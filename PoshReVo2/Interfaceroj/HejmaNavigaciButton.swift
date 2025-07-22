@@ -1,6 +1,14 @@
 import UIKit
 
 final class HejmaNavigaciButton: UIButton {
+	enum Konstantoj {
+		static let alteco: CGFloat = 48.0
+		
+		static let largheco: CGFloat = 325.0
+		
+		static let angulRadiuso: CGFloat = 16.0
+	}
+	
 	private let stilo: InterfacStilo
 	
 	init(teksto: String, stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
@@ -11,10 +19,10 @@ final class HejmaNavigaciButton: UIButton {
 		setTitleColor(self.stilo.dokumentaTeksto, for: .normal)
 		backgroundColor = self.stilo.navigaciaButono
 		
-		layer.cornerRadius = 24
+		layer.cornerRadius = Konstantoj.angulRadiuso
 		snp.makeConstraints { make in
-			make.height.equalTo(60)
-			make.width.equalTo(240)
+			make.height.equalTo(Konstantoj.alteco)
+			make.width.equalTo(Konstantoj.largheco)
 		}
 		
 		layer.masksToBounds = false
