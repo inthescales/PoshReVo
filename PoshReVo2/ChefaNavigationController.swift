@@ -3,6 +3,7 @@ import UIKit
 final class ChefaNavigationController: UINavigationController {
 	override func viewDidLoad() {
 		navigationBar.isTranslucent = false
+		navigationBar.tintColor = DinamikaStilo.navigaciaButono
 		
 		let navigacejAspekto = UINavigationBarAppearance()
 		navigacejAspekto.configureWithOpaqueBackground()
