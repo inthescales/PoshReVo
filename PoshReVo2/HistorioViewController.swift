@@ -14,7 +14,6 @@ final class HistorioViewController: UIViewController {
 		return butono
 	}()
 	
-	
 	private lazy var tabelo: VortoListoViewController<Uzantlistero> = {
 		let tabelo = VortoListoViewController(elektis: elektis)
 		return tabelo
@@ -71,6 +70,7 @@ final class HistorioViewController: UIViewController {
 	// MARK: - Agordado
 	
 	private func montri(_ historio: [Konservitajho]) {
+		forigiButono.isEnabled = !historio.isEmpty
 		tabelo.montri(listerojn: historio.reversed().map { Uzantlistero(el: $0) })
 	}
 	

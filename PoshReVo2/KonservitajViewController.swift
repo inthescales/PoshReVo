@@ -3,6 +3,17 @@ import UIKit
 final class KonservitajViewController: UIViewController {
 	// MARK: - Interfaceroj
 	
+	lazy var forigiButono = {
+		let butono = UIBarButtonItem.init(
+			title: Tekstoj.forigi,
+			style: .plain,
+			target: self,
+			action: #selector(forigi)
+		)
+		butono.tintColor = DinamikaStilo.navigaciaTeksto
+		return butono
+	}()
+	
 	private lazy var tabelo: VortoListoViewController<Uzantlistero> = {
 		let tabelo = VortoListoViewController(elektis: elektis)
 		return tabelo
@@ -12,13 +23,20 @@ final class KonservitajViewController: UIViewController {
 	
 	let elektis: (Uzantlistero) -> ()
 	
+	let datumRegilo: UzantDatumoRegilo
+	
 	// MARK: - Pravalorizado
 	
-	init(konservitaj: [Konservitajho], elektis: @escaping (Uzantlistero) -> ()) {
+	init(
+		konservitaj: [Konservitajho],
+		datumRegilo: UzantDatumoRegilo = .komuna,
+		elektis: @escaping (Uzantlistero) -> ()
+	) {
 		self.elektis = elektis
+		self.datumRegilo = datumRegilo
 		super.init(nibName: nil, bundle: nil)
 		
-		tabelo.montri(listerojn: konservitaj.map { Uzantlistero(el: $0) })
+		montri(konservitaj)
 	}
 	
 	convenience init(elektis: @escaping (Uzantlistero) -> (), uzantDatumaro: UzantDatumaro = .komuna) {
@@ -36,6 +54,8 @@ final class KonservitajViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		navigationItem.rightBarButtonItem = forigiButono
+		
 		addChild(tabelo)
 		view.addEdgeMatchedSubview(tabelo.view)
 		
@@ -47,6 +67,24 @@ final class KonservitajViewController: UIViewController {
 		)
 	}
 	
+	// MARK: - Agordado
+	
+	private func montri(_ konservitaj: [Konservitajho]) {
+		forigiButono.isEnabled = !konservitaj.isEmpty
+		tabelo.montri(listerojn: konservitaj.reversed().map { Uzantlistero(el: $0) })
+	}
+	
+	// MARK: - Agoj
+	
+	@objc private func forigi() {
+		AgoHelpiloj.prezentiKonfirmilon(
+			teksto: Tekstoj.forigiKonservitajnDemand,
+			prezentilo: self,
+		) { [weak self] in
+			self?.datumRegilo.forigiKonservitajn()
+		}
+	}
+	
 	// MARK: - Reagoj
 	
 	@objc private func konservitajShanghighis(_ avizo: Notification) {
@@ -54,6 +92,6 @@ final class KonservitajViewController: UIViewController {
 			return
 		}
 		
-		tabelo.montri(listerojn: novkonservitaj.map { Uzantlistero(el: $0) })
+		montri(novkonservitaj)
 	}
 }
