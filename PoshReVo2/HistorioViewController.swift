@@ -3,6 +3,18 @@ import UIKit
 final class HistorioViewController: UIViewController {
 	// MARK: - Interfaceroj
 	
+	lazy var forigiButono = {
+		let butono = UIBarButtonItem.init(
+			title: Tekstoj.forigi,
+			style: .plain,
+			target: self,
+			action: #selector(forigi)
+		)
+		butono.tintColor = DinamikaStilo.navigaciaTeksto
+		return butono
+	}()
+	
+	
 	private lazy var tabelo: VortoListoViewController<Uzantlistero> = {
 		let tabelo = VortoListoViewController(elektis: elektis)
 		return tabelo
@@ -12,10 +24,17 @@ final class HistorioViewController: UIViewController {
 	
 	let elektis: (Uzantlistero) -> ()
 	
+	let datumRegilo: UzantDatumoRegilo
+	
 	// MARK: - Pravalorizado
 	
-	init(lastaj: [Konservitajho], elektis: @escaping (Uzantlistero) -> ()) {
+	init(
+		lastaj: [Konservitajho],
+		datumRegilo: UzantDatumoRegilo = .komuna,
+		elektis: @escaping (Uzantlistero) -> (),
+	) {
 		self.elektis = elektis
+		self.datumRegilo = datumRegilo
 		super.init(nibName: nil, bundle: nil)
 		
 		montri(lastaj)
@@ -36,6 +55,8 @@ final class HistorioViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		navigationItem.rightBarButtonItem = forigiButono
+		
 		addChild(tabelo)
 		view.addEdgeMatchedSubview(tabelo.view)
 		
@@ -51,6 +72,17 @@ final class HistorioViewController: UIViewController {
 	
 	private func montri(_ historio: [Konservitajho]) {
 		tabelo.montri(listerojn: historio.reversed().map { Uzantlistero(el: $0) })
+	}
+	
+	// MARK: - Agoj
+	
+	@objc private func forigi() {
+		AgoHelpiloj.prezentiKonfirmilon(
+			teksto: Tekstoj.forigiHistorionDemand,
+			prezentilo: self,
+		) { [weak self] in
+			self?.datumRegilo.forigiHistorion()
+		}
 	}
 	
 	// MARK: - Reagoj

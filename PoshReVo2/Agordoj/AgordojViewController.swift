@@ -46,48 +46,30 @@ final class AgordojViewController: UIViewController {
 	// MARK: - Uzant-agoj
 	
 	private func premisforigiHistorion() {
-		prezentiKonfirmilon(teksto: Tekstoj.forigiHistorionDemand) { [weak self] in
+		// TODO: Elekti ĝustan ĉelon
+        // if let prezentilo = konfirmilo.popoverPresentationController,
+		// 	   let chelo = tabelo.cellForRow(at: IndexPath(item: 0, section: 0)) {
+		// 	   prezentilo.sourceView = chelo;
+		// 	   prezentilo.sourceRect = chelo.bounds;
+		// }
+		
+		AgoHelpiloj.prezentiKonfirmilon(
+			teksto: Tekstoj.forigiHistorionDemand,
+			prezentilo: self,
+		) { [weak self] in
 			self?.datumRegilo.forigiHistorion()
 		}
 	}
 	
 	private func premisforigiKonservitajn() {
-		prezentiKonfirmilon(teksto: Tekstoj.forigiHistorionDemand) { [weak self] in
+		// TODO: Elekti ĝustan ĉelon, kiel supre
+		
+		AgoHelpiloj.prezentiKonfirmilon(
+			teksto: Tekstoj.forigiHistorionDemand,
+			prezentilo: self
+		) { [weak self] in
 			self?.datumRegilo.forigiKonservitajn()
 		}
-	}
-	
-	// MARK: - Helpiloj
-	
-	private func prezentiKonfirmilon(teksto: String, efiko: @escaping () -> Void) {
-		let konfirmilo: UIAlertController = UIAlertController(
-			title: teksto,
-			message: nil,
-			preferredStyle:.actionSheet
-		)
-		
-		let agoJes = UIAlertAction(
-			title: Tekstoj.jes,
-			style: .destructive,
-			handler: { _ in
-			   efiko()
-			}
-		)
-		
-		let agoNe = UIAlertAction(title: Tekstoj.ne, style: .cancel, handler: nil)
-
-		for ago in [agoJes, agoNe] {
-			konfirmilo.addAction(ago)
-		}
-		
-		// TODO: Elekti ĝustan ĉelon
-		if let prezentilo = konfirmilo.popoverPresentationController,
-			let chelo = tabelo.cellForRow(at: IndexPath(item: 0, section: 0)) {
-			prezentilo.sourceView = chelo;
-			prezentilo.sourceRect = chelo.bounds;
-		}
-		
-		present(konfirmilo, animated: true, completion: nil)
 	}
 }
 

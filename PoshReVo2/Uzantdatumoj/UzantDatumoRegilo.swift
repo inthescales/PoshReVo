@@ -72,6 +72,11 @@ final class UzantDatumoRegilo {
 	func forigiHistorion() {
 		datumaro.historio = []
 		tenilo.skribi(datumaron: datumaro)
+		
+		NotificationCenter.default.post(
+			name: Avizoj.historioShanghighis,
+			object: datumaro.historio
+		)
 	}
 	
 	// MARK: - Konservado
@@ -105,6 +110,11 @@ final class UzantDatumoRegilo {
 	func forigiKonservitajn() {
 		datumaro.konservitaj = []
 		tenilo.skribi(datumaron: datumaro)
+		
+		NotificationCenter.default.post(
+			name: Avizoj.konservitajShanghighis,
+			object: datumaro.konservitaj
+		)
 	}
 	
 	// MARK: - Stilo

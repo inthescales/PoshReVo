@@ -35,7 +35,7 @@ enum Tekstoj {
 	static let jes = "Jes"
 	static let ne = "Ne"
 	
-	// MARK: - Linvoelektado
+	// MARK: - Lingvoelektado
 	
 	static let redakti = "Redakti"
 	static let aldoniLingvon = "Aldoni Lingvon"
@@ -46,4 +46,8 @@ enum Tekstoj {
 	// MARK: - Mallongigoj
 	
 	static let serchiMallongigojn = "Serĉi mallongigojn"
+	
+	// MARK: - Ĝenerala agoj
+	
+	static let forigi = "forigi"
 }
