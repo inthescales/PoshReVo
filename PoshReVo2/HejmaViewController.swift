@@ -16,10 +16,16 @@ final class HejmaViewController: UIViewController {
 		return butono
 	}()
 	
-	lazy var serchButono: HejmaNavigaciButton = {
-		let butono = HejmaNavigaciButton(teksto: Tekstoj.serchi)
-		butono.addTarget(self, action: #selector(premisSerchi), for: .touchUpInside)
-		return butono
+	lazy var falsSerchilo: SerchiloView = {
+		let ilo = SerchiloView(lokokupaTeksto: Tekstoj.serchiVortonAuFrazon, iksumi: false, tekstoShanghighis: { _ in })
+		for suba in ilo.subviews {
+			suba.isUserInteractionEnabled = false
+		}
+		let rekonilo = UITapGestureRecognizer(target: self, action: #selector(premisSerchilon))
+		let ricevilo = UIView()
+		ilo.addEdgeMatchedSubview(ricevilo)
+		ricevilo.addGestureRecognizer(rekonilo)
+		return ilo
 	}()
 	
 	lazy var esplorButono: HejmaNavigaciButton = {
@@ -42,7 +48,6 @@ final class HejmaViewController: UIViewController {
 	
 	lazy var butonStaplo: UIStackView = {
 		let staplo = UIStackView(arrangedSubviews: [
-			serchButono,
 			esplorButono,
 			konservitajButono,
 			historioButono
@@ -71,9 +76,15 @@ final class HejmaViewController: UIViewController {
 		
 		navigationItem.rightBarButtonItem = tripunktoButono
 		
+		view.addSubview(falsSerchilo)
+		falsSerchilo.snp.makeConstraints { make in
+			make.top.left.right.equalToSuperview()
+		}
+		
 		view.addSubview(butonStaplo)
 		butonStaplo.snp.makeConstraints { make in
-			make.center.equalTo(view)
+			make.centerX.equalTo(view)
+			make.top.equalTo(falsSerchilo.snp.bottom)
 		}
 	}
 	
@@ -114,6 +125,11 @@ final class HejmaViewController: UIViewController {
 		present(menuo, animated: false)
 	}
 
+	@objc private func premisSerchilon() {
+		guard let navigaciilo = navigationController else { return }
+		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo, radika: true)
+	}
+	
 	@objc private func premisSerchi() {
 		guard let navigaciilo = navigationController else { return }
 		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo, radika: true)

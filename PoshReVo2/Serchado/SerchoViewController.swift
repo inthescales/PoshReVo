@@ -56,6 +56,9 @@ final class SerchoViewController: UIViewController {
 	/// Datumoj pri la lasta serĉo antaŭ la nuna
 	private var lastaSercho: (Lingvo, String)? = nil
 	
+	/// Ĉu la paĝo jam aperis al la uzanto
+	private var jamAperis = false
+	
 	// MARK: Agordoj
 	
 	/// Ĉu ĉi-paĝo komencis serĉfadenon
@@ -122,6 +125,15 @@ final class SerchoViewController: UIViewController {
 			name: Avizoj.uzantajLingvojShanghighis,
 			object: nil
 		)
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		if !jamAperis {
+			jamAperis = true
+			serchilo.enfokusighi()
+		}
 	}
 	
 	@objc func lingvoAvizo(_ avizo: Notification) {
