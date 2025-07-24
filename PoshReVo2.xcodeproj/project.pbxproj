@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		000DA6D82D8F31CF0026CBA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */; };
-		000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6EB2D8F32360026CBA0 /* HejmaViewController.swift */; };
 		000DA6EF2D8F33740026CBA0 /* ReVoDatumbazo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */; };
 		000DA6F02D8F33740026CBA0 /* ReVoDatumbazo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		000DA6F52D8F35FE0026CBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */; };
 		000DA6F92D906C6E0026CBA0 /* InterfacStilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */; };
 		000DA6FB2D90898C0026CBA0 /* SerchiloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FA2D90898C0026CBA0 /* SerchiloView.swift */; };
 		000DA6FD2D908F680026CBA0 /* ChefaNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FC2D908F680026CBA0 /* ChefaNavigationController.swift */; };
-		000DA6FF2D9099670026CBA0 /* HejmaNavigaciButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FE2D9099670026CBA0 /* HejmaNavigaciButton.swift */; };
 		00107E2D2E304C0A0010CECD /* AgoHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E2C2E304C070010CECD /* AgoHelpiloj.swift */; };
+		00107E352E3287580010CECD /* PaghingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E342E3287540010CECD /* PaghingoViewController.swift */; };
 		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
 		00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B082DC17EB600526F82 /* SerchoViewController.swift */; };
 		00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */; };
@@ -80,14 +79,13 @@
 /* Begin PBXFileReference section */
 		000DA6D42D8F31CF0026CBA0 /* PoshReVo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoshReVo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		000DA6EB2D8F32360026CBA0 /* HejmaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HejmaViewController.swift; sourceTree = "<group>"; };
 		000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoDatumbazo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfacStilo.swift; sourceTree = "<group>"; };
 		000DA6FA2D90898C0026CBA0 /* SerchiloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchiloView.swift; sourceTree = "<group>"; };
 		000DA6FC2D908F680026CBA0 /* ChefaNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefaNavigationController.swift; sourceTree = "<group>"; };
-		000DA6FE2D9099670026CBA0 /* HejmaNavigaciButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HejmaNavigaciButton.swift; sourceTree = "<group>"; };
 		00107E2C2E304C070010CECD /* AgoHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoHelpiloj.swift; sourceTree = "<group>"; };
+		00107E342E3287540010CECD /* PaghingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaghingoViewController.swift; sourceTree = "<group>"; };
 		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
 		00B27B082DC17EB600526F82 /* SerchoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchoViewController.swift; sourceTree = "<group>"; };
 		00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortoListoViewController.swift; sourceTree = "<group>"; };
@@ -172,7 +170,7 @@
 			children = (
 				000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */,
 				000DA6FC2D908F680026CBA0 /* ChefaNavigationController.swift */,
-				000DA6EB2D8F32360026CBA0 /* HejmaViewController.swift */,
+				00107E342E3287540010CECD /* PaghingoViewController.swift */,
 				00B27B452DCE633100526F82 /* Vortlisto */,
 				00B27B252DC6B73F00526F82 /* Kunordigilo.swift */,
 				00B27B212DC3FCF700526F82 /* Serchado */,
@@ -255,7 +253,6 @@
 			children = (
 				00B27B9F2E099FEF00526F82 /* Shovmenuo */,
 				00B27B9B2E08889000526F82 /* StrekoView.swift */,
-				000DA6FE2D9099670026CBA0 /* HejmaNavigaciButton.swift */,
 				00B27B9D2E08D6F600526F82 /* FadGradientoView.swift */,
 			);
 			path = Interfaceroj;
@@ -512,7 +509,6 @@
 				00B27B522DEA3ED300526F82 /* ShovMenuoViewController.swift in Sources */,
 				000DA6FB2D90898C0026CBA0 /* SerchiloView.swift in Sources */,
 				00B27BA12E099FFA00526F82 /* ShovMenueroView.swift in Sources */,
-				000DA6FF2D9099670026CBA0 /* HejmaNavigaciButton.swift in Sources */,
 				00B27B4D2DCE792C00526F82 /* AgordojViewController.swift in Sources */,
 				00B27B132DC2650800526F82 /* LingvoListoViewController.swift in Sources */,
 				00B27B942DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift in Sources */,
@@ -524,7 +520,6 @@
 				00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */,
 				00B27B9E2E08D6F600526F82 /* FadGradientoView.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* UIView+AranghHelpiloj.swift in Sources */,
-				000DA6EC2D8F32360026CBA0 /* HejmaViewController.swift in Sources */,
 				00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */,
 				00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */,
 				00B27B692DF209EC00526F82 /* Listero.swift in Sources */,
@@ -540,6 +535,7 @@
 				00B27B7C2DF751FE00526F82 /* TradukaroChelo.swift in Sources */,
 				00B27B332DC8212C00526F82 /* TekstAtributoHelpiloj.swift in Sources */,
 				00B27B282DC6B77A00526F82 /* UzantDatumaro.swift in Sources */,
+				00107E352E3287580010CECD /* PaghingoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

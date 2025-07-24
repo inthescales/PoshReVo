@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	) -> Bool {
 		VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
 		
-		let vc = HejmaViewController()
+		let serchPagho = SerchoViewController(serchLingvoj: UzantDatumaro.komuna.lingvoj, radika: true)
+		let vc = PaghingoViewController(chefpagho: serchPagho)
+		
 		let navigaciilo = ChefaNavigationController(rootViewController: vc)
 		
 		fenestro = UIWindow(frame: UIScreen.main.bounds)

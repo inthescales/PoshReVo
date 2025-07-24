@@ -1,13 +1,6 @@
 import UIKit
 
-import SnapKit
-
-final class HejmaViewController: UIViewController {
-	private enum Konstantoj {
-		/// Vertikala spaco inter interfacaĵoj
-		static let vertikalaSpaco: CGFloat = 32.0
-	}
-	
+final class PaghingoViewController: UIViewController {
 	// MARK: Interfaceroj
 	
 	lazy var tripunktoButono = {
@@ -21,83 +14,49 @@ final class HejmaViewController: UIViewController {
 		return butono
 	}()
 	
-	lazy var falsSerchilo: SerchiloView = {
-		let ilo = SerchiloView(lokokupaTeksto: Tekstoj.serchiVortonAuFrazon, iksumi: false, tekstoShanghighis: { _ in })
-		for suba in ilo.subviews {
-			suba.isUserInteractionEnabled = false
-		}
-		let rekonilo = UITapGestureRecognizer(target: self, action: #selector(premisSerchilon))
-		let ricevilo = UIView()
-		ilo.addEdgeMatchedSubview(ricevilo)
-		ricevilo.addGestureRecognizer(rekonilo)
-		return ilo
-	}()
+	// MARK: - Agordoj
 	
-	lazy var esplorButono: HejmaNavigaciButton = {
-		let butono = HejmaNavigaciButton(teksto: Tekstoj.esplori)
-		butono.addTarget(self, action: #selector(premisEsplori), for: .touchUpInside)
-		return butono
-	}()
-	
-	lazy var konservitajButono: HejmaNavigaciButton = {
-		let butono = HejmaNavigaciButton(teksto: Tekstoj.konservitaj)
-		butono.addTarget(self, action: #selector(premisKonservitaj), for: .touchUpInside)
-		return butono
-	}()
-	
-	lazy var historioButono: HejmaNavigaciButton = {
-		let butono = HejmaNavigaciButton(teksto: Tekstoj.historio)
-		butono.addTarget(self, action: #selector(premisHistorio), for: .touchUpInside)
-		return butono
-	}()
-	
-	lazy var butonStaplo: UIStackView = {
-		let staplo = UIStackView(arrangedSubviews: [
-			historioButono,
-			konservitajButono,
-			esplorButono
-		])
-		staplo.axis = .vertical
-		staplo.spacing = Konstantoj.vertikalaSpaco
-		return staplo
-	}()
-	
-	// MARK: Agordoj
+	let chefpagho: UIViewController
 	
 	let kunordigilo: Kunordigilo
 	
-	init(
-		kunordigilo: Kunordigilo = .komuna
-	) {
+	init(chefpagho: UIViewController, kunordigilo: Kunordigilo = .komuna) {
+		self.chefpagho = chefpagho
 		self.kunordigilo = kunordigilo
 		
 		super.init(nibName: nil, bundle: nil)
 	}
 	
-	required init?(coder: NSCoder) { fatalError("init(coder:) ne realas") }
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) ne realas")
+	}
 	
 	override func viewDidLoad() {
-		view.backgroundColor = DinamikaStilo.navigaciaFono
+		super.viewDidLoad()
 		
 		navigationItem.rightBarButtonItem = tripunktoButono
 		
-		view.addSubview(falsSerchilo)
-		falsSerchilo.snp.makeConstraints { make in
-			make.top.left.right.equalToSuperview()
-		}
-		
-		view.addSubview(butonStaplo)
-		butonStaplo.snp.makeConstraints { make in
-			make.centerX.equalTo(view)
-			make.top.equalTo(falsSerchilo.snp.bottom).offset(Konstantoj.vertikalaSpaco)
-		}
+		addChild(chefpagho)
+		view.addEdgeMatchedSubview(chefpagho.view)
 	}
 	
-	// MARK: Uzantaj agoj
+	// MARK: Paĝ-navigaciado
 	
 	@objc private func premisTripunkton() {
 		let menuo = ShovMenuoViewController(
 			eroj: [
+				ShovMenuoViewController.Menuero(
+					teksto: Tekstoj.historio,
+					ago: { [weak self] in self?.premisHistorio() }
+				),
+				ShovMenuoViewController.Menuero(
+					teksto: Tekstoj.konservitaj,
+					ago: { [weak self] in self?.premisKonservitaj() }
+				),
+				ShovMenuoViewController.Menuero(
+					teksto: Tekstoj.esplori,
+					ago: { [weak self] in self?.premisEsplori() }
+				),
 				ShovMenuoViewController.Menuero(
 					teksto: Tekstoj.agordoj,
 					ago: { [weak self] in self?.premisAgordoj() }
@@ -130,11 +89,6 @@ final class HejmaViewController: UIViewController {
 		present(menuo, animated: false)
 	}
 
-	@objc private func premisSerchilon() {
-		guard let navigaciilo = navigationController else { return }
-		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo, radika: true)
-	}
-	
 	@objc private func premisSerchi() {
 		guard let navigaciilo = navigationController else { return }
 		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo, radika: true)
