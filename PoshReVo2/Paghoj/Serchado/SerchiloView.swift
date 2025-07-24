@@ -13,6 +13,7 @@ final class SerchiloView: UIView {
 		serchilo.placeholder = lokokupaTeksto
 		serchilo.searchTextField.backgroundColor = stilo.dokumentaFono
 		serchilo.searchTextField.autocapitalizationType = .none
+		serchilo.tintColor = stilo.dokumentLigilo
 		
 		// Ŝajne, ĉio ĉi frenezaĵo necesas por nevidebligi la fonon malantaŭ la tekstejo
 		serchilo.backgroundColor = .clear
