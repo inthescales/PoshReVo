@@ -48,6 +48,15 @@ final class InformoSekcio: UIView {
 		}
 		
 		tekstejo.textColor = stilo.dokumentaTeksto
+		tekstejo.linkAttributes = [
+			kCTForegroundColorAttributeName : stilo.dokumentLigilo,
+			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
+		]
+		tekstejo.activeLinkAttributes = [
+			kCTForegroundColorAttributeName : stilo.navigaciaFono,
+			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
+		]
+		
 		tekstejo.delegate = delegate
 		TekstAtributoHelpiloj.provizi(etikedon: tekstejo, per: teksto)
 	}

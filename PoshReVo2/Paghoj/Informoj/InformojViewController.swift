@@ -6,6 +6,9 @@ import TTTAttributedLabel
 /// Prezentas informojn pri ReVo kaj PoŝReVo
 final class InformojViewController: UIViewController {
 	private enum Konstantoj {
+		/// Spaco inter ekranbordo kaj paĝenhavoj
+		static let margheno: CGFloat = 8.0
+		
 		/// Spaco inter ĉiuj du sekcioj
 		static let intersekciaSpaco: CGFloat = 16.0
 	}
@@ -17,6 +20,18 @@ final class InformojViewController: UIViewController {
 		staplo.axis = .vertical
 		staplo.spacing = Konstantoj.intersekciaSpaco
 		return staplo
+	}()
+	
+	private lazy var rulumejo: UIScrollView = {
+		let ejo = UIScrollView()
+		ejo.showsHorizontalScrollIndicator = false
+		ejo.addSubview(staplo)
+		ejo.isScrollEnabled = true
+		staplo.snp.makeConstraints { make in
+			make.edges.equalToSuperview().inset(Konstantoj.margheno)
+			make.width.equalToSuperview().offset(-Konstantoj.margheno * 2)
+		}
+		return ejo
 	}()
 	
 	// MARK: - Agordoj
@@ -39,10 +54,7 @@ final class InformojViewController: UIViewController {
 		
 		view.backgroundColor = stilo.dokumentaFono
 
-		view.addSubview(staplo)
-		staplo.snp.makeConstraints { make in
-			make.top.left.right.equalToSuperview()
-		}
+		view.addEdgeMatchedSubview(rulumejo)
 		
 		var enhavoj: [(String?, String)] = [
 			(
@@ -59,12 +71,12 @@ final class InformojViewController: UIViewController {
 			),
 			(
 				nil,
-				"<i>Poŝa Reta Vortaro, PoŝReVo © 2016-2025, Robin Hill</i>"
+				"<k>Poŝa Reta Vortaro, PoŝReVo © 2016-2025, Robin Hill</k>"
 			)
 		]
 		
 		if let versioNumero = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-			enhavoj.append((nil, "<i>Versio-numero " + versioNumero + "</i>"))
+			enhavoj.append((nil, "<k>Versio-numero " + versioNumero + "</k>"))
 		}
 		
 		for (titolo, teksto) in enhavoj {
