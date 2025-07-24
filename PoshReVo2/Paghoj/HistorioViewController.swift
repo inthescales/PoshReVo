@@ -54,6 +54,7 @@ final class HistorioViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		title = Tekstoj.historio
 		navigationItem.rightBarButtonItem = forigiButono
 		
 		addChild(tabelo)

@@ -209,7 +209,7 @@ final class LingvoBretoViewController: UIViewController {
 			
 			let etikedo = UIButton()
 			etikedo.setTitle(lingvo.nomo, for: .normal)
-			let koloro = (elektita == lingvo) ? stilo.navigaciaTeksto : stilo.navigaciaButonoMalaktiva
+			let koloro = (elektita.kodo == lingvo.kodo) ? stilo.navigaciaTeksto : stilo.navigaciaButonoMalaktiva // TODO: Lingva egaleco
 			etikedo.setTitleColor(koloro, for: .normal)
 			etikedo.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
 			etikedo.tag = i

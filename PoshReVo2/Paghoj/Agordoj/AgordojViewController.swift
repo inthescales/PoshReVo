@@ -40,6 +40,8 @@ final class AgordojViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
+		title = Tekstoj.agordoj
+		
 		view.addEdgeMatchedSubview(tabelo)
 	}
 	

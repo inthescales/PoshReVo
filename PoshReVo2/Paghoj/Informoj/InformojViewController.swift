@@ -35,6 +35,8 @@ final class InformojViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		title = Tekstoj.priPoshReVo
+		
 		view.backgroundColor = stilo.dokumentaFono
 
 		view.addSubview(staplo)

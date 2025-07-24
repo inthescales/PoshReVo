@@ -54,6 +54,7 @@ final class KonservitajViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		title = Tekstoj.konservitaj
 		navigationItem.rightBarButtonItem = forigiButono
 		
 		addChild(tabelo)

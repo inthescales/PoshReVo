@@ -33,11 +33,14 @@ final class MallongigoListoViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
+	private let titolo: String?
+	
 	private let eroj: [Ero]
 	
 	private let stilo: InterfacStilo
 	
-	init(eroj: [Ero], stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
+	init(titolo: String?, eroj: [Ero], stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
+		self.titolo = titolo
 		self.eroj = eroj
 		self.videblajEroj = eroj
 		self.stilo = stilo
@@ -50,6 +53,8 @@ final class MallongigoListoViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		title = titolo
 		
 		view.backgroundColor = stilo.navigaciaFono
 		

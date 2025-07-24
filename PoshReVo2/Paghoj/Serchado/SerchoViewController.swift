@@ -29,7 +29,6 @@ final class SerchoViewController: UIViewController {
 					teksto: self?.serchTeksto,
 					serchLingvo: self?.serchLingvo
 				)
-				// TODO: Enfokusigi serĉilonb
 			}
 		)
 	}()
@@ -56,9 +55,6 @@ final class SerchoViewController: UIViewController {
 	
 	/// Datumoj pri la lasta serĉo antaŭ la nuna
 	private var lastaSercho: (Lingvo, String)? = nil
-	
-	/// Ĉu la paĝo jam aperis al la uzanto
-	private var jamAperis = false
 	
 	// MARK: Agordoj
 	
@@ -92,6 +88,7 @@ final class SerchoViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
+		title = Tekstoj.serchi
 		view.backgroundColor = stilo.navigaciaFono
 		
 		view.addSubview(serchilo)
@@ -130,11 +127,6 @@ final class SerchoViewController: UIViewController {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		
-		if !jamAperis {
-			jamAperis = true
-			serchilo.enfokusighi()
-		}
 	}
 	
 	@objc func lingvoAvizo(_ avizo: Notification) {

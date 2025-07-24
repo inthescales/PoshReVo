@@ -53,24 +53,27 @@ final class Kunordigilo {
 	func prezentiMallongigoMenuon(prezentilo: UINavigationController) {
 		let listeroj: [KategoriaViewController.Listero] = [
 			.init(
-				teksto: "Vortaraj Mallongigoj",
-				celPagho: { MallongigoListoViewController(eroj: MallongigoListo.vortaraj) }
+				teksto: Tekstoj.vortarajMallongigoj,
+				celPagho: {
+					MallongigoListoViewController(
+						titolo: Tekstoj.vortarajMallongigoj,
+						eroj: MallongigoListo.vortaraj
+					)
+				}
 			),
 			.init(
-				teksto: "Fakaj Mallongigoj",
-				celPagho: { MallongigoListoViewController(eroj: MallongigoListo.fakaj) }
+				teksto: Tekstoj.fakajMallongigoj,
+				celPagho: {
+					MallongigoListoViewController(
+						titolo: Tekstoj.fakajMallongigoj,
+						eroj: MallongigoListo.fakaj
+					)
+				}
 			)
 		]
 		
-		let vc = KategoriaViewController(listeroj: listeroj)
+		let vc = KategoriaViewController(titolo: Tekstoj.mallongigoj, listeroj: listeroj)
 		prezentilo.pushViewController(vc, animated: true)
-	}
-	
-	func fariMallongigoPaghon(
-		mallongigoj: [MallongigoListoViewController.Ero],
-		prezentilo: UINavigationController
-	) -> MallongigoListoViewController {
-		return MallongigoListoViewController(eroj: mallongigoj)
 	}
 	
 	func prezentiInformoPaghon(
@@ -231,20 +234,20 @@ final class Kunordigilo {
 	func prezentiEsplorMenuon(prezentilo: UINavigationController) {
 		let listeroj: [KategoriaViewController.Listero] = [
 			.init(
-				teksto: "Fakoj",
+				teksto: Tekstoj.fakoj,
 				celPagho: { [unowned self] in fariFakListon(prezentilo: prezentilo) }
 			),
 			.init(
-				teksto: "Vortoj Laŭ Oficialeco",
+				teksto: Tekstoj.vortojLauOficialeco,
 				celPagho: { [unowned self] in fariOficialecoListon(prezentilo: prezentilo) }
 			),
 			. init(
-				teksto: "Hazarda Artikolo",
+				teksto: Tekstoj.hazardaArtikolo,
 				celPagho: { [unowned self] in fariHazardanArtikolon() }
 			)
 		]
 		
-		let vc = KategoriaViewController(listeroj: listeroj)
+		let vc = KategoriaViewController(titolo: Tekstoj.esplori, listeroj: listeroj)
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
@@ -259,14 +262,14 @@ final class Kunordigilo {
 				}
 			)
 		}
-		return KategoriaViewController(listeroj: listeroj)
+		return KategoriaViewController(titolo: Tekstoj.fakoj, listeroj: listeroj)
 	}
 	
 	func fariFakVortliston(
 		por fako: Fako,
 		prezentilo: UINavigationController
 	) -> VortoListoViewController<Esplorlistero> {
-		let vc = VortoListoViewController<Esplorlistero> { [weak self] listero in
+		let vc = VortoListoViewController<Esplorlistero>(titolo: fako.nomo) { [weak self] listero in
 			guard let self else { return }
 			
 			prezentiArtikoloPaghon(el: listero.destino, prezentilo: prezentilo)
@@ -294,14 +297,14 @@ final class Kunordigilo {
 				}
 			)
 		}
-		return KategoriaViewController(listeroj: listeroj)
+		return KategoriaViewController(titolo: Tekstoj.oficialecoj, listeroj: listeroj)
 	}
 	
 	func fariOficialecaVortliston(
 		por ofc: Oficialeco,
 		prezentilo: UINavigationController
 	) -> VortoListoViewController<Esplorlistero> {
-		let vc = VortoListoViewController<Esplorlistero> { [weak self] listero in
+		let vc = VortoListoViewController<Esplorlistero>(titolo: ofc.nomo) { [weak self] listero in
 			guard let self else { return }
 			
 			prezentiArtikoloPaghon(el: listero.destino, prezentilo: prezentilo)

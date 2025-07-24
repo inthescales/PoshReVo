@@ -27,6 +27,8 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	
 	// MARK: - Agordoj
 	
+	private let titolo: String?
+	
 	private let elektis: (L) -> ()
 	
 	private let alvenasFinon: (() -> ())?
@@ -34,9 +36,11 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	// MARK: - Pravalorizado
 	
 	init(
+		titolo: String? = nil,
 		elektis: @escaping (L) -> (),
 		alvenasFinon: (() -> ())? = nil
 	) {
+		self.titolo = titolo
 		self.elektis = elektis
 		self.alvenasFinon = alvenasFinon
 		super.init(nibName: nil, bundle: nil)
@@ -47,6 +51,10 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	}
 	
 	override func viewDidLoad() {
+		if let titolo {
+			title = titolo
+		}
+		
 		view.addEdgeMatchedSubview(tabelo)
 	}
 	

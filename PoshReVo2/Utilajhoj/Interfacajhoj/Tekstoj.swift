@@ -26,6 +26,13 @@ enum Tekstoj {
 	static let elekti = "elekti"
 	static let saltiAl = "Salti al:"
 	
+	// MARK: - Esplorado
+	
+	static let fakoj = "Fakoj"
+	static let vortojLauOficialeco = "Vortoj laŭ Oficialeco"
+	static let oficialecoj = "Oficialecoj"
+	static let hazardaArtikolo = "Hazarda Artikolo"
+	
 	// MARK: - Agordoj
 	
 	static let _lingvoj = " lingvoj"
@@ -43,8 +50,14 @@ enum Tekstoj {
 	static let rezigni = "Rezigni"
 	static let fini = "Fini"
 	
+	// MARK: - Stiloelektado
+	
+	static let elektiStilon = "Elekti Stilon"
+	
 	// MARK: - Mallongigoj
 	
+	static let vortarajMallongigoj = "Vortaraj Mallongigoj"
+	static let fakajMallongigoj = "Fakaj Mallongigoj"
 	static let serchiMallongigojn = "Serĉi mallongigojn"
 	
 	// MARK: - Ĝenerala agoj

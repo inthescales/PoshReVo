@@ -20,11 +20,17 @@ final class KategoriaViewController: UIViewController {
 	
 	private let listeroj: [Listero]
 	
+	// MARK: Agordoj
+	
+	private let titolo: String?
+	
 	//
 	
 	init(
+		titolo: String?,
 		listeroj: [Listero]
 	) {
+		self.titolo = titolo
 		self.listeroj = listeroj
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -34,6 +40,8 @@ final class KategoriaViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
+		title = titolo
+		
 		view.addEdgeMatchedSubview(tabelo)
 	}
 }

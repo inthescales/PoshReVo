@@ -72,12 +72,6 @@ final class SerchiloView: UIView {
 	}
 	
 	required init?(coder: NSCoder) { fatalError("init(coder:) ne realas") }
-	
-	// MARK: - Agoj
-	
-	func enfokusighi() {
-		serchilo.becomeFirstResponder()
-	}
 }
 
 // MARK: - Tekstejaĵoj
