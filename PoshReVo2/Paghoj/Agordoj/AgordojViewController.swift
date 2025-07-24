@@ -10,6 +10,7 @@ final class AgordojViewController: UIViewController {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
 		tabelo.dataSource = self
+		tabelo.backgroundColor = stilo.navigaciaFono
 		return tabelo
 	}()
 	

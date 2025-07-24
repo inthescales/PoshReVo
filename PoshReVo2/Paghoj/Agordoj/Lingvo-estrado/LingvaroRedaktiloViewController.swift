@@ -24,6 +24,8 @@ final class LingvaroRedaktiloViewController: UIViewController {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
 		tabelo.dataSource = self
+		tabelo.backgroundColor = stilo.navigaciaFono
+		
 		return tabelo
 	}()
 	
@@ -153,19 +155,6 @@ extension LingvaroRedaktiloViewController: UITableViewDataSource {
 			return 1
 		default:
 			return 0
-		}
-	}
-	
-	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		switch section {
-		case 0:
-			if lingvaro.count > 0 {
-				return Tekstoj.viajLingvoj
-			} else {
-				return nil
-			}
-		default:
-			return nil
 		}
 	}
 	

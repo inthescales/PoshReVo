@@ -10,9 +10,14 @@ final class KategoriaViewController: UIViewController {
 	}
 	
 	lazy var tabelo: UITableView = {
-		let tabelo = UITableView()
+		let tabelo = UITableView(frame: .zero, style: tabelStilo)
 		tabelo.delegate = self
 		tabelo.dataSource = self
+		
+		if tabelStilo == .insetGrouped {
+			tabelo.backgroundColor = stilo.navigaciaFono
+		}
+		
 		return tabelo
 	}()
 	
@@ -24,14 +29,22 @@ final class KategoriaViewController: UIViewController {
 	
 	private let titolo: String?
 	
+	private let tabelStilo: UITableView.Style
+	
+	private let stilo: InterfacStilo
+	
 	//
 	
 	init(
 		titolo: String?,
-		listeroj: [Listero]
+		tabelStilo: UITableView.Style = .plain,
+		listeroj: [Listero],
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.titolo = titolo
+		self.tabelStilo = tabelStilo
 		self.listeroj = listeroj
+		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
 	
