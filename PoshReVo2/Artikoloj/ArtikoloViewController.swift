@@ -30,17 +30,6 @@ final class ArtikoloViewController: UIViewController {
 		return butono
 	}()
 	
-	private lazy var titolejo: ArtikolTitoloView = {
-		let ejo = ArtikolTitoloView(
-			artikolo: artikolo,
-			konservis: konservis,
-			salti: { [weak self] in self?.premisSalti() },
-			margheno: Konstantoj.margheno,
-			stilo: stilo
-		)
-		return ejo
-	}()
-	
 	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
 		tabelo.delegate = self
@@ -125,8 +114,6 @@ final class ArtikoloViewController: UIViewController {
 		self.stilo = stilo
 		
 		super.init(nibName: nil, bundle: nil)
-		
-		titolejo.agordi(konservita: konservita)
 	}
 	
 	convenience init(
@@ -157,27 +144,15 @@ final class ArtikoloViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
+		navigationItem.rightBarButtonItem = lupeoButono
 		view.backgroundColor = stilo.dokumentaFono
 		
-		view.addSubview(titolejo)
-		titolejo.snp.makeConstraints { make in
-			make.top.left.right.equalToSuperview()
-		}
+		view.addEdgeMatchedSubview(tabelo)
 		
-		view.addSubview(tabelo)
-		view.sendSubviewToBack(tabelo)
-		tabelo.snp.makeConstraints { make in
-			make.left.right.bottom.equalToSuperview()
-			make.top.equalTo(titolejo.snp.bottom).offset(-Konstantoj.titolaInterkovrajho)
-		}
+		let indico = artikolo.ofc.flatMap { TekstHelpiloj.indico(por: $0) } ?? ""
+		title = artikolo.titolo + indico
 		
-		navigationItem.rightBarButtonItem = lupeoButono
-		
-		navigationItem.titleView = NavigaciiloHelpiloj.hejmoButono(
-			por: self,
-			ago: #selector(premisHejmon),
-			stilo: stilo
-		)
+		navigationItem.titleView?.tintColor = stilo.navigaciaTeksto
 		
 		NotificationCenter.default.addObserver(
 			self,
