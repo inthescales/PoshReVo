@@ -65,6 +65,8 @@ extension KategoriaViewController: UITableViewDelegate {
 		
 		let novaPagho = listeroj[indexPath.row].celPagho()
 		navigaciilo.pushViewController(novaPagho, animated: true)
+		
+		tabelo.deselectRow(at: indexPath, animated: true)
 	}
 }
 
