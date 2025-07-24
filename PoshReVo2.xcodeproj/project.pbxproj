@@ -56,7 +56,6 @@
 		00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */; };
 		00B27B942DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B932DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift */; };
 		00B27B9C2E08889000526F82 /* StrekoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B9B2E08889000526F82 /* StrekoView.swift */; };
-		00B27B9E2E08D6F600526F82 /* FadGradientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B9D2E08D6F600526F82 /* FadGradientoView.swift */; };
 		00B27BA12E099FFA00526F82 /* ShovMenueroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27BA02E099FFA00526F82 /* ShovMenueroView.swift */; };
 		00B27BA32E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27BA22E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift */; };
 		DAC6FB29A6223A52E87C0D6B /* Pods_PoshReVo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */; };
@@ -126,7 +125,6 @@
 		00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubartikoloTitoloChelo.swift; sourceTree = "<group>"; };
 		00B27B932DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigaciiloHelpiloj.swift; sourceTree = "<group>"; };
 		00B27B9B2E08889000526F82 /* StrekoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrekoView.swift; sourceTree = "<group>"; };
-		00B27B9D2E08D6F600526F82 /* FadGradientoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadGradientoView.swift; sourceTree = "<group>"; };
 		00B27BA02E099FFA00526F82 /* ShovMenueroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShovMenueroView.swift; sourceTree = "<group>"; };
 		00B27BA22E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AranghHelpiloj.swift"; sourceTree = "<group>"; };
 		136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,27 +167,14 @@
 			isa = PBXGroup;
 			children = (
 				000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */,
+				00B27B252DC6B73F00526F82 /* Kunordigilo.swift */,
 				000DA6FC2D908F680026CBA0 /* ChefaNavigationController.swift */,
 				00107E342E3287540010CECD /* PaghingoViewController.swift */,
-				00B27B452DCE633100526F82 /* Vortlisto */,
-				00B27B252DC6B73F00526F82 /* Kunordigilo.swift */,
-				00B27B212DC3FCF700526F82 /* Serchado */,
-				00B27B222DC3FD0600526F82 /* Lingvo-estrado */,
-				00B27B232DC3FD2600526F82 /* Interfacajhoj */,
-				00B27B242DC3FD5800526F82 /* Interfaceroj */,
+				00107E3B2E3296020010CECD /* Paghoj */,
 				00B27B292DC7CF8B00526F82 /* Artikoloj */,
-				00B27B3E2DCD0DD400526F82 /* Esplorado */,
-				00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */,
-				00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */,
-				00B27B482DCE721600526F82 /* KonservitajViewController.swift */,
-				00B27B142DC2682200526F82 /* TekstHelpiloj.swift */,
-				00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */,
+				00B27B242DC3FD5800526F82 /* Interfaceroj */,
 				00B27B5D2DF0AF8400526F82 /* Uzantdatumoj */,
-				00B27B432DCD281C00526F82 /* Konservitajho.swift */,
-				00B27B3C2DCC040800526F82 /* Avizoj.swift */,
-				00B27B4E2DE8D5E400526F82 /* Agordoj */,
-				00B27B532DEF742900526F82 /* Informoj */,
-				00B27B582DEFA35600526F82 /* Mallongigoj */,
+				00107E3A2E3295CD0010CECD /* Utilajhoj */,
 				00B27B182DC2800500526F82 /* Risurcoj */,
 			);
 			path = PoshReVo2;
@@ -202,6 +187,40 @@
 				136D05258CA807B51017FB1D /* Pods_PoshReVo2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00107E392E3295BC0010CECD /* Datumbazajhoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */,
+			);
+			path = Datumbazajhoj;
+			sourceTree = "<group>";
+		};
+		00107E3A2E3295CD0010CECD /* Utilajhoj */ = {
+			isa = PBXGroup;
+			children = (
+				00107E392E3295BC0010CECD /* Datumbazajhoj */,
+				00B27B232DC3FD2600526F82 /* Interfacajhoj */,
+				00B27B3C2DCC040800526F82 /* Avizoj.swift */,
+				00B27B142DC2682200526F82 /* TekstHelpiloj.swift */,
+				00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */,
+			);
+			path = Utilajhoj;
+			sourceTree = "<group>";
+		};
+		00107E3B2E3296020010CECD /* Paghoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B212DC3FCF700526F82 /* Serchado */,
+				00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */,
+				00B27B482DCE721600526F82 /* KonservitajViewController.swift */,
+				00B27B3E2DCD0DD400526F82 /* Esplorado */,
+				00B27B4E2DE8D5E400526F82 /* Agordoj */,
+				00B27B582DEFA35600526F82 /* Mallongigoj */,
+				00B27B532DEF742900526F82 /* Informoj */,
+			);
+			path = Paghoj;
 			sourceTree = "<group>";
 		};
 		00B27B182DC2800500526F82 /* Risurcoj */ = {
@@ -251,9 +270,9 @@
 		00B27B242DC3FD5800526F82 /* Interfaceroj */ = {
 			isa = PBXGroup;
 			children = (
+				00B27B452DCE633100526F82 /* Vortlisto */,
 				00B27B9F2E099FEF00526F82 /* Shovmenuo */,
 				00B27B9B2E08889000526F82 /* StrekoView.swift */,
-				00B27B9D2E08D6F600526F82 /* FadGradientoView.swift */,
 			);
 			path = Interfaceroj;
 			sourceTree = "<group>";
@@ -288,6 +307,7 @@
 		00B27B4E2DE8D5E400526F82 /* Agordoj */ = {
 			isa = PBXGroup;
 			children = (
+				00B27B222DC3FD0600526F82 /* Lingvo-estrado */,
 				00B27B4C2DCE792C00526F82 /* AgordojViewController.swift */,
 				00B27B4F2DE8D5F600526F82 /* StiloElektiloViewController.swift */,
 			);
@@ -317,6 +337,7 @@
 				00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */,
 				00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */,
 				00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenilo.swift */,
+				00B27B432DCD281C00526F82 /* Konservitajho.swift */,
 				00B27B642DF208D800526F82 /* V1 */,
 			);
 			path = Uzantdatumoj;
@@ -518,7 +539,6 @@
 				00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */,
 				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
 				00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */,
-				00B27B9E2E08D6F600526F82 /* FadGradientoView.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* UIView+AranghHelpiloj.swift in Sources */,
 				00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */,
 				00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */,
