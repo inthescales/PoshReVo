@@ -3,7 +3,9 @@ import UIKit
 /// Pagho montranta liston da mallongigoj
 final class MallongigoListoViewController: UIViewController {
 	private enum Konstantoj {
-		static let identigilo = "mallongigoIdentigilo"
+		static let margheno: CGFloat = 8.0
+		
+		static let chelIdentigilo = "mallongigoIdentigilo"
 	}
 	
 	typealias Ero = (mallongigo: String, signifo: String)
@@ -23,7 +25,8 @@ final class MallongigoListoViewController: UIViewController {
 		let tabelo = UITableView()
 		tabelo.delegate = self
 		tabelo.dataSource = self
-		tabelo.register(MallongigoChelo.self, forCellReuseIdentifier: Konstantoj.identigilo)
+		
+		tabelo.register(MallongigoChelo.self, forCellReuseIdentifier: Konstantoj.chelIdentigilo)
 		return tabelo
 	}()
 	
@@ -98,7 +101,7 @@ extension MallongigoListoViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let ero = videblajEroj[indexPath.row]
-		guard let chelo = tableView.dequeueReusableCell(withIdentifier: Konstantoj.identigilo, for: indexPath) as? MallongigoChelo else {
+		guard let chelo = tableView.dequeueReusableCell(withIdentifier: Konstantoj.chelIdentigilo, for: indexPath) as? MallongigoChelo else {
 			fatalError("Ricevis malĝustan ĉelspecon")
 		}
 		
@@ -108,14 +111,18 @@ extension MallongigoListoViewController: UITableViewDataSource {
 }
 
 final class MallongigoChelo: UITableViewCell {
+	private enum Konstantoj {
+		static let margheno: CGFloat = 8.0
+	}
+	
 	private lazy var mallongigoEtikedo: UILabel = {
 		let etikedo = UILabel()
-		etikedo.font = .systemFont(ofSize: 20, weight: .bold)
+		etikedo.font = .systemFont(ofSize: 20, weight: .bold) // TODO: Tiparo
 		return etikedo
 	}()
 
 	private lazy var signifoEtikedo: UILabel = {
-		let etikedo = UILabel()
+		let etikedo = UILabel() // TODO: Tiparo
 		return etikedo
 	}()
 	
@@ -124,12 +131,12 @@ final class MallongigoChelo: UITableViewCell {
 		
 		addSubview(mallongigoEtikedo)
 		mallongigoEtikedo.snp.makeConstraints { make in
-			make.left.top.bottom.equalToSuperview()
+			make.left.top.bottom.equalToSuperview().inset(Konstantoj.margheno)
 		}
 		
 		addSubview(signifoEtikedo)
 		signifoEtikedo.snp.makeConstraints { make in
-			make.top.right.bottom.equalToSuperview()
+			make.right.top.bottom.equalToSuperview().inset(Konstantoj.margheno)
 			make.left.equalTo(mallongigoEtikedo.snp.right)
 		}
 	}
