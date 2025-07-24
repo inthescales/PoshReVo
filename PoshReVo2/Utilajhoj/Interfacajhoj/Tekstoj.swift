@@ -1,13 +1,10 @@
 enum Tekstoj {
-	// MARK: - Ĉefmenuo
+	// MARK: - Flankmenuo
 	
 	static let serchi = "Serĉi"
 	static let esplori = "Esplori"
 	static let konservitaj = "Konservitaj"
 	static let historio = "Historio"
-	
-	// MARK: - Flankmenuo
-	
 	static let agordoj = "Agordoj"
 	static let mallongigoj = "Mallongigoj"
 	static let priPoshReVo = "Pri PoŝReVo"
@@ -25,6 +22,11 @@ enum Tekstoj {
 	static let neniujTradukoj = "Neniuj tradukoj en viaj lingvoj"
 	static let elekti = "elekti"
 	static let saltiAl = "Salti al:"
+	
+	// MARK: - Uzantaj Vortlistoj
+	
+	static let historioNulTeksto = "Legitaj artikoloj aperos ĉi tie"
+	static let konservitajNulTeksto = "Artikoloj markitaj per ★ aperos ĉi tie"
 	
 	// MARK: - Esplorado
 	

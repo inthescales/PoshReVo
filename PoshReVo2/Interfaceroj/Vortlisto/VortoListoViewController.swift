@@ -21,6 +21,10 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		return tabelo
 	}()
 	
+	lazy var nulStatoView: VortListoNulStatoView = {
+		return VortListoNulStatoView(teksto: nulTeksto ?? "")
+	}()
+	
 	// MARK: - Stato
 	
 	private var listeroj: [L] = []
@@ -28,6 +32,8 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	// MARK: - Agordoj
 	
 	private let titolo: String?
+	
+	private let nulTeksto: String?
 	
 	private let elektis: (L) -> ()
 	
@@ -37,10 +43,12 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	
 	init(
 		titolo: String? = nil,
+		nulTeksto: String? = nil,
 		elektis: @escaping (L) -> (),
 		alvenasFinon: (() -> ())? = nil
 	) {
 		self.titolo = titolo
+		self.nulTeksto = nulTeksto
 		self.elektis = elektis
 		self.alvenasFinon = alvenasFinon
 		super.init(nibName: nil, bundle: nil)
@@ -56,11 +64,14 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		}
 		
 		view.addEdgeMatchedSubview(tabelo)
+		view.addEdgeMatchedSubview(nulStatoView)
 	}
 	
 	func montri(listerojn listeroj: [L]) {
 		self.listeroj = listeroj
 		tabelo.reloadData()
+		
+		nulStatoView.isHidden = (listeroj.count > 0)
 	}
 	
 	// MARK: - UITableViewDelegate

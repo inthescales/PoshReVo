@@ -17,6 +17,7 @@
 		00107E2D2E304C0A0010CECD /* AgoHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E2C2E304C070010CECD /* AgoHelpiloj.swift */; };
 		00107E352E3287580010CECD /* PaghingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E342E3287540010CECD /* PaghingoViewController.swift */; };
 		00107E372E328C3D0010CECD /* AgtabuloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E362E328C390010CECD /* AgtabuloView.swift */; };
+		00107E3E2E32CC770010CECD /* VortListoNulStatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */; };
 		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
 		00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B082DC17EB600526F82 /* SerchoViewController.swift */; };
 		00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */; };
@@ -86,6 +87,7 @@
 		00107E2C2E304C070010CECD /* AgoHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoHelpiloj.swift; sourceTree = "<group>"; };
 		00107E342E3287540010CECD /* PaghingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaghingoViewController.swift; sourceTree = "<group>"; };
 		00107E362E328C390010CECD /* AgtabuloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgtabuloView.swift; sourceTree = "<group>"; };
+		00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortListoNulStatoView.swift; sourceTree = "<group>"; };
 		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
 		00B27B082DC17EB600526F82 /* SerchoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchoViewController.swift; sourceTree = "<group>"; };
 		00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortoListoViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		00B27B452DCE633100526F82 /* Vortlisto */ = {
 			isa = PBXGroup;
 			children = (
+				00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */,
 				00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */,
 				00B27B462DCE636400526F82 /* Vortlistero.swift */,
 			);
@@ -526,6 +529,7 @@
 				00B27B5C2DF0A77500526F82 /* MallongigoListo.swift in Sources */,
 				00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenilo.swift in Sources */,
 				00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */,
+				00107E3E2E32CC770010CECD /* VortListoNulStatoView.swift in Sources */,
 				000DA6F92D906C6E0026CBA0 /* InterfacStilo.swift in Sources */,
 				00B27B522DEA3ED300526F82 /* ShovMenuoViewController.swift in Sources */,
 				000DA6FB2D90898C0026CBA0 /* SerchiloView.swift in Sources */,

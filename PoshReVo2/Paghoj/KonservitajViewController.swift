@@ -15,7 +15,10 @@ final class KonservitajViewController: UIViewController {
 	}()
 	
 	private lazy var tabelo: VortoListoViewController<Uzantlistero> = {
-		let tabelo = VortoListoViewController(elektis: elektis)
+		let tabelo = VortoListoViewController(
+			nulTeksto: Tekstoj.konservitajNulTeksto,
+			elektis: elektis
+		)
 		return tabelo
 	}()
 	

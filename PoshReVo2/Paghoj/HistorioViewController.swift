@@ -15,7 +15,10 @@ final class HistorioViewController: UIViewController {
 	}()
 	
 	private lazy var tabelo: VortoListoViewController<Uzantlistero> = {
-		let tabelo = VortoListoViewController(elektis: elektis)
+		let tabelo = VortoListoViewController(
+			nulTeksto: Tekstoj.historioNulTeksto,
+			elektis: elektis
+		)
 		return tabelo
 	}()
 	
