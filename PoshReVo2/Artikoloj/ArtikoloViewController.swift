@@ -13,8 +13,6 @@ final class ArtikoloViewController: UIViewController {
 		static let tradukaroIdentigilo = "tradukaIdentigilo"
 		
 		static let margheno: CGFloat = 8
-		
-		static let titolaInterkovrajho: CGFloat = 16.0
 	}
 	
 	// MARK: Interfaceroj
@@ -38,7 +36,7 @@ final class ArtikoloViewController: UIViewController {
 		tabelo.estimatedRowHeight = 100
 		tabelo.separatorStyle = .none
 		tabelo.contentInset = UIEdgeInsets(
-			top: Konstantoj.titolaInterkovrajho,
+			top: Konstantoj.margheno,
 			left: 0,
 			bottom: 0,
 			right: 0
@@ -66,6 +64,20 @@ final class ArtikoloViewController: UIViewController {
 		)
 		
 		return tabelo
+	}()
+	
+	private lazy var agtabulo: AgtabuloView = {
+		AgtabuloView(
+			konservis: konservis,
+			salti: { [weak self] in self?.premisSalti()
+			}
+		)
+	}()
+	
+	private lazy var subagtabulo: UIView = {
+		let view = UIView()
+		view.backgroundColor = stilo.navigaciaFono
+		return view
 	}()
 	
 	// MARK: Stato
@@ -147,7 +159,23 @@ final class ArtikoloViewController: UIViewController {
 		navigationItem.rightBarButtonItem = lupeoButono
 		view.backgroundColor = stilo.dokumentaFono
 		
-		view.addEdgeMatchedSubview(tabelo)
+		view.addSubview(tabelo)
+		tabelo.snp.makeConstraints { make in
+			make.top.left.right.equalToSuperview()
+		}
+		
+		view.addSubview(agtabulo)
+		agtabulo.snp.makeConstraints { make in
+			make.top.equalTo(tabelo.snp.bottom)
+			make.left.right.equalToSuperview()
+			make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin)
+		}
+		
+		view.addSubview(subagtabulo)
+		subagtabulo.snp.makeConstraints { make in
+			make.left.right.bottom.equalToSuperview()
+			make.top.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin)
+		}
 		
 		let indico = artikolo.ofc.flatMap { TekstHelpiloj.indico(por: $0) } ?? ""
 		title = artikolo.titolo + indico

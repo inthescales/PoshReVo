@@ -16,6 +16,7 @@
 		000DA6FD2D908F680026CBA0 /* ChefaNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FC2D908F680026CBA0 /* ChefaNavigationController.swift */; };
 		00107E2D2E304C0A0010CECD /* AgoHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E2C2E304C070010CECD /* AgoHelpiloj.swift */; };
 		00107E352E3287580010CECD /* PaghingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E342E3287540010CECD /* PaghingoViewController.swift */; };
+		00107E372E328C3D0010CECD /* AgtabuloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E362E328C390010CECD /* AgtabuloView.swift */; };
 		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
 		00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B082DC17EB600526F82 /* SerchoViewController.swift */; };
 		00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */; };
@@ -31,7 +32,6 @@
 		00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B252DC6B73F00526F82 /* Kunordigilo.swift */; };
 		00B27B282DC6B77A00526F82 /* UzantDatumaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */; };
 		00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */; };
-		00B27B2D2DC8165A00526F82 /* ArtikolTitoloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */; };
 		00B27B332DC8212C00526F82 /* TekstAtributoHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */; };
 		00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3C2DCC040800526F82 /* Avizoj.swift */; };
 		00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */; };
@@ -86,6 +86,7 @@
 		000DA6FC2D908F680026CBA0 /* ChefaNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefaNavigationController.swift; sourceTree = "<group>"; };
 		00107E2C2E304C070010CECD /* AgoHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoHelpiloj.swift; sourceTree = "<group>"; };
 		00107E342E3287540010CECD /* PaghingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaghingoViewController.swift; sourceTree = "<group>"; };
+		00107E362E328C390010CECD /* AgtabuloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgtabuloView.swift; sourceTree = "<group>"; };
 		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
 		00B27B082DC17EB600526F82 /* SerchoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchoViewController.swift; sourceTree = "<group>"; };
 		00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortoListoViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		00B27B252DC6B73F00526F82 /* Kunordigilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kunordigilo.swift; sourceTree = "<group>"; };
 		00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumaro.swift; sourceTree = "<group>"; };
 		00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikoloViewController.swift; sourceTree = "<group>"; };
-		00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikolTitoloView.swift; sourceTree = "<group>"; };
 		00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstAtributoHelpiloj.swift; sourceTree = "<group>"; };
 		00B27B3C2DCC040800526F82 /* Avizoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avizoj.swift; sourceTree = "<group>"; };
 		00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriaViewController.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			children = (
 				00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */,
 				00B27B762DF74E4F00526F82 /* Cheloj */,
-				00B27B2C2DC8165A00526F82 /* ArtikolTitoloView.swift */,
+				00107E362E328C390010CECD /* AgtabuloView.swift */,
 			);
 			path = Artikoloj;
 			sourceTree = "<group>";
@@ -523,7 +523,7 @@
 				00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */,
 				00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */,
 				00B27B692DF209EC00526F82 /* Listero.swift in Sources */,
-				00B27B2D2DC8165A00526F82 /* ArtikolTitoloView.swift in Sources */,
+				00107E372E328C3D0010CECD /* AgtabuloView.swift in Sources */,
 				00B27B632DF206D600526F82 /* V1UzantDatumoTenilo.swift in Sources */,
 				00B27B7A2DF7512F00526F82 /* DerivajhTitoloChelo.swift in Sources */,
 				00B27B172DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift in Sources */,
