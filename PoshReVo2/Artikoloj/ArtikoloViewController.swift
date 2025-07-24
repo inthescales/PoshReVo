@@ -214,7 +214,7 @@ final class ArtikoloViewController: UIViewController {
 			return
 		}
 		
-		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo)
+		kunordigilo.reveniHejmen(en: navigaciilo)
 	}
 	
 	@objc private func premisHejmon() {

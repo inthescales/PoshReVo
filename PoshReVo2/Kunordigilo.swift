@@ -35,6 +35,12 @@ final class Kunordigilo {
 		)
 	}
 	
+	// MARK: - Navigaciado
+	
+	func reveniHejmen(en navigaciilo: UINavigationController) {
+		navigaciilo.popToRootViewController(animated: true)
+	}
+	
 	// MARK: Paĝo-kreado
 	
 	func prezentiAgordMenuon(
