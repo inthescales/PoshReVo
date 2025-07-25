@@ -182,25 +182,6 @@ final class Kunordigilo {
 		)
 	}
 	
-	// MARK: Helpiloj
-	
-	/// Forigi kromajn serĉpaĝojn en la staplo da view controller-oj.
-	/// Serĉilo restos se ĝi 1) estas la originala 'radika' serĉilo, aŭ 2) ĝi estas la plej lasta, starante antaŭ nune montrata artikolo
-	private func purigi(prezentilon prezentilo: UINavigationController) {
-		guard prezentilo.viewControllers.count >= 2 else {
-			return
-		}
-		
-		let antaulasta = prezentilo.viewControllers[prezentilo.viewControllers.count - 2]
-		prezentilo.viewControllers = prezentilo.viewControllers.filter { vc in
-			if let serchilo = vc as? SerchoViewController {
-				return serchilo.radika || serchilo == antaulasta
-			}
-			
-			return true
-		}
-	}
-	
 	// MARK: - Uzantaj vortlistoj
 	
 	func prezentiHistorion(prezentilo: UINavigationController) {
@@ -362,7 +343,6 @@ final class Kunordigilo {
 			marko: marko,
 			aperis: { [weak self] in
 				self?.datumRegilo.markiVizititan(artikolon: artikolo)
-				self?.purigi(prezentilon: prezentilo)
 			},
 			konservis: { [weak self] konservita in
 				guard let self else { return }

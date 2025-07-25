@@ -148,7 +148,7 @@ final class SerchoViewController: UIViewController {
 		
 		if listero.destinoj.count == 1,
 		   let destino = listero.destinoj.first {
-			kunordigilo.prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
+			 kunordigilo.prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
 		} else if listero.destinoj.count > 1 {
 			kunordigilo.prezentiDisigiloPaghon(
 				por: listero.destinoj,
