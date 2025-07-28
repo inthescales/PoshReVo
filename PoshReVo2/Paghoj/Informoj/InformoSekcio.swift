@@ -11,12 +11,14 @@ final class InformoSekcio: UIView {
 	
 	private lazy var titolEtikedo: UILabel = {
 		let etikedo = UILabel()
+		etikedo.font = .boldSystemFont(ofSize: 20).dinamika() // TODO: Tiparo
 		etikedo.numberOfLines = 0
 		return etikedo
 	}()
 	
 	private lazy var tekstejo: TTTAttributedLabel = {
 		let etikedo = TTTAttributedLabel(frame: .zero)
+		etikedo.font = .systemFont(ofSize: 18).dinamika() // TODO: Tiparo
 		etikedo.numberOfLines = 0
 		return etikedo
 	}()
@@ -31,7 +33,6 @@ final class InformoSekcio: UIView {
 		
 		if let titolo {
 			titolEtikedo.text = titolo
-			titolEtikedo.font = .systemFont(ofSize: 20, weight: .bold)
 			titolEtikedo.textColor = stilo.dokumentaTeksto
 			
 			addSubview(titolEtikedo)
