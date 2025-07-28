@@ -14,8 +14,11 @@ final class ShovMenuoViewController: UIViewController {
 	}
 	
 	private enum Konstantoj {
-		/// Minimuma larĝo de la menuejo
-		static let minimumaLarghoPorcio: CGFloat = 0.5
+		/// Minimuma larĝo de la menuejo sur iPhone
+		static let minimumaLarghoiPhone: CGFloat = 200
+		
+		/// Minimuma larĝo de la menuejo sur iPad
+		static let minimumaLarghoiPad: CGFloat = 250
 		
 		/// Maksimuma larĝo de la menuejo
 		static let maksimumaLarghoPorcio: CGFloat = 0.66
@@ -111,6 +114,15 @@ final class ShovMenuoViewController: UIViewController {
 	
 	lazy var havasBildojn = eroj.contains(where: { $0.bildo != nil })
 	
+	lazy var minimumaLargho: CGFloat = {
+		switch aparatInformo.aparatKlaso {
+		case .iFono:
+			Konstantoj.minimumaLarghoiPhone
+		case .iPado:
+			Konstantoj.minimumaLarghoiPad
+		}
+	}()
+	
 	// MARK: - Agordoj
 	
 	let eroj: [Menuero]
@@ -121,18 +133,22 @@ final class ShovMenuoViewController: UIViewController {
 	
 	let foriri: () -> Void
 	
+	let aparatInformo: AparatInformo
+	
 	// MARK: -
 	
 	init(
 		eroj: [Menuero],
 		agordoj: Agordoj,
 		navigaciilaAlto: CGFloat,
-		forigi foriri: @escaping () -> Void
+		forigi foriri: @escaping () -> Void,
+		aparatInformo: AparatInformo = NunaAparato()
 	) {
 		self.eroj = eroj
 		self.agordoj = agordoj
 		self.navigaciilaAlto = navigaciilaAlto
 		self.foriri = foriri
+		self.aparatInformo = aparatInformo
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -149,7 +165,7 @@ final class ShovMenuoViewController: UIViewController {
 		menuejo.snp.makeConstraints { make in
 			make.height.top.bottom.equalToSuperview()
 			make.width.lessThanOrEqualToSuperview().multipliedBy(Konstantoj.maksimumaLarghoPorcio)
-			make.width.greaterThanOrEqualToSuperview().multipliedBy(Konstantoj.minimumaLarghoPorcio)
+			make.width.greaterThanOrEqualTo(minimumaLargho)
 			dekstraLigo = make.left.equalTo(view.snp.right).constraint
 		}
 		
