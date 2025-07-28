@@ -34,6 +34,7 @@ final class ShovMenuoViewController: UIViewController {
 	}
 	
 	struct Menuero {
+		let bildo: UIImage?
 		let teksto: String
 		let ago: () -> ()
 	}
@@ -97,14 +98,18 @@ final class ShovMenuoViewController: UIViewController {
 		let staplo = UIStackView()
 		staplo.backgroundColor = agordoj.menuaKoloro
 		staplo.axis = .vertical
-		for (indekso, ero) in self.eroj.enumerated() {
-			let butono = fariButonon(el: ero, indekso: indekso)
-			staplo.addArrangedSubview(butono)
+		staplo.alignment = .fill
+		for ero in self.eroj {
+			staplo.addArrangedSubview(fariEroVidon(el: ero))
 		}
 		return staplo
 	}()
 	
 	private var dekstraLigo: Constraint?
+	
+	// MARK: - Kalkulita Stato
+	
+	lazy var havasBildojn = eroj.contains(where: { $0.bildo != nil })
 	
 	// MARK: - Agordoj
 	
@@ -182,39 +187,14 @@ final class ShovMenuoViewController: UIViewController {
 	
 	// MARK: - InterfacHelpiloj
 	
-	private func fariButonon(el ero: Menuero, indekso: Int) -> UIView {
-		let butono = UIButton()
-		butono.setTitle(ero.teksto, for: .normal)
-		butono.setTitleColor(agordoj.tekstKoloro, for: .normal)
-		butono.setTitleColor(agordoj.menuaKoloro, for: .highlighted)
-		butono.backgroundColor = agordoj.menuaKoloro
-		butono.titleLabel?.font = .systemFont(ofSize: 18) // TODO: tiparo
-		butono.contentEdgeInsets = UIEdgeInsets(
-			top: Konstantoj.vertikalaMargheno,
-			left: Konstantoj.flankaMargheno,
-			bottom: Konstantoj.vertikalaMargheno,
-			right: Konstantoj.flankaMargheno
+	private func fariEroVidon(el ero: Menuero) -> ShovMenueroView {
+		ShovMenueroView(
+			bildo: ero.bildo,
+			teksto: ero.teksto,
+			elektis: { [weak self] in self?.elektis(eron: ero) },
+			lasiBildoSpacon: havasBildojn,
+			menuAgordoj: agordoj
 		)
-		butono.tag = indekso
-		butono.addTarget(self, action: #selector(ekpremis(butonon:)), for: .touchDown)
-		butono.addTarget(self, action: #selector(finpremis(butonon:)), for: .touchUpInside)
-		butono.addTarget(self, action: #selector(ekstereFinpremis(butonon:)), for: .touchUpOutside)
-		butono.titleLabel?.lineBreakMode = .byTruncatingTail
-		
-		let dividilo = UIView()
-		dividilo.backgroundColor = agordoj.dividiloKoloro
-		dividilo.isUserInteractionEnabled = false
-		
-		let ujo = UIView()
-		ujo.addEdgeMatchedSubview(butono)
-		ujo.addSubview(dividilo)
-		dividilo.snp.makeConstraints { make in
-			make.right.bottom.equalToSuperview()
-			make.left.equalToSuperview().offset(16)
-			make.height.equalTo(1)
-		}
-
-		return ujo
 	}
 	
 	// MARK: - Agoj
@@ -223,22 +203,9 @@ final class ShovMenuoViewController: UIViewController {
 		malaperi()
 	}
 	
-	@objc private func ekpremis(butonon butono: UIButton) {
-		butono.backgroundColor = agordoj.tekstKoloro
-	}
-	
-	@objc private func finpremis(butonon butono: UIButton) {
-		butono.backgroundColor = agordoj.menuaKoloro
-		
-		if butono.tag < eroj.count {
-			eroj[butono.tag].ago()
-		}
-		
+	private func elektis(eron ero: Menuero) {
+		ero.ago()
 		malaperi()
-	}
-	
-	@objc private func ekstereFinpremis(butonon butono: UIButton) {
-		butono.backgroundColor = agordoj.menuaKoloro
 	}
 	
 	@objc private func shovis(_ rekonilo: UIPanGestureRecognizer) {
@@ -247,6 +214,7 @@ final class ShovMenuoViewController: UIViewController {
 		switch rekonilo.state {
 		case .began, .changed:
 			dekstraLigo?.update(offset: -menuejo.bounds.width + movo.x)
+			// TODO: Korekti eraron
 		case .ended, .cancelled:
 			if menuejo.frame.minX < view.bounds.width - (menuejo.bounds.width / 2) {
 				malfermi()

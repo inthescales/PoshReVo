@@ -46,26 +46,32 @@ final class PaghingoViewController: UIViewController {
 		let menuo = ShovMenuoViewController(
 			eroj: [
 				ShovMenuoViewController.Menuero(
+					bildo: UIImage(named: "libro"),
 					teksto: Tekstoj.historio,
 					ago: { [weak self] in self?.premisHistorio() }
 				),
 				ShovMenuoViewController.Menuero(
+					bildo: UIImage(named: "plenaStelo"),
 					teksto: Tekstoj.konservitaj,
 					ago: { [weak self] in self?.premisKonservitaj() }
 				),
 				ShovMenuoViewController.Menuero(
+					bildo: nil,
 					teksto: Tekstoj.esplori,
 					ago: { [weak self] in self?.premisEsplori() }
 				),
 				ShovMenuoViewController.Menuero(
+					bildo: nil,
 					teksto: Tekstoj.agordoj,
 					ago: { [weak self] in self?.premisAgordoj() }
 				),
 				ShovMenuoViewController.Menuero(
+					bildo: nil,
 					teksto: Tekstoj.mallongigoj,
 					ago: { [weak self] in self?.premisMallongigoj() }
 				),
 				ShovMenuoViewController.Menuero(
+					bildo: nil,
 					teksto: Tekstoj.priPoshReVo,
 					ago: { [weak self] in self?.premisInformoj() }
 				)

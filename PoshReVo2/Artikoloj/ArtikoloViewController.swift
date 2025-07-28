@@ -234,9 +234,9 @@ final class ArtikoloViewController: UIViewController {
 		let eroj: [ShovMenuoViewController.Menuero] = artikolo.blokoj.compactMap {
 			switch $0 {
 			case .dividila:
-				return ShovMenuoViewController.Menuero(teksto: "---") {}
+				return ShovMenuoViewController.Menuero(bildo: nil, teksto: "---") {}
 			case .derivajhTitola(let teksto, _, let marko):
-				return ShovMenuoViewController.Menuero(teksto: teksto) { [weak self] in
+				return ShovMenuoViewController.Menuero(bildo: nil, teksto: teksto) { [weak self] in
 					guard let self,
 						  let marko else {
 						return
