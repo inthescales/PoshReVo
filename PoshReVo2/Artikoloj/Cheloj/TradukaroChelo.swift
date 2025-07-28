@@ -133,9 +133,10 @@ final class TradukaroChelo: UITableViewCell {
 		var lingvoEtikedoj: [UILabel] = []
 		
 		for (i, traduko) in tradukoj.enumerated() {
-			let lingvoEtikedo = UILabel()
-			lingvoEtikedo.text = traduko.lingvo.adverbo + ":"
-			lingvoEtikedo.font = .systemFont(ofSize: 18.0).dinamika() // TODO: Tiparo
+			// Noto: Mi uzas TTTAttributedLabel-on ĉi tie ĉar, je grandaj tekstgrandoj, la altoj
+			// de UILabel kaj TTTAttributedLabel iomete malsamas.
+			let lingvoEtikedo = TTTAttributedLabel(frame: .zero)
+			TekstAtributoHelpiloj.provizi(etikedon: lingvoEtikedo, per: traduko.lingvo.adverbo + ":", tekstGrando: 18.0) // TODO: Tiparo
 			lingvoEtikedo.textColor = stilo.dokumentLigilo
 			lingvoEtikedo.numberOfLines = 1
 			lingvoEtikedo.translatesAutoresizingMaskIntoConstraints = false
