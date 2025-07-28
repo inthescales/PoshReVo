@@ -369,8 +369,8 @@
 		00B27B762DF74E4F00526F82 /* Cheloj */ = {
 			isa = PBXGroup;
 			children = (
-				00B27B792DF7512F00526F82 /* DerivajhTitoloChelo.swift */,
 				00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */,
+				00B27B792DF7512F00526F82 /* DerivajhTitoloChelo.swift */,
 				00B27B772DF74E5900526F82 /* TekstoChelo.swift */,
 				00B27B7B2DF751FE00526F82 /* TradukaroChelo.swift */,
 			);

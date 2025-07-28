@@ -5,7 +5,7 @@ import TTTAttributedLabel
 /// Sekcio ene de infomopaĝo, enhavanta du etikedojn: titolo kaj ĉefteksto
 final class InformoSekcio: UIView {
 	private enum Konstantoj {
-		/// Spaco inter titolo kaj ĉefteksto en ĉiuj sekcio
+		/// Spaco inter titolo kaj ĉefteksto en ĉiu sekcio
 		static let intertekstaSpaco: CGFloat = 4.0
 	}
 	
@@ -59,7 +59,7 @@ final class InformoSekcio: UIView {
 		]
 		
 		tekstejo.delegate = delegate
-		TekstAtributoHelpiloj.provizi(etikedon: tekstejo, per: teksto)
+		TekstAtributoHelpiloj.provizi(etikedon: tekstejo, per: teksto, tekstGrando: 18) // TODO: Tiparo
 	}
 	
 	required init?(coder: NSCoder) {

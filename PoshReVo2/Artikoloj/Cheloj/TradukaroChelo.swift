@@ -91,17 +91,18 @@ final class TradukaroChelo: UITableViewCell {
 		etikedo.text = teksto
 		switch titolStilo {
 		case .kursiva:
-			etikedo.font = .italicSystemFont(ofSize: Konstantoj.tekstGrandeco) // TODO: tiparo
+			etikedo.font = .italicSystemFont(ofSize: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
 		case .grasKursiva:
-			let priskribilo = UIFont.systemFont(ofSize: Konstantoj.tekstGrandeco)
+			let priskribilo = UIFont.systemFont(ofSize: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
 				.fontDescriptor
 				.withSymbolicTraits([.traitItalic, .traitBold])
-			etikedo.font = UIFont(descriptor: priskribilo!, size: Konstantoj.tekstGrandeco)
+			etikedo.font = UIFont(descriptor: priskribilo!, size: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
 		}
 		etikedo.setContentHuggingPriority(.defaultLow, for: .horizontal)
 		
 		let butono = UIButton()
 		butono.setTitle(Tekstoj.elekti, for: .normal)
+		butono.metiDinamikanTitolon(Tekstoj.elekti, tiparo: .systemFont(ofSize: Konstantoj.tekstGrandeco))
 		butono.setTitleColor(stilo.navigaciaFono, for: .normal) // TODO: Nova koloro
 		butono.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 		butono.addTarget(self, action: #selector(premisElekti), for: .touchUpInside)
@@ -134,13 +135,14 @@ final class TradukaroChelo: UITableViewCell {
 		for (i, traduko) in tradukoj.enumerated() {
 			let lingvoEtikedo = UILabel()
 			lingvoEtikedo.text = traduko.lingvo.adverbo + ":"
+			lingvoEtikedo.font = .systemFont(ofSize: 18.0).dinamika() // TODO: Tiparo
 			lingvoEtikedo.textColor = stilo.dokumentLigilo
 			lingvoEtikedo.numberOfLines = 1
 			lingvoEtikedo.translatesAutoresizingMaskIntoConstraints = false
 			lingvoEtikedo.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
 			
 			let difinoEtikedo = TTTAttributedLabel(frame: .zero)
-			TekstAtributoHelpiloj.provizi(etikedon: difinoEtikedo, per: traduko.teksto)
+			TekstAtributoHelpiloj.provizi(etikedon: difinoEtikedo, per: traduko.teksto, tekstGrando: 18.0) // TODO: Tiparo
 			difinoEtikedo.textColor = stilo.dokumentaTeksto
 			difinoEtikedo.numberOfLines = 0
 			difinoEtikedo.translatesAutoresizingMaskIntoConstraints = false

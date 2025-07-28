@@ -5,7 +5,7 @@ import TTTAttributedLabel
 final class TekstoChelo: UITableViewCell {
 	private lazy var etikedo: TTTAttributedLabel = {
 		let etikedo = TTTAttributedLabel(frame: .zero)
-		etikedo.font = UIFont.preferredFont(forTextStyle: .body) // TODO: Tekstgrandeco
+		etikedo.font = UIFont.preferredFont(forTextStyle: .body).dinamika() // TODO: Tiparo
 		etikedo.numberOfLines = 0
 		return etikedo
 	}()
@@ -41,7 +41,7 @@ final class TekstoChelo: UITableViewCell {
 			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 		]
 		
-		TekstAtributoHelpiloj.provizi(etikedon: etikedo, per: teksto)
+		TekstAtributoHelpiloj.provizi(etikedon: etikedo, per: teksto, tekstGrando: 18.0) // TODO: Tiparo
 		
 		etikedo.snp.remakeConstraints { make in
 			make.top.bottom.equalToSuperview()

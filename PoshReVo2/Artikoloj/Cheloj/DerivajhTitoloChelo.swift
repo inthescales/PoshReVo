@@ -7,8 +7,8 @@ final class DerivajhTitoloChelo: UITableViewCell {
 	
 	private lazy var etikedo: UILabel = {
 		let etikedo = UILabel()
-		etikedo.font = .systemFont(ofSize: 24, weight: .bold) // TODO: Tiparo
-		etikedo.numberOfLines = 1
+		etikedo.font = .systemFont(ofSize: 26, weight: .bold).dinamika() // TODO: Tiparo
+		etikedo.numberOfLines = 0
 		return etikedo
 	}()
 	
@@ -42,7 +42,7 @@ final class DerivajhTitoloChelo: UITableViewCell {
 		etikedo.textColor = stilo.dokumentaTeksto
 		etikedo.snp.remakeConstraints { make in
 			make.top.equalToSuperview()
-			make.left.equalToSuperview().offset(margheno)
+			make.left.right.equalToSuperview().offset(margheno)
 		}
 		
 		dividilo.backgroundColor = stilo.dokumentaDividilo
