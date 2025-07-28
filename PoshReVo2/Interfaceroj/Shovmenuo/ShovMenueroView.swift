@@ -25,7 +25,8 @@ final class ShovMenueroView: UIControl {
 		let etikedo = UILabel()
 		etikedo.text = teksto
 		etikedo.textColor = menuAgordoj.tekstKoloro
-		etikedo.font = .systemFont(ofSize: 18) // TODO: tiparo
+		etikedo.font = .systemFont(ofSize: 18).dinamika() // TODO: tiparo
+		etikedo.numberOfLines = 0
 		return etikedo
 	}()
 	
@@ -82,7 +83,8 @@ final class ShovMenueroView: UIControl {
 			addSubview(bildejo)
 			bildejo.snp.makeConstraints { make in
 				make.left.equalToSuperview().inset(Konstantoj.flankaMargheno)
-				make.top.bottom.equalToSuperview().inset(Konstantoj.vertikalaMargheno)
+				make.centerY.equalToSuperview()
+				make.height.lessThanOrEqualToSuperview().offset(-Konstantoj.vertikalaMargheno * 2)
 				make.width.height.equalTo(Konstantoj.bildoGrando)
 			}
 		}
