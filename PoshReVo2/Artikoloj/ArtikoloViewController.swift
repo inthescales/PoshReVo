@@ -38,7 +38,7 @@ final class ArtikoloViewController: UIViewController {
 		tabelo.contentInset = UIEdgeInsets(
 			top: Konstantoj.margheno,
 			left: 0,
-			bottom: 0,
+			bottom: Konstantoj.margheno * 2,
 			right: 0
 		)
 		
@@ -320,7 +320,11 @@ extension ArtikoloViewController: UITableViewDataSource {
 		
 		switch bloko {
 		case .dividila(teksto: let teksto):
-			(chelo as? SubartikoloTitoloChelo)?.agordi(teksto: teksto, stilo: stilo)
+			(chelo as? SubartikoloTitoloChelo)?.agordi(
+				teksto: teksto,
+				margheno: Konstantoj.margheno,
+				stilo: stilo
+			)
 		case .derivajhTitola(teksto: let teksto, _, _):
 			(chelo as? DerivajhTitoloChelo)?.agordi(
 				teksto: teksto, 

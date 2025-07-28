@@ -2,8 +2,8 @@ import UIKit
 
 final class SubartikoloTitoloChelo: UITableViewCell {
 	private enum Konstantoj {
-		static let linioDikeco: CGFloat = 1.0
-		static let linioFlankoSpaco: CGFloat = 4.0
+		/// Diko de la divida streko
+		static let strekDiko: CGFloat = 1.0
 	}
 	
 	private lazy var etikedo: UILabel = {
@@ -16,7 +16,7 @@ final class SubartikoloTitoloChelo: UITableViewCell {
 	private lazy var linio: UIView = {
 		let linio = UIView()
 		linio.snp.makeConstraints { make in
-			make.height.equalTo(Konstantoj.linioDikeco)
+			make.height.equalTo(Konstantoj.strekDiko)
 		}
 		return linio
 	}()
@@ -27,16 +27,8 @@ final class SubartikoloTitoloChelo: UITableViewCell {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
 		contentView.addSubview(etikedo)
-		etikedo.snp.makeConstraints { make in
-			make.left.top.bottom.equalToSuperview()
-		}
-		
 		contentView.addSubview(linio)
-		linio.snp.makeConstraints { make in
-			make.centerY.equalToSuperview()
-			make.right.equalToSuperview().offset(-Konstantoj.linioFlankoSpaco)
-			make.left.equalTo(etikedo.snp.right).offset(Konstantoj.linioFlankoSpaco)
-		}
+
 	}
 	
 	required init?(coder: NSCoder) {
@@ -47,11 +39,23 @@ final class SubartikoloTitoloChelo: UITableViewCell {
 	
 	func agordi(
 		teksto: String,
+		margheno: CGFloat,
 		stilo: InterfacStilo
 	) {
 		etikedo.text = teksto
 		etikedo.textColor = stilo.dokumentaTeksto
 		
 		linio.backgroundColor = stilo.dokumentaTeksto
+		
+		etikedo.snp.makeConstraints { make in
+			make.left.top.bottom.equalToSuperview().inset(margheno)
+			// make.top.bottom.equalToSuperview()
+		}
+		
+		linio.snp.makeConstraints { make in
+			make.centerY.equalToSuperview()
+			make.right.equalToSuperview().inset(margheno)
+			make.left.equalTo(etikedo.snp.right).offset(margheno)
+		}
 	}
 }
