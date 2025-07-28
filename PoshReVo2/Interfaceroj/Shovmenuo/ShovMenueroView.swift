@@ -1,5 +1,6 @@
 import UIKit
 
+/// Premebla ero-video en shovmenuo.
 final class ShovMenueroView: UIControl {
 	private enum Konstantoj {
 		/// Marĝeno flanke de bildo kaj titolo
@@ -12,7 +13,7 @@ final class ShovMenueroView: UIControl {
 		static let bildoGrando: CGFloat = 24.0
 		
 		/// Spaco inter bildo kaj teksto
-		static let interspaco: CGFloat = 8.0
+		static let interspaco: CGFloat = 16.0
 		
 		/// Spaco inter maldekstra flanko de la patro kaj maldekstra pinto de la substreko
 		static let substrekSpaco: CGFloat = 16.0
