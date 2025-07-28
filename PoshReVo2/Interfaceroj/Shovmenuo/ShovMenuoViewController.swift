@@ -213,8 +213,7 @@ final class ShovMenuoViewController: UIViewController {
 		
 		switch rekonilo.state {
 		case .began, .changed:
-			dekstraLigo?.update(offset: -menuejo.bounds.width + movo.x)
-			// TODO: Korekti eraron
+			dekstraLigo?.update(offset: max(-menuejo.bounds.width, -menuejo.bounds.width + movo.x))
 		case .ended, .cancelled:
 			if menuejo.frame.minX < view.bounds.width - (menuejo.bounds.width / 2) {
 				malfermi()
