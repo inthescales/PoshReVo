@@ -7,9 +7,13 @@ import TTTAttributedLabel
 /// Artikolo-ĉelo montranta liston da tradukoj de unu vorto aŭ derivaĵo
 final class TradukaroChelo: UITableViewCell {
 	private enum Konstantoj {
+		/// Kroma spaco supre kaj malsupre de la tuta ĉelo
 		static let vertikalaMargheno = 12.0
 		
 		static let tekstGrandeco: CGFloat = 18.0
+		
+		/// Kroma spaco supre kal malsupre de traduk-etikedoj
+		static let linioBufro: CGFloat = 1.0
 	}
 	
 	private enum TitolStilo {
@@ -51,28 +55,30 @@ final class TradukaroChelo: UITableViewCell {
 		let neniujLingvoj = tradukLingvoj.isEmpty
 			|| tradukLingvoj.count == 1 && tradukLingvoj.first?.kodo == "eo"
 		
-		let dividilo = StrekoView(koloro: stilo.dokumentaDividilo)
-		contentView.addSubview(dividilo)
-		dividilo.snp.makeConstraints { make in
+		let supraDividilo = StrekoView(koloro: stilo.dokumentaDividilo)
+		contentView.addSubview(supraDividilo)
+		supraDividilo.snp.makeConstraints { make in
 			make.top.equalToSuperview().offset(Konstantoj.vertikalaMargheno)
 			make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			make.height.equalTo(1)
 		}
 		
+		let finaElemento: UIView
 		if neniujLingvoj || montrotaj.isEmpty {
 			let teksto = neniujLingvoj ? Tekstoj.neniujLingvoj : Tekstoj.neniujTradukoj
 			let avizo = fariAvizon(teksto: teksto, titolStilo: .kursiva, stilo: stilo)
 			contentView.addSubview(avizo)
 			avizo.snp.makeConstraints { make in
-				make.top.equalTo(dividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
-				make.bottom.equalToSuperview().offset(-Konstantoj.vertikalaMargheno)
+				make.top.equalTo(supraDividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
 				make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			}
+			
+			finaElemento = avizo
 		} else {
 			let avizo = fariAvizon(teksto: Tekstoj.enViajLingvoj, titolStilo: .grasKursiva, stilo: stilo)
 			contentView.addSubview(avizo)
 			avizo.snp.makeConstraints { make in
-				make.top.equalTo(dividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
+				make.top.equalTo(supraDividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
 				make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			}
 			
@@ -80,9 +86,19 @@ final class TradukaroChelo: UITableViewCell {
 			contentView.addSubview(staplo)
 			staplo.snp.makeConstraints { make in
 				make.top.equalTo(avizo.snp.bottom).offset(Konstantoj.vertikalaMargheno - Konstantoj.tekstGrandeco / 4)
-				make.bottom.equalToSuperview().offset(-Konstantoj.vertikalaMargheno)
 				make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			}
+			
+			finaElemento = staplo
+		}
+		
+		let malsupraDividilo = StrekoView(koloro: stilo.dokumentaDividilo)
+		contentView.addSubview(malsupraDividilo)
+		malsupraDividilo.snp.makeConstraints { make in
+			make.top.equalTo(finaElemento.snp.bottom).offset(Konstantoj.vertikalaMargheno)
+			make.left.right.equalToSuperview().inset(horizontalaMargheno)
+			make.height.equalTo(1)
+			make.bottom.equalToSuperview().inset(Konstantoj.vertikalaMargheno)
 		}
 	}
 		
@@ -136,9 +152,11 @@ final class TradukaroChelo: UITableViewCell {
 			// Noto: Mi uzas TTTAttributedLabel-on ĉi tie ĉar, je grandaj tekstgrandoj, la altoj
 			// de UILabel kaj TTTAttributedLabel iomete malsamas.
 			let lingvoEtikedo = TTTAttributedLabel(frame: .zero)
-			TekstAtributoHelpiloj.provizi(etikedon: lingvoEtikedo, per: traduko.lingvo.adverbo + ":", tekstGrando: 18.0) // TODO: Tiparo
+			//TekstAtributoHelpiloj.provizi(etikedon: lingvoEtikedo, per: traduko.lingvo.adverbo + ":", tekstGrando: 18.0) // TODO: Tiparo
+			lingvoEtikedo.font = .systemFont(ofSize: 18.0) // TODO: Tiparo
 			lingvoEtikedo.textColor = stilo.dokumentLigilo
 			lingvoEtikedo.numberOfLines = 1
+			lingvoEtikedo.text = traduko.lingvo.adverbo + ":" // Faru FINE (pro TTTAttributedLabel sensencaĵo)
 			lingvoEtikedo.translatesAutoresizingMaskIntoConstraints = false
 			lingvoEtikedo.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
 			
@@ -158,11 +176,13 @@ final class TradukaroChelo: UITableViewCell {
 			
 			lingvoEtikedo.snp.makeConstraints { make in
 				make.top.left.equalToSuperview()
-				make.bottom.lessThanOrEqualToSuperview()
+				make.bottom.lessThanOrEqualToSuperview().inset(Konstantoj.linioBufro)
 			}
 			
 			difinoEtikedo.snp.makeConstraints { make in
-				make.top.right.bottom.height.equalToSuperview()
+				make.right.equalToSuperview()
+				make.height.equalToSuperview().offset(-Konstantoj.linioBufro * 2)
+				make.top.bottom.equalToSuperview().inset(Konstantoj.linioBufro)
 				make.left.equalTo(lingvoEtikedo.snp.right).offset(12)
 			}
 			

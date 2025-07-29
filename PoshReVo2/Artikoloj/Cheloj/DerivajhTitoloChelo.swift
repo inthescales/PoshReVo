@@ -2,12 +2,14 @@ import UIKit
 
 final class DerivajhTitoloChelo: UITableViewCell {
 	private enum Konstantoj {
-		static let subaSpaco: CGFloat = 8.0
+		static let supraMargheno: CGFloat = 8.0
+		
+		static let malsupraMargheno: CGFloat = 16.0
 	}
 	
 	private lazy var etikedo: UILabel = {
 		let etikedo = UILabel()
-		etikedo.font = .systemFont(ofSize: 26, weight: .bold).dinamika() // TODO: Tiparo
+		etikedo.font = .systemFont(ofSize: 30, weight: .bold).dinamika() // TODO: Tiparo
 		etikedo.numberOfLines = 0
 		return etikedo
 	}()
@@ -41,7 +43,7 @@ final class DerivajhTitoloChelo: UITableViewCell {
 		etikedo.text = teksto
 		etikedo.textColor = stilo.dokumentaTeksto
 		etikedo.snp.remakeConstraints { make in
-			make.top.equalToSuperview()
+			make.top.equalToSuperview().inset(Konstantoj.supraMargheno)
 			make.left.right.equalToSuperview().offset(margheno)
 		}
 		
@@ -49,7 +51,7 @@ final class DerivajhTitoloChelo: UITableViewCell {
 		dividilo.snp.remakeConstraints { make in
 			make.top.equalTo(etikedo.snp.bottom)
 			make.left.right.equalToSuperview().inset(margheno).priority(.low)
-			make.bottom.equalToSuperview().inset(Konstantoj.subaSpaco)
+			make.bottom.equalToSuperview().inset(Konstantoj.malsupraMargheno)
 			make.height.equalTo(1)
 		}
 	}
