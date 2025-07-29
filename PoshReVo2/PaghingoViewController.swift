@@ -11,6 +11,8 @@ final class PaghingoViewController: UIViewController {
 			action: #selector(Self.premisTripunkton)
 		)
 		butono.tintColor = DinamikaStilo.navigaciaTeksto
+		butono.accessibilityLabel = AlirebloTekstoj.malfermiMenuon
+		
 		return butono
 	}()
 	
@@ -34,6 +36,7 @@ final class PaghingoViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		title = Tekstoj.poshaRetaVortaro
 		navigationItem.rightBarButtonItem = tripunktoButono
 		
 		addChild(chefpagho)

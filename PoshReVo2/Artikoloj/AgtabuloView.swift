@@ -32,6 +32,8 @@ final class AgtabuloView: UIView {
 		)
 		butono.tintColor = stilo.navigaciaTeksto
 		butono.addTarget(self, action: #selector(premisSalti), for: .touchUpInside)
+		butono.accessibilityLabel = AlirebloTekstoj.saltiAl
+		
 		return butono
 	}()
 	
@@ -49,6 +51,7 @@ final class AgtabuloView: UIView {
 	private let stilo: InterfacStilo
 	
 	init(
+		konservita: Bool,
 		konservis: @escaping (Bool) -> Void,
 		salti: @escaping () -> Void,
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
@@ -61,10 +64,18 @@ final class AgtabuloView: UIView {
 		
 		backgroundColor = stilo.navigaciaFono
 		starigiButonojn()
+		proviziKonservbutonon(konservita: konservita)
 	}
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) ne realas")
+	}
+	
+	// MARK: - Ĝisdatiĝado
+	
+	private func proviziKonservbutonon(konservita: Bool) {
+		konserviButono.isSelected = konservita
+		konserviButono.accessibilityLabel = konservita ? Tekstoj.malkonservi : Tekstoj.konservi
 	}
 	
 	// MARK: - Starigado
@@ -86,41 +97,6 @@ final class AgtabuloView: UIView {
 		}
 	}
 	
-//	private func starigiButonojn() {
-//		for (i, butono) in butonoj.enumerated() {
-//			let lasta = (i > 0) ? butonoj[i-1] : nil
-//			
-//			addSubview(butono)
-//			if i == 0 {
-//				butono.snp.makeConstraints { make in
-//					make.top.bottom.left.equalToSuperview()
-//				}
-//			}
-//			
-//			if i < butonoj.count - 1 {
-//				let sekvaDividilo = fariDividilon()
-//				addSubview(sekvaDividilo)
-//				sekvaDividilo.snp.makeConstraints { make in
-//					make.top.bottom.equalToSuperview()
-//					make.left.equalTo(butono.snp.right)
-//				}
-//			}
-//			
-//			if let lasta {
-//				butono.snp.makeConstraints { make in
-//					make.top.bottom.equalToSuperview()
-//					make.left.equalTo(lasta.snp.right)
-//				}
-//			}
-//
-//			if i == butonoj.count - 1 {
-//				butono.snp.makeConstraints { make in
-//					make.right.equalToSuperview()
-//				}
-//			}
-//		}
-//	}
-	
 	private func fariDividilon() -> UIView {
 		let dividilo = UIView()
 		dividilo.snp.makeConstraints { make in
@@ -137,7 +113,7 @@ final class AgtabuloView: UIView {
 	// MARK: - Agoj
 	
 	@objc private func premisKonservi() {
-		konserviButono.isSelected = !konserviButono.isSelected
+		proviziKonservbutonon(konservita: !konserviButono.isSelected)
 		konservis(konserviButono.isSelected)
 	}
 	

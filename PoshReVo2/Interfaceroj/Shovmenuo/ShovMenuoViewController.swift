@@ -51,6 +51,12 @@ final class ShovMenuoViewController: UIViewController {
 		view.addGestureRecognizer(
 			UITapGestureRecognizer(target: self, action: #selector(premisOmbron))
 		)
+		
+		view.isAccessibilityElement = true
+		view.accessibilityLabel = AlirebloTekstoj.fermiMenuon
+		// Certigas ke la premo tuŝu la ombron mem, nek menueron nek statustabulon
+		view.accessibilityActivationPoint = CGPoint(x: 1.0, y: navigaciilaAlto + 5)
+		
 		return view
 	}()
 	

@@ -88,7 +88,6 @@ final class SerchoViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-		title = Tekstoj.serchi
 		view.backgroundColor = stilo.navigaciaFono
 		
 		view.addSubview(serchilo)

@@ -25,6 +25,8 @@ final class ArtikoloViewController: UIViewController {
 			action: #selector(Self.premisLupeon)
 		)
 		butono.tintColor = stilo.navigaciaTeksto
+		butono.accessibilityLabel = AlirebloTekstoj.serchi
+		
 		return butono
 	}()
 	
@@ -68,6 +70,7 @@ final class ArtikoloViewController: UIViewController {
 	
 	private lazy var agtabulo: AgtabuloView = {
 		AgtabuloView(
+			konservita: uzantDatumaro.konservitaj.contains(where: { $0.indekso == artikolo.indekso }),
 			konservis: konservis,
 			salti: { [weak self] in self?.premisSalti()
 			}
@@ -103,6 +106,8 @@ final class ArtikoloViewController: UIViewController {
 	
 	private let kunordigilo: Kunordigilo
 	
+	private let uzantDatumaro: UzantDatumaro
+	
 	private let stilo: InterfacStilo
 	
 	//
@@ -115,6 +120,7 @@ final class ArtikoloViewController: UIViewController {
 		aperis: (() -> ())?,
 		konservis: @escaping (Bool) -> (),
 		kunordigilo: Kunordigilo = .komuna,
+		uzantDatumaro: UzantDatumaro = .komuna,
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.artikolo = artikolo
@@ -123,6 +129,7 @@ final class ArtikoloViewController: UIViewController {
 		self.aperis = aperis
 		self.konservis = konservis
 		self.kunordigilo = kunordigilo
+		self.uzantDatumaro = uzantDatumaro
 		self.stilo = stilo
 		
 		super.init(nibName: nil, bundle: nil)

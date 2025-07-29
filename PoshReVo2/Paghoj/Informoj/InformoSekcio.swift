@@ -20,6 +20,7 @@ final class InformoSekcio: UIView {
 		let etikedo = TTTAttributedLabel(frame: .zero)
 		etikedo.font = .systemFont(ofSize: 18).dinamika() // TODO: Tiparo
 		etikedo.numberOfLines = 0
+		
 		return etikedo
 	}()
 	

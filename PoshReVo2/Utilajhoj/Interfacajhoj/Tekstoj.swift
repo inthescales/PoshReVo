@@ -1,7 +1,8 @@
 enum Tekstoj {
+	static let poshaRetaVortaro = "Poŝa Reta Vortaro"
+	
 	// MARK: - Flankmenuo
 	
-	static let serchi = "Serĉi"
 	static let esplori = "Esplori"
 	static let konservitaj = "Konservitaj"
 	static let historio = "Historio"
@@ -21,6 +22,8 @@ enum Tekstoj {
 	static let neniujLingvoj = "Elekti lingvojn por vidi tradukojn"
 	static let neniujTradukoj = "Neniuj tradukoj en viaj lingvoj"
 	static let elekti = "elekti"
+	static let konservi = "konservi"
+	static let malkonservi = "malkonservi"
 	static let saltiAl = "Salti al:"
 	
 	// MARK: - Uzantaj Vortlistoj
