@@ -217,25 +217,35 @@ final class Kunordigilo {
 	// MARK: - Esploraĵoj
 	
 	func prezentiEsplorMenuon(prezentilo: UINavigationController) {
-		let listeroj: [KategoriaViewController.Listero] = [
-			.init(
-				teksto: Tekstoj.fakoj,
-				celPagho: { [unowned self] in fariFakListon(prezentilo: prezentilo) }
+		let sekcioj = [
+			KategoriaViewController.Sekcio(
+				titolo: Tekstoj.kategorioj,
+				eroj: [
+					.init(
+						teksto: Tekstoj.fakoj,
+						celPagho: { [unowned self] in fariFakListon(prezentilo: prezentilo) }
+					),
+					.init(
+						teksto: Tekstoj.oficialecoj,
+						celPagho: { [unowned self] in fariOficialecoListon(prezentilo: prezentilo) }
+					)
+				]
 			),
-			.init(
-				teksto: Tekstoj.vortojLauOficialeco,
-				celPagho: { [unowned self] in fariOficialecoListon(prezentilo: prezentilo) }
-			),
-			. init(
-				teksto: Tekstoj.hazardaArtikolo,
-				celPagho: { [unowned self] in fariHazardanArtikolon() }
+			KategoriaViewController.Sekcio(
+				titolo: nil,
+				eroj: [
+					.init(
+						teksto: Tekstoj.hazardaArtikolo,
+						celPagho: { [unowned self] in fariHazardanArtikolon() }
+					)
+				]
 			)
 		]
 		
 		let vc = KategoriaViewController(
 			titolo: Tekstoj.esplori,
 			tabelStilo: .insetGrouped,
-			listeroj: listeroj
+			sekcioj: sekcioj
 		)
 		prezentilo.pushViewController(vc, animated: true)
 	}

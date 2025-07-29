@@ -9,6 +9,11 @@ final class KategoriaViewController: UIViewController {
 		let celPagho: () -> (UIViewController)
 	}
 	
+	struct Sekcio {
+		let titolo: String?
+		let eroj: [Listero]
+	}
+	
 	lazy var tabelo: UITableView = {
 		let tabelo = UITableView(frame: .zero, style: tabelStilo)
 		tabelo.delegate = self
@@ -23,7 +28,7 @@ final class KategoriaViewController: UIViewController {
 	
 	// MARK: Stato
 	
-	private let listeroj: [Listero]
+	private let sekcioj: [Sekcio]
 	
 	// MARK: Agordoj
 	
@@ -38,14 +43,28 @@ final class KategoriaViewController: UIViewController {
 	init(
 		titolo: String?,
 		tabelStilo: UITableView.Style = .plain,
-		listeroj: [Listero],
+		sekcioj: [Sekcio],
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.titolo = titolo
 		self.tabelStilo = tabelStilo
-		self.listeroj = listeroj
+		self.sekcioj = sekcioj
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
+	}
+	
+	convenience init(
+		titolo: String?,
+		tabelStilo: UITableView.Style = .plain,
+		listeroj: [Listero],
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
+	) {
+		self.init(
+			titolo: titolo,
+			tabelStilo: tabelStilo,
+			sekcioj:[Sekcio(titolo: nil, eroj: listeroj)],
+			stilo: stilo
+		)
 	}
 	
 	required init?(coder: NSCoder) {
@@ -63,28 +82,43 @@ extension KategoriaViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		guard let navigaciilo = navigationController else { return }
 		
-		let novaPagho = listeroj[indexPath.row].celPagho()
+		let novaPagho = sekcioj[indexPath.section].eroj[indexPath.row].celPagho()
 		navigaciilo.pushViewController(novaPagho, animated: true)
 		
 		tabelo.deselectRow(at: indexPath, animated: true)
+	}
+	
+	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		guard section < sekcioj.count else {
+			return nil
+		}
+		
+		return sekcioj[section].titolo
+	}
+	
+	func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+		if let titolo = view as? UITableViewHeaderFooterView {
+			titolo.textLabel?.textColor = stilo.navigaciaTeksto
+		}
 	}
 }
 
 extension KategoriaViewController: UITableViewDataSource {
 	func numberOfSections(in tableView: UITableView) -> Int {
-		1
+		sekcioj.count
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		listeroj.count
+		sekcioj[section].eroj.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard indexPath.row < listeroj.count else {
+		guard indexPath.section < sekcioj.count
+				&& indexPath.row < sekcioj[indexPath.section].eroj.count else {
 			fatalError("Listero ne ekzistas")
 		}
 		
-		let listero = listeroj[indexPath.row]
+		let listero = sekcioj[indexPath.section].eroj[indexPath.row]
 		
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "Kategoria")
 		novaChelo.textLabel?.text = listero.teksto

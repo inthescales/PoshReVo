@@ -33,8 +33,8 @@ enum Tekstoj {
 	
 	// MARK: - Esplorado
 	
+	static let kategorioj = "Kategorioj"
 	static let fakoj = "Fakoj"
-	static let vortojLauOficialeco = "Vortoj laŭ Oficialeco"
 	static let oficialecoj = "Oficialecoj"
 	static let hazardaArtikolo = "Hazarda Artikolo"
 	
