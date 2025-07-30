@@ -39,6 +39,10 @@ final class Kunordigilo {
 	
 	func reveniHejmen(en navigaciilo: UINavigationController) {
 		navigaciilo.popToRootViewController(animated: true)
+		
+		if let paghingo = navigaciilo.viewControllers.first as? PaghingoViewController {
+			paghingo.restarigi()
+		}
 	}
 	
 	// MARK: Paĝo-kreado

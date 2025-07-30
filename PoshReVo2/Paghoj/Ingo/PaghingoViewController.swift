@@ -18,11 +18,11 @@ final class PaghingoViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
-	let chefpagho: UIViewController
+	let chefpagho: Ingito
 	
 	let kunordigilo: Kunordigilo
 	
-	init(chefpagho: UIViewController, kunordigilo: Kunordigilo = .komuna) {
+	init(chefpagho: Ingito, kunordigilo: Kunordigilo = .komuna) {
 		self.chefpagho = chefpagho
 		self.kunordigilo = kunordigilo
 		
@@ -131,5 +131,11 @@ final class PaghingoViewController: UIViewController {
 	private func premisInformoj() {
 		guard let navigaciilo = navigationController else { return }
 		kunordigilo.prezentiInformoPaghon(prezentilo: navigaciilo)
+	}
+	
+	// MARK: - Publikaj agoj
+	
+	func restarigi() {
+		chefpagho.restarigi()
 	}
 }

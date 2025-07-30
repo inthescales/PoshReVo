@@ -16,7 +16,6 @@ final class SerchiloView: UIView {
 	private lazy var serchilo: UISearchBar = {
 		let serchilo = UISearchBar()
 		serchilo.delegate = self
-		// serchilo.placeholder = lokokupaTeksto
 		serchilo.searchTextField.attributedPlaceholder = NSAttributedString(
 			string: lokokupaTeksto,
 			attributes: [NSAttributedString.Key.foregroundColor :stilo.dokumentaTeksto.withAlphaComponent(0.5)]
@@ -79,9 +78,15 @@ final class SerchiloView: UIView {
 	}
 	
 	required init?(coder: NSCoder) { fatalError("init(coder:) ne realas") }
+	
+	// MARK: - Publikaj agoj
+	
+	func nuligiTekston() {
+		serchilo.text = ""
+	}
 }
 
-// MARK: - Tekstejaĵoj
+// MARK: - UISearchBarDelegate
 
 extension SerchiloView: UISearchBarDelegate {
 	func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

@@ -213,10 +213,10 @@ final class SerchoViewController: UIViewController {
 		}
 	}
 	
-	// MARK: Helpiloj
+	// MARK: - Helpiloj
 	
 	/// Fari listerojn kiujn la tabelo montru
-	func tabeloListeroj(por stato: SerchStato) -> [Serchlistero] {
+	private func tabeloListeroj(por stato: SerchStato) -> [Serchlistero] {
 		stato.rezultoj.map { rezulto in
 			Serchlistero(
 				teksto: rezulto.teksto,
@@ -227,7 +227,7 @@ final class SerchoViewController: UIViewController {
 	}
 	
 	/// Teksto mentrota kiel rezult-listera subteksto
-	func tekstoPorDestinoj(destinoj: [Destino]) -> String? {
+	private func tekstoPorDestinoj(destinoj: [Destino]) -> String? {
 		if destinoj.count == 1,
 		   let destino = destinoj.first {
 			var teksto = destino.subteksto?.components(separatedBy: ", ").first ?? ""
@@ -244,5 +244,14 @@ final class SerchoViewController: UIViewController {
 		}
 		
 		return nil
+	}
+}
+
+// MARK: - Ingito
+
+extension SerchoViewController: Ingito {
+	func restarigi() {
+		serchilo.nuligiTekston()
+		nuligiSerchon()
 	}
 }
