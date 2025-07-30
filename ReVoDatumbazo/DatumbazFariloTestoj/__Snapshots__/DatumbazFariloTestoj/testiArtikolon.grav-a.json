@@ -55,7 +55,7 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "important, grave, gros (important), marquant<traduknumero> · ~aĵo: <\/traduknumero>chose importante"
+            "teksto" : "important, grave, gros (important), marquant<sencNumero> · ~aĵo: <\/sencNumero>chose importante"
           },
           {
             "lingvo" : {
@@ -76,14 +76,14 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "fontos, súlyos (átv.)<traduknumero> · ~aĵo: <\/traduknumero>fontos dolog"
+            "teksto" : "fontos, súlyos (átv.)<sencNumero> · ~aĵo: <\/sencNumero>fontos dolog"
           },
           {
             "lingvo" : {
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "penting<traduknumero> · ~aĵo: <\/traduknumero>hal penting"
+            "teksto" : "penting<sencNumero> · ~aĵo: <\/sencNumero>hal penting"
           },
           {
             "lingvo" : {
@@ -97,7 +97,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "belangrijk, gewichtig, aanzienlijk<traduknumero> · ~aĵo: <\/traduknumero>iets belangrijks"
+            "teksto" : "belangrijk, gewichtig, aanzienlijk<sencNumero> · ~aĵo: <\/sencNumero>iets belangrijks"
           },
           {
             "lingvo" : {
@@ -299,14 +299,14 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "importer, compter (importer), convenir (de), falloir, être grave, peser (importer)<traduknumero> · …ne ~as: <\/traduknumero>mais ça ne fait rien, mais peu importe"
+            "teksto" : "importer, compter (importer), convenir (de), falloir, être grave, peser (importer)<sencNumero> · …ne ~as: <\/sencNumero>mais ça ne fait rien, mais peu importe"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "wichtig sein, bedeutend sein<traduknumero> · …ne ~as: <\/traduknumero>aber das macht nichts"
+            "teksto" : "wichtig sein, bedeutend sein<sencNumero> · …ne ~as: <\/sencNumero>aber das macht nichts"
           },
           {
             "lingvo" : {
@@ -320,7 +320,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "fontos<traduknumero> · …ne ~as: <\/traduknumero>de ez egyáltalán nem fontos"
+            "teksto" : "fontos<sencNumero> · …ne ~as: <\/sencNumero>de ez egyáltalán nem fontos"
           },
           {
             "lingvo" : {
@@ -341,7 +341,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "belangrijk zijn, gewichtig zijn<traduknumero> · …ne ~as: <\/traduknumero>maar dat is niet erg"
+            "teksto" : "belangrijk zijn, gewichtig zijn<sencNumero> · …ne ~as: <\/sencNumero>maar dat is niet erg"
           },
           {
             "lingvo" : {

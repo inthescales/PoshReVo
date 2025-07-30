@@ -8,7 +8,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "1. [ARKI] Supera plata parto de kolona <a href=\"kapite.0o\">kapitelo<\/a>.\n\n2. [MAT]<a href=\"kalkul.0ilo\">kalkulilo<\/a> por plenumi aritmetikajn operaciojn, konsistanta ĉefe el buletoj ŝoveblaj sur stangetoj: \n<ekzemplo> · vi mispuŝas globetojn de via <g>abak<\/g>o;<\/ekzemplo> \n<ekzemplo> · en sia animo li restis ĉeflibrotenisto, kaj nun al li mankis <g>abak<\/g>o.<\/ekzemplo>\n⇘ <a href=\"soroban.0o\">sorobano<\/a>\n\n3. [MAT]Grafikaĵo aŭ tabelo, uzata por anstataŭi kalkulon en la solvo de kelkaj matematikaj aŭ teĥnikaj problemoj."
+        "teksto" : "<sencNumero>1. <\/sencNumero>[ARKI] Supera plata parto de kolona <a href=\"kapite.0o\">kapitelo<\/a>.\n\n<sencNumero>2. <\/sencNumero>[MAT]<a href=\"kalkul.0ilo\">kalkulilo<\/a> por plenumi aritmetikajn operaciojn, konsistanta ĉefe el buletoj ŝoveblaj sur stangetoj: \n<ekzemplo> · vi mispuŝas globetojn de via <g>abak<\/g>o;<\/ekzemplo> \n<ekzemplo> · en sia animo li restis ĉeflibrotenisto, kaj nun al li mankis <g>abak<\/g>o.<\/ekzemplo>\n⇘ <a href=\"soroban.0o\">sorobano<\/a>\n\n<sencNumero>3. <\/sencNumero>[MAT]Grafikaĵo aŭ tabelo, uzata por anstataŭi kalkulon en la solvo de kelkaj matematikaj aŭ teĥnikaj problemoj."
       }
     },
     {
@@ -19,14 +19,14 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> abacus <traduknumero>2.<\/traduknumero> abacus, calculating frame <traduknumero>3.<\/traduknumero> nomogram, chart"
+            "teksto" : "<sencNumero>1.<\/sencNumero> abacus <sencNumero>2.<\/sencNumero> abacus, calculating frame <sencNumero>3.<\/sencNumero> nomogram, chart"
           },
           {
             "lingvo" : {
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> абак, абака <traduknumero>2.<\/traduknumero> лічыльнікі <traduknumero>3.<\/traduknumero> намаграма, матэматычная табліца"
+            "teksto" : "<sencNumero>1.<\/sencNumero> абак, абака <sencNumero>2.<\/sencNumero> лічыльнікі <sencNumero>3.<\/sencNumero> намаграма, матэматычная табліца"
           },
           {
             "lingvo" : {
@@ -54,28 +54,28 @@
               "kodo" : "da",
               "nomo" : "dana"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> abacus <traduknumero>2.<\/traduknumero> regnebræt, kugleramme <traduknumero>3.<\/traduknumero> nomogram"
+            "teksto" : "<sencNumero>1.<\/sencNumero> abacus <sencNumero>2.<\/sencNumero> regnebræt, kugleramme <sencNumero>3.<\/sencNumero> nomogram"
           },
           {
             "lingvo" : {
               "kodo" : "fi",
               "nomo" : "finna"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> abakus <traduknumero>2.<\/traduknumero> helmitaulu <traduknumero>3.<\/traduknumero> nomogrammi, laskutaulukko"
+            "teksto" : "<sencNumero>1.<\/sencNumero> abakus <sencNumero>2.<\/sencNumero> helmitaulu <sencNumero>3.<\/sencNumero> nomogrammi, laskutaulukko"
           },
           {
             "lingvo" : {
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> abaque (architecture) <traduknumero>2.<\/traduknumero> abaque (boulier), boulier <traduknumero>3.<\/traduknumero> nomogramme, abaque (nomogramme), table (nomogramme)"
+            "teksto" : "<sencNumero>1.<\/sencNumero> abaque (architecture) <sencNumero>2.<\/sencNumero> abaque (boulier), boulier <sencNumero>3.<\/sencNumero> nomogramme, abaque (nomogramme), table (nomogramme)"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> Säulenplatte, Kapitelldeckplatte <traduknumero>2.<\/traduknumero> Rechenbrett, Abakus <traduknumero>3.<\/traduknumero> Rechentafel"
+            "teksto" : "<sencNumero>1.<\/sencNumero> Säulenplatte, Kapitelldeckplatte <sencNumero>2.<\/sencNumero> Rechenbrett, Abakus <sencNumero>3.<\/sencNumero> Rechentafel"
           },
           {
             "lingvo" : {
@@ -103,77 +103,77 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> abakusz, fejlemez (oszlopfőn) <traduknumero>2.<\/traduknumero> abakusz, számológép <traduknumero>3.<\/traduknumero> nomogram, számolótábla"
+            "teksto" : "<sencNumero>1.<\/sencNumero> abakusz, fejlemez (oszlopfőn) <sencNumero>2.<\/sencNumero> abakusz, számológép <sencNumero>3.<\/sencNumero> nomogram, számolótábla"
           },
           {
             "lingvo" : {
               "kodo" : "it",
               "nomo" : "itala"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> abaco <traduknumero>2.<\/traduknumero> abaco, pallottoliere <traduknumero>3.<\/traduknumero> abaco, nomogramma, nomografo"
+            "teksto" : "<sencNumero>1.<\/sencNumero> abaco <sencNumero>2.<\/sencNumero> abaco, pallottoliere <sencNumero>3.<\/sencNumero> abaco, nomogramma, nomografo"
           },
           {
             "lingvo" : {
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> 冠板 [かむりいた] <traduknumero>2.<\/traduknumero> 計算盤 [けいさんばん], そろばん"
+            "teksto" : "<sencNumero>1.<\/sencNumero> 冠板 [かむりいた] <sencNumero>2.<\/sencNumero> 計算盤 [けいさんばん], そろばん"
           },
           {
             "lingvo" : {
               "kodo" : "ca",
               "nomo" : "kataluna"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> àbac <traduknumero>2.<\/traduknumero> àbac <traduknumero>3.<\/traduknumero> nomograma, àbac, gràfic"
+            "teksto" : "<sencNumero>1.<\/sencNumero> àbac <sencNumero>2.<\/sencNumero> àbac <sencNumero>3.<\/sencNumero> nomograma, àbac, gràfic"
           },
           {
             "lingvo" : {
               "kodo" : "hr",
               "nomo" : "kroata"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> abak <traduknumero>2.<\/traduknumero> abak"
+            "teksto" : "<sencNumero>1.<\/sencNumero> abak <sencNumero>2.<\/sencNumero> abak"
           },
           {
             "lingvo" : {
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> abacus <traduknumero>2.<\/traduknumero> abacus, telraam <traduknumero>3.<\/traduknumero> abacus"
+            "teksto" : "<sencNumero>1.<\/sencNumero> abacus <sencNumero>2.<\/sencNumero> abacus, telraam <sencNumero>3.<\/sencNumero> abacus"
           },
           {
             "lingvo" : {
               "kodo" : "fa",
               "nomo" : "persa"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> سرستونی <traduknumero>2.<\/traduknumero> چتکه, چرتکه <traduknumero>3.<\/traduknumero> دستورنگار, نوموگرام"
+            "teksto" : "<sencNumero>1.<\/sencNumero> سرستونی <sencNumero>2.<\/sencNumero> چتکه, چرتکه <sencNumero>3.<\/sencNumero> دستورنگار, نوموگرام"
           },
           {
             "lingvo" : {
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> abakus, abak, płyta głowicowa (kolumny) <traduknumero>2.<\/traduknumero> abakus, liczydło, tabliczka Pitagorasa <traduknumero>3.<\/traduknumero> nomogram"
+            "teksto" : "<sencNumero>1.<\/sencNumero> abakus, abak, płyta głowicowa (kolumny) <sencNumero>2.<\/sencNumero> abakus, liczydło, tabliczka Pitagorasa <sencNumero>3.<\/sencNumero> nomogram"
           },
           {
             "lingvo" : {
               "kodo" : "pt",
               "nomo" : "portugala"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> ábaco <traduknumero>2.<\/traduknumero> ábaco <traduknumero>3.<\/traduknumero> ábaco"
+            "teksto" : "<sencNumero>1.<\/sencNumero> ábaco <sencNumero>2.<\/sencNumero> ábaco <sencNumero>3.<\/sencNumero> ábaco"
           },
           {
             "lingvo" : {
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> абака <traduknumero>2.<\/traduknumero> счёты <traduknumero>3.<\/traduknumero> номограмма, математические таблицы"
+            "teksto" : "<sencNumero>1.<\/sencNumero> абака <sencNumero>2.<\/sencNumero> счёты <sencNumero>3.<\/sencNumero> номограмма, математические таблицы"
           },
           {
             "lingvo" : {
               "kodo" : "sk",
               "nomo" : "slovaka"
             },
-            "teksto" : "guľkové počítadlo, guľkové počítadlo, abakus <traduknumero>1.<\/traduknumero> abakus <traduknumero>2.<\/traduknumero> počítadlo (guličkové) <traduknumero>3.<\/traduknumero> matematická tabuľka"
+            "teksto" : "guľkové počítadlo, guľkové počítadlo, abakus <sencNumero>1.<\/sencNumero> abakus <sencNumero>2.<\/sencNumero> počítadlo (guličkové) <sencNumero>3.<\/sencNumero> matematická tabuľka"
           },
           {
             "lingvo" : {

@@ -44,7 +44,7 @@ extension ArboAnalizilo {
 				
 				if let subsencNombro = stato.lastaSubsenco,
 				   let litero = ArtikolTeksto.subsencLitero(por: subsencNombro) {
-					teksto += "\n\n" + litero + ") "
+					teksto += "\n\n" + TekstAtributo.volvi(tekston: litero + ") ", per: .sencNumero)
 				}
 				teksto += filTeksto
 			case .teksto, .tezrad:

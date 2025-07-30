@@ -6,10 +6,10 @@ public enum TekstAtributo: CaseIterable, Equatable {
 	case suba
 	case ekzemplo
 	case rimarko
-	case tradukNumero
+	case sencNumero
 	
 	public static var allCases: [TekstAtributo] {
-		[.ligo(celo: ""), .kursiva, .grasa, .supera, .suba, .ekzemplo, .rimarko, .tradukNumero]
+		[.ligo(celo: ""), .kursiva, .grasa, .supera, .suba, .ekzemplo, .rimarko, .sencNumero]
 	}
 	
 	public var kodo: String {
@@ -28,8 +28,8 @@ public enum TekstAtributo: CaseIterable, Equatable {
 			"ekzemplo"
 		case .rimarko:
 			"rimarko"
-		case .tradukNumero:
-			"traduknumero"
+		case .sencNumero:
+			"sencNumero"
 		}
 	}
 	
@@ -47,8 +47,8 @@ public enum TekstAtributo: CaseIterable, Equatable {
 			self = .ekzemplo
 		case "rimarko":
 			self = .rimarko
-		case "traduknumero":
-			self = .tradukNumero
+		case "sencNumero":
+			self = .sencNumero
 		default:
 			return nil
 		}

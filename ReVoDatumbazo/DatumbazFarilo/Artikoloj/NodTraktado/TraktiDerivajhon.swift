@@ -68,7 +68,8 @@ extension ArboAnalizilo {
 					if sencNombro > 1 {
 						akumulilo.aldoni(tekston:  "\n\n")
 					}
-					akumulilo.aldoni(tekston: String(sencNombro) + ". ")
+					let volvitaTeksto = TekstAtributo.volvi(tekston: String(sencNombro) + ". ", per: .sencNumero)
+					akumulilo.aldoni(tekston: volvitaTeksto)
 				}
 				
 				akumulilo.aldoni(tekston:  filTeksto)
@@ -79,7 +80,8 @@ extension ArboAnalizilo {
 					if subdrvNumero > 1 {
 						akumulilo.aldoni(tekston:  "\n\n")
 					}
-					akumulilo.aldoni(tekston:  ArtikolTeksto.subdrvLitero(por: subdrvNumero)! + ". ")
+					let volvitaTeksto = TekstAtributo.volvi(tekston: ArtikolTeksto.subdrvLitero(por: subdrvNumero)! + ". ", per: .sencNumero)
+					akumulilo.aldoni(tekston: volvitaTeksto)
 				}
 				
 				akumulilo.aldoni(tekston: filTeksto)

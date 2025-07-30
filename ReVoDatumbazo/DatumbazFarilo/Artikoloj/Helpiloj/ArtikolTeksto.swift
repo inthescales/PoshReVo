@@ -163,7 +163,7 @@ enum ArtikolTeksto {
 				if montriSencon || montriSubsencon,
 				   let senco = nuna.senco,
 				   senco > 0 {
-					teksto += TekstAtributo.tradukNumero.malfermaEtikedo + String(senco) + "."
+					teksto += TekstAtributo.sencNumero.malfermaEtikedo + String(senco) + "."
 				}
 				
 				// Ĉiam montru subsencon, se ĉeestas
@@ -174,7 +174,7 @@ enum ArtikolTeksto {
 				}
 				
 				if montriSencon || montriSubsencon {
-					teksto += TekstAtributo.tradukNumero.fermaEtikedo + " "
+					teksto += TekstAtributo.sencNumero.fermaEtikedo + " "
 				}
 			}
 			
@@ -187,6 +187,6 @@ enum ArtikolTeksto {
 	// MARK: - Helpiloj
 	
 	private static func kolorEtikedi(_ enhavoj: String) -> String {
-		return TekstAtributo.volvi(tekston: enhavoj, per: .tradukNumero)
+		return TekstAtributo.volvi(tekston: enhavoj, per: .sencNumero)
 	}
 }

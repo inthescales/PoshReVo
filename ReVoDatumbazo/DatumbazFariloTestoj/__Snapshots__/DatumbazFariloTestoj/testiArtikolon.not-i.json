@@ -9,7 +9,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "(tr)\n1. <a href=\"skrib.0i.signojn\">Skribi<\/a> pri io mallongan memorigan resumon: \n<ekzemplo> · <g>not<\/g>u la daton;<\/ekzemplo> \n<ekzemplo> · dika nigra libro, en kiu oni <g>not<\/g>is malaperintajn ŝipojn.<\/ekzemplo>\n\n2. (figure) Priatenti kaj konservi en sia memoro: \n<ekzemplo> · ni petas vin <g>not<\/g>i al vi en la memoro tiun konkludon;<\/ekzemplo> \n<ekzemplo> · la estraro havas konsiderojn subtilajn: malgraŭ ke estas malproksime, ĝi tamen <g>not<\/g>as al si en la cerbo;<\/ekzemplo> \n<ekzemplo> · <g>not<\/g>u ke mi venos.<\/ekzemplo>"
+        "teksto" : "(tr)\n<sencNumero>1. <\/sencNumero><a href=\"skrib.0i.signojn\">Skribi<\/a> pri io mallongan memorigan resumon: \n<ekzemplo> · <g>not<\/g>u la daton;<\/ekzemplo> \n<ekzemplo> · dika nigra libro, en kiu oni <g>not<\/g>is malaperintajn ŝipojn.<\/ekzemplo>\n\n<sencNumero>2. <\/sencNumero>(figure) Priatenti kaj konservi en sia memoro: \n<ekzemplo> · ni petas vin <g>not<\/g>i al vi en la memoro tiun konkludon;<\/ekzemplo> \n<ekzemplo> · la estraro havas konsiderojn subtilajn: malgraŭ ke estas malproksime, ĝi tamen <g>not<\/g>as al si en la cerbo;<\/ekzemplo> \n<ekzemplo> · <g>not<\/g>u ke mi venos.<\/ekzemplo>"
       }
     },
     {
@@ -48,7 +48,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> 記下 [jìxià], 记下 [jìxià], 开价 [kāijià], 開價 [kāijià] <traduknumero>2.<\/traduknumero> 注 [zhù], 註 [zhù]"
+            "teksto" : "<sencNumero>1.<\/sencNumero> 記下 [jìxià], 记下 [jìxià], 开价 [kāijià], 開價 [kāijià] <sencNumero>2.<\/sencNumero> 注 [zhù], 註 [zhù]"
           },
           {
             "lingvo" : {
@@ -62,7 +62,7 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> notieren, vermerken <traduknumero>2.<\/traduknumero> merken"
+            "teksto" : "<sencNumero>1.<\/sencNumero> notieren, vermerken <sencNumero>2.<\/sencNumero> merken"
           },
           {
             "lingvo" : {
@@ -76,14 +76,14 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> feljegyez, lejegyez <traduknumero>2.<\/traduknumero> megjegyez"
+            "teksto" : "<sencNumero>1.<\/sencNumero> feljegyez, lejegyez <sencNumero>2.<\/sencNumero> megjegyez"
           },
           {
             "lingvo" : {
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> メモする [めもする], 覚書する [おぼえがきする] <traduknumero>2.<\/traduknumero> 記憶に留める [きおくにとどめる], 気に留める [きにとどめる]"
+            "teksto" : "<sencNumero>1.<\/sencNumero> メモする [めもする], 覚書する [おぼえがきする] <sencNumero>2.<\/sencNumero> 記憶に留める [きおくにとどめる], 気に留める [きにとどめる]"
           },
           {
             "lingvo" : {
@@ -97,7 +97,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> notować, robić notatki <traduknumero>2.<\/traduknumero> notować, zanotować"
+            "teksto" : "<sencNumero>1.<\/sencNumero> notować, robić notatki <sencNumero>2.<\/sencNumero> notować, zanotować"
           },
           {
             "lingvo" : {
@@ -139,7 +139,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "1. Mallonga enskribo memoriga aŭ komenta: \n<ekzemplo> · fari, konservi <g>not<\/g>ojn pri fakto, parolado, adreso, dato;<\/ekzemplo> \n<ekzemplo> · mallongaj <g>not<\/g>oj komercaj.<\/ekzemplo> \n<ekzemplo> · la diversloke en la kajeroj troviĝantaj <g>not<\/g>oj;<\/ekzemplo> \n<ekzemplo> · presigi <g>not<\/g>ojn pri lingvo internacia.<\/ekzemplo>\n\n2. [MUZ] Skriba signo lokita sur muzika liniaro por montri la altecon kaj daŭron de la tono.\n\na) La sono mem, prezentata per noto<sup>2<\/sup>, en kantado aŭ en muzikila plenumo: \n<ekzemplo> · la fingroj trovu la ekzaktan lokon por ludi ekzaktan <g>not<\/g>on;<\/ekzemplo> \n<ekzemplo> · falsa noto<\/ekzemplo> .\n\nb) (figure) Aparta distingiga eco aŭ nuanco (laŭ noto): \n<ekzemplo> · lia stilo havas tre personan <g>not<\/g>on;<\/ekzemplo> \n<ekzemplo> · tio portis funebran <g>not<\/g>on en la ĝojan feston.<\/ekzemplo>\n\n3. [PED] Oficiale uzata signo por indiki takson de scioj aŭ konduto de lernanto: \n<ekzemplo> · ĉiuj, kiuj havis la <g>not<\/g>on „tre bone“ aŭ „bonege“, ricevis lokon;<\/ekzemplo> \n<ekzemplo> · ricevi bonan <g>not<\/g>on pri matematiko.<\/ekzemplo>\n⇗ <a href=\"poent.0o\">poento<\/a>"
+        "teksto" : "<sencNumero>1. <\/sencNumero>Mallonga enskribo memoriga aŭ komenta: \n<ekzemplo> · fari, konservi <g>not<\/g>ojn pri fakto, parolado, adreso, dato;<\/ekzemplo> \n<ekzemplo> · mallongaj <g>not<\/g>oj komercaj.<\/ekzemplo> \n<ekzemplo> · la diversloke en la kajeroj troviĝantaj <g>not<\/g>oj;<\/ekzemplo> \n<ekzemplo> · presigi <g>not<\/g>ojn pri lingvo internacia.<\/ekzemplo>\n\n<sencNumero>2. <\/sencNumero>[MUZ] Skriba signo lokita sur muzika liniaro por montri la altecon kaj daŭron de la tono.\n\n<sencNumero>a) <\/sencNumero>La sono mem, prezentata per noto<sup>2<\/sup>, en kantado aŭ en muzikila plenumo: \n<ekzemplo> · la fingroj trovu la ekzaktan lokon por ludi ekzaktan <g>not<\/g>on;<\/ekzemplo> \n<ekzemplo> · falsa noto<\/ekzemplo> .\n\n<sencNumero>b) <\/sencNumero>(figure) Aparta distingiga eco aŭ nuanco (laŭ noto): \n<ekzemplo> · lia stilo havas tre personan <g>not<\/g>on;<\/ekzemplo> \n<ekzemplo> · tio portis funebran <g>not<\/g>on en la ĝojan feston.<\/ekzemplo>\n\n<sencNumero>3. <\/sencNumero>[PED] Oficiale uzata signo por indiki takson de scioj aŭ konduto de lernanto: \n<ekzemplo> · ĉiuj, kiuj havis la <g>not<\/g>on „tre bone“ aŭ „bonege“, ricevis lokon;<\/ekzemplo> \n<ekzemplo> · ricevi bonan <g>not<\/g>on pri matematiko.<\/ekzemplo>\n⇗ <a href=\"poent.0o\">poento<\/a>"
       }
     },
     {
@@ -171,7 +171,7 @@
               "kodo" : "en",
               "nomo" : "angla"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> note <traduknumero>2.<\/traduknumero> note <traduknumero>3.<\/traduknumero> (school) grade, mark (e.g. at school)"
+            "teksto" : "<sencNumero>1.<\/sencNumero> note <sencNumero>2.<\/sencNumero> note <sencNumero>3.<\/sencNumero> (school) grade, mark (e.g. at school)"
           },
           {
             "lingvo" : {
@@ -199,7 +199,7 @@
               "kodo" : "be",
               "nomo" : "belorusa"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> нататка, заўвага, зацемка<traduknumero> · falsa ~o: <\/traduknumero>фальшывая нота <traduknumero>2.<\/traduknumero> нота <traduknumero>3.<\/traduknumero> адзнака"
+            "teksto" : "<sencNumero>1.<\/sencNumero> нататка, заўвага, зацемка<sencNumero> · falsa ~o: <\/sencNumero>фальшывая нота <sencNumero>2.<\/sencNumero> нота <sencNumero>3.<\/sencNumero> адзнака"
           },
           {
             "lingvo" : {
@@ -234,7 +234,7 @@
               "kodo" : "zh",
               "nomo" : "ĉina"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> 手記 [shǒujì], 手记 [shǒujì], 便条 [biàntiáo], 便條 [biàntiáo], 方便貼 [fāngbiàntiē], 方便贴 [fāngbiàntiē], 備忘錄 [bèiwànglù], 备忘录 [bèiwànglù], 便笺 [biànjiān], 便箋 [biànjiān] <traduknumero>2.<\/traduknumero> 声调 [shēngdiào], 聲調 [shēngdiào] <traduknumero>3.<\/traduknumero> 評分 [píngfēn], 评分 [píngfēn], 比分 [bǐfēn], 成績 [chéngjì], 成绩 [chéngjì]"
+            "teksto" : "<sencNumero>1.<\/sencNumero> 手記 [shǒujì], 手记 [shǒujì], 便条 [biàntiáo], 便條 [biàntiáo], 方便貼 [fāngbiàntiē], 方便贴 [fāngbiàntiē], 備忘錄 [bèiwànglù], 备忘录 [bèiwànglù], 便笺 [biànjiān], 便箋 [biànjiān] <sencNumero>2.<\/sencNumero> 声调 [shēngdiào], 聲調 [shēngdiào] <sencNumero>3.<\/sencNumero> 評分 [píngfēn], 评分 [píngfēn], 比分 [bǐfēn], 成績 [chéngjì], 成绩 [chéngjì]"
           },
           {
             "lingvo" : {
@@ -283,7 +283,7 @@
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> Vermerk, Notiz <traduknumero>2.b<\/traduknumero> Note <traduknumero>2.<\/traduknumero> Note <traduknumero>3.<\/traduknumero> Note (z. B. in der Schule), Schulnote"
+            "teksto" : "<sencNumero>1.<\/sencNumero> Vermerk, Notiz <sencNumero>2.b<\/sencNumero> Note <sencNumero>2.<\/sencNumero> Note <sencNumero>3.<\/sencNumero> Note (z. B. in der Schule), Schulnote"
           },
           {
             "lingvo" : {
@@ -325,7 +325,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> feljegyzés, megjegyzés, jegyzet <traduknumero>2.a<\/traduknumero> hangjegy<traduknumero> · falsa ~o: <\/traduknumero>hamis hang <traduknumero>2.b<\/traduknumero> tónus <traduknumero>3.<\/traduknumero> érdemjegy, osztályzat"
+            "teksto" : "<sencNumero>1.<\/sencNumero> feljegyzés, megjegyzés, jegyzet <sencNumero>2.a<\/sencNumero> hangjegy<sencNumero> · falsa ~o: <\/sencNumero>hamis hang <sencNumero>2.b<\/sencNumero> tónus <sencNumero>3.<\/sencNumero> érdemjegy, osztályzat"
           },
           {
             "lingvo" : {
@@ -353,7 +353,7 @@
               "kodo" : "ja",
               "nomo" : "japana"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> メモ [めも], 覚書 [おぼえがき], 注釈 [ちゅうしゃく] <traduknumero>2.<\/traduknumero> 音符 [おんぷ] <traduknumero>3.<\/traduknumero> (学業の)成績 [せいせき], (学業の)評点 [ひょうてん], (テストの)点数 [てんすう]"
+            "teksto" : "<sencNumero>1.<\/sencNumero> メモ [めも], 覚書 [おぼえがき], 注釈 [ちゅうしゃく] <sencNumero>2.<\/sencNumero> 音符 [おんぷ] <sencNumero>3.<\/sencNumero> (学業の)成績 [せいせき], (学業の)評点 [ひょうてん], (テストの)点数 [てんすう]"
           },
           {
             "lingvo" : {
@@ -542,7 +542,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> aantekening, noot, notitie <traduknumero>2.a<\/traduknumero> noot, muzieknoot<traduknumero> · falsa ~o: <\/traduknumero>valse noot <traduknumero>2.b<\/traduknumero> noot <traduknumero>3.<\/traduknumero> (school)cijfer, beoordeling (m.n. van leerlingen)"
+            "teksto" : "<sencNumero>1.<\/sencNumero> aantekening, noot, notitie <sencNumero>2.a<\/sencNumero> noot, muzieknoot<sencNumero> · falsa ~o: <\/sencNumero>valse noot <sencNumero>2.b<\/sencNumero> noot <sencNumero>3.<\/sencNumero> (school)cijfer, beoordeling (m.n. van leerlingen)"
           },
           {
             "lingvo" : {
@@ -584,7 +584,7 @@
               "kodo" : "pl",
               "nomo" : "pola"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> notatka, notka, adnotacja, dopisek, zapis, zapisek <traduknumero>2.a<\/traduknumero> nuta<traduknumero> · falsa ~o: <\/traduknumero>fałszywa nuta <traduknumero>2.b<\/traduknumero> nuta <traduknumero>3.<\/traduknumero> nota, ocena, stopień"
+            "teksto" : "<sencNumero>1.<\/sencNumero> notatka, notka, adnotacja, dopisek, zapis, zapisek <sencNumero>2.a<\/sencNumero> nuta<sencNumero> · falsa ~o: <\/sencNumero>fałszywa nuta <sencNumero>2.b<\/sencNumero> nuta <sencNumero>3.<\/sencNumero> nota, ocena, stopień"
           },
           {
             "lingvo" : {
@@ -605,7 +605,7 @@
               "kodo" : "ru",
               "nomo" : "rusa"
             },
-            "teksto" : "<traduknumero>1.<\/traduknumero> заметка, примечание<traduknumero> · falsa ~o: <\/traduknumero>фальшивая нота <traduknumero>2.b<\/traduknumero> нота <traduknumero>2.<\/traduknumero> нота (музыкальная) <traduknumero>3.<\/traduknumero> оценка, отметка"
+            "teksto" : "<sencNumero>1.<\/sencNumero> заметка, примечание<sencNumero> · falsa ~o: <\/sencNumero>фальшивая нота <sencNumero>2.b<\/sencNumero> нота <sencNumero>2.<\/sencNumero> нота (музыкальная) <sencNumero>3.<\/sencNumero> оценка, отметка"
           },
           {
             "lingvo" : {
@@ -904,7 +904,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "[EKON] (evitinde) <a href=\"bilet.mon0o\">Monbileto<\/a>: \n<ekzemplo> · li […] metis kun nerifuzebla gesto dudolaran bank<g>not<\/g>on en mian manon;<\/ekzemplo> \n<ekzemplo> · li faradis flugludilojn el spesmilaj bank<g>not<\/g>oj, kaj en la lagon li ĵetadis orajn monerojn anstataŭ ŝtonetoj;<\/ekzemplo> \n<ekzemplo> · oni ja diras, ke ĝi signifas novan feliĉon, kiam la bank<g>not<\/g>oj estas novaj.<\/ekzemplo>\n<g>RIM<\/g>: Tiu signifo kiel nacilingva paŭsaĵo estas apenaŭ rilatigebla al noti (memorfiksi). Por registri homonimon ĝi aperas tro malofte kaj ja ekzistas preferebla kaj klara termino „monbileto“. [Wolfram Diestel]"
+        "teksto" : "[EKON] (evitinde) <a href=\"bilet.mon0o\">Monbileto<\/a>: \n<ekzemplo> · li […] metis kun nerifuzebla gesto dudolaran bank<g>not<\/g>on en mian manon;<\/ekzemplo> \n<ekzemplo> · li faradis flugludilojn el spesmilaj bank<g>not<\/g>oj, kaj en la lagon li ĵetadis orajn monerojn anstataŭ ŝtonetoj;<\/ekzemplo> \n<ekzemplo> · oni ja diras, ke ĝi signifas novan feliĉon, kiam la bank<g>not<\/g>oj estas novaj.<\/ekzemplo>\n<rimarko><g>RIM<\/g>: Tiu signifo kiel nacilingva paŭsaĵo estas apenaŭ rilatigebla al noti (memorfiksi). Por registri homonimon ĝi aperas tro malofte kaj ja ekzistas preferebla kaj klara termino „monbileto“. [Wolfram Diestel]<\/rimarko>"
       }
     },
     {
