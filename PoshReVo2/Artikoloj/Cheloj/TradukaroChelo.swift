@@ -107,6 +107,7 @@ final class TradukaroChelo: UITableViewCell {
 	private func fariAvizon(teksto: String, titolStilo: TitolStilo, stilo: InterfacStilo) -> UIView {
 		let etikedo = UILabel()
 		etikedo.text = teksto
+		etikedo.textColor = stilo.dokumentaTeksto
 		switch titolStilo {
 		case .kursiva:
 			etikedo.font = .italicSystemFont(ofSize: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
@@ -121,7 +122,7 @@ final class TradukaroChelo: UITableViewCell {
 		let butono = UIButton()
 		butono.setTitle(Tekstoj.elekti, for: .normal)
 		butono.metiDinamikanTitolon(Tekstoj.elekti, tiparo: .systemFont(ofSize: Konstantoj.tekstGrandeco))
-		butono.setTitleColor(stilo.navigaciaFono, for: .normal) // TODO: Nova koloro
+		butono.setTitleColor(stilo.dokumentLigilo, for: .normal)
 		butono.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 		butono.addTarget(self, action: #selector(premisElekti), for: .touchUpInside)
 		butono.titleEdgeInsets = .zero
@@ -156,7 +157,7 @@ final class TradukaroChelo: UITableViewCell {
 			let lingvoEtikedo = TTTAttributedLabel(frame: .zero)
 			//TekstAtributoHelpiloj.provizi(etikedon: lingvoEtikedo, per: traduko.lingvo.adverbo + ":", tekstGrando: 18.0) // TODO: Tiparo
 			lingvoEtikedo.font = .systemFont(ofSize: 18.0) // TODO: Tiparo
-			lingvoEtikedo.textColor = stilo.dokumentLigilo
+			lingvoEtikedo.textColor = stilo.dokumentRimarko // TODO: Nova koloro, samkiel numerojn eble
 			lingvoEtikedo.numberOfLines = 1
 			lingvoEtikedo.text = traduko.lingvo.adverbo + ":" // Faru FINE (pro TTTAttributedLabel sensencaĵo)
 			lingvoEtikedo.translatesAutoresizingMaskIntoConstraints = false
@@ -177,7 +178,8 @@ final class TradukaroChelo: UITableViewCell {
 			[lingvoEtikedo, difinoEtikedo].forEach { etikedujo.addSubview($0) }
 			
 			lingvoEtikedo.snp.makeConstraints { make in
-				make.top.left.equalToSuperview()
+				make.left.equalToSuperview()
+				make.top.equalToSuperview().inset(Konstantoj.linioBufro)
 				make.bottom.lessThanOrEqualToSuperview().inset(Konstantoj.linioBufro)
 			}
 			

@@ -70,7 +70,7 @@ class InterfacStilo {
 			navigaciaButonoMalaktiva: UIColor(red: 0.47, green: 0.37, blue: 0.21, alpha: 1.0),
 			dokumentaFono: UIColor(red: 1.0, green: 0.93, blue: 0.82, alpha: 1.0),
 			dokumentaAlternaFono: UIColor(red: 0.78, green: 0.68, blue: 0.53, alpha: 1.0),
-			dokumentaTeksto: .red, // UIColor(red: 0.07, green: 0.07, blue: 0.13, alpha: 1.0),
+			dokumentaTeksto: UIColor(red: 0.07, green: 0.07, blue: 0.13, alpha: 1.0),
 			dokumentaDividilo: UIColor(red: 0.78, green: 0.68, blue: 0.53, alpha: 1.0),
 			dokumentLigilo: UIColor(red: 0.26, green: 0.29, blue: 0.58, alpha: 1.0),
 			dokumentEkzemplo: UIColor(red: 0.87, green: 0.49, blue: 0.03, alpha: 1.0),
