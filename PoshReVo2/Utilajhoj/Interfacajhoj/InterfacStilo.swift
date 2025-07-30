@@ -14,15 +14,19 @@ class DinamikaStilo {
 		UzantDatumaro.komuna.stilo
 	}
 	
-	static var navigaciaFono = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaFono})
-	static var navigaciaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaTeksto})
-	static var navigaciaButono = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaButono})
-	static var navigaciaButonoMalaktiva = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaButonoMalaktiva})
-	static var dokumentaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaFono})
-	static var dokumentaAlternaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaAlternaFono})
-	static var dokumentaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaTeksto})
-	static var dokumentaDividilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaDividilo})
-	static var dokumentLigilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentLigilo})
+	static var navigaciaFono = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaFono })
+	static var navigaciaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaTeksto })
+	static var navigaciaButono = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaButono })
+	static var navigaciaButonoMalaktiva = UIColor(dynamicProvider: { _ in konkretaStilo.navigaciaButonoMalaktiva })
+	
+	static var dokumentaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaFono })
+	static var dokumentaAlternaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaAlternaFono })
+	static var dokumentaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaTeksto })
+	static var dokumentaDividilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaDividilo })
+	static var dokumentLigilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentLigilo })
+	
+	static var dokumentEkzemplo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentEkzemplo })
+	static var dokumentRimarko = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentRimarko })
 }
 
 class InterfacStilo {
@@ -42,6 +46,8 @@ class InterfacStilo {
 	lazy var dokumentaTeksto = UIColor(hela: hela.dokumentaTeksto, malhela: malhela.dokumentaTeksto)
 	lazy var dokumentaDividilo = UIColor(hela: hela.dokumentaDividilo, malhela: malhela.dokumentaDividilo)
 	lazy var dokumentLigilo = UIColor(hela: hela.dokumentLigilo, malhela: malhela.dokumentLigilo)
+	lazy var dokumentEkzemplo = UIColor(hela: hela.dokumentEkzemplo, malhela: malhela.dokumentEkzemplo)
+	lazy var dokumentRimarko = UIColor(hela: hela.dokumentRimarko, malhela: malhela.dokumentRimarko)
 	
 	init(nomo: String, identigilo: String, hela: Koloraro, malhela: Koloraro) {
 		self.nomo = nomo
@@ -66,7 +72,9 @@ class InterfacStilo {
 			dokumentaAlternaFono: .systemGroupedBackground,
 			dokumentaTeksto: .black,
 			dokumentaDividilo: .lightGray,
-			dokumentLigilo: .brown
+			dokumentLigilo: .brown,
+			dokumentEkzemplo: .brown,
+			dokumentRimarko: .brown
 		),
 		malhela: Koloraro(
 			navigaciaFono: .brown,
@@ -77,7 +85,9 @@ class InterfacStilo {
 			dokumentaAlternaFono: .gray,
 			dokumentaTeksto: .white,
 			dokumentaDividilo: .gray,
-			dokumentLigilo: .brown
+			dokumentLigilo: .brown,
+			dokumentEkzemplo: .brown,
+			dokumentRimarko: .brown
 		)
 	)
 	
@@ -93,7 +103,9 @@ class InterfacStilo {
 			dokumentaAlternaFono: .systemGroupedBackground,
 			dokumentaTeksto: .black,
 			dokumentaDividilo: .lightGray,
-			dokumentLigilo: .green
+			dokumentLigilo: .green,
+			dokumentEkzemplo: .brown,
+			dokumentRimarko: .brown
 		),
 		malhela: Koloraro(
 			navigaciaFono: .green,
@@ -104,7 +116,9 @@ class InterfacStilo {
 			dokumentaAlternaFono: .gray,
 			dokumentaTeksto: .white,
 			dokumentaDividilo: .gray,
-			dokumentLigilo: .green
+			dokumentLigilo: .green,
+			dokumentEkzemplo: .brown,
+			dokumentRimarko: .brown
 		)
 	)
 	
@@ -124,6 +138,8 @@ struct Koloraro {
 	var dokumentaTeksto: UIColor
 	var dokumentaDividilo: UIColor
 	var dokumentLigilo: UIColor
+	var dokumentEkzemplo: UIColor
+	var dokumentRimarko: UIColor
 }
 
 // MARK: - Helpiloj
