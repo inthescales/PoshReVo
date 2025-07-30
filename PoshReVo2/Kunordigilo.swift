@@ -139,7 +139,7 @@ final class Kunordigilo {
 	}
 	
 	func prezentiArtikoloPaghon(el destino: Destino, prezentilo: UINavigationController) {
-		guard let artikolo = VortaroDatumbazo.komuna.artikolo(de: destino) else {
+		guard let artikolo = vortaro.artikolo(de: destino) else {
 			fatalError("Artikolo ne ekzistas") // TODO: Ŝanĝi tion ĉi
 		}
 		
@@ -168,8 +168,15 @@ final class Kunordigilo {
 		)
 		
 		let listeroj = destinoj.map { destino in
-			Serchlistero(teksto: destino.teksto, subteksto: destino.subteksto, destinoj: [destino])
+			// Se mankas subteksto, disigi per artikol-titolo
+			// — aparte utila ĉe esperantaj vortoj ekz. 'far/ad/o' / 'farad/o'
+			let subteksto = destino.subteksto
+				?? vortaro.artikolo(de: destino)?.titolo
+				?? nil
+			
+			return Serchlistero(teksto: destino.teksto, subteksto: subteksto, destinoj: [destino])
 		}
+		
 		disigilo.montri(listerojn: listeroj)
 		
 		prezentilo.pushViewController(disigilo, animated: true)
