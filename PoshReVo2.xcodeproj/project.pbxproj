@@ -19,6 +19,7 @@
 		00107E372E328C3D0010CECD /* AgtabuloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E362E328C390010CECD /* AgtabuloView.swift */; };
 		00107E3E2E32CC770010CECD /* VortListoNulStatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */; };
 		003024D12E3A7659006D0C14 /* UITableViewCell+Helpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */; };
+		003024D32E3A7B2A006D0C14 /* MallongigoListoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */; };
 		003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A72E37D8300039AC2C /* Tiparo.swift */; };
 		003FC1AA2E3920FB0039AC2C /* AlirebloTekstoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */; };
 		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
@@ -92,6 +93,7 @@
 		00107E362E328C390010CECD /* AgtabuloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgtabuloView.swift; sourceTree = "<group>"; };
 		00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortListoNulStatoView.swift; sourceTree = "<group>"; };
 		003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpiloj.swift"; sourceTree = "<group>"; };
+		003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoListoChelo.swift; sourceTree = "<group>"; };
 		003FC1A72E37D8300039AC2C /* Tiparo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiparo.swift; sourceTree = "<group>"; };
 		003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlirebloTekstoj.swift; sourceTree = "<group>"; };
 		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */,
+				003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */,
 			);
 			path = Mallongigoj;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				00B27B4B2DCE758B00526F82 /* HistorioViewController.swift in Sources */,
 				00B27B1C2DC2B0DE00526F82 /* LingvaroRedaktiloViewController.swift in Sources */,
 				00B27B782DF74E5900526F82 /* TekstoChelo.swift in Sources */,
+				003024D32E3A7B2A006D0C14 /* MallongigoListoChelo.swift in Sources */,
 				00107E2D2E304C0A0010CECD /* AgoHelpiloj.swift in Sources */,
 				00B27B0F2DC2648200526F82 /* LingvoElektiloViewController.swift in Sources */,
 				00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */,

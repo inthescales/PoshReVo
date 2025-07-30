@@ -58,6 +58,8 @@ extension LingvoListoViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let lingvo = lingvoj[indexPath.row]
 		elektisLingvon(lingvo)
+		
+		tableView.deselectRow(at: indexPath, animated: true)
 	}
 }
 

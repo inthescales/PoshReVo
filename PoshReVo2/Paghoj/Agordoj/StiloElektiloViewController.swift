@@ -9,6 +9,8 @@ final class StiloElektiloViewController: UIViewController {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
 		tabelo.dataSource = self
+		tabelo.backgroundColor = stilo.navigaciaFono
+		
 		return tabelo
 	}()
 	
@@ -67,6 +69,7 @@ final class StiloElektiloViewController: UIViewController {
 extension StiloElektiloViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		elektis(stilon: InterfacStilo.chiuj[indexPath.row])
+		tableView.deselectRow(at: indexPath, animated: true)
 	}
 }
 

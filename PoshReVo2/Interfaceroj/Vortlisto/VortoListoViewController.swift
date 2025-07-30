@@ -85,6 +85,7 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		elektis(listeroj[indexPath.row])
+		tableView.deselectRow(at: indexPath, animated: true)
 	}
 
 	// MARK: - UITableViewDataSource
