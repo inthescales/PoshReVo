@@ -11,7 +11,7 @@ final class V1UzantDatumoTenilo {
 		static let konservitaj = "konservitaj"
 	}
 	
-	private static var defaultaStilo: InterfacStilo = .karamela
+	private static var defaultaStilo: InterfacStilo = .defaulta
 	
 	/// Legas datumojn kiel skribitajn de v1 de la apo
 	static func legiV1Datumaron() -> UzantDatumaro? {

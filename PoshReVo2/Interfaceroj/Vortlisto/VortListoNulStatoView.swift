@@ -14,7 +14,8 @@ final class VortListoNulStatoView: UIView {
 		eti.numberOfLines = 0
 		eti.text = teksto
 		eti.font = .italicSystemFont(ofSize: 20).dinamika() // TODO: Tiparo
-		eti.textColor = stilo.dokumentaTeksto // TODO: Aldoni malfortan koloron
+		eti.textColor = stilo.dokumentaTeksto.withAlphaComponent(0.5) // TODO: Aldoni malfortan koloron
+		
 		return eti
 	}()
 	

@@ -172,6 +172,8 @@ extension LingvaroRedaktiloViewController: UITableViewDataSource {
 			chelo.selectionStyle = .default
 		}
 		
+		chelo.meti(stilon: stilo)
+		
 		return chelo
 	}
 	

@@ -122,6 +122,7 @@ extension KategoriaViewController: UITableViewDataSource {
 		
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "Kategoria")
 		novaChelo.textLabel?.text = listero.teksto
+		novaChelo.meti(stilon: stilo)
 		
 		return novaChelo
 	}

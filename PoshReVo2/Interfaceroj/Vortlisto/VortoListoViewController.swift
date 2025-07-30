@@ -18,6 +18,8 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		let tabelo = UITableView()
 		tabelo.delegate = self
 		tabelo.dataSource = self
+		tabelo.backgroundColor = stilo.dokumentaFono
+		
 		return tabelo
 	}()
 	
@@ -39,18 +41,23 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	
 	private let alvenasFinon: (() -> ())?
 	
+	private let stilo: InterfacStilo
+	
 	// MARK: - Pravalorizado
 	
 	init(
 		titolo: String? = nil,
 		nulTeksto: String? = nil,
 		elektis: @escaping (L) -> (),
-		alvenasFinon: (() -> ())? = nil
+		alvenasFinon: (() -> ())? = nil,
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.titolo = titolo
 		self.nulTeksto = nulTeksto
 		self.elektis = elektis
 		self.alvenasFinon = alvenasFinon
+		self.stilo = stilo
+		
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -100,6 +107,7 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "vortoListo")
 		novaChelo.textLabel?.text = listero.teksto
 		novaChelo.detailTextLabel?.text = listero.subteksto
+		novaChelo.meti(stilon: stilo)
 		
 		if indexPath.row > tableView.numberOfRows(inSection: indexPath.section) - Konstantoj.finaRegiono {
 			alvenasFinon?()

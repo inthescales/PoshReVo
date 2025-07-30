@@ -7,27 +7,31 @@ final class SerchiloView: UIView {
 		return staplo
 	}()
 	
+	private lazy var fono: UIView = {
+		let fono = UIView()
+		fono.backgroundColor = stilo.navigaciaFono
+		return fono
+	}()
+	
 	private lazy var serchilo: UISearchBar = {
 		let serchilo = UISearchBar()
 		serchilo.delegate = self
-		serchilo.placeholder = lokokupaTeksto
-		serchilo.searchTextField.backgroundColor = stilo.dokumentaFono
-		serchilo.searchTextField.autocapitalizationType = .none
-		serchilo.tintColor = stilo.dokumentLigilo
+		// serchilo.placeholder = lokokupaTeksto
+		serchilo.searchTextField.attributedPlaceholder = NSAttributedString(
+			string: lokokupaTeksto,
+			attributes: [NSAttributedString.Key.foregroundColor :stilo.dokumentaTeksto.withAlphaComponent(0.5)]
+		)
 		
-		// Ŝajne, ĉio ĉi frenezaĵo necesas por nevidebligi la fonon malantaŭ la tekstejo
+		serchilo.searchTextField.backgroundColor = stilo.dokumentaFono
+		serchilo.searchTextField.textColor = stilo.dokumentaTeksto
+		serchilo.searchTextField.autocapitalizationType = .none
+		serchilo.tintColor = stilo.dokumentaTeksto
+		serchilo.searchBarStyle = .prominent
+		
+		// Nevidebligi la UISearchBarBackground-on
 		serchilo.backgroundColor = .clear
 		serchilo.barTintColor = .clear
-		serchilo.backgroundImage = UIImage(named: "falsaNomo")
-		for subview in serchilo.subviews {
-			if let fonoClass: AnyClass = NSClassFromString("UISearchBarBackground") {
-				for fonoView in subview.subviews where fonoView.isKind(of: fonoClass) {
-					fonoView.backgroundColor = .clear
-					fonoView.isHidden = true
-					fonoView.alpha = 0
-				}
-			}
-		}
+		serchilo.backgroundImage = UIImage()
 		
 		serchilo.searchTextField.isAccessibilityElement = true
 		serchilo.searchTextField.accessibilityIdentifier = "serchTabulaTekstejo"
@@ -65,6 +69,8 @@ final class SerchiloView: UIView {
 		self.tekstoShanghighis = tekstoShanghighis
 		self.stilo = stilo
 		super.init(frame: .zero)
+		
+		addEdgeMatchedSubview(fono)
 		
 		addSubview(staplo)
 		staplo.snp.makeConstraints { make in

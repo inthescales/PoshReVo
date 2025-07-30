@@ -25,6 +25,8 @@ final class DerivajhTitoloChelo: UITableViewCell {
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		
+		backgroundColor = .clear
+		
 		contentView.addSubview(etikedo)
 		contentView.addSubview(dividilo)
 	}

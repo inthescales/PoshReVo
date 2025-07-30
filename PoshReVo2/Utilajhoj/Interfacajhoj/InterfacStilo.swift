@@ -60,6 +60,37 @@ class InterfacStilo {
 		return .chiuj.first(where: { stilo in stilo.nomo == nomo })
 	}
 	
+	static let pergamena = InterfacStilo(
+		nomo: "pergamena",
+		identigilo: "pergamena",
+		hela: Koloraro(
+			navigaciaFono: UIColor(red: 0.65, green: 0.43, blue: 0.09, alpha: 1.0),
+			navigaciaTeksto: UIColor(red: 0.99, green: 0.86, blue: 0.52, alpha: 1.0),
+			navigaciaButono: UIColor(red: 0.99, green: 0.86, blue: 0.52, alpha: 1.0),
+			navigaciaButonoMalaktiva: UIColor(red: 0.47, green: 0.37, blue: 0.21, alpha: 1.0),
+			dokumentaFono: UIColor(red: 1.0, green: 0.93, blue: 0.82, alpha: 1.0),
+			dokumentaAlternaFono: UIColor(red: 0.78, green: 0.68, blue: 0.53, alpha: 1.0),
+			dokumentaTeksto: .red, // UIColor(red: 0.07, green: 0.07, blue: 0.13, alpha: 1.0),
+			dokumentaDividilo: UIColor(red: 0.78, green: 0.68, blue: 0.53, alpha: 1.0),
+			dokumentLigilo: UIColor(red: 0.26, green: 0.29, blue: 0.58, alpha: 1.0),
+			dokumentEkzemplo: UIColor(red: 0.87, green: 0.49, blue: 0.03, alpha: 1.0),
+			dokumentRimarko: UIColor(red: 0.53, green: 0.16, blue: 0.25, alpha: 1.0)
+		),
+		malhela: Koloraro(
+			navigaciaFono: .brown,
+			navigaciaTeksto: .white,
+			navigaciaButono: .black,
+			navigaciaButonoMalaktiva: .brown,
+			dokumentaFono: .black,
+			dokumentaAlternaFono: .gray,
+			dokumentaTeksto: .white,
+			dokumentaDividilo: .gray,
+			dokumentLigilo: .brown,
+			dokumentEkzemplo: .brown,
+			dokumentRimarko: .brown
+		)
+	)
+	
 	static let karamela = InterfacStilo(
 		nomo: "karamela",
 		identigilo: "karamela",
@@ -122,7 +153,10 @@ class InterfacStilo {
 		)
 	)
 	
+	static var defaulta: InterfacStilo = .pergamena
+	
 	static var chiuj: [InterfacStilo] = [
+		.pergamena,
 		.karamela,
 		.verda
 	]

@@ -133,29 +133,32 @@ extension AgordojViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell: UITableViewCell
+		let chelo: UITableViewCell
+			
 		switch (indexPath.section, indexPath.row) {
 		case (0, 0):
-			cell = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
-			cell.textLabel?.text = "Viaj Lingvoj"
-			cell.detailTextLabel?.text = String(datumRegilo.datumaro.lingvoj.count) + Tekstoj._lingvoj
+			chelo = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
+			chelo.textLabel?.text = "Viaj Lingvoj"
+			chelo.detailTextLabel?.text = String(datumRegilo.datumaro.lingvoj.count) + Tekstoj._lingvoj
 		case (1, 0):
-			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
-			cell.textLabel?.text = "Forigi Historion"
-			cell.accessoryType = .none
+			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
+			chelo.textLabel?.text = "Forigi Historion"
+			chelo.accessoryType = .none
 		case (1, 1):
-			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
-			cell.textLabel?.text = "Forigi Konservitajn"
-			cell.accessoryType = .none
+			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
+			chelo.textLabel?.text = "Forigi Konservitajn"
+			chelo.accessoryType = .none
 		case (2, 0):
-			cell = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
-			cell.textLabel?.text = "Ŝanĝi Stilon"
-			cell.detailTextLabel?.text = stilo.nomo
+			chelo = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
+			chelo.textLabel?.text = "Ŝanĝi Stilon"
+			chelo.detailTextLabel?.text = stilo.nomo
 		default:
-			cell = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
+			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			break
 		}
 		
-		return cell
+		chelo.meti(stilon: stilo)
+		
+		return chelo
 	}
 }

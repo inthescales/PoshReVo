@@ -81,6 +81,7 @@ extension LingvoListoViewController: UITableViewDataSource {
 		novaChelo.textLabel?.text = lingvo.nomo
 		novaChelo.accessoryType = jamElektitaj.contains(lingvo) ? .checkmark : .none
 		novaChelo.tintColor = stilo.navigaciaFono
+		novaChelo.meti(stilon: stilo)
 		
 		return novaChelo
 	}
