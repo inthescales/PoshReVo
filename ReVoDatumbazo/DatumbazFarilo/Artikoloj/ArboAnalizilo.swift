@@ -79,7 +79,7 @@ enum ArboAnalizilo {
 			case .em:
 				teksto += trakti(emfazon: filo, stato: stato)
 			case .fnt:
-				teksto = teksto.tondi()
+				teksto = traktiFonton(teksto: teksto, stato: stato)
 			case .frm:
 				teksto += trakti(formulon: filo, stato: stato)
 			case .g:

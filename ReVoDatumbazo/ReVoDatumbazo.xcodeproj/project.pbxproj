@@ -15,6 +15,8 @@
 		000DA6C92D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6C52D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodeld */; };
 		000F784724F1B47400F918C9 /* Oficialeco+Datumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F784624F1B47400F918C9 /* Oficialeco+Datumbazo.swift */; };
 		0027816724B7CE7300DFD71F /* Destino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0027816624B7CE7300DFD71F /* Destino.swift */; };
+		003024D82E3ABB72006D0C14 /* TraktiFonton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D72E3ABB6D006D0C14 /* TraktiFonton.swift */; };
+		003024D92E3ABB72006D0C14 /* TraktiFonton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D72E3ABB6D006D0C14 /* TraktiFonton.swift */; };
 		003657142309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657132309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift */; };
 		003657172309CE250028C21F /* VortaroDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657162309CE250028C21F /* VortaroDatumbazo.swift */; };
 		0036571A2309DB740028C21F /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
@@ -300,6 +302,7 @@
 		000DA6C62D8F2DF50026CBA0 /* PoshReVoDatumoj.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PoshReVoDatumoj.xcdatamodel; sourceTree = "<group>"; };
 		000F784624F1B47400F918C9 /* Oficialeco+Datumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Oficialeco+Datumbazo.swift"; sourceTree = "<group>"; };
 		0027816624B7CE7300DFD71F /* Destino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destino.swift; sourceTree = "<group>"; };
+		003024D72E3ABB6D006D0C14 /* TraktiFonton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiFonton.swift; sourceTree = "<group>"; };
 		003657132309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DatumbazAlirilo+PrefiksArbo.swift"; sourceTree = "<group>"; };
 		003657162309CE250028C21F /* VortaroDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortaroDatumbazo.swift; sourceTree = "<group>"; };
 		003657192309DB740028C21F /* DatumbazAlirilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumbazAlirilo.swift; sourceTree = "<group>"; };
@@ -603,6 +606,7 @@
 		0099FC0E2D65058C0033EC11 /* NodTraktado */ = {
 			isa = PBXGroup;
 			children = (
+				003024D72E3ABB6D006D0C14 /* TraktiFonton.swift */,
 				0099FBE32D65058C0033EC11 /* TraktiAltigitan.swift */,
 				0099FBE42D65058C0033EC11 /* TraktiArtikolon.swift */,
 				0099FBE52D65058C0033EC11 /* TraktiAutoron.swift */,
@@ -1034,9 +1038,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1160,6 +1168,7 @@
 				0099FC512D65058C0033EC11 /* TraktiRadikon.swift in Sources */,
 				0099FC5E2D65058C0033EC11 /* TraktiURLon.swift in Sources */,
 				00B297192D650F5100264431 /* DatumbazAlirilo.swift in Sources */,
+				003024D82E3ABB72006D0C14 /* TraktiFonton.swift in Sources */,
 				00B2971B2D65122B00264431 /* Artikolo+Datumbazo.swift in Sources */,
 				00B2971C2D65122B00264431 /* Fako+Datumbazo.swift in Sources */,
 				00B2971E2D65122B00264431 /* Lingvo+Datumbazo.swift in Sources */,
@@ -1224,6 +1233,7 @@
 				0099FCEE2D65067F0033EC11 /* VortListoj.swift in Sources */,
 				0099FCEF2D65067F0033EC11 /* PrefiksArboFarilo.swift in Sources */,
 				0099FCF02D65067F0033EC11 /* main.swift in Sources */,
+				003024D92E3ABB72006D0C14 /* TraktiFonton.swift in Sources */,
 				0099FCEB2D6506580033EC11 /* DatumbazFariloTestoj.swift in Sources */,
 				0099FCF32D6506890033EC11 /* Artikolaro.swift in Sources */,
 				0099FCF42D6506890033EC11 /* ArtikolKonvertilo.swift in Sources */,

@@ -22,13 +22,7 @@ extension ArboAnalizilo {
 					akumulilo.aldoni(tekston: "\n")
 				}
 			case .fnt:
-				switch stato.sibStako.last {
-				case .uzo:
-					// XXX: Uzoj devas lasi spacon tekst-fine.
-					break
-				default:
-					akumulilo.tondiTekston()
-				}
+				traktiFonton(akumulilo: akumulilo, stato: stato)
 			case .gra:
 				akumulilo.aldoni(tekston: trakti(gramatikon: filo, stato: stato))
 			case .kap:

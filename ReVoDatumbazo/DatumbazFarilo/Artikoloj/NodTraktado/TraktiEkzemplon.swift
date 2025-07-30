@@ -12,7 +12,7 @@ extension ArboAnalizilo {
 			case .esc:
 				teksto += trakti(escepton: filo, stato: stato)
 			case .fnt:
-				teksto = teksto.tondi()
+				teksto = traktiFonton(teksto: teksto, stato: stato)
 			case .frm:
 				teksto += trakti(formulon: filo, stato: stato)
 			case .ind:

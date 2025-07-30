@@ -22,9 +22,7 @@ extension ArboAnalizilo {
 			case .drv(let mrk):
 				akumulilo.aldoni(blokojn: trakti(derivajhon: filo, marko: mrk, stato: stato))
 			case .fnt:
-				// Se estontece artikolojn rekte enhavos tekstojn, tondu ĉi tie
-				akumulilo.tondiTekston()
-				break
+				traktiFonton(akumulilo: akumulilo, stato: stato)
 			case .kap:
 				_ = trakti(kapon: filo, stato: stato)
 			case .ref(let tipo, let celo):
@@ -36,7 +34,6 @@ extension ArboAnalizilo {
 			case .rim:
 				// vd. premi
 				akumulilo.aldoni(tekston: trakti(rimarkon: filo, stato: stato))
-				break
 			case .subart:
 				akumulilo.aldoni(blokojn: trakti(subartikolon: filo, numero: subartikoloNumero, stato: stato))
 				subartikoloNumero += 1

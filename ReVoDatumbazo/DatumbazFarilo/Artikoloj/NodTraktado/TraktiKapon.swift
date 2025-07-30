@@ -23,9 +23,8 @@ extension ArboAnalizilo {
 			traktiFilojn(de: kapo, stato: stato) { filo in
 				switch filo.tipo {
 				case .fnt:
-					teksto = teksto.tondi()
-					tildTeksto = tildTeksto.tondi()
-					break
+					teksto = traktiFonton(teksto: teksto, stato: stato)
+					tildTeksto = traktiFonton(teksto: tildTeksto, stato: stato)
 				case .ofc:
 					stato.artikolFabriko.ofc = trakti(oficialecon: filo, stato: stato)
 				case .rad(let vari):
@@ -104,8 +103,8 @@ extension ArboAnalizilo {
 			traktiFilojn(de: kapo, stato: stato) { filo in
 				switch filo.tipo {
 				case .fnt:
-					teksto = teksto.tondi()
-					tildTeksto = tildTeksto.tondi()
+					teksto = traktiFonton(teksto: teksto, stato: stato)
+					tildTeksto = traktiFonton(teksto: tildTeksto, stato: stato)
 				case .ofc:
 					oficialeco = trakti(oficialecon: filo, stato: stato)
 				case .rad(let vari):
