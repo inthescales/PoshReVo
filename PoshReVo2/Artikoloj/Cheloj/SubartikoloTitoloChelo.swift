@@ -13,13 +13,7 @@ final class SubartikoloTitoloChelo: UITableViewCell {
 		return etikedo
 	}()
 	
-	private lazy var linio: UIView = {
-		let linio = UIView()
-		linio.snp.makeConstraints { make in
-			make.height.equalTo(Konstantoj.strekDiko)
-		}
-		return linio
-	}()
+	private lazy var linio = UIView()
 	
 	//
 	
@@ -48,15 +42,15 @@ final class SubartikoloTitoloChelo: UITableViewCell {
 		
 		linio.backgroundColor = stilo.dokumentaTeksto
 		
-		etikedo.snp.makeConstraints { make in
+		etikedo.snp.remakeConstraints { make in
 			make.left.top.bottom.equalToSuperview().inset(margheno)
-			// make.top.bottom.equalToSuperview()
 		}
 		
-		linio.snp.makeConstraints { make in
+		linio.snp.remakeConstraints { make in
 			make.centerY.equalToSuperview()
-			make.right.equalToSuperview().inset(margheno)
 			make.left.equalTo(etikedo.snp.right).offset(margheno)
+			make.right.equalToSuperview().inset(margheno).priority(.low) // Malalta prioritato forigas vido-jungan eraron
+			make.height.equalTo(Konstantoj.strekDiko)
 		}
 	}
 }
