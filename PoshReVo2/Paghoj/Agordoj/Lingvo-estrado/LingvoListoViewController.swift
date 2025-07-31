@@ -8,6 +8,8 @@ final class LingvoListoViewController: UIViewController {
 		let tabelo = UITableView()
 		tabelo.delegate = self
 		tabelo.dataSource = self
+		tabelo.backgroundColor = stilo.dokumentaFono
+		
 		return tabelo
 	}()
 	
@@ -81,8 +83,8 @@ extension LingvoListoViewController: UITableViewDataSource {
 		
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "vortoListo")
 		novaChelo.textLabel?.text = lingvo.nomo
-		novaChelo.accessoryType = jamElektitaj.contains(lingvo) ? .checkmark : .none
-		novaChelo.tintColor = stilo.navigaciaFono
+		novaChelo.accessoryType = jamElektitaj.contains(where: { $0.kodo == lingvo.kodo }) ? .checkmark : .none // TODO: Ŝanĝi kiam Lingvoj estos denove strukt-ojn
+		novaChelo.tintColor = stilo.dokumentaTeksto.withAlphaComponent(0.5)
 		novaChelo.meti(stilon: stilo)
 		
 		return novaChelo

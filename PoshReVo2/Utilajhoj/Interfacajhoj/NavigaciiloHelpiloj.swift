@@ -12,7 +12,7 @@ enum NavigaciiloHelpiloj {
 			target: vc,
 			action: ago
 		)
-		butono.tintColor = stilo.navigaciaTeksto
+		butono.tintColor = stilo.navigaciaButono
 		return butono
 	}
 	

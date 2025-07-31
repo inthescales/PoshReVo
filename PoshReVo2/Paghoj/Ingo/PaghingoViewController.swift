@@ -10,7 +10,7 @@ final class PaghingoViewController: UIViewController {
 			target: self,
 			action: #selector(Self.premisTripunkton)
 		)
-		butono.tintColor = DinamikaStilo.navigaciaTeksto
+		butono.tintColor = DinamikaStilo.navigaciaButono
 		butono.accessibilityLabel = AlirebloTekstoj.malfermiMenuon
 		
 		return butono

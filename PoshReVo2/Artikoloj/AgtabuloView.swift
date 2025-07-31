@@ -19,7 +19,7 @@ final class AgtabuloView: UIView {
 			UIImage(named: "plenaStelo")?.withRenderingMode(.alwaysTemplate),
 			for: .selected
 		)
-		butono.tintColor = stilo.navigaciaTeksto
+		butono.tintColor = stilo.navigaciaButono
 		butono.addTarget(self, action: #selector(premisKonservi), for: .touchUpInside)
 		return butono
 	}()
@@ -30,7 +30,7 @@ final class AgtabuloView: UIView {
 			UIImage(named: "saltosago")?.withRenderingMode(.alwaysTemplate),
 			for: .normal
 		)
-		butono.tintColor = stilo.navigaciaTeksto
+		butono.tintColor = stilo.navigaciaButono
 		butono.addTarget(self, action: #selector(premisSalti), for: .touchUpInside)
 		butono.accessibilityLabel = AlirebloTekstoj.saltiAl
 		

@@ -76,8 +76,6 @@ final class LingvoElektiloViewController: UIViewController {
 			stilo: stilo
 		)
 		
-		view.backgroundColor = stilo.navigaciaFono
-		
 		view.addSubview(serchilo)
 		serchilo.snp.makeConstraints { make in
 			make.top.left.right.equalToSuperview()

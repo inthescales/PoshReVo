@@ -24,7 +24,7 @@ final class ArtikoloViewController: UIViewController {
 			target: self,
 			action: #selector(Self.premisLupeon)
 		)
-		butono.tintColor = stilo.navigaciaTeksto
+		butono.tintColor = stilo.navigaciaButono
 		butono.accessibilityLabel = AlirebloTekstoj.serchi
 		
 		return butono

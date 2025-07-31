@@ -10,7 +10,7 @@ final class HistorioViewController: UIViewController {
 			target: self,
 			action: #selector(forigi)
 		)
-		butono.tintColor = DinamikaStilo.navigaciaTeksto
+		butono.tintColor = DinamikaStilo.navigaciaButono
 		return butono
 	}()
 	

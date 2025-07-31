@@ -57,7 +57,7 @@ final class LingvoBretoViewController: UIViewController {
 	lazy var pliButono: UIButton = {
 		let butono = UIButton()
 		butono.metiDinamikanTitolon(Tekstoj.pli, tiparo: Konstantoj.butonoTiparo)
-		butono.setTitleColor(stilo.navigaciaTeksto, for: .normal)
+		butono.setTitleColor(stilo.navigaciaButono, for: .normal)
 		butono.addTarget(self, action: #selector(premisPli), for: .touchUpInside)
 		return butono
 	}()
@@ -212,7 +212,7 @@ final class LingvoBretoViewController: UIViewController {
 			
 			let etikedo = UIButton()
 			etikedo.metiDinamikanTitolon(lingvo.nomo, tiparo: Konstantoj.butonoTiparo)
-			let koloro = (elektita.kodo == lingvo.kodo) ? stilo.navigaciaTeksto : stilo.navigaciaButonoMalaktiva // TODO: Lingva egaleco
+			let koloro = (elektita.kodo == lingvo.kodo) ? stilo.navigaciaTeksto : stilo.navigaciaButono // TODO: Lingva egaleco
 			etikedo.setTitleColor(koloro, for: .normal)
 			etikedo.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
 			etikedo.tag = i
@@ -262,7 +262,7 @@ final class LingvoBretoViewController: UIViewController {
 			options: .curveEaseOut
 		) { [weak self] in
 			aktivaButono.setTitleColor(self?.stilo.navigaciaTeksto, for: .normal)
-			malaktivaButono.setTitleColor(self?.stilo.navigaciaButonoMalaktiva, for: .normal)
+			malaktivaButono.setTitleColor(self?.stilo.navigaciaButono, for: .normal)
 		}
 	}
 	
