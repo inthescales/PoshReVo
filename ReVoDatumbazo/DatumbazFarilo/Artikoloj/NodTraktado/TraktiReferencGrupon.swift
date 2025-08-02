@@ -5,12 +5,18 @@ extension ArboAnalizilo {
 		stato: Stato
 	) -> String {
 		var prefikso = ""
-		switch stato.sibStako.last {
-		case .ref, .refgrp:
-			prefikso += " "
-			break
+		
+		switch stato.cheno.last {
+		case .drv, .snc, .subdrv, .subsnc:
+			switch stato.sibStako.last {
+			case .fnt, .ref, .refgrp, .teksto, .uzo:
+				prefikso += " "
+				break
+			default:
+				prefikso += "\n"
+			}
 		default:
-			prefikso += "\n"
+			break
 		}
 		
 		let montriSimbolon = {

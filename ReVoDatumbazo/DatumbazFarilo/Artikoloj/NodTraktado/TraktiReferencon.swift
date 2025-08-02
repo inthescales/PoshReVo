@@ -9,9 +9,12 @@ extension ArboAnalizilo {
 		var teksto = ""
 		
 		switch stato.cheno.last {
-		case .drv, .snc:
+		case .drv, .snc, .subdrv, .subsnc:
 			switch stato.sibStako.last {
-			case .ref, .refgrp:
+			case .fnt, .ref, .refgrp, .teksto, .uzo:
+				// ekzemploj:
+				// teksto:  	prem/i
+				// fnt/ uzo: 	ĵeto (2)
 				teksto += " "
 				break
 			default:
@@ -37,7 +40,9 @@ extension ArboAnalizilo {
 			case .klr:
 				teksto += trakti(klarigon: filo, stato: stato)
 			case .teksto(let filteksto):
-				teksto += filteksto.prepari().tondi()
+				// Kelkfoje troviĝas kroma spaco post teksto ĉi-tie, tamen tondado kaŭzus problemojn
+				// en kazoj kiel "<ref tip="sin" cel="arab.SaudaA0ujo">Sauda <tld lit="A"/>ujo</ref>"
+				teksto += filteksto.prepari()
 			default:
 				assert(false, "Neatendita filo")
 			}

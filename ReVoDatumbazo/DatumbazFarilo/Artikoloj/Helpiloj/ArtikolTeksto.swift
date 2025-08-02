@@ -75,7 +75,7 @@ enum ArtikolTeksto {
 		case "ekz":
 			return "⇉"
 		case "prt":
-			return nil
+			return "➞⊐"
 		case "malprt":
 			return nil
 		default:

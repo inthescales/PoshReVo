@@ -33,7 +33,7 @@ extension ArboAnalizilo {
 				akumulilo.aldoni(tekston: trakti(referencGrupon: filo, tipo: tipo, stato: stato))
 			case .rim:
 				// vd. premi
-				akumulilo.aldoni(tekston: trakti(rimarkon: filo, stato: stato))
+				akumulilo.aldoni(tekston: trakti(rimarkon: filo, sekvasTekston: false, stato: stato))
 			case .subart:
 				akumulilo.aldoni(blokojn: trakti(subartikolon: filo, numero: subartikoloNumero, stato: stato))
 				subartikoloNumero += 1

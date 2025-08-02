@@ -395,7 +395,8 @@ extension ArtikoloViewController: TTTAttributedLabelDelegate {
 				kunordigilo.prezentiArtikoloPaghon(
 					el: artikolo,
 					marko: derivajhMarko,
-					prezentilo: navigaciilo)
+					prezentilo: navigaciilo
+				)
 			}
 		}
 	}
