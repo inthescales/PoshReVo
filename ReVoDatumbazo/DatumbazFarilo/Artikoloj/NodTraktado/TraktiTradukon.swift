@@ -13,9 +13,9 @@ extension ArboAnalizilo {
 		lingvo: String,
 		transpasIndekso: IndeksRezulto? = nil,
 		stato: Stato
-	) {
+	) -> String? {
 		guard let marko = stato.marko else {
-			return
+			return nil
 		}
 		
 		let artikolTeksto = kunigiTradukTekstojn(de: traduko, tipo: .artikola, stato: stato)
@@ -54,6 +54,8 @@ extension ArboAnalizilo {
 			)
 			stato.aldoni(serchTradukon: serchTraduko, lingvo: lingvo)
 		}
+		
+		return artikolTeksto
 	}
 	
 	/// Liveras 'true' se necesos plurforma traduk-teksto

@@ -61,7 +61,7 @@ extension ArboAnalizilo {
 			case .tld(let lit, let vari):
 				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
 			case .trd(let lng):
-				trakti(tradukon: filo, lingvo: lng!, stato: stato)
+				teksto += trakti(tradukon: filo, lingvo: lng!, stato: stato) ?? ""
 			case .trdgrp(let lng):
 				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
 			default:

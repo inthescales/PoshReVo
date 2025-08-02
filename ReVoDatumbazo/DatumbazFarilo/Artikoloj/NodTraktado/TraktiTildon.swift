@@ -21,7 +21,7 @@ extension ArboAnalizilo {
 		}
 		
 		if case .ekz = stato.cheno.last {
-			teksto = TekstAtributo.volvi(tekston: teksto, per: .grasa)
+			teksto = TekstAtributo.volvi(teksto, per: .grasa)
 		}
 		
 		return teksto

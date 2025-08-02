@@ -44,7 +44,7 @@ extension ArboAnalizilo {
 				
 				if let subsencNombro = stato.lastaSubsenco,
 				   let litero = ArtikolTeksto.subsencLitero(por: subsencNombro) {
-					teksto += "\n\n" + TekstAtributo.volvi(tekston: litero + ") ", per: .sencNumero)
+					teksto += "\n\n" + TekstAtributo.volvi(litero + ") ", per: .sencNumero)
 				}
 				teksto += filTeksto
 			case .teksto, .tezrad:
@@ -52,7 +52,7 @@ extension ArboAnalizilo {
 			case .tld(let lit, let vari):
 				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
 			case .trd(let lng):
-				trakti(tradukon: filo, lingvo: lng!, stato: stato)
+				_ = trakti(tradukon: filo, lingvo: lng!, stato: stato)
 			case .trdgrp(let lng):
 				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
 			case .url(let ref):

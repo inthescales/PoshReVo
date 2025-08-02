@@ -147,8 +147,12 @@ final class Kunordigilo {
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
-	func prezentiArtikoloPaghon(el artikolo: Artikolo, prezentilo: UINavigationController) {
-		let vc = fariArtikoloPaghon(el: artikolo, prezentilo: prezentilo)
+	func prezentiArtikoloPaghon(
+		el artikolo: Artikolo,
+		marko: String? = nil,
+		prezentilo: UINavigationController
+	) {
+		let vc = fariArtikoloPaghon(el: artikolo, marko: marko, prezentilo: prezentilo)
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	

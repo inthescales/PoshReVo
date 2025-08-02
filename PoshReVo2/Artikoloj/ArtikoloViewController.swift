@@ -367,23 +367,35 @@ extension ArtikoloViewController: TTTAttributedLabelDelegate {
 	// TAMEN, mi ankoraŭ uzas TTT ĉar la ligado per tio estas multe pli rapida
 	// Ankaŭ esplorinda: https://stackoverflow.com/questions/22379595/uitextview-link-tap-recognition-is-delayed
 	func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
-		let marko = url.absoluteString
-		let markeroj = marko.components(separatedBy: ".")
+		let urlTeksto = url.absoluteString
 		
-		guard markeroj.count > 1 else {
-			return
-		}
-		
-		if markeroj[0] == artikolo.indekso
-			&& markeroj.count >= 2 {
-			saltiAlMarko(markeroj[0] + "." + markeroj[1], animacii: true)
+		if urlTeksto.prefix(4) == "http" {
+			// La URL indikas eksteran retejon - montri ĝin per retumilon
+			UIApplication.shared.open(url, options: [:], completionHandler: nil)
 		} else {
-			if markeroj[0] == artikolo.indekso {
-				saltiAlMarko(marko, animacii: true)
-			}
-			else if let artikolo = VortaroDatumbazo.komuna.artikolo(indekso: markeroj[0]),
-				let navigaciilo = navigationController {
-				kunordigilo.prezentiArtikoloPaghon(el: artikolo, prezentilo: navigaciilo)
+			// La URL indikas markon en ReVo-a artikolo
+			let markeroj = urlTeksto.components(separatedBy: ".")
+			
+			// Markero indikanta artikolon
+			let artikolMarko = markeroj[0]
+
+			// Markoj en ligiloj foje havas pli ol 2 segmentojn, ekz. 'margxe.0ulo.MOD',
+			// indikanta certan sencon. Tamen, dum sencoj ĉi-ape estas kunigitaj simple el
+			// tekstoj, ne eblas salti rekte al senco. Do ni uzu ĉi tie nur la unuaj du
+			// markeroj, kiu indikos derivaĵon.
+			let derivajhMarko = (markeroj.count > 1) ? markeroj[0] + "." + markeroj[1] : nil
+			
+			if markeroj[0] == artikolo.indekso,
+			   let derivajhMarko {
+				// Salti ene de ĉi-artikolo
+				saltiAlMarko(derivajhMarko, animacii: true)
+			} else if let artikolo = VortaroDatumbazo.komuna.artikolo(indekso: artikolMarko),
+					  let navigaciilo = navigationController {
+				// Prezenti alian artikolon
+				kunordigilo.prezentiArtikoloPaghon(
+					el: artikolo,
+					marko: derivajhMarko,
+					prezentilo: navigaciilo)
 			}
 		}
 	}

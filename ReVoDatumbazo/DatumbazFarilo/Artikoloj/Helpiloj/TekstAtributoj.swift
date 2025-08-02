@@ -83,7 +83,7 @@ public enum TekstAtributo: CaseIterable, Equatable {
 		return "</" + kodo + ">"
 	}
 	
-	public static func volvi(tekston teksto: String, per atributo: TekstAtributo) -> String {
+	public static func volvi(_ teksto: String, per atributo: TekstAtributo) -> String {
 		return atributo.malfermaEtikedo + teksto + atributo.fermaEtikedo
 	}
 	

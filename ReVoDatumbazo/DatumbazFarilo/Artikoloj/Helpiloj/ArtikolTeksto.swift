@@ -187,6 +187,6 @@ enum ArtikolTeksto {
 	// MARK: - Helpiloj
 	
 	private static func kolorEtikedi(_ enhavoj: String) -> String {
-		return TekstAtributo.volvi(tekston: enhavoj, per: .sencNumero)
+		return TekstAtributo.volvi(enhavoj, per: .sencNumero)
 	}
 }

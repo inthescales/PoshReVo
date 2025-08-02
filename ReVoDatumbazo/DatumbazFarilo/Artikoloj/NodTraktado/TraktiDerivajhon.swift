@@ -62,7 +62,7 @@ extension ArboAnalizilo {
 					if sencNombro > 1 {
 						akumulilo.aldoni(tekston:  "\n\n")
 					}
-					let volvitaTeksto = TekstAtributo.volvi(tekston: String(sencNombro) + ". ", per: .sencNumero)
+					let volvitaTeksto = TekstAtributo.volvi(String(sencNombro) + ". ", per: .sencNumero)
 					akumulilo.aldoni(tekston: volvitaTeksto)
 				}
 				
@@ -74,7 +74,7 @@ extension ArboAnalizilo {
 					if subdrvNumero > 1 {
 						akumulilo.aldoni(tekston:  "\n\n")
 					}
-					let volvitaTeksto = TekstAtributo.volvi(tekston: ArtikolTeksto.subdrvLitero(por: subdrvNumero)! + ". ", per: .sencNumero)
+					let volvitaTeksto = TekstAtributo.volvi(ArtikolTeksto.subdrvLitero(por: subdrvNumero)! + ". ", per: .sencNumero)
 					akumulilo.aldoni(tekston: volvitaTeksto)
 				}
 				
@@ -86,7 +86,7 @@ extension ArboAnalizilo {
 			case .tezrad:
 				break
 			case .trd(let lng):
-				trakti(tradukon: filo, lingvo: lng!, stato: stato)
+				_ = trakti(tradukon: filo, lingvo: lng!, stato: stato)
 			case .trdgrp(let lng):
 				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
 			case .url(let ref):

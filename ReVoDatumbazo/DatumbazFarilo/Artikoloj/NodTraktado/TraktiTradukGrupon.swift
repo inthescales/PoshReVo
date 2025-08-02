@@ -8,7 +8,7 @@ extension ArboAnalizilo {
 		traktiFilojn(de: tradukGrupo, stato: stato) { filo in
 			switch filo.tipo {
 			case .trd:
-				trakti(tradukon: filo, lingvo: lingvo, transpasIndekso: transpasIndekso, stato: stato)
+				_ = trakti(tradukon: filo, lingvo: lingvo, transpasIndekso: transpasIndekso, stato: stato)
 			case .teksto:
 				break
 			default:

@@ -42,7 +42,7 @@ extension ArboAnalizilo {
 			case .teksto:
 				break
 			case .trd(let lng):
-				trakti(tradukon: filo, lingvo: lng!, stato: stato)
+				_ = trakti(tradukon: filo, lingvo: lng!, stato: stato)
 			case .trdgrp(let lng):
 				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
 			default:

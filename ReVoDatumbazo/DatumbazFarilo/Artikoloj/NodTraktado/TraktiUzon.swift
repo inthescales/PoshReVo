@@ -19,7 +19,10 @@ extension ArboAnalizilo {
 			}
 			
 			return "[\(teksto)] "
-		case "klr", "stl":
+		case "klr":
+			// Klarigo kutime havas parentezojn en sia fila teksto
+			return teksto
+		case "stl":
 			let stilTeksto = stato.stiloj[teksto] ?? teksto
 			return "(\(stilTeksto)) "
 		case nil:

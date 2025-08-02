@@ -44,7 +44,7 @@ extension ArboAnalizilo {
 			case .ts:
 				teksto += trakti(trastrekitan: filo, stato: stato)
 			case .trd(let lng):
-				trakti(tradukon: filo, lingvo: lng!, transpasIndekso: indeksajho, stato: stato)
+				_ = trakti(tradukon: filo, lingvo: lng!, transpasIndekso: indeksajho, stato: stato)
 			case .trdgrp(let lng):
 				trakti(tradukGrupon: filo, lingvo: lng, transpasIndekso: indeksajho, stato: stato)
 			case .uzo(let tip):
@@ -55,7 +55,7 @@ extension ArboAnalizilo {
 		}
 		
 		if stila {
-			return "\n" + TekstAtributo.volvi(tekston: " · " + teksto.kunpremi().tondi(), per: .ekzemplo)
+			return "\n" + TekstAtributo.volvi(" · " + teksto.kunpremi().tondi(), per: .ekzemplo)
 		} else {
 			return teksto.kunpremi().tondi()
 		}

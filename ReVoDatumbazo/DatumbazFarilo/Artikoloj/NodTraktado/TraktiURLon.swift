@@ -3,7 +3,7 @@ extension ArboAnalizilo {
 		let filTeksto = akumuliTekstojn(de: url, stato: stato)
 		
 		if let referenco = referenco {
-			return "<a href=\(referenco)>" + filTeksto + "</a>"
+			return "<a href=\"\(referenco)\">" + filTeksto + "</a>"
 		} else {
 			return "<a href=\"\(filTeksto)\">\(filTeksto)</a>"
 		}
