@@ -15,7 +15,7 @@ final class AgordojViewController: UIViewController {
 	}()
 	
 	// MARK: Agordoj
-		
+	
 	private let kunordigilo: Kunordigilo
 	
 	private let datumRegilo: UzantDatumoRegilo
@@ -44,13 +44,20 @@ final class AgordojViewController: UIViewController {
 		title = Tekstoj.agordoj
 		
 		view.addEdgeMatchedSubview(tabelo)
+		
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(stiloShanghighis),
+			name: Avizoj.stiloShanghighis,
+			object: nil
+		)
 	}
 	
 	// MARK: - Uzant-agoj
 	
-	private func premisforigiHistorion() {
+	private func premisForigiHistorion() {
 		// TODO: Elekti ĝustan ĉelon
-        // if let prezentilo = konfirmilo.popoverPresentationController,
+		// if let prezentilo = konfirmilo.popoverPresentationController,
 		// 	   let chelo = tabelo.cellForRow(at: IndexPath(item: 0, section: 0)) {
 		// 	   prezentilo.sourceView = chelo;
 		// 	   prezentilo.sourceRect = chelo.bounds;
@@ -74,6 +81,16 @@ final class AgordojViewController: UIViewController {
 			self?.datumRegilo.forigiKonservitajn()
 		}
 	}
+	
+	// MARK: - Avizreagoj
+	
+	@objc private func stiloShanghighis() {
+		let novaStilo = UzantDatumaro.komuna.stilo
+		stilo = novaStilo
+		
+		tabelo.backgroundColor = stilo.navigaciaFono
+		tabelo.reloadData()
+	}
 }
 
 extension AgordojViewController: UITableViewDelegate {
@@ -91,7 +108,7 @@ extension AgordojViewController: UITableViewDelegate {
 				}
 			)
 		case (1, 0):
-			premisforigiHistorion()
+			premisForigiHistorion()
 		case (1, 1):
 			premisforigiKonservitajn()
 		case (2, 0):

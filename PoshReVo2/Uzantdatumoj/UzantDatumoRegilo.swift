@@ -7,6 +7,7 @@ extension Avizoj {
 	static let uzantajLingvojShanghighis = NSNotification.Name("uzantajLingvojShanghighis")
 	static let konservitajShanghighis = NSNotification.Name("konservitajShanghighis")
 	static let historioShanghighis = NSNotification.Name("historioShanghighis")
+	static let stiloShanghighis = NSNotification.Name("stiloShanghighis")
 }
 
 final class UzantDatumoRegilo {
@@ -122,5 +123,10 @@ final class UzantDatumoRegilo {
 	func meti(stilon stilo: InterfacStilo) {
 		datumaro.stilo = stilo
 		tenilo.skribi(datumaron: datumaro)
+		
+		NotificationCenter.default.post(
+			name: Avizoj.stiloShanghighis,
+			object: stilo
+		)
 	}
 }
