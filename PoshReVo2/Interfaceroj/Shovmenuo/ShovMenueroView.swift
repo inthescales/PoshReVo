@@ -33,7 +33,7 @@ final class ShovMenueroView: UIControl {
 	private lazy var bildejo: UIImageView = {
 		let ejo = UIImageView(image: bildo)
 		ejo.tintColor = menuAgordoj.tekstKoloro
-		ejo.contentMode = .scaleAspectFill
+		ejo.contentMode = .scaleAspectFit
 		return ejo
 	}()
 	
