@@ -62,14 +62,7 @@ final class LingvoBretoViewController: UIViewController {
 		return butono
 	}()
 	
-	lazy var malaktivaSubstreko: UIView = {
-		let strek = UIView()
-		strek.backgroundColor = malaktivaKoloro
-		strek.snp.makeConstraints { make in
-			make.height.equalTo(Konstantoj.strekAlto)
-		}
-		return strek
-	}()
+	lazy var malaktivaSubstreko = OmbroImitilo()
 	
 	// MARK: Stato
 	

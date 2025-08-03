@@ -42,6 +42,8 @@ final class AgtabuloView: UIView {
 		saltiButono
 	]
 	
+	private lazy var ombroStreko = OmbroImitilo()
+	
 	// MARK: - Agordoj
 	
 	private let konservis: (Bool) -> Void
@@ -90,10 +92,16 @@ final class AgtabuloView: UIView {
 			staplo.addArrangedSubview(ero)
 		}
 		
+		addSubview(ombroStreko)
+		ombroStreko.snp.makeConstraints { make in
+			make.top.left.right.equalToSuperview()
+		}
+		
 		addSubview(staplo)
 		staplo.snp.makeConstraints { make in
+			make.top.equalTo(ombroStreko.snp.bottom).offset(Konstantoj.vertikalaMargheno)
 			make.left.right.equalToSuperview()
-			make.top.bottom.equalToSuperview().inset(Konstantoj.vertikalaMargheno)
+			make.bottom.equalToSuperview().inset(Konstantoj.vertikalaMargheno)
 		}
 	}
 	
