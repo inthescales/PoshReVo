@@ -1,6 +1,9 @@
 import UIKit
 
+/// Serĉilo, uzebla por ĉio ajn, kun speciala stilo
 final class SerchiloView: UIView {
+	// MARK: - Interfaceroj
+	
 	private lazy var staplo: UIStackView = {
 		let staplo = UIStackView(arrangedSubviews: [serchilo])
 		staplo.axis = .vertical
@@ -38,6 +41,9 @@ final class SerchiloView: UIView {
 		return serchilo
 	}()
 	
+	/// Streko imitanta navigactabula ombro
+	private lazy var imitoStreko = OmbroImitilo()
+	
 	// MARK: Stato
 	
 	var teksto: String? {
@@ -57,23 +63,42 @@ final class SerchiloView: UIView {
 	
 	private let stilo: InterfacStilo
 	
+	private let aparatInformo: AparatInformo
+	
 	init(
 		lokokupaTeksto: String,
 		iksumi: Bool,
+		montriOmbron: Bool = true,
 		tekstoShanghighis: @escaping (String) -> (),
-		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo,
+		aparatInformo: AparatInformo = NunaAparato()
 	) {
 		self.lokokupaTeksto = lokokupaTeksto
 		self.iksumi = iksumi
 		self.tekstoShanghighis = tekstoShanghighis
 		self.stilo = stilo
+		self.aparatInformo = aparatInformo
 		super.init(frame: .zero)
 		
 		addEdgeMatchedSubview(fono)
-		
+
 		addSubview(staplo)
 		staplo.snp.makeConstraints { make in
-			make.edges.equalTo(self)
+			make.top.right.left.equalToSuperview()
+		}
+		
+		if !montriOmbron {
+			staplo.snp.makeConstraints { make in
+				make.bottom.equalToSuperview()
+			}
+		} else {
+			addSubview(imitoStreko)
+			imitoStreko.snp.makeConstraints { make in
+				make.left.right.bottom.equalToSuperview()
+			}
+			staplo.snp.makeConstraints { make in
+				make.bottom.equalTo(imitoStreko.snp.top)
+			}
 		}
 	}
 	

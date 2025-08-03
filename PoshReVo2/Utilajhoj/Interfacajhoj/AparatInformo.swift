@@ -35,6 +35,9 @@ protocol AparatInformo {
 	var aparatKlaso: AparatKlaso { get }
 	var orientigho: Orientigho { get }
 	var stilo: Stilo { get }
+	
+	/// Rilato inter logikaj bilderoj kaj aparataj. Vd. UIScreen.scale
+	var skalo: CGFloat { get }
 }
 
 /// AparatInformo kiu provizas informojn pri la nuna aparato
@@ -67,6 +70,7 @@ class NunaAparato: AparatInformo {
 		}
 	}
 	
+	// TODO: Uzu ĉi tio
 	/// Porcio de la tuta larĝo de la ekrano kiu estu uzata
 	var larghoPorcio: Double {
 		switch aparatKlaso {
@@ -85,4 +89,6 @@ class NunaAparato: AparatInformo {
 	var stilo: Stilo {
 		Stilo.el(trajtaro: UITraitCollection.current)
 	}
+	
+	var skalo: CGFloat = UIScreen.main.scale
 }

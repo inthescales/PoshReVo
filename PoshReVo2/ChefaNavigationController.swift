@@ -26,7 +26,7 @@ final class ChefaNavigationController: UINavigationController {
 		
 		let veraVC = veraVC(de: vc) ?? UIViewController()
 		let montriOmbron = !senombrajVCoj.contains(where: { type(of: veraVC) == $0 })
-		navigacejAspekto.shadowColor = montriOmbron ? .black.withAlphaComponent(0.5) : nil
+		navigacejAspekto.shadowColor = montriOmbron ? DinamikaStilo.ombro : nil
 		
 		navigacejAspekto.titleTextAttributes = [
 			NSAttributedString.Key.foregroundColor : DinamikaStilo.navigaciaTeksto

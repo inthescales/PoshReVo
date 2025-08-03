@@ -13,6 +13,7 @@ final class SerchoViewController: UIViewController, Ingito {
 	private lazy var serchilo = SerchiloView(
 		lokokupaTeksto: Tekstoj.serchiVortonAuFrazon,
 		iksumi: serchLingvo?.estasEsperanto ?? false,
+		montriOmbron: false,
 		tekstoShanghighis: { [weak self] teksto in
 			self?.farisPeton(teksto: teksto, serchLingvo: self?.serchLingvo)
 		}

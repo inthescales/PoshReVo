@@ -27,6 +27,8 @@ class DinamikaStilo {
 	
 	static var dokumentEkzemplo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentEkzemplo })
 	static var dokumentRimarko = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentRimarko })
+	
+	static var ombro = UIColor(dynamicProvider: { _ in konkretaStilo.ombro })
 }
 
 class InterfacStilo {
@@ -48,6 +50,8 @@ class InterfacStilo {
 	lazy var dokumentLigilo = UIColor(hela: hela.dokumentLigilo, malhela: malhela.dokumentLigilo)
 	lazy var dokumentEkzemplo = UIColor(hela: hela.dokumentEkzemplo, malhela: malhela.dokumentEkzemplo)
 	lazy var dokumentRimarko = UIColor(hela: hela.dokumentRimarko, malhela: malhela.dokumentRimarko)
+	
+	lazy var ombro = UIColor(hela: hela.ombro, malhela: malhela.ombro)
 	
 	init(nomo: String, identigilo: String, hela: Koloraro, malhela: Koloraro) {
 		self.nomo = nomo
@@ -82,7 +86,8 @@ class InterfacStilo {
 				dokumentaDividilo: UIColor(deksesuma: 0xa08c6d),
 				dokumentLigilo: ligilblua,
 				dokumentEkzemplo: brunaTeksto,
-				dokumentRimarko: malhelrugha
+				dokumentRimarko: malhelrugha,
+				ombro: UIColor.black.withAlphaComponent(0.5)
 			)
 		}(),
 		malhela: Koloraro(
@@ -96,7 +101,8 @@ class InterfacStilo {
 			dokumentaDividilo: .gray,
 			dokumentLigilo: .brown,
 			dokumentEkzemplo: .brown,
-			dokumentRimarko: .brown
+			dokumentRimarko: .brown,
+			ombro: UIColor.black.withAlphaComponent(0.5)
 		)
 	)
 	
@@ -114,7 +120,8 @@ class InterfacStilo {
 			dokumentaDividilo: .lightGray,
 			dokumentLigilo: .brown,
 			dokumentEkzemplo: .brown,
-			dokumentRimarko: .brown
+			dokumentRimarko: .brown,
+			ombro: UIColor.black.withAlphaComponent(0.5)
 		),
 		malhela: Koloraro(
 			navigaciaFono: .brown,
@@ -127,7 +134,8 @@ class InterfacStilo {
 			dokumentaDividilo: .gray,
 			dokumentLigilo: .brown,
 			dokumentEkzemplo: .brown,
-			dokumentRimarko: .brown
+			dokumentRimarko: .brown,
+			ombro: UIColor.black.withAlphaComponent(0.5)
 		)
 	)
 	
@@ -145,7 +153,8 @@ class InterfacStilo {
 			dokumentaDividilo: .lightGray,
 			dokumentLigilo: .green,
 			dokumentEkzemplo: .brown,
-			dokumentRimarko: .brown
+			dokumentRimarko: .brown,
+			ombro: UIColor.black.withAlphaComponent(0.5)
 		),
 		malhela: Koloraro(
 			navigaciaFono: .green,
@@ -158,7 +167,8 @@ class InterfacStilo {
 			dokumentaDividilo: .gray,
 			dokumentLigilo: .green,
 			dokumentEkzemplo: .brown,
-			dokumentRimarko: .brown
+			dokumentRimarko: .brown,
+			ombro: UIColor.black.withAlphaComponent(0.5)
 		)
 	)
 	
@@ -183,6 +193,7 @@ struct Koloraro {
 	var dokumentLigilo: UIColor
 	var dokumentEkzemplo: UIColor
 	var dokumentRimarko: UIColor
+	var ombro: UIColor
 }
 
 // MARK: - Helpiloj
