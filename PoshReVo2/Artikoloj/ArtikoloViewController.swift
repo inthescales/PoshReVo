@@ -263,8 +263,8 @@ final class ArtikoloViewController: UIViewController {
 				navigaciaDividiloKoloro: stilo.dokumentaDividilo,
 				menuaKoloro: stilo.dokumentaFono,
 				malplenaKoloro: stilo.dokumentaFono,
-				tekstKoloro: stilo.dokumentLigilo,
-				dividiloKoloro: .systemGroupedBackground
+				tekstKoloro: stilo.dokumentaTeksto,
+				dividiloKoloro: stilo.dokumentaTeksto.withAlphaComponent(0.3)
 			),
 			navigaciilaAlto: navigaciAlto,
 			forigi: { [weak self] in

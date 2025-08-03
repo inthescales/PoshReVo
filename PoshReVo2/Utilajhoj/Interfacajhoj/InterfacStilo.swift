@@ -65,18 +65,17 @@ class InterfacStilo {
 		identigilo: "pergamena",
 		hela: {
 			let teksto = UIColor(deksesuma: 0x121221)
-			let mildaTeksto = teksto.withAlphaComponent(0.4)
-			let brunaTeksto = UIColor(red: 0.4, green: 0.25, blue: 0.12, alpha: 1.0)
 			let helaPagho = UIColor(red: 1.0, green: 0.93, blue: 0.82, alpha: 1.0)
-			let malhelaPagho = UIColor(deksesuma: 0xc7ad87)
+			let malhelaPagho = UIColor(deksesuma: 0xe0c9a6)
 			let ligilblua = UIColor(deksesuma: 0x285fcc)
+			let brunaTeksto = UIColor(red: 0.4, green: 0.25, blue: 0.12, alpha: 1.0)
 			let malhelrugha = UIColor(red: 0.53, green: 0.16, blue: 0.25, alpha: 1.0)
 			
 			return Koloraro(
 				navigaciaFono: malhelaPagho,
 				navigaciaTeksto: teksto,
 				navigaciaButono: ligilblua,
-				navigaciaButonoMalaktiva: UIColor(deksesuma: 0x626045),
+				navigaciaButonoMalaktiva: teksto.withAlphaComponent(0.6),
 				dokumentaFono: helaPagho,
 				dokumentaAlternaFono: malhelaPagho,
 				dokumentaTeksto: teksto,
