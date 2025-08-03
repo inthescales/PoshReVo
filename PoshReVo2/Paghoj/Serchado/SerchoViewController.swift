@@ -2,7 +2,7 @@ import UIKit
 
 import ReVoDatumbazo
 
-final class SerchoViewController: UIViewController {
+final class SerchoViewController: UIViewController, Ingito {
 	private enum Konstantoj {
 		/// Maksimuma kvanto da serĉrezultoj prezentotaj
 		static let serchLimo = 32
@@ -245,11 +245,10 @@ final class SerchoViewController: UIViewController {
 		
 		return nil
 	}
-}
 
-// MARK: - Ingito
-
-extension SerchoViewController: Ingito {
+	// MARK: - Ingito
+	let titolo = Tekstoj.serchi
+	
 	func restarigi() {
 		serchilo.nuligiTekston()
 		nuligiSerchon()

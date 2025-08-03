@@ -72,12 +72,12 @@ enum ArtikolTeksto {
 			return "⇘"
 		case "vid":
 			return "➞"
-		case "ekz":
+		case "ekz", "lst":
 			return "⇉"
 		case "prt":
 			return "➞⊐"
 		case "malprt":
-			return nil
+			return "⊏➞"
 		default:
 			return nil
 		}

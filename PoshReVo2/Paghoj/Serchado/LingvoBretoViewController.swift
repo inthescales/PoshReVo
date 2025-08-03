@@ -11,8 +11,8 @@ final class LingvoBretoViewController: UIViewController {
 		/// Spaco dekstre kaj maldekstre de ĉiuj butonoj
 		static let butonoBufro: CGFloat = 16.0
 		
-		/// Dikeco de la substreko sub la elektita lingvo
-		static let strekAlteco: CGFloat = 1.0
+		/// Diko de la substreko sub la elektita lingvo
+		static let strekAlto: CGFloat = 1.0
 		
 		/// Daŭro de la elekta animacio
 		static let animaciaDauro: CGFloat = 0.2
@@ -31,9 +31,9 @@ final class LingvoBretoViewController: UIViewController {
 	lazy var substreko: UIView = {
 		let strek = UIView()
 		
-		strek.backgroundColor = stilo.navigaciaTeksto
+		strek.backgroundColor = aktivaKoloro
 		strek.snp.makeConstraints { make in
-			make.height.equalTo(Konstantoj.strekAlteco)
+			make.height.equalTo(Konstantoj.strekAlto)
 		}
 		
 		return strek
@@ -64,7 +64,10 @@ final class LingvoBretoViewController: UIViewController {
 	
 	lazy var malaktivaSubstreko: UIView = {
 		let strek = UIView()
-		strek.backgroundColor = stilo.navigaciaButonoMalaktiva
+		strek.backgroundColor = malaktivaKoloro
+		strek.snp.makeConstraints { make in
+			make.height.equalTo(Konstantoj.strekAlto)
+		}
 		return strek
 	}()
 	
@@ -79,6 +82,16 @@ final class LingvoBretoViewController: UIViewController {
 	/// La indekso de la nune elektita lingvo
 	private var elektitaIndekso: Int? {
 		lingvoj.firstIndex(of: elektita)
+	}
+	
+	/// Koloro de la nune elektita lingvo kaj ĝia substreko
+	private var aktivaKoloro: UIColor {
+		stilo.dokumentLigilo
+	}
+	
+	/// Koloro de la neelektitaj lingvoj kaj iliaj substrekoj
+	private var malaktivaKoloro: UIColor {
+		stilo.navigaciaButonoMalaktiva
 	}
 	
 	// MARK: Agordoj
@@ -138,7 +151,6 @@ final class LingvoBretoViewController: UIViewController {
 		view.addSubview(malaktivaSubstreko)
 		malaktivaSubstreko.snp.makeConstraints { make in
 			make.left.right.bottom.equalToSuperview()
-			make.height.equalTo(1)
 		}
 		
 		view.addSubview(rulumejo)
@@ -212,7 +224,7 @@ final class LingvoBretoViewController: UIViewController {
 			
 			let etikedo = UIButton()
 			etikedo.metiDinamikanTitolon(lingvo.nomo, tiparo: Konstantoj.butonoTiparo)
-			let koloro = (elektita.kodo == lingvo.kodo) ? stilo.navigaciaTeksto : stilo.navigaciaButono // TODO: Lingva egaleco
+			let koloro = (elektita.kodo == lingvo.kodo) ? aktivaKoloro : malaktivaKoloro // TODO: Lingva egaleco
 			etikedo.setTitleColor(koloro, for: .normal)
 			etikedo.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
 			etikedo.tag = i
@@ -261,8 +273,8 @@ final class LingvoBretoViewController: UIViewController {
 			delay: 0.0,
 			options: .curveEaseOut
 		) { [weak self] in
-			aktivaButono.setTitleColor(self?.stilo.navigaciaTeksto, for: .normal)
-			malaktivaButono.setTitleColor(self?.stilo.navigaciaButono, for: .normal)
+			aktivaButono.setTitleColor(self?.aktivaKoloro, for: .normal)
+			malaktivaButono.setTitleColor(self?.malaktivaKoloro, for: .normal)
 		}
 	}
 	
@@ -298,7 +310,7 @@ final class LingvoBretoViewController: UIViewController {
 		substreko.snp.remakeConstraints { make in
 			make.left.right.equalTo(butono).inset(-4)
 			make.bottom.equalToSuperview()
-			make.height.equalTo(Konstantoj.strekAlteco)
+			make.height.equalTo(Konstantoj.strekAlto)
 		}
 		
 		let dauro = animacii ? Konstantoj.animaciaDauro : 0.0

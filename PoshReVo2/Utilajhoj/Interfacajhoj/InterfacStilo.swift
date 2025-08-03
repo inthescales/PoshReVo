@@ -63,19 +63,29 @@ class InterfacStilo {
 	static let pergamena = InterfacStilo(
 		nomo: "pergamena",
 		identigilo: "pergamena",
-		hela: Koloraro(
-			navigaciaFono: UIColor(red: 0.78, green: 0.68, blue: 0.53, alpha: 1.0),
-			navigaciaTeksto: UIColor(red: 0.07, green: 0.07, blue: 0.13, alpha: 1.0),
-			navigaciaButono: UIColor(red: 0.26, green: 0.29, blue: 0.58, alpha: 1.0),
-			navigaciaButonoMalaktiva: UIColor(red: 0.47, green: 0.37, blue: 0.21, alpha: 1.0),
-			dokumentaFono: UIColor(red: 1.0, green: 0.93, blue: 0.82, alpha: 1.0),
-			dokumentaAlternaFono: UIColor(red: 0.78, green: 0.68, blue: 0.53, alpha: 1.0),
-			dokumentaTeksto: UIColor(red: 0.07, green: 0.07, blue: 0.13, alpha: 1.0),
-			dokumentaDividilo: UIColor(red: 0.78, green: 0.68, blue: 0.53, alpha: 1.0),
-			dokumentLigilo: UIColor(red: 0.26, green: 0.29, blue: 0.58, alpha: 1.0),
-			dokumentEkzemplo: UIColor(red: 0.4, green: 0.25, blue: 0.12, alpha: 1.0),
-			dokumentRimarko: UIColor(red: 0.53, green: 0.16, blue: 0.25, alpha: 1.0)
-		),
+		hela: {
+			let teksto = UIColor(deksesuma: 0x121221)
+			let mildaTeksto = teksto.withAlphaComponent(0.4)
+			let brunaTeksto = UIColor(red: 0.4, green: 0.25, blue: 0.12, alpha: 1.0)
+			let helaPagho = UIColor(red: 1.0, green: 0.93, blue: 0.82, alpha: 1.0)
+			let malhelaPagho = UIColor(deksesuma: 0xc7ad87)
+			let ligilblua = UIColor(deksesuma: 0x285fcc)
+			let malhelrugha = UIColor(red: 0.53, green: 0.16, blue: 0.25, alpha: 1.0)
+			
+			return Koloraro(
+				navigaciaFono: malhelaPagho,
+				navigaciaTeksto: teksto,
+				navigaciaButono: ligilblua,
+				navigaciaButonoMalaktiva: UIColor(deksesuma: 0x626045),
+				dokumentaFono: helaPagho,
+				dokumentaAlternaFono: malhelaPagho,
+				dokumentaTeksto: teksto,
+				dokumentaDividilo: UIColor(deksesuma: 0xa08c6d),
+				dokumentLigilo: ligilblua,
+				dokumentEkzemplo: brunaTeksto,
+				dokumentRimarko: malhelrugha
+			)
+		}(),
 		malhela: Koloraro(
 			navigaciaFono: .brown,
 			navigaciaTeksto: .white,

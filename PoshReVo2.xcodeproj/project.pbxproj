@@ -21,6 +21,7 @@
 		003024D12E3A7659006D0C14 /* UITableViewCell+Helpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */; };
 		003024D32E3A7B2A006D0C14 /* MallongigoListoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */; };
 		003024D62E3A7E2C006D0C14 /* Ingito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D52E3A7E2A006D0C14 /* Ingito.swift */; };
+		003024DB2E3FAFCE006D0C14 /* UIColor+deksesuma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024DA2E3FAFC9006D0C14 /* UIColor+deksesuma.swift */; };
 		003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A72E37D8300039AC2C /* Tiparo.swift */; };
 		003FC1AA2E3920FB0039AC2C /* AlirebloTekstoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */; };
 		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
@@ -96,6 +97,7 @@
 		003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpiloj.swift"; sourceTree = "<group>"; };
 		003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoListoChelo.swift; sourceTree = "<group>"; };
 		003024D52E3A7E2A006D0C14 /* Ingito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingito.swift; sourceTree = "<group>"; };
+		003024DA2E3FAFC9006D0C14 /* UIColor+deksesuma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+deksesuma.swift"; sourceTree = "<group>"; };
 		003FC1A72E37D8300039AC2C /* Tiparo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiparo.swift; sourceTree = "<group>"; };
 		003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlirebloTekstoj.swift; sourceTree = "<group>"; };
 		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 		00B27B232DC3FD2600526F82 /* Interfacajhoj */ = {
 			isa = PBXGroup;
 			children = (
+				003024DA2E3FAFC9006D0C14 /* UIColor+deksesuma.swift */,
 				003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */,
 				00B27B0C2DC1813400526F82 /* UIView+AranghHelpiloj.swift */,
 				00B27BA22E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift */,
@@ -569,6 +572,7 @@
 				00B27B552DEF743500526F82 /* InformojViewController.swift in Sources */,
 				00B27B112DC264A100526F82 /* Tekstoj.swift in Sources */,
 				00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */,
+				003024DB2E3FAFCE006D0C14 /* UIColor+deksesuma.swift in Sources */,
 				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
 				00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* UIView+AranghHelpiloj.swift in Sources */,

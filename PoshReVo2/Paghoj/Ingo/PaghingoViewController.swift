@@ -36,7 +36,7 @@ final class PaghingoViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		title = Tekstoj.poshaRetaVortaro
+		title = chefpagho.titolo
 		navigationItem.rightBarButtonItem = tripunktoButono
 		
 		addChild(chefpagho)

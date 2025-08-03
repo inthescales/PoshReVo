@@ -12,6 +12,7 @@ enum Tekstoj {
 	
 	// MARK: - Serĉado
 	
+	static let serchi = "Serĉi"
 	static let serchiLingvon = "Serĉi lingvon"
 	static let serchiVortonAuFrazon = "Serĉi vorton aŭ frazon"
 	static let pli = "pli"
@@ -67,5 +68,6 @@ enum Tekstoj {
 	
 	// MARK: - Ĝenerala agoj
 	
+	// TODO: Ŝanĝi al 'nuligi
 	static let forigi = "forigi"
 }

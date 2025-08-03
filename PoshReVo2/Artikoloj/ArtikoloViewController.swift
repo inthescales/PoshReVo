@@ -257,7 +257,7 @@ final class ArtikoloViewController: UIViewController {
 				titolo: Tekstoj.saltiAl,
 				navigaciaKoloro: stilo.navigaciaFono,
 				navigaciaTekstKoloro: stilo.navigaciaTeksto,
-				navigaciaDividiloKoloro: stilo.navigaciaButonoMalaktiva,
+				navigaciaDividiloKoloro: stilo.dokumentaDividilo,
 				menuaKoloro: stilo.dokumentaFono,
 				malplenaKoloro: stilo.dokumentaFono,
 				tekstKoloro: stilo.dokumentLigilo,

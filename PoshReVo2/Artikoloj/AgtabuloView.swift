@@ -102,7 +102,7 @@ final class AgtabuloView: UIView {
 		dividilo.snp.makeConstraints { make in
 			make.width.equalTo(1)
 		}
-		dividilo.backgroundColor = stilo.navigaciaButonoMalaktiva
+		dividilo.backgroundColor = stilo.dokumentaDividilo
 		return dividilo
 	}
 	
