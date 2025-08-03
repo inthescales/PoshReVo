@@ -19,8 +19,13 @@ final class KategoriaViewController: UIViewController {
 		tabelo.delegate = self
 		tabelo.dataSource = self
 		
-		if tabelStilo == .insetGrouped {
+		switch tabelStilo {
+		case .grouped, .insetGrouped:
 			tabelo.backgroundColor = stilo.navigaciaFono
+		case .plain:
+			tabelo.backgroundColor = stilo.dokumentaFono
+		default:
+			assert(false, "nekonata tabelstilo")
 		}
 		
 		return tabelo
