@@ -70,7 +70,7 @@ final class LingvoElektiloViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		title = Tekstoj.aldoniLingvon
-		navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.iksoButono(
+		navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.rezigniButono(
 			por: self,
 			ago: #selector(Self.malaperi),
 			stilo: stilo

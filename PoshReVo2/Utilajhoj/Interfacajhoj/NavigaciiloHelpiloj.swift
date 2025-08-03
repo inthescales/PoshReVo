@@ -1,13 +1,13 @@
 import UIKit
 
 enum NavigaciiloHelpiloj {
-	static func iksoButono(
+	static func rezigniButono(
 		por vc: UIViewController,
 		ago: Selector,
 		stilo: InterfacStilo
 	) -> UIBarButtonItem {
 		let butono = UIBarButtonItem.init(
-			title: "IKSO",
+			title: Tekstoj.rezigni,
 			style: .plain,
 			target: vc,
 			action: ago

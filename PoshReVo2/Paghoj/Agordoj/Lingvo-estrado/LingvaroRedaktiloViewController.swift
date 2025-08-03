@@ -61,7 +61,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	override func viewDidLoad() {
 		title = Tekstoj.viajLingvoj
 		if navigationController?.viewControllers.count == 1 {
-			navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.iksoButono(
+			navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.rezigniButono(
 				por: self,
 				ago: #selector(premisIkson),
 				stilo: stilo

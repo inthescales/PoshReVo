@@ -53,7 +53,6 @@ enum Tekstoj {
 	static let redakti = "Redakti"
 	static let aldoniLingvon = "Aldoni Lingvon"
 	static let viajLingvoj = "Viaj Lingvoj"
-	static let rezigni = "Rezigni"
 	static let fini = "Fini"
 	
 	// MARK: - Stiloelektado
@@ -68,6 +67,6 @@ enum Tekstoj {
 	
 	// MARK: - Ĝenerala agoj
 	
-	// TODO: Ŝanĝi al 'nuligi
-	static let forigi = "forigi"
+	static let rezigni = "Rezigni"
+	static let nuligi = "Nuligi"
 }

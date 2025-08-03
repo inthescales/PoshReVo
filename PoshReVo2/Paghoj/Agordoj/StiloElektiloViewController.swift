@@ -46,7 +46,7 @@ final class StiloElektiloViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		title = Tekstoj.elektiStilon
-		navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.iksoButono(
+		navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.rezigniButono(
 			por: self,
 			ago: #selector(premisIkson),
 			stilo: stilo

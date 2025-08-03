@@ -5,7 +5,7 @@ final class HistorioViewController: UIViewController {
 	
 	lazy var forigiButono = {
 		let butono = UIBarButtonItem.init(
-			title: Tekstoj.forigi,
+			title: Tekstoj.nuligi,
 			style: .plain,
 			target: self,
 			action: #selector(forigi)
