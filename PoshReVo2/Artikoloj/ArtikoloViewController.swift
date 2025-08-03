@@ -193,8 +193,11 @@ final class ArtikoloViewController: UIViewController {
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)	
-		tabelo.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+		super.viewWillAppear(animated)
+		
+		if !jamSaltis {
+			tabelo.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+		}
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
