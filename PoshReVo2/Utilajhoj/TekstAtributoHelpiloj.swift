@@ -143,7 +143,7 @@ enum TekstAtributoHelpiloj {
 			
 			// Aldoni apartajn trajtojn al tiparo, se necesas
 			if let novajTrajtoj {
-				// Akiri trajtojn jam aldonita al la nuna loko, kaj aldoni la novajn
+				// Akiri trajtojn jam aldonitajn al la nuna loko, kaj aldoni la novajn
 				let lokajTrajtoj = atributaTeksto.attributes(at: regiono.location, effectiveRange: nil)
 					.map { ($0.value as? UIFont)?.fontDescriptor.symbolicTraits ?? [] }
 					.reduce(UIFontDescriptor.SymbolicTraits()) {

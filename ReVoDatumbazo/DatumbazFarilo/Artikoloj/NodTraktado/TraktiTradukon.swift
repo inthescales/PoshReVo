@@ -1,9 +1,10 @@
 extension ArboAnalizilo {
 	/// Doni ĝustan tekston al tradukoj necesigas produkti kelkajn versiojn de la teksto.
 	enum TradukTekstTipo {
-		case artikola	// Teksto kiu aperu en tradukoj ene de artikolo
-		case sercha		// Teksto kiun oni devos tajpi serĉe
-		case videbla	// Teksto kiu aperu en serĉrezultoj
+		case artikolTeksta  // Teksto kiu aperu rekte en artikolteksto (difinoj ks.)
+		case artikolTraduka	// Teksto kiu aperu en artikolaj tradukoj
+		case sercha		    // Teksto kiun oni devos tajpi serĉe
+		case videbla	    // Teksto kiu aperu en serĉrezultoj
 	}
 	
 	/// Traktas traduk-elementon, aldonante tradukon kaj al artikolo kaj listo da serĉtradukoj.
@@ -18,16 +19,16 @@ extension ArboAnalizilo {
 			return nil
 		}
 		
-		let artikolTeksto = kunigiTradukTekstojn(de: traduko, tipo: .artikola, stato: stato)
+		let tradukTeksto = kunigiTradukTekstojn(de: traduko, tipo: .artikolTraduka, stato: stato)
 		
 		let serchTeksto: String
-		let videblaTeksto: String
+		let rezultTeksto: String
 		if tradukoKomplikas(traduko) {
 			serchTeksto = kunigiTradukTekstojn(de: traduko, tipo: .sercha, stato: stato)
-			videblaTeksto = kunigiTradukTekstojn(de: traduko, tipo: .videbla, stato: stato)
+			rezultTeksto = kunigiTradukTekstojn(de: traduko, tipo: .videbla, stato: stato)
 		} else {
-			serchTeksto = artikolTeksto
-			videblaTeksto = artikolTeksto
+			serchTeksto = tradukTeksto
+			rezultTeksto = tradukTeksto
 		}
 		
 		if let derivajhNomo = stato.derivajhNomo,
@@ -36,7 +37,7 @@ extension ArboAnalizilo {
 			
 			let artikolTraduko = ArtikolTraduko(
 				nomo: transpasIndekso?.tradukTeksto ?? derivajhTildo,
-				teksto: artikolTeksto,
+				teksto: tradukTeksto,
 				marko: marko,
 				senco: stato.nunaSenco,
 				subsenco: stato.nunaSubsenco,
@@ -46,7 +47,7 @@ extension ArboAnalizilo {
 			
 			let serchTraduko = SerchTraduko(
 				serchTeksto: serchTeksto,
-				videblaTeksto: videblaTeksto,
+				videblaTeksto: rezultTeksto,
 				esperantaNomo: transpasIndekso?.serchTeksto ?? derivajhNomo,
 				indekso: artikolIndekso,
 				marko: marko,
@@ -55,7 +56,7 @@ extension ArboAnalizilo {
 			stato.aldoni(serchTradukon: serchTraduko, lingvo: lingvo)
 		}
 		
-		return artikolTeksto
+		return kunigiTradukTekstojn(de: traduko, tipo: .artikolTeksta, stato: stato)
 	}
 	
 	/// Liveras 'true' se necesos plurforma traduk-teksto
@@ -92,7 +93,7 @@ extension ArboAnalizilo {
 			case .ind:
 				let rezulto = trakti(indekson: filo, stato: stato)
 				switch tipo {
-				case .artikola, .videbla:
+				case .artikolTeksta, .artikolTraduka, .videbla:
 					teksto += rezulto.teksto
 				case .sercha:
 					teksto = rezulto.serchTeksto
@@ -101,7 +102,7 @@ extension ArboAnalizilo {
 			case .klr:
 				let filTeksto = trakti(klarigon: filo, stato: stato)
 				switch tipo {
-				case .artikola, .videbla:
+				case .artikolTeksta, .artikolTraduka, .videbla:
 					teksto += filTeksto
 				case .sercha:
 					break
@@ -109,7 +110,7 @@ extension ArboAnalizilo {
 			case .mll(let mllTipo):
 				let filTeksto = trakti(mallongigon: filo, stato: stato).teksto
 				switch tipo {
-				case .artikola:
+				case .artikolTeksta, .artikolTraduka:
 					teksto += filTeksto
 				case .sercha:
 					teksto = filTeksto
@@ -120,13 +121,21 @@ extension ArboAnalizilo {
 				}
 			case .pr:
 				switch tipo {
-				case .artikola:
+				case .artikolTraduka:
 					teksto += trakti(prononcon: filo, stato: stato)
-				case .sercha, .videbla:
+				case .artikolTeksta, .sercha, .videbla:
 					break
 				}
 			case .teksto(let filTeksto):
-				teksto += filTeksto
+				switch tipo {
+				case .artikolTeksta:
+					// Tradukoj ene de artikolaj tradukoj aperu kursive (ekz. sciencaj nomoj de bestoj kaj plantoj)
+					// Tamen, filnodoj de tradukoj, laŭ mia kono, ne estu kursivaj. Ekz. en artikolo 'om/o'
+					// troviĝas "<i>Ohm </i>(Georg Simon)<i></i>, (klr ene de trd)
+					teksto += TekstAtributo.volvi(filTeksto, per: .kursiva)
+				default:
+					teksto += filTeksto
+				}
 			default:
 				assert(false, "Neatendita filo")
 			}
