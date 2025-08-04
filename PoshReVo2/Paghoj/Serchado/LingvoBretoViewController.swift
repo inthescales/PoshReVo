@@ -169,7 +169,7 @@ final class LingvoBretoViewController: UIViewController {
 	func meti(stilon stilo: InterfacStilo) {
 		self.stilo = stilo
 		
-		view.backgroundColor = self.stilo.navigaciaFono
+		view.backgroundColor = stilo.navigaciaFono
 		substreko.backgroundColor = aktivaKoloro
 		pliButono.setTitleColor(stilo.navigaciaButono, for: .normal)
 		renovigiInterfacon()

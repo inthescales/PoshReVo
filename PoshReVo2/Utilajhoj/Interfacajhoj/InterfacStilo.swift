@@ -22,12 +22,13 @@ class DinamikaStilo {
 	static var dokumentaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaFono })
 	static var dokumentaAlternaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaAlternaFono })
 	static var dokumentaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaTeksto })
+	static var dokumentaMalfortaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaMalfortaTeksto})
 	static var dokumentaDividilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaDividilo })
 	static var dokumentLigilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentLigilo })
 	
 	static var dokumentEkzemplo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentEkzemplo })
 	static var dokumentRimarko = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentRimarko })
-	
+
 	static var ombro = UIColor(dynamicProvider: { _ in konkretaStilo.ombro })
 }
 
@@ -46,6 +47,7 @@ class InterfacStilo {
 	lazy var dokumentaFono = UIColor(hela: hela.dokumentaFono, malhela: malhela.dokumentaFono)
 	lazy var dokumentaAlternaFono = UIColor(hela: hela.dokumentaAlternaFono, malhela: malhela.dokumentaAlternaFono)
 	lazy var dokumentaTeksto = UIColor(hela: hela.dokumentaTeksto, malhela: malhela.dokumentaTeksto)
+	lazy var dokumentaMalfortaTeksto = UIColor(hela: hela.dokumentaMalfortaTeksto, malhela: malhela.dokumentaMalfortaTeksto)
 	lazy var dokumentaDividilo = UIColor(hela: hela.dokumentaDividilo, malhela: malhela.dokumentaDividilo)
 	lazy var dokumentLigilo = UIColor(hela: hela.dokumentLigilo, malhela: malhela.dokumentLigilo)
 	lazy var dokumentEkzemplo = UIColor(hela: hela.dokumentEkzemplo, malhela: malhela.dokumentEkzemplo)
@@ -69,20 +71,23 @@ class InterfacStilo {
 		identigilo: "pergamena",
 		hela: {
 			let teksto = UIColor(deksesuma: 0x121221)
-			let helaPagho = UIColor(red: 1.0, green: 0.93, blue: 0.82, alpha: 1.0)
+			let malfortaTeksto = UIColor(deksesuma: 0x84756f)
+			let helaPagho = UIColor(deksesuma: 0xffedd1)
+			let mezaPagho = UIColor(deksesuma: 0xf2d9b3)
 			let malhelaPagho = UIColor(deksesuma: 0xe0c9a6)
 			let ligilblua = UIColor(deksesuma: 0x285fcc)
-			let brunaTeksto = UIColor(red: 0.4, green: 0.25, blue: 0.12, alpha: 1.0)
-			let malhelrugha = UIColor(red: 0.53, green: 0.16, blue: 0.25, alpha: 1.0)
+			let brunaTeksto = UIColor(deksesuma: 0x66401f)
+			let malhelrugha = UIColor(deksesuma: 0x872940)
 			
 			return Koloraro(
 				navigaciaFono: malhelaPagho,
 				navigaciaTeksto: teksto,
 				navigaciaButono: ligilblua,
-				navigaciaButonoMalaktiva: teksto.withAlphaComponent(0.6),
+				navigaciaButonoMalaktiva: malfortaTeksto,
 				dokumentaFono: helaPagho,
 				dokumentaAlternaFono: malhelaPagho,
 				dokumentaTeksto: teksto,
+				dokumentaMalfortaTeksto: malfortaTeksto,
 				dokumentaDividilo: UIColor(deksesuma: 0xa08c6d),
 				dokumentLigilo: ligilblua,
 				dokumentEkzemplo: brunaTeksto,
@@ -98,6 +103,7 @@ class InterfacStilo {
 			dokumentaFono: .black,
 			dokumentaAlternaFono: .gray,
 			dokumentaTeksto: .white,
+			dokumentaMalfortaTeksto: .white.withAlphaComponent(0.6),
 			dokumentaDividilo: .gray,
 			dokumentLigilo: .brown,
 			dokumentEkzemplo: .brown,
@@ -117,6 +123,7 @@ class InterfacStilo {
 			dokumentaFono: .white,
 			dokumentaAlternaFono: .systemGroupedBackground,
 			dokumentaTeksto: .black,
+			dokumentaMalfortaTeksto: .black.withAlphaComponent(0.6),
 			dokumentaDividilo: .lightGray,
 			dokumentLigilo: .brown,
 			dokumentEkzemplo: .brown,
@@ -131,6 +138,7 @@ class InterfacStilo {
 			dokumentaFono: .black,
 			dokumentaAlternaFono: .gray,
 			dokumentaTeksto: .white,
+			dokumentaMalfortaTeksto: .white.withAlphaComponent(0.6),
 			dokumentaDividilo: .gray,
 			dokumentLigilo: .brown,
 			dokumentEkzemplo: .brown,
@@ -150,6 +158,7 @@ class InterfacStilo {
 			dokumentaFono: .white,
 			dokumentaAlternaFono: .systemGroupedBackground,
 			dokumentaTeksto: .black,
+			dokumentaMalfortaTeksto: .black.withAlphaComponent(0.6),
 			dokumentaDividilo: .lightGray,
 			dokumentLigilo: .green,
 			dokumentEkzemplo: .brown,
@@ -164,6 +173,7 @@ class InterfacStilo {
 			dokumentaFono: .black,
 			dokumentaAlternaFono: .gray,
 			dokumentaTeksto: .white,
+			dokumentaMalfortaTeksto: .white.withAlphaComponent(0.6),
 			dokumentaDividilo: .gray,
 			dokumentLigilo: .green,
 			dokumentEkzemplo: .brown,
@@ -189,6 +199,7 @@ struct Koloraro {
 	var dokumentaFono: UIColor
 	var dokumentaAlternaFono: UIColor
 	var dokumentaTeksto: UIColor
+	var dokumentaMalfortaTeksto: UIColor
 	var dokumentaDividilo: UIColor
 	var dokumentLigilo: UIColor
 	var dokumentEkzemplo: UIColor

@@ -44,6 +44,6 @@ final class VortListoNulStatoView: UIView {
 	}
 	
 	func meti(stilon stilo: InterfacStilo) {
-		etikedo.textColor = stilo.dokumentaTeksto.withAlphaComponent(0.5) // TODO: Aldoni malfortan koloron
+		etikedo.textColor = stilo.dokumentaMalfortaTeksto
 	}
 }

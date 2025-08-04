@@ -107,7 +107,7 @@ final class TradukaroChelo: UITableViewCell {
 	private func fariAvizon(teksto: String, titolStilo: TitolStilo, stilo: InterfacStilo) -> UIView {
 		let etikedo = UILabel()
 		etikedo.text = teksto
-		etikedo.textColor = stilo.dokumentaTeksto
+		etikedo.textColor = stilo.dokumentaMalfortaTeksto
 		switch titolStilo {
 		case .kursiva:
 			etikedo.font = .italicSystemFont(ofSize: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
