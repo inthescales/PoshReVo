@@ -10,24 +10,14 @@ final class SerchiloView: UIView {
 		return staplo
 	}()
 	
-	private lazy var fono: UIView = {
-		let fono = UIView()
-		fono.backgroundColor = stilo.navigaciaFono
-		return fono
-	}()
+	private lazy var fono = UIView()
 	
 	private lazy var serchilo: UISearchBar = {
 		let serchilo = UISearchBar()
 		serchilo.delegate = self
-		serchilo.searchTextField.attributedPlaceholder = NSAttributedString(
-			string: lokokupaTeksto,
-			attributes: [NSAttributedString.Key.foregroundColor :stilo.dokumentaTeksto.withAlphaComponent(0.5)]
-		)
+		serchilo.placeholder = lokokupaTeksto
 		
-		serchilo.searchTextField.backgroundColor = stilo.dokumentaFono
-		serchilo.searchTextField.textColor = stilo.dokumentaTeksto
 		serchilo.searchTextField.autocapitalizationType = .none
-		serchilo.tintColor = stilo.dokumentaTeksto
 		serchilo.searchBarStyle = .prominent
 		
 		// Nevidebligi la UISearchBarBackground-on
@@ -100,6 +90,8 @@ final class SerchiloView: UIView {
 				make.bottom.equalTo(imitoStreko.snp.top)
 			}
 		}
+		
+		meti(stilon: stilo)
 	}
 	
 	required init?(coder: NSCoder) { fatalError("init(coder:) ne realas") }
@@ -108,6 +100,18 @@ final class SerchiloView: UIView {
 	
 	func nuligiTekston() {
 		serchilo.text = ""
+	}
+	
+	func meti(stilon stilo: InterfacStilo) {
+		fono.backgroundColor = stilo.navigaciaFono
+		
+		serchilo.searchTextField.attributedPlaceholder = NSAttributedString(
+			string: lokokupaTeksto,
+			attributes: [NSAttributedString.Key.foregroundColor :stilo.dokumentaTeksto.withAlphaComponent(0.5)]
+		)
+		serchilo.searchTextField.backgroundColor = stilo.dokumentaFono
+		serchilo.searchTextField.textColor = stilo.dokumentaTeksto
+		serchilo.tintColor = stilo.dokumentaTeksto
 	}
 }
 

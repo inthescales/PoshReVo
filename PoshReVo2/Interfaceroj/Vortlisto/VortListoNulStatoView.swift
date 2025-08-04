@@ -14,7 +14,6 @@ final class VortListoNulStatoView: UIView {
 		eti.numberOfLines = 0
 		eti.text = teksto
 		eti.font = .italicSystemFont(ofSize: 20).dinamika() // TODO: Tiparo
-		eti.textColor = stilo.dokumentaTeksto.withAlphaComponent(0.5) // TODO: Aldoni malfortan koloron
 		
 		return eti
 	}()
@@ -23,11 +22,8 @@ final class VortListoNulStatoView: UIView {
 	
 	private let teksto: String
 	
-	private let stilo: InterfacStilo
-	
 	init(teksto: String, stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
 		self.teksto = teksto
-		self.stilo = stilo
 		
 		super.init(frame: .zero)
 		
@@ -39,9 +35,15 @@ final class VortListoNulStatoView: UIView {
 			make.centerY.equalTo(self.snp.bottom).multipliedBy(Konstantoj.vertikalaCentroPorcio)
 			make.width.lessThanOrEqualToSuperview().multipliedBy(Konstantoj.larghoPorcio)
 		}
+		
+		meti(stilon: stilo)
 	}
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) ne realas")
+	}
+	
+	func meti(stilon stilo: InterfacStilo) {
+		etikedo.textColor = stilo.dokumentaTeksto.withAlphaComponent(0.5) // TODO: Aldoni malfortan koloron
 	}
 }

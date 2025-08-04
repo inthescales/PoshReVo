@@ -18,7 +18,6 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		let tabelo = UITableView()
 		tabelo.delegate = self
 		tabelo.dataSource = self
-		tabelo.backgroundColor = stilo.dokumentaFono
 		
 		return tabelo
 	}()
@@ -41,7 +40,7 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	
 	private let alvenasFinon: (() -> ())?
 	
-	private let stilo: InterfacStilo
+	private var stilo: InterfacStilo
 	
 	// MARK: - Pravalorizado
 	
@@ -59,6 +58,8 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		self.stilo = stilo
 		
 		super.init(nibName: nil, bundle: nil)
+		
+		meti(stilon: stilo)
 	}
 	
 	required init?(coder: NSCoder) {
@@ -79,6 +80,14 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		tabelo.reloadData()
 		
 		nulStatoView.isHidden = (listeroj.count > 0)
+	}
+	
+	func meti(stilon stilo: InterfacStilo) {
+		self.stilo = stilo
+		
+		tabelo.backgroundColor = stilo.dokumentaFono
+		tabelo.reloadData()
+		nulStatoView.meti(stilon: stilo)
 	}
 	
 	// MARK: - UITableViewDelegate

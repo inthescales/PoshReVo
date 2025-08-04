@@ -64,7 +64,7 @@ final class SerchoViewController: UIViewController, Ingito {
 	
 	private var kunordigilo: Kunordigilo
 	
-	private let stilo: InterfacStilo
+	private var stilo: InterfacStilo
 	
 	//
 	
@@ -123,11 +123,20 @@ final class SerchoViewController: UIViewController, Ingito {
 			name: Avizoj.uzantajLingvojShanghighis,
 			object: nil
 		)
+		
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(stiloShanghighis),
+			name: Avizoj.stiloShanghighis,
+			object: nil
+		)
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 	}
+	
+	// MARK: - Avizreagoj
 	
 	@objc func lingvoAvizo(_ avizo: Notification) {
 		guard let elektita = avizo.object as? Lingvo else { return }
@@ -139,7 +148,17 @@ final class SerchoViewController: UIViewController, Ingito {
 		lingvoBreto.ghisdatigi(lingvaron: lingvaro)
 	}
 	
-	// MARK: Interagado
+	@objc private func stiloShanghighis() {
+		let novaStilo = UzantDatumaro.komuna.stilo
+		stilo = novaStilo
+		
+		view.backgroundColor = stilo.navigaciaFono
+		rezultoTabelo.meti(stilon: stilo)
+		serchilo.meti(stilon: stilo)
+		lingvoBreto.meti(stilon: stilo)
+	}
+	
+	// MARK: - Interagado
 	
 	private func elektis(_ listero: Serchlistero) {
 		guard let prezentilo = navigationController else {
@@ -160,7 +179,7 @@ final class SerchoViewController: UIViewController, Ingito {
 		}
 	}
 	
-	// MARK: Serĉado
+	// MARK: - Serĉado
 	
 	/// Uzanto metis serĉ-parametrojn, tiel ke ni eble volas ekserĉi
 	private func farisPeton(teksto: String?, serchLingvo: Lingvo?) {

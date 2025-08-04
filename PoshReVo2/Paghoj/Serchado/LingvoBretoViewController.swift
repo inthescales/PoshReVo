@@ -31,7 +31,6 @@ final class LingvoBretoViewController: UIViewController {
 	lazy var substreko: UIView = {
 		let strek = UIView()
 		
-		strek.backgroundColor = aktivaKoloro
 		strek.snp.makeConstraints { make in
 			make.height.equalTo(Konstantoj.strekAlto)
 		}
@@ -57,7 +56,6 @@ final class LingvoBretoViewController: UIViewController {
 	lazy var pliButono: UIButton = {
 		let butono = UIButton()
 		butono.metiDinamikanTitolon(Tekstoj.pli, tiparo: Konstantoj.butonoTiparo)
-		butono.setTitleColor(stilo.navigaciaButono, for: .normal)
 		butono.addTarget(self, action: #selector(premisPli), for: .touchUpInside)
 		return butono
 	}()
@@ -95,7 +93,7 @@ final class LingvoBretoViewController: UIViewController {
 	
 	private let kunordigilo: Kunordigilo
 	
-	private let stilo: InterfacStilo
+	private var stilo: InterfacStilo
 	
 	//
 	
@@ -113,7 +111,10 @@ final class LingvoBretoViewController: UIViewController {
 		self.redaktisLingvojn = redaktisLingvojn
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
+		
 		super.init(nibName: nil, bundle: nil)
+		
+		meti(stilon: stilo)
 	}
 	
 	convenience init(
@@ -138,7 +139,6 @@ final class LingvoBretoViewController: UIViewController {
 	}
 	
 	override func viewDidLoad() {
-		view.backgroundColor = self.stilo.navigaciaFono
 		view.translatesAutoresizingMaskIntoConstraints = false
 		
 		view.addSubview(malaktivaSubstreko)
@@ -163,6 +163,15 @@ final class LingvoBretoViewController: UIViewController {
 		super.viewWillAppear(animated)
 		
 		// Vokita ĉi tie por ke grandecoj estu jam fiksitaj
+		renovigiInterfacon()
+	}
+	
+	func meti(stilon stilo: InterfacStilo) {
+		self.stilo = stilo
+		
+		view.backgroundColor = self.stilo.navigaciaFono
+		substreko.backgroundColor = aktivaKoloro
+		pliButono.setTitleColor(stilo.navigaciaButono, for: .normal)
 		renovigiInterfacon()
 	}
 	
@@ -215,15 +224,15 @@ final class LingvoBretoViewController: UIViewController {
 		for i in 0..<lingvoj.count {
 			let lingvo = lingvoj[i]
 			
-			let etikedo = UIButton()
-			etikedo.metiDinamikanTitolon(lingvo.nomo, tiparo: Konstantoj.butonoTiparo)
+			let butono = UIButton()
+			butono.metiDinamikanTitolon(lingvo.nomo, tiparo: Konstantoj.butonoTiparo)
 			let koloro = (elektita.kodo == lingvo.kodo) ? aktivaKoloro : malaktivaKoloro // TODO: Lingva egaleco
-			etikedo.setTitleColor(koloro, for: .normal)
-			etikedo.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
-			etikedo.tag = i
-			etikedo.translatesAutoresizingMaskIntoConstraints = false
+			butono.setTitleColor(koloro, for: .normal)
+			butono.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
+			butono.tag = i
+			butono.translatesAutoresizingMaskIntoConstraints = false
 			
-			lingvoStaplo.addArrangedSubview(etikedo)
+			lingvoStaplo.addArrangedSubview(butono)
 		}
 		
 		// Doni larĝon al la rulumejo
