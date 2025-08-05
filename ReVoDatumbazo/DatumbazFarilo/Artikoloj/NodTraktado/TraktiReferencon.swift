@@ -11,10 +11,11 @@ extension ArboAnalizilo {
 		switch stato.cheno.last {
 		case .drv, .snc, .subdrv, .subsnc:
 			switch stato.sibStako.last {
-			case .fnt, .ref, .refgrp, .teksto, .uzo:
+			case nil, .fnt, .ref, .refgrp, .teksto, .uzo:
 				// ekzemploj:
+				// nil:			flar/o
 				// teksto:  	prem/i
-				// fnt/ uzo: 	ĵeto (2)
+				// fnt/ uzo: 	ĵet/o (2)
 				teksto += " "
 				break
 			default:
