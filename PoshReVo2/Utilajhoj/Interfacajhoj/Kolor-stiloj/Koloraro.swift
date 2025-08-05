@@ -50,5 +50,7 @@ struct Koloraro {
 	
 	// MARK: - Aliaj
 	
+	var menuoFono: UIColor
+	
 	var ombro: UIColor
 }

@@ -21,7 +21,7 @@ final class KategoriaViewController: UIViewController {
 		
 		switch tabelStilo {
 		case .grouped, .insetGrouped:
-			tabelo.backgroundColor = stilo.navigaciaFono
+			tabelo.backgroundColor = stilo.menuoFono
 		case .plain:
 			tabelo.backgroundColor = stilo.dokumentaFono
 		default:

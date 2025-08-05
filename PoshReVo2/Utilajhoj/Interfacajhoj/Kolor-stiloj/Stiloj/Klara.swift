@@ -21,6 +21,7 @@ extension InterfacStilo {
 				dokumentLigilo: verda,
 				dokumentEkzemplo: .black.withAlphaComponent(0.9),
 				dokumentRimarko: .black.withAlphaComponent(0.9),
+				menuoFono: UIColor(deksesuma: 0xf2f2f2),
 				ombro: .black.withAlphaComponent(0.5)
 			)
 		}(),
@@ -44,6 +45,7 @@ extension InterfacStilo {
 				dokumentLigilo: ligilBlua,
 				dokumentEkzemplo: UIColor(deksesuma: 0xe0991f),
 				dokumentRimarko: UIColor(deksesuma: 0xdd9da2),
+				menuoFono: heletaPagho,
 				ombro: .white.withAlphaComponent(0.5)
 			)
 		}()

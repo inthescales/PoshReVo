@@ -8,8 +8,8 @@ extension InterfacStilo {
 			let teksto = UIColor(deksesuma: 0x121221)
 			let malfortaTeksto = UIColor(deksesuma: 0x84756f)
 			let helaPagho = UIColor(deksesuma: 0xffedd1)
-			let mezaPagho = UIColor(deksesuma: 0xf2d9b3)
-			let malhelaPagho = UIColor(deksesuma: 0xe0c9a6)
+			let mezaPagho = UIColor(deksesuma: 0xeddcc2)
+			let malhelaPagho = UIColor(deksesuma: 0xe0ccaf)
 			let ligilblua = UIColor(deksesuma: 0x285fcc)
 			let brunaTeksto = UIColor(deksesuma: 0x66401f)
 			let malhelrugha = UIColor(deksesuma: 0x872940)
@@ -28,6 +28,7 @@ extension InterfacStilo {
 				dokumentLigilo: ligilblua,
 				dokumentEkzemplo: brunaTeksto,
 				dokumentRimarko: malhelrugha,
+				menuoFono: mezaPagho,
 				ombro: .black.withAlphaComponent(0.5)
 			)
 		}(),
@@ -52,6 +53,7 @@ extension InterfacStilo {
 				dokumentLigilo: ligilBlua,
 				dokumentEkzemplo: UIColor(deksesuma: 0xe0991f),
 				dokumentRimarko: UIColor(deksesuma: 0xdd9da2),
+				menuoFono: heletaPagho, // TODO: Fari nove
 				ombro: .white.withAlphaComponent(0.5)
 			)
 		}()

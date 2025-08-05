@@ -10,7 +10,7 @@ final class AgordojViewController: UIViewController {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
 		tabelo.dataSource = self
-		tabelo.backgroundColor = stilo.navigaciaFono
+		tabelo.backgroundColor = stilo.menuoFono
 		return tabelo
 	}()
 	
@@ -88,7 +88,7 @@ final class AgordojViewController: UIViewController {
 		let novaStilo = UzantDatumaro.komuna.stilo
 		stilo = novaStilo
 		
-		tabelo.backgroundColor = stilo.navigaciaFono
+		tabelo.backgroundColor = stilo.menuoFono
 		tabelo.reloadData()
 	}
 }

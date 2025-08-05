@@ -9,7 +9,7 @@ final class StiloElektiloViewController: UIViewController {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
 		tabelo.dataSource = self
-		tabelo.backgroundColor = stilo.navigaciaFono
+		tabelo.backgroundColor = stilo.menuoFono
 		
 		return tabelo
 	}()
