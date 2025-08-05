@@ -10,6 +10,7 @@ extension InterfacStilo {
 			return Koloraro(
 				navigaciaFono: .white,
 				navigaciaTeksto: .black,
+				navigaciaSerchilo: UIColor(deksesuma: 0xf2f2f2),
 				navigaciaButono: verda,
 				navigaciaButonoMalaktiva: .black.withAlphaComponent(0.5),
 				dokumentaFono: .white,
@@ -32,6 +33,7 @@ extension InterfacStilo {
 			return Koloraro(
 				navigaciaFono: heletaPagho,
 				navigaciaTeksto: teksto,
+				navigaciaSerchilo: .white,
 				navigaciaButono: ligilBlua,
 				navigaciaButonoMalaktiva: malfortaTeksto,
 				dokumentaFono: UIColor(deksesuma: 0x332f29),

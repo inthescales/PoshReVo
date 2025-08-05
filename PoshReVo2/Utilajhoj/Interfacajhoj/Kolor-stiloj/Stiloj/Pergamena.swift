@@ -17,6 +17,7 @@ extension InterfacStilo {
 			return Koloraro(
 				navigaciaFono: malhelaPagho,
 				navigaciaTeksto: teksto,
+				navigaciaSerchilo: helaPagho,
 				navigaciaButono: ligilblua,
 				navigaciaButonoMalaktiva: malfortaTeksto,
 				dokumentaFono: helaPagho,
@@ -31,6 +32,7 @@ extension InterfacStilo {
 			)
 		}(),
 		malhela: {
+			let malhelaPagho = UIColor(deksesuma: 0x332f29)
 			let heletaPagho = UIColor(deksesuma: 0x47423a)
 			let teksto = UIColor(deksesuma: 0xddd0ba)
 			let malfortaTeksto = UIColor(deksesuma: 0x897f6e)
@@ -39,9 +41,10 @@ extension InterfacStilo {
 			return Koloraro(
 				navigaciaFono: heletaPagho,
 				navigaciaTeksto: teksto,
+				navigaciaSerchilo: malhelaPagho,
 				navigaciaButono: ligilBlua,
 				navigaciaButonoMalaktiva: malfortaTeksto,
-				dokumentaFono: UIColor(deksesuma: 0x332f29),
+				dokumentaFono: malhelaPagho,
 				dokumentaAlternaFono: heletaPagho,
 				dokumentaTeksto: teksto,
 				dokumentaMalfortaTeksto: malfortaTeksto,

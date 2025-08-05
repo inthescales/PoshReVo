@@ -109,7 +109,7 @@ final class SerchiloView: UIView {
 			string: lokokupaTeksto,
 			attributes: [NSAttributedString.Key.foregroundColor :stilo.dokumentaTeksto.withAlphaComponent(0.5)]
 		)
-		serchilo.searchTextField.backgroundColor = stilo.dokumentaFono
+		serchilo.searchTextField.backgroundColor = stilo.navigaciaSerchilo
 		serchilo.searchTextField.textColor = stilo.dokumentaTeksto
 		serchilo.tintColor = stilo.dokumentaTeksto
 	}

@@ -10,6 +10,9 @@ struct Koloraro {
 	/// Tekstkoloro ĉe la navigaciejo
 	var navigaciaTeksto: UIColor
 	
+	/// Koloroj de tekstejo en serĉiloj
+	var navigaciaSerchilo: UIColor
+	
 	/// Koloro de butonoj en la navigaciejo
 	var navigaciaButono: UIColor
 	
