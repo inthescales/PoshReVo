@@ -88,28 +88,35 @@ class InterfacStilo {
 				dokumentaAlternaFono: malhelaPagho,
 				dokumentaTeksto: teksto,
 				dokumentaMalfortaTeksto: malfortaTeksto,
-				dokumentaDividilo: UIColor(deksesuma: 0xa08c6d),
+				dokumentaDividilo: malfortaTeksto,
 				dokumentLigilo: ligilblua,
 				dokumentEkzemplo: brunaTeksto,
 				dokumentRimarko: malhelrugha,
-				ombro: UIColor.black.withAlphaComponent(0.5)
+				ombro: .black.withAlphaComponent(0.5)
 			)
 		}(),
-		malhela: Koloraro(
-			navigaciaFono: .brown,
-			navigaciaTeksto: .white,
-			navigaciaButono: .black,
-			navigaciaButonoMalaktiva: .brown,
-			dokumentaFono: .black,
-			dokumentaAlternaFono: .gray,
-			dokumentaTeksto: .white,
-			dokumentaMalfortaTeksto: .white.withAlphaComponent(0.6),
-			dokumentaDividilo: .gray,
-			dokumentLigilo: .brown,
-			dokumentEkzemplo: .brown,
-			dokumentRimarko: .brown,
-			ombro: UIColor.black.withAlphaComponent(0.5)
-		)
+		malhela: {
+			let heletaPagho = UIColor(deksesuma: 0x47423a)
+			let teksto = UIColor(deksesuma: 0xddd0ba)
+			let malfortaTeksto = UIColor(deksesuma: 0x897f6e)
+			let ligilBlua = UIColor(deksesuma: 0x86b3d8)
+			
+			return Koloraro(
+				navigaciaFono: heletaPagho,
+				navigaciaTeksto: teksto,
+				navigaciaButono: ligilBlua,
+				navigaciaButonoMalaktiva: malfortaTeksto,
+				dokumentaFono: UIColor(deksesuma: 0x332f29),
+				dokumentaAlternaFono: heletaPagho,
+				dokumentaTeksto: teksto,
+				dokumentaMalfortaTeksto: malfortaTeksto,
+				dokumentaDividilo: malfortaTeksto,
+				dokumentLigilo: ligilBlua,
+				dokumentEkzemplo: UIColor(deksesuma: 0xe0991f),
+				dokumentRimarko: UIColor(deksesuma: 0xdd9da2),
+				ombro: .white.withAlphaComponent(0.5)
+			)
+		}()
 	)
 	
 	static let karamela = InterfacStilo(
