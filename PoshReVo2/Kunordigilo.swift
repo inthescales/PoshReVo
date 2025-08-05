@@ -95,9 +95,7 @@ final class Kunordigilo {
 		prezentilo: UINavigationController,
 		elektis: @escaping (InterfacStilo) -> Void
 	) {
-		let navigaciilo = UINavigationController()
-		navigaciilo.navigationBar.isTranslucent = false
-		navigaciilo.navigationBar.backgroundColor = datumRegilo.datumaro.stilo.navigaciaFono // TODO: movi, korekti stilon
+		let navigaciilo = ChefaNavigationController()
 		navigaciilo.modalPresentationStyle = .fullScreen
 		
 		let elektilo = StiloElektiloViewController() { [weak self] novaStilo in
@@ -118,9 +116,7 @@ final class Kunordigilo {
 		prezentilo: UINavigationController,
 		kompleti: @escaping ([Lingvo]) -> ()
 	) {
-		let navigaciilo = UINavigationController()
-		navigaciilo.navigationBar.isTranslucent = false
-		navigaciilo.navigationBar.backgroundColor = datumRegilo.datumaro.stilo.navigaciaFono
+		let navigaciilo = ChefaNavigationController()
 		navigaciilo.modalPresentationStyle = .fullScreen
 		
 		let redaktilo = LingvaroRedaktiloViewController(

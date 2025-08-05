@@ -130,9 +130,7 @@ extension LingvaroRedaktiloViewController: UITableViewDelegate {
 					self?.aldonis(lingvon: lingvo)
 				}
 			)
-			let navigaciilo = UINavigationController(rootViewController: elektiloVC)
-			navigaciilo.navigationBar.isTranslucent = false
-			navigaciilo.navigationBar.backgroundColor = stilo.navigaciaFono // TODO: movi
+			let navigaciilo = ChefaNavigationController(rootViewController: elektiloVC)
 			navigaciilo.modalPresentationStyle = .fullScreen
 			
 			present(navigaciilo, animated: true)
