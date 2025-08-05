@@ -1,16 +1,6 @@
 import UIKit
 
 final class ChefaNavigationController: UINavigationController {
-	/// View Controller-aj klasoj kiuj NE montru ombro-strekon sube
-	private let senombrajVCoj: [Any.Type] = [
-		SerchoViewController.self,
-		KategoriaViewController.self,
-		MallongigoListoViewController.self,
-		LingvoElektiloViewController.self,
-		AgordojViewController.self,
-		StiloElektiloViewController.self
-	]
-	
 	override func viewDidLoad() {
 		navigationBar.isTranslucent = false
 		navigationBar.tintColor = DinamikaStilo.navigaciaButono
@@ -25,8 +15,7 @@ final class ChefaNavigationController: UINavigationController {
 		navigacejAspekto.backgroundColor = DinamikaStilo.navigaciaFono
 		
 		let veraVC = veraVC(de: vc) ?? UIViewController()
-		let montriOmbron = !senombrajVCoj.contains(where: { type(of: veraVC) == $0 })
-		navigacejAspekto.shadowColor = montriOmbron ? DinamikaStilo.ombro : nil
+		navigacejAspekto.shadowColor = chuMontriOmbron(por: veraVC) ? DinamikaStilo.ombro : nil
 		
 		navigacejAspekto.titleTextAttributes = [
 			NSAttributedString.Key.foregroundColor : DinamikaStilo.navigaciaTeksto
@@ -52,6 +41,33 @@ final class ChefaNavigationController: UINavigationController {
 		} else {
 			return vc
 		}
+	}
+	
+	/// Decidi ĉu ombro montriĝu sub la navigacitabulo.
+	private func chuMontriOmbron(por vc: UIViewController?) -> Bool {
+		// NOTO:
+		// Ĉi metodo funkcias nuntempe, kiam la du kazoj je kiu ni ne deziras ombron estas:
+		// 1. Serĉilo sidas paĝsupre
+		// 2. La paĝon okupas UITableViewController havanta fonkoloro samkiel la navigacia fonkoloro
+		// Se estontece la kazoj alias, ni rekonsideru ĉi-metodo
+		
+		guard let vc else {
+			return true
+		}
+		
+		for suba in vc.view.subviews {
+			if suba is SerchiloView {
+				return false
+			}
+			
+			if let tabelo = suba as? UITableView,
+			   (tabelo.style == .insetGrouped || tabelo.style == .grouped)
+			   && tabelo.backgroundColor?.cgColor == UzantDatumaro.komuna.stilo.navigaciaFono.cgColor {
+				return false
+			}
+		}
+		
+		return true
 	}
 	
 	// MARK: - Trapasfunkcioj
