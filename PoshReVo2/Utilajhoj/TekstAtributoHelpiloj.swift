@@ -63,7 +63,7 @@ enum TekstAtributoHelpiloj {
 		let regesp = try! NSRegularExpression(pattern: TekstAtributo.regulEsprimo)
 		return regesp.stringByReplacingMatches(
 			in: teksto,
-			range: NSMakeRange(0, teksto.count),
+			range: NSMakeRange(0, teksto.unicodeScalars.count),
 			withTemplate: ""
 		)
 	}
