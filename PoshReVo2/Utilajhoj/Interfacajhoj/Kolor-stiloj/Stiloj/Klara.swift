@@ -6,46 +6,44 @@ extension InterfacStilo {
 		identigilo: "klaraverda",
 		hela: {
 			let verda = UIColor(deksesuma: 0x0a9618)
+			let palgriza = UIColor(deksesuma: 0xf2f2f2)
 			
 			return Koloraro(
 				navigaciaFono: .white,
 				navigaciaTeksto: .black,
-				navigaciaSerchilo: UIColor(deksesuma: 0xf2f2f2),
+				navigaciaSerchilo: palgriza,
 				navigaciaButono: verda,
 				navigaciaButonoMalaktiva: .black.withAlphaComponent(0.5),
 				dokumentaFono: .white,
-				dokumentaAlternaFono: UIColor(deksesuma: 0xcccccc),
+				dokumentaAlternaFono: palgriza,
 				dokumentaTeksto: .black,
 				dokumentaMalfortaTeksto: .black.withAlphaComponent(0.5),
 				dokumentaDividilo: .black.withAlphaComponent(0.5),
 				dokumentLigilo: verda,
-				dokumentEkzemplo: .black.withAlphaComponent(0.9),
-				dokumentRimarko: .black.withAlphaComponent(0.9),
-				menuoFono: UIColor(deksesuma: 0xf2f2f2),
+				dokumentEkzemplo: .black.withAlphaComponent(0.8),
+				dokumentRimarko: .black.withAlphaComponent(0.8),
+				menuoFono: palgriza,
 				ombro: .black.withAlphaComponent(0.5)
 			)
 		}(),
 		malhela: {
-			let heletaPagho = UIColor(deksesuma: 0x47423a)
-			let teksto = UIColor(deksesuma: 0xddd0ba)
-			let malfortaTeksto = UIColor(deksesuma: 0x897f6e)
-			let ligilBlua = UIColor(deksesuma: 0x86b3d8)
+			let verda = UIColor(deksesuma: 0x14b724)
 			
 			return Koloraro(
-				navigaciaFono: heletaPagho,
-				navigaciaTeksto: teksto,
+				navigaciaFono: .black,
+				navigaciaTeksto: .white,
 				navigaciaSerchilo: .white,
-				navigaciaButono: ligilBlua,
-				navigaciaButonoMalaktiva: malfortaTeksto,
-				dokumentaFono: UIColor(deksesuma: 0x332f29),
-				dokumentaAlternaFono: heletaPagho,
-				dokumentaTeksto: teksto,
-				dokumentaMalfortaTeksto: malfortaTeksto,
-				dokumentaDividilo: malfortaTeksto,
-				dokumentLigilo: ligilBlua,
-				dokumentEkzemplo: UIColor(deksesuma: 0xe0991f),
-				dokumentRimarko: UIColor(deksesuma: 0xdd9da2),
-				menuoFono: heletaPagho,
+				navigaciaButono: verda,
+				navigaciaButonoMalaktiva: .white.withAlphaComponent(0.5),
+				dokumentaFono: .black,
+				dokumentaAlternaFono: .white.withAlphaComponent(0.5),
+				dokumentaTeksto: .white,
+				dokumentaMalfortaTeksto: .white.withAlphaComponent(0.5),
+				dokumentaDividilo: .white.withAlphaComponent(0.5),
+				dokumentLigilo: verda,
+				dokumentEkzemplo: .white.withAlphaComponent(0.8),
+				dokumentRimarko: .white.withAlphaComponent(0.8),
+				menuoFono: UIColor(deksesuma: 0x1C1C1E),
 				ombro: .white.withAlphaComponent(0.5)
 			)
 		}()
