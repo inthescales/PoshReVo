@@ -1,6 +1,18 @@
 import UIKit
 
 extension UIColor {
+	/// Dinamika koloro kun hela kaj malhela variaĵoj
+	convenience init(hela: UIColor, malhela: UIColor) {
+		self.init(dynamicProvider: { trajtaro in
+			switch Stilo.el(trajtaro: trajtaro) {
+			case .hela:
+				return hela
+			case .malhela:
+				return malhela
+			}
+		})
+	}
+	
 	/// Valorizas koloron per deksesuma (aŭ iu ajn, fakte) entjero
 	convenience init(deksesuma valoro: Int, alpha: CGFloat = 1.0) {
 		self.init(

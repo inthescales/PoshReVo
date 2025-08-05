@@ -36,7 +36,7 @@ struct UzantDatumaro {
 		return [.esperanto] + aparatajLingvoj
 	}
 	
-	private static var defaultaStilo: InterfacStilo = .karamela
+	private static var defaultaStilo: InterfacStilo = .klara
 	
 	static func defaulta() -> UzantDatumaro {
 		UzantDatumaro(

@@ -21,8 +21,12 @@
 		003024D12E3A7659006D0C14 /* UITableViewCell+Helpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */; };
 		003024D32E3A7B2A006D0C14 /* MallongigoListoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */; };
 		003024D62E3A7E2C006D0C14 /* Ingito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D52E3A7E2A006D0C14 /* Ingito.swift */; };
-		003024DB2E3FAFCE006D0C14 /* UIColor+deksesuma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024DA2E3FAFC9006D0C14 /* UIColor+deksesuma.swift */; };
+		003024DB2E3FAFCE006D0C14 /* UIColor+Helpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024DA2E3FAFC9006D0C14 /* UIColor+Helpiloj.swift */; };
 		003024DD2E401A27006D0C14 /* OmbroImitilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024DC2E401A21006D0C14 /* OmbroImitilo.swift */; };
+		003024E02E4264F7006D0C14 /* Koloraro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024DF2E4264F4006D0C14 /* Koloraro.swift */; };
+		003024E22E42653B006D0C14 /* DinamikaStilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024E12E426535006D0C14 /* DinamikaStilo.swift */; };
+		003024E52E4265D9006D0C14 /* Klara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024E42E4265D7006D0C14 /* Klara.swift */; };
+		003024E72E4265F2006D0C14 /* Pergamena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024E62E4265F0006D0C14 /* Pergamena.swift */; };
 		003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A72E37D8300039AC2C /* Tiparo.swift */; };
 		003FC1AA2E3920FB0039AC2C /* AlirebloTekstoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */; };
 		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
@@ -98,8 +102,12 @@
 		003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpiloj.swift"; sourceTree = "<group>"; };
 		003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoListoChelo.swift; sourceTree = "<group>"; };
 		003024D52E3A7E2A006D0C14 /* Ingito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingito.swift; sourceTree = "<group>"; };
-		003024DA2E3FAFC9006D0C14 /* UIColor+deksesuma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+deksesuma.swift"; sourceTree = "<group>"; };
+		003024DA2E3FAFC9006D0C14 /* UIColor+Helpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpiloj.swift"; sourceTree = "<group>"; };
 		003024DC2E401A21006D0C14 /* OmbroImitilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmbroImitilo.swift; sourceTree = "<group>"; };
+		003024DF2E4264F4006D0C14 /* Koloraro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koloraro.swift; sourceTree = "<group>"; };
+		003024E12E426535006D0C14 /* DinamikaStilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinamikaStilo.swift; sourceTree = "<group>"; };
+		003024E42E4265D7006D0C14 /* Klara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Klara.swift; sourceTree = "<group>"; };
+		003024E62E4265F0006D0C14 /* Pergamena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pergamena.swift; sourceTree = "<group>"; };
 		003FC1A72E37D8300039AC2C /* Tiparo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiparo.swift; sourceTree = "<group>"; };
 		003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlirebloTekstoj.swift; sourceTree = "<group>"; };
 		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
@@ -248,6 +256,26 @@
 			path = Ingo;
 			sourceTree = "<group>";
 		};
+		003024DE2E4264E7006D0C14 /* Kolor-stiloj */ = {
+			isa = PBXGroup;
+			children = (
+				003024DF2E4264F4006D0C14 /* Koloraro.swift */,
+				000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */,
+				003024E32E4265CE006D0C14 /* Stiloj */,
+				003024E12E426535006D0C14 /* DinamikaStilo.swift */,
+			);
+			path = "Kolor-stiloj";
+			sourceTree = "<group>";
+		};
+		003024E32E4265CE006D0C14 /* Stiloj */ = {
+			isa = PBXGroup;
+			children = (
+				003024E42E4265D7006D0C14 /* Klara.swift */,
+				003024E62E4265F0006D0C14 /* Pergamena.swift */,
+			);
+			path = Stiloj;
+			sourceTree = "<group>";
+		};
 		00B27B182DC2800500526F82 /* Risurcoj */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,12 +309,12 @@
 		00B27B232DC3FD2600526F82 /* Interfacajhoj */ = {
 			isa = PBXGroup;
 			children = (
-				003024DA2E3FAFC9006D0C14 /* UIColor+deksesuma.swift */,
+				003024DA2E3FAFC9006D0C14 /* UIColor+Helpiloj.swift */,
+				003024DE2E4264E7006D0C14 /* Kolor-stiloj */,
 				003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */,
 				00B27B0C2DC1813400526F82 /* UIView+AranghHelpiloj.swift */,
 				00B27BA22E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift */,
 				00B27B062DC17B6700526F82 /* AparatInformo.swift */,
-				000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */,
 				003FC1A72E37D8300039AC2C /* Tiparo.swift */,
 				00B27B102DC264A100526F82 /* Tekstoj.swift */,
 				003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */,
@@ -551,6 +579,7 @@
 				00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */,
 				00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */,
 				00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */,
+				003024E02E4264F7006D0C14 /* Koloraro.swift in Sources */,
 				00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */,
 				003024D12E3A7659006D0C14 /* UITableViewCell+Helpiloj.swift in Sources */,
 				00B27B442DCD281C00526F82 /* Konservitajho.swift in Sources */,
@@ -561,6 +590,7 @@
 				00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenilo.swift in Sources */,
 				00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */,
 				003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */,
+				003024E52E4265D9006D0C14 /* Klara.swift in Sources */,
 				00107E3E2E32CC770010CECD /* VortListoNulStatoView.swift in Sources */,
 				000DA6F92D906C6E0026CBA0 /* InterfacStilo.swift in Sources */,
 				003024D62E3A7E2C006D0C14 /* Ingito.swift in Sources */,
@@ -575,7 +605,7 @@
 				00B27B552DEF743500526F82 /* InformojViewController.swift in Sources */,
 				00B27B112DC264A100526F82 /* Tekstoj.swift in Sources */,
 				00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */,
-				003024DB2E3FAFCE006D0C14 /* UIColor+deksesuma.swift in Sources */,
+				003024DB2E3FAFCE006D0C14 /* UIColor+Helpiloj.swift in Sources */,
 				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
 				00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* UIView+AranghHelpiloj.swift in Sources */,
@@ -589,10 +619,12 @@
 				00B27B172DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift in Sources */,
 				000DA6FD2D908F680026CBA0 /* ChefaNavigationController.swift in Sources */,
 				00B27B202DC3F9F700526F82 /* LingvoBretoViewController.swift in Sources */,
+				003024E22E42653B006D0C14 /* DinamikaStilo.swift in Sources */,
 				00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */,
 				00B27B9C2E08889000526F82 /* StrekoView.swift in Sources */,
 				00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */,
 				00B27B7C2DF751FE00526F82 /* TradukaroChelo.swift in Sources */,
+				003024E72E4265F2006D0C14 /* Pergamena.swift in Sources */,
 				00B27B332DC8212C00526F82 /* TekstAtributoHelpiloj.swift in Sources */,
 				00B27B282DC6B77A00526F82 /* UzantDatumaro.swift in Sources */,
 				00107E352E3287580010CECD /* PaghingoViewController.swift in Sources */,
