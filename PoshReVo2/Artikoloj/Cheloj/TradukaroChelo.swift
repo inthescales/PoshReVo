@@ -6,6 +6,16 @@ import TTTAttributedLabel
 
 /// Artikolo-ĉelo montranta liston da tradukoj de unu vorto aŭ derivaĵo
 final class TradukaroChelo: UITableViewCell {
+	private enum TitolKoloro {
+		case forta
+		case malforta
+	}
+	
+	private enum TitolStilo {
+		case kursiva
+		case grasKursiva
+	}
+	
 	private enum Konstantoj {
 		/// Kroma spaco supre kaj malsupre de la tuta ĉelo
 		static let vertikalaMargheno = 12.0
@@ -14,11 +24,6 @@ final class TradukaroChelo: UITableViewCell {
 		
 		/// Kroma spaco supre kal malsupre de traduk-etikedoj
 		static let linioBufro: CGFloat = 1.0
-	}
-	
-	private enum TitolStilo {
-		case kursiva
-		case grasKursiva
 	}
 	
 	// MARK: - Agordado
@@ -68,7 +73,12 @@ final class TradukaroChelo: UITableViewCell {
 		let finaElemento: UIView
 		if neniujLingvoj || montrotaj.isEmpty {
 			let teksto = neniujLingvoj ? Tekstoj.neniujLingvoj : Tekstoj.neniujTradukoj
-			let avizo = fariAvizon(teksto: teksto, titolStilo: .kursiva, stilo: stilo)
+			let avizo = fariAvizon(
+				teksto: teksto,
+				koloro: .malforta,
+				titolStilo: .kursiva,
+				stilo: stilo
+			)
 			contentView.addSubview(avizo)
 			avizo.snp.makeConstraints { make in
 				make.top.equalTo(supraDividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
@@ -77,7 +87,12 @@ final class TradukaroChelo: UITableViewCell {
 			
 			finaElemento = avizo
 		} else {
-			let avizo = fariAvizon(teksto: Tekstoj.enViajLingvoj, titolStilo: .grasKursiva, stilo: stilo)
+			let avizo = fariAvizon(
+				teksto: Tekstoj.enViajLingvoj,
+				koloro: .forta,
+				titolStilo: .grasKursiva,
+				stilo: stilo
+			)
 			contentView.addSubview(avizo)
 			avizo.snp.makeConstraints { make in
 				make.top.equalTo(supraDividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
@@ -104,10 +119,23 @@ final class TradukaroChelo: UITableViewCell {
 		}
 	}
 		
-	private func fariAvizon(teksto: String, titolStilo: TitolStilo, stilo: InterfacStilo) -> UIView {
+	private func fariAvizon(
+		teksto: String,
+		koloro: TitolKoloro,
+		titolStilo: TitolStilo,
+		stilo: InterfacStilo
+	) -> UIView {
 		let etikedo = UILabel()
 		etikedo.text = teksto
-		etikedo.textColor = stilo.dokumentaMalfortaTeksto
+		etikedo.setContentHuggingPriority(.defaultLow, for: .horizontal)
+		
+		switch koloro {
+		case .forta:
+			etikedo.textColor = stilo.dokumentaTeksto
+		case .malforta:
+			etikedo.textColor = stilo.dokumentaMalfortaTeksto
+		}
+		
 		switch titolStilo {
 		case .kursiva:
 			etikedo.font = .italicSystemFont(ofSize: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
@@ -117,7 +145,6 @@ final class TradukaroChelo: UITableViewCell {
 				.withSymbolicTraits([.traitItalic, .traitBold])
 			etikedo.font = UIFont(descriptor: priskribilo!, size: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
 		}
-		etikedo.setContentHuggingPriority(.defaultLow, for: .horizontal)
 		
 		let butono = UIButton()
 		butono.setTitle(Tekstoj.elekti, for: .normal)
