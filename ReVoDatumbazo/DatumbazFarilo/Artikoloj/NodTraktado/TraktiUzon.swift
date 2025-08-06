@@ -21,7 +21,15 @@ extension ArboAnalizilo {
 			return "[\(teksto)] "
 		case "klr":
 			// Klarigo kutime havas parentezojn en sia fila teksto
-			return teksto
+			
+			switch stato.cheno.last {
+			case .drv, .subdrv, .snc, .subsnc:
+				// Kiam klarigo-uzo aperas rekte en difino, necesas sekva spaco.
+				// vd. 'najbara'
+				return teksto + " "
+			default:
+				return teksto
+			}
 		case "stl":
 			let stilTeksto = stato.stiloj[teksto] ?? teksto
 			return "(\(stilTeksto)) "
