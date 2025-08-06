@@ -101,9 +101,9 @@ extension AgordojViewController: UITableViewDelegate {
 				break
 			}
 			
-			kunordigilo.prezentiLingvoRedaktilon(
+			kunordigilo.pushiLingvoRedaktilon(
 				prezentilo: navigaciilo,
-				kompleti: { [weak self] _ in
+				elektis: { [weak self] _ in
 					self?.tabelo.reloadData()
 				}
 			)

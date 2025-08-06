@@ -112,6 +112,22 @@ final class Kunordigilo {
 		prezentilo.present(navigaciilo, animated: true)
 	}
 	
+	func pushiLingvoRedaktilon(
+		prezentilo: UINavigationController,
+		elektis: @escaping ([Lingvo]) -> ()
+	) {
+		let redaktilo = LingvaroRedaktiloViewController(
+			lingvaro: datumRegilo.datumaro.lingvoj,
+			prezentManiero: .pushita,
+			elektis: { [weak self] novaj in
+				self?.datumRegilo.redaktisLingvojn(novaj: novaj)
+				elektis(novaj)
+			}
+		)
+		
+		prezentilo.pushViewController(redaktilo, animated: true)
+	}
+	
 	func prezentiLingvoRedaktilon(
 		prezentilo: UINavigationController,
 		kompleti: @escaping ([Lingvo]) -> ()
@@ -121,10 +137,12 @@ final class Kunordigilo {
 		
 		let redaktilo = LingvaroRedaktiloViewController(
 			lingvaro: datumRegilo.datumaro.lingvoj,
-			kompleti: { [weak self] novaj in
+			prezentManiero: .prezentita(forigi: {
+				navigaciilo.dismiss(animated: true)
+			}),
+			elektis: { [weak self] novaj in
 				self?.datumRegilo.redaktisLingvojn(novaj: novaj)
 				kompleti(novaj)
-				navigaciilo.dismiss(animated: true)
 			}
 		)
 		

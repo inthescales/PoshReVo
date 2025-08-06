@@ -2,13 +2,32 @@ import UIKit
 
 import ReVoDatumbazo
 
+/// Agordopaĝo por elekti lingvojn aperontajn en tradukoj kaj sub la serĉilo
 final class LingvaroRedaktiloViewController: UIViewController {
 	private enum Konstantoj {
-		static let minimumo = 1
+		/// La minimuma kvanto da lingvoj. Kiam ĉi-limo estas atingita, ne eblas forigi pliajn lingvojn
+		static let lingvoMinimumo = 1
+	}
+	
+	/// Kiel ĉi-VC estos prezentata. Certigas ke, se 'reen'-butono ne estas, estu foriga fermo kaj butono
+	enum Prezentmaniero {
+		case prezentita(forigi: () -> Void)
+		case pushita
+		
+		/// Forigofermo, se estas
+		func forigi() -> (() -> Void)? {
+			switch self {
+			case .prezentita(let forigi):
+				return forigi
+			case .pushita:
+				return nil
+			}
+		}
 	}
 	
 	// MARK: Interfacaĵoj
 	
+	/// Butono por redakti (forigi kaj reordigi) lingvojn
 	lazy var redaktButono = {
 		let butono = UIBarButtonItem.init(
 			title: Tekstoj.redakti,
@@ -20,6 +39,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 		return butono
 	}()
 	
+	/// Tabelo kiu montros lingvojn kaj agojn
 	lazy var tabelo: UITableView = {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
@@ -31,6 +51,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	
 	// MARK: Stato
 	
+	/// La lingvaro kiu aperu en ĉi-paĝo
 	var lingvaro: [Lingvo] {
 		didSet {
 			lingvaroShanghighis()
@@ -39,17 +60,23 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	
 	// MARK: Agordoj
 	
-	private let stilo: InterfacStilo
+	/// Prezentmaniero por la VC
+	let prezentManiero: Prezentmaniero
 	
-	let kompleti: ([Lingvo]) -> ()
+	/// Konfirmi elekton de nova lingvaro
+	let elektis: ([Lingvo]) -> ()
+	
+	private let stilo: InterfacStilo
 	
 	init(
 		lingvaro: [Lingvo],
-		kompleti: @escaping ([Lingvo]) -> (),
+		prezentManiero: Prezentmaniero,
+		elektis: @escaping ([Lingvo]) -> (),
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.lingvaro = lingvaro
-		self.kompleti = kompleti
+		self.prezentManiero = prezentManiero
+		self.elektis = elektis
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -60,44 +87,33 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		title = Tekstoj.viajLingvoj
-		if navigationController?.viewControllers.count == 1 {
+		navigationItem.rightBarButtonItem = redaktButono
+		
+		// Se aparta forigo-fermo necesas, ni uzu forigi-butonon
+		if case .prezentita = prezentManiero {
 			navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.rezigniButono(
 				por: self,
 				ago: #selector(premisIkson),
 				stilo: stilo
 			)
 		}
-		navigationItem.rightBarButtonItem = redaktButono
 		
 		view.addEdgeMatchedSubview(tabelo)
 	}
 	
-	// MARK: Lingvaro-shanĝado
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
 		
-	private func forigis(je indekso: Int) {
-		lingvaro.remove(at: indekso)
-		if lingvaro.count <= Konstantoj.minimumo {
-			// Ĉi uzo de `DispatchQueue` evitas eraron en UITableView.setEditing(...)
-			DispatchQueue.main.async { [weak self] in
-				self?.finiRedaktadon()
-			}
-		}
+		elektis(lingvaro)
 	}
 	
-	private func aldonis(lingvon lingvo: Lingvo) {
-		lingvaro.append(lingvo) // TODO: Reagigi
-	}
+	// MARK: - Navigaciaj agoj
 	
-	private func lingvaroShanghighis() {
-		redaktButono.isEnabled = lingvaro.count > Konstantoj.minimumo
-		tabelo.reloadData()
-	}
-	
-	// MARK: Uzanto-agoj
-		
 	@objc private func premisIkson() {
-		kompleti(lingvaro)
+		prezentManiero.forigi()?()
 	}
+	
+	// MARK: Redaktado
 	
 	@objc private func premisRedakti() {
 		if !tabelo.isEditing {
@@ -118,7 +134,30 @@ final class LingvaroRedaktiloViewController: UIViewController {
 		redaktButono.title = Tekstoj.redakti
 		redaktButono.style = .plain
 	}
+	
+	// MARK: Lingvaro-shanĝado
+		
+	private func forigis(je indekso: Int) {
+		lingvaro.remove(at: indekso)
+		if lingvaro.count <= Konstantoj.lingvoMinimumo {
+			// Ĉi uzo de `DispatchQueue` evitas eraron en UITableView.setEditing(...)
+			DispatchQueue.main.async { [weak self] in
+				self?.finiRedaktadon()
+			}
+		}
+	}
+	
+	private func aldonis(lingvon lingvo: Lingvo) {
+		lingvaro.append(lingvo)
+	}
+	
+	private func lingvaroShanghighis() {
+		redaktButono.isEnabled = lingvaro.count > Konstantoj.lingvoMinimumo
+		tabelo.reloadData()
+	}
 }
+
+// MARK: - Tabelprezentado
 
 extension LingvaroRedaktiloViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -179,7 +218,7 @@ extension LingvaroRedaktiloViewController: UITableViewDataSource {
 		cell.showsReorderControl = self.tableView(tabelo, canMoveRowAt: indexPath) && tableView.isEditing
 	}
 	
-	// MARK: Redaktado
+	// MARK: - Tabeloredaktado
 	
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 		return indexPath.section == 0
