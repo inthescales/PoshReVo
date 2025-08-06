@@ -746,7 +746,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "<a href=\"help.0i\">Helpi<\/a> al iu atingo.\n\n<sencNumero>a) <\/sencNumero>(ntr)\nInterhelpi por efektivigi ion: \n<ekzemplo> · Esperanto celas <g>per<\/g>i komunikadon interkulture;<\/ekzemplo> \n<ekzemplo> · persono, kiu akceptis principe la Internacian Lingvon, devas konscii, ke ĝia rolo ne estas nur <g>per<\/g>i mendon de glaso da biero en restoracio, sed servi kiel rimedo de pensado kaj de komunikado sur ĉiuj kampoj de la homa aktiveco.<\/ekzemplo>\n\n<sencNumero>b) <\/sencNumero>(tr)\n<a href=\"hav.0igi\">Havigi<\/a> ion al iu per sia helpo, klopodo, efiko: \n<ekzemplo> · mi […] volonte <g>per<\/g>os liajn pensojn al ŝi;<\/ekzemplo> \n<ekzemplo> · ili korespondas tre malmulte, la sciigojn <g>per<\/g>as plejofte la telefono;<\/ekzemplo> \n<ekzemplo> · ĵurnalistoj […] emas aldoni al nia proponita teksto sian propran, ofte por Esperanto malpli favoran, opinion, aŭ forstreki parton, kio <g>per<\/g>as al la publiko malkorektan impreson;<\/ekzemplo> \n<ekzemplo> · la tolerema islamo de Al-Andalus […] <g>per<\/g>is la helenan idearon al Eŭropo.<\/ekzemplo>"
+        "teksto" : "<a href=\"help.0i\">Helpi<\/a> al iu atingo.\n\n<sencNumero>a) <\/sencNumero><k>ntr<\/k>\nInterhelpi por efektivigi ion: \n<ekzemplo> · Esperanto celas <g>per<\/g>i komunikadon interkulture;<\/ekzemplo> \n<ekzemplo> · persono, kiu akceptis principe la Internacian Lingvon, devas konscii, ke ĝia rolo ne estas nur <g>per<\/g>i mendon de glaso da biero en restoracio, sed servi kiel rimedo de pensado kaj de komunikado sur ĉiuj kampoj de la homa aktiveco.<\/ekzemplo>\n\n<sencNumero>b) <\/sencNumero><k>tr<\/k>\n<a href=\"hav.0igi\">Havigi<\/a> ion al iu per sia helpo, klopodo, efiko: \n<ekzemplo> · mi […] volonte <g>per<\/g>os liajn pensojn al ŝi;<\/ekzemplo> \n<ekzemplo> · ili korespondas tre malmulte, la sciigojn <g>per<\/g>as plejofte la telefono;<\/ekzemplo> \n<ekzemplo> · ĵurnalistoj […] emas aldoni al nia proponita teksto sian propran, ofte por Esperanto malpli favoran, opinion, aŭ forstreki parton, kio <g>per<\/g>as al la publiko malkorektan impreson;<\/ekzemplo> \n<ekzemplo> · la tolerema islamo de Al-Andalus […] <g>per<\/g>is la helenan idearon al Eŭropo.<\/ekzemplo>"
       }
     },
     {
@@ -1540,7 +1540,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "(prepoziciaĵo)\nPer la helpo de, per la intera agado de: \n<ekzemplo> · la profetoj […] <g>per<\/g>e de fido venkis regnojn, plenumis justecon, atingis promesojn;<\/ekzemplo> \n<ekzemplo> · nevidebla anĝelozorganto sendis al li porcion <g>per<\/g>e de maljuna kuiristino;<\/ekzemplo> \n<ekzemplo> · plej granda komerco okazas <g>per<\/g>e de malgrandaj vendejoj;<\/ekzemplo> \n<ekzemplo> · oni evoluigas la sistemon DLT por maŝintradukado <g>per<\/g>e de la uzo de Esperanto kiel interlingvo.<\/ekzemplo>"
+        "teksto" : "<k>prepoziciaĵo<\/k>\nPer la helpo de, per la intera agado de: \n<ekzemplo> · la profetoj […] <g>per<\/g>e de fido venkis regnojn, plenumis justecon, atingis promesojn;<\/ekzemplo> \n<ekzemplo> · nevidebla anĝelozorganto sendis al li porcion <g>per<\/g>e de maljuna kuiristino;<\/ekzemplo> \n<ekzemplo> · plej granda komerco okazas <g>per<\/g>e de malgrandaj vendejoj;<\/ekzemplo> \n<ekzemplo> · oni evoluigas la sistemon DLT por maŝintradukado <g>per<\/g>e de la uzo de Esperanto kiel interlingvo.<\/ekzemplo>"
       }
     },
     {

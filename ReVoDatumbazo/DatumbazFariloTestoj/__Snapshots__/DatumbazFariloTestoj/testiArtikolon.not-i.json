@@ -9,7 +9,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "(tr)\n<sencNumero>1. <\/sencNumero><a href=\"skrib.0i.signojn\">Skribi<\/a> pri io mallongan memorigan resumon: \n<ekzemplo> · <g>not<\/g>u la daton;<\/ekzemplo> \n<ekzemplo> · dika nigra libro, en kiu oni <g>not<\/g>is malaperintajn ŝipojn.<\/ekzemplo>\n\n<sencNumero>2. <\/sencNumero>(figure) Priatenti kaj konservi en sia memoro: \n<ekzemplo> · ni petas vin <g>not<\/g>i al vi en la memoro tiun konkludon;<\/ekzemplo> \n<ekzemplo> · la estraro havas konsiderojn subtilajn: malgraŭ ke estas malproksime, ĝi tamen <g>not<\/g>as al si en la cerbo;<\/ekzemplo> \n<ekzemplo> · <g>not<\/g>u ke mi venos.<\/ekzemplo>"
+        "teksto" : "<k>tr<\/k>\n<sencNumero>1. <\/sencNumero><a href=\"skrib.0i.signojn\">Skribi<\/a> pri io mallongan memorigan resumon: \n<ekzemplo> · <g>not<\/g>u la daton;<\/ekzemplo> \n<ekzemplo> · dika nigra libro, en kiu oni <g>not<\/g>is malaperintajn ŝipojn.<\/ekzemplo>\n\n<sencNumero>2. <\/sencNumero>(figure) Priatenti kaj konservi en sia memoro: \n<ekzemplo> · ni petas vin <g>not<\/g>i al vi en la memoro tiun konkludon;<\/ekzemplo> \n<ekzemplo> · la estraro havas konsiderojn subtilajn: malgraŭ ke estas malproksime, ĝi tamen <g>not<\/g>as al si en la cerbo;<\/ekzemplo> \n<ekzemplo> · <g>not<\/g>u ke mi venos.<\/ekzemplo>"
       }
     },
     {
@@ -1068,7 +1068,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "(x)\nKrei piednoton: \n<ekzemplo> · pri personaj nomoj ofte uzataj en ĉi tiu libro mi pied<g>not<\/g>as nur unufoje;<\/ekzemplo> \n<ekzemplo> · ioma pied<g>not<\/g>ado necesas por averaĝaj legantoj.<\/ekzemplo>"
+        "teksto" : "<k>x<\/k>\nKrei piednoton: \n<ekzemplo> · pri personaj nomoj ofte uzataj en ĉi tiu libro mi pied<g>not<\/g>as nur unufoje;<\/ekzemplo> \n<ekzemplo> · ioma pied<g>not<\/g>ado necesas por averaĝaj legantoj.<\/ekzemplo>"
       }
     },
     {
