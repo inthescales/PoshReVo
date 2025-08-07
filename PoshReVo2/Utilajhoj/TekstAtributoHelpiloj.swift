@@ -110,7 +110,7 @@ enum TekstAtributoHelpiloj {
 					kCTSuperscriptAttributeName as NSAttributedString.Key,
 					value: Konstantoj.superskriptSupreco,
 					range: regiono
-				)
+				)				
 			case .suba:
 				atributaTeksto.addAttribute(
 					kCTSuperscriptAttributeName as NSAttributedString.Key,

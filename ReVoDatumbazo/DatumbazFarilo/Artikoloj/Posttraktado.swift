@@ -10,7 +10,14 @@ enum Posttraktado {
 				if let (sencIndekso, subsencIndekso) = markSencoj[marko] {
 					if let subsencIndekso,
 					   let subsencLitero = ArtikolTeksto.subsencLitero(por: subsencIndekso) {
-						return "<sup>\(sencIndekso).\(subsencLitero)</sup>"
+						// NOTO:
+						// En la retejo, supraj tekstoj indikantaj senco kaj subsenco aperas
+						// en la formo 'S.s', ekz. "1.a". La apo efektivigas tiajn suprajn tekstojn
+						// per NSAttributedString kun 'superscript', je kiu bedaŭrinde ŝajne
+						// eblas nur uzi ciferojn kaj literojn. Do mi forlasas la punkton.
+						// Eble estontece eblos enkonduki ĝin.
+						// TODO: Provu efektivigi suprajn tekstojn per aparta tiparo
+						return "<sup>\(sencIndekso)\(subsencLitero)</sup>"
 					} else {
 						return "<sup>\(sencIndekso)</sup>"
 					}
