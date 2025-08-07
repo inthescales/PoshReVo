@@ -22,6 +22,7 @@ extension InterfacStilo {
 				dokumentaMalfortaTeksto: fortgriza,
 				dokumentaDividilo: mezgriza,
 				dokumentLigilo: verda,
+				dokumentSencNumero: UIColor(deksesuma: 0x016011),
 				dokumentEkzemplo: .black,
 				dokumentRimarko: .black,
 				menuoFono: palgriza,
@@ -29,7 +30,7 @@ extension InterfacStilo {
 			)
 		}(),
 		malhela: {
-			let verda = UIColor(deksesuma: 0x14b724)
+			let verda = UIColor(deksesuma: 0x14c926)
 			let malhelgriza = UIColor(deksesuma: 0x1C1F1C)
 			let malheletgriza = UIColor(deksesuma: 0x1F221F)
 			let mezgriza = UIColor(deksesuma: 0x222f22)
@@ -47,6 +48,7 @@ extension InterfacStilo {
 				dokumentaMalfortaTeksto: helgriza,
 				dokumentaDividilo: helgriza,
 				dokumentLigilo: verda,
+				dokumentSencNumero: UIColor(deksesuma: 0x15a33f),
 				dokumentEkzemplo: .white,
 				dokumentRimarko: .white,
 				menuoFono: malhelgriza,

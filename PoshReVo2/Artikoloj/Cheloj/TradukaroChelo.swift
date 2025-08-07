@@ -184,7 +184,7 @@ final class TradukaroChelo: UITableViewCell {
 			let lingvoEtikedo = TTTAttributedLabel(frame: .zero)
 			//TekstAtributoHelpiloj.provizi(etikedon: lingvoEtikedo, per: traduko.lingvo.adverbo + ":", tekstGrando: 18.0) // TODO: Tiparo
 			lingvoEtikedo.font = .systemFont(ofSize: 18.0) // TODO: Tiparo
-			lingvoEtikedo.textColor = stilo.dokumentRimarko // TODO: Nova koloro, samkiel numerojn eble
+			lingvoEtikedo.textColor = stilo.dokumentSencNumero
 			lingvoEtikedo.numberOfLines = 1
 			lingvoEtikedo.text = traduko.lingvo.adverbo + ":" // Faru FINE (pro TTTAttributedLabel sensencaĵo)
 			lingvoEtikedo.translatesAutoresizingMaskIntoConstraints = false

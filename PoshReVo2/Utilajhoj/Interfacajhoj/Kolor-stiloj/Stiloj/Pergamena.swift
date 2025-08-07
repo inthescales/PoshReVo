@@ -26,6 +26,7 @@ extension InterfacStilo {
 				dokumentaMalfortaTeksto: malfortaTeksto,
 				dokumentaDividilo: malfortaTeksto,
 				dokumentLigilo: ligilblua,
+				dokumentSencNumero: malhelrugha,
 				dokumentEkzemplo: brunaTeksto,
 				dokumentRimarko: malhelrugha,
 				menuoFono: mezaPagho,
@@ -38,6 +39,7 @@ extension InterfacStilo {
 			let teksto = UIColor(deksesuma: 0xddd0ba)
 			let malfortaTeksto = UIColor(deksesuma: 0x897f6e)
 			let ligilBlua = UIColor(deksesuma: 0x86b3d8)
+			let palrugha = UIColor(deksesuma: 0xdd9da2)
 			
 			return Koloraro(
 				navigaciaFono: heletaPagho,
@@ -51,9 +53,10 @@ extension InterfacStilo {
 				dokumentaMalfortaTeksto: malfortaTeksto,
 				dokumentaDividilo: malfortaTeksto,
 				dokumentLigilo: ligilBlua,
+				dokumentSencNumero: palrugha,
 				dokumentEkzemplo: UIColor(deksesuma: 0xe0991f),
-				dokumentRimarko: UIColor(deksesuma: 0xdd9da2),
-				menuoFono: heletaPagho, // TODO: Fari nove
+				dokumentRimarko: palrugha,
+				menuoFono: heletaPagho,
 				ombro: .white.withAlphaComponent(0.5)
 			)
 		}()

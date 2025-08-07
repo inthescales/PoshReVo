@@ -22,12 +22,6 @@ class DinamikaStilo {
 	static var dokumentaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaFono })
 	static var dokumentaAlternaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaAlternaFono })
 	static var dokumentaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaTeksto })
-	static var dokumentaMalfortaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaMalfortaTeksto})
-	static var dokumentaDividilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaDividilo })
-	static var dokumentLigilo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentLigilo })
-	
-	static var dokumentEkzemplo = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentEkzemplo })
-	static var dokumentRimarko = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentRimarko })
 
 	static var ombro = UIColor(dynamicProvider: { _ in konkretaStilo.ombro })
 }

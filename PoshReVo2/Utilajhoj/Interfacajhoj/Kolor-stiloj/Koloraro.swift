@@ -42,6 +42,9 @@ struct Koloraro {
 	
 	// MARK: - Artikolaj Koloroj
 	
+	/// Koloro de numeretikedoj por sencoj kaj subsencoj en artikoloj
+	var dokumentSencNumero: UIColor
+	
 	/// Koloro de ekzemploj en artikoloj
 	var dokumentEkzemplo: UIColor
 	

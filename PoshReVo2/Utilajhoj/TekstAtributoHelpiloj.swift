@@ -133,7 +133,7 @@ enum TekstAtributoHelpiloj {
 			case .sencNumero:
 				atributaTeksto.addAttribute(
 					.foregroundColor,
-					value: stilo.dokumentRimarko,
+					value: stilo.dokumentSencNumero,
 					range: regiono
 				)
 			case .ligo:
