@@ -91,7 +91,8 @@ final class LingvaroRedaktiloViewController: UIViewController {
 		
 		// Se aparta forigo-fermo necesas, ni uzu forigi-butonon
 		if case .prezentita = prezentManiero {
-			navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.rezigniButono(
+			// navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.rezigniButono(
+			navigationItem.leftBarButtonItem = NavigaciiloHelpiloj.iksoButono(
 				por: self,
 				ago: #selector(premisIkson),
 				stilo: stilo

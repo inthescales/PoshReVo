@@ -1,6 +1,22 @@
 import UIKit
 
 enum NavigaciiloHelpiloj {
+	static func iksoButono(
+		por vc: UIViewController,
+		ago: Selector,
+		stilo: InterfacStilo
+	) -> UIBarButtonItem {
+		let butono = UIBarButtonItem(
+			image: UIImage(named: "ikso"),
+			landscapeImagePhone: nil,
+			style: .plain,
+			target: vc,
+			action: ago
+		)
+		butono.tintColor = stilo.navigaciaButono
+		return butono
+	}
+	
 	static func rezigniButono(
 		por vc: UIViewController,
 		ago: Selector,
