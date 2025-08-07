@@ -7,21 +7,23 @@ extension InterfacStilo {
 		hela: {
 			let verda = UIColor(deksesuma: 0x0a9618)
 			let palgriza = UIColor(deksesuma: 0xf2f2f2)
+			let mezgriza = UIColor(deksesuma: 0x888888)
+			let fortgriza = UIColor(deksesuma: 0x555555)
 			
 			return Koloraro(
 				navigaciaFono: .white,
 				navigaciaTeksto: .black,
 				navigaciaSerchilo: palgriza,
 				navigaciaButono: verda,
-				navigaciaButonoMalaktiva: .black.withAlphaComponent(0.5),
+				navigaciaButonoMalaktiva: mezgriza,
 				dokumentaFono: .white,
 				dokumentaAlternaFono: palgriza,
 				dokumentaTeksto: .black,
-				dokumentaMalfortaTeksto: .black.withAlphaComponent(0.5),
-				dokumentaDividilo: .black.withAlphaComponent(0.5),
+				dokumentaMalfortaTeksto: fortgriza,
+				dokumentaDividilo: mezgriza,
 				dokumentLigilo: verda,
-				dokumentEkzemplo: .black.withAlphaComponent(0.8),
-				dokumentRimarko: .black.withAlphaComponent(0.8),
+				dokumentEkzemplo: .black,
+				dokumentRimarko: .black,
 				menuoFono: palgriza,
 				ombro: .black.withAlphaComponent(0.5)
 			)
