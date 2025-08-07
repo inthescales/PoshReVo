@@ -30,22 +30,26 @@ extension InterfacStilo {
 		}(),
 		malhela: {
 			let verda = UIColor(deksesuma: 0x14b724)
+			let malhelgriza = UIColor(deksesuma: 0x1C1F1C)
+			let malheletgriza = UIColor(deksesuma: 0x1F221F)
+			let mezgriza = UIColor(deksesuma: 0x222f22)
+			let helgriza = UIColor(deksesuma: 0x888f88)
 			
 			return Koloraro(
 				navigaciaFono: .black,
 				navigaciaTeksto: .white,
-				navigaciaSerchilo: .white,
+				navigaciaSerchilo: malhelgriza,
 				navigaciaButono: verda,
-				navigaciaButonoMalaktiva: .white.withAlphaComponent(0.5),
+				navigaciaButonoMalaktiva: helgriza,
 				dokumentaFono: .black,
-				dokumentaAlternaFono: .white.withAlphaComponent(0.5),
+				dokumentaAlternaFono: malheletgriza,
 				dokumentaTeksto: .white,
-				dokumentaMalfortaTeksto: .white.withAlphaComponent(0.5),
-				dokumentaDividilo: .white.withAlphaComponent(0.5),
+				dokumentaMalfortaTeksto: helgriza,
+				dokumentaDividilo: helgriza,
 				dokumentLigilo: verda,
-				dokumentEkzemplo: .white.withAlphaComponent(0.8),
-				dokumentRimarko: .white.withAlphaComponent(0.8),
-				menuoFono: UIColor(deksesuma: 0x1C1C1E),
+				dokumentEkzemplo: .white,
+				dokumentRimarko: .white,
+				menuoFono: malhelgriza,
 				ombro: .white.withAlphaComponent(0.5)
 			)
 		}()
