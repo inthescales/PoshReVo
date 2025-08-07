@@ -7,8 +7,9 @@ extension ArboAnalizilo {
 		stato.lastaSenco? += 1
 		stato.nunaSenco = stato.lastaSenco
 		
-		if let marko = marko {
-			stato.markSencoj[marko] = stato.nunaSenco
+		if let marko = marko,
+		   let senco = stato.nunaSenco {
+			stato.markSencoj[marko] = (senco, nil)
 		}
 		
 		var teksto = ""

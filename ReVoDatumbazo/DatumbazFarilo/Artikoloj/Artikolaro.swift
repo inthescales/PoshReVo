@@ -64,7 +64,7 @@ enum Artikolaro {
 		var serchVortoj: [SerchVorto] = []
 		var fakVortoj: [String: [FakVorto]] = [:]
 		var ofcVortoj: [Oficialeco: [OfcVorto]] = [:]
-		var markSencoj: [String: Int] = [:]
+		var markSencoj: [String: (Int, Int?)] = [:]
 
 		for indiko in legotaj {
 			let rezulto = ArtikolAnalizilo.legi(
@@ -106,6 +106,8 @@ enum Artikolaro {
 
 		// Posttrakti artikolojn
 
+		print("Posttraktas artikolojn")
+		
 		artikoloj = artikoloj.map { artikolo in
 			return Posttraktado.postTrakti(artikolon: artikolo, markSencoj: markSencoj)
 		}

@@ -2,13 +2,18 @@ import Foundation
 
 enum Posttraktado {
 	/// Efektivigas tiujn ŝanĝojn al artikolo kiuj ne eblas fari dum unuopa legado
-	static func postTrakti(artikolon artikolo: Artikolo, markSencoj: [String: Int]) -> Artikolo {
+	static func postTrakti(artikolon artikolo: Artikolo, markSencoj: [String: (Int, Int?)]) -> Artikolo {
 		func anstataui(en teksto: String) -> String {
 			let regex = try! Regex("<sncref mrk=\"(.*?)\"\\/>")
 			return teksto.replacing(regex) { (match: Regex.Match) in
 				let marko = String(match.output[1].substring!)
-				if let indekso = markSencoj[marko] {
-					return "<sup>\(indekso)</sup>"
+				if let (sencIndekso, subsencIndekso) = markSencoj[marko] {
+					if let subsencIndekso,
+					   let subsencLitero = ArtikolTeksto.subsencLitero(por: subsencIndekso) {
+						return "<sup>\(sencIndekso).\(subsencLitero)</sup>"
+					} else {
+						return "<sup>\(sencIndekso)</sup>"
+					}
 				} else {
 					// TODO: Konstatu ke ĉiuj markoj estos trovataj
 					// assert(false, "Ne trovis markon")

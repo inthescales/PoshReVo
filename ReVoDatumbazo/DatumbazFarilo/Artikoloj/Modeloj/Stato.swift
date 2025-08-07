@@ -94,8 +94,8 @@ extension ArboAnalizilo {
 			return nil
 		}
 		
-		/// Por ĉiu marko kiu aperas en senco, la numero de tiu senco (por resolvi 'sncref'-ojn)
-		var markSencoj: [String: Int] = [:]
+		/// Por ĉiu marko kiu aperas en senco, la numero de tiu senco kaj, se estas, subsenco (por resolvi 'sncref'-ojn)
+		var markSencoj: [String: (Int, Int?)] = [:]
 		
 		// MARK: Tradukoj kaj vortlisteroj
 		

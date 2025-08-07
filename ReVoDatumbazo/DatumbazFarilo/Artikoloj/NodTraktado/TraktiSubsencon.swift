@@ -7,6 +7,12 @@ extension ArboAnalizilo {
 		stato.lastaSubsenco? += 1
 		stato.nunaSubsenco = stato.lastaSubsenco
 		
+		if let marko = marko,
+		   let senco = stato.nunaSenco,
+		   let subsenco = stato.nunaSubsenco {
+			stato.markSencoj[marko] = (senco, subsenco)
+		}
+		
 		var teksto = ""
 		traktiFilojn(de: subsenco, stato: stato) { filo in
 			switch filo.tipo {
