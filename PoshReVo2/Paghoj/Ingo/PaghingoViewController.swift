@@ -81,13 +81,12 @@ final class PaghingoViewController: UIViewController {
 			],
 			agordoj: ShovMenuoViewController.Agordoj(
 				titolo: nil,
-				navigaciaKoloro: DinamikaStilo.navigaciaFono,
-				navigaciaTekstKoloro: DinamikaStilo.navigaciaTeksto,
-				navigaciaDividiloKoloro: DinamikaStilo.navigaciaTeksto.withAlphaComponent(0.3),
-				menuaKoloro: DinamikaStilo.navigaciaFono,
-				malplenaKoloro: DinamikaStilo.navigaciaFono,
-				tekstKoloro: DinamikaStilo.navigaciaTeksto,
-				dividiloKoloro: DinamikaStilo.navigaciaTeksto.withAlphaComponent(0.3)
+				navigaciaKoloro: DinamikaStilo.dokumentaFono,
+				navigaciaTekstKoloro: DinamikaStilo.dokumentaTeksto,
+				menuaKoloro: DinamikaStilo.dokumentaFono,
+				malplenaKoloro: DinamikaStilo.dokumentaFono,
+				tekstKoloro: DinamikaStilo.dokumentaTeksto,
+				dividiloKoloro: DinamikaStilo.dokumentaTeksto.withAlphaComponent(0.3)
 			),
 			navigaciilaAlto: navigaciAlto,
 			forigi: { [weak self] in

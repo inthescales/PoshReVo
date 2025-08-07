@@ -6,7 +6,6 @@ final class ShovMenuoViewController: UIViewController {
 		let titolo: String?
 		let navigaciaKoloro: UIColor
 		let navigaciaTekstKoloro: UIColor
-		let navigaciaDividiloKoloro: UIColor
 		let menuaKoloro: UIColor
 		let malplenaKoloro: UIColor
 		let tekstKoloro: UIColor
@@ -64,12 +63,10 @@ final class ShovMenuoViewController: UIViewController {
 		let ejo = UIView()
 		ejo.backgroundColor = agordoj.navigaciaKoloro
 		
-		let dividilo = UIView()
-		dividilo.backgroundColor = agordoj.navigaciaDividiloKoloro
+		let dividilo = OmbroImitilo(koloro: agordoj.navigaciaKoloro)
 		ejo.addSubview(dividilo)
 		dividilo.snp.makeConstraints { make in
 			make.left.right.bottom.equalToSuperview()
-			make.height.equalTo(1)
 		}
 		
 		return ejo
