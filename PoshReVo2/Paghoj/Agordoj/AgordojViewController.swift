@@ -133,7 +133,7 @@ extension AgordojViewController: UITableViewDelegate {
 
 extension AgordojViewController: UITableViewDataSource {
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return 3
+		return 2
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -165,10 +165,10 @@ extension AgordojViewController: UITableViewDataSource {
 			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			chelo.textLabel?.text = "Forigi Konservitajn"
 			chelo.accessoryType = .none
-		case (2, 0):
-			chelo = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
-			chelo.textLabel?.text = "Ŝanĝi Stilon"
-			chelo.detailTextLabel?.text = stilo.nomo
+//		case (2, 0):
+//			chelo = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
+//			chelo.textLabel?.text = "Ŝanĝi Stilon"
+//			chelo.detailTextLabel?.text = stilo.nomo
 		default:
 			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			break
