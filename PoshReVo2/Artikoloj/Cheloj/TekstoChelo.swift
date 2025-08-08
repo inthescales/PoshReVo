@@ -5,7 +5,7 @@ import TTTAttributedLabel
 final class TekstoChelo: UITableViewCell {
 	private lazy var etikedo: TTTAttributedLabel = {
 		let etikedo = TTTAttributedLabel(frame: .zero)
-		etikedo.font = UIFont.preferredFont(forTextStyle: .body).dinamika() // TODO: Tiparo
+		etikedo.font = Tiparo.artikolaTeksto
 		etikedo.numberOfLines = 0
 		return etikedo
 	}()

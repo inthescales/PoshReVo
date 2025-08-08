@@ -8,7 +8,7 @@ final class SubartikoloTitoloChelo: UITableViewCell {
 	
 	private lazy var etikedo: UILabel = {
 		let etikedo = UILabel()
-		etikedo.font = .systemFont(ofSize: 32, weight: .bold).dinamika()
+		etikedo.font = Tiparo.subartikolaTitolo
 		etikedo.numberOfLines = 1
 		return etikedo
 	}()

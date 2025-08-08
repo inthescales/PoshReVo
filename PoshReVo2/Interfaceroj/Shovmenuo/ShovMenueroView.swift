@@ -25,7 +25,7 @@ final class ShovMenueroView: UIControl {
 		let etikedo = UILabel()
 		etikedo.text = teksto
 		etikedo.textColor = menuAgordoj.tekstKoloro
-		etikedo.font = .systemFont(ofSize: 18).dinamika() // TODO: tiparo
+		etikedo.font = Tiparo.shovMenuero
 		etikedo.numberOfLines = 0
 		return etikedo
 	}()

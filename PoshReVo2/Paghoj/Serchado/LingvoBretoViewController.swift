@@ -5,9 +5,6 @@ import ReVoDatumbazo
 /// Montras breton de la uzantaj lingvoj, kaj ebligas elekton inter ili
 final class LingvoBretoViewController: UIViewController {
 	private enum Konstantoj {
-		/// Tiparo por butonoj
-		static let butonoTiparo: UIFont = UIFont.systemFont(ofSize: 18.0) // TODO: Tiparo
-		
 		/// Spaco dekstre kaj maldekstre de ĉiuj butonoj
 		static let butonoBufro: CGFloat = 16.0
 		
@@ -55,7 +52,7 @@ final class LingvoBretoViewController: UIViewController {
 	
 	lazy var pliButono: UIButton = {
 		let butono = UIButton()
-		butono.metiDinamikanTitolon(Tekstoj.pli, tiparo: Konstantoj.butonoTiparo)
+		butono.metiDinamikanTitolon(Tekstoj.pli, tiparo: Tiparo.lingvoBreto)
 		butono.addTarget(self, action: #selector(premisPli), for: .touchUpInside)
 		return butono
 	}()
@@ -225,7 +222,7 @@ final class LingvoBretoViewController: UIViewController {
 			let lingvo = lingvoj[i]
 			
 			let butono = UIButton()
-			butono.metiDinamikanTitolon(lingvo.nomo, tiparo: Konstantoj.butonoTiparo)
+			butono.metiDinamikanTitolon(lingvo.nomo, tiparo: Tiparo.lingvoBreto)
 			let koloro = (elektita.kodo == lingvo.kodo) ? aktivaKoloro : malaktivaKoloro // TODO: Lingva egaleco
 			butono.setTitleColor(koloro, for: .normal)
 			butono.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)

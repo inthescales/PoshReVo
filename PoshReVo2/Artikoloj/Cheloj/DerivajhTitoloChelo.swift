@@ -9,7 +9,7 @@ final class DerivajhTitoloChelo: UITableViewCell {
 	
 	private lazy var etikedo: UILabel = {
 		let etikedo = UILabel()
-		etikedo.font = .systemFont(ofSize: 30, weight: .bold).dinamika() // TODO: Tiparo
+		etikedo.font = Tiparo.derivajhaTitolo
 		etikedo.numberOfLines = 0
 		return etikedo
 	}()

@@ -20,8 +20,6 @@ final class TradukaroChelo: UITableViewCell {
 		/// Kroma spaco supre kaj malsupre de la tuta ĉelo
 		static let vertikalaMargheno = 12.0
 		
-		static let tekstGrandeco: CGFloat = 18.0
-		
 		/// Kroma spaco supre kal malsupre de traduk-etikedoj
 		static let linioBufro: CGFloat = 1.0
 	}
@@ -102,7 +100,7 @@ final class TradukaroChelo: UITableViewCell {
 			let staplo = fariStaplon(tradukoj: montrotaj, stilo: stilo)
 			contentView.addSubview(staplo)
 			staplo.snp.makeConstraints { make in
-				make.top.equalTo(avizo.snp.bottom).offset(Konstantoj.vertikalaMargheno - Konstantoj.tekstGrandeco / 4)
+				make.top.equalTo(avizo.snp.bottom).offset(Konstantoj.vertikalaMargheno - Tiparo.tradukaLingvoEtikedo.pointSize / 4)
 				make.left.right.equalToSuperview().inset(horizontalaMargheno)
 			}
 			
@@ -138,17 +136,14 @@ final class TradukaroChelo: UITableViewCell {
 		
 		switch titolStilo {
 		case .kursiva:
-			etikedo.font = .italicSystemFont(ofSize: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
+			etikedo.font = Tiparo.tradukaroEtikedoMalforta
 		case .grasKursiva:
-			let priskribilo = UIFont.systemFont(ofSize: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
-				.fontDescriptor
-				.withSymbolicTraits([.traitItalic, .traitBold])
-			etikedo.font = UIFont(descriptor: priskribilo!, size: Konstantoj.tekstGrandeco).dinamika() // TODO: tiparo
+			etikedo.font = Tiparo.tradukaroEtikedoForta
 		}
 		
 		let butono = UIButton()
 		butono.setTitle(Tekstoj.elekti, for: .normal)
-		butono.metiDinamikanTitolon(Tekstoj.elekti, tiparo: .systemFont(ofSize: Konstantoj.tekstGrandeco))
+		butono.metiDinamikanTitolon(Tekstoj.elekti, tiparo: Tiparo.tradukaElektiButono)
 		butono.setTitleColor(stilo.dokumentLigilo, for: .normal)
 		butono.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 		butono.addTarget(self, action: #selector(premisElekti), for: .touchUpInside)
@@ -182,8 +177,7 @@ final class TradukaroChelo: UITableViewCell {
 			// Noto: Mi uzas TTTAttributedLabel-on ĉi tie ĉar, je grandaj tekstgrandoj, la altoj
 			// de UILabel kaj TTTAttributedLabel iomete malsamas.
 			let lingvoEtikedo = TTTAttributedLabel(frame: .zero)
-			//TekstAtributoHelpiloj.provizi(etikedon: lingvoEtikedo, per: traduko.lingvo.adverbo + ":", tekstGrando: 18.0) // TODO: Tiparo
-			lingvoEtikedo.font = .systemFont(ofSize: 18.0) // TODO: Tiparo
+			lingvoEtikedo.font = Tiparo.tradukaLingvoEtikedo
 			lingvoEtikedo.textColor = stilo.dokumentSencNumero
 			lingvoEtikedo.numberOfLines = 1
 			lingvoEtikedo.text = traduko.lingvo.adverbo + ":" // Faru FINE (pro TTTAttributedLabel sensencaĵo)

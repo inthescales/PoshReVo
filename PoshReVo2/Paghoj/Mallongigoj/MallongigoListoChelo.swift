@@ -7,13 +7,13 @@ final class MallongigoListoChelo: UITableViewCell {
 	
 	private lazy var mallongigoEtikedo: UILabel = {
 		let etikedo = UILabel()
-		etikedo.font = .systemFont(ofSize: 20, weight: .bold).dinamika() // TODO: Tiparo
+		etikedo.font = Tiparo.mallongigo
 		return etikedo
 	}()
 
 	private lazy var signifoEtikedo: UILabel = {
 		let etikedo = UILabel()
-		etikedo.font = .systemFont(ofSize: 18).dinamika() // TODO: Tiparo
+		etikedo.font = Tiparo.mallongigoDifino
 		return etikedo
 	}()
 	

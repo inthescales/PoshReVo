@@ -77,7 +77,7 @@ final class ShovMenuoViewController: UIViewController {
 		etikedo.text = agordoj.titolo
 		etikedo.textColor = agordoj.navigaciaTekstKoloro
 		etikedo.textAlignment = .center
-		etikedo.font = .boldSystemFont(ofSize: 18) // TODO: Tiparo
+		etikedo.font = Tiparo.shovMenuoTitolo
 		return etikedo
 	}()
 	

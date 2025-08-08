@@ -13,7 +13,7 @@ final class VortListoNulStatoView: UIView {
 		let eti = UILabel()
 		eti.numberOfLines = 0
 		eti.text = teksto
-		eti.font = .italicSystemFont(ofSize: 20).dinamika() // TODO: Tiparo
+		eti.font = Tiparo.nulstato
 		
 		return eti
 	}()
