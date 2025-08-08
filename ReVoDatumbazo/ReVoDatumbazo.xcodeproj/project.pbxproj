@@ -20,6 +20,8 @@
 		003657142309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657132309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift */; };
 		003657172309CE250028C21F /* VortaroDatumbazo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657162309CE250028C21F /* VortaroDatumbazo.swift */; };
 		0036571A2309DB740028C21F /* DatumbazAlirilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003657192309DB740028C21F /* DatumbazAlirilo.swift */; };
+		003DC1B12E4618950053404F /* Fako+KodNetigado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC1B02E46187D0053404F /* Fako+KodNetigado.swift */; };
+		003DC1B22E4618950053404F /* Fako+KodNetigado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC1B02E46187D0053404F /* Fako+KodNetigado.swift */; };
 		0049B21624B0E67000B81E15 /* SerchStato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21524B0E67000B81E15 /* SerchStato.swift */; };
 		0049B22124B154F000B81E15 /* PrefiksArboIteraciilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B22024B154F000B81E15 /* PrefiksArboIteraciilo.swift */; };
 		007983722D67C6B60021FD4C /* SerchRezulto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007983712D67C6B60021FD4C /* SerchRezulto.swift */; };
@@ -306,6 +308,7 @@
 		003657132309CA3F0028C21F /* DatumbazAlirilo+PrefiksArbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DatumbazAlirilo+PrefiksArbo.swift"; sourceTree = "<group>"; };
 		003657162309CE250028C21F /* VortaroDatumbazo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortaroDatumbazo.swift; sourceTree = "<group>"; };
 		003657192309DB740028C21F /* DatumbazAlirilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumbazAlirilo.swift; sourceTree = "<group>"; };
+		003DC1B02E46187D0053404F /* Fako+KodNetigado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fako+KodNetigado.swift"; sourceTree = "<group>"; };
 		0049B21524B0E67000B81E15 /* SerchStato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchStato.swift; sourceTree = "<group>"; };
 		0049B22024B154F000B81E15 /* PrefiksArboIteraciilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefiksArboIteraciilo.swift; sourceTree = "<group>"; };
 		0049B22B24B1622A00B81E15 /* ReVoModeloj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModeloj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -674,6 +677,7 @@
 		0099FC172D65058C0033EC11 /* ModelAldonoj */ = {
 			isa = PBXGroup;
 			children = (
+				003DC1B02E46187D0053404F /* Fako+KodNetigado.swift */,
 				0099FC162D65058C0033EC11 /* Artikolo+Printado.swift */,
 			);
 			path = ModelAldonoj;
@@ -1115,6 +1119,7 @@
 				0099FC2B2D65058C0033EC11 /* String+Aldonoj.swift in Sources */,
 				00B297232D65125100264431 /* Destino.swift in Sources */,
 				0099FC552D65058C0033EC11 /* TraktiSencon.swift in Sources */,
+				003DC1B22E4618950053404F /* Fako+KodNetigado.swift in Sources */,
 				0099FC2C2D65058C0033EC11 /* ArtikolFabriko.swift in Sources */,
 				0099FC292D65058C0033EC11 /* ArtikolTeksto.swift in Sources */,
 				0099FC322D65058C0033EC11 /* NodTipo.swift in Sources */,
@@ -1223,6 +1228,7 @@
 				0099FD272D6506940033EC11 /* SerchVorto.swift in Sources */,
 				0099FD282D6506940033EC11 /* Serchebla.swift in Sources */,
 				0099FD292D6506940033EC11 /* Stato.swift in Sources */,
+				003DC1B12E4618950053404F /* Fako+KodNetigado.swift in Sources */,
 				0099FD2A2D6506940033EC11 /* ArtikolNodo.swift in Sources */,
 				0099FD2B2D6506940033EC11 /* FakVorto.swift in Sources */,
 				0099FD2C2D6506940033EC11 /* SerchTraduko.swift in Sources */,

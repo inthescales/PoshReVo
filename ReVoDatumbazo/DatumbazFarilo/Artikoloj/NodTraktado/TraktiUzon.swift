@@ -18,7 +18,8 @@ extension ArboAnalizilo {
 				}
 			}
 			
-			return "[\(teksto)] "
+			let netaTeksto = Fako.netaKodo(por: teksto)
+			return "[\(netaTeksto)] "
 		case "klr":
 			// Klarigo kutime havas parentezojn en sia fila teksto
 			

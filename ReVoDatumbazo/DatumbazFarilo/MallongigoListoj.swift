@@ -52,7 +52,7 @@ final class MallongigoListoj {
 		var teksto = "/// Mallongaj faknomoj, uzataj anstataŭ bildetoj en ĉi-apo\n"
 		teksto += "static let fakaj = [\n"
 		for fako in fakoj.sorted() {
-			teksto += "\t(\"" + fako.kodo + "\", \"" + fako.nomo + "\"),\n"
+			teksto += "\t(\"" + Fako.netaKodo(por: fako.kodo) + "\", \"" + fako.nomo + "\"),\n"
         }
 		teksto += "]"
 		
