@@ -77,7 +77,7 @@ final class LingvoBretoViewController: UIViewController {
 	
 	/// Koloro de la nune elektita lingvo kaj ĝia substreko
 	private var aktivaKoloro: UIColor {
-		stilo.dokumentLigilo
+		stilo.navigaciaButono
 	}
 	
 	/// Koloro de la neelektitaj lingvoj kaj iliaj substrekoj

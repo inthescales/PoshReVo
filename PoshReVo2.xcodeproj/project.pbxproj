@@ -27,6 +27,7 @@
 		003024E22E42653B006D0C14 /* DinamikaStilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024E12E426535006D0C14 /* DinamikaStilo.swift */; };
 		003024E52E4265D9006D0C14 /* Baza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024E42E4265D7006D0C14 /* Baza.swift */; };
 		003024E72E4265F2006D0C14 /* Pergamena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024E62E4265F0006D0C14 /* Pergamena.swift */; };
+		003DC1B42E463ABD0053404F /* ReVo-a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC1B32E463AB90053404F /* ReVo-a.swift */; };
 		003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A72E37D8300039AC2C /* Tiparo.swift */; };
 		003FC1AA2E3920FB0039AC2C /* AlirebloTekstoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */; };
 		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
@@ -108,6 +109,7 @@
 		003024E12E426535006D0C14 /* DinamikaStilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinamikaStilo.swift; sourceTree = "<group>"; };
 		003024E42E4265D7006D0C14 /* Baza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baza.swift; sourceTree = "<group>"; };
 		003024E62E4265F0006D0C14 /* Pergamena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pergamena.swift; sourceTree = "<group>"; };
+		003DC1B32E463AB90053404F /* ReVo-a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReVo-a.swift"; sourceTree = "<group>"; };
 		003FC1A72E37D8300039AC2C /* Tiparo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiparo.swift; sourceTree = "<group>"; };
 		003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlirebloTekstoj.swift; sourceTree = "<group>"; };
 		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				003024E42E4265D7006D0C14 /* Baza.swift */,
+				003DC1B32E463AB90053404F /* ReVo-a.swift */,
 				003024E62E4265F0006D0C14 /* Pergamena.swift */,
 			);
 			path = Stiloj;
@@ -610,6 +613,7 @@
 				00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */,
 				00B27B0D2DC1813400526F82 /* UIView+AranghHelpiloj.swift in Sources */,
 				00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */,
+				003DC1B42E463ABD0053404F /* ReVo-a.swift in Sources */,
 				00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */,
 				00B27B692DF209EC00526F82 /* Listero.swift in Sources */,
 				00107E372E328C3D0010CECD /* AgtabuloView.swift in Sources */,

@@ -61,12 +61,12 @@ class InterfacStilo {
 		return .chiuj.first(where: { stilo in stilo.nomo == nomo })
 	}
 	
-	/// Defaŭlta stilo - uzata ĉe nove instalata apo, kaj se alia stilo ne troviĝas
-	static var defaulta: InterfacStilo = .pergamena
+	/// Defaŭlta stilo - uzata ĉe nove instalata apo, aŭ se alia stilo ne troviĝas
+	static var defaulta: InterfacStilo = .baza
 	
 	/// Ĉiuj elekteblaj stiloj
 	static var chiuj: [InterfacStilo] = [
 		.baza,
-		.pergamena
+		.revoa
 	]
 }
