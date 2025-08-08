@@ -48,23 +48,21 @@ final class PRVNavigationController: UINavigationController {
 	/// Decidi ĉu ombro montriĝu sub la navigacitabulo.
 	private func chuMontriOmbron(por vc: UIViewController?) -> Bool {
 		// NOTO:
-		// Ĉi metodo funkcias nuntempe, kiam la du kazoj je kiu ni ne deziras ombron estas:
-		// 1. Serĉilo sidas paĝsupre
-		// 2. La paĝon okupas UITableViewController havanta fonkoloro samkiel la navigacia fonkoloro
-		// Se estontece la kazoj alias, ni rekonsideru ĉi-metodo
-		//
-		// Kroma malsukcesa kazo: se la koloraro havas apartan navigacia-fono-koloro en unu heleco
-		// sed ne la alia, ŝanĝo de aparat-heleco kaŭzas misagordon de la ombro
+		// Eta malsukcesa kazo: ŝanĝo de aparat-heleco povas kaŭzi misan staton,
+		// se la hela kaj malhela stiloj donus malsaman rezulton ĉi tie.
 		
 		guard let vc else {
 			return true
 		}
 		
 		for suba in vc.view.subviews {
+			// Ne montro ombron se serĉilo pendas de la navigaciejo
 			if suba is SerchiloView {
 				return false
 			}
 			
+			// Ne montru ombron se la paĝo estas 'plata' menuo.
+			// Tio estas, menuo ĉe kiu la navigaciejo kaj la ĉefa fonoj estas samkoloraj
 			if let tabelo = suba as? UITableView,
 			   (tabelo.style == .insetGrouped || tabelo.style == .grouped)
 			   && tabelo.backgroundColor?.cgColor == UzantDatumaro.komuna.stilo.navigaciaFono.cgColor {

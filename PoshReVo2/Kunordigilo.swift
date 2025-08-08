@@ -10,9 +10,9 @@ final class Kunordigilo {
 		
 	// MARK: - Agordoj
 	
-	let datumRegilo: UzantDatumoRegilo
+	private let datumRegilo: UzantDatumoRegilo
 	
-	let vortaro: VortaroDatumbazo
+	private let vortaro: VortaroDatumbazo
 	
 	// MARK: - Valorizado
 	

@@ -2,8 +2,7 @@ import UIKit
 
 import ReVoDatumbazo
 
-// Jen aldono enhavanta kodon por krei esplorlistojn
-
+/// Ĉi-aldono enhavas kodon por krei esplorlistojn
 extension KategoriaViewController {
 	// MARK: - Fakoj
 	

@@ -1,8 +1,11 @@
 import UIKit
 
+/// VC kiu enhavas alian VC-on, sed prezentas siajn proprajn navigaciaĵojn.
+/// Ĝia ĉefa celo estas apartigi la ŝovmenuan butonon kaj la serĉpaĝon.
 final class PaghingoViewController: UIViewController {
-	// MARK: Interfaceroj
+	// MARK: - Interfaceroj
 	
+	/// Butono montranta shovmenuon navigacian
 	lazy var tripunktoButono = {
 		let butono = UIBarButtonItem.init(
 			image: UIImage(named: "tripunkto"),
@@ -18,9 +21,12 @@ final class PaghingoViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
+	/// La paĝo kiu estos prezentata al uzanto
 	let chefpagho: Ingito
 	
 	let kunordigilo: Kunordigilo
+	
+	// MARK: - Valorizado
 	
 	init(chefpagho: Ingito, kunordigilo: Kunordigilo = .komuna) {
 		self.chefpagho = chefpagho
@@ -43,7 +49,7 @@ final class PaghingoViewController: UIViewController {
 		view.addEdgeMatchedSubview(chefpagho.view)
 	}
 	
-	// MARK: Paĝ-navigaciado
+	// MARK: - Paĝ-navigaciado
 	
 	@objc private func premisTripunkton() {
 		let menuo = ShovMenuoViewController(
@@ -129,6 +135,7 @@ final class PaghingoViewController: UIViewController {
 	
 	// MARK: - Publikaj agoj
 	
+	/// Forigi antaŭan staton de la prezentata paĝo
 	func restarigi() {
 		chefpagho.restarigi()
 	}
