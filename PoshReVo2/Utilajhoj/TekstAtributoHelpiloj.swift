@@ -136,6 +136,7 @@ enum TekstAtributoHelpiloj {
 					value: stilo.dokumentSencNumero,
 					range: regiono
 				)
+				novajTrajtoj = .traitBold
 			case .ligo:
 				// Ligoj aldoniĝos aliloke
 				break
