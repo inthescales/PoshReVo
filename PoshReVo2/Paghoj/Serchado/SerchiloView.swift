@@ -4,14 +4,10 @@ import UIKit
 final class SerchiloView: UIView {
 	// MARK: - Interfaceroj
 	
-	private lazy var staplo: UIStackView = {
-		let staplo = UIStackView(arrangedSubviews: [serchilo])
-		staplo.axis = .vertical
-		return staplo
-	}()
-	
+	/// Fono aperonta malantaŭ la tekstejo
 	private lazy var fono = UIView()
 	
+	/// La serĉilo mem
 	private lazy var serchilo: UISearchBar = {
 		let serchilo = UISearchBar()
 		serchilo.delegate = self
@@ -34,16 +30,16 @@ final class SerchiloView: UIView {
 	/// Streko imitanta navigactabula ombro
 	private lazy var imitoStreko = OmbroImitilo()
 	
-	// MARK: Stato
+	// MARK: - Publika Stato
 	
 	var teksto: String? {
 		serchilo.text
 	}
 	
-	/// Ĉu 'x'-klako aldonu ĉapelon aŭ hokon
+	/// Ĉu aldono de liter 'x' aldonu ĉapelon aŭ hokon
 	var iksumi: Bool
 	
-	// MARK: Agordoj
+	// MARK: - Agordoj
 	
 	/// Lokokupa teksto kiu aperos en la serĉtabulo se uzanto jam ne tajpis
 	private let lokokupaTeksto: String
@@ -54,6 +50,8 @@ final class SerchiloView: UIView {
 	private let stilo: InterfacStilo
 	
 	private let aparatInformo: AparatInformo
+	
+	// MARK: - Valorizado
 	
 	init(
 		lokokupaTeksto: String,
@@ -72,13 +70,13 @@ final class SerchiloView: UIView {
 		
 		addEdgeMatchedSubview(fono)
 
-		addSubview(staplo)
-		staplo.snp.makeConstraints { make in
+		addSubview(serchilo)
+		serchilo.snp.makeConstraints { make in
 			make.top.right.left.equalToSuperview()
 		}
 		
 		if !montriOmbron {
-			staplo.snp.makeConstraints { make in
+			serchilo.snp.makeConstraints { make in
 				make.bottom.equalToSuperview()
 			}
 		} else {
@@ -86,7 +84,7 @@ final class SerchiloView: UIView {
 			imitoStreko.snp.makeConstraints { make in
 				make.left.right.bottom.equalToSuperview()
 			}
-			staplo.snp.makeConstraints { make in
+			serchilo.snp.makeConstraints { make in
 				make.bottom.equalTo(imitoStreko.snp.top)
 			}
 		}
@@ -98,10 +96,12 @@ final class SerchiloView: UIView {
 	
 	// MARK: - Publikaj agoj
 	
+	/// Nuligi la tekston en la tekstejo
 	func nuligiTekston() {
 		serchilo.text = ""
 	}
 	
+	/// Meti novan stilon al la ekrano
 	func meti(stilon stilo: InterfacStilo) {
 		fono.backgroundColor = stilo.navigaciaFono
 		
@@ -123,7 +123,7 @@ extension SerchiloView: UISearchBarDelegate {
 			return true
 		}
 		
-		// Aldoni ĉapelojn
+		// Aldoni ĉapelojn kaj hokojn
 		if iksumi
 			&& text == "x"
 			&& teksto.count > 0 {

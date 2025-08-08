@@ -239,7 +239,7 @@
 		00107E3B2E3296020010CECD /* Paghoj */ = {
 			isa = PBXGroup;
 			children = (
-				003024D42E3A7E1E006D0C14 /* Ingo */,
+				003024D42E3A7E1E006D0C14 /* Hejma Ingo */,
 				00B27B212DC3FCF700526F82 /* Serchado */,
 				00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */,
 				00B27B482DCE721600526F82 /* KonservitajViewController.swift */,
@@ -251,13 +251,13 @@
 			path = Paghoj;
 			sourceTree = "<group>";
 		};
-		003024D42E3A7E1E006D0C14 /* Ingo */ = {
+		003024D42E3A7E1E006D0C14 /* Hejma Ingo */ = {
 			isa = PBXGroup;
 			children = (
 				00107E342E3287540010CECD /* PaghingoViewController.swift */,
 				003024D52E3A7E2A006D0C14 /* Ingito.swift */,
 			);
-			path = Ingo;
+			path = "Hejma Ingo";
 			sourceTree = "<group>";
 		};
 		003024DE2E4264E7006D0C14 /* Kolor-stiloj */ = {

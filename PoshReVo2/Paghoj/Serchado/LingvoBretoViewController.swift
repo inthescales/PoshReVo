@@ -2,7 +2,7 @@ import UIKit
 
 import ReVoDatumbazo
 
-/// Montras breton de la uzantaj lingvoj, kaj ebligas elekton inter ili
+/// Montras horizontalan liston da la uzantaj lingvoj, kaj ebligas elekton inter ili
 final class LingvoBretoViewController: UIViewController {
 	private enum Konstantoj {
 		/// Spaco dekstre kaj maldekstre de ĉiuj butonoj
@@ -15,9 +15,10 @@ final class LingvoBretoViewController: UIViewController {
 		static let animaciaDauro: CGFloat = 0.2
 	}
 	
-	// MARK: Interfaceroj
+	// MARK: - Interfaceroj
 	
-	lazy var lingvoStaplo: UIStackView = {
+	/// Staplovido prezentanta la lingvojn
+	private lazy var lingvoStaplo: UIStackView = {
 		let staplo = UIStackView()
 		staplo.axis = .horizontal
 		staplo.spacing = Konstantoj.butonoBufro
@@ -25,17 +26,8 @@ final class LingvoBretoViewController: UIViewController {
 		return staplo
 	}()
 	
-	lazy var substreko: UIView = {
-		let strek = UIView()
-		
-		strek.snp.makeConstraints { make in
-			make.height.equalTo(Konstantoj.strekAlto)
-		}
-		
-		return strek
-	}()
-	
-	lazy var rulumejo: UIScrollView = {
+	/// Rulumejo enhavanta la lingvostaplo
+	private lazy var rulumejo: UIScrollView = {
 		let ejo = UIScrollView()
 		ejo.showsHorizontalScrollIndicator = false
 		
@@ -50,19 +42,34 @@ final class LingvoBretoViewController: UIViewController {
 		return ejo
 	}()
 	
-	lazy var pliButono: UIButton = {
+	/// Suba streko montranta la nune elektatan lingvon
+	private lazy var substreko: UIView = {
+		let strek = UIView()
+		
+		strek.snp.makeConstraints { make in
+			make.height.equalTo(Konstantoj.strekAlto)
+		}
+		
+		return strek
+	}()
+	
+	/// Suba streko kiu aperos malantaŭ la alia, imitanta sisteman navigaciej-ombron
+	private lazy var malaktivaSubstreko = OmbroImitilo()
+	
+	/// Butono kiu aperigas lingvoelektilon
+	private lazy var pliButono: UIButton = {
 		let butono = UIButton()
 		butono.metiDinamikanTitolon(Tekstoj.pli, tiparo: Tiparo.lingvoBreto)
 		butono.addTarget(self, action: #selector(premisPli), for: .touchUpInside)
 		return butono
 	}()
 	
-	lazy var malaktivaSubstreko = OmbroImitilo()
+	// MARK: - Stato
 	
-	// MARK: Stato
-	
+	/// La nune elektita lingvo
 	private(set) var elektita: Lingvo
 	
+	/// Ĉiuj lingvoj montrindaj
 	private(set) var lingvoj: [Lingvo]
 	
 	// MARK: Kalkulitaj stataĵoj
@@ -82,7 +89,7 @@ final class LingvoBretoViewController: UIViewController {
 		stilo.navigaciaButonoMalaktiva
 	}
 	
-	// MARK: Agordoj
+	// MARK: - Agordoj
 	
 	private let elektisLingvon: (Lingvo) -> ()
 	
@@ -92,7 +99,7 @@ final class LingvoBretoViewController: UIViewController {
 	
 	private var stilo: InterfacStilo
 	
-	//
+	// MARK: - Valorizado
 	
 	init(
 		elektitaLingvo: Lingvo,
@@ -163,6 +170,7 @@ final class LingvoBretoViewController: UIViewController {
 		renovigiInterfacon()
 	}
 	
+	/// Metas novan stilon al la ekrano
 	func meti(stilon stilo: InterfacStilo) {
 		self.stilo = stilo
 		
@@ -172,7 +180,7 @@ final class LingvoBretoViewController: UIViewController {
 		renovigiInterfacon()
 	}
 	
-	// MARK: Uzantaj agoj
+	// MARK: - Uzantaj agoj
 	
 	/// Vokota kiam la uzanto elektas lingvon
 	@objc private func premisLingvon(sender: UIButton) {
@@ -186,6 +194,7 @@ final class LingvoBretoViewController: UIViewController {
 		NotificationCenter.default.post(name: Avizoj.elektitaLingvoShanghighis, object: elektita)
 	}
 	
+	/// Vokota kiam la montrota lingvaro ŝanĝiĝas
 	private func shanghis(lingvaron lingvaro: [Lingvo]) {
 		lingvoj = lingvaro
 		if !lingvaro.contains(elektita) {
@@ -193,6 +202,19 @@ final class LingvoBretoViewController: UIViewController {
 		}
 		
 		renovigiInterfacon()
+	}
+	
+	/// La lingvo premis la 'pli'-butonon
+	@objc private func premisPli() {
+		guard let navigaciilo = navigationController else {
+			return
+		}
+		
+		kunordigilo.prezentiLingvoRedaktilon(prezentilo: navigaciilo) { [weak self] novajLingvoj in
+			guard let self else { return }
+			shanghis(lingvaron: novajLingvoj)
+			redaktisLingvojn(novajLingvoj)
+		}
 	}
 	
 	// MARK: Ekstera regado - ekz. en kazo de ĝisdatigo pro avizo
@@ -208,11 +230,11 @@ final class LingvoBretoViewController: UIViewController {
 		shanghis(lingvaron: lingvaro)
 	}
 	
-	// MARK: Ĝisdatigado
+	// MARK: - Ĝisdatigado
 	
 	/// Ĝisdatigas la liston da lingvoj
-	func renovigiInterfacon() {
-		// Renovigi butonojn
+	private func renovigiInterfacon() {
+		// Forigi antaŭajn butonojn
 		for view in lingvoStaplo.arrangedSubviews {
 			lingvoStaplo.removeArrangedSubview(view)
 			view.removeFromSuperview()
@@ -220,15 +242,11 @@ final class LingvoBretoViewController: UIViewController {
 		
 		for i in 0..<lingvoj.count {
 			let lingvo = lingvoj[i]
-			
-			let butono = UIButton()
-			butono.metiDinamikanTitolon(lingvo.nomo, tiparo: Tiparo.lingvoBreto)
-			let koloro = (elektita.kodo == lingvo.kodo) ? aktivaKoloro : malaktivaKoloro // TODO: Lingva egaleco
-			butono.setTitleColor(koloro, for: .normal)
-			butono.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
-			butono.tag = i
-			butono.translatesAutoresizingMaskIntoConstraints = false
-			
+			let butono = fariLingvoButonon(
+				indekso: i,
+				teksto: lingvo.nomo,
+				aktiva: elektita.kodo == lingvo.kodo
+			)
 			lingvoStaplo.addArrangedSubview(butono)
 		}
 		
@@ -247,6 +265,23 @@ final class LingvoBretoViewController: UIViewController {
 		}
 	}
 	
+	/// Kreas lingvan butonon por la staplo
+	private func fariLingvoButonon(
+		indekso: Int,
+		teksto: String,
+		aktiva: Bool
+	) -> UIButton {
+		let butono = UIButton()
+		butono.metiDinamikanTitolon(teksto, tiparo: Tiparo.lingvoBreto)
+		let koloro = (aktiva) ? aktivaKoloro : malaktivaKoloro // TODO: Lingva egaleco
+		butono.setTitleColor(koloro, for: .normal)
+		butono.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
+		butono.tag = indekso
+		butono.translatesAutoresizingMaskIntoConstraints = false
+		return butono
+	}
+	
+	/// Ĝisdatigi la interfacon por montri ke la uzanto elektis alian lingvon
 	private func montriElekton(de malnovaIndekso: Int?, al indekso: Int) {
 		guard let malnovaIndekso,
 			  indekso != malnovaIndekso else {
@@ -257,7 +292,6 @@ final class LingvoBretoViewController: UIViewController {
 		rulumi(al: indekso, animacii: true)
 		substreki(indekson: indekso, animacii: false)
 	}
-	
 	
 	/// Ŝanĝas kolorojn de la aktiva kaj nove-malaktiva butonoj
 	private func rekolorigi(aktiva: Int, malaktiva: Int, animacii: Bool) {
@@ -300,7 +334,7 @@ final class LingvoBretoViewController: UIViewController {
 		}
 	}
 	
-	/// Movas substrekon por ke ĝi restu sub la nun-elektita lingvo
+	/// Movas la aktivan substrekon por ke ĝi restu sub la nun-elektita lingvo
 	private func substreki(indekson indekso: Int, animacii: Bool) {
 		guard let butono = butono(por: indekso) else {
 			fatalError("Butono ne ekzistas")
@@ -322,7 +356,7 @@ final class LingvoBretoViewController: UIViewController {
 		}
 	}
 	
-	// MARK: Helpiloj
+	// MARK: - Helpiloj
 	
 	private func butono(por indekso: Int) -> UIButton? {
 		guard indekso < lingvoStaplo.arrangedSubviews.count else {
@@ -330,17 +364,5 @@ final class LingvoBretoViewController: UIViewController {
 		}
 		
 		return lingvoStaplo.arrangedSubviews[indekso] as? UIButton
-	}
-	
-	@objc private func premisPli() {
-		guard let navigaciilo = navigationController else {
-			return
-		}
-		
-		kunordigilo.prezentiLingvoRedaktilon(prezentilo: navigaciilo) { [weak self] novajLingvoj in
-			guard let self else { return }
-			shanghis(lingvaron: novajLingvoj)
-			redaktisLingvojn(novajLingvoj)
-		}
 	}
 }

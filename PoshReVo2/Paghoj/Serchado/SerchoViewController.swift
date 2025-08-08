@@ -2,6 +2,7 @@ import UIKit
 
 import ReVoDatumbazo
 
+/// Ekrano por serĉi vortojn
 final class SerchoViewController: UIViewController, Ingito {
 	private enum Konstantoj {
 		/// Maksimuma kvanto da serĉrezultoj prezentotaj
@@ -19,6 +20,7 @@ final class SerchoViewController: UIViewController, Ingito {
 		}
 	)
 	
+	/// Lingvo elektilo pendanta sub serĉilo
 	private lazy var lingvoBreto: LingvoBretoViewController = {
 		return LingvoBretoViewController(
 			elektisLingvon: { [weak self] lingvo in
@@ -35,6 +37,7 @@ final class SerchoViewController: UIViewController, Ingito {
 		)
 	}()
 	
+	/// Tabelo montranta serĉrezultojn
 	private lazy var rezultoTabelo: VortoListoViewController = {
 		return VortoListoViewController<Serchlistero>(
 			elektis: elektis,
@@ -44,10 +47,12 @@ final class SerchoViewController: UIViewController, Ingito {
 	
 	// MARK: Stato
 	
+	/// La nuna serĉteksto en la serĉejo
 	private var serchTeksto: String? {
 		serchilo.teksto
 	}
 	
+	/// La nuna serĉlingvo
 	private var serchLingvo: Lingvo? {
 		lingvoBreto.elektita
 	}
@@ -55,30 +60,26 @@ final class SerchoViewController: UIViewController, Ingito {
 	/// Stato de la nune-prezentita serĉo
 	private var serchStato: SerchStato?
 	
-	/// Datumoj pri la lasta serĉo antaŭ la nuna
+	/// Datumoj pri la lasta serĉo, antaŭ la nuna
 	private var lastaSercho: (Lingvo, String)? = nil
 	
 	// MARK: Agordoj
 	
-	/// Ĉu ĉi-paĝo komencis serĉfadenon
-	let radika: Bool
-	
+	/// Fermo vokota kiam la uzanto elektas serĉlingvon
 	private var elektisLingvon: (Lingvo) -> Void
 	
 	private var kunordigilo: Kunordigilo
 	
 	private var stilo: InterfacStilo
 	
-	//
+	// MARK: - Valorizado
 	
 	init(
 		serchLingvoj: [Lingvo],
-		radika: Bool = false,
 		elektisLingvon: @escaping (Lingvo) -> Void,
 		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
-		self.radika = radika
 		self.elektisLingvon = elektisLingvon
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
@@ -143,12 +144,12 @@ final class SerchoViewController: UIViewController, Ingito {
 	
 	// MARK: - Avizreagoj
 	
-	@objc func lingvoAvizo(_ avizo: Notification) {
+	@objc private func lingvoAvizo(_ avizo: Notification) {
 		guard let elektita = avizo.object as? Lingvo else { return }
 		lingvoBreto.ghisdatigi(elektitan: elektita)
 	}
 	
-	@objc func lingvaroAvizo(_ avizo: Notification) {
+	@objc private func lingvaroAvizo(_ avizo: Notification) {
 		guard let lingvaro = avizo.object as? [Lingvo] else { return }
 		lingvoBreto.ghisdatigi(lingvaron: lingvaro)
 	}
@@ -165,15 +166,18 @@ final class SerchoViewController: UIViewController, Ingito {
 	
 	// MARK: - Interagado
 	
+	/// Vokota kiam al uzanto elektos eron de la rezultotabelo
 	private func elektis(_ listero: Serchlistero) {
 		guard let prezentilo = navigationController else {
 			return
 		}
 		
 		if listero.destinoj.count == 1,
+		   // Se estas pluraj destinoj, montri disigilon
 		   let destino = listero.destinoj.first {
-			 kunordigilo.prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
+			kunordigilo.prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
 		} else if listero.destinoj.count > 1 {
+			// Se estas nur unu destino, montri ĝian artikolon
 			kunordigilo.prezentiDisigiloPaghon(
 				por: listero.destinoj,
 				prezentilo: prezentilo,
@@ -214,14 +218,14 @@ final class SerchoViewController: UIViewController, Ingito {
 		}
 	}
 	
-	/// Nuligi serĉstaton
+	/// Nuligi serĉstaton kaj malplenigi rezultotabelon
 	private func nuligiSerchon() {
 		serchStato = nil
 		lastaSercho = nil
 		rezultoTabelo.montri(listerojn: [])
 	}
 	
-	/// Venigi pli da serĉrezultoj, ekz kiam uzanto rulumis malsupren
+	/// Venigi pli da serĉrezultoj, ekz. kiam uzanto rulumis malsupren
 	private func venigiPli() {
 		if let stato = serchStato, !stato.atingisFinon {
 			let novaStato = VortaroDatumbazo.komuna.daurigiSerchon(
@@ -272,6 +276,7 @@ final class SerchoViewController: UIViewController, Ingito {
 	}
 
 	// MARK: - Ingito
+	
 	let titolo = Tekstoj.serchi
 	
 	func restarigi() {

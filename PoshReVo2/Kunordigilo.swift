@@ -304,7 +304,6 @@ final class Kunordigilo {
 	func fariSerchPaghon() -> SerchoViewController{
 		SerchoViewController(
 			serchLingvoj: datumRegilo.datumaro.lingvoj,
-			radika: true,
 			elektisLingvon: { [weak self] lingvo in self?.datumRegilo.elektis(lingvon: lingvo)}
 		)
 	}
