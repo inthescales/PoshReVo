@@ -2,13 +2,13 @@ import Foundation
 
 import ReVoDatumbazo
 
-protocol UzantDatumoTenilo {
+protocol UzantDatumoTraktilo {
 	func skribi(datumaron: UzantDatumaro)
 	
 	func legiDatumaron() -> UzantDatumaro?
 }
 
-final class UserDefaultsUzantDatumoTenilo: UzantDatumoTenilo {
+final class UserDefaultsUzantDatumoTraktilo: UzantDatumoTraktilo {
 	private enum DatumoVersio: String {
 		case v2_0 = "2.0"
 		

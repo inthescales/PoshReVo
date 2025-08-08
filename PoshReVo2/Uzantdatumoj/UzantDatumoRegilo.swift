@@ -10,28 +10,49 @@ extension Avizoj {
 	static let stiloShanghighis = NSNotification.Name("stiloShanghighis")
 }
 
-final class UzantDatumoRegilo {
+/// Protokolo por regado de uzantaj datumoj.
+protocol UzantDatumoRegado {
+	var datumaro: UzantDatumaro { get }
+	
+	func elektis(lingvon novaLingvo: Lingvo)
+	func redaktisLingvojn(novaj: [Lingvo])
+	func markiVizititan(artikolon artikolo: Artikolo)
+	func forigiHistorion()
+	func konservi(artikolon artikolo: Artikolo)
+	func malkonservi(artikolon artikolo: Artikolo)
+	func forigiKonservitajn()
+	func meti(stilon stilo: InterfacStilo)
+}
+
+/// Klaso kiu regas uzantajn datumojn. Disponigas la nuna datumostato, kaj
+/// havas metodojn por ŝanĝi ĉiujn datumerojn.
+final class UzantDatumoRegilo: UzantDatumoRegado {
 	private enum Konstantoj {
 		static let historioLimo = 100
 	}
 	
-	static var komuna = UzantDatumoRegilo()
+	/// Komuna datumoregilo
+	static var komuna = UzantDatumoRegilo(traktilo: UserDefaultsUzantDatumoTraktilo())
 	
+	/// La nuna stato de la uzantaj datumoj
 	private(set) var datumaro: UzantDatumaro
 	
-	private let tenilo: UzantDatumoTenilo = UserDefaultsUzantDatumoTenilo()
+	/// Traktilo por legado kaj skribado de uzantaj datumoj al/el la aparatmemoro
+	private let traktilo: UzantDatumoTraktilo
 	
-	init() {
-		datumaro = tenilo.legiDatumaron()
+	init(traktilo: UzantDatumoTraktilo) {
+		self.traktilo = traktilo
+		datumaro = traktilo.legiDatumaron()
 			?? V1UzantDatumoTenilo.legiV1Datumaron()
 			?? UzantDatumaro.defaulta()
 	}
 	
 	// MARK: - Lingvoj
 	
+	/// Ŝanĝas la nune-elektita lingvo
 	func elektis(lingvon novaLingvo: Lingvo) {
 		datumaro.elektitaLingvo = novaLingvo
-		tenilo.skribi(datumaron: datumaro)
+		traktilo.skribi(datumaron: datumaro)
 		
 		NotificationCenter.default.post(
 			name: Avizoj.elektitaLingvoShanghighis,
@@ -39,9 +60,10 @@ final class UzantDatumoRegilo {
 		)
 	}
 	
+	/// Ŝanĝas la uzantaj lingvoj
 	func redaktisLingvojn(novaj: [Lingvo]) {
 		datumaro.lingvoj = novaj
-		tenilo.skribi(datumaron: datumaro)
+		traktilo.skribi(datumaron: datumaro)
 		
 		NotificationCenter.default.post(
 			name: Avizoj.uzantajLingvojShanghighis,
@@ -51,6 +73,7 @@ final class UzantDatumoRegilo {
 	
 	// MARK: - Historio
 	
+	/// Registri artikolon en la historio, kaj aliaj respondoj al artikollegado
 	func markiVizititan(artikolon artikolo: Artikolo) {
 		let vizitito = Konservitajho(el: artikolo)
 		guard !datumaro.historio.contains(vizitito) else {
@@ -62,7 +85,7 @@ final class UzantDatumoRegilo {
 			datumaro.historio.remove(at: 0)
 		}
 		
-		tenilo.skribi(datumaron: datumaro)
+		traktilo.skribi(datumaron: datumaro)
 		
 		NotificationCenter.default.post(
 			name: Avizoj.historioShanghighis,
@@ -70,9 +93,10 @@ final class UzantDatumoRegilo {
 		)
 	}
 	
+	/// Forigas la artikol-historion
 	func forigiHistorion() {
 		datumaro.historio = []
-		tenilo.skribi(datumaron: datumaro)
+		traktilo.skribi(datumaron: datumaro)
 		
 		NotificationCenter.default.post(
 			name: Avizoj.historioShanghighis,
@@ -82,11 +106,12 @@ final class UzantDatumoRegilo {
 	
 	// MARK: - Konservado
 	
+	/// Konservas artikolon
 	func konservi(artikolon artikolo: Artikolo) {
 		guard !datumaro.chuKonservita(artikolo: artikolo) else { return }
 		
 		datumaro.konservitaj.append(Konservitajho(el: artikolo))
-		tenilo.skribi(datumaron: datumaro)
+		traktilo.skribi(datumaron: datumaro)
 		
 		NotificationCenter.default.post(
 			name: Avizoj.konservitajShanghighis,
@@ -94,13 +119,14 @@ final class UzantDatumoRegilo {
 		)
 	}
 	
+	/// Malkonservas la artikolon
 	func malkonservi(artikolon artikolo: Artikolo) {
 		guard let indekso = datumaro.konservitaj.firstIndex(
 			where: { $0.indekso == artikolo.indekso }
 		) else { return }
 		
 		datumaro.konservitaj.remove(at: indekso)
-		tenilo.skribi(datumaron: datumaro)
+		traktilo.skribi(datumaron: datumaro)
 		
 		NotificationCenter.default.post(
 			name: Avizoj.konservitajShanghighis,
@@ -108,9 +134,10 @@ final class UzantDatumoRegilo {
 		)
 	}
 	
+	/// Forigas ĉiujn konservitajn artikolojn
 	func forigiKonservitajn() {
 		datumaro.konservitaj = []
-		tenilo.skribi(datumaron: datumaro)
+		traktilo.skribi(datumaron: datumaro)
 		
 		NotificationCenter.default.post(
 			name: Avizoj.konservitajShanghighis,
@@ -120,9 +147,10 @@ final class UzantDatumoRegilo {
 	
 	// MARK: - Stilo
 	
+	/// Metas la stilon al la apo
 	func meti(stilon stilo: InterfacStilo) {
 		datumaro.stilo = stilo
-		tenilo.skribi(datumaron: datumaro)
+		traktilo.skribi(datumaron: datumaro)
 		
 		NotificationCenter.default.post(
 			name: Avizoj.stiloShanghighis,

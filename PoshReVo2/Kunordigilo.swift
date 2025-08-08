@@ -21,24 +21,6 @@ final class Kunordigilo {
 		self.vortaro = vortaro
 	}
 	
-	// MARK: - Interfaceroj
-	
-	/// Liveras novan lingvobreton, ligitan al datumregilo
-	func fariLingvoBreton(
-		elektisLingvon: @escaping (Lingvo) -> (),
-		redaktisLingvojn: @escaping([Lingvo]) -> ()
-	) -> LingvoBretoViewController {
-		return LingvoBretoViewController(
-			elektisLingvon: { [weak self] lingvo in
-				self?.datumRegilo.elektis(lingvon: lingvo)
-				elektisLingvon(lingvo)
-			},
-			redaktisLingvojn: { lingvoj in
-				redaktisLingvojn(lingvoj)
-			}
-		)
-	}
-	
 	// MARK: - Navigaciado
 	
 	/// Forigas ĉiujn paĝoj sur la navigacia staplo ĝis la unua, kaj restarigas la hejman paĝon

@@ -59,7 +59,7 @@
 		00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */; };
 		00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */; };
 		00B27B5C2DF0A77500526F82 /* MallongigoListo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5B2DF0A77500526F82 /* MallongigoListo.swift */; };
-		00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenilo.swift */; };
+		00B27B5F2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5E2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift */; };
 		00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */; };
 		00B27B632DF206D600526F82 /* V1UzantDatumoTenilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B622DF206D600526F82 /* V1UzantDatumoTenilo.swift */; };
 		00B27B692DF209EC00526F82 /* Listero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B682DF209EC00526F82 /* Listero.swift */; };
@@ -141,7 +141,7 @@
 		00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformoSekcio.swift; sourceTree = "<group>"; };
 		00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoListoViewController.swift; sourceTree = "<group>"; };
 		00B27B5B2DF0A77500526F82 /* MallongigoListo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallongigoListo.swift; sourceTree = "<group>"; };
-		00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoTenilo.swift; sourceTree = "<group>"; };
+		00B27B5E2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoTraktilo.swift; sourceTree = "<group>"; };
 		00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoRegilo.swift; sourceTree = "<group>"; };
 		00B27B622DF206D600526F82 /* V1UzantDatumoTenilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V1UzantDatumoTenilo.swift; sourceTree = "<group>"; };
 		00B27B682DF209EC00526F82 /* Listero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listero.swift; sourceTree = "<group>"; };
@@ -399,7 +399,7 @@
 			children = (
 				00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */,
 				00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */,
-				00B27B5E2DF0AF9A00526F82 /* UzantDatumoTenilo.swift */,
+				00B27B5E2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift */,
 				00B27B432DCD281C00526F82 /* Konservitajho.swift */,
 				00B27B642DF208D800526F82 /* V1 */,
 			);
@@ -590,7 +590,7 @@
 				00B27B492DCE721600526F82 /* KonservitajViewController.swift in Sources */,
 				00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */,
 				00B27B5C2DF0A77500526F82 /* MallongigoListo.swift in Sources */,
-				00B27B5F2DF0AF9A00526F82 /* UzantDatumoTenilo.swift in Sources */,
+				00B27B5F2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift in Sources */,
 				00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */,
 				003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */,
 				003024E52E4265D9006D0C14 /* Baza.swift in Sources */,
