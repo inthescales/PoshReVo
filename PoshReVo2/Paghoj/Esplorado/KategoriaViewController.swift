@@ -35,6 +35,11 @@ final class KategoriaViewController: UIViewController {
 	
 	private let sekcioj: [Sekcio]
 	
+	private lazy var chuGrupa = {
+		tabelStilo == .grouped
+		|| tabelStilo == .insetGrouped
+	}()
+	
 	// MARK: Agordoj
 	
 	private let titolo: String?
@@ -127,7 +132,7 @@ extension KategoriaViewController: UITableViewDataSource {
 		
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "Kategoria")
 		novaChelo.textLabel?.text = listero.teksto
-		novaChelo.meti(stilon: stilo)
+		novaChelo.meti(stilon: stilo, grupa: chuGrupa)
 		
 		return novaChelo
 	}

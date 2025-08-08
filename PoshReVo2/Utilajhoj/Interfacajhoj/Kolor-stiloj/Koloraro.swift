@@ -56,6 +56,9 @@ struct Koloraro {
 	/// Fonkoloro de menuopaĝoj (ekz. agordoj, esplori)
 	var menuoFono: UIColor
 	
+	/// Fonkoloro de menua tekstejoj (t.e. la premeblaj cheloj)
+	var menuaTekstejo: UIColor
+	
 	/// Fonkoloro de ŝovmenuo
 	var shovmenuaFono: UIColor
 	

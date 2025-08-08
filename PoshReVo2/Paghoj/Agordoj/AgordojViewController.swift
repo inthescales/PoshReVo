@@ -174,7 +174,7 @@ extension AgordojViewController: UITableViewDataSource {
 			break
 		}
 		
-		chelo.meti(stilon: stilo)
+		chelo.meti(stilon: stilo, grupa: true)
 		
 		return chelo
 	}

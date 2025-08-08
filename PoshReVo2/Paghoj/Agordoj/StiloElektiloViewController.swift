@@ -81,7 +81,7 @@ extension StiloElektiloViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let chelo = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigilo)
 		chelo.textLabel?.text = InterfacStilo.chiuj[indexPath.row].nomo
-		chelo.meti(stilon: stilo)
+		chelo.meti(stilon: stilo, grupa: true)
 		
 		return chelo
 	}

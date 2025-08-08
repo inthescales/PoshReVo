@@ -26,6 +26,7 @@ extension InterfacStilo {
 				dokumentEkzemplo: .black,
 				dokumentRimarko: .black,
 				menuoFono: palgriza,
+				menuaTekstejo: .white,
 				shovmenuaFono: .white,
 				ombro: .black.withAlphaComponent(0.5)
 			)
@@ -52,7 +53,8 @@ extension InterfacStilo {
 				dokumentSencNumero: UIColor(deksesuma: 0x15a33f),
 				dokumentEkzemplo: .white,
 				dokumentRimarko: .white,
-				menuoFono: malhelgriza,
+				menuoFono: .black,
+				menuaTekstejo: malhelgriza,
 				shovmenuaFono: malhelgriza,
 				ombro: .white.withAlphaComponent(0.5)
 			)

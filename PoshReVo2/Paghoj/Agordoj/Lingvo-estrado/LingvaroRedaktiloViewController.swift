@@ -210,7 +210,7 @@ extension LingvaroRedaktiloViewController: UITableViewDataSource {
 			chelo.selectionStyle = .default
 		}
 		
-		chelo.meti(stilon: stilo)
+		chelo.meti(stilon: stilo, grupa: true)
 		
 		return chelo
 	}
