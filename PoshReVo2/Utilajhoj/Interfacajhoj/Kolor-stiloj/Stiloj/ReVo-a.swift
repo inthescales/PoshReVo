@@ -46,7 +46,7 @@ extension InterfacStilo {
 			let palflava = UIColor(deksesuma: 0xFFFFE0)
 			let mezflava = UIColor(deksesuma: 0xccccb3)
 			let palblua = UIColor(deksesuma: 0x87CEEB)
-			let orangha = UIColor(deksesuma: 0xFFA500)
+			let orangha = UIColor(deksesuma: 0xFFA500) // Ankaŭ navigacia fonkoloro en la retejo
 			let shokolada = UIColor(deksesuma: 0xD2691E)
 			let helgriza = UIColor(deksesuma: 0x888f88)
 			let mezgriza = UIColor(deksesuma: 0x222f22)

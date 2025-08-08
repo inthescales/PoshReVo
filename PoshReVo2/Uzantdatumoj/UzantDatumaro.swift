@@ -86,8 +86,8 @@ extension UzantDatumaro: Codable {
 		historio = try container.decode([Konservitajho].self, forKey: .historio)
 		konservitaj = try container.decode([Konservitajho].self, forKey: .konservitaj)
 	
-		let stilNomo = try container.decode(String.self, forKey: .stilo)
-		stilo = InterfacStilo.chiuj.first(where: { $0.nomo == stilNomo }) ?? Self.defaultaStilo
+		let stiloIdentigilo = try container.decode(String.self, forKey: .stilo)
+		stilo = InterfacStilo.chiuj.first(where: { $0.identigilo == stiloIdentigilo }) ?? Self.defaultaStilo
 		
 		elektitaLingvo = lingvoj.first!
 	}
