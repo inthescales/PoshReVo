@@ -30,6 +30,7 @@ extension InterfacStilo {
 				dokumentEkzemplo: brunaTeksto,
 				dokumentRimarko: malhelrugha,
 				menuoFono: mezaPagho,
+				shovmenuaFono: helaPagho,
 				ombro: .black.withAlphaComponent(0.5)
 			)
 		}(),
@@ -57,6 +58,7 @@ extension InterfacStilo {
 				dokumentEkzemplo: UIColor(deksesuma: 0xe0991f),
 				dokumentRimarko: palrugha,
 				menuoFono: heletaPagho,
+				shovmenuaFono: malhelaPagho,
 				ombro: .white.withAlphaComponent(0.5)
 			)
 		}()

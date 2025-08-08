@@ -36,6 +36,7 @@ class InterfacStilo {
 	lazy var dokumentEkzemplo = UIColor(hela: hela.dokumentEkzemplo, malhela: malhela.dokumentEkzemplo)
 	lazy var dokumentRimarko = UIColor(hela: hela.dokumentRimarko, malhela: malhela.dokumentRimarko)
 	lazy var menuoFono = UIColor(hela: hela.menuoFono, malhela: malhela.menuoFono)
+	lazy var shovmenuaFono = UIColor(hela: hela.menuoFono, malhela: malhela.menuoFono)
 	lazy var ombro = UIColor(hela: hela.ombro, malhela: malhela.ombro)
 	
 	// MARK: - Valorizado

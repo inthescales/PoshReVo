@@ -26,6 +26,7 @@ extension InterfacStilo {
 				dokumentEkzemplo: .black,
 				dokumentRimarko: .black,
 				menuoFono: palgriza,
+				shovmenuaFono: .white,
 				ombro: .black.withAlphaComponent(0.5)
 			)
 		}(),
@@ -52,6 +53,7 @@ extension InterfacStilo {
 				dokumentEkzemplo: .white,
 				dokumentRimarko: .white,
 				menuoFono: malhelgriza,
+				shovmenuaFono: malhelgriza,
 				ombro: .white.withAlphaComponent(0.5)
 			)
 		}()

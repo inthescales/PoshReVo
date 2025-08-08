@@ -23,5 +23,7 @@ class DinamikaStilo {
 	static var dokumentaAlternaFono = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaAlternaFono })
 	static var dokumentaTeksto = UIColor(dynamicProvider: { _ in konkretaStilo.dokumentaTeksto })
 
+	static var shovmenuaFono = UIColor(dynamicProvider: { _ in konkretaStilo.shovmenuaFono })
+	
 	static var ombro = UIColor(dynamicProvider: { _ in konkretaStilo.ombro })
 }

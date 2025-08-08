@@ -51,9 +51,15 @@ struct Koloraro {
 	/// Koloro de rimarkoj en artikoloj
 	var dokumentRimarko: UIColor
 	
-	// MARK: - Aliaj
+	// MARK: - Menuoj
 	
+	/// Fonkoloro de menuopaĝoj (ekz. agordoj, esplori)
 	var menuoFono: UIColor
+	
+	/// Fonkoloro de ŝovmenuo
+	var shovmenuaFono: UIColor
+	
+	// MARK: - Aliaj
 	
 	var ombro: UIColor
 }
