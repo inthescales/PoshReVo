@@ -10,13 +10,18 @@ extension ArboAnalizilo {
 		
 		switch stato.cheno.last {
 		case .drv, .snc, .subdrv, .subsnc:
-			switch stato.sibStako.last {
-			case nil, .fnt, .ref, .refgrp, .teksto, .uzo:
+			let lastaSibo = stato.sibStako.last ?? nil
+			switch lastaSibo {
+			case .fnt, .ref, .refgrp, .teksto, .uzo:
 				// ekzemploj:
-				// nil:			flar/o
 				// teksto:  	prem/i
 				// fnt/ uzo: 	ĵet/o (2)
+				//
+				// TODO: ĉu tipo "dif" sufiĉas? Esplori
 				teksto += " "
+				break
+			case nil:
+				// ekz. flar/o, sak/o
 				break
 			default:
 				teksto += "\n"
