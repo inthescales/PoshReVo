@@ -1,6 +1,8 @@
 import UIKit
 
-final class ChefaNavigationController: UINavigationController {
+/// Propra UINavigationController klaso uzata ĉie en ĉi-apo.
+/// Enhavas kelkajn stilajn kapablojn
+final class PRVNavigationController: UINavigationController {
 	override func viewDidLoad() {
 		navigationBar.isTranslucent = false
 		navigationBar.tintColor = DinamikaStilo.navigaciaButono
@@ -50,6 +52,9 @@ final class ChefaNavigationController: UINavigationController {
 		// 1. Serĉilo sidas paĝsupre
 		// 2. La paĝon okupas UITableViewController havanta fonkoloro samkiel la navigacia fonkoloro
 		// Se estontece la kazoj alias, ni rekonsideru ĉi-metodo
+		//
+		// Kroma malsukcesa kazo: se la koloraro havas apartan navigacia-fono-koloro en unu heleco
+		// sed ne la alia, ŝanĝo de aparat-heleco kaŭzas misagordon de la ombro
 		
 		guard let vc else {
 			return true

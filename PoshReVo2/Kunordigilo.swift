@@ -2,16 +2,19 @@ import UIKit
 
 import ReVoDatumbazo
 
+// TODO: Eble dividi ĉi-klason en plurajn
+
+/// Regas la kreadon kaj presentadon de ĉiuj paĝoj en la apo, kaj provisas ilin je datumoj laŭnecese
 final class Kunordigilo {
 	static var komuna = Kunordigilo(datumRegilo: .komuna, vortaro: .komuna)
 		
-	// MARK: Agordoj
+	// MARK: - Agordoj
 	
 	let datumRegilo: UzantDatumoRegilo
 	
 	let vortaro: VortaroDatumbazo
 	
-	//
+	// MARK: - Valorizado
 	
 	init(datumRegilo: UzantDatumoRegilo, vortaro: VortaroDatumbazo) {
 		self.datumRegilo = datumRegilo
@@ -20,6 +23,7 @@ final class Kunordigilo {
 	
 	// MARK: - Interfaceroj
 	
+	/// Liveras novan lingvobreton, ligitan al datumregilo
 	func fariLingvoBreton(
 		elektisLingvon: @escaping (Lingvo) -> (),
 		redaktisLingvojn: @escaping([Lingvo]) -> ()
@@ -37,6 +41,7 @@ final class Kunordigilo {
 	
 	// MARK: - Navigaciado
 	
+	/// Forigas ĉiujn paĝoj sur la navigacia staplo ĝis la unua, kaj restarigas la hejman paĝon
 	func reveniHejmen(en navigaciilo: UINavigationController) {
 		navigaciilo.popToRootViewController(animated: true)
 		
@@ -45,7 +50,9 @@ final class Kunordigilo {
 		}
 	}
 	
-	// MARK: Paĝo-kreado
+	// MARK: - Paĝo-kreado
+	
+	// MARK: - Paĝo-prezentado
 	
 	func prezentiAgordMenuon(
 		prezentilo: UINavigationController
@@ -95,7 +102,7 @@ final class Kunordigilo {
 		prezentilo: UINavigationController,
 		elektis: @escaping (InterfacStilo) -> Void
 	) {
-		let navigaciilo = ChefaNavigationController()
+		let navigaciilo = PRVNavigationController()
 		navigaciilo.modalPresentationStyle = .fullScreen
 		
 		let elektilo = StiloElektiloViewController() { [weak self] novaStilo in
@@ -132,7 +139,7 @@ final class Kunordigilo {
 		prezentilo: UINavigationController,
 		kompleti: @escaping ([Lingvo]) -> ()
 	) {
-		let navigaciilo = ChefaNavigationController()
+		let navigaciilo = PRVNavigationController()
 		navigaciilo.modalPresentationStyle = .fullScreen
 		
 		let redaktilo = LingvaroRedaktiloViewController(
@@ -349,7 +356,7 @@ final class Kunordigilo {
 		return vc
 	}
 	
-	// MARK: Alia
+	// MARK: Aliaj
 	
 	func fariHazardanArtikolon() -> ArtikoloViewController {
 		let artikolo = vortaro.iuAjnArtikolo()!

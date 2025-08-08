@@ -18,13 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		_ application: UIApplication,
 		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 	) -> Bool {
+		// Starigi datumbazon
 		VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
 		
+		// Starigi hejmpaĝon
 		let serchPagho = SerchoViewController(serchLingvoj: UzantDatumaro.komuna.lingvoj, radika: true)
 		let vc = PaghingoViewController(chefpagho: serchPagho)
-		
-		let navigaciilo = ChefaNavigationController(rootViewController: vc)
-		
+		let navigaciilo = PRVNavigationController(rootViewController: vc)
 		fenestro = UIWindow(frame: UIScreen.main.bounds)
 		fenestro?.rootViewController = navigaciilo
 		fenestro?.makeKeyAndVisible()

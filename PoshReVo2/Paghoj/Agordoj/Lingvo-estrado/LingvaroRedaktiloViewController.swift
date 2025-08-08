@@ -170,7 +170,7 @@ extension LingvaroRedaktiloViewController: UITableViewDelegate {
 					self?.aldonis(lingvon: lingvo)
 				}
 			)
-			let navigaciilo = ChefaNavigationController(rootViewController: elektiloVC)
+			let navigaciilo = PRVNavigationController(rootViewController: elektiloVC)
 			navigaciilo.modalPresentationStyle = .fullScreen
 			
 			present(navigaciilo, animated: true)
