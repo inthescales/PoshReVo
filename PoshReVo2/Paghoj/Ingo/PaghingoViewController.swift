@@ -96,11 +96,6 @@ final class PaghingoViewController: UIViewController {
 		menuo.modalPresentationStyle = .overFullScreen
 		present(menuo, animated: false)
 	}
-
-	@objc private func premisSerchi() {
-		guard let navigaciilo = navigationController else { return }
-		kunordigilo.prezentiSerchPaghon(prezentilo: navigaciilo, radika: true)
-	}
 	
 	@objc private func premisEsplori() {
 		guard let navigaciilo = navigationController else { return }

@@ -32,133 +32,31 @@ final class Kunordigilo {
 		}
 	}
 	
-	// MARK: - Paĝo-kreado
+	// MARK: - Artikoloj
 	
-	// MARK: - Paĝo-prezentado
-	
-	func prezentiAgordMenuon(
-		prezentilo: UINavigationController
-	) {
-		let agordilo = AgordojViewController()
-		prezentilo.pushViewController(agordilo, animated: true)
-	}
-	
-	func prezentiMallongigoMenuon(prezentilo: UINavigationController) {
-		let listeroj: [KategoriaViewController.Listero] = [
-			.init(
-				teksto: Tekstoj.vortarajMallongigoj,
-				celPagho: {
-					MallongigoListoViewController(
-						titolo: Tekstoj.vortarajMallongigoj,
-						eroj: MallongigoListo.vortaraj
-					)
-				}
-			),
-			.init(
-				teksto: Tekstoj.fakajMallongigoj,
-				celPagho: {
-					MallongigoListoViewController(
-						titolo: Tekstoj.fakajMallongigoj,
-						eroj: MallongigoListo.fakaj
-					)
-				}
-			)
-		]
-		
-		let vc = KategoriaViewController(
-			titolo: Tekstoj.mallongigoj,
-			tabelStilo: .insetGrouped,
-			listeroj: listeroj
-		)
-		prezentilo.pushViewController(vc, animated: true)
-	}
-	
-	func prezentiInformoPaghon(
-		prezentilo: UINavigationController
-	) {
-		let agordilo = InformojViewController()
-		prezentilo.pushViewController(agordilo, animated: true)
-	}
-	
-	func prezentiStiloelektilon(
-		prezentilo: UINavigationController,
-		elektis: @escaping (InterfacStilo) -> Void
-	) {
-		let navigaciilo = PRVNavigationController()
-		navigaciilo.modalPresentationStyle = .fullScreen
-		
-		let elektilo = StiloElektiloViewController() { [weak self] novaStilo in
-			navigaciilo.dismiss(animated: true)
-			
-			if let novaStilo {
-				self?.datumRegilo.meti(stilon: novaStilo)
-				elektis(novaStilo)
-			}
-		}
-		navigaciilo.viewControllers = [elektilo]
-		navigaciilo.modalPresentationStyle = .fullScreen
-		
-		prezentilo.present(navigaciilo, animated: true)
-	}
-	
-	func pushiLingvoRedaktilon(
-		prezentilo: UINavigationController,
-		elektis: @escaping ([Lingvo]) -> ()
-	) {
-		let redaktilo = LingvaroRedaktiloViewController(
-			lingvaro: datumRegilo.datumaro.lingvoj,
-			prezentManiero: .pushita,
-			elektis: { [weak self] novaj in
-				self?.datumRegilo.redaktisLingvojn(novaj: novaj)
-				elektis(novaj)
-			}
-		)
-		
-		prezentilo.pushViewController(redaktilo, animated: true)
-	}
-	
-	func prezentiLingvoRedaktilon(
-		prezentilo: UINavigationController,
-		kompleti: @escaping ([Lingvo]) -> ()
-	) {
-		let navigaciilo = PRVNavigationController()
-		navigaciilo.modalPresentationStyle = .fullScreen
-		
-		let redaktilo = LingvaroRedaktiloViewController(
-			lingvaro: datumRegilo.datumaro.lingvoj,
-			prezentManiero: .prezentita(forigi: {
-				navigaciilo.dismiss(animated: true)
-			}),
-			elektis: { [weak self] novaj in
-				self?.datumRegilo.redaktisLingvojn(novaj: novaj)
-				kompleti(novaj)
-			}
-		)
-		
-		navigaciilo.viewControllers = [redaktilo]
-		navigaciilo.modalPresentationStyle = .fullScreen
-		
-		prezentilo.present(navigaciilo, animated: true)
-	}
-	
-	func prezentiArtikoloPaghon(el destino: Destino, prezentilo: UINavigationController) {
-		guard let artikolo = vortaro.artikolo(de: destino) else {
-			fatalError("Artikolo ne ekzistas") // TODO: Ŝanĝi tion ĉi
-		}
-		
-		let vc = fariArtikoloPaghon(el: artikolo, marko: destino.marko, prezentilo: prezentilo)
-		prezentilo.pushViewController(vc, animated: true)
-	}
-	
+	/// Prezentas paĝon de la artikolo
 	func prezentiArtikoloPaghon(
 		el artikolo: Artikolo,
 		marko: String? = nil,
 		prezentilo: UINavigationController
 	) {
-		let vc = fariArtikoloPaghon(el: artikolo, marko: marko, prezentilo: prezentilo)
+		let vc = fariArtikoloPaghon(el: artikolo, marko: marko)
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
+	/// Prezentas paĝon de la artikolo de la destino
+	func prezentiArtikoloPaghon(el destino: Destino, prezentilo: UINavigationController) {
+		guard let artikolo = vortaro.artikolo(de: destino) else {
+			fatalError("Artikolo ne ekzistas") // TODO: Montri eraron
+		}
+		
+		let vc = fariArtikoloPaghon(el: artikolo, marko: destino.marko)
+		prezentilo.pushViewController(vc, animated: true)
+	}
+	
+	// MARK: - Serĉado
+	
+	/// Prezentas disigilan paĝon por la destinoj
 	func prezentiDisigiloPaghon(
 		por destinoj: [Destino],
 		prezentilo: UINavigationController,
@@ -189,19 +87,85 @@ final class Kunordigilo {
 		prezentilo.pushViewController(disigilo, animated: true)
 	}
 	
-	func prezentiSerchPaghon(prezentilo: UINavigationController, radika: Bool = false) {
-		let serchilo = SerchoViewController(
-			serchLingvoj: datumRegilo.datumaro.lingvoj,
-			radika: radika
+	// MARK: - Agordoj
+	
+	/// Prezentas agordopaĝon
+	func prezentiAgordMenuon(
+		prezentilo: UINavigationController
+	) {
+		let agordilo = AgordojViewController()
+		prezentilo.pushViewController(agordilo, animated: true)
+	}
+	
+	/// Puŝas lingvoredaktilan paĝon.
+	/// Uzata en la agordopaĝo.
+	func pushiLingvoRedaktilon(
+		prezentilo: UINavigationController,
+		elektis: @escaping ([Lingvo]) -> ()
+	) {
+		let redaktilo = LingvaroRedaktiloViewController(
+			lingvaro: datumRegilo.datumaro.lingvoj,
+			prezentManiero: .pushita,
+			elektis: { [weak self] novaj in
+				self?.datumRegilo.redaktisLingvojn(novaj: novaj)
+				elektis(novaj)
+			}
 		)
-		prezentilo.pushViewController(
-			serchilo,
-			animated: true
+		
+		prezentilo.pushViewController(redaktilo, animated: true)
+	}
+	
+	/// Puŝas lingvoredaktilan paĝon.
+	/// Uzata en la lingvobreto kaj en artikoloj
+	func prezentiLingvoRedaktilon(
+		prezentilo: UINavigationController,
+		kompleti: @escaping ([Lingvo]) -> ()
+	) {
+		let navigaciilo = PRVNavigationController()
+		navigaciilo.modalPresentationStyle = .fullScreen
+		
+		let redaktilo = LingvaroRedaktiloViewController(
+			lingvaro: datumRegilo.datumaro.lingvoj,
+			prezentManiero: .prezentita(forigi: {
+				navigaciilo.dismiss(animated: true)
+			}),
+			elektis: { [weak self] novaj in
+				self?.datumRegilo.redaktisLingvojn(novaj: novaj)
+				kompleti(novaj)
+			}
 		)
+		
+		navigaciilo.viewControllers = [redaktilo]
+		navigaciilo.modalPresentationStyle = .fullScreen
+		
+		prezentilo.present(navigaciilo, animated: true)
+	}
+	
+	/// Prezentas stiloelektilan paĝon
+	func prezentiStiloelektilon(
+		prezentilo: UINavigationController,
+		elektis: @escaping (InterfacStilo) -> Void
+	) {
+		let navigaciilo = PRVNavigationController()
+		navigaciilo.modalPresentationStyle = .fullScreen
+		
+		let elektilo = StiloElektiloViewController() { [weak self] novaStilo in
+			navigaciilo.dismiss(animated: true)
+			
+			if let novaStilo {
+				self?.datumRegilo.meti(stilon: novaStilo)
+				elektis(novaStilo)
+			}
+		}
+		navigaciilo.viewControllers = [elektilo]
+		navigaciilo.modalPresentationStyle = .fullScreen
+		
+		prezentilo.present(navigaciilo, animated: true)
 	}
 	
 	// MARK: - Uzantaj vortlistoj
 	
+	/// Prezentas liston da vizititaj artikoloj
 	func prezentiHistorion(prezentilo: UINavigationController) {
 		let vc = HistorioViewController(
 			elektis: { [weak self] listero in
@@ -217,6 +181,7 @@ final class Kunordigilo {
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
+	/// Prezentas liston da konservitaj artikoloj
 	func prezentiKonservitajn(prezentilo: UINavigationController) {
 		let vc = KonservitajViewController(
 			elektis: { [weak self] listero in
@@ -234,6 +199,7 @@ final class Kunordigilo {
 	
 	// MARK: - Esploraĵoj
 	
+	/// Prezentas la esplorpaĝon
 	func prezentiEsplorMenuon(prezentilo: UINavigationController) {
 		let sekcioj = [
 			KategoriaViewController.Sekcio(
@@ -241,7 +207,7 @@ final class Kunordigilo {
 				eroj: [
 					.init(
 						teksto: Tekstoj.fakoj,
-						celPagho: { [unowned self] in fariFakListon(prezentilo: prezentilo) }
+						celPagho: { [unowned self] in fariFaklistanPaghon(prezentilo: prezentilo) }
 					),
 					.init(
 						teksto: Tekstoj.oficialecoj,
@@ -254,7 +220,10 @@ final class Kunordigilo {
 				eroj: [
 					.init(
 						teksto: Tekstoj.hazardaArtikolo,
-						celPagho: { [unowned self] in fariHazardanArtikolon() }
+						celPagho: { [unowned self] in
+							let artikolo = vortaro.iuAjnArtikolo()! // TODO: Montri eraron se necesas
+							return fariArtikoloPaghon(el: artikolo, marko: nil)
+						}
 					)
 				]
 			)
@@ -268,103 +237,82 @@ final class Kunordigilo {
 		prezentilo.pushViewController(vc, animated: true)
 	}
 	
-	// MARK: Fakoj
-	
-	func fariFakListon(prezentilo: UINavigationController) -> KategoriaViewController {
-		let listeroj = vortaro.chiujFakoj.map { fako in
-			KategoriaViewController.Listero(
-				teksto: fako.nomo,
-				celPagho: { [unowned self] in
-					fariFakVortliston(por: fako, prezentilo: prezentilo)
-				}
-			)
-		}
-		return KategoriaViewController(titolo: Tekstoj.fakoj, listeroj: listeroj)
-	}
-	
-	func fariFakVortliston(
-		por fako: Fako,
-		prezentilo: UINavigationController
-	) -> VortoListoViewController<Esplorlistero> {
-		let vc = VortoListoViewController<Esplorlistero>(titolo: fako.nomo) { [weak self] listero in
-			guard let self else { return }
-			
-			prezentiArtikoloPaghon(el: listero.destino, prezentilo: prezentilo)
-		}
-		
-		let destinoj = vortaro.fakVortoj(fako: fako.kodo)
-		vc.montri(listerojn: destinoj.map {
-			Esplorlistero(
-				teksto: $0.teksto,
-				destino: $0
-			)
-		})
-		
-		return vc
-	}
-	
-	// MARK: Oficialecoj
-	
-	func fariOficialecoListon(prezentilo: UINavigationController) -> KategoriaViewController {
-		let listeroj = vortaro.chiujOficialecoj.map { ofc in
-			KategoriaViewController.Listero(
-				teksto: ofc.nomo,
-				celPagho: { [unowned self] in
-					fariOficialecaVortliston(por: ofc, prezentilo: prezentilo)
-				}
-			)
-		}
-		return KategoriaViewController(titolo: Tekstoj.oficialecoj, listeroj: listeroj)
-	}
-	
-	func fariOficialecaVortliston(
-		por ofc: Oficialeco,
-		prezentilo: UINavigationController
-	) -> VortoListoViewController<Esplorlistero> {
-		let vc = VortoListoViewController<Esplorlistero>(titolo: ofc.nomo) { [weak self] listero in
-			guard let self else { return }
-			
-			prezentiArtikoloPaghon(el: listero.destino, prezentilo: prezentilo)
-		}
-		
-		let destinoj = vortaro.ofcVortoj(oficialeco: ofc.kodo)
-		vc.montri(listerojn: destinoj.map {
-			Esplorlistero(
-				teksto: $0.teksto,
-				destino: $0
-			)
-		})
-		
-		return vc
-	}
-	
-	// MARK: Aliaj
-	
-	func fariHazardanArtikolon() -> ArtikoloViewController {
-		let artikolo = vortaro.iuAjnArtikolo()!
-		
-		return ArtikoloViewController(
-			artikolo: artikolo,
-			aperis: { [weak self] in self?.datumRegilo.markiVizititan(artikolon: artikolo) },
-			konservis: { [weak self] konservita in
-				guard let self else { return }
-				
-				if konservita {
-					datumRegilo.konservi(artikolon: artikolo)
-				} else {
-					datumRegilo.malkonservi(artikolon: artikolo)
-				}
-			},
-			uzantDatumaro: datumRegilo.datumaro
+	/// Kreas paĝon montranta fakojn, per kiu uzanto povu atingi fakvortojn
+	private func fariFaklistanPaghon(prezentilo: UINavigationController) -> KategoriaViewController {
+		return KategoriaViewController.fakListo(
+			vortaro: vortaro,
+			elektisArtikolon:  { [weak self] destino in
+				self?.prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
+			}
 		)
 	}
 	
-	// MARK: - Paĝhelpiloj
+	/// Kreas paĝon montranta oficialecojn, per kiu uzanto povu atingi ofcvortojn
+	func fariOficialecoListon(prezentilo: UINavigationController) -> KategoriaViewController {
+		return KategoriaViewController.oficialecoListo(
+			vortaro: vortaro,
+			elektisArtikolon:  { [weak self] destino in
+				self?.prezentiArtikoloPaghon(el: destino, prezentilo: prezentilo)
+			}
+		)
+	}
 	
+	// MARK: - Mallongigoj kaj Informoj
+	
+	/// Prezentas menuon por montri mallongigo-difinojn
+	func prezentiMallongigoMenuon(prezentilo: UINavigationController) {
+		let listeroj: [KategoriaViewController.Listero] = [
+			.init(
+				teksto: Tekstoj.vortarajMallongigoj,
+				celPagho: {
+					MallongigoListoViewController(
+						titolo: Tekstoj.vortarajMallongigoj,
+						eroj: MallongigoListo.vortaraj
+					)
+				}
+			),
+			.init(
+				teksto: Tekstoj.fakajMallongigoj,
+				celPagho: {
+					MallongigoListoViewController(
+						titolo: Tekstoj.fakajMallongigoj,
+						eroj: MallongigoListo.fakaj
+					)
+				}
+			)
+		]
+		
+		let vc = KategoriaViewController(
+			titolo: Tekstoj.mallongigoj,
+			tabelStilo: .insetGrouped,
+			listeroj: listeroj
+		)
+		prezentilo.pushViewController(vc, animated: true)
+	}
+	
+	/// Prezenti paĝon montranta informojn pri ReVo kaj PoŝReVo
+	func prezentiInformoPaghon(
+		prezentilo: UINavigationController
+	) {
+		let agordilo = InformojViewController()
+		prezentilo.pushViewController(agordilo, animated: true)
+	}
+	
+	// MARK: - Paĝokreadaj helpiloj
+	
+	/// Liveras novan serĉpaĝon
+	func fariSerchPaghon() -> SerchoViewController{
+		SerchoViewController(
+			serchLingvoj: datumRegilo.datumaro.lingvoj,
+			radika: true,
+			elektisLingvon: { [weak self] lingvo in self?.datumRegilo.elektis(lingvon: lingvo)}
+		)
+	}
+	
+	/// Liveras novan artikolpaĝon el artikol-objekto
 	private func fariArtikoloPaghon(
 		el artikolo: Artikolo,
-		marko: String? = nil,
-		prezentilo: UINavigationController
+		marko: String? = nil
 	) -> ArtikoloViewController {
 		ArtikoloViewController(
 			artikolo: artikolo,

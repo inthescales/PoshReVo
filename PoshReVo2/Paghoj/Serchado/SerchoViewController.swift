@@ -22,7 +22,7 @@ final class SerchoViewController: UIViewController, Ingito {
 	private lazy var lingvoBreto: LingvoBretoViewController = {
 		return LingvoBretoViewController(
 			elektisLingvon: { [weak self] lingvo in
-				self?.datumRegilo.elektis(lingvon: lingvo)
+				self?.elektisLingvon(lingvo)
 				self?.serchilo.iksumi = self?.serchLingvo?.estasEsperanto ?? false
 				self?.farisPeton(teksto: self?.serchTeksto, serchLingvo: lingvo)
 			},
@@ -63,7 +63,7 @@ final class SerchoViewController: UIViewController, Ingito {
 	/// Ĉu ĉi-paĝo komencis serĉfadenon
 	let radika: Bool
 	
-	private var datumRegilo: UzantDatumoRegado
+	private var elektisLingvon: (Lingvo) -> Void
 	
 	private var kunordigilo: Kunordigilo
 	
@@ -74,12 +74,12 @@ final class SerchoViewController: UIViewController, Ingito {
 	init(
 		serchLingvoj: [Lingvo],
 		radika: Bool = false,
-		datumRegilo: UzantDatumoRegado = UzantDatumoRegilo.komuna,
+		elektisLingvon: @escaping (Lingvo) -> Void,
 		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.radika = radika
-		self.datumRegilo = datumRegilo
+		self.elektisLingvon = elektisLingvon
 		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)

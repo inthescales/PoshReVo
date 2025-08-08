@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
 		
 		// Starigi hejmpaĝon
-		let serchPagho = SerchoViewController(serchLingvoj: UzantDatumaro.komuna.lingvoj, radika: true)
+		let serchPagho = Kunordigilo.komuna.fariSerchPaghon()
 		let vc = PaghingoViewController(chefpagho: serchPagho)
 		let navigaciilo = PRVNavigationController(rootViewController: vc)
 		fenestro = UIWindow(frame: UIScreen.main.bounds)

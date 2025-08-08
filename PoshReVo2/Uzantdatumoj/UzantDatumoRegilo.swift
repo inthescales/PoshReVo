@@ -10,23 +10,9 @@ extension Avizoj {
 	static let stiloShanghighis = NSNotification.Name("stiloShanghighis")
 }
 
-/// Protokolo por regado de uzantaj datumoj.
-protocol UzantDatumoRegado {
-	var datumaro: UzantDatumaro { get }
-	
-	func elektis(lingvon novaLingvo: Lingvo)
-	func redaktisLingvojn(novaj: [Lingvo])
-	func markiVizititan(artikolon artikolo: Artikolo)
-	func forigiHistorion()
-	func konservi(artikolon artikolo: Artikolo)
-	func malkonservi(artikolon artikolo: Artikolo)
-	func forigiKonservitajn()
-	func meti(stilon stilo: InterfacStilo)
-}
-
 /// Klaso kiu regas uzantajn datumojn. Disponigas la nuna datumostato, kaj
 /// havas metodojn por ŝanĝi ĉiujn datumerojn.
-final class UzantDatumoRegilo: UzantDatumoRegado {
+final class UzantDatumoRegilo {
 	private enum Konstantoj {
 		static let historioLimo = 100
 	}
