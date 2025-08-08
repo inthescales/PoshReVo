@@ -66,7 +66,7 @@ class InterfacStilo {
 	
 	/// Ĉiuj elekteblaj stiloj
 	static var chiuj: [InterfacStilo] = [
-		.klara,
+		.baza,
 		.pergamena
 	]
 }
