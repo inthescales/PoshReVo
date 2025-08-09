@@ -258,10 +258,10 @@ final class ArtikoloViewController: UIViewController {
 			eroj: eroj,
 			agordoj: ShovMenuoViewController.Agordoj(
 				titolo: Tekstoj.saltiAl,
-				navigaciaKoloro: stilo.navigaciaFono,
+				navigaciaKoloro: stilo.shovmenuaFono,
 				navigaciaTekstKoloro: stilo.navigaciaTeksto,
-				menuaKoloro: stilo.dokumentaFono,
-				malplenaKoloro: stilo.dokumentaFono,
+				menuaKoloro: stilo.shovmenuaFono,
+				malplenaKoloro: stilo.shovmenuaFono,
 				tekstKoloro: stilo.dokumentaTeksto,
 				dividiloKoloro: stilo.dokumentaTeksto.withAlphaComponent(0.3)
 			),
