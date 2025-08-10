@@ -6,8 +6,8 @@ extension ArboAnalizilo {
 		stato: Stato
 	) -> String {
 		let numeroTeksto = numero.flatMap { " \($0)" } ?? ""
-		let antauteksto = TekstAtributo.volvi("RIM" + numeroTeksto, per: .grasa)
-		let teksto = antauteksto + ": " + akumuliTekstojn(de: rimarko, stato: stato).tondi()
+		let titoleto = TekstAtributo.volvi("RIM" + numeroTeksto + ": ", per: .grasa)
+		var teksto = titoleto + akumuliTekstojn(de: rimarko, montriFontojn: true, stato: stato).tondi()
 		
 		// Kutime rimarko aperas sekve de difinan aŭ alian tekston, kaj ni do deziras
 		// apartigan '\n' komence. Tamen, en kelkaj kazoj la rimarko ekzistas ekstere

@@ -11,7 +11,7 @@ extension ArboAnalizilo {
 		/// Fabriko kiu fabrikos la nune traktatan artikolon
 		var artikolFabriko = ArtikolFabriko()
 		
-		// MARK: Grundaĵoj
+		// MARK: - Grundaĵoj
 		
 		/// Lingvoj laŭ iliaj kodoj
 		let lingvoj: [String: Lingvo]
@@ -19,7 +19,7 @@ extension ArboAnalizilo {
 		/// Stilaj tekstoj kaj iliaj kodoj
 		let stiloj: [String: String]
 		
-		// MARK: Artikol-informoj
+		// MARK: - Artikol-informoj
 		
 		/// La radiko de la nune traktata artikolo
 		var artikolRadiko: String? {
@@ -39,7 +39,7 @@ extension ArboAnalizilo {
 			artikolFabriko.indekso
 		}
 		
-		// MARK: Arbo-tradirada stato
+		// MARK: - Arbo-tradirada stato
 		
 		/// Stako enhavanta la nod-tipojn de la ĉi-nodaj patroj
 		var cheno: [NodTipo] = []

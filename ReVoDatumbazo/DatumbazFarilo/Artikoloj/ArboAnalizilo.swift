@@ -64,12 +64,14 @@ enum ArboAnalizilo {
 	// MARK: - Nodspecoj
 	
 	/// Akumulas tekston el teksto-nodoj, kaj alispecaj nodoj kiuj enhavas nur tekstojn
-	static func akumuliTekstojn(de nodo: ArtikolNodo, stato: Stato) -> String {
+	static func akumuliTekstojn(de nodo: ArtikolNodo, montriFontojn: Bool = false, stato: Stato) -> String {
 		var teksto = ""
 		traktiFilojn(de: nodo, stato: stato) { filo in
 			switch filo.tipo {
 			case .aut:
 				teksto += trakti(autoron: filo, stato: stato)
+			case .bib:
+				teksto += trakti(bibliografiajhon: filo, stato: stato)
 			case .ctl:
 				teksto += trakti(citilon: filo, stato: stato)
 			case .ekz:
@@ -79,7 +81,11 @@ enum ArboAnalizilo {
 			case .em:
 				teksto += trakti(emfazon: filo, stato: stato)
 			case .fnt:
-				teksto = traktiFonton(teksto: teksto, stato: stato)
+				if montriFontojn {
+					teksto += trakti(fonton: filo, stato: stato)
+				} else {
+					teksto = trapasiFonton(teksto: teksto, stato: stato)
+				}
 			case .frm:
 				teksto += trakti(formulon: filo, stato: stato)
 			case .g:
@@ -120,6 +126,8 @@ enum ArboAnalizilo {
 				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
 			case .vspec:
 				teksto += trakti(vortSpecon: filo, stato: stato)
+			case .url(let ref):
+				teksto += trakti(URLon: filo, referenco: ref, stato: stato)
 			default:
 				assert(false, "Neatendita filo")
 			}
