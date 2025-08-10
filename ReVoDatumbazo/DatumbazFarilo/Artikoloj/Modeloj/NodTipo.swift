@@ -36,7 +36,7 @@ enum NodTipo {
 	case rad(vari: String?)
 	case ref(tip: String?, cel: String)
 	case refgrp(tip: String?)
-	case rim
+	case rim(num: Int?)
 	case snc(mrk: String?)
 	case sncref(ref: String?)
 	case sub
@@ -126,11 +126,11 @@ enum NodTipo {
 		case "rad":
 			return .rad(vari: ecoj["var"])
 		case "ref":
-			return .ref(tip: ecoj["tip"] ?? nil, cel: ecoj["cel"]!)
+			return .ref(tip: ecoj["tip"], cel: ecoj["cel"]!)
 		case "refgrp":
 			return .refgrp(tip: ecoj["tip"])
 		case "rim":
-			return .rim
+			return .rim(num: ecoj["num"].flatMap { Int($0) })
 		case "snc":
 			return .snc(mrk: ecoj["mrk"])
 		case "sncref":

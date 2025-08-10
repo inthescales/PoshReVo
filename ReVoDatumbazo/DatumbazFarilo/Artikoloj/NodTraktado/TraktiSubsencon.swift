@@ -32,8 +32,8 @@ extension ArboAnalizilo {
 				teksto += trakti(referencon: filo, tipo: tip, celo: cel, stato: stato)
 			case .refgrp(let tip):
 				teksto += trakti(referencGrupon: filo, tipo: tip, stato: stato)
-			case .rim:
-				teksto += trakti(rimarkon: filo, stato: stato)
+			case .rim(let num):
+				teksto += trakti(rimarkon: filo, numero: num, stato: stato)
 			case .teksto, .tezrad:
 				break
 			case .trd(let lng):

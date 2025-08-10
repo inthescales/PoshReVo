@@ -19,8 +19,8 @@ extension ArboAnalizilo {
 				akumulilo.aldoni(blokojn: trakti(derivajhon: filo, marko: mrk, stato: stato))
 			case .gra:
 				akumulilo.aldoni(tekston: trakti(gramatikon: filo, stato: stato))
-			case .rim:
-				akumulilo.aldoni(tekston: trakti(rimarkon: filo, stato: stato))
+			case .rim(let num):
+				akumulilo.aldoni(tekston: trakti(rimarkon: filo, numero: num, stato: stato))
 			case .snc(let mrk):
 				akumulilo.aldoni(tekston: trakti(sencon: filo, marko: mrk, stato: stato))
 			case .teksto:

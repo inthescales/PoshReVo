@@ -52,8 +52,8 @@ extension ArboAnalizilo {
 				akumulilo.aldoni(tekston: trakti(referencon: filo, tipo: tip, celo: cel, stato: stato))
 			case .refgrp(let tip):
 				akumulilo.aldoni(tekston: trakti(referencGrupon: filo, tipo: tip, stato: stato))
-			case .rim:
-				akumulilo.aldoni(tekston:  trakti(rimarkon: filo, stato: stato))
+			case .rim(let num):
+				akumulilo.aldoni(tekston: trakti(rimarkon: filo, numero: num, stato: stato))
 			case .snc(let mrk):
 				let filTeksto = trakti(sencon: filo, marko: mrk, stato: stato)
 				

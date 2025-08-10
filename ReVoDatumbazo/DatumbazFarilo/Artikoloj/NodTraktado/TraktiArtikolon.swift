@@ -31,9 +31,9 @@ extension ArboAnalizilo {
 			case .refgrp(let tipo):
 				// vd. apriora
 				akumulilo.aldoni(tekston: trakti(referencGrupon: filo, tipo: tipo, stato: stato))
-			case .rim:
+			case .rim(let num):
 				// vd. premi
-				akumulilo.aldoni(tekston: trakti(rimarkon: filo, sekvasTekston: false, stato: stato))
+				akumulilo.aldoni(tekston: trakti(rimarkon: filo, numero: num, sekvasTekston: false, stato: stato))
 			case .subart:
 				akumulilo.aldoni(blokojn: trakti(subartikolon: filo, numero: subartikoloNumero, stato: stato))
 				subartikoloNumero += 1
