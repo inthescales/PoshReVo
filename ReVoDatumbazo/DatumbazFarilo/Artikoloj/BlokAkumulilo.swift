@@ -2,6 +2,12 @@ final class BlokAkumulilo {
 	private var teksto = ""
 	private var blokoj: [ArtikolBloko] = []
 		
+	// MARK: - Demandado
+	
+	func tenasTekston() -> Bool {
+		return !teksto.isEmpty
+	}
+	
 	// MARK: - Akumulado
 	
 	func aldoni(tekston teksto: String) {

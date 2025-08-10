@@ -1,0 +1,669 @@
+{
+  "be" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 1,
+      "serchTeksto" : "мадальнасьць",
+      "videblaTeksto" : "мадальнасьць"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 2,
+      "serchTeksto" : "мадальнасьць",
+      "videblaTeksto" : "мадальнасьць"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 2,
+      "serchTeksto" : "лад",
+      "videblaTeksto" : "лад (дзеяслова)"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 3,
+      "serchTeksto" : "форма дзеяслова",
+      "videblaTeksto" : "форма дзеяслова"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 4,
+      "serchTeksto" : "строй",
+      "videblaTeksto" : "строй"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 4,
+      "serchTeksto" : "танальнасьць",
+      "videblaTeksto" : "танальнасьць"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "мадальны",
+      "videblaTeksto" : "мадальны"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "senco" : 1,
+      "serchTeksto" : "мадальная лёгіка",
+      "videblaTeksto" : "мадальная лёгіка"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "senco" : 1,
+      "serchTeksto" : "мадальнасьць",
+      "videblaTeksto" : "мадальнасьць (дзеяслова)"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "senco" : 1,
+      "serchTeksto" : "лад",
+      "videblaTeksto" : "лад (дзеяслова)"
+    }
+  ],
+  "cs" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "modalita",
+      "videblaTeksto" : "modalita"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "modální",
+      "videblaTeksto" : "modální"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "podmíněný",
+      "videblaTeksto" : "podmíněný"
+    }
+  ],
+  "de" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 1,
+      "serchTeksto" : "Modalität",
+      "videblaTeksto" : "Modalität"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 4,
+      "serchTeksto" : "Tonart",
+      "videblaTeksto" : "Tonart"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 4,
+      "serchTeksto" : "Modus",
+      "videblaTeksto" : "Modus (Tonart)"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "modal",
+      "videblaTeksto" : "modal"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "senco" : 1,
+      "serchTeksto" : "Modallogik",
+      "videblaTeksto" : "Modallogik"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "senco" : 1,
+      "serchTeksto" : "Modalitätlogik",
+      "videblaTeksto" : "Modalitätlogik"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "serchTeksto" : "Modallogik",
+      "videblaTeksto" : "Modallogik"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "senco" : 1,
+      "serchTeksto" : "Modus",
+      "videblaTeksto" : "Modus"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "serchTeksto" : "Modalverb",
+      "videblaTeksto" : "Modalverb"
+    }
+  ],
+  "en" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 1,
+      "serchTeksto" : "modality",
+      "videblaTeksto" : "modality"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 2,
+      "serchTeksto" : "modality",
+      "videblaTeksto" : "modality"
+    },
+    {
+      "esperantaNomo" : "modalaj vortoj",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "modal words",
+      "videblaTeksto" : "modal words"
+    },
+    {
+      "esperantaNomo" : "modalaj verboj",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "modal verbs",
+      "videblaTeksto" : "modal verbs"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "modal",
+      "videblaTeksto" : "modal"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "senco" : 1,
+      "serchTeksto" : "modal logic",
+      "videblaTeksto" : "modal logic"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "senco" : 1,
+      "serchTeksto" : "modality",
+      "videblaTeksto" : "verbal modality"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "senco" : 1,
+      "serchTeksto" : "mood",
+      "videblaTeksto" : "mood"
+    }
+  ],
+  "fr" : [
+    {
+      "esperantaNomo" : "modalaj vortoj",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "adverbes de modalité",
+      "videblaTeksto" : "adverbes de modalité"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "modal",
+      "videblaTeksto" : "modal"
+    }
+  ],
+  "hu" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 1,
+      "serchTeksto" : "modalitás",
+      "videblaTeksto" : "modalitás"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 2,
+      "serchTeksto" : "mód",
+      "videblaTeksto" : "mód(nyelvtani)"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 3,
+      "serchTeksto" : "igealak",
+      "videblaTeksto" : "igealak"
+    },
+    {
+      "esperantaNomo" : "modalaj vortoj",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "módosítószó",
+      "videblaTeksto" : "módosítószó"
+    },
+    {
+      "esperantaNomo" : "modalaj verboj",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "módbeli segédige",
+      "videblaTeksto" : "módbeli segédige"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "módbeli",
+      "videblaTeksto" : "módbeli"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "módosító",
+      "videblaTeksto" : "módosító"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "modális",
+      "videblaTeksto" : "modális"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "senco" : 1,
+      "serchTeksto" : "modális logika",
+      "videblaTeksto" : "modális logika"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "senco" : 1,
+      "serchTeksto" : "igemód",
+      "videblaTeksto" : "igemód"
+    }
+  ],
+  "ja" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "様態",
+      "videblaTeksto" : "様態"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "様相",
+      "videblaTeksto" : "様相"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "様式",
+      "videblaTeksto" : "様式"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "旋法",
+      "videblaTeksto" : "旋法"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "様態の",
+      "videblaTeksto" : "様態の"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "様相の",
+      "videblaTeksto" : "様相の"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "様式に関する",
+      "videblaTeksto" : "様式に関する"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "旋法の",
+      "videblaTeksto" : "旋法の"
+    }
+  ],
+  "nl" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "modaliteit",
+      "videblaTeksto" : "modaliteit"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "modaal",
+      "videblaTeksto" : "modaal"
+    }
+  ],
+  "pl" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 3,
+      "serchTeksto" : "modus",
+      "videblaTeksto" : "modus"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "modus",
+      "videblaTeksto" : "modus"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "postać czasownika",
+      "videblaTeksto" : "postać czasownika"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "modalny",
+      "videblaTeksto" : "modalny"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "serchTeksto" : "logika modalna",
+      "videblaTeksto" : "logika modalna"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "serchTeksto" : "czasownik modalny",
+      "videblaTeksto" : "czasownik modalny"
+    }
+  ],
+  "pt" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "modal",
+      "videblaTeksto" : "modal"
+    }
+  ],
+  "ro" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "modus",
+      "videblaTeksto" : "modus"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "forma verbului",
+      "videblaTeksto" : "forma verbului"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "modal",
+      "videblaTeksto" : "modal"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "serchTeksto" : "logica modal",
+      "videblaTeksto" : "logica modal"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "serchTeksto" : "verbe modale",
+      "videblaTeksto" : "verbe modale"
+    }
+  ],
+  "ru" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 1,
+      "serchTeksto" : "модальность",
+      "videblaTeksto" : "модальность"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 2,
+      "serchTeksto" : "модальность",
+      "videblaTeksto" : "модальность"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 2,
+      "serchTeksto" : "наклонение",
+      "videblaTeksto" : "наклонение (глагола)"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 3,
+      "serchTeksto" : "форма глагола",
+      "videblaTeksto" : "форма глагола"
+    },
+    {
+      "esperantaNomo" : "modalaj vortoj",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "модальные слова",
+      "videblaTeksto" : "модальные слова"
+    },
+    {
+      "esperantaNomo" : "modalaj verboj",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "модальные глаголы",
+      "videblaTeksto" : "модальные глаголы"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "senco" : 1,
+      "serchTeksto" : "модальный",
+      "videblaTeksto" : "модальный"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "senco" : 1,
+      "serchTeksto" : "модальная логика",
+      "videblaTeksto" : "модальная логика"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "senco" : 1,
+      "serchTeksto" : "модальность",
+      "videblaTeksto" : "глагольная модальность"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "senco" : 1,
+      "serchTeksto" : "наклонение",
+      "videblaTeksto" : "наклонение (глагола)"
+    }
+  ],
+  "sk" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "modalita",
+      "videblaTeksto" : "modalita"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "modálny",
+      "videblaTeksto" : "modálny"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "podmienený",
+      "videblaTeksto" : "podmienený"
+    }
+  ],
+  "uk" : [
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "модус",
+      "videblaTeksto" : "модус"
+    },
+    {
+      "esperantaNomo" : "modalo",
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "serchTeksto" : "форма дієслова",
+      "videblaTeksto" : "форма дієслова"
+    },
+    {
+      "esperantaNomo" : "modala",
+      "indekso" : "modal",
+      "marko" : "modal.0a",
+      "serchTeksto" : "модальний",
+      "videblaTeksto" : "модальний"
+    }
+  ],
+  "zh" : [
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "serchTeksto" : "模态逻辑",
+      "videblaTeksto" : "模态逻辑"
+    },
+    {
+      "esperantaNomo" : "modala logiko",
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "serchTeksto" : "模態邏輯",
+      "videblaTeksto" : "模態邏輯"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "serchTeksto" : "情态",
+      "videblaTeksto" : "情态"
+    },
+    {
+      "esperantaNomo" : "verba modalo",
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "serchTeksto" : "情態",
+      "videblaTeksto" : "情態"
+    }
+  ]
+}

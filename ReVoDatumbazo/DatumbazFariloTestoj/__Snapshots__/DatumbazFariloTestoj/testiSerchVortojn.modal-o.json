@@ -1,0 +1,22 @@
+[
+  {
+    "indekso" : "modal",
+    "marko" : "modal.0o",
+    "teksto" : "modalo"
+  },
+  {
+    "indekso" : "modal",
+    "marko" : "modal.0a",
+    "teksto" : "modala"
+  },
+  {
+    "indekso" : "modal",
+    "marko" : "modal.0alogiko",
+    "teksto" : "modala logiko"
+  },
+  {
+    "indekso" : "modal",
+    "marko" : "modal.verba0o",
+    "teksto" : "verba modalo"
+  }
+]

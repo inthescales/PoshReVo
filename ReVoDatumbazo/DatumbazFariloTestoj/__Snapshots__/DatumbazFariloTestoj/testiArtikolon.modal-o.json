@@ -1,0 +1,374 @@
+{
+  "blokoj" : [
+    {
+      "derivajhTitola" : {
+        "marko" : "modal.0o",
+        "teksto" : "modalo"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "<sencNumero>1. <\/sencNumero>[FIL] (Logiko) Speciala <a href=\"kondic1.0o\">kondiĉo<\/a>, al kiu estas subordigita la aserto de opinio: \n<ekzemplo> · la <g>modal<\/g>oj de ebleco, de eventualeco;<\/ekzemplo> \n<ekzemplo> · laŭ I. Kant la kategorioj de <g>modal<\/g>o estas ebleco, realeco kaj neceseco.<\/ekzemplo>\n\n<sencNumero>2. <\/sencNumero>[GRA] Gramatika kategorio indikanta rilaton de diro al la realo (konstato, eventualo, probablo, deziro, ordono ktp) kaj esprimata per verbaj formoj (<a href=\"modal.verba0o\">verba modalo<\/a>) aŭ per aliaj rimedoj (intonacio, modalaj vortoj ktp): \n<ekzemplo> · la indikativa, ordona, demanda <g>modal<\/g>oj de frazo;<\/ekzemplo> \n<ekzemplo> · la verboj havas dek du tempojn, tri <g>modal<\/g>ojn, […] kaj kvin aspektojn.<\/ekzemplo>\n<rimarko><g>RIM<\/g>: PAG kaj PIV nomas tion <a href=\"mod1.0o.GRA\">modo<\/a>, sen zorgi pri la komunlingva homonimo aŭ pri neverbaj modalaj vortoj.<\/rimarko>\n\n<sencNumero>3. <\/sencNumero>[GRA] = <a href=\"modus.0o.GRA\">moduso<\/a>\n<rimarko><g>RIM<\/g>: Tiel uzas la vorton „modalo” PAG kaj PIV.<\/rimarko>\n\n<sencNumero>4. <\/sencNumero>[MUZ] <a href=\"gam.0o.MUZ\">Gamo<\/a>; la maniero, kiel plentonoj kaj duontonoj estas aranĝitaj en la gamo: \n<ekzemplo> · <g>modal<\/g>o <a href=\"minor.0a\">minora<\/a>, <a href=\"majxor.0a.gamo\">maĵora<\/a>, <a href=\"dori.0a\">doria<\/a>, <a href=\"lidi.0a\">lidia<\/a>, <a href=\"frigi.0a\">frigia<\/a>, miksolidia ktp;<\/ekzemplo> \n<ekzemplo> · kiuj estas la lamentmelodioj? diru al mi, ĉar vi estas muzikisto – la mikslidia <g>modal<\/g>o […] kaj la akutlidia, kaj diversaj aliaj.<\/ekzemplo>\n⊏➞ <a href=\"tonal.0o\">tonalo<\/a>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "<sencNumero>1.<\/sencNumero> modality <sencNumero>2.<\/sencNumero> modality"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "<sencNumero>1.<\/sencNumero> мадальнасьць <sencNumero>2.<\/sencNumero> мадальнасьць, лад (дзеяслова) <sencNumero>3.<\/sencNumero> форма дзеяслова <sencNumero>4.<\/sencNumero> строй, танальнасьць"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "modalita"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "<sencNumero>1.<\/sencNumero> Modalität <sencNumero>4.<\/sencNumero> Tonart, Modus (Tonart)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "<sencNumero>1.<\/sencNumero> modalitás <sencNumero>2.<\/sencNumero> mód(nyelvtani) <sencNumero>3.<\/sencNumero> igealak"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "様態 [ようたい], 様相 [ようそう], 様式 [ようしき], 旋法 [せんぽう]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "modaliteit"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "modus, postać czasownika <sencNumero>3.<\/sencNumero> modus"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "modal"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ro",
+              "nomo" : "rumana"
+            },
+            "teksto" : "modus, forma verbului"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "<sencNumero>1.<\/sencNumero> модальность <sencNumero>2.<\/sencNumero> модальность, наклонение (глагола) <sencNumero>3.<\/sencNumero> форма глагола"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "modalita"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "модус, форма дієслова"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "modal.0a",
+        "teksto" : "modala"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Rilata al <a href=\"modal.0o.GRA_modo\">modalo<sup>2<\/sup><\/a>: \n<ekzemplo> · „ĉu”, „kvazaŭ”, „eble”, „certe”, „nepre” estas modalaj vortoj;<\/ekzemplo> \n<ekzemplo> · „devi”, „povi”, „necesas” estas modalaj verboj.<\/ekzemplo>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "modal<sencNumero> · ~aj vortoj: <\/sencNumero>modal words<sencNumero> · ~aj verboj: <\/sencNumero>modal verbs"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "мадальны"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "modální, podmíněný"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "modal<sencNumero> · ~aj vortoj: <\/sencNumero>adverbes de modalité"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "modal"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "módbeli, módosító, modális<sencNumero> · ~aj vortoj: <\/sencNumero>módosítószó<sencNumero> · ~aj verboj: <\/sencNumero>módbeli segédige"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "様態の [ようたいの], 様相の [ようそうの], 様式に関する [ようしきにかんする], 旋法の [せんぽうの]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "modaal"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "modalny"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ro",
+              "nomo" : "rumana"
+            },
+            "teksto" : "modal"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "модальный<sencNumero> · ~aj vortoj: <\/sencNumero>модальные слова<sencNumero> · ~aj verboj: <\/sencNumero>модальные глаголы"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sk",
+              "nomo" : "slovaka"
+            },
+            "teksto" : "modálny, podmienený"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "модальний"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "modal.0alogiko",
+        "teksto" : "modala logiko"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "[FIL] [MAT] Propozicia logiko etendita per esprimiloj de <a href=\"modal.0o.FIL\">modalo<sup>1<\/sup><\/a> („nepre”, „eble”, „probable” ktp): \n<ekzemplo> · la normala Devo-Logiko (SDL) (difinita de la finna filozofo Georg Henrik von Wright) estas normala <g>modal<\/g>a logiko kun <g>modal<\/g>aj operatoroj O por devo kaj P por permeso.<\/ekzemplo>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "modal logic"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "мадальная лёгіка"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "模态逻辑 [mótàiluóji], 模態邏輯 [mótàiluóji]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Modallogik <sencNumero>1.<\/sencNumero> Modallogik, Modalitätlogik"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "modális logika"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "logika modalna"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ro",
+              "nomo" : "rumana"
+            },
+            "teksto" : "logica modal"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "модальная логика"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "modal.verba0o",
+        "teksto" : "verba modalo"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "[GRA] <a href=\"modal.0o.GRA_modo\">Modalo<sup>2<\/sup><\/a> esprimita per speciala gramatika formo: \n<ekzemplo> · en Esperanto la realan <g>modal<\/g>on esprimas <a href=\"indika.0o.verba\">indikativo<\/a> („mi vidas”, „vidate” ktp);<\/ekzemplo> \n<ekzemplo> · la hipotezan <g>modal<\/g>on esprimas <a href=\"kondic.0o\">kondicionalo<\/a> („mi vidus”);<\/ekzemplo> \n<ekzemplo> · ordonan <g>modal<\/g>on esprimas <a href=\"voliti.0o\">volitivo<\/a> („li vidu”, „farenda”).<\/ekzemplo>\n<rimarko><g>RIM<\/g>: La nombro de verbaj modaloj gramatikaj konsiderinde varias, de 3–5 el la lingvoj hindeŭropaj ĝis 10–14 en la lingvoj tjurkaj.<\/rimarko>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "en",
+              "nomo" : "angla"
+            },
+            "teksto" : "verbal modality, mood"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "мадальнасьць (дзеяслова), лад (дзеяслова)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "情态 [qíngtài], 情態 [qíngtài]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "Modalverb <sencNumero>1.<\/sencNumero> Modus"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "igemód"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "czasownik modalny"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ro",
+              "nomo" : "rumana"
+            },
+            "teksto" : "verbe modale"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "глагольная модальность, наклонение (глагола)"
+          }
+        ]
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "<rimarko><g>RIM 1<\/g>: PV kaj PIV markas ĉi tiun radikon kiel Zamenhofan, sed Zamenhofa ekzemplo mankas, kaj estas neklare, en kiu senco (kaj en kiu formo) Zamenhof uzis tiun vorton.<\/rimarko>\n<rimarko><g>RIM 2<\/g>: La vortoj modalo, <a href=\"mod1.0o\">modo<\/a>, <a href=\"modus.0o\">moduso<\/a> estas etimologie parencaj, devenante el Latina radiko kies sencoj estis „mezuro”, „maniero”, „regulo”; la plej gravaj nocioj devenas el la senco „maniero” tamen ili estas tre malproksimaj kaj diversaj lingvoj malsame distribuas inter ili. La moderna internacia tendenco (aŭ modo) ŝajnas preferi la vorton „modalo” por la <g>subjektiva<\/g> senco „maniero pensi” (konforme al modalo<sup>1<\/sup>). Tiu ĝenerala koncepto nature kovras ankaŭ la sencon de verbaj modaloj, kiujn la esperanta gramatika tradicio bedaŭrinde preferas misnomi „modoj”. La tradicio filozofia uzas formon similan al „moduso” por la <g>objektiva<\/g> senco „maniero esti, aperi” (<a href=\"modus.0o.FIL\">moduso<\/a>). La lingvoj latinidaj uzas por la abstraktaj sencoj (kaj la objektivaj, kaj la subjektivaj) virgenran <g>mode, modo<\/g>. Esperanto ne uzas gramatikan genron por sencodistingo, sed la uzo de „moduso” ebligas lasi al la komunuza „modo” nur la kutiman sencon de socia-personaj preferoj vestadaj kaj kondutaj. [Sergio Pokrovskij]<\/rimarko>"
+      }
+    }
+  ],
+  "indekso" : "modal",
+  "radiko" : "modal",
+  "titolo" : "modal\/o"
+}

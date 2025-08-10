@@ -1,0 +1,52 @@
+{
+  "FIL" : [
+    {
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 1,
+      "teksto" : "modalo"
+    },
+    {
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "senco" : 1,
+      "teksto" : "modala logiko"
+    }
+  ],
+  "GRA" : [
+    {
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 2,
+      "teksto" : "modalo"
+    },
+    {
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 3,
+      "teksto" : "modalo"
+    },
+    {
+      "indekso" : "modal",
+      "marko" : "modal.verba0o",
+      "senco" : 1,
+      "teksto" : "verba modalo"
+    }
+  ],
+  "MAT" : [
+    {
+      "indekso" : "modal",
+      "marko" : "modal.0alogiko",
+      "senco" : 1,
+      "teksto" : "modala logiko"
+    }
+  ],
+  "MUZ" : [
+    {
+      "indekso" : "modal",
+      "marko" : "modal.0o",
+      "senco" : 4,
+      "teksto" : "modalo"
+    }
+  ]
+}
