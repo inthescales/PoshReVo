@@ -91,8 +91,10 @@ final class LingvoBretoViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
+	/// referencfunkcio por elekto de lingvoj
 	private let elektisLingvon: (Lingvo) -> ()
 	
+	/// referencfunkcio por redaktado de lingvoj
 	private let redaktisLingvojn: ([Lingvo]) -> ()
 	
 	private let kunordigilo: Kunordigilo
@@ -204,7 +206,7 @@ final class LingvoBretoViewController: UIViewController {
 		renovigiInterfacon()
 	}
 	
-	/// La lingvo premis la 'pli'-butonon
+	/// La uzanto premis la 'pli'-butonon
 	@objc private func premisPli() {
 		guard let navigaciilo = navigationController else {
 			return
@@ -219,6 +221,7 @@ final class LingvoBretoViewController: UIViewController {
 	
 	// MARK: Ekstera regado - ekz. en kazo de ĝisdatigo pro avizo
 	
+	/// Prezentas certan lingvon kiel elektitan
 	func ghisdatigi(elektitan novelektita: Lingvo) {
 		guard let indekso = lingvoj.firstIndex(of: novelektita) else { return }
 		let malnovaIndekso = elektitaIndekso
@@ -226,6 +229,7 @@ final class LingvoBretoViewController: UIViewController {
 		montriElekton(de: malnovaIndekso, al: indekso)
 	}
 	
+	/// Ŝanĝas kiujn lingvojn aperu sur la breto
 	func ghisdatigi(lingvaron lingvaro: [Lingvo]) {
 		shanghis(lingvaron: lingvaro)
 	}
@@ -240,6 +244,7 @@ final class LingvoBretoViewController: UIViewController {
 			view.removeFromSuperview()
 		}
 		
+		// Aldoni novajn butonojn
 		for i in 0..<lingvoj.count {
 			let lingvo = lingvoj[i]
 			let butono = fariLingvoButonon(
@@ -358,6 +363,7 @@ final class LingvoBretoViewController: UIViewController {
 	
 	// MARK: - Helpiloj
 	
+	/// Liveras butonon havantan certan indekson en la listo
 	private func butono(por indekso: Int) -> UIButton? {
 		guard indekso < lingvoStaplo.arrangedSubviews.count else {
 			return nil

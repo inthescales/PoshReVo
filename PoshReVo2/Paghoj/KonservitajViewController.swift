@@ -3,7 +3,8 @@ import UIKit
 final class KonservitajViewController: UIViewController {
 	// MARK: - Interfaceroj
 	
-	lazy var forigiButono = {
+	/// Butono por malkonservi ĉiujn artikolojn
+	lazy var nuligiButono = {
 		let butono = UIBarButtonItem.init(
 			title: Tekstoj.nuligi,
 			style: .plain,
@@ -24,6 +25,7 @@ final class KonservitajViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
+	/// referencfunkcio por elekto de artikol en la listo
 	let elektis: (Uzantlistero) -> ()
 	
 	let datumRegilo: UzantDatumoRegilo
@@ -58,7 +60,7 @@ final class KonservitajViewController: UIViewController {
 		super.viewDidLoad()
 		
 		title = Tekstoj.konservitaj
-		navigationItem.rightBarButtonItem = forigiButono
+		navigationItem.rightBarButtonItem = nuligiButono
 		
 		addChild(tabelo)
 		view.addEdgeMatchedSubview(tabelo.view)
@@ -74,7 +76,7 @@ final class KonservitajViewController: UIViewController {
 	// MARK: - Agordado
 	
 	private func montri(_ konservitaj: [Konservitajho]) {
-		forigiButono.isEnabled = !konservitaj.isEmpty
+		nuligiButono.isEnabled = !konservitaj.isEmpty
 		tabelo.montri(listerojn: konservitaj.reversed().map { Uzantlistero(el: $0) })
 	}
 	
@@ -91,6 +93,7 @@ final class KonservitajViewController: UIViewController {
 	
 	// MARK: - Reagoj
 	
+	/// Reagas al ŝanĝiĝoj en la konservitaj-listo
 	@objc private func konservitajShanghighis(_ avizo: Notification) {
 		guard let novkonservitaj = avizo.object as? [Konservitajho] else {
 			return

@@ -138,10 +138,7 @@ extension SerchiloView: UISearchBarDelegate {
 	}
 	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-		searchBar.text = searchText
-		
-		// TODO: Provu japanajn tekstojn, ĉar io speciala necesis en v1
-		
+		searchBar.text = searchText	
 		tekstoShanghighis(searchText)
 	}
 	

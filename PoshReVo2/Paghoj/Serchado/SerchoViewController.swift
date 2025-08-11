@@ -255,7 +255,7 @@ final class SerchoViewController: UIViewController, Ingito {
 		}
 	}
 	
-	/// Teksto mentrota kiel rezult-listera subteksto
+	/// Teksto montrota kiel rezult-listera subteksto
 	private func tekstoPorDestinoj(destinoj: [Destino]) -> String? {
 		if destinoj.count == 1,
 		   let destino = destinoj.first {

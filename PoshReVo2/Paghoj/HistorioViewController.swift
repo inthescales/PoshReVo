@@ -1,9 +1,11 @@
 import UIKit
 
+/// Montras la historion de artikoloj kiujn la uzanto jam legis
 final class HistorioViewController: UIViewController {
 	// MARK: - Interfaceroj
 	
-	lazy var forigiButono = {
+	/// Butono por nuligi la historion
+	lazy var nuligiButono = {
 		let butono = UIBarButtonItem.init(
 			title: Tekstoj.nuligi,
 			style: .plain,
@@ -24,6 +26,7 @@ final class HistorioViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
+	/// Referencfunkcio por elekto de artikoloj
 	let elektis: (Uzantlistero) -> ()
 	
 	let datumRegilo: UzantDatumoRegilo
@@ -58,7 +61,7 @@ final class HistorioViewController: UIViewController {
 		super.viewDidLoad()
 		
 		title = Tekstoj.historio
-		navigationItem.rightBarButtonItem = forigiButono
+		navigationItem.rightBarButtonItem = nuligiButono
 		
 		addChild(tabelo)
 		view.addEdgeMatchedSubview(tabelo.view)
@@ -74,7 +77,7 @@ final class HistorioViewController: UIViewController {
 	// MARK: - Agordado
 	
 	private func montri(_ historio: [Konservitajho]) {
-		forigiButono.isEnabled = !historio.isEmpty
+		nuligiButono.isEnabled = !historio.isEmpty
 		tabelo.montri(listerojn: historio.reversed().map { Uzantlistero(el: $0) })
 	}
 	
@@ -91,6 +94,7 @@ final class HistorioViewController: UIViewController {
 	
 	// MARK: - Reagoj
 	
+	/// Reagas al ŝanĝigoj en la historio
 	@objc private func historioShanghighis(_ avizo: Notification) {
 		guard let novlastaj = avizo.object as? [Konservitajho] else {
 			return
