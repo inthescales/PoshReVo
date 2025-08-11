@@ -1,9 +1,9 @@
 import UIKit
 
 extension InterfacStilo {
-	static let baza = InterfacStilo(
-		nomo: "baza",
-		identigilo: "baza",
+	static let simpla = InterfacStilo(
+		nomo: "simpla",
+		identigilo: "simpla",
 		hela: {
 			let verda = UIColor(deksesuma: 0x0a9618)
 			let palgriza = UIColor(deksesuma: 0xf2f2f2)

@@ -62,11 +62,11 @@ class InterfacStilo {
 	}
 	
 	/// Defaŭlta stilo - uzata ĉe nove instalata apo, aŭ se alia stilo ne troviĝas
-	static var defaulta: InterfacStilo = .baza
+	static var defaulta: InterfacStilo = .simpla
 	
 	/// Ĉiuj elekteblaj stiloj
 	static var chiuj: [InterfacStilo] = [
-		.baza,
+		.simpla,
 		.revoa
 	]
 }

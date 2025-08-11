@@ -1,12 +1,22 @@
 import UIKit
 
+// NOTO:
+// En la retejo, certaj koloroj estas uzataj en flanka menuo (plenekrane) aŭ
+// en kapa navigaciejo (poŝtelefone). Mi komence faris same ĉi-ape, uzante tiujn
+// samajn kolorojn en la navigaciejoj de la apo, sed post iom da provado, mi
+// preferas pli simplan stilon, je kiu la navigaciejoj havas la saman fonkoloron
+// kiel la dokumentpaĝoj.
+// Malgraŭ tio, mi retenas kelkajn agordojn en ĉi-dosiero, kaŝitaj per ĉi tiu variablo.
+// Tiuj stiloj tamen ne estas preta por uzo - necesus ŝanĝi kelkajn nav-tekstajn kolorojn
+fileprivate let fortaNavigaciejo = false
+
 extension InterfacStilo {
 	static let revoa = InterfacStilo(
-		nomo: "ReVo-a",
+		nomo: "Reta Vortaro",
 		identigilo: "revoa",
 		hela: {
 			
-			// let flava = UIColor(deksesuma: 0xEAB530) // Uzata kiel navigacia fono en la retejo
+			let flava = UIColor(deksesuma: 0xEAB530)
 			
 			let palflava = UIColor(deksesuma: 0xFAFBD2)
 			let paletflava = UIColor(deksesuma: 0xf1f2cb)
@@ -21,7 +31,7 @@ extension InterfacStilo {
 			let noktomeza = UIColor(deksesuma: 0x191970)
 			
 			return Koloraro(
-				navigaciaFono: palflava,
+				navigaciaFono: fortaNavigaciejo ? flava : palflava,
 				navigaciaTeksto: teksta,
 				navigaciaSerchilo: .white,
 				navigaciaButono: ligila,
@@ -46,7 +56,7 @@ extension InterfacStilo {
 			let palflava = UIColor(deksesuma: 0xFFFFE0)
 			let mezflava = UIColor(deksesuma: 0xccccb3)
 			let palblua = UIColor(deksesuma: 0x87CEEB)
-			let orangha = UIColor(deksesuma: 0xFFA500) // Ankaŭ navigacia fonkoloro en la retejo
+			let orangha = UIColor(deksesuma: 0xFFA500)
 			let shokolada = UIColor(deksesuma: 0xD2691E)
 			let helgriza = UIColor(deksesuma: 0x888f88)
 			let mezgriza = UIColor(deksesuma: 0x222f22)
@@ -54,8 +64,8 @@ extension InterfacStilo {
 			let malhelgriza = UIColor(deksesuma: 0x1C1F1C)
 			
 			return Koloraro(
-				navigaciaFono: nigra,
-				navigaciaTeksto: palflava,
+				navigaciaFono: fortaNavigaciejo ? orangha : nigra,
+				navigaciaTeksto: fortaNavigaciejo ? nigra : palflava,
 				navigaciaSerchilo: malhelgriza,
 				navigaciaButono: shokolada,
 				navigaciaButonoMalaktiva: helgriza,
