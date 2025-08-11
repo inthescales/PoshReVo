@@ -8,8 +8,9 @@ let komencTempo = Date()
 let radiko = "/Users/robin/Desktop"
 
 let fontIndiko = radiko + "/fontoj"
-var revoIndiko = fontIndiko + "/revo/revo/"
-var grundIndiko = fontIndiko + "/grundo"
+let grundIndiko = fontIndiko + "/grundo"
+let revoIndiko = fontIndiko + "/revo"
+let artikolIndiko = revoIndiko + "/revo/"
 
 let produktajhIndiko = radiko + "/produktajhoj"
 
@@ -25,11 +26,18 @@ let grundo = Grundo.legi(el: grundIndiko)
 grundo.skribi(json: produktajhIndiko)
 grundo.skribi(en: konteksto)
 
+// Legi neartikolajn revaĵojn
+
+print("Legas bibliografion")
+
+let bibliografioIndiko = revoIndiko + "/cfg/bibliogr.xml"
+let bibliografio = BibliografioAnalizilo.legi(el: bibliografioIndiko, grundo: grundo)
+
 // Legi artikolojn
 
 print("Legas artikolojn")
 
-let artikolAnalizajho = Artikolaro.legi(el: revoIndiko, grundo: grundo)
+let artikolAnalizajho = Artikolaro.legi(el: artikolIndiko, grundo: grundo)
 let artikolSkribajho = Artikolaro.skribi(artikolojn: artikolAnalizajho.artikoloj, en: konteksto)
 
 // Skribi vortlistojn
@@ -62,6 +70,7 @@ prefiksArboFarilo.skribi(en: konteksto)
 MallongigoListoj.generiDosieron(
 	fakoj: grundo.fakoj,
 	mallongigoj: grundo.mallongigojVortaraj,
+	bibliografio: bibliografio,
 	destinIndiko: produktajhIndiko
 )
 

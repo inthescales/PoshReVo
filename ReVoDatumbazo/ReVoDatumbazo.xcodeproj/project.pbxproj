@@ -281,6 +281,28 @@
 		00E5D5BA2E489EBB004877ED /* testiSerchVortojn.modal-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 00E5D5B92E489EBB004877ED /* testiSerchVortojn.modal-o.json */; };
 		00E5D5BC2E48AEF1004877ED /* TraktiBibliografiajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5BB2E48AEEC004877ED /* TraktiBibliografiajhon.swift */; };
 		00E5D5BD2E48AEF1004877ED /* TraktiBibliografiajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5BB2E48AEEC004877ED /* TraktiBibliografiajhon.swift */; };
+		00E5D5D42E49B400004877ED /* Verko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5D32E49B3FC004877ED /* Verko.swift */; };
+		00E5D5D52E49B400004877ED /* Verko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5D32E49B3FC004877ED /* Verko.swift */; };
+		00E5D5D72E49B42E004877ED /* BibliografioNodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5D62E49B426004877ED /* BibliografioNodo.swift */; };
+		00E5D5D82E49B42E004877ED /* BibliografioNodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5D62E49B426004877ED /* BibliografioNodo.swift */; };
+		00E5D5DA2E49B458004877ED /* BibliografioNodTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5D92E49B455004877ED /* BibliografioNodTipo.swift */; };
+		00E5D5DB2E49B458004877ED /* BibliografioNodTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5D92E49B455004877ED /* BibliografioNodTipo.swift */; };
+		00E5D5DE2E49B525004877ED /* BibliografioAntautraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5DD2E49B522004877ED /* BibliografioAntautraktado.swift */; };
+		00E5D5DF2E49B525004877ED /* BibliografioAntautraktado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5DD2E49B522004877ED /* BibliografioAntautraktado.swift */; };
+		00E5D5E12E49B589004877ED /* BibliografioKonvertilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5E02E49B585004877ED /* BibliografioKonvertilo.swift */; };
+		00E5D5E22E49B589004877ED /* BibliografioKonvertilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5E02E49B585004877ED /* BibliografioKonvertilo.swift */; };
+		00E5D5E42E49B65B004877ED /* BibliografioAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5E32E49B659004877ED /* BibliografioAnalizilo.swift */; };
+		00E5D5E52E49B65B004877ED /* BibliografioAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5E32E49B659004877ED /* BibliografioAnalizilo.swift */; };
+		00E5D5E72E49B6CB004877ED /* BibliografioArboAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5E62E49B6C6004877ED /* BibliografioArboAnalizilo.swift */; };
+		00E5D5E82E49B6CB004877ED /* BibliografioArboAnalizilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5E62E49B6C6004877ED /* BibliografioArboAnalizilo.swift */; };
+		00E5D5EB2E49B81A004877ED /* TraktiBibliografion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5EA2E49B814004877ED /* TraktiBibliografion.swift */; };
+		00E5D5EC2E49B81A004877ED /* TraktiBibliografion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5EA2E49B814004877ED /* TraktiBibliografion.swift */; };
+		00E5D5EE2E49B8A7004877ED /* TraktiVerkon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5ED2E49B8A3004877ED /* TraktiVerkon.swift */; };
+		00E5D5EF2E49B8A7004877ED /* TraktiVerkon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5ED2E49B8A3004877ED /* TraktiVerkon.swift */; };
+		00E5D5F12E49BA16004877ED /* TraktiEldonon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5F02E49BA14004877ED /* TraktiEldonon.swift */; };
+		00E5D5F22E49BA16004877ED /* TraktiEldonon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5F02E49BA14004877ED /* TraktiEldonon.swift */; };
+		00E5D5F42E49BA45004877ED /* Eldono.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5F32E49BA44004877ED /* Eldono.swift */; };
+		00E5D5F52E49BA45004877ED /* Eldono.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5F32E49BA44004877ED /* Eldono.swift */; };
 		00EEB7D02D6630A8002AA05E /* Artikolo+Printado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC162D65058C0033EC11 /* Artikolo+Printado.swift */; };
 		C822822A21E90FC9EA2D64E0 /* Pods_DatumbazFariloTestoj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */; };
 /* End PBXBuildFile section */
@@ -475,6 +497,17 @@
 		00E5D5B72E489EB1004877ED /* testiSerchTradukojn.modal-o.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "testiSerchTradukojn.modal-o.json"; sourceTree = "<group>"; };
 		00E5D5B92E489EBB004877ED /* testiSerchVortojn.modal-o.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "testiSerchVortojn.modal-o.json"; sourceTree = "<group>"; };
 		00E5D5BB2E48AEEC004877ED /* TraktiBibliografiajhon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiBibliografiajhon.swift; sourceTree = "<group>"; };
+		00E5D5D32E49B3FC004877ED /* Verko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verko.swift; sourceTree = "<group>"; };
+		00E5D5D62E49B426004877ED /* BibliografioNodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliografioNodo.swift; sourceTree = "<group>"; };
+		00E5D5D92E49B455004877ED /* BibliografioNodTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliografioNodTipo.swift; sourceTree = "<group>"; };
+		00E5D5DD2E49B522004877ED /* BibliografioAntautraktado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliografioAntautraktado.swift; sourceTree = "<group>"; };
+		00E5D5E02E49B585004877ED /* BibliografioKonvertilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliografioKonvertilo.swift; sourceTree = "<group>"; };
+		00E5D5E32E49B659004877ED /* BibliografioAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliografioAnalizilo.swift; sourceTree = "<group>"; };
+		00E5D5E62E49B6C6004877ED /* BibliografioArboAnalizilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliografioArboAnalizilo.swift; sourceTree = "<group>"; };
+		00E5D5EA2E49B814004877ED /* TraktiBibliografion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiBibliografion.swift; sourceTree = "<group>"; };
+		00E5D5ED2E49B8A3004877ED /* TraktiVerkon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiVerkon.swift; sourceTree = "<group>"; };
+		00E5D5F02E49BA14004877ED /* TraktiEldonon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiEldonon.swift; sourceTree = "<group>"; };
+		00E5D5F32E49BA44004877ED /* Eldono.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eldono.swift; sourceTree = "<group>"; };
 		3160BDCF41F0A5B31404DFB0 /* Pods-DatumbazFariloTestoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.debug.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.debug.xcconfig"; sourceTree = "<group>"; };
 		6A2C9EF617DC88330EC63FB1 /* Pods-DatumbazFariloTestoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.release.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.release.xcconfig"; sourceTree = "<group>"; };
 		86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatumbazFariloTestoj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -583,6 +616,7 @@
 			isa = PBXGroup;
 			children = (
 				0099FC222D65058C0033EC11 /* Grundo */,
+				00E5D5D22E49B3EA004877ED /* Bibliografio */,
 				0099FC152D65058C0033EC11 /* Artikoloj */,
 				0099FC172D65058C0033EC11 /* ModelAldonoj */,
 				0099FBCE2D65058B0033EC11 /* VortListoj.swift */,
@@ -865,6 +899,40 @@
 			path = DatumbazAlirado;
 			sourceTree = "<group>";
 		};
+		00E5D5D22E49B3EA004877ED /* Bibliografio */ = {
+			isa = PBXGroup;
+			children = (
+				00E5D5DC2E49B513004877ED /* Modeloj */,
+				00E5D5E92E49B77F004877ED /* NodTraktado */,
+				00E5D5DD2E49B522004877ED /* BibliografioAntautraktado.swift */,
+				00E5D5E02E49B585004877ED /* BibliografioKonvertilo.swift */,
+				00E5D5E32E49B659004877ED /* BibliografioAnalizilo.swift */,
+				00E5D5E62E49B6C6004877ED /* BibliografioArboAnalizilo.swift */,
+			);
+			path = Bibliografio;
+			sourceTree = "<group>";
+		};
+		00E5D5DC2E49B513004877ED /* Modeloj */ = {
+			isa = PBXGroup;
+			children = (
+				00E5D5D62E49B426004877ED /* BibliografioNodo.swift */,
+				00E5D5D92E49B455004877ED /* BibliografioNodTipo.swift */,
+				00E5D5F32E49BA44004877ED /* Eldono.swift */,
+				00E5D5D32E49B3FC004877ED /* Verko.swift */,
+			);
+			path = Modeloj;
+			sourceTree = "<group>";
+		};
+		00E5D5E92E49B77F004877ED /* NodTraktado */ = {
+			isa = PBXGroup;
+			children = (
+				00E5D5EA2E49B814004877ED /* TraktiBibliografion.swift */,
+				00E5D5ED2E49B8A3004877ED /* TraktiVerkon.swift */,
+				00E5D5F02E49BA14004877ED /* TraktiEldonon.swift */,
+			);
+			path = NodTraktado;
+			sourceTree = "<group>";
+		};
 		0A543C699E067667DA999180 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1143,10 +1211,14 @@
 			files = (
 				0099FC562D65058C0033EC11 /* TraktiSencReferencon.swift in Sources */,
 				00E5D5BC2E48AEF1004877ED /* TraktiBibliografiajhon.swift in Sources */,
+				00E5D5DB2E49B458004877ED /* BibliografioNodTipo.swift in Sources */,
+				00E5D5EC2E49B81A004877ED /* TraktiBibliografion.swift in Sources */,
 				0099FC632D65058C0033EC11 /* Antautraktado.swift in Sources */,
 				0099FC542D65058C0033EC11 /* TraktiRimarkon.swift in Sources */,
 				0099FC2B2D65058C0033EC11 /* String+Aldonoj.swift in Sources */,
+				00E5D5D52E49B400004877ED /* Verko.swift in Sources */,
 				00B297232D65125100264431 /* Destino.swift in Sources */,
+				00E5D5EE2E49B8A7004877ED /* TraktiVerkon.swift in Sources */,
 				0099FC552D65058C0033EC11 /* TraktiSencon.swift in Sources */,
 				003DC1B22E4618950053404F /* Fako+KodNetigado.swift in Sources */,
 				0099FC2C2D65058C0033EC11 /* ArtikolFabriko.swift in Sources */,
@@ -1162,6 +1234,7 @@
 				0099FC3E2D65058C0033EC11 /* TraktiEkzemplon.swift in Sources */,
 				0099FC382D65058C0033EC11 /* TraktiAltigitan.swift in Sources */,
 				0099FC522D65058C0033EC11 /* TraktiReferencGrupon.swift in Sources */,
+				00E5D5F42E49BA45004877ED /* Eldono.swift in Sources */,
 				0099FC392D65058C0033EC11 /* TraktiArtikolon.swift in Sources */,
 				00B27B882DFB757900526F82 /* BlokAkumulilo.swift in Sources */,
 				0099FC3A2D65058C0033EC11 /* TraktiAutoron.swift in Sources */,
@@ -1174,12 +1247,14 @@
 				0099FC442D65058C0033EC11 /* TraktiIndekson.swift in Sources */,
 				00B27B742DF391B600526F82 /* ArtikolBloko.swift in Sources */,
 				0099FC4E2D65058C0033EC11 /* TraktiNomon.swift in Sources */,
+				00E5D5E22E49B589004877ED /* BibliografioKonvertilo.swift in Sources */,
 				0099FC3F2D65058C0033EC11 /* TraktiEmfazon.swift in Sources */,
 				0099FC3D2D65058C0033EC11 /* TraktiDifinon.swift in Sources */,
 				0099FC492D65058C0033EC11 /* TraktiKursivan.swift in Sources */,
 				0099FC422D65058C0033EC11 /* TraktiGramatikon.swift in Sources */,
 				0099FC2F2D65058C0033EC11 /* ArtikolNodo.swift in Sources */,
 				0099FC672D65058C0033EC11 /* ArtikolKonvertilo.swift in Sources */,
+				00E5D5DE2E49B525004877ED /* BibliografioAntautraktado.swift in Sources */,
 				0099FC452D65058C0033EC11 /* TraktiIndicon.swift in Sources */,
 				0099FC6A2D65058C0033EC11 /* Grundo.swift in Sources */,
 				0099FC302D65058C0033EC11 /* ArtikolTraduko.swift in Sources */,
@@ -1195,6 +1270,7 @@
 				0099FC622D65058C0033EC11 /* TraktiVortSpecon.swift in Sources */,
 				0099FC482D65058C0033EC11 /* TraktiKomunlingvan.swift in Sources */,
 				0099FC722D65058C0033EC11 /* VortarajMallongigojAnalizilo.swift in Sources */,
+				00E5D5E72E49B6CB004877ED /* BibliografioArboAnalizilo.swift in Sources */,
 				0099FC6D2D65058C0033EC11 /* LingvoAnalizilo.swift in Sources */,
 				0099FC342D65058C0033EC11 /* Serchebla.swift in Sources */,
 				00B27B962E00744E00526F82 /* TekstAtributoj.swift in Sources */,
@@ -1219,6 +1295,7 @@
 				0099FC502D65058C0033EC11 /* TraktiPrononcon.swift in Sources */,
 				0099FC352D65058C0033EC11 /* SerchTraduko.swift in Sources */,
 				0099FC582D65058C0033EC11 /* TraktiSubderivajhon.swift in Sources */,
+				00E5D5F22E49BA16004877ED /* TraktiEldonon.swift in Sources */,
 				00B297552D662E0500264431 /* Oficialeco+Datumbazo.swift in Sources */,
 				00B27B722DF391B300526F82 /* Artikolo.swift in Sources */,
 				0099FC6F2D65058C0033EC11 /* Oficialecoj.swift in Sources */,
@@ -1231,6 +1308,8 @@
 				0099FC5C2D65058C0033EC11 /* TraktiTradukon.swift in Sources */,
 				0099FC6C2D65058C0033EC11 /* FakoAnalizilo.swift in Sources */,
 				00B2972E2D65534600264431 /* Stilo.swift in Sources */,
+				00E5D5E52E49B65B004877ED /* BibliografioAnalizilo.swift in Sources */,
+				00E5D5D72E49B42E004877ED /* BibliografioNodo.swift in Sources */,
 				0099FC5D2D65058C0033EC11 /* TraktiTrastrekitan.swift in Sources */,
 				0099FC6B2D65058C0033EC11 /* DTDAnalizilo.swift in Sources */,
 				00B2974E2D6625A300264431 /* Lingvo.swift in Sources */,
@@ -1261,25 +1340,31 @@
 				0099FD2A2D6506940033EC11 /* ArtikolNodo.swift in Sources */,
 				0099FD2B2D6506940033EC11 /* FakVorto.swift in Sources */,
 				0099FD2C2D6506940033EC11 /* SerchTraduko.swift in Sources */,
+				00E5D5F52E49BA45004877ED /* Eldono.swift in Sources */,
 				0099FCEC2D65067F0033EC11 /* MallongigoListoj.swift in Sources */,
 				00B297332D65572700264431 /* Mallongigo.swift in Sources */,
 				00B297262D654FCF00264431 /* Lingvo+Datumbazo.swift in Sources */,
+				00E5D5D82E49B42E004877ED /* BibliografioNodo.swift in Sources */,
 				00B27B752DF391B600526F82 /* ArtikolBloko.swift in Sources */,
 				0099FCEE2D65067F0033EC11 /* VortListoj.swift in Sources */,
 				0099FCEF2D65067F0033EC11 /* PrefiksArboFarilo.swift in Sources */,
+				00E5D5DF2E49B525004877ED /* BibliografioAntautraktado.swift in Sources */,
 				0099FCF02D65067F0033EC11 /* main.swift in Sources */,
 				003024D92E3ABB72006D0C14 /* TraktiFonton.swift in Sources */,
 				00E5D5BD2E48AEF1004877ED /* TraktiBibliografiajhon.swift in Sources */,
 				0099FCEB2D6506580033EC11 /* DatumbazFariloTestoj.swift in Sources */,
 				0099FCF32D6506890033EC11 /* Artikolaro.swift in Sources */,
 				0099FCF42D6506890033EC11 /* ArtikolKonvertilo.swift in Sources */,
+				00E5D5EB2E49B81A004877ED /* TraktiBibliografion.swift in Sources */,
 				0099FCF52D6506890033EC11 /* ArboAnalizilo.swift in Sources */,
 				0099FCF92D65068E0033EC11 /* TraktiFormulon.swift in Sources */,
 				00B297252D654FC400264431 /* Artikolo+Datumbazo.swift in Sources */,
 				0099FCFA2D65068E0033EC11 /* TraktiSubderivajhon.swift in Sources */,
 				0099FD332D6506A30033EC11 /* SignoAnalizilo.swift in Sources */,
 				0099FD342D6506A30033EC11 /* DTDAnalizilo.swift in Sources */,
+				00E5D5EF2E49B8A7004877ED /* TraktiVerkon.swift in Sources */,
 				0099FD352D6506A30033EC11 /* FakoAnalizilo.swift in Sources */,
+				00E5D5E82E49B6CB004877ED /* BibliografioArboAnalizilo.swift in Sources */,
 				0099FD362D6506A30033EC11 /* LiteroAnalizilo.swift in Sources */,
 				0099FD372D6506A30033EC11 /* VortarajMallongigojAnalizilo.swift in Sources */,
 				0099FD382D6506A30033EC11 /* LingvoAnalizilo.swift in Sources */,
@@ -1295,6 +1380,7 @@
 				0099FD002D65068E0033EC11 /* TraktiAltigitan.swift in Sources */,
 				0099FD012D65068E0033EC11 /* TraktiSubartikolon.swift in Sources */,
 				00B2971A2D6511CA00264431 /* DatumbazAlirilo.swift in Sources */,
+				00E5D5D42E49B400004877ED /* Verko.swift in Sources */,
 				0099FD022D65068E0033EC11 /* TraktiTildon.swift in Sources */,
 				0099FD032D65068E0033EC11 /* TraktiDifinon.swift in Sources */,
 				0099FD042D65068E0033EC11 /* TraktiRimarkon.swift in Sources */,
@@ -1313,6 +1399,7 @@
 				0099FD312D65069D0033EC11 /* String+Aldonoj.swift in Sources */,
 				0099FD322D65069D0033EC11 /* UnikodInterpretado.swift in Sources */,
 				0099FD0F2D65068E0033EC11 /* TraktiCitilon.swift in Sources */,
+				00E5D5E12E49B589004877ED /* BibliografioKonvertilo.swift in Sources */,
 				0099FD102D65068E0033EC11 /* TraktiVortSpecon.swift in Sources */,
 				0099FD112D65068E0033EC11 /* TraktiAutoron.swift in Sources */,
 				00B27B922DFCDDB000526F82 /* TekstfaradoTestoj.swift in Sources */,
@@ -1323,6 +1410,8 @@
 				00EEB7D02D6630A8002AA05E /* Artikolo+Printado.swift in Sources */,
 				00B297522D6625A300264431 /* Oficialeco.swift in Sources */,
 				00B2974C2D6625A300264431 /* Fako.swift in Sources */,
+				00E5D5F12E49BA16004877ED /* TraktiEldonon.swift in Sources */,
+				00E5D5DA2E49B458004877ED /* BibliografioNodTipo.swift in Sources */,
 				0099FD152D65068E0033EC11 /* TraktiGramatikon.swift in Sources */,
 				0099FD162D65068E0033EC11 /* TraktiEscepton.swift in Sources */,
 				0099FD172D65068E0033EC11 /* TraktiDerivajhon.swift in Sources */,
@@ -1338,6 +1427,7 @@
 				0099FD1E2D65068E0033EC11 /* TraktiPrononcon.swift in Sources */,
 				0099FD1F2D65068E0033EC11 /* TraktiVariajhon.swift in Sources */,
 				0099FD202D65068E0033EC11 /* TraktiEmfazon.swift in Sources */,
+				00E5D5E42E49B65B004877ED /* BibliografioAnalizilo.swift in Sources */,
 				0099FD212D65068E0033EC11 /* TraktiArtikolon.swift in Sources */,
 				0099FD222D65068E0033EC11 /* TraktiNacilingvan.swift in Sources */,
 				0099FD232D65068E0033EC11 /* TraktiTradukon.swift in Sources */,

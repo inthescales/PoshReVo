@@ -3,8 +3,17 @@ import Foundation
 final class MallongigoListoj {
 	static let dosiernomo = "MallongigoListo.swift"
 
-	public static func generiDosieron(fakoj: [Fako], mallongigoj: [Mallongigo], destinIndiko: String) {
-		let teksto = fariKodon(fakoj: fakoj, mallongigoj: mallongigoj)
+	public static func generiDosieron(
+		fakoj: [Fako],
+		mallongigoj: [Mallongigo],
+		bibliografio: [Verko],
+		destinIndiko: String
+	) {
+		let teksto = fariKodon(
+			fakoj: fakoj,
+			mallongigoj: mallongigoj,
+			bibliografio: bibliografio
+		)
 		let destino = URL(fileURLWithPath: destinIndiko + "/" + dosiernomo)
 		skribiListojn(teksto: teksto, destino: destino)
     }
@@ -18,7 +27,11 @@ final class MallongigoListoj {
 		}
 	}
     
-	private static func fariKodon(fakoj: [Fako], mallongigoj: [Mallongigo]) -> String {
+	private static func fariKodon(
+		fakoj: [Fako],
+		mallongigoj: [Mallongigo],
+		bibliografio: [Verko]
+	) -> String {
         print("Verkas mallongigolistojn")
         
         var teksto = ""
@@ -30,6 +43,8 @@ final class MallongigoListoj {
 		teksto += kodigiVortarajnMallongigojn(mallongigoj: mallongigoj).marghenShovi()
 		teksto += "\n\n"
 		teksto += kodigiFakajnMallongigojn(fakoj: fakoj).marghenShovi()
+		teksto += "\n\n"
+		teksto += kodigiBibliografiajnMallongigojn(verkoj: bibliografio).marghenShovi()
 		teksto += "\n}\n"
 		
         return teksto
@@ -58,6 +73,23 @@ final class MallongigoListoj {
 		
 		return teksto
     }
+	
+	/// Faras swift-kodon kodigante bibliografion
+	private static func kodigiBibliografiajnMallongigojn(verkoj: [Verko]) -> String {
+		var teksto = "/// Mallongaj nomoj de la verkoj de la vortara bibliografio\n"
+		teksto += "static let bibliografiaj = [\n"
+		for verko in verkoj.sorted() {
+			teksto +=
+				"\t(\""
+				+ verko.mallongigo
+				+ "\", \""
+				+ verko.priskribi()
+				+ "\"),\n"
+		}
+		teksto += "]"
+		
+		return teksto
+	}
 }
 
 // MARK: - Helpiloj
