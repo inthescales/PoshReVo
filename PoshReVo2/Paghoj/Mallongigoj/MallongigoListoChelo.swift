@@ -3,6 +3,8 @@ import UIKit
 final class MallongigoListoChelo: UITableViewCell {
 	private enum Konstantoj {
 		static let margheno: CGFloat = 8.0
+		
+		static let interspaco: CGFloat = 16.0
 	}
 	
 	private lazy var mallongigoEtikedo: UILabel = {
@@ -14,6 +16,8 @@ final class MallongigoListoChelo: UITableViewCell {
 	private lazy var signifoEtikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.font = Tiparo.mallongigoDifino
+		etikedo.numberOfLines = 0
+		etikedo.textAlignment = .right
 		return etikedo
 	}()
 	
@@ -22,13 +26,14 @@ final class MallongigoListoChelo: UITableViewCell {
 		
 		addSubview(mallongigoEtikedo)
 		mallongigoEtikedo.snp.makeConstraints { make in
-			make.left.top.bottom.equalToSuperview().inset(Konstantoj.margheno)
+			make.left.top.equalToSuperview().inset(Konstantoj.margheno)
+			make.bottom.lessThanOrEqualToSuperview().inset(Konstantoj.margheno)
 		}
 		
 		addSubview(signifoEtikedo)
 		signifoEtikedo.snp.makeConstraints { make in
 			make.right.top.bottom.equalToSuperview().inset(Konstantoj.margheno)
-			make.left.equalTo(mallongigoEtikedo.snp.right)
+			make.left.equalTo(mallongigoEtikedo.snp.right).offset(Konstantoj.interspaco)
 		}
 	}
 	
@@ -40,7 +45,11 @@ final class MallongigoListoChelo: UITableViewCell {
 		mallongigoEtikedo.text = mallongigo
 		mallongigoEtikedo.textColor = stilo.dokumentaTeksto
 		
-		signifoEtikedo.text = signifo
+		let atributaTeksto = TekstAtributoHelpiloj.atributaTeksto(
+			el: signifo,
+			tiparo: Tiparo.mallongigoDifino
+		)
+		signifoEtikedo.attributedText = atributaTeksto
 		signifoEtikedo.textColor = stilo.dokumentaTeksto
 		
 		backgroundColor = stilo.dokumentaFono

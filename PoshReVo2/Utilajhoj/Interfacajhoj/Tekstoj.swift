@@ -64,6 +64,7 @@ enum Tekstoj {
 	static let vortarajMallongigoj = "Vortaraj Mallongigoj"
 	static let fakajMallongigoj = "Fakaj Mallongigoj"
 	static let serchiMallongigojn = "Serĉi mallongigojn"
+	static let bibliografio = "Bibliografio"
 	
 	// MARK: - Ĝenerala agoj
 	

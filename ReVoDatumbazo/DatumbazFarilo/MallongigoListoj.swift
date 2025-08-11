@@ -53,7 +53,7 @@ final class MallongigoListoj {
 	/// Faras swift-kodon kodigante aron da vortaraj mallongigoj (ekz. "a. K.", "ekz." )
 	private static func kodigiVortarajnMallongigojn(mallongigoj: [Mallongigo]) -> String {
 		var teksto =  "/// Tekstaj mallongigoj uzataj en artikoloj\n"
-		teksto += "static let vortaraj = [\n"
+		teksto += "static let vortaraj: [(String, String)] = [\n"
 		for mallongigo in mallongigoj.sorted() {
 			teksto += "\t(\"" + mallongigo.kodo + "\", \"" + mallongigo.nomo + "\"),\n"
         }
@@ -65,7 +65,7 @@ final class MallongigoListoj {
 	/// Faras swift-kodon kodigante aron da fakaj mallongigoj (ekz. "BEL", "MAŜ")
 	private static func kodigiFakajnMallongigojn(fakoj: [Fako]) -> String {
 		var teksto = "/// Mallongaj faknomoj, uzataj anstataŭ bildetoj en ĉi-apo\n"
-		teksto += "static let fakaj = [\n"
+		teksto += "static let fakaj: [(String, String)] = [\n"
 		for fako in fakoj.sorted() {
 			teksto += "\t(\"" + Fako.netaKodo(por: fako.kodo) + "\", \"" + fako.nomo + "\"),\n"
         }
@@ -77,7 +77,7 @@ final class MallongigoListoj {
 	/// Faras swift-kodon kodigante bibliografion
 	private static func kodigiBibliografiajnMallongigojn(verkoj: [Verko]) -> String {
 		var teksto = "/// Mallongaj nomoj de la verkoj de la vortara bibliografio\n"
-		teksto += "static let bibliografiaj = [\n"
+		teksto += "static let bibliografiaj: [(String, String)] = [\n"
 		for verko in verkoj.sorted() {
 			teksto +=
 				"\t(\""

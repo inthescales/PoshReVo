@@ -72,14 +72,11 @@ enum TekstAtributoHelpiloj {
 	private static func atributaTeksto(
 		por teksto: String,
 		kun atributoj: [TekstAtributajho],
-		tekstGrando: CGFloat,
+		tiparo bazaTiparo: UIFont,
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) -> NSMutableAttributedString {
 		
 		let atributaTeksto = NSMutableAttributedString(string: forigiAngulojn(teksto: teksto))
-		
-		// Prepari tekst-stilojn
-		let bazaTiparo = UIFont.systemFont(ofSize: tekstGrando).dinamika() // TODO: Tiparo
 
 		// Meti bazan tiparon kaj koloron
 		atributaTeksto.addAttribute(
@@ -167,14 +164,30 @@ enum TekstAtributoHelpiloj {
 		return atributaTeksto
 	}
 	
+	/// Liveras atributan tekston, interpretanta etikedojn en la teksto, havanta certan tiparon
+	static func atributaTeksto(el teksto: String, tiparo: UIFont) -> NSAttributedString {
+		let atributoj = TekstAtributoHelpiloj.kreiAtributojn(por: teksto)
+		return TekstAtributoHelpiloj.atributaTeksto(
+			por: teksto,
+			kun: atributoj,
+			tiparo: tiparo
+		)
+	}
+	
 	/// Legas certajn HTML-ajn kodojn el la teksto, produktas tekst-atributojn laŭ ties instrukcio, kaj ŝarĝas la etikedon je tiuj
 	static func provizi(
 		etikedon etikedo: TTTAttributedLabel,
 		per teksto: String,
 		tekstGrando: CGFloat
 	) {
+		// Prepari tekst-stilojn
+		let bazaTiparo = UIFont.systemFont(ofSize: tekstGrando).dinamika()
 		let atributoj = TekstAtributoHelpiloj.kreiAtributojn(por: teksto)
-		etikedo.setText(TekstAtributoHelpiloj.atributaTeksto(por: teksto, kun: atributoj, tekstGrando: tekstGrando))
+		etikedo.setText(TekstAtributoHelpiloj.atributaTeksto(
+			por: teksto,
+			kun: atributoj,
+			tiparo: bazaTiparo)
+		)
 		
 		// Ŝajne ne eblas aldoni ligilojn kiel tekst-atributoj je TTTAttributedLabel.
 		// Kiam mi provis, la ligiloj funkciis, tamen mi ne sukcesis meti la ĝustajn kolorojn.

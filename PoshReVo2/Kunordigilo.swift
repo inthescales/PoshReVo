@@ -279,6 +279,15 @@ final class Kunordigilo {
 						eroj: MallongigoListo.fakaj
 					)
 				}
+			),
+			.init(
+				teksto: Tekstoj.bibliografio,
+				celPagho: {
+					MallongigoListoViewController(
+						titolo: Tekstoj.bibliografio,
+						eroj: MallongigoListo.bibliografiaj
+					)
+				}
 			)
 		]
 		

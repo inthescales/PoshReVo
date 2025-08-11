@@ -154,7 +154,7 @@ final class MallongigoListo {
 	]
 
 	/// Mallongaj nomoj de la verkoj de la vortara bibliografio
-	static let bibliografiaj = [
+	static let bibliografiaj: [(String, String)] = [
 		("ADL", "Dro Esperanto (L. L. Zamenhof)\n<k>Aldono al la “Dua Libro de l’ Lingvo Internacia”</k>\n1888"),
 		("Aventuroj", "Privat Edmond\n<k>Aventuroj de pioniro</k>\n1963"),
 		("AzS", "Victor Sadler\n<k>Azia Strategio</k>\n1963"),

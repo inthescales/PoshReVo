@@ -1,3 +1,5 @@
+import Foundation
+
 /// Verko en la bibliografio
 struct Verko {
 	let mallongigo: String
@@ -45,6 +47,11 @@ extension Verko: Equatable {
 
 extension Verko: Comparable {
 	public static func < (lhs: Verko, rhs: Verko) -> Bool {
-		return lhs.mallongigo < rhs.mallongigo
+		return lhs.mallongigo.compare(
+			rhs.mallongigo,
+			options: .caseInsensitive,
+			range: nil,
+			locale: Locale(identifier: "eo")
+		) == .orderedAscending
 	}
 }
