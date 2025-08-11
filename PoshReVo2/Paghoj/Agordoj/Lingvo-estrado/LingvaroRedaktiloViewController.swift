@@ -28,7 +28,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	// MARK: Interfacaĵoj
 	
 	/// Butono por redakti (forigi kaj reordigi) lingvojn
-	lazy var redaktButono = {
+	private lazy var redaktButono = {
 		let butono = UIBarButtonItem.init(
 			title: Tekstoj.redakti,
 			style: .plain,
@@ -40,7 +40,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	}()
 	
 	/// Tabelo kiu montros lingvojn kaj agojn
-	lazy var tabelo: UITableView = {
+	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
 		tabelo.dataSource = self
@@ -52,7 +52,7 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	// MARK: Stato
 	
 	/// La lingvaro kiu aperu en ĉi-paĝo
-	var lingvaro: [Lingvo] {
+	private var lingvaro: [Lingvo] {
 		didSet {
 			lingvaroShanghighis()
 		}
@@ -61,10 +61,12 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	// MARK: Agordoj
 	
 	/// Prezentmaniero por la VC
-	let prezentManiero: Prezentmaniero
+	private let prezentManiero: Prezentmaniero
 	
 	/// Konfirmi elekton de nova lingvaro
-	let elektis: ([Lingvo]) -> ()
+	private let elektis: ([Lingvo]) -> ()
+	
+	private let kunordigilo: Kunordigilo
 	
 	private let stilo: InterfacStilo
 	
@@ -74,11 +76,13 @@ final class LingvaroRedaktiloViewController: UIViewController {
 		lingvaro: [Lingvo],
 		prezentManiero: Prezentmaniero,
 		elektis: @escaping ([Lingvo]) -> (),
+		kunordigilo: Kunordigilo = .komuna,
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.lingvaro = lingvaro
 		self.prezentManiero = prezentManiero
 		self.elektis = elektis
+		self.kunordigilo = kunordigilo
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -126,24 +130,29 @@ final class LingvaroRedaktiloViewController: UIViewController {
 		}
 	}
 	
+	/// Ĝisdatigi interfacon por redaktado
 	private func komenciRedaktadon() {
 		tabelo.setEditing(true, animated: true)
+		tabelo.deleteSections([1], with: .fade)
 		redaktButono.title = Tekstoj.fini
 		redaktButono.style = .done
-		tabelo.deleteSections([1], with: .fade)
 	}
 	
+	/// Ĝisdatigi interfacon post redaktado
 	private func finiRedaktadon() {
 		tabelo.setEditing(false, animated: true)
+		tabelo.insertSections([1], with: .fade)
 		redaktButono.title = Tekstoj.redakti
 		redaktButono.style = .plain
-		tabelo.insertSections([1], with: .fade)
 	}
 	
 	// MARK: Lingvaro-shanĝado
-		
+	
+	/// Uzanto forigis lingvon — ĝisdatigi la liston
 	private func forigis(je indekso: Int) {
 		lingvaro.remove(at: indekso)
+		
+		// Fini redaktadon se la lingvolisto atingis sian minimuman grandon
 		if lingvaro.count <= Konstantoj.lingvoMinimumo {
 			// Ĉi uzo de `DispatchQueue` evitas eraron en UITableView.setEditing(...)
 			DispatchQueue.main.async { [weak self] in
@@ -152,10 +161,12 @@ final class LingvaroRedaktiloViewController: UIViewController {
 		}
 	}
 	
+	/// Uzanto aldonis lingvon — ĝisdatigi la liston
 	private func aldonis(lingvon lingvo: Lingvo) {
 		lingvaro.append(lingvo)
 	}
 	
+	/// Vokata kiam ajn la lingvaro-variablo ŝanĝigas
 	private func lingvaroShanghighis() {
 		redaktButono.isEnabled = lingvaro.count > Konstantoj.lingvoMinimumo
 		tabelo.reloadData()
@@ -166,18 +177,16 @@ final class LingvaroRedaktiloViewController: UIViewController {
 
 extension LingvaroRedaktiloViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		if indexPath == IndexPath(row: 0, section: 1) {
-			let elektiloVC = LingvoElektiloViewController(
+		// Montri lingvo-elektilon
+		if indexPath == IndexPath(row: 0, section: 1),
+		   let navigaciilo = navigationController {
+			kunordigilo.prezentiLingvoElektilon(
+				prezentilo: navigaciilo,
 				kromEsperanto: false,
 				jamElektitaj: lingvaro,
 				elektisLingvon: { [weak self] lingvo in
 					self?.aldonis(lingvon: lingvo)
-				}
-			)
-			let navigaciilo = PRVNavigationController(rootViewController: elektiloVC)
-			navigaciilo.modalPresentationStyle = .fullScreen
-			
-			present(navigaciilo, animated: true)
+			 })
 			
 			tabelo.deselectRow(at: indexPath, animated: true)
 		}

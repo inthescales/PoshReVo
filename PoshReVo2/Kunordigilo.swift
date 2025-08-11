@@ -141,6 +141,23 @@ final class Kunordigilo {
 		prezentilo.present(navigaciilo, animated: true)
 	}
 	
+	func prezentiLingvoElektilon(
+		prezentilo: UINavigationController,
+		kromEsperanto: Bool,
+		jamElektitaj: [Lingvo],
+		elektisLingvon: @escaping (Lingvo) -> Void
+	) {
+		let elektiloVC = LingvoElektiloViewController(
+			kromEsperanto: kromEsperanto,
+			jamElektitaj: jamElektitaj,
+			elektisLingvon: elektisLingvon
+		)
+		let navigaciilo = PRVNavigationController(rootViewController: elektiloVC)
+		navigaciilo.modalPresentationStyle = .fullScreen
+		
+		prezentilo.present(navigaciilo, animated: true)
+	}
+	
 	/// Prezentas stiloelektilan paĝon
 	func prezentiStiloelektilon(
 		prezentilo: UINavigationController,
