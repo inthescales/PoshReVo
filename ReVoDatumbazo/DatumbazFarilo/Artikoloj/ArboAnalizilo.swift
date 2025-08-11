@@ -70,8 +70,6 @@ enum ArboAnalizilo {
 			switch filo.tipo {
 			case .aut:
 				teksto += trakti(autoron: filo, stato: stato)
-			case .bib:
-				teksto += trakti(bibliografiajhon: filo, stato: stato)
 			case .ctl:
 				teksto += trakti(citilon: filo, stato: stato)
 			case .ekz:
@@ -84,7 +82,7 @@ enum ArboAnalizilo {
 				if montriFontojn {
 					teksto += trakti(fonton: filo, stato: stato)
 				} else {
-					teksto = trapasiFonton(teksto: teksto, stato: stato)
+					teksto = ignoriFonton(teksto: teksto, stato: stato)
 				}
 			case .frm:
 				teksto += trakti(formulon: filo, stato: stato)

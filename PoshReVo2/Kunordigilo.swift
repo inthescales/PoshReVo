@@ -270,7 +270,7 @@ final class Kunordigilo {
 						celPagho: {
 							MallongigoListoViewController(
 								titolo: Tekstoj.vortarajMallongigoj,
-								eroj: MallongigoListo.vortaraj
+								eroj: MallongigoListoj.vortaraj
 							)
 						}
 					),
@@ -279,7 +279,7 @@ final class Kunordigilo {
 						celPagho: {
 							MallongigoListoViewController(
 								titolo: Tekstoj.fakajMallongigoj,
-								eroj: MallongigoListo.fakaj
+								eroj: MallongigoListoj.fakaj
 							)
 						}
 					),
@@ -288,7 +288,7 @@ final class Kunordigilo {
 						celPagho: {
 							MallongigoListoViewController(
 								titolo: Tekstoj.bibliografio,
-								eroj: MallongigoListo.bibliografiaj
+								eroj: MallongigoListoj.bibliografiaj
 							)
 						}
 					)
@@ -302,7 +302,7 @@ final class Kunordigilo {
 						celPagho: {
 							MallongigoListoViewController(
 								titolo: Tekstoj.chiujMallongigoj,
-								eroj: MallongigoListo.chiuj
+								eroj: MallongigoListoj.chiuj
 							)
 						}
 					)

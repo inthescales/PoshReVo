@@ -1,21 +1,18 @@
 extension ArboAnalizilo {
-	static func traktiFonton(akumulilo: BlokAkumulilo, stato: Stato) {
-		switch stato.sibStako.last {
-		case .uzo(_):
-			// Lasu spacon post uzo
-			break
-		default:
-			akumulilo.tondiTekston()
-		}
-	}
+	// MARK: - Traktado
 	
-	/// Traktas fontnodon. Liveras tekston kiu aperu en artikolteksto, kaj aldonas plenan fontinformojn al la stato.
+	/// Traktas fontnodon. Liveras tekston kiu aperu en artikolteksto.
 	static func trakti(fonton fonto: ArtikolNodo, stato: Stato) -> String {
+		// NOTO:
+		// En la retejo, <fnt> etikedoj aldonas fonton al la koncerna derivaĵo aŭ artikolo,
+		// kaj metas fontindikon (ekz. '[1]') alklakeblan, kondukante al fontinformaj piednotoj.
+		// Ĝis nun en ĉi tiu apo, fontoj estas plejparte ignorataj, krom en <rim>-oj kie tiuj
+		// fontoj aperantaj en la bibliografio (kaj havante <bib>-etikedon) aperos en tekstoj
+		// Ĉi-metodo traktas tiujn videblajn fontojn. La aliajn kazojn traktas la 'ignori...'
+		// metodoj subaj.
+		
 		/// Teksto aperanta en <bib>, se estas
 		var bibTeksto: String? = nil
-		
-		/// Teksto kiu aperos en fontolisto, ne tio kio aperos en artikolo
-		var fontoTeksto = ""
 		
 		/// Ĉu <lok> aperas en la fonto
 		var havasLokon = false
@@ -24,23 +21,20 @@ extension ArboAnalizilo {
 			switch filo.tipo {
 			case .aut:
 				// TODO: fontoj - aldoni metodon trakti(autoron:)
-				fontoTeksto += akumuliTekstojn(de: filo, stato: stato)
+				break
 			case .bib:
-				// En retejo, teksto ligas al bibliografio
-				let filteksto = trakti(bibliografiajhon: filo, stato: stato)
-				fontoTeksto += filteksto
-				bibTeksto = filteksto
+				// TODO: fontoj - ligilo al bibliografio, aŭ montri klarigon super artikolo
+				bibTeksto = akumuliTekstojn(de: filo, stato: stato)
 			case .lok:
 				// TODO: fontoj - aldoni metodon trakti(lokon:)
-				fontoTeksto += akumuliTekstojn(de: filo, stato: stato)
 				havasLokon = true
-			case .teksto(let filteksto):
-				fontoTeksto += filteksto
+			case .teksto(_):
+				break
 			case .vrk:
 				// TODO: fontoj - aldoni metodon trakti(verkon:) - notu ke tio enhavos <url>ojn
-				fontoTeksto += akumuliTekstojn(de: filo, stato: stato)
-			case .url(let ref):
-				fontoTeksto += trakti(URLon: filo, referenco: ref, stato: stato)
+				break
+			case .url(_):
+				break
 			default:
 				assert(false, "neatendita filo")
 			}
@@ -54,7 +48,7 @@ extension ArboAnalizilo {
 			// Uzu bibliografian tekston nur post kiam disponeblas liston da bibliografiaĵoj
 			// inter mallongigolistoj
 		
-			return "..."
+			return bibTeksto
 		} else {
 			// TODO: fontoj
 			// Ĝis kiam la apo havos kapablon montri liston da fontoj en artikolo,
@@ -64,15 +58,29 @@ extension ArboAnalizilo {
 		}
 	}
 	
-	/// Multaj nodoj ne montras la tekstojn de siaj enhavataj filoj. Tamen, tiuj fnt-etikedoj estas ĉirkaŭitaj de tekstaj
-	/// spacoj kaj novaj linioj, kiuj devos esti forigitaj.
-	static func trapasiFonton(teksto: String, stato: Stato) -> String {
+	// MARK: - Ignorado
+	
+	/// Multaj nodoj nuntempe ne montras fontindikojn kiuj aperas en la retejo. Tamen, tiuj fnt-etikedoj estas ĉirkaŭitaj de tekstaj
+	/// spacoj kaj novaj linioj, kiuj devos esti fortonditaj.
+	static func ignoriFonton(teksto: String, stato: Stato) -> String {
 		switch stato.sibStako.last {
 		case .uzo(_):
 			// Lasu spacon post uzo
 			return teksto
 		default:
 			return teksto.tondi()
+		}
+	}
+	
+	/// Multaj nodoj nuntempe ne montras fontindikojn kiuj aperas en la retejo. Tamen, tiuj fnt-etikedoj estas ĉirkaŭitaj de tekstaj
+	/// spacoj kaj novaj linioj, kiuj devos esti fortonditaj.
+	static func ignoriFonton(akumulilo: BlokAkumulilo, stato: Stato) {
+		switch stato.sibStako.last {
+		case .uzo(_):
+			// Lasu spacon post uzo
+			break
+		default:
+			akumulilo.tondiTekston()
 		}
 	}
 }

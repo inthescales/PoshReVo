@@ -22,7 +22,7 @@ extension ArboAnalizilo {
 					akumulilo.aldoni(tekston: "\n")
 				}
 			case .fnt:
-				traktiFonton(akumulilo: akumulilo, stato: stato)
+				ignoriFonton(akumulilo: akumulilo, stato: stato)
 			case .gra:
 				akumulilo.aldoni(tekston: trakti(gramatikon: filo, stato: stato))
 			case .kap:

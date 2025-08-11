@@ -12,7 +12,7 @@ extension ArboAnalizilo {
 			case .esc:
 				teksto += trakti(escepton: filo, stato: stato)
 			case .fnt:
-				teksto = trapasiFonton(teksto: teksto, stato: stato)
+				teksto = ignoriFonton(teksto: teksto, stato: stato)
 			case .frm:
 				teksto += trakti(formulon: filo, stato: stato)
 			case .ind:

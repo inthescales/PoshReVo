@@ -1,7 +1,7 @@
 import Foundation
 
 final class MallongigoListoj {
-	static let dosiernomo = "MallongigoListo.swift"
+	static let dosiernomo = "MallongigoListoj.swift"
 
 	public static func generiDosieron(
 		fakoj: [Fako],
@@ -39,7 +39,7 @@ final class MallongigoListoj {
 		teksto += "// Komputile generataj mallongigo-listoj\n"
 		teksto += "// Ne ŝanĝu mane. Vidu 'MallongigoListoj.swift' en ReVoDatumbazo.\n"
         teksto += "\n"
-		teksto += "final class MallongigoListo {\n"
+		teksto += "enum MallongigoListoj {\n"
 		teksto += kodigiVortarajnMallongigojn(mallongigoj: mallongigoj).marghenShovi()
 		teksto += "\n\n"
 		teksto += kodigiFakajnMallongigojn(fakoj: fakoj).marghenShovi()

@@ -279,8 +279,6 @@
 		00E5D5B62E489EA5004877ED /* testiOfcVortojn.modal-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 00E5D5B52E489EA5004877ED /* testiOfcVortojn.modal-o.json */; };
 		00E5D5B82E489EB1004877ED /* testiSerchTradukojn.modal-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 00E5D5B72E489EB1004877ED /* testiSerchTradukojn.modal-o.json */; };
 		00E5D5BA2E489EBB004877ED /* testiSerchVortojn.modal-o.json in Resources */ = {isa = PBXBuildFile; fileRef = 00E5D5B92E489EBB004877ED /* testiSerchVortojn.modal-o.json */; };
-		00E5D5BC2E48AEF1004877ED /* TraktiBibliografiajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5BB2E48AEEC004877ED /* TraktiBibliografiajhon.swift */; };
-		00E5D5BD2E48AEF1004877ED /* TraktiBibliografiajhon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5BB2E48AEEC004877ED /* TraktiBibliografiajhon.swift */; };
 		00E5D5D42E49B400004877ED /* Verko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5D32E49B3FC004877ED /* Verko.swift */; };
 		00E5D5D52E49B400004877ED /* Verko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5D32E49B3FC004877ED /* Verko.swift */; };
 		00E5D5D72E49B42E004877ED /* BibliografioNodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5D62E49B426004877ED /* BibliografioNodo.swift */; };
@@ -496,7 +494,6 @@
 		00E5D5B52E489EA5004877ED /* testiOfcVortojn.modal-o.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "testiOfcVortojn.modal-o.json"; sourceTree = "<group>"; };
 		00E5D5B72E489EB1004877ED /* testiSerchTradukojn.modal-o.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "testiSerchTradukojn.modal-o.json"; sourceTree = "<group>"; };
 		00E5D5B92E489EBB004877ED /* testiSerchVortojn.modal-o.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "testiSerchVortojn.modal-o.json"; sourceTree = "<group>"; };
-		00E5D5BB2E48AEEC004877ED /* TraktiBibliografiajhon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiBibliografiajhon.swift; sourceTree = "<group>"; };
 		00E5D5D32E49B3FC004877ED /* Verko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verko.swift; sourceTree = "<group>"; };
 		00E5D5D62E49B426004877ED /* BibliografioNodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliografioNodo.swift; sourceTree = "<group>"; };
 		00E5D5D92E49B455004877ED /* BibliografioNodTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliografioNodTipo.swift; sourceTree = "<group>"; };
@@ -663,7 +660,6 @@
 				0099FBE42D65058C0033EC11 /* TraktiArtikolon.swift */,
 				0099FBE52D65058C0033EC11 /* TraktiAutoron.swift */,
 				0099FBE62D65058C0033EC11 /* TraktiCitilon.swift */,
-				00E5D5BB2E48AEEC004877ED /* TraktiBibliografiajhon.swift */,
 				0099FBE72D65058C0033EC11 /* TraktiDerivajhon.swift */,
 				0099FBE82D65058C0033EC11 /* TraktiDifinon.swift */,
 				0099FBE92D65058C0033EC11 /* TraktiEkzemplon.swift */,
@@ -1210,7 +1206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0099FC562D65058C0033EC11 /* TraktiSencReferencon.swift in Sources */,
-				00E5D5BC2E48AEF1004877ED /* TraktiBibliografiajhon.swift in Sources */,
 				00E5D5DB2E49B458004877ED /* BibliografioNodTipo.swift in Sources */,
 				00E5D5EC2E49B81A004877ED /* TraktiBibliografion.swift in Sources */,
 				0099FC632D65058C0033EC11 /* Antautraktado.swift in Sources */,
@@ -1351,7 +1346,6 @@
 				00E5D5DF2E49B525004877ED /* BibliografioAntautraktado.swift in Sources */,
 				0099FCF02D65067F0033EC11 /* main.swift in Sources */,
 				003024D92E3ABB72006D0C14 /* TraktiFonton.swift in Sources */,
-				00E5D5BD2E48AEF1004877ED /* TraktiBibliografiajhon.swift in Sources */,
 				0099FCEB2D6506580033EC11 /* DatumbazFariloTestoj.swift in Sources */,
 				0099FCF32D6506890033EC11 /* Artikolaro.swift in Sources */,
 				0099FCF42D6506890033EC11 /* ArtikolKonvertilo.swift in Sources */,

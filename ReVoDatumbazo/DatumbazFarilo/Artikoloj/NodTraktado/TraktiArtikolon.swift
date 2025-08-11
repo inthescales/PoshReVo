@@ -22,7 +22,7 @@ extension ArboAnalizilo {
 			case .drv(let mrk):
 				akumulilo.aldoni(blokojn: trakti(derivajhon: filo, marko: mrk, stato: stato))
 			case .fnt:
-				traktiFonton(akumulilo: akumulilo, stato: stato)
+				ignoriFonton(akumulilo: akumulilo, stato: stato)
 			case .kap:
 				_ = trakti(kapon: filo, stato: stato)
 			case .ref(let tipo, let celo):

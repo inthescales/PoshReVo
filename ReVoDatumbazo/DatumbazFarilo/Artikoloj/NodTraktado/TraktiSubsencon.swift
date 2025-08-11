@@ -23,7 +23,7 @@ extension ArboAnalizilo {
 			case .ekz:
 				teksto += trakti(ekzemplon: filo, stato: stato)
 			case .fnt:
-				teksto = trapasiFonton(teksto: teksto, stato: stato)
+				teksto = ignoriFonton(teksto: teksto, stato: stato)
 			case .gra:
 				teksto += trakti(gramatikon: filo, stato: stato)
 			case .lstref(let lst):
