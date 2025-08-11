@@ -83,8 +83,10 @@ final class MallongigoListoViewController: UIViewController {
 			return
 		}
 		
+		let minusklaTeksto = teksto.lowercased()
 		videblajEroj = eroj.filter { ero in
-			ero.mallongigo.contains(teksto) || ero.signifo.contains(teksto)
+			ero.mallongigo.lowercased().contains(minusklaTeksto)
+			|| ero.signifo.lowercased().contains(minusklaTeksto)
 		}
 		
 		tabelo.reloadData()
