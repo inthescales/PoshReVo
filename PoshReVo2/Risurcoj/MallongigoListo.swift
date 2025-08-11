@@ -1,9 +1,9 @@
 // Komputile generataj mallongigo-listoj
 // Ne ŝanĝu mane. Vidu 'MallongigoListoj.swift' en ReVoDatumbazo.
 
-final class MallongigoListo {
+enum MallongigoListo {
 	/// Tekstaj mallongigoj uzataj en artikoloj
-	static let vortaraj = [
+	static let vortaraj: [(String, String)] = [
 		("*", "fundamenta"),
 		("1", "1a oficiala aldono"),
 		("2", "2a oficiala aldono"),
@@ -73,7 +73,7 @@ final class MallongigoListo {
 	]
 
 	/// Mallongaj faknomoj, uzataj anstataŭ bildetoj en ĉi-apo
-	static let fakaj = [
+	static let fakaj: [(String, String)] = [
 		("AGR", "agrokulturo"),
 		("ARKE", "arkeologio"),
 		("ARKI", "arkitekturo"),

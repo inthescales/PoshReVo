@@ -261,40 +261,59 @@ final class Kunordigilo {
 	
 	/// Prezentas menuon por montri mallongigo-difinojn
 	func prezentiMallongigoMenuon(prezentilo: UINavigationController) {
-		let listeroj: [KategoriaViewController.Listero] = [
+		let sekcioj: [KategoriaViewController.Sekcio] = [
 			.init(
-				teksto: Tekstoj.vortarajMallongigoj,
-				celPagho: {
-					MallongigoListoViewController(
-						titolo: Tekstoj.vortarajMallongigoj,
-						eroj: MallongigoListo.vortaraj
+				titolo: nil,
+				eroj: [
+					.init(
+						teksto: Tekstoj.vortarajMallongigoj,
+						celPagho: {
+							MallongigoListoViewController(
+								titolo: Tekstoj.vortarajMallongigoj,
+								eroj: MallongigoListo.vortaraj
+							)
+						}
+					),
+					.init(
+						teksto: Tekstoj.fakajMallongigoj,
+						celPagho: {
+							MallongigoListoViewController(
+								titolo: Tekstoj.fakajMallongigoj,
+								eroj: MallongigoListo.fakaj
+							)
+						}
+					),
+					.init(
+						teksto: Tekstoj.bibliografio,
+						celPagho: {
+							MallongigoListoViewController(
+								titolo: Tekstoj.bibliografio,
+								eroj: MallongigoListo.bibliografiaj
+							)
+						}
 					)
-				}
+				]
 			),
 			.init(
-				teksto: Tekstoj.fakajMallongigoj,
-				celPagho: {
-					MallongigoListoViewController(
-						titolo: Tekstoj.fakajMallongigoj,
-						eroj: MallongigoListo.fakaj
+				titolo: nil,
+				eroj: [
+					.init(
+						teksto: Tekstoj.chiujMallongigoj,
+						celPagho: {
+							MallongigoListoViewController(
+								titolo: Tekstoj.chiujMallongigoj,
+								eroj: MallongigoListo.chiuj
+							)
+						}
 					)
-				}
-			),
-			.init(
-				teksto: Tekstoj.bibliografio,
-				celPagho: {
-					MallongigoListoViewController(
-						titolo: Tekstoj.bibliografio,
-						eroj: MallongigoListo.bibliografiaj
-					)
-				}
+				]
 			)
 		]
 		
 		let vc = KategoriaViewController(
 			titolo: Tekstoj.mallongigoj,
 			tabelStilo: .insetGrouped,
-			listeroj: listeroj
+			sekcioj: sekcioj
 		)
 		prezentilo.pushViewController(vc, animated: true)
 	}
