@@ -91,10 +91,10 @@ final class LingvoBretoViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
-	/// referencfunkcio por elekto de lingvoj
+	/// Fermo por elekto de lingvoj
 	private let elektisLingvon: (Lingvo) -> ()
 	
-	/// referencfunkcio por redaktado de lingvoj
+	/// Fermo por redaktado de lingvoj
 	private let redaktisLingvojn: ([Lingvo]) -> ()
 	
 	private let kunordigilo: Kunordigilo

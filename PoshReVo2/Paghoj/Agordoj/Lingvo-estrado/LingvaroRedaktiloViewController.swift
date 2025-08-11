@@ -2,7 +2,7 @@ import UIKit
 
 import ReVoDatumbazo
 
-/// Agordopaĝo por elekti lingvojn aperontajn en tradukoj kaj sub la serĉilo
+/// Agordo-ekrano por elekti lingvojn aperontajn en tradukoj kaj sub la serĉilo
 final class LingvaroRedaktiloViewController: UIViewController {
 	private enum Konstantoj {
 		/// La minimuma kvanto da lingvoj. Kiam ĉi-limo estas atingita, ne eblas forigi pliajn lingvojn
@@ -68,6 +68,8 @@ final class LingvaroRedaktiloViewController: UIViewController {
 	
 	private let stilo: InterfacStilo
 	
+	// MARK: - Valorizado
+	
 	init(
 		lingvaro: [Lingvo],
 		prezentManiero: Prezentmaniero,
@@ -128,12 +130,14 @@ final class LingvaroRedaktiloViewController: UIViewController {
 		tabelo.setEditing(true, animated: true)
 		redaktButono.title = Tekstoj.fini
 		redaktButono.style = .done
+		tabelo.deleteSections([1], with: .fade)
 	}
 	
 	private func finiRedaktadon() {
 		tabelo.setEditing(false, animated: true)
 		redaktButono.title = Tekstoj.redakti
 		redaktButono.style = .plain
+		tabelo.insertSections([1], with: .fade)
 	}
 	
 	// MARK: Lingvaro-shanĝado
@@ -182,7 +186,11 @@ extension LingvaroRedaktiloViewController: UITableViewDelegate {
 
 extension LingvaroRedaktiloViewController: UITableViewDataSource {
 	func numberOfSections(in tableView: UITableView) -> Int {
-		2
+		if tableView.isEditing {
+			1
+		} else {
+			2
+		}
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

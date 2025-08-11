@@ -5,7 +5,7 @@ final class HistorioViewController: UIViewController {
 	// MARK: - Interfaceroj
 	
 	/// Butono por nuligi la historion
-	lazy var nuligiButono = {
+	private lazy var nuligiButono = {
 		let butono = UIBarButtonItem.init(
 			title: Tekstoj.nuligi,
 			style: .plain,
@@ -26,10 +26,10 @@ final class HistorioViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
-	/// Referencfunkcio por elekto de artikoloj
-	let elektis: (Uzantlistero) -> ()
+	/// Fermo por elekto de artikoloj
+	private let elektis: (Uzantlistero) -> ()
 	
-	let datumRegilo: UzantDatumoRegilo
+	private let datumRegilo: UzantDatumoRegilo
 	
 	// MARK: - Pravalorizado
 	

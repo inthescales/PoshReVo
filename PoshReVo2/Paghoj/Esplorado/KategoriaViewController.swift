@@ -4,17 +4,22 @@ import ReVoDatumbazo
 
 /// Efektivigas navigaciajn menuojn rilate al esplorado de vorto-kategorioj
 final class KategoriaViewController: UIViewController {
-	struct Listero {
-		let teksto: String
-		let celPagho: () -> (UIViewController)
-	}
-	
+	/// Sekcio en la listo
 	struct Sekcio {
 		let titolo: String?
 		let eroj: [Listero]
 	}
 	
-	lazy var tabelo: UITableView = {
+	/// Individua ero en la listo
+	struct Listero {
+		/// Teksto kiu estu videbla en listo
+		let teksto: String
+		
+		/// Fermo liveranta ekranon kiu montrighu se la listero estos elektata
+		let celPagho: () -> (UIViewController)
+	}
+	
+	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView(frame: .zero, style: tabelStilo)
 		tabelo.delegate = self
 		tabelo.dataSource = self
@@ -35,6 +40,7 @@ final class KategoriaViewController: UIViewController {
 	
 	private let sekcioj: [Sekcio]
 	
+	/// Ĉu la tabelo uzas "grouped" stilo
 	private lazy var chuGrupa = {
 		tabelStilo == .grouped
 		|| tabelStilo == .insetGrouped
@@ -42,13 +48,15 @@ final class KategoriaViewController: UIViewController {
 	
 	// MARK: Agordoj
 	
+	/// Titolo aperonta ekransupre
 	private let titolo: String?
 	
+	/// La iOSa stilo kiun la tabelo uzu
 	private let tabelStilo: UITableView.Style
 	
 	private let stilo: InterfacStilo
 	
-	//
+	// MARK: - Valorizado
 	
 	init(
 		titolo: String?,

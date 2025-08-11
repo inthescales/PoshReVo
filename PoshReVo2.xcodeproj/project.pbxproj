@@ -243,8 +243,7 @@
 			children = (
 				003024D42E3A7E1E006D0C14 /* Hejma Ingo */,
 				00B27B212DC3FCF700526F82 /* Serchado */,
-				00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */,
-				00B27B482DCE721600526F82 /* KonservitajViewController.swift */,
+				00E5D5FA2E4A96F1004877ED /* Uzantaj Vortlistoj */,
 				00B27B3E2DCD0DD400526F82 /* Esplorado */,
 				00B27B4E2DE8D5E400526F82 /* Agordoj */,
 				00B27B582DEFA35600526F82 /* Mallongigoj */,
@@ -447,6 +446,15 @@
 				00B27BA02E099FFA00526F82 /* ShovMenueroView.swift */,
 			);
 			path = Shovmenuo;
+			sourceTree = "<group>";
+		};
+		00E5D5FA2E4A96F1004877ED /* Uzantaj Vortlistoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */,
+				00B27B482DCE721600526F82 /* KonservitajViewController.swift */,
+			);
+			path = "Uzantaj Vortlistoj";
 			sourceTree = "<group>";
 		};
 		90F3C80E6330F4395B924C94 /* Pods */ = {

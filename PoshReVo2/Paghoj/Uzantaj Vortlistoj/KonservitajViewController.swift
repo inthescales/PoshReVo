@@ -4,7 +4,7 @@ final class KonservitajViewController: UIViewController {
 	// MARK: - Interfaceroj
 	
 	/// Butono por malkonservi ĉiujn artikolojn
-	lazy var nuligiButono = {
+	private lazy var nuligiButono = {
 		let butono = UIBarButtonItem.init(
 			title: Tekstoj.nuligi,
 			style: .plain,
@@ -25,10 +25,10 @@ final class KonservitajViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
-	/// referencfunkcio por elekto de artikol en la listo
-	let elektis: (Uzantlistero) -> ()
+	/// Fermo por elekto de artikol en la listo
+	private let elektis: (Uzantlistero) -> ()
 	
-	let datumRegilo: UzantDatumoRegilo
+	private let datumRegilo: UzantDatumoRegilo
 	
 	// MARK: - Pravalorizado
 	
