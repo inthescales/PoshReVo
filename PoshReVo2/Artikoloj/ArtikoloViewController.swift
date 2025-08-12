@@ -4,6 +4,7 @@ import ReVoDatumbazo
 
 import TTTAttributedLabel
 
+/// Ekrano montranta artikolon
 final class ArtikoloViewController: UIViewController {
 	private enum Konstantoj {
 		static let derivajhTitoloIdentigilo = "derivajhTitolaIdentigilo"
@@ -15,9 +16,10 @@ final class ArtikoloViewController: UIViewController {
 		static let margheno: CGFloat = 8
 	}
 	
-	// MARK: Interfaceroj
+	// MARK: - Interfaceroj
 	
-	lazy var lupeoButono = {
+	/// Butono kiu kondukas reen al hejmpaĝo
+	private lazy var lupeoButono = {
 		let butono = UIBarButtonItem.init(
 			image: UIImage(named: "lupeo"),
 			style: .plain,
@@ -30,6 +32,7 @@ final class ArtikoloViewController: UIViewController {
 		return butono
 	}()
 	
+	/// Tabelo enhavanta ĉiujn artikolenhavojn
 	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
 		tabelo.delegate = self
@@ -63,6 +66,7 @@ final class ArtikoloViewController: UIViewController {
 		return tabelo
 	}()
 	
+	/// Suba tabulo enhavanta agbutonojn rilate al la tuta artikolo
 	private lazy var agtabulo: AgtabuloView = {
 		AgtabuloView(
 			konservita: uzantDatumaro.konservitaj.contains(where: { $0.indekso == artikolo.indekso }),
@@ -72,14 +76,17 @@ final class ArtikoloViewController: UIViewController {
 		)
 	}()
 	
+	/// Vido kiu pendas sub la agtabulo. Donas ĝustan fonkoloron al la plej malsupra regiono de la ekrano
+	/// sur aparatoj kiuj havas kroman spacon sub la bordoj de la 'safe area'
 	private lazy var subagtabulo: UIView = {
 		let view = UIView()
 		view.backgroundColor = stilo.navigaciaFono
 		return view
 	}()
 	
-	// MARK: Stato
+	// MARK: - Stato
 	
+	/// Lingvoj en kiu tradukoj aperu
 	private var tradukLingvoj: [Lingvo] {
 		didSet {
 			tabelo.reloadData()
@@ -89,14 +96,18 @@ final class ArtikoloViewController: UIViewController {
 	/// Ĉu la paĝo jam saltis al komenca marko dum apero
 	private var jamSaltis = false
 	
-	// MARK: Agordoj
+	// MARK: - Agordoj
 	
+	/// La artikolo prezentata
 	private let artikolo: Artikolo
 	
+	/// Marko en la artikolo kiu estu vidata komence
 	private let komencaMarko: String?
 	
+	/// Fermo vokota paĝ-apere
 	private let aperis: (() -> ())?
 	
+	/// Fermo vokota kiam la uzanto konservas aŭ malkonservas la artikolon
 	private let konservis: (Bool) -> ()
 	
 	private let kunordigilo: Kunordigilo
@@ -105,7 +116,7 @@ final class ArtikoloViewController: UIViewController {
 	
 	private let stilo: InterfacStilo
 	
-	//
+	// MARK: - Valorizado
 	
 	init(
 		artikolo: Artikolo,
@@ -195,6 +206,7 @@ final class ArtikoloViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
+		// Unuafoje ke la paĝo aperos, rulumu paŝupren por ke ĉio estu freŝa
 		if !jamSaltis {
 			tabelo.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
 		}
@@ -203,6 +215,7 @@ final class ArtikoloViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
+		// Se ni havas komencan markon, kaj jam ne saltis al ĝi, saltu al ĝi
 		if let marko = komencaMarko,
 			!jamSaltis {
 			saltiAlMarko(marko, animacii: true)
@@ -212,7 +225,7 @@ final class ArtikoloViewController: UIViewController {
 		aperis?()
 	}
 	
-	// MARK: Uzantaj agoj
+	// MARK: - Uzantaj agoj
 	
 	@objc private func premisLupeon() {
 		guard let navigaciilo = navigationController else {
@@ -222,11 +235,7 @@ final class ArtikoloViewController: UIViewController {
 		kunordigilo.reveniHejmen(en: navigaciilo)
 	}
 	
-	@objc private func premisHejmon() {
-		navigationController?.popToRootViewController(animated: true)
-	}
-	
-	// MARK: Avizoj
+	// MARK: - Avizoj
 	
 	@objc private func lingvojShanghighis(_ avizo: Notification) {
 		guard let lingvoj = avizo.object as? [Lingvo] else { return }
@@ -235,11 +244,13 @@ final class ArtikoloViewController: UIViewController {
 	
 	// MARK: Agoj
 	
+	/// Uzanto premis saltbutonon
+	/// Montri saltan menuon
 	private func premisSalti() {
 		let eroj: [ShovMenuoViewController.Menuero] = artikolo.blokoj.compactMap {
 			switch $0 {
-			case .dividila:
-				return ShovMenuoViewController.Menuero(bildo: nil, teksto: "---") {}
+			case .dividila(let teksto):
+				return ShovMenuoViewController.Menuero(bildo: nil, teksto: teksto) {}
 			case .derivajhTitola(let teksto, _, let marko):
 				return ShovMenuoViewController.Menuero(bildo: nil, teksto: teksto) { [weak self] in
 					guard let self,
@@ -291,7 +302,7 @@ final class ArtikoloViewController: UIViewController {
 	
 	// MARK: - Helpiloj
 	
-	func chelIdentigilo(por bloko: ArtikolBloko) -> String {
+	private func chelIdentigilo(por bloko: ArtikolBloko) -> String {
 		switch bloko {
 		case .derivajhTitola:
 			Konstantoj.derivajhTitoloIdentigilo
@@ -371,35 +382,40 @@ extension ArtikoloViewController: TTTAttributedLabelDelegate {
 	func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
 		let urlTeksto = url.absoluteString
 		
+		// La URL indikas eksteran retejon - montri ĝin per retumilon
 		if urlTeksto.prefix(4) == "http" {
-			// La URL indikas eksteran retejon - montri ĝin per retumilon
 			UIApplication.shared.open(url, options: [:], completionHandler: nil)
-		} else {
-			// La URL indikas markon en ReVo-a artikolo
-			let markeroj = urlTeksto.components(separatedBy: ".")
-			
-			// Markero indikanta artikolon
-			let artikolMarko = markeroj[0]
+			return
+		}
+		
+		// La URL indikas markon en ReVo-a artikolo
+		let markeroj = urlTeksto.components(separatedBy: ".")
+		
+		// Markero indikanta artikolon
+		let artikolMarko = markeroj[0]
 
-			// Markoj en ligiloj foje havas pli ol 2 segmentojn, ekz. 'margxe.0ulo.MOD',
-			// indikanta certan sencon. Tamen, dum sencoj ĉi-ape estas kunigitaj simple el
-			// tekstoj, ne eblas salti rekte al senco. Do ni uzu ĉi tie nur la unuaj du
-			// markeroj, kiu indikos derivaĵon.
-			let derivajhMarko = (markeroj.count > 1) ? markeroj[0] + "." + markeroj[1] : nil
-			
-			if markeroj[0] == artikolo.indekso,
-			   let derivajhMarko {
-				// Salti ene de ĉi-artikolo
-				saltiAlMarko(derivajhMarko, animacii: true)
-			} else if let artikolo = VortaroDatumbazo.komuna.artikolo(indekso: artikolMarko),
-					  let navigaciilo = navigationController {
-				// Prezenti alian artikolon
-				kunordigilo.prezentiArtikoloPaghon(
-					el: artikolo,
-					marko: derivajhMarko,
-					prezentilo: navigaciilo
-				)
-			}
+		// Markoj en ligiloj foje havas pli ol 2 segmentojn, ekz. 'margxe.0ulo.MOD',
+		// indikanta certan sencon. Tamen, dum sencoj ĉi-ape estas kunigitaj simple el
+		// tekstoj, ne eblas salti rekte al senco. Do ni uzu ĉi tie nur la unuaj du
+		// markeroj, kiu indikos derivaĵon.
+		let derivajhMarko = (markeroj.count > 1) ? markeroj[0] + "." + markeroj[1] : nil
+		
+		// Salti ene de ĉi tiu artikolo
+		if markeroj[0] == artikolo.indekso,
+		   let derivajhMarko {
+			saltiAlMarko(derivajhMarko, animacii: true)
+			return
+		}
+		
+		// Prezenti alian artikolon
+		if let artikolo = VortaroDatumbazo.komuna.artikolo(indekso: artikolMarko),
+				  let navigaciilo = navigationController {
+			kunordigilo.prezentiArtikoloPaghon(
+				el: artikolo,
+				marko: derivajhMarko,
+				prezentilo: navigaciilo
+			)
+			return
 		}
 	}
 }

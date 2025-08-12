@@ -6,16 +6,6 @@ import TTTAttributedLabel
 
 /// Artikolo-ĉelo montranta liston da tradukoj de unu vorto aŭ derivaĵo
 final class TradukaroChelo: UITableViewCell {
-	private enum TitolKoloro {
-		case forta
-		case malforta
-	}
-	
-	private enum TitolStilo {
-		case kursiva
-		case grasKursiva
-	}
-	
 	private enum Konstantoj {
 		/// Kroma spaco supre kaj malsupre de la tuta ĉelo
 		static let vertikalaMargheno = 12.0
@@ -24,11 +14,24 @@ final class TradukaroChelo: UITableViewCell {
 		static let linioBufro: CGFloat = 1.0
 	}
 	
+	/// Kia koloro la ĉeltitola etikedo havu
+	private enum TitolKoloro {
+		case forta
+		case malforta
+	}
+	
+	/// Kia tekststilo la ĉeltitola etikedo havu
+	private enum TitolStilo {
+		case kursiva
+		case grasKursiva
+	}
+	
 	// MARK: - Agordado
 	
+	/// Fermo vokata kiam la uzanto premas la elekto-butono
 	private var elekti: (() -> Void)?
 	
-	//
+	// MARK: - Valorizado
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -40,7 +43,13 @@ final class TradukaroChelo: UITableViewCell {
 		fatalError("init(coder:) ne realas")
 	}
 	
-	// MARK: Agoj
+	// MARK: - Agoj
+	
+	@objc private func premisElekti() {
+		elekti?()
+	}
+	
+	// MARK: - Interfaco-starigado
 	
 	func agordi(
 		tradukoj: [Traduko],
@@ -53,13 +62,16 @@ final class TradukaroChelo: UITableViewCell {
 		
 		// TODO: Ŝanĝu post kiam lingvo estos denove struct
 		let tradukKodoj = tradukLingvoj.map { $0.kodo }
-		let montrotaj = tradukoj
-			.filter { tradukKodoj.contains($0.lingvo.kodo) }
+		let montrotaj = tradukoj.filter { tradukKodoj.contains($0.lingvo.kodo) }
 		
-		contentView.subviews.forEach { $0.removeFromSuperview() }
+		// Ĉu la uzanto havas traduklingvojn
 		let neniujLingvoj = tradukLingvoj.isEmpty
-			|| tradukLingvoj.count == 1 && tradukLingvoj.first?.kodo == "eo"
+			|| (tradukLingvoj.count == 1 && tradukLingvoj.first?.kodo == "eo")
 		
+		// Forigi ĉiujn antaŭajn interfacerojn
+		contentView.subviews.forEach { $0.removeFromSuperview() }
+		
+		// Aldoni supran dividilon
 		let supraDividilo = StrekoView(koloro: stilo.dokumentaDividilo)
 		contentView.addSubview(supraDividilo)
 		supraDividilo.snp.makeConstraints { make in
@@ -68,45 +80,22 @@ final class TradukaroChelo: UITableViewCell {
 			make.height.equalTo(1)
 		}
 		
-		let finaElemento: UIView
-		if neniujLingvoj || montrotaj.isEmpty {
-			let teksto = neniujLingvoj ? Tekstoj.neniujLingvoj : Tekstoj.neniujTradukoj
-			let avizo = fariAvizon(
-				teksto: teksto,
-				koloro: .malforta,
-				titolStilo: .kursiva,
-				stilo: stilo
-			)
-			contentView.addSubview(avizo)
-			avizo.snp.makeConstraints { make in
-				make.top.equalTo(supraDividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
-				make.left.right.equalToSuperview().inset(horizontalaMargheno)
-			}
-			
-			finaElemento = avizo
-		} else {
-			let avizo = fariAvizon(
-				teksto: Tekstoj.enViajLingvoj,
-				koloro: .forta,
-				titolStilo: .grasKursiva,
-				stilo: stilo
-			)
-			contentView.addSubview(avizo)
-			avizo.snp.makeConstraints { make in
-				make.top.equalTo(supraDividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
-				make.left.right.equalToSuperview().inset(horizontalaMargheno)
-			}
-			
-			let staplo = fariStaplon(tradukoj: montrotaj, stilo: stilo)
-			contentView.addSubview(staplo)
-			staplo.snp.makeConstraints { make in
-				make.top.equalTo(avizo.snp.bottom).offset(Konstantoj.vertikalaMargheno - Tiparo.tradukaLingvoEtikedo.pointSize / 4)
-				make.left.right.equalToSuperview().inset(horizontalaMargheno)
-			}
-			
-			finaElemento = staplo
-		}
+		// Fari kaj aranĝi enhavojn
+		let enhavoj = fariEnhavoj(
+			montrotaj: montrotaj,
+			neniujLingvoj: neniujLingvoj,
+			horizontalaMargheno: horizontalaMargheno,
+			stilo: stilo
+		)
 		
+		if let komencaElemento = enhavoj.first {
+			komencaElemento.snp.makeConstraints { make in
+				make.top.equalTo(supraDividilo.snp.bottom).offset(Konstantoj.vertikalaMargheno)
+			}
+		}
+		let finaElemento = enhavoj.last ?? supraDividilo
+		
+		// Aldoni malsupran dividilon
 		let malsupraDividilo = StrekoView(koloro: stilo.dokumentaDividilo)
 		contentView.addSubview(malsupraDividilo)
 		malsupraDividilo.snp.makeConstraints { make in
@@ -116,13 +105,86 @@ final class TradukaroChelo: UITableViewCell {
 			make.bottom.equalToSuperview().inset(Konstantoj.vertikalaMargheno)
 		}
 	}
+	
+	/// Faras kaj liveras paĝenhavoj laŭ la argumentoj
+	private func fariEnhavoj(
+		montrotaj: [Traduko],
+		neniujLingvoj: Bool,
+		horizontalaMargheno: CGFloat,
+		stilo: InterfacStilo
+	) -> [UIView] {
+		if neniujLingvoj || montrotaj.isEmpty {
+			return fariSentradukajEnhavoj(
+				neniujLingvoj: neniujLingvoj,
+				horizontalaMargheno: horizontalaMargheno,
+				stilo: stilo
+			)
+		} else {
+			return fariTradukaron(
+				montrotaj: montrotaj,
+				horizontalaMargheno: horizontalaMargheno,
+				stilo:stilo
+			)
+		}
+	}
+	
+	/// Faras kaj liveras tiujn ĉelenhavojn taŭgajn kiam estas neniuj montreblaj tradukoj
+	private func fariSentradukajEnhavoj(
+		neniujLingvoj: Bool,
+		horizontalaMargheno: CGFloat,
+		stilo: InterfacStilo
+	) -> [UIView] {
+		let teksto = neniujLingvoj ? Tekstoj.neniujLingvoj : Tekstoj.neniujTradukoj
+		let avizo = fariKapon(
+			teksto: teksto,
+			koloro: .malforta,
+			titolStilo: .kursiva,
+			stilo: stilo
+		)
+		contentView.addSubview(avizo)
+		avizo.snp.makeConstraints { make in
+			make.left.right.equalToSuperview().inset(horizontalaMargheno)
+		}
+		return [avizo]
+	}
+	
+	/// Faras kaj liveras ĉelenhavojn taŭgaj kiam estas tradukoj montrindaj
+	private func fariTradukaron(
+		montrotaj: [Traduko],
+		horizontalaMargheno: CGFloat,
+		stilo: InterfacStilo
+	) -> [UIView] {
+		let avizo = fariKapon(
+			teksto: Tekstoj.enViajLingvoj,
+			koloro: .forta,
+			titolStilo: .grasKursiva,
+			stilo: stilo
+		)
+		contentView.addSubview(avizo)
+		avizo.snp.makeConstraints { make in
+			make.left.right.equalToSuperview().inset(horizontalaMargheno)
+		}
 		
-	private func fariAvizon(
+		let staplo = fariTradukoStaplon(tradukoj: montrotaj, stilo: stilo)
+		contentView.addSubview(staplo)
+		staplo.snp.makeConstraints { make in
+			make.top.equalTo(avizo.snp.bottom).offset(Konstantoj.vertikalaMargheno - Tiparo.tradukaLingvoEtikedo.pointSize / 4)
+			make.left.right.equalToSuperview().inset(horizontalaMargheno)
+		}
+		return [avizo, staplo]
+	}
+	
+	// MARK: - Interfacero-farado
+	
+	/// Faras kaj liveras ĉelkapon — informan etikedon kaj lingvelektan butonon
+	private func fariKapon(
 		teksto: String,
 		koloro: TitolKoloro,
 		titolStilo: TitolStilo,
 		stilo: InterfacStilo
 	) -> UIView {
+		// Fari etikedon
+		
 		let etikedo = UILabel()
 		etikedo.text = teksto
 		etikedo.setContentHuggingPriority(.defaultLow, for: .horizontal)
@@ -141,6 +203,8 @@ final class TradukaroChelo: UITableViewCell {
 			etikedo.font = Tiparo.tradukaroEtikedoForta
 		}
 		
+		// Fari butonon
+		
 		let butono = UIButton()
 		butono.setTitle(Tekstoj.elekti, for: .normal)
 		butono.metiDinamikanTitolon(Tekstoj.elekti, tiparo: Tiparo.tradukaElektiButono)
@@ -148,6 +212,8 @@ final class TradukaroChelo: UITableViewCell {
 		butono.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 		butono.addTarget(self, action: #selector(premisElekti), for: .touchUpInside)
 		butono.titleEdgeInsets = .zero
+		
+		// Kunigi kaj liveri
 		
 		let ujo = UIView()
 
@@ -166,7 +232,8 @@ final class TradukaroChelo: UITableViewCell {
 		return ujo
 	}
 	
-	private func fariStaplon(tradukoj: [Traduko], stilo: InterfacStilo) -> UIStackView {
+	/// Faras kaj liveras staplon da tradukoj, kun lingvaj etikedoj
+	private func fariTradukoStaplon(tradukoj: [Traduko], stilo: InterfacStilo) -> UIStackView {
 		let staplo = UIStackView()
 		staplo.axis = .vertical
 		staplo.alignment = .fill
@@ -174,6 +241,8 @@ final class TradukaroChelo: UITableViewCell {
 		var lingvoEtikedoj: [UILabel] = []
 		
 		for (i, traduko) in tradukoj.enumerated() {
+			// Fari lingvoetikedon
+			
 			// Noto: Mi uzas TTTAttributedLabel-on ĉi tie ĉar, je grandaj tekstgrandoj, la altoj
 			// de UILabel kaj TTTAttributedLabel iomete malsamas.
 			let lingvoEtikedo = TTTAttributedLabel(frame: .zero)
@@ -184,14 +253,23 @@ final class TradukaroChelo: UITableViewCell {
 			lingvoEtikedo.translatesAutoresizingMaskIntoConstraints = false
 			lingvoEtikedo.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
 			
+			// Fari difinoetikedon
+			
 			let difinoEtikedo = TTTAttributedLabel(frame: .zero)
-			TekstAtributoHelpiloj.provizi(etikedon: difinoEtikedo, per: traduko.teksto, tiparo: Tiparo.artikolaTeksto)
+			TekstAtributoHelpiloj.provizi(
+				etikedon: difinoEtikedo,
+				per: traduko.teksto,
+				tiparo: Tiparo.artikolaTeksto,
+				stilo: stilo
+			)
 			difinoEtikedo.textColor = stilo.dokumentaTeksto
 			difinoEtikedo.numberOfLines = 0
 			difinoEtikedo.translatesAutoresizingMaskIntoConstraints = false
 			difinoEtikedo.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 			difinoEtikedo.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
 			difinoEtikedo.setContentHuggingPriority(.defaultLow, for: .horizontal)
+			
+			// Kunigi vidojn
 			
 			let etikedujo = UIView()
 			etikedujo.translatesAutoresizingMaskIntoConstraints = false
@@ -215,6 +293,9 @@ final class TradukaroChelo: UITableViewCell {
 			lingvoEtikedoj.append(lingvoEtikedo)
 		}
 		
+		// Ni deziras ke ĉiuj lingvo-etikedoj havu la saman larĝon, por ke la tradukoj
+		// estu aranĝitaj laŭ linio maldekstre. Do ni trovas la plej larĝan, kaj fiksas ĉiujn aliajn
+		// larĝojn laŭ tiu.
 		if let plejGranda = lingvoEtikedoj.max(by: { $0.intrinsicContentSize.width < $1.intrinsicContentSize.width }) {
 			for etikedo in lingvoEtikedoj {
 				if etikedo != plejGranda {
@@ -228,11 +309,5 @@ final class TradukaroChelo: UITableViewCell {
 		}
 		
 		return staplo
-	}
-	
-	// MARK: - Agoj
-	
-	@objc private func premisElekti() {
-		elekti?()
 	}
 }

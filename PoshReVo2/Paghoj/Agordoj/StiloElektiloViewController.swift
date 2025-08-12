@@ -7,7 +7,7 @@ final class StiloElektiloViewController: UIViewController {
 	}
 
 	/// Tabelo de stiloj
-	lazy var tabelo = {
+	private lazy var tabelo = {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
 		tabelo.dataSource = self

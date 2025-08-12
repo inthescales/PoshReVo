@@ -1,12 +1,16 @@
 import UIKit
 
+/// Ĉelo prezentanta titolon de derivaĵo en artikolo
 final class DerivajhTitoloChelo: UITableViewCell {
 	private enum Konstantoj {
+		/// Vertikala marĝeno inter supra bordo kaj la titoletikedo
 		static let supraMargheno: CGFloat = 8.0
 		
+		/// Vertikala marĝeno inter la titoletikedo kaj la malsupro de la vido
 		static let malsupraMargheno: CGFloat = 16.0
 	}
 	
+	/// Etikedo montranta titolon
 	private lazy var etikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.font = Tiparo.derivajhaTitolo
@@ -14,6 +18,7 @@ final class DerivajhTitoloChelo: UITableViewCell {
 		return etikedo
 	}()
 	
+	/// Dividila streko kiu sidas sub la titolo
 	private lazy var dividilo: UIView = {
 		let dividilo = UIView()
 		dividilo.translatesAutoresizingMaskIntoConstraints = false

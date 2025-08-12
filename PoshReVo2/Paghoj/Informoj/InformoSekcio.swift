@@ -71,17 +71,13 @@ final class InformoSekcio: UIView {
 			addEdgeMatchedSubview(chefEtikedo)
 		}
 		
-		chefEtikedo.linkAttributes = [
-			kCTForegroundColorAttributeName : stilo.dokumentLigilo,
-			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
-		]
-		chefEtikedo.activeLinkAttributes = [
-			kCTForegroundColorAttributeName : stilo.dokumentLigiloPremita,
-			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
-		]
-		
 		chefEtikedo.delegate = delegate
-		TekstAtributoHelpiloj.provizi(etikedon: chefEtikedo, per: teksto, tiparo: Tiparo.informoTeksto)
+		TekstAtributoHelpiloj.provizi(
+			etikedon: chefEtikedo,
+			per: teksto,
+			tiparo: Tiparo.informoTeksto,
+			stilo: stilo
+		)
 	}
 	
 	required init?(coder: NSCoder) {

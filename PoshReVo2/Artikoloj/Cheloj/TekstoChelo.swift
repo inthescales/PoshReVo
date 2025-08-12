@@ -2,7 +2,10 @@ import UIKit
 
 import TTTAttributedLabel
 
+/// Ĉelo enhavanta artikolajn tekstojn ĉiuspecajn
 final class TekstoChelo: UITableViewCell {
+	// MARK: - Interfaceroj
+	
 	private lazy var etikedo: TTTAttributedLabel = {
 		let etikedo = TTTAttributedLabel(frame: .zero)
 		etikedo.font = Tiparo.artikolaTeksto
@@ -10,7 +13,7 @@ final class TekstoChelo: UITableViewCell {
 		return etikedo
 	}()
 	
-	//
+	// MARK: - Valorizado
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -35,16 +38,12 @@ final class TekstoChelo: UITableViewCell {
 		etikedo.textColor = stilo.dokumentaTeksto
 		etikedo.delegate = liganto
 		
-		etikedo.linkAttributes = [
-			kCTForegroundColorAttributeName : stilo.dokumentLigilo,
-			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
-		]
-		etikedo.activeLinkAttributes = [
-			kCTForegroundColorAttributeName : stilo.dokumentLigiloPremita,
-			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
-		]
-		
-		TekstAtributoHelpiloj.provizi(etikedon: etikedo, per: teksto, tiparo: Tiparo.artikolaTeksto)
+		TekstAtributoHelpiloj.provizi(
+			etikedon: etikedo,
+			per: teksto,
+			tiparo: Tiparo.artikolaTeksto,
+			stilo: stilo
+		)
 		
 		etikedo.snp.remakeConstraints { make in
 			make.top.bottom.equalToSuperview()

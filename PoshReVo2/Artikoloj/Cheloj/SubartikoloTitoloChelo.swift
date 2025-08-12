@@ -1,11 +1,13 @@
 import UIKit
 
+/// Ĉelo prezentanta titolon de subartikolo
 final class SubartikoloTitoloChelo: UITableViewCell {
 	private enum Konstantoj {
 		/// Diko de la divida streko
 		static let strekDiko: CGFloat = 1.0
 	}
 	
+	/// Etikedo montranta subartikolnumeron
 	private lazy var etikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.font = Tiparo.subartikolaTitolo
@@ -13,7 +15,7 @@ final class SubartikoloTitoloChelo: UITableViewCell {
 		return etikedo
 	}()
 	
-	//
+	// MARK: - Valorizado
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)

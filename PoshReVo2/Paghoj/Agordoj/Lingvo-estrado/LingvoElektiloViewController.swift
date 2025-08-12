@@ -5,7 +5,7 @@ import ReVoDatumbazo
 /// Ekrano montranta liston da lingvoj, kiujn la uzanto povas aldoni al la uzantaj lingvoj
 final class LingvoElektiloViewController: UIViewController {
 	/// Tekstserĉilo
-	lazy var serchilo = SerchiloView(
+	private lazy var serchilo = SerchiloView(
 		lokokupaTeksto: Tekstoj.serchiLingvon,
 		iksumi: true,
 		tekstoShanghighis: { [weak self] teksto in
@@ -14,7 +14,7 @@ final class LingvoElektiloViewController: UIViewController {
 	)
 	
 	/// Lingvolisto
-	lazy var lingvoListoVC = {
+	private lazy var lingvoListoVC = {
 		return LingvoListoViewController(
 			lingvoj: montrotajLingvoj,
 			jamElektitaj: jamElektitaj,
@@ -28,7 +28,7 @@ final class LingvoElektiloViewController: UIViewController {
 	// MARK: Stato
 
 	/// Lingvoj kiuj estu montrataj en la listo (ekz., filtrita sub-aro de la tuta lingvaro)
-	var montrotajLingvoj: [Lingvo] {
+	private var montrotajLingvoj: [Lingvo] {
 		didSet {
 			if oldValue != montrotajLingvoj {
 				lingvoListoVC.montri(lingvojn: montrotajLingvoj)
@@ -39,13 +39,13 @@ final class LingvoElektiloViewController: UIViewController {
 	// MARK: Agordoj
 
 	/// La tuto de elekteblaj lingvoj
-	let lingvaro: [Lingvo]
+	private let lingvaro: [Lingvo]
 	
 	/// Lingvoj kiuj estas jam elektitaj, kaj do estu neelekteblaj ĉi tie
-	let jamElektitaj: [Lingvo]
+	private let jamElektitaj: [Lingvo]
 	
 	/// Vokota kiam uzanto elektos lingvon
-	let elektisLingvon: (Lingvo) -> ()
+	private let elektisLingvon: (Lingvo) -> ()
 	
 	private let stilo: InterfacStilo
 	

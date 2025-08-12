@@ -8,7 +8,7 @@ final class AgordojViewController: UIViewController {
 	}
 	
 	/// Tabelo de agord-agoj
-	lazy var tabelo = {
+	private lazy var tabelo = {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
 		tabelo.dataSource = self

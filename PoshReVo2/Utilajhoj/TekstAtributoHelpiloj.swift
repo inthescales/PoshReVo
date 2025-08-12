@@ -178,15 +178,28 @@ enum TekstAtributoHelpiloj {
 	static func provizi(
 		etikedon etikedo: TTTAttributedLabel,
 		per teksto: String,
-		tiparo: UIFont
+		tiparo: UIFont,
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
+		// Agordi etikedon
+		etikedo.linkAttributes = [
+			kCTForegroundColorAttributeName : stilo.dokumentLigilo,
+			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
+		]
+		etikedo.activeLinkAttributes = [
+			kCTForegroundColorAttributeName : stilo.dokumentLigiloPremita,
+			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
+		]
+		
 		// Prepari tekst-stilojn
 		let atributoj = TekstAtributoHelpiloj.kreiAtributojn(por: teksto)
-		etikedo.setText(TekstAtributoHelpiloj.atributaTeksto(
+		let atributaTeksto = TekstAtributoHelpiloj.atributaTeksto(
 			por: teksto,
 			kun: atributoj,
-			tiparo: tiparo)
+			tiparo: tiparo,
+			stilo: stilo
 		)
+		etikedo.setText(atributaTeksto)
 		
 		// Ŝajne ne eblas aldoni ligilojn kiel tekst-atributoj je TTTAttributedLabel.
 		// Kiam mi provis, la ligiloj funkciis, tamen mi ne sukcesis meti la ĝustajn kolorojn.

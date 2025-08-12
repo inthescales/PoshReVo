@@ -2,6 +2,7 @@ import UIKit
 
 import SnapKit
 
+/// Tabulo kiu sidas ekransupre en artikoloj por prezenti butonojn por artikolaj agoj
 final class AgtabuloView: UIView {
 	private enum Konstantoj {
 		static let vertikalaMargheno: CGFloat = 8.0
@@ -9,6 +10,7 @@ final class AgtabuloView: UIView {
 	
 	// MARK: - Interfaceroj
 	
+	/// Butono kiu konservas kaj malkonservas artikolojn
 	private lazy var konserviButono: UIButton = {
 		let butono = UIButton()
 		butono.setImage(
@@ -24,6 +26,7 @@ final class AgtabuloView: UIView {
 		return butono
 	}()
 	
+	/// Butono por salti ene de artikolon
 	private lazy var saltiButono: UIButton = {
 		let butono = UIButton()
 		butono.setImage(
@@ -37,20 +40,26 @@ final class AgtabuloView: UIView {
 		return butono
 	}()
 	
+	/// Ĉiuj butonoj montrotaj
 	private lazy var butonoj = [
 		konserviButono,
 		saltiButono
 	]
 	
+	/// Streko borderanta la supron de la tabulo
 	private lazy var ombroStreko = OmbroImitilo()
 	
 	// MARK: - Agordoj
 	
+	/// Fermo por konservado kaj malkonservado de artikolo
 	private let konservis: (Bool) -> Void
 	
+	/// Fermo por montri saltmenuon
 	private let salti: () -> Void
 	
 	private let stilo: InterfacStilo
+	
+	// MARK: - Valorizado
 	
 	init(
 		konservita: Bool,
@@ -82,6 +91,8 @@ final class AgtabuloView: UIView {
 	
 	// MARK: - Starigado
 	
+	/// Aranĝas butonojn en la tabulo.
+	/// Nur voku unufoje.
 	private func starigiButonojn() {
 		let staplo = UIStackView()
 		staplo.axis = .horizontal
@@ -105,15 +116,7 @@ final class AgtabuloView: UIView {
 		}
 	}
 	
-	private func fariDividilon() -> UIView {
-		let dividilo = UIView()
-		dividilo.snp.makeConstraints { make in
-			make.width.equalTo(1)
-		}
-		dividilo.backgroundColor = stilo.dokumentaDividilo
-		return dividilo
-	}
-	
+	/// Liveras malplenan vidon, uzeblan por doni spacon inter butonoj
 	private func fariNulon() -> UIView {
 		return UIView()
 	}
