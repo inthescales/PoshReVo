@@ -14,11 +14,11 @@ final class AgtabuloView: UIView {
 	private lazy var konserviButono: UIButton = {
 		let butono = UIButton()
 		butono.setImage(
-			UIImage(named: "malplenaStelo")?.withRenderingMode(.alwaysTemplate),
+			Bildetoj.malplenaStelo?.withRenderingMode(.alwaysTemplate),
 			for: .normal
 		)
 		butono.setImage(
-			UIImage(named: "plenaStelo")?.withRenderingMode(.alwaysTemplate),
+			Bildetoj.plenaStelo?.withRenderingMode(.alwaysTemplate),
 			for: .selected
 		)
 		butono.tintColor = stilo.navigaciaButono
@@ -30,7 +30,7 @@ final class AgtabuloView: UIView {
 	private lazy var saltiButono: UIButton = {
 		let butono = UIButton()
 		butono.setImage(
-			UIImage(named: "saltosago")?.withRenderingMode(.alwaysTemplate),
+			Bildetoj.saltosago?.withRenderingMode(.alwaysTemplate),
 			for: .normal
 		)
 		butono.tintColor = stilo.navigaciaButono

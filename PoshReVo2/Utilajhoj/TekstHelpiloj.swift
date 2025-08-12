@@ -1,3 +1,4 @@
+/// Diversaj utilaĵoj rilate al produktadon de tekstoj
 enum TekstHelpiloj {
 	// Aldoni chapelon aŭ hokon al litero, se tio kreus esperantan literon
 	static func iksumi(_ litero: Character) -> Character? {

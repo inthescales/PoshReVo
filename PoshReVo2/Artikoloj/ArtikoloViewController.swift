@@ -21,7 +21,7 @@ final class ArtikoloViewController: UIViewController {
 	/// Butono kiu kondukas reen al hejmpaĝo
 	private lazy var lupeoButono = {
 		let butono = UIBarButtonItem.init(
-			image: UIImage(named: "lupeo"),
+			image: Bildetoj.lupeo,
 			style: .plain,
 			target: self,
 			action: #selector(Self.premisLupeon)

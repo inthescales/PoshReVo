@@ -5,6 +5,7 @@ import ReVoDatumbazo
 
 import TTTAttributedLabel
 
+/// Helpiloj por interpreti tekstetikedojn por faro de atributoj, kaj aplikado de atributoj al tekstejoj
 enum TekstAtributoHelpiloj {
 	private enum Konstantoj {
 		/// Kiel alte superskriptoj sidu
@@ -163,6 +164,8 @@ enum TekstAtributoHelpiloj {
 		
 		return atributaTeksto
 	}
+	
+	// MARK: - Publikaj agoj
 	
 	/// Liveras atributan tekston, interpretanta etikedojn en la teksto, havanta certan tiparon
 	static func atributaTeksto(el teksto: String, tiparo: UIFont) -> NSAttributedString {

@@ -8,7 +8,7 @@ final class PaghingoViewController: UIViewController {
 	/// Butono montranta shovmenuon navigacian
 	lazy var tripunktoButono = {
 		let butono = UIBarButtonItem.init(
-			image: UIImage(named: "tripunkto"),
+			image: Bildetoj.tripunkto,
 			style: .plain,
 			target: self,
 			action: #selector(Self.premisTripunkton)
@@ -62,32 +62,32 @@ final class PaghingoViewController: UIViewController {
 		let menuo = ShovMenuoViewController(
 			eroj: [
 				ShovMenuoViewController.Menuero(
-					bildo: UIImage(named: "libro"),
+					bildo: Bildetoj.libro,
 					teksto: Tekstoj.historio,
 					ago: { [weak self] in self?.premisHistorio() }
 				),
 				ShovMenuoViewController.Menuero(
-					bildo: UIImage(named: "plenaStelo"),
+					bildo: Bildetoj.plenaStelo,
 					teksto: Tekstoj.konservitaj,
 					ago: { [weak self] in self?.premisKonservitaj() }
 				),
 				ShovMenuoViewController.Menuero(
-					bildo: UIImage(named: "mapo"),
+					bildo: Bildetoj.mapo,
 					teksto: Tekstoj.esplori,
 					ago: { [weak self] in self?.premisEsplori() }
 				),
 				ShovMenuoViewController.Menuero(
-					bildo: UIImage(named: "dentrado"),
+					bildo: Bildetoj.dentrado,
 					teksto: Tekstoj.agordoj,
 					ago: { [weak self] in self?.premisAgordoj() }
 				),
 				ShovMenuoViewController.Menuero(
-					bildo: UIImage(named: "nudatripunkto"),
+					bildo: Bildetoj.nudaTripunkto,
 					teksto: Tekstoj.mallongigoj,
 					ago: { [weak self] in self?.premisMallongigoj() }
 				),
 				ShovMenuoViewController.Menuero(
-					bildo: UIImage(named: "informoj"),
+					bildo: Bildetoj.informoj,
 					teksto: Tekstoj.priPoshReVo,
 					ago: { [weak self] in self?.premisInformoj() }
 				)
