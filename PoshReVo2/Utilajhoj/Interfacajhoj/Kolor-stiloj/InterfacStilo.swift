@@ -2,7 +2,7 @@ import UIKit
 
 /// Fasada stilo por la apo
 class InterfacStilo {
-	// Noto: Nun, ĉi klaso nur enhavas kolorojn. Estontece, se aliaj interfacstilaĵoj agordeblos,
+	// NOTO: Nun, ĉi klaso nur enhavas kolorojn. Estontece, se aliaj interfacstilaĵoj agordeblos,
 	// konsideru dividon de ĉi klaso en pluraj, ligitaj per enhavanta 'InterfacStilo'
 	
 	// MARK: - Ecoj
@@ -61,6 +61,8 @@ class InterfacStilo {
 	static func kun(nomo: String) -> InterfacStilo? {
 		return .chiuj.first(where: { stilo in stilo.nomo == nomo })
 	}
+	
+	// MARK: - Stilaro
 	
 	/// Defaŭlta stilo - uzata ĉe nove instalata apo, aŭ se alia stilo ne troviĝas
 	static var defaulta: InterfacStilo = .simpla

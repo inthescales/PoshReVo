@@ -1,6 +1,7 @@
 import UIKit
 
 extension InterfacStilo {
+	/// Interfacstilo havanta plejparte ordinaran iOS-an aspekton
 	static let simpla = InterfacStilo(
 		nomo: "Simpla",
 		identigilo: "simpla",

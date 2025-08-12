@@ -67,5 +67,6 @@ struct Koloraro {
 	
 	// MARK: - Aliaj
 	
+	/// Ombro aperanta ĉe rando de navigaciejoj, kaj simil-loke
 	var ombro: UIColor
 }

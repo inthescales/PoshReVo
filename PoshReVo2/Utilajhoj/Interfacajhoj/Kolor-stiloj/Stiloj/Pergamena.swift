@@ -1,5 +1,7 @@
 import UIKit
 
+// NOTO: Ĉi tio stilo ne estas finita, kaj ne estas atingebla en la apo nuntempe
+
 extension InterfacStilo {
 	static let pergamena = InterfacStilo(
 		nomo: "pergamena",

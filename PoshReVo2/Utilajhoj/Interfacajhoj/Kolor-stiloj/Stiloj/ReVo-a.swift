@@ -11,6 +11,7 @@ import UIKit
 fileprivate let fortaNavigaciejo = false
 
 extension InterfacStilo {
+	/// Stilo uzanta la kolorojn de la retejo www.reta-vortaro.de
 	static let revoa = InterfacStilo(
 		nomo: "Reta Vortaro",
 		identigilo: "revoa",

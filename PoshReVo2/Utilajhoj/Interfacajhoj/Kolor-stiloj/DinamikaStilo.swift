@@ -1,6 +1,5 @@
 import UIKit
 
-// TODO: Unuigi stilojn? (t.e., uzu nur dinamka aŭ nur simpla)
 // SOLVO: Faru protokolon kiu unuigos klasojn 'DinamikaStilo' kaj 'KonkretaStilo'.
 // Ambaŭ, laŭ la protokolo, havos variablojn reprezentantajn ĉiujn diversajn kolorojn.
 // Konkreta, laŭ la nuna 'InterfacStilo', enhavos listojn da helaj kaj malhelaj koloroj.
