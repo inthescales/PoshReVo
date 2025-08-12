@@ -13,7 +13,6 @@ final class PaghingoViewController: UIViewController {
 			target: self,
 			action: #selector(Self.premisTripunkton)
 		)
-		butono.tintColor = DinamikaStilo.navigaciaButono
 		butono.accessibilityLabel = AlirebloTekstoj.malfermiMenuon
 		
 		return butono
@@ -26,12 +25,18 @@ final class PaghingoViewController: UIViewController {
 	
 	let kunordigilo: Kunordigilo
 	
+	var stilo: InterfacStilo
+	
 	// MARK: - Valorizado
 	
-	init(chefpagho: Ingito, kunordigilo: Kunordigilo = .komuna) {
+	init(
+		chefpagho: Ingito,
+		kunordigilo: Kunordigilo = .komuna,
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
+	) {
 		self.chefpagho = chefpagho
 		self.kunordigilo = kunordigilo
-		
+		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 	}
 	

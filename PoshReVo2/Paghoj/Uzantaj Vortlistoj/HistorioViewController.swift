@@ -12,7 +12,7 @@ final class HistorioViewController: UIViewController {
 			target: self,
 			action: #selector(forigi)
 		)
-		butono.tintColor = DinamikaStilo.navigaciaButono
+		butono.tintColor = stilo.navigaciaButono
 		return butono
 	}()
 	
@@ -31,15 +31,19 @@ final class HistorioViewController: UIViewController {
 	
 	private let datumRegilo: UzantDatumoRegilo
 	
+	private let stilo: InterfacStilo
+	
 	// MARK: - Pravalorizado
 	
 	init(
 		lastaj: [Konservitajho],
-		datumRegilo: UzantDatumoRegilo = .komuna,
 		elektis: @escaping (Uzantlistero) -> (),
+		datumRegilo: UzantDatumoRegilo = .komuna,
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.elektis = elektis
 		self.datumRegilo = datumRegilo
+		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 		
 		montri(lastaj)

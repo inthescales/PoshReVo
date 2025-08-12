@@ -3,9 +3,12 @@ import UIKit
 /// Propra UINavigationController klaso uzata ĉie en ĉi-apo.
 /// Enhavas kelkajn stilajn kapablojn
 final class PRVNavigationController: UINavigationController {
+	private var stilo: InterfacStilo {
+		UzantDatumaro.komuna.stilo
+	}
+	
 	override func viewDidLoad() {
 		navigationBar.isTranslucent = false
-		navigationBar.tintColor = DinamikaStilo.navigaciaButono
 		ghisdatigiAspekton(topViewController)
 	}
 	
@@ -14,13 +17,14 @@ final class PRVNavigationController: UINavigationController {
 	private func ghisdatigiAspekton(_ vc: UIViewController?) {
 		let navigacejAspekto = UINavigationBarAppearance()
 		navigacejAspekto.configureWithOpaqueBackground()
-		navigacejAspekto.backgroundColor = DinamikaStilo.navigaciaFono
+		navigacejAspekto.backgroundColor = stilo.navigaciaFono
+		navigationBar.tintColor = stilo.navigaciaButono
 		
 		let veraVC = veraVC(de: vc) ?? UIViewController()
-		navigacejAspekto.shadowColor = chuMontriOmbron(por: veraVC) ? DinamikaStilo.ombro : nil
+		navigacejAspekto.shadowColor = chuMontriOmbron(por: veraVC) ? stilo.ombro : nil
 		
 		navigacejAspekto.titleTextAttributes = [
-			NSAttributedString.Key.foregroundColor : DinamikaStilo.navigaciaTeksto
+			NSAttributedString.Key.foregroundColor : stilo.navigaciaTeksto
 		]
 		
 		// Necesas por present-itaj VCoj
@@ -75,6 +79,11 @@ final class PRVNavigationController: UINavigationController {
 	
 	// MARK: - Trapasfunkcioj
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		ghisdatigiAspekton(topViewController)
+	}
+	
 	override func pushViewController(_ vc: UIViewController, animated: Bool) {
 		super.pushViewController(vc, animated: animated)
 		ghisdatigiAspekton(topViewController)
@@ -94,12 +103,8 @@ final class PRVNavigationController: UINavigationController {
 		return VCoj
 	}
 	
-	override func present(
-		_ viewControllerToPresent: UIViewController,
-		animated flag: Bool,
-		completion: (() -> Void)? = nil
-	) {
-		super.present(viewControllerToPresent, animated: flag, completion: completion)
+	// MARK: - Avizreagoj
+	@objc private func stiloShanghighis() {
 		ghisdatigiAspekton(topViewController)
 	}
 }

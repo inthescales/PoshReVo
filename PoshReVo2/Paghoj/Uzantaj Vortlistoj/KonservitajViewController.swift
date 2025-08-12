@@ -11,7 +11,7 @@ final class KonservitajViewController: UIViewController {
 			target: self,
 			action: #selector(forigi)
 		)
-		butono.tintColor = DinamikaStilo.navigaciaButono
+		butono.tintColor = stilo.navigaciaButono
 		return butono
 	}()
 	
@@ -30,15 +30,19 @@ final class KonservitajViewController: UIViewController {
 	
 	private let datumRegilo: UzantDatumoRegilo
 	
+	private let stilo: InterfacStilo
+	
 	// MARK: - Pravalorizado
 	
 	init(
 		konservitaj: [Konservitajho],
 		datumRegilo: UzantDatumoRegilo = .komuna,
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo,
 		elektis: @escaping (Uzantlistero) -> ()
 	) {
 		self.elektis = elektis
 		self.datumRegilo = datumRegilo
+		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
 		
 		montri(konservitaj)
