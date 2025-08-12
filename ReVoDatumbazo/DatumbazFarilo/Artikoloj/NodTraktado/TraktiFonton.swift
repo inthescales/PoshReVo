@@ -43,11 +43,7 @@ extension ArboAnalizilo {
 		// TODO: fontoj - aldoni fonton al stato
 		
 		if let bibTeksto,
-		   !bibTeksto.isEmpty && !havasLokon {
-			// TODO: fontoj
-			// Uzu bibliografian tekston nur post kiam disponeblas liston da bibliografiaĵoj
-			// inter mallongigolistoj
-		
+		   !bibTeksto.isEmpty && !havasLokon {		
 			return bibTeksto
 		} else {
 			// TODO: fontoj

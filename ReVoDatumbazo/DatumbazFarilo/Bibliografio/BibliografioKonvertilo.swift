@@ -3,13 +3,17 @@ import CoreData
 
 /// Konvertas bibliografiajn-datumojn el XML en BibliografioNodan arbon.
 class BibliografioKonvertilo: NSObject, XMLParserDelegate {
+	/// Signoj laŭ kodoj kiujn ili devos anstataŭi
 	private let signoj: [String: String]
 	
+	/// La arbo konstruata
 	var arbo: [BibliografioNodo] = [BibliografioNodo(tipo: .arbo)]
 	
 	init(literoj: [String: String]) {
 		self.signoj = literoj
 	}
+	
+	// MARK: - XMLParserDelegate
 	
 	func parser(_ parser: XMLParser, parseErrorOccurred parseError: any Error) {
 		assert(false, "Analizeraro: \(parseError)")
@@ -52,7 +56,7 @@ class BibliografioKonvertilo: NSObject, XMLParserDelegate {
 // MARK: - Vokilo
 
 extension BibliografioKonvertilo {
-	/// Konvertas XML-ajn bibliografiodatumojn en bibliografion-arbon, liverante la radika nodo de la arbo
+	/// Konvertas XML-ajn bibliografiodatumojn en bibliografion-arbon, liverante la radikan nodon de la arbo
 	public static func konverti(
 		el indikilo: String,
 		signoj: [String: String]

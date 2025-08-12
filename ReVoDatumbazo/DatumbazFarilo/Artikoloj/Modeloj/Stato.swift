@@ -97,7 +97,7 @@ extension ArboAnalizilo {
 		/// Por ĉiu marko kiu aperas en senco, la numero de tiu senco kaj, se estas, subsenco (por resolvi 'sncref'-ojn)
 		var markSencoj: [String: (Int, Int?)] = [:]
 		
-		// MARK: Tradukoj kaj vortlisteroj
+		// MARK: - Tradukoj kaj vortlisteroj
 		
 		/// Ĝisnunaj ĉi-derivaĵaj tradukoj
 		private var sensencajDerivajhTradukoj: [String: [ArtikolTraduko]] = [:]

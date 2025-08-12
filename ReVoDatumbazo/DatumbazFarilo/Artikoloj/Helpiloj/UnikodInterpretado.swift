@@ -1,7 +1,7 @@
 /// Helpiloj ĉe interpretadoj de tekstoj en datumaj dosieroj
 enum Interpreti {
-	/// Interpreti unikodan signon el HTMLa teksto. Teksto devas komenci per '#' (kaj poste 'x' se deksesuma),
-	/// ĝi tamen NE inkluzivu komencan '&' kaj finan ';'.
+	/// Interpreti unikodan signon el HTMLa teksto. Teksto devas komenci per '#' (kaj poste 'x' se deksesuma).
+	/// Ĝi tamen NE inkluzivu komencan '&' kaj finan ';'.
 	static func unikodon(html teksto: String) -> String? {
 		guard teksto.count > 1
 				&& teksto.sub(de: 0, al: 1) == "#"

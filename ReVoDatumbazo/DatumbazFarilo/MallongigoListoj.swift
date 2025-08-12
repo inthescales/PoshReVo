@@ -83,7 +83,7 @@ final class MallongigoListoj {
 				"\t(\""
 				+ verko.mallongigo
 				+ "\", \""
-				+ verko.priskribi()
+				+ BibliografioTeksto.priskribi(verkon: verko)
 				+ "\"),\n"
 		}
 		teksto += "]"

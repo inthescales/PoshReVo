@@ -2,8 +2,8 @@ import AppKit
 import Foundation
 
 /// Procezo al kiu bibliografiaj tekstoj estu submetitaj *antaŭ* ol analizado.
+/// Spegulas similan antaŭtraktadon de artikoloj
 enum BibliografioAntautraktado {
-	/// Bazita sur la antaŭtraktado de artikoloj
 	static func antautrakti(
 		tekston teksto: String,
 		signoj: [String: String]
@@ -11,7 +11,7 @@ enum BibliografioAntautraktado {
 		var rezulto = teksto
 		
 		// Evitas eraron pro la instrukcio '%signoj;' en la bibliografia XML-dosiero
-		// Supozeble ĝi provas importi la signojn, tamen io ne funkcias. Mi ne scias se
+		// Supozeble ĝi provas importi la signojn, tamen io ne funkcias. Mi ne scias ĉu
 		// la kaŭzo estas mia nescio, aŭ eraro en la Swifta- XML-analizilo.
 		// Ĉiukaze, mi forigas tiun linion ĉi tie, kaj anstataŭas signojn sube.
 		let regex1 = try! Regex("%(.*?);")

@@ -1,6 +1,7 @@
 import Foundation
 import CoreData
 
+/// Disponebligas oficialecojn
 enum Oficialecoj {
 	static var fundamento = Oficialeco(
 		kodo: "*",
@@ -56,6 +57,7 @@ enum Oficialecoj {
 }
 
 extension Oficialeco {
+	/// Faras kaj liveras oficialecon havantan tiun kodon
 	static func kun(kodo: String?) -> Oficialeco? {
 		switch kodo {
 		case nil:

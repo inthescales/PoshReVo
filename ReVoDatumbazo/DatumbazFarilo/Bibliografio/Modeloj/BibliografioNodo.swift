@@ -1,3 +1,5 @@
+/// Arbonodo en la bibliografia strukturo
+/// Spegulas la artikolan klason 'ArtikolNodo'
 class BibliografioNodo {
 	let tipo: BibliografioNodTipo
 	var filoj: [BibliografioNodo]

@@ -9,6 +9,7 @@ enum BibliografioAnalizilo {
 			signoj: grundo.signoj
 		)
 	}
+	
 	/// Legas  la bibliografion el indiko kaj liveras bibliografio-modelon kaj serĉ-tradukojn
 	static func legi(
 		el indiko: String,

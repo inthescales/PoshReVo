@@ -301,6 +301,8 @@
 		00E5D5F22E49BA16004877ED /* TraktiEldonon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5F02E49BA14004877ED /* TraktiEldonon.swift */; };
 		00E5D5F42E49BA45004877ED /* Eldono.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5F32E49BA44004877ED /* Eldono.swift */; };
 		00E5D5F52E49BA45004877ED /* Eldono.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5F32E49BA44004877ED /* Eldono.swift */; };
+		00E5D5FF2E4C0896004877ED /* BibliografioTeksto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5FE2E4C0893004877ED /* BibliografioTeksto.swift */; };
+		00E5D6002E4C0896004877ED /* BibliografioTeksto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5FE2E4C0893004877ED /* BibliografioTeksto.swift */; };
 		00EEB7D02D6630A8002AA05E /* Artikolo+Printado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FC162D65058C0033EC11 /* Artikolo+Printado.swift */; };
 		C822822A21E90FC9EA2D64E0 /* Pods_DatumbazFariloTestoj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */; };
 /* End PBXBuildFile section */
@@ -505,6 +507,7 @@
 		00E5D5ED2E49B8A3004877ED /* TraktiVerkon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiVerkon.swift; sourceTree = "<group>"; };
 		00E5D5F02E49BA14004877ED /* TraktiEldonon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiEldonon.swift; sourceTree = "<group>"; };
 		00E5D5F32E49BA44004877ED /* Eldono.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eldono.swift; sourceTree = "<group>"; };
+		00E5D5FE2E4C0893004877ED /* BibliografioTeksto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliografioTeksto.swift; sourceTree = "<group>"; };
 		3160BDCF41F0A5B31404DFB0 /* Pods-DatumbazFariloTestoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.debug.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.debug.xcconfig"; sourceTree = "<group>"; };
 		6A2C9EF617DC88330EC63FB1 /* Pods-DatumbazFariloTestoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatumbazFariloTestoj.release.xcconfig"; path = "Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj.release.xcconfig"; sourceTree = "<group>"; };
 		86560AA150FDA0A8D0D0ABC1 /* Pods_DatumbazFariloTestoj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatumbazFariloTestoj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -898,6 +901,7 @@
 		00E5D5D22E49B3EA004877ED /* Bibliografio */ = {
 			isa = PBXGroup;
 			children = (
+				00E5D5FD2E4C088D004877ED /* Helpiloj */,
 				00E5D5DC2E49B513004877ED /* Modeloj */,
 				00E5D5E92E49B77F004877ED /* NodTraktado */,
 				00E5D5DD2E49B522004877ED /* BibliografioAntautraktado.swift */,
@@ -927,6 +931,14 @@
 				00E5D5F02E49BA14004877ED /* TraktiEldonon.swift */,
 			);
 			path = NodTraktado;
+			sourceTree = "<group>";
+		};
+		00E5D5FD2E4C088D004877ED /* Helpiloj */ = {
+			isa = PBXGroup;
+			children = (
+				00E5D5FE2E4C0893004877ED /* BibliografioTeksto.swift */,
+			);
+			path = Helpiloj;
 			sourceTree = "<group>";
 		};
 		0A543C699E067667DA999180 /* Pods */ = {
@@ -1251,6 +1263,7 @@
 				0099FC672D65058C0033EC11 /* ArtikolKonvertilo.swift in Sources */,
 				00E5D5DE2E49B525004877ED /* BibliografioAntautraktado.swift in Sources */,
 				0099FC452D65058C0033EC11 /* TraktiIndicon.swift in Sources */,
+				00E5D5FF2E4C0896004877ED /* BibliografioTeksto.swift in Sources */,
 				0099FC6A2D65058C0033EC11 /* Grundo.swift in Sources */,
 				0099FC302D65058C0033EC11 /* ArtikolTraduko.swift in Sources */,
 				0099FC5A2D65058C0033EC11 /* TraktiTildon.swift in Sources */,
@@ -1326,6 +1339,7 @@
 				0099FD252D6506940033EC11 /* ArtikolTraduko.swift in Sources */,
 				0099FD262D6506940033EC11 /* OfcVorto.swift in Sources */,
 				000DA6C42D8DD3E00026CBA0 /* ReVoDatumbazo.swift in Sources */,
+				00E5D6002E4C0896004877ED /* BibliografioTeksto.swift in Sources */,
 				00B297282D654FE200264431 /* Fako+Datumbazo.swift in Sources */,
 				00B2972C2D65517100264431 /* Destino.swift in Sources */,
 				0099FD272D6506940033EC11 /* SerchVorto.swift in Sources */,

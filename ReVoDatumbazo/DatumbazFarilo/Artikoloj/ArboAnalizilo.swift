@@ -61,7 +61,7 @@ enum ArboAnalizilo {
 		)
 	}
 	
-	// MARK: - Nodspecoj
+	// MARK: - Helpiloj
 	
 	/// Akumulas tekston el teksto-nodoj, kaj alispecaj nodoj kiuj enhavas nur tekstojn
 	static func akumuliTekstojn(de nodo: ArtikolNodo, montriFontojn: Bool = false, stato: Stato) -> String {

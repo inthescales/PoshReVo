@@ -1,3 +1,5 @@
+/// Tipo de nodo en la bibliografia arbostrukturo
+/// Spegulas la artikolan klason 'NodTipo'
 enum BibliografioNodTipo {
 	case a
 	case ald

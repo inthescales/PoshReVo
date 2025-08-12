@@ -1,11 +1,14 @@
+/// Analizilo por bibliografiaj arboj.
+/// Spegulas la artikolan 'ArboAnalizilo'
 enum BibliografioArboAnalizilo {
+	/// Analizas arbon kaj liveras liston da enhavataj verkoj
 	static func analizi(
 		arbon arbo: BibliografioNodo
 	) -> [Verko] {
 		return trakti(arbon: arbo)
 	}
 	
-	static func trakti(arbon arbo: BibliografioNodo) -> [Verko] {
+	private static func trakti(arbon arbo: BibliografioNodo) -> [Verko] {
 		assert(arbo.filoj.count == 1, "Tro da filoj en bibliografia arboradiko")
 		let filo = arbo.filoj.first!
 		switch filo.tipo {
@@ -16,7 +19,7 @@ enum BibliografioArboAnalizilo {
 		}
 	}
 	
-	// MARK: - Nodspecoj
+	// MARK: - Helpiloj
 	
 	/// Akumulas tekston el teksto-nodoj, kaj alispecaj nodoj kiuj enhavas nur tekstojn
 	static func akumuliTekstojn(de nodo: BibliografioNodo) -> String {
@@ -35,6 +38,7 @@ enum BibliografioArboAnalizilo {
 		return teksto
 	}
 	
+	/// Aplikas fermon al ĉiuj filaj nodoj
 	static func traktiFilojn(de nodo: BibliografioNodo, farotajh: (BibliografioNodo) -> Void) {
 		for filo in nodo.filoj {
 			farotajh(filo)

@@ -10,10 +10,12 @@ class Grundo: Codable {
 	let mallongigojVortaraj: [Mallongigo]
 	let urloj: [String: String]
 	
+	/// Lingvoj laŭ kodĉenoj
 	lazy var lingvoDict = lingvoj.reduce(into: [String: Lingvo]()) { dict, lingvo in
 		dict[lingvo.kodo] = lingvo
 	}
 
+	/// Stiloj laŭ kodĉenoj
 	lazy var stiloDict = stiloj.reduce(into: [String: String]()) { dict, stilo in
 		dict[stilo.kodo] = stilo.nomo
 	}

@@ -1,3 +1,4 @@
+/// Specoj de stilaj atributoj kiuj povas esti aldonataj al tekstoj per <angulaj krampoj>
 public enum TekstAtributo: CaseIterable, Equatable {
 	case ligo(celo: String)
 	case kursiva
@@ -8,10 +9,18 @@ public enum TekstAtributo: CaseIterable, Equatable {
 	case rimarko
 	case sencNumero
 	
+	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	// !!!                                                         !!!
+	// !!!   NOTO: NE FORGESU ALDONI VIAN NOVAN ATRIBUTON ĈI TIE   !!!
+	// !!!                                                         !!!
+	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	
+	/// Ĉiuj atributoj. Uzata por provizi regulajn esprimojn.
 	public static var allCases: [TekstAtributo] {
 		[.ligo(celo: ""), .kursiva, .grasa, .supera, .suba, .ekzemplo, .rimarko, .sencNumero]
 	}
 	
+	/// Tekstan kodon de atributo
 	public var kodo: String {
 		switch self {
 		case .ligo:
@@ -33,6 +42,7 @@ public enum TekstAtributo: CaseIterable, Equatable {
 		}
 	}
 	
+	/// Atributo havanta tiun kodon
 	public init?(kodo: String) {
 		switch kodo {
 		case "k":
@@ -54,6 +64,8 @@ public enum TekstAtributo: CaseIterable, Equatable {
 		}
 	}
 	
+	/// Atributon havanta tiujn kodon kaj ecojn.
+	/// Nur uzeblas kun kodoj havantaj ecojn
 	public init?(kodo: String, eco: String) {
 		switch kodo {
 		case "a":
@@ -63,6 +75,7 @@ public enum TekstAtributo: CaseIterable, Equatable {
 		}
 	}
 	
+	/// Ecoj de ĉi tiu atributa instanco
 	var ecoj: [(String, String)] {
 		switch self {
 		case .ligo(let celo):
@@ -74,15 +87,18 @@ public enum TekstAtributo: CaseIterable, Equatable {
 	
 	// MARK: - Etikedoj
 	
+	/// Liveras malferman etikedon por tekstatributo
 	public var malfermaEtikedo: String {
 		let ecocheno = ecoj.map { " \($0.0)=\"\($0.1)\"" }.reduce("", +)
 		return "<" + kodo + ecocheno + ">"
 	}
 	
+	/// Liveras ferman etikedon por tekstatributo
 	public var fermaEtikedo: String {
 		return "</" + kodo + ">"
 	}
 	
+	/// Liveras novan ĉenon volvinte la tekston per la etikedoj de tiu atributo
 	public static func volvi(_ teksto: String, per atributo: TekstAtributo) -> String {
 		return atributo.malfermaEtikedo + teksto + atributo.fermaEtikedo
 	}
