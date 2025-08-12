@@ -1,16 +1,21 @@
 import UIKit
 
-final class StrekoView: UIView {
+/// Speciala dividilo konsistanta el linio da streketo (dashed line)
+final class StrekaroView: UIView {
 	private enum Konstantoj {
+		/// Kiom longa ĉiu streketu estu
 		static let strekLongo: CGFloat = 2.0
+		
+		/// Kiom da spaco estu inter streketoj
 		static let spacLongo: CGFloat = 2.0
 	}
 	
 	// MARK: - Agordoj
 	
-	let koloro: UIColor
+	/// La koloro de la streketoj
+	private let koloro: UIColor
 	
-	// MARK: -
+	// MARK: - Valorizado
 	
 	init(koloro: UIColor, fonKoloro: UIColor = .clear) {
 		self.koloro = koloro

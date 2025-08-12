@@ -72,7 +72,7 @@ final class TradukaroChelo: UITableViewCell {
 		contentView.subviews.forEach { $0.removeFromSuperview() }
 		
 		// Aldoni supran dividilon
-		let supraDividilo = StrekoView(koloro: stilo.dokumentaDividilo)
+		let supraDividilo = StrekaroView(koloro: stilo.dokumentaDividilo)
 		contentView.addSubview(supraDividilo)
 		supraDividilo.snp.makeConstraints { make in
 			make.top.equalToSuperview().offset(Konstantoj.vertikalaMargheno)
@@ -96,7 +96,7 @@ final class TradukaroChelo: UITableViewCell {
 		let finaElemento = enhavoj.last ?? supraDividilo
 		
 		// Aldoni malsupran dividilon
-		let malsupraDividilo = StrekoView(koloro: stilo.dokumentaDividilo)
+		let malsupraDividilo = StrekaroView(koloro: stilo.dokumentaDividilo)
 		contentView.addSubview(malsupraDividilo)
 		malsupraDividilo.snp.makeConstraints { make in
 			make.top.equalTo(finaElemento.snp.bottom).offset(Konstantoj.vertikalaMargheno)

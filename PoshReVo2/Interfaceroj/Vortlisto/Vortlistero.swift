@@ -1,10 +1,13 @@
 import ReVoDatumbazo
 
+/// Ero montrebla de vortolisto
 protocol Vortlistero {
 	var teksto: String { get }
 	var subteksto: String? { get }
 }
 
+/// Ero montrata en rezultoj de vortserĉo.
+/// Povas havi subtekston, kaj povas havi plurajn destinojn
 final class Serchlistero: Vortlistero {
 	let teksto: String
 	let subteksto: String?
@@ -17,6 +20,8 @@ final class Serchlistero: Vortlistero {
 	}
 }
 
+/// Ero montrata en esploraj vortlistoj.
+/// Neniam havas subtekston, kaj havas nur unu destinon
 final class Esplorlistero: Vortlistero {
 	let teksto: String
 	let subteksto: String? = nil
@@ -28,6 +33,8 @@ final class Esplorlistero: Vortlistero {
 	}
 }
 
+/// Ero montrata en uzantaj vortlistoj (historio kaj konservitaj).
+/// Neniam havas subtekston, kaj kondukas al artikolo per indekso-ĉeno, ne Destino
 final class Uzantlistero: Vortlistero {
 	let teksto: String
 	let subteksto: String? = nil

@@ -2,9 +2,9 @@ import UIKit
 
 import ReVoDatumbazo
 
-//MARK: - Konstantoj
+// MARK: - Konstantoj
 
-// Ĉi tie ekster la klaso por ke "generic" klaso ne povas enhavi ĝin
+// Konstantoj estas ĉi tie ekster la klaso mem por ke "generic" klaso ne povas enhavi ĝin
 fileprivate enum Konstantoj {
 	/// Kiam ĉi-kvanto da listeroj restas, sciigu ke la uzanto alvenas la finon de la listo
 	static let finaRegiono = 5
@@ -14,7 +14,8 @@ fileprivate enum Konstantoj {
 final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	// MARK: - Interfaceroj
 	
-	lazy var tabelo: UITableView = {
+	/// Vortotabelo
+	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
 		tabelo.delegate = self
 		tabelo.dataSource = self
@@ -22,8 +23,9 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		return tabelo
 	}()
 	
-	lazy var nulStatoView: VortListoNulStatoView = {
-		return VortListoNulStatoView(teksto: nulTeksto ?? "")
+	/// Mesaĝa vido aperanta kiam estas neniuj vortoj por montri
+	private lazy var nulStatoView: VortListoNulStatoView = {
+		return VortListoNulStatoView(teksto: nulaTeksto ?? "")
 	}()
 	
 	// MARK: - Stato
@@ -32,17 +34,21 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	
 	// MARK: - Agordoj
 	
+	/// Titolo kiu aperu ekransupre
 	private let titolo: String?
 	
-	private let nulTeksto: String?
+	/// Mesaĝo kiu aperu kiam estas neniu vortoj por montri
+	private let nulaTeksto: String?
 	
+	/// Fermo por kiam uzanto elektas vorton
 	private let elektis: (L) -> ()
 	
+	/// Fermo por kiam uzanto rulumis ĝis la fino de la listo
 	private let alvenasFinon: (() -> ())?
 	
 	private var stilo: InterfacStilo
 	
-	// MARK: - Pravalorizado
+	// MARK: - Valorizado
 	
 	init(
 		titolo: String? = nil,
@@ -52,7 +58,7 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.titolo = titolo
-		self.nulTeksto = nulTeksto
+		self.nulaTeksto = nulTeksto
 		self.elektis = elektis
 		self.alvenasFinon = alvenasFinon
 		self.stilo = stilo
@@ -75,6 +81,7 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		view.addEdgeMatchedSubview(nulStatoView)
 	}
 	
+	/// Montri tiujn listerojn
 	func montri(listerojn listeroj: [L]) {
 		self.listeroj = listeroj
 		tabelo.reloadData()
@@ -119,7 +126,8 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 		novaChelo.detailTextLabel?.text = listero.subteksto
 		novaChelo.meti(stilon: stilo)
 		
-		if indexPath.row > tableView.numberOfRows(inSection: indexPath.section) - Konstantoj.finaRegiono {
+		let finlimo = tableView.numberOfRows(inSection: indexPath.section) - Konstantoj.finaRegiono
+		if indexPath.row > finlimo {
 			alvenasFinon?()
 		}
 		

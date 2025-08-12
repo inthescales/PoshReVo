@@ -1,14 +1,18 @@
 import UIKit
 
+/// Klariga vido prezentebla kiam vortolisto havas neniujn vortojn
 final class VortListoNulStatoView: UIView {
 	private enum Konstantoj {
+		/// Kie en la vertikala spaco de la patra vido ĉi tiu estu, kiel porcio de ĝia alto
 		static let vertikalaCentroPorcio: CGFloat = 0.5
 		
+		/// Kiom de la horizontala larĝo de la patra vido ĉi tiu povu okupi
 		static let larghoPorcio: CGFloat = 0.8
 	}
 	
 	// MARK: - Interfaceroj
 	
+	/// Etikedo montranta nulstatan mesaĝon
 	private lazy var etikedo: UILabel = {
 		let eti = UILabel()
 		eti.numberOfLines = 0
@@ -20,7 +24,10 @@ final class VortListoNulStatoView: UIView {
 	
 	// MARK: - Agordoj
 	
+	/// Teksto montrota
 	private let teksto: String
+	
+	// MARK: - Valorizado
 	
 	init(teksto: String, stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
 		self.teksto = teksto

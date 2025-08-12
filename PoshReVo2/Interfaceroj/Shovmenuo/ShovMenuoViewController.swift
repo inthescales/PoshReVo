@@ -1,17 +1,8 @@
 import UIKit
 import SnapKit
 
+/// Menuo kiu aperas paĝflanke en navigaciado kaj artikolsaltado
 final class ShovMenuoViewController: UIViewController {
-	struct Agordoj {
-		let titolo: String?
-		let navigaciaKoloro: UIColor
-		let navigaciaTekstKoloro: UIColor
-		let menuaKoloro: UIColor
-		let malplenaKoloro: UIColor
-		let tekstKoloro: UIColor
-		let dividiloKoloro: UIColor
-	}
-	
 	private enum Konstantoj {
 		/// Minimuma larĝo de la menuejo sur iPhone
 		static let minimumaLarghoiPhone: CGFloat = 200
@@ -35,6 +26,29 @@ final class ShovMenuoViewController: UIViewController {
 		static let vertikalaMargheno: CGFloat = 12.0
 	}
 	
+	/// Agordoj por provizi menuan interfacon
+	struct Agordoj {
+		let titolo: String?
+		let navigaciaKoloro: UIColor
+		let navigaciaTekstKoloro: UIColor
+		let menuaKoloro: UIColor
+		let malplenaKoloro: UIColor
+		let tekstKoloro: UIColor
+		let dividiloKoloro: UIColor
+		
+		static func el(stilo: InterfacStilo, titolo: String?) -> Agordoj {
+			Agordoj(
+				titolo: titolo,
+				navigaciaKoloro: stilo.shovmenuaFono,
+				navigaciaTekstKoloro: stilo.dokumentaTeksto,
+				menuaKoloro: stilo.shovmenuaFono,
+				malplenaKoloro: stilo.shovmenuaFono,
+				tekstKoloro: stilo.dokumentaTeksto,
+				dividiloKoloro: stilo.dokumentaTeksto.withAlphaComponent(0.3)
+			)
+		}
+	}
+	
 	struct Menuero {
 		let bildo: UIImage?
 		let teksto: String
@@ -43,6 +57,7 @@ final class ShovMenuoViewController: UIViewController {
 	
 	// MARK: - Interfaceroj
 	
+	/// Ombra vido kiu estos surmetita sur la baza VC, por indiki ke ĝi estas fora
 	private lazy var ombroView: UIView = {
 		let view = UIView()
 		view.backgroundColor = .black
@@ -59,6 +74,7 @@ final class ShovMenuoViewController: UIViewController {
 		return view
 	}()
 	
+	/// Supra regiono de la menuo, imitanta ordinaran supran navigaciejon
 	private lazy var navigaciejo: UIView = {
 		let ejo = UIView()
 		ejo.backgroundColor = agordoj.navigaciaKoloro
@@ -72,6 +88,7 @@ final class ShovMenuoViewController: UIViewController {
 		return ejo
 	}()
 	
+	/// Titoletikedo aperanta en la navigaciejo
 	private lazy var titolEtikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.text = agordoj.titolo
@@ -81,6 +98,7 @@ final class ShovMenuoViewController: UIViewController {
 		return etikedo
 	}()
 	
+	/// La tuta areo kiun okupos la menuo. Partoj eble estos malplenaj
 	private lazy var menuejo: UIView = {
 		let view = UIView()
 		view.backgroundColor = agordoj.menuaKoloro
@@ -92,6 +110,7 @@ final class ShovMenuoViewController: UIViewController {
 		return view
 	}()
 	
+	/// Rulumejo por rulumado de menuenhavoj
 	private lazy var rulumejo: UIScrollView = {
 		let ejo = UIScrollView()
 		ejo.isScrollEnabled = true
@@ -111,13 +130,16 @@ final class ShovMenuoViewController: UIViewController {
 		return staplo
 	}()
 	
+	/// Vidoligo (view constraint) kiu regas la pozicion de la menuo
 	private var dekstraLigo: Constraint?
 	
 	// MARK: - Kalkulita Stato
 	
-	lazy var havasBildojn = eroj.contains(where: { $0.bildo != nil })
+	/// Ĉu estas almenaŭ unu bildo inter la menueroj
+	private lazy var havasBildojn = eroj.contains(where: { $0.bildo != nil })
 	
-	lazy var minimumaLargho: CGFloat = {
+	/// La minimuma larĝo de la menuo. Dependas de la aparatklaso.
+	private lazy var minimumaLargho: CGFloat = {
 		switch aparatInformo.aparatKlaso {
 		case .iFono:
 			Konstantoj.minimumaLarghoiPhone
@@ -128,17 +150,21 @@ final class ShovMenuoViewController: UIViewController {
 	
 	// MARK: - Agordoj
 	
-	let eroj: [Menuero]
+	/// Menueroj
+	private let eroj: [Menuero]
 	
-	let agordoj: Agordoj
+	/// Stilagordoj de la menuo
+	private let agordoj: Agordoj
 	
-	let navigaciilaAlto: CGFloat
+	/// La alto de la navigaciejo. Devas esti egala al la aparata navigaciej-alto
+	private let navigaciilaAlto: CGFloat
 	
-	let foriri: () -> Void
+	/// Fermo kiu malaperigas la menuon
+	private let foriri: () -> Void
 	
-	let aparatInformo: AparatInformo
+	private let aparatInformo: AparatInformo
 	
-	// MARK: -
+	// MARK: - Valorizado
 	
 	init(
 		eroj: [Menuero],
@@ -206,6 +232,7 @@ final class ShovMenuoViewController: UIViewController {
 	
 	// MARK: - InterfacHelpiloj
 	
+	/// Faras kaj liveras vidon representantan tiun menueron
 	private func fariEroVidon(el ero: Menuero) -> ShovMenueroView {
 		ShovMenueroView(
 			bildo: ero.bildo,
@@ -218,15 +245,18 @@ final class ShovMenuoViewController: UIViewController {
 	
 	// MARK: - Agoj
 	
+	/// Uzanto premis la ombron
 	@objc private func premisOmbron() {
 		malaperi()
 	}
 	
+	/// Uzanto elektis tiun eron
 	private func elektis(eron ero: Menuero) {
 		ero.ago()
 		malaperi()
 	}
 	
+	/// Uzanto ŝovis la menuon flanken ajnadirekten
 	@objc private func shovis(_ rekonilo: UIPanGestureRecognizer) {
 		let movo = rekonilo.translation(in: menuejo)
 		
@@ -245,12 +275,14 @@ final class ShovMenuoViewController: UIViewController {
 		}
 	}
 	
+	/// La uzanto rapide ŝovegis (swiped) la menuon dekstren
 	@objc private func shovegis(_ rekonilo: UISwipeGestureRecognizer) {
 		malaperi()
 	}
 	
-	// MARK: -
+	// MARK: - Aperado kaj Malaperado
 	
+	/// Aperigas la menuon, aŭ igas ke ĝi okupu sian plenan larĝon. Ombrigas la ombron.
 	private func malfermi() {
 		UIView.animate(withDuration: Konstantoj.animaciaDauro) { [weak self] in
 			self?.dekstraLigo?.update(offset: -self!.menuejo.bounds.width)
@@ -259,6 +291,7 @@ final class ShovMenuoViewController: UIViewController {
 		}
 	}
 	
+	/// Malaperigas la menuon kaj la ombron
 	private func malaperi() {
 		UIView.animate(
 			withDuration: Konstantoj.animaciaDauro,

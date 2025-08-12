@@ -87,15 +87,7 @@ final class PaghingoViewController: UIViewController {
 					ago: { [weak self] in self?.premisInformoj() }
 				)
 			],
-			agordoj: ShovMenuoViewController.Agordoj(
-				titolo: nil,
-				navigaciaKoloro: DinamikaStilo.shovmenuaFono,
-				navigaciaTekstKoloro: DinamikaStilo.dokumentaTeksto,
-				menuaKoloro: DinamikaStilo.shovmenuaFono,
-				malplenaKoloro: DinamikaStilo.shovmenuaFono,
-				tekstKoloro: DinamikaStilo.dokumentaTeksto,
-				dividiloKoloro: DinamikaStilo.dokumentaTeksto.withAlphaComponent(0.3)
-			),
+			agordoj: ShovMenuoViewController.Agordoj.el(stilo: UzantDatumaro.komuna.stilo, titolo: nil),
 			navigaciilaAlto: navigaciAlto,
 			forigi: { [weak self] in
 				self?.dismiss(animated: false)

@@ -1,6 +1,6 @@
 import UIKit
 
-/// Premebla ero-video en shovmenuo.
+/// Premebla ero-vido en shovmenuo.
 final class ShovMenueroView: UIControl {
 	private enum Konstantoj {
 		/// Marĝeno flanke de bildo kaj titolo
@@ -21,6 +21,7 @@ final class ShovMenueroView: UIControl {
 	
 	// MARK: - Interfaceroj
 	
+	/// Tekstetikedo
 	private lazy var etikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.text = teksto
@@ -30,6 +31,7 @@ final class ShovMenueroView: UIControl {
 		return etikedo
 	}()
 	
+	/// Ejo por la menuera bildo, se estas
 	private lazy var bildejo: UIImageView = {
 		let ejo = UIImageView(image: bildo)
 		ejo.tintColor = menuAgordoj.tekstKoloro
@@ -37,6 +39,7 @@ final class ShovMenueroView: UIControl {
 		return ejo
 	}()
 	
+	/// Suba streko dividante menuerojn
 	private lazy var substreko: UIView = {
 		let streko = UIView()
 		streko.backgroundColor = menuAgordoj.dividiloKoloro

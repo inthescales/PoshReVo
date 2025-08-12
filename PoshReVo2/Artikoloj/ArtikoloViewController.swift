@@ -267,15 +267,7 @@ final class ArtikoloViewController: UIViewController {
 		
 		let menuo = ShovMenuoViewController(
 			eroj: eroj,
-			agordoj: ShovMenuoViewController.Agordoj(
-				titolo: Tekstoj.saltiAl,
-				navigaciaKoloro: stilo.shovmenuaFono,
-				navigaciaTekstKoloro: stilo.navigaciaTeksto,
-				menuaKoloro: stilo.shovmenuaFono,
-				malplenaKoloro: stilo.shovmenuaFono,
-				tekstKoloro: stilo.dokumentaTeksto,
-				dividiloKoloro: stilo.dokumentaTeksto.withAlphaComponent(0.3)
-			),
+			agordoj: ShovMenuoViewController.Agordoj.el(stilo: stilo, titolo: Tekstoj.saltiAl),
 			navigaciilaAlto: navigaciAlto,
 			forigi: { [weak self] in
 				self?.dismiss(animated: false)

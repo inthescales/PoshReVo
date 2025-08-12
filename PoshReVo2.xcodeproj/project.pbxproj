@@ -69,7 +69,7 @@
 		00B27B7C2DF751FE00526F82 /* TradukaroChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B7B2DF751FE00526F82 /* TradukaroChelo.swift */; };
 		00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */; };
 		00B27B942DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B932DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift */; };
-		00B27B9C2E08889000526F82 /* StrekoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B9B2E08889000526F82 /* StrekoView.swift */; };
+		00B27B9C2E08889000526F82 /* StrekaroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B9B2E08889000526F82 /* StrekaroView.swift */; };
 		00B27BA12E099FFA00526F82 /* ShovMenueroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27BA02E099FFA00526F82 /* ShovMenueroView.swift */; };
 		00B27BA32E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27BA22E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift */; };
 		00E5D5F72E4A6BD8004877ED /* MallongigoListo+Chiuj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5F62E4A6BD5004877ED /* MallongigoListo+Chiuj.swift */; };
@@ -153,7 +153,7 @@
 		00B27B7B2DF751FE00526F82 /* TradukaroChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukaroChelo.swift; sourceTree = "<group>"; };
 		00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubartikoloTitoloChelo.swift; sourceTree = "<group>"; };
 		00B27B932DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigaciiloHelpiloj.swift; sourceTree = "<group>"; };
-		00B27B9B2E08889000526F82 /* StrekoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrekoView.swift; sourceTree = "<group>"; };
+		00B27B9B2E08889000526F82 /* StrekaroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrekaroView.swift; sourceTree = "<group>"; };
 		00B27BA02E099FFA00526F82 /* ShovMenueroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShovMenueroView.swift; sourceTree = "<group>"; };
 		00B27BA22E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AranghHelpiloj.swift"; sourceTree = "<group>"; };
 		00E5D5F62E4A6BD5004877ED /* MallongigoListo+Chiuj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MallongigoListo+Chiuj.swift"; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 			children = (
 				00B27B452DCE633100526F82 /* Vortlisto */,
 				00B27B9F2E099FEF00526F82 /* Shovmenuo */,
-				00B27B9B2E08889000526F82 /* StrekoView.swift */,
+				00B27B9B2E08889000526F82 /* StrekaroView.swift */,
 				003024DC2E401A21006D0C14 /* OmbroImitilo.swift */,
 			);
 			path = Interfaceroj;
@@ -641,7 +641,7 @@
 				00B27B202DC3F9F700526F82 /* LingvoBretoViewController.swift in Sources */,
 				003024E22E42653B006D0C14 /* DinamikaStilo.swift in Sources */,
 				00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */,
-				00B27B9C2E08889000526F82 /* StrekoView.swift in Sources */,
+				00B27B9C2E08889000526F82 /* StrekaroView.swift in Sources */,
 				00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */,
 				00B27B7C2DF751FE00526F82 /* TradukaroChelo.swift in Sources */,
 				003024E72E4265F2006D0C14 /* Pergamena.swift in Sources */,
