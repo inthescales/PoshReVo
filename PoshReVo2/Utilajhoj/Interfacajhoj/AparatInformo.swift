@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: - AparatInformo
+
 /// Klaso de aparato
 enum AparatKlaso {
 	case iFono
@@ -12,19 +14,21 @@ enum Orientigho {
 	case horizontala
 }
 
-enum Stilo {
+enum Heleco {
 	case hela
 	case malhela
 	
-	static func el(trajtaro: UITraitCollection) -> Stilo {
+	static func el(trajtaro: UITraitCollection) -> Heleco {
 		switch trajtaro.userInterfaceStyle {
 		case .light:
 			return .hela
 		case .dark:
 			return .malhela
+		case .unspecified:
+			return .hela
 		default:
-			// Ĉi tio espereble neniam okazos
-			assert(false, "Nekonata stilo")
+			// Programtradukilo avertas ke pluajn valorojn povos aldoniĝi estontece
+			// kaj rekomendas ke estu defaŭlta kazo
 			return .hela
 		}
 	}
@@ -32,13 +36,20 @@ enum Stilo {
 
 /// Havigas informojn pri la aparato, ekrano, ktp
 protocol AparatInformo {
+	/// La klaso de la aparato
 	var aparatKlaso: AparatKlaso { get }
+	
+	/// La orientiĝo de la aparata ekrano
 	var orientigho: Orientigho { get }
-	var stilo: Stilo { get }
+	
+	/// La heleco de la interfaco
+	var heleco: Heleco { get }
 	
 	/// Rilato inter logikaj bilderoj kaj aparataj. Vd. UIScreen.scale
 	var skalo: CGFloat { get }
 }
+
+// MARK: - NunaAparato
 
 /// AparatInformo kiu provizas informojn pri la nuna aparato
 class NunaAparato: AparatInformo {
@@ -50,8 +61,6 @@ class NunaAparato: AparatInformo {
 		case .pad:
 			return .iPado
 		default:
-			// Ĉi tio espereble neniam okazos
-			assert(false, "Nekonata aparat-klaso")
 			return .iFono
 		}
 	}
@@ -64,31 +73,15 @@ class NunaAparato: AparatInformo {
 		case .landscapeLeft, .landscapeRight:
 			return .horizontala
 		default:
-			// Ĉi tio espereble neniam okazos
-			assert(false, "Nekonata orientiĝo")
 			return .vertikala
 		}
 	}
 	
-	// TODO: Uzu ĉi tio
-	/// Porcio de la tuta larĝo de la ekrano kiu estu uzata
-	var larghoPorcio: Double {
-		switch aparatKlaso {
-		case .iFono:
-			return 1.0
-		case .iPado:
-			switch orientigho {
-			case .vertikala:
-				return 0.8
-			case .horizontala:
-				return 0.6
-			}
-		}
+	/// Nuna heleco de la aparata interfaco
+	var heleco: Heleco {
+		Heleco.el(trajtaro: UITraitCollection.current)
 	}
 	
-	var stilo: Stilo {
-		Stilo.el(trajtaro: UITraitCollection.current)
-	}
-	
+	/// Bildero-skalo de la aparato
 	var skalo: CGFloat = UIScreen.main.scale
 }

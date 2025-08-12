@@ -4,7 +4,7 @@ extension UIColor {
 	/// Dinamika koloro kun hela kaj malhela variaĵoj
 	convenience init(hela: UIColor, malhela: UIColor) {
 		self.init(dynamicProvider: { trajtaro in
-			switch Stilo.el(trajtaro: trajtaro) {
+			switch Heleco.el(trajtaro: trajtaro) {
 			case .hela:
 				return hela
 			case .malhela:

@@ -1,3 +1,4 @@
+/// Alireblo-tekstoj, kie ĝi malsamas ol tekstoj
 enum AlirebloTekstoj {
 	// MARK: - Serĉpaĝo
 	

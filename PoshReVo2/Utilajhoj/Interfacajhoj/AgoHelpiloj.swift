@@ -1,6 +1,7 @@
 import UIKit
 
 enum AgoHelpiloj {
+	/// Prezenti sisteman ago-konfirmilon
 	static func prezentiKonfirmilon(
 		teksto: String,
 		prezentilo: UIViewController,

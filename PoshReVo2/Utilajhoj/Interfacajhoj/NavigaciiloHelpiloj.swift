@@ -1,6 +1,8 @@
 import UIKit
 
+/// Butonofariloj kaj aliaj helpiloj por provizi navigaciejojn.
 enum NavigaciiloHelpiloj {
+	/// Fari kaj liveri X butono
 	static func iksoButono(
 		por vc: UIViewController,
 		ago: Selector,
@@ -17,6 +19,7 @@ enum NavigaciiloHelpiloj {
 		return butono
 	}
 	
+	/// Fari kaj liveri 'Rezigni' butonon
 	static func rezigniButono(
 		por vc: UIViewController,
 		ago: Selector,
@@ -29,14 +32,6 @@ enum NavigaciiloHelpiloj {
 			action: ago
 		)
 		butono.tintColor = stilo.navigaciaButono
-		return butono
-	}
-	
-	static func hejmoButono(por vc: UIViewController, ago: Selector, stilo: InterfacStilo) -> UIButton {
-		let butono = UIButton(type: .system)
-		butono.addTarget(vc, action: ago, for: .touchUpInside)
-		butono.setImage(UIImage(named: "libro")!, for: .normal)
-		butono.tintColor = stilo.navigaciaTeksto
 		return butono
 	}
 }

@@ -1,3 +1,4 @@
+/// Ĉiuj tekstoj en la apo
 enum Tekstoj {
 	static let poshaRetaVortaro = "Poŝa Reta Vortaro"
 	
