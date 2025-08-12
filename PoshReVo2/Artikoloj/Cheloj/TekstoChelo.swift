@@ -44,7 +44,7 @@ final class TekstoChelo: UITableViewCell {
 			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 		]
 		
-		TekstAtributoHelpiloj.provizi(etikedon: etikedo, per: teksto, tekstGrando: 18.0) // TODO: Tiparo
+		TekstAtributoHelpiloj.provizi(etikedon: etikedo, per: teksto, tiparo: Tiparo.artikolaTeksto)
 		
 		etikedo.snp.remakeConstraints { make in
 			make.top.bottom.equalToSuperview()

@@ -185,7 +185,7 @@ final class TradukaroChelo: UITableViewCell {
 			lingvoEtikedo.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
 			
 			let difinoEtikedo = TTTAttributedLabel(frame: .zero)
-			TekstAtributoHelpiloj.provizi(etikedon: difinoEtikedo, per: traduko.teksto, tekstGrando: 18.0) // TODO: Tiparo
+			TekstAtributoHelpiloj.provizi(etikedon: difinoEtikedo, per: traduko.teksto, tiparo: Tiparo.artikolaTeksto)
 			difinoEtikedo.textColor = stilo.dokumentaTeksto
 			difinoEtikedo.numberOfLines = 0
 			difinoEtikedo.translatesAutoresizingMaskIntoConstraints = false

@@ -178,15 +178,14 @@ enum TekstAtributoHelpiloj {
 	static func provizi(
 		etikedon etikedo: TTTAttributedLabel,
 		per teksto: String,
-		tekstGrando: CGFloat
+		tiparo: UIFont
 	) {
 		// Prepari tekst-stilojn
-		let bazaTiparo = UIFont.systemFont(ofSize: tekstGrando).dinamika()
 		let atributoj = TekstAtributoHelpiloj.kreiAtributojn(por: teksto)
 		etikedo.setText(TekstAtributoHelpiloj.atributaTeksto(
 			por: teksto,
 			kun: atributoj,
-			tiparo: bazaTiparo)
+			tiparo: tiparo)
 		)
 		
 		// Ŝajne ne eblas aldoni ligilojn kiel tekst-atributoj je TTTAttributedLabel.

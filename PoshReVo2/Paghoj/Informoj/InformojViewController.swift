@@ -10,11 +10,12 @@ final class InformojViewController: UIViewController {
 		static let margheno: CGFloat = 8.0
 		
 		/// Spaco inter ĉiuj du sekcioj
-		static let intersekciaSpaco: CGFloat = 16.0
+		static let intersekciaSpaco: CGFloat = 32.0
 	}
 		
 	// MARK: - Interfaceroj
 	
+	/// Staplo da tekstelementoj
 	private lazy var staplo: UIStackView = {
 		let staplo = UIStackView()
 		staplo.axis = .vertical
@@ -22,6 +23,7 @@ final class InformojViewController: UIViewController {
 		return staplo
 	}()
 	
+	/// Rulumejo kiu enhavos la staplon
 	private lazy var rulumejo: UIScrollView = {
 		let ejo = UIScrollView()
 		ejo.showsHorizontalScrollIndicator = false
@@ -37,6 +39,8 @@ final class InformojViewController: UIViewController {
 	// MARK: - Agordoj
 	
 	private let stilo: InterfacStilo
+	
+	// MARK: - Valorizado
 	
 	init(stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
 		self.stilo = stilo
@@ -56,13 +60,23 @@ final class InformojViewController: UIViewController {
 
 		view.addEdgeMatchedSubview(rulumejo)
 		
+		// Konverti tekstojn en sekcio-modelojn
+		for (titolo, teksto) in enhavoj {
+			let novaSekcio = InformoSekcio(titolo: titolo, teksto: teksto, delegate: self)
+			staplo.addArrangedSubview(novaSekcio)
+		}
+	}
+	
+	// MARK: - Enhavoj
+	
+	private let enhavoj: [(String?, String)] = {
 		var enhavoj: [(String?, String)] = [
 			(
-				"Pri ReVo",
-				"Reta Vortaro estas vortaro de Esperanto, legebla senpage sur la reto ĉe <a href=\"https://www.reta-vortaro.de/\">www.reta-vortaro.de</a>. Ĉi-apo kolektas kaj prezentas la difinojn kaj tradukojn kiujn ĝi enhavas, samkiel ili aperas tie.\n\nReta Vortaro estas redaktata de volontuloj. Se vi trovas eraron aŭ mankon, aŭ nur deziras kontribui, <a href=\"https://revuloj.github.io/temoj/redinfo.html\">fariĝu redaktanto</a>"
+				"Pri Reta Vortaro",
+				"Reta Vortaro estas vortaro de Esperanto, legebla senpage sur la reto ĉe <a href=\"https://www.reta-vortaro.de/\">www.reta-vortaro.de</a>. Ĉi tiu apo kolektas kaj prezentas la difinojn kaj tradukojn kiujn ĝi enhavas, samkiel ili aperas tie.\n\nReta Vortaro estas redaktata de volontuloj. Se vi trovas eraron aŭ mankon, aŭ nur deziras kontribui, <a href=\"https://revuloj.github.io/temoj/redinfo.html\">fariĝu redaktanto</a>"
 			),
 			(
-				"Pri PoŝReVo",
+				"Pri Poŝa Reta Vortaro",
 				"Poŝa Reta Vortaro estas programita de Robin Hill. Pliaj informoj troviĝas ĉe <a href=\"http://www.inthescales.com/projects/poshrevo_eo/\">ĉi tiu retpaĝo</a>.\n\nSe vi bezonas helpon, renkontis eraron, aŭ havas ajnaspecan komenton vi povas kontakti per retpoŝto je <a href=\"mailto:kontakto@inthescales.com\">tiu ĉi adreso</a>"
 			),
 			(
@@ -75,15 +89,13 @@ final class InformojViewController: UIViewController {
 			)
 		]
 		
+		// Versio-numero
 		if let versioNumero = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
 			enhavoj.append((nil, "<k>Versio-numero " + versioNumero + "</k>"))
 		}
 		
-		for (titolo, teksto) in enhavoj {
-			let novaSekcio = InformoSekcio(titolo: titolo, teksto: teksto, delegate: self)
-			staplo.addArrangedSubview(novaSekcio)
-		}
-	}
+		return enhavoj
+	}()
 }
 
 extension InformojViewController: TTTAttributedLabelDelegate {

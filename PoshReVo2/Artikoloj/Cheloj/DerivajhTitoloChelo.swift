@@ -20,7 +20,7 @@ final class DerivajhTitoloChelo: UITableViewCell {
 		return dividilo
 	}()
 	
-	//
+	// MARK: - Valorizado
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)

@@ -41,7 +41,7 @@ enum Tiparo {
 	
 	// MARK: Informopaĝo
 	
-	static let informoTitolo = tiparo(20.0, stilo: .grasa)
+	static let informoTitolo = derivajhaTitolo
 	static let informoTeksto = tiparo(18.0)
 	
 	/// Kreas novan tiparon el la baza tiparo, havantan certan grandon kaj stilon.
