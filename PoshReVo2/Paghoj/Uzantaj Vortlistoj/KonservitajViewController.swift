@@ -84,10 +84,10 @@ final class KonservitajViewController: UIViewController {
 	
 	@objc private func forigi() {
 		AgoHelpiloj.prezentiKonfirmilon(
-			teksto: Tekstoj.forigiKonservitajnDemand,
+			teksto: Tekstoj.nuligiKonservitajnDemand,
 			prezentilo: self,
 		) { [weak self] in
-			self?.datumRegilo.forigiKonservitajn()
+			self?.datumRegilo.nuligiKonservitajn()
 		}
 	}
 	

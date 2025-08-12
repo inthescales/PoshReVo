@@ -1,17 +1,20 @@
 import UIKit
 
-/// Pagho montranta liston da mallongigoj
+/// Ekrano montranta liston da mallongigoj
 final class MallongigoListoViewController: UIViewController {
 	private enum Konstantoj {
+		/// Flankaj marĝeno ĉirkaŭ tekstoj
 		static let margheno: CGFloat = 8.0
 		
 		static let chelIdentigilo = "mallongigoIdentigilo"
 	}
 	
+	/// Mallongigo kaj ĝia signifo, kiel ĝi aperu en listo
 	typealias Ero = (mallongigo: String, signifo: String)
 	
 	// MARK: - Interfaceroj
 	
+	/// Serĉilo por filtri mallongigojn
 	private lazy var serchilo: SerchiloView = {
 		let serchilo = SerchiloView(
 			lokokupaTeksto: Tekstoj.serchiMallongigojn,
@@ -21,6 +24,7 @@ final class MallongigoListoViewController: UIViewController {
 		return serchilo
 	}()
 	
+	/// Tabelo montranta mallongigojn
 	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
 		tabelo.delegate = self
@@ -35,15 +39,24 @@ final class MallongigoListoViewController: UIViewController {
 	
 	// MARK: - Stato
 	
-	private var videblajEroj: [Ero]
+	/// Listeroj kiuj estu videblaj
+	private var videblajEroj: [Ero] {
+		didSet {
+			tabelo.reloadData()
+		}
+	}
 	
 	// MARK: - Agordoj
 	
+	/// Titolo kiu aperos ekransupre
 	private let titolo: String?
 	
+	/// Mallongigoj kiujn la listo montru
 	private let eroj: [Ero]
 	
 	private let stilo: InterfacStilo
+	
+	// MARK: - Valorizado
 	
 	init(titolo: String?, eroj: [Ero], stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
 		self.titolo = titolo
@@ -76,10 +89,10 @@ final class MallongigoListoViewController: UIViewController {
 		}
 	}
 	
+	/// Filtri la videblajn mallongigojn laŭ tiu serĉteksto
 	private func filtri(teksto: String) {
 		guard !teksto.isEmpty else {
 			videblajEroj = eroj
-			tabelo.reloadData()
 			return
 		}
 		
@@ -88,8 +101,6 @@ final class MallongigoListoViewController: UIViewController {
 			ero.mallongigo.lowercased().contains(minusklaTeksto)
 			|| ero.signifo.lowercased().contains(minusklaTeksto)
 		}
-		
-		tabelo.reloadData()
 	}
 }
 

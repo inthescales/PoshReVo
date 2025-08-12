@@ -1,11 +1,13 @@
 import UIKit
 
+/// Ekrano por agordi agordojn
 final class AgordojViewController: UIViewController {
 	private enum Konstantoj {
 		static let chelidentigiloBaza = "agordojBaza"
 		static let chelidentigiloEtikeda = "agordojEtikedhava"
 	}
 	
+	/// Tabelo de agord-agoj
 	lazy var tabelo = {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
@@ -14,7 +16,7 @@ final class AgordojViewController: UIViewController {
 		return tabelo
 	}()
 	
-	// MARK: Agordoj
+	// MARK: - Agordoj
 	
 	private let kunordigilo: Kunordigilo
 	
@@ -22,7 +24,7 @@ final class AgordojViewController: UIViewController {
 	
 	private var stilo: InterfacStilo
 	
-	//
+	// MARK: - Valorizado
 	
 	init(
 		kunordigilo: Kunordigilo = .komuna,
@@ -55,30 +57,26 @@ final class AgordojViewController: UIViewController {
 	
 	// MARK: - Uzant-agoj
 	
-	private func premisForigiHistorion() {
-		// TODO: Elekti ĝustan ĉelon
-		// if let prezentilo = konfirmilo.popoverPresentationController,
-		// 	   let chelo = tabelo.cellForRow(at: IndexPath(item: 0, section: 0)) {
-		// 	   prezentilo.sourceView = chelo;
-		// 	   prezentilo.sourceRect = chelo.bounds;
-		// }
+	private func premisNuligiHistorion() {
+		// TODO: valorizi prezentilo.sourceView kaj prezentilo.sourceRect, por iPad?
+		// TODO: (por ke ŝpruca konfirmilo aperu ĝustloke?)
 		
 		AgoHelpiloj.prezentiKonfirmilon(
-			teksto: Tekstoj.forigiHistorionDemand,
+			teksto: Tekstoj.nuligiHistorionDemand,
 			prezentilo: self,
 		) { [weak self] in
-			self?.datumRegilo.forigiHistorion()
+			self?.datumRegilo.nuligiHistorion()
 		}
 	}
 	
-	private func premisforigiKonservitajn() {
-		// TODO: Elekti ĝustan ĉelon, kiel supre
+	private func premisNuligiKonservitajn() {
+		// TODO: valorizi prezentilo.sourceView kaj prezentilo.sourceRect, por iPad?
 		
 		AgoHelpiloj.prezentiKonfirmilon(
-			teksto: Tekstoj.forigiHistorionDemand,
+			teksto: Tekstoj.nuligiHistorionDemand,
 			prezentilo: self
 		) { [weak self] in
-			self?.datumRegilo.forigiKonservitajn()
+			self?.datumRegilo.nuligiKonservitajn()
 		}
 	}
 	
@@ -108,9 +106,9 @@ extension AgordojViewController: UITableViewDelegate {
 				}
 			)
 		case (1, 0):
-			premisForigiHistorion()
+			premisNuligiHistorion()
 		case (1, 1):
-			premisforigiKonservitajn()
+			premisNuligiKonservitajn()
 		case (2, 0):
 			guard let navigaciilo = navigationController else {
 				break
@@ -155,19 +153,19 @@ extension AgordojViewController: UITableViewDataSource {
 		switch (indexPath.section, indexPath.row) {
 		case (0, 0):
 			chelo = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
-			chelo.textLabel?.text = "Viaj Lingvoj"
+			chelo.textLabel?.text = Tekstoj.viajLingvoj
 			chelo.detailTextLabel?.text = String(datumRegilo.datumaro.lingvoj.count) + Tekstoj._lingvoj
 		case (1, 0):
 			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
-			chelo.textLabel?.text = "Forigi Historion"
+			chelo.textLabel?.text = Tekstoj.nuligiHistorion
 			chelo.accessoryType = .none
 		case (1, 1):
 			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
-			chelo.textLabel?.text = "Forigi Konservitajn"
+			chelo.textLabel?.text = Tekstoj.nuligiKonservitajn
 			chelo.accessoryType = .none
 		case (2, 0):
 			chelo = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
-			chelo.textLabel?.text = "Ŝanĝi Stilon"
+			chelo.textLabel?.text = Tekstoj.shanghiStilon
 			chelo.detailTextLabel?.text = stilo.nomo
 		default:
 			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)

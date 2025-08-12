@@ -2,8 +2,9 @@ import UIKit
 
 import ReVoDatumbazo
 
-/// Reprezentas iun ajn ekranon kiu prezentas liston da vortoj. Ekz. serĉrezultoj, fakvortoj, ktp.
+/// Reprezentas iun ajn ekranon kiu prezentas liston da lingvoj. Uzata en lingvoelektado
 final class LingvoListoViewController: UIViewController {
+	/// Tabelo montrota lingvojn
 	private lazy var tabelo: UITableView = {
 		let tabelo = UITableView()
 		tabelo.delegate = self
@@ -13,19 +14,22 @@ final class LingvoListoViewController: UIViewController {
 		return tabelo
 	}()
 	
-	// MARK: Stato
-	
+	// MARK: - Stato
+
+	/// La lingvoj kiuj estu montrataj
 	private var lingvoj: [Lingvo]
 	
+	/// Lingvoj kiuj estas jam elektita, kaj kiuj do estu markitaj
 	private let jamElektitaj: [Lingvo]
 	
 	// MARK: Agordoj
 	
+	/// Fermo vokata kiam la uzanto elektas lingvon
 	private let elektisLingvon: (Lingvo) -> ()
 	
 	private let stilo: InterfacStilo
 	
-	//
+	// MARK: - Valorizado
 	
 	init(
 		lingvoj: [Lingvo],
@@ -50,6 +54,7 @@ final class LingvoListoViewController: UIViewController {
 	
 	// MARK: Agordado
 	
+	/// Montras tiujn lingvojn en la tabelo
 	func montri(lingvojn lingvoj: [Lingvo]) {
 		self.lingvoj = lingvoj
 		tabelo.reloadData()

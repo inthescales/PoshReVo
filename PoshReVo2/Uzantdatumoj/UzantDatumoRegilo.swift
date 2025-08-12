@@ -80,7 +80,7 @@ final class UzantDatumoRegilo {
 	}
 	
 	/// Forigas la artikol-historion
-	func forigiHistorion() {
+	func nuligiHistorion() {
 		datumaro.historio = []
 		traktilo.skribi(datumaron: datumaro)
 		
@@ -121,7 +121,7 @@ final class UzantDatumoRegilo {
 	}
 	
 	/// Forigas ĉiujn konservitajn artikolojn
-	func forigiKonservitajn() {
+	func nuligiKonservitajn() {
 		datumaro.konservitaj = []
 		traktilo.skribi(datumaron: datumaro)
 		

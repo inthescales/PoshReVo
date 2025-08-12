@@ -2,7 +2,7 @@ import UIKit
 
 extension InterfacStilo {
 	static let simpla = InterfacStilo(
-		nomo: "simpla",
+		nomo: "Simpla",
 		identigilo: "simpla",
 		hela: {
 			let verda = UIColor(deksesuma: 0x0a9618)

@@ -1,18 +1,23 @@
 import UIKit
 
+/// Ĉelo por montri mallongigon kaj ĝian signifon
 final class MallongigoListoChelo: UITableViewCell {
 	private enum Konstantoj {
+		/// Flankaj marĝenoj ĉirkaŭ tekstoj
 		static let margheno: CGFloat = 8.0
 		
+		/// Minimuma spaco inter mallongiga kaj signifa etikedoj
 		static let interspaco: CGFloat = 16.0
 	}
 	
+	/// Etikedo kiu montros mallongigon
 	private lazy var mallongigoEtikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.font = Tiparo.mallongigo
 		return etikedo
 	}()
 
+	/// Etikedo kiu montros la signifon de mallongigo
 	private lazy var signifoEtikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.font = Tiparo.mallongigoDifino

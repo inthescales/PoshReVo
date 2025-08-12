@@ -1,10 +1,12 @@
 import UIKit
 
+/// Menuo-ekrano por elekti stilon
 final class StiloElektiloViewController: UIViewController {
 	private enum Konstantoj {
 		static let chelidentigilo = "stiloElektilo"
 	}
 
+	/// Tabelo de stiloj
 	lazy var tabelo = {
 		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
@@ -14,8 +16,9 @@ final class StiloElektiloViewController: UIViewController {
 		return tabelo
 	}()
 	
-	// MARK: Agordoj
+	// MARK: - Agordoj
 	
+	/// Fermo vokata kiam uzanto elektas stilon
 	private let kompleti: (InterfacStilo?) -> ()
 		
 	private let kunordigilo: Kunordigilo
@@ -24,7 +27,7 @@ final class StiloElektiloViewController: UIViewController {
 	
 	private let stilo: InterfacStilo
 	
-	//
+	// MARK: - Valorizado
 	
 	init(
 		kompleti: @escaping (InterfacStilo?) -> (),

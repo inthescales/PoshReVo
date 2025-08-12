@@ -42,8 +42,11 @@ enum Tekstoj {
 	// MARK: - Agordoj
 	
 	static let _lingvoj = " lingvoj"
-	static let forigiHistorionDemand = "Forigi historion?"
-	static let forigiKonservitajnDemand = "Forigi konservitajn artikolojn?"
+	static let nuligiHistorion = "Nuligi Historion"
+	static let nuligiHistorionDemand = "Nuligi historion?"
+	static let nuligiKonservitajn = "Nuligi Konservitajn"
+	static let nuligiKonservitajnDemand = "Nuligi konservitajn artikolojn?"
+	static let shanghiStilon = "Ŝanĝi Stilon"
 	
 	static let jes = "Jes"
 	static let ne = "Ne"

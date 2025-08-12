@@ -85,10 +85,10 @@ final class HistorioViewController: UIViewController {
 	
 	@objc private func forigi() {
 		AgoHelpiloj.prezentiKonfirmilon(
-			teksto: Tekstoj.forigiHistorionDemand,
+			teksto: Tekstoj.nuligiHistorionDemand,
 			prezentilo: self,
 		) { [weak self] in
-			self?.datumRegilo.forigiHistorion()
+			self?.datumRegilo.nuligiHistorion()
 		}
 	}
 	

@@ -2,7 +2,9 @@ import UIKit
 
 import ReVoDatumbazo
 
+/// Ekrano montranta liston da lingvoj, kiujn la uzanto povas aldoni al la uzantaj lingvoj
 final class LingvoElektiloViewController: UIViewController {
+	/// Tekstserĉilo
 	lazy var serchilo = SerchiloView(
 		lokokupaTeksto: Tekstoj.serchiLingvon,
 		iksumi: true,
@@ -11,6 +13,7 @@ final class LingvoElektiloViewController: UIViewController {
 		}
 	)
 	
+	/// Lingvolisto
 	lazy var lingvoListoVC = {
 		return LingvoListoViewController(
 			lingvoj: montrotajLingvoj,
@@ -24,6 +27,7 @@ final class LingvoElektiloViewController: UIViewController {
 	
 	// MARK: Stato
 
+	/// Lingvoj kiuj estu montrataj en la listo (ekz., filtrita sub-aro de la tuta lingvaro)
 	var montrotajLingvoj: [Lingvo] {
 		didSet {
 			if oldValue != montrotajLingvoj {
@@ -37,7 +41,7 @@ final class LingvoElektiloViewController: UIViewController {
 	/// La tuto de elekteblaj lingvoj
 	let lingvaro: [Lingvo]
 	
-	/// Lingvoj kiuj estas jam elektitaj, kaj estu neelekteblaj ĉi tie
+	/// Lingvoj kiuj estas jam elektitaj, kaj do estu neelekteblaj ĉi tie
 	let jamElektitaj: [Lingvo]
 	
 	/// Vokota kiam uzanto elektos lingvon
@@ -45,17 +49,18 @@ final class LingvoElektiloViewController: UIViewController {
 	
 	private let stilo: InterfacStilo
 	
-	//
+	// MARK: - Valorizado
 	
 	init(
 		kromEsperanto: Bool = false,
 		jamElektitaj: [Lingvo],
 		elektisLingvon: @escaping (Lingvo) -> (),
+		datumbazo: VortaroDatumbazo = .komuna,
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
-		lingvaro = kromEsperanto
-			? VortaroDatumbazo.komuna.neesperantajLingvoj
-			: VortaroDatumbazo.komuna.chiujLingvoj
+		lingvaro = (kromEsperanto)
+			? datumbazo.neesperantajLingvoj
+			: datumbazo.chiujLingvoj
 		montrotajLingvoj = lingvaro
 		
 		self.jamElektitaj = jamElektitaj
@@ -93,8 +98,9 @@ final class LingvoElektiloViewController: UIViewController {
 		dismiss(animated: true)
 	}
 	
-	// MARK: Serĉa Filtrado
+	// MARK: - Serĉa Filtrado
 	
+	/// Efektivigas serĉon kaj filtras la liston da montrotaj lingvoj
 	private func filtriRezultojn(per serchTeksto: String) {
 		guard !serchTeksto.isEmpty else {
 			montrotajLingvoj = lingvaro
