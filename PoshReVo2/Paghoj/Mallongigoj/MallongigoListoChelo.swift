@@ -14,6 +14,7 @@ final class MallongigoListoChelo: UITableViewCell {
 	private lazy var mallongigoEtikedo: UILabel = {
 		let etikedo = UILabel()
 		etikedo.font = Tiparo.mallongigo
+		etikedo.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
 		return etikedo
 	}()
 
@@ -23,6 +24,7 @@ final class MallongigoListoChelo: UITableViewCell {
 		etikedo.font = Tiparo.mallongigoDifino
 		etikedo.numberOfLines = 0
 		etikedo.textAlignment = .right
+		etikedo.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 		return etikedo
 	}()
 	
