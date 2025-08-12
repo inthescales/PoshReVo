@@ -32,6 +32,7 @@ class InterfacStilo {
 	lazy var dokumentaMalfortaTeksto = UIColor(hela: hela.dokumentaMalfortaTeksto, malhela: malhela.dokumentaMalfortaTeksto)
 	lazy var dokumentaDividilo = UIColor(hela: hela.dokumentaDividilo, malhela: malhela.dokumentaDividilo)
 	lazy var dokumentLigilo = UIColor(hela: hela.dokumentLigilo, malhela: malhela.dokumentLigilo)
+	lazy var dokumentLigiloPremita = UIColor(hela: hela.dokumentLigiloPremita, malhela: malhela.dokumentLigiloPremita)
 	lazy var dokumentSencNumero = UIColor(hela: hela.dokumentSencNumero, malhela: malhela.dokumentSencNumero)
 	lazy var dokumentEkzemplo = UIColor(hela: hela.dokumentEkzemplo, malhela: malhela.dokumentEkzemplo)
 	lazy var dokumentRimarko = UIColor(hela: hela.dokumentRimarko, malhela: malhela.dokumentRimarko)

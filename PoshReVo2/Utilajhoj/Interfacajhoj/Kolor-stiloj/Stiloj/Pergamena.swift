@@ -26,6 +26,7 @@ extension InterfacStilo {
 				dokumentaMalfortaTeksto: malfortaTeksto,
 				dokumentaDividilo: malfortaTeksto,
 				dokumentLigilo: ligilblua,
+				dokumentLigiloPremita: ligilblua, // TODO: Premita koloro
 				dokumentSencNumero: malhelrugha,
 				dokumentEkzemplo: brunaTeksto,
 				dokumentRimarko: malhelrugha,
@@ -40,21 +41,22 @@ extension InterfacStilo {
 			let heletaPagho = UIColor(deksesuma: 0x47423a)
 			let teksto = UIColor(deksesuma: 0xddd0ba)
 			let malfortaTeksto = UIColor(deksesuma: 0x897f6e)
-			let ligilBlua = UIColor(deksesuma: 0x86b3d8)
+			let ligilblua = UIColor(deksesuma: 0x86b3d8)
 			let palrugha = UIColor(deksesuma: 0xdd9da2)
 			
 			return Koloraro(
 				navigaciaFono: heletaPagho,
 				navigaciaTeksto: teksto,
 				navigaciaSerchilo: malhelaPagho,
-				navigaciaButono: ligilBlua,
+				navigaciaButono: ligilblua,
 				navigaciaButonoMalaktiva: malfortaTeksto,
 				dokumentaFono: malhelaPagho,
 				dokumentaAlternaFono: heletaPagho,
 				dokumentaTeksto: teksto,
 				dokumentaMalfortaTeksto: malfortaTeksto,
 				dokumentaDividilo: malfortaTeksto,
-				dokumentLigilo: ligilBlua,
+				dokumentLigilo: ligilblua,
+				dokumentLigiloPremita: ligilblua, // TODO: Premita koloro
 				dokumentSencNumero: palrugha,
 				dokumentEkzemplo: UIColor(deksesuma: 0xe0991f),
 				dokumentRimarko: palrugha,

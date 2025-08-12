@@ -26,6 +26,7 @@ extension InterfacStilo {
 			
 			let teksta = UIColor.black
 			let ligila = UIColor(deksesuma: 0x600000)
+			let premligila = UIColor(deksesuma: 0xaa0101)
 			let etikeda = UIColor(deksesuma: 0x104040)
 			let ekzempla = UIColor(deksesuma: 0x303030)
 			let noktomeza = UIColor(deksesuma: 0x191970)
@@ -42,6 +43,7 @@ extension InterfacStilo {
 				dokumentaMalfortaTeksto: fortgriza,
 				dokumentaDividilo: fortgriza,
 				dokumentLigilo: ligila,
+				dokumentLigiloPremita: premligila,
 				dokumentSencNumero: etikeda,
 				dokumentEkzemplo: ekzempla,
 				dokumentRimarko: noktomeza,
@@ -58,6 +60,7 @@ extension InterfacStilo {
 			let palblua = UIColor(deksesuma: 0x87CEEB)
 			let orangha = UIColor(deksesuma: 0xFFA500)
 			let shokolada = UIColor(deksesuma: 0xD2691E)
+			let premligilo = UIColor(deksesuma: 0xf76f0e)
 			let helgriza = UIColor(deksesuma: 0x888f88)
 			let mezgriza = UIColor(deksesuma: 0x222f22)
 			let malheletgriza = UIColor(deksesuma: 0x1F221F)
@@ -75,6 +78,7 @@ extension InterfacStilo {
 				dokumentaMalfortaTeksto: mezflava,
 				dokumentaDividilo: mezflava,
 				dokumentLigilo: shokolada,
+				dokumentLigiloPremita: premligilo,
 				dokumentSencNumero: orangha,
 				dokumentEkzemplo: orangha,
 				dokumentRimarko: palblua,

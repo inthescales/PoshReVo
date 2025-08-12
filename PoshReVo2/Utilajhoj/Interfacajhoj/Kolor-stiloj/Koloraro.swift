@@ -40,6 +40,9 @@ struct Koloraro {
 	/// Ligiloj aperantaj en dokumentoj
 	var dokumentLigilo: UIColor
 	
+	/// Ligiloj kiam ili estas premataj
+	var dokumentLigiloPremita: UIColor
+	
 	// MARK: - Artikolaj Koloroj
 	
 	/// Koloro de numeretikedoj por sencoj kaj subsencoj en artikoloj

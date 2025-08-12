@@ -76,7 +76,7 @@ final class InformoSekcio: UIView {
 			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 		]
 		chefEtikedo.activeLinkAttributes = [
-			kCTForegroundColorAttributeName : stilo.navigaciaFono, // TODO: Premita ligilo
+			kCTForegroundColorAttributeName : stilo.dokumentLigiloPremita,
 			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 		]
 		

@@ -40,7 +40,7 @@ final class TekstoChelo: UITableViewCell {
 			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 		]
 		etikedo.activeLinkAttributes = [
-			kCTForegroundColorAttributeName : stilo.navigaciaFono,
+			kCTForegroundColorAttributeName : stilo.dokumentLigiloPremita,
 			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
 		]
 		
