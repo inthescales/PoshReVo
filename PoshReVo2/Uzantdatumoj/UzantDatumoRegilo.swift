@@ -3,10 +3,19 @@ import Foundation
 import ReVoDatumbazo
 
 extension Avizoj {
+	/// Sendata kiam uzanto elektas serĉlingvo
 	static let elektitaLingvoShanghighis = NSNotification.Name("elektitaLingvoShanghighis")
+	
+	/// Sendata kiam uzanto ŝanĝas siajn lingvojn
 	static let uzantajLingvojShanghighis = NSNotification.Name("uzantajLingvojShanghighis")
+	
+	/// Sendata kiam uzanto konservas aŭ malkonservas artikolon
 	static let konservitajShanghighis = NSNotification.Name("konservitajShanghighis")
+	
+	/// Sendata kiam uzanto ekvidas artikolekranon
 	static let historioShanghighis = NSNotification.Name("historioShanghighis")
+	
+	/// Sendata kiam uzanto elektas stilon
 	static let stiloShanghighis = NSNotification.Name("stiloShanghighis")
 }
 
@@ -14,11 +23,14 @@ extension Avizoj {
 /// havas metodojn por ŝanĝi ĉiujn datumerojn.
 final class UzantDatumoRegilo {
 	private enum Konstantoj {
+		/// Maksimuma kvanto da artikoloj kiuj estos retenataj en la historio
 		static let historioLimo = 100
 	}
 	
 	/// Komuna datumoregilo
 	static var komuna = UzantDatumoRegilo(traktilo: UserDefaultsUzantDatumoTraktilo())
+	
+	// MARK: - Agordoj
 	
 	/// La nuna stato de la uzantaj datumoj
 	private(set) var datumaro: UzantDatumaro
@@ -26,8 +38,15 @@ final class UzantDatumoRegilo {
 	/// Traktilo por legado kaj skribado de uzantaj datumoj al/el la aparatmemoro
 	private let traktilo: UzantDatumoTraktilo
 	
+	// MARK: - Valorizado
+	
 	init(traktilo: UzantDatumoTraktilo) {
 		self.traktilo = traktilo
+		
+		// Unue, provu legi aktualan datumaron.
+		// Se mankas tio, provu legi V1an datumojn.
+		// Se mankas tio ankaŭ, uzu defaŭltan
+		// TODO: Ŝanĝu kiam ni ne plu subtenas V1ajn datumojn
 		datumaro = traktilo.legiDatumaron()
 			?? V1UzantDatumoTenilo.legiV1Datumaron()
 			?? UzantDatumaro.defaulta()

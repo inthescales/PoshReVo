@@ -2,29 +2,49 @@ import Foundation
 
 import ReVoDatumbazo
 
+/// La nuna stato de la uzantaj datumoj, agordoj, ktp.
 struct UzantDatumaro {
 	static var komuna: UzantDatumaro {
 		UzantDatumoRegilo.komuna.datumaro
 	}
 	
+	/// Lingvo kiu estas elektita en serĉila lingvoelektilo
 	var elektitaLingvo: Lingvo
 	
+	/// Ĉiuj uzantaj lingvoj, aperantaj en serĉila lingvoelektilo kaj artikolaj tradukaroj
 	var lingvoj: [Lingvo]
 	
+	/// Artikoloj legitaj de la uzanto
 	var historio: [Konservitajho]
 	
+	/// Artikoloj konservitaj de la uzanto
 	var konservitaj: [Konservitajho]
 	
+	/// Stilo de la interfaco
 	var stilo: InterfacStilo
 	
 	// MARK: - Helpajhoj
 	
+	/// Ĉu tiu lingvo estas konservita
 	func chuKonservita(artikolo: Artikolo) -> Bool {
 		konservitaj.contains(where: { $0.indekso == artikolo.indekso })
 	}
 	
 	// MARK: - Defaultaj valoroj
 	
+	/// Defaŭlta stato de uzantaj datumoj.
+	/// Tiel vidos tute nova uzanto la apon.
+	static func defaulta() -> UzantDatumaro {
+		UzantDatumaro(
+			elektitaLingvo: defaultajLingvoj.first!,
+			lingvoj: defaultajLingvoj,
+			historio: [],
+			konservitaj: [],
+			stilo: defaultaStilo
+		)
+	}
+	
+	/// Defaŭltaj lingvoj. Esperanto, kaj lingvoj de la aparato
 	private static var defaultajLingvoj: [Lingvo] {
 		let aparatajLingvoj = NSLocale.preferredLanguages.compactMap { kodo in
 			let bazo = kodo.components(separatedBy: "-").first
@@ -36,17 +56,8 @@ struct UzantDatumaro {
 		return [.esperanto] + aparatajLingvoj
 	}
 	
+	/// Defaŭlta interfacstilo
 	private static var defaultaStilo: InterfacStilo = .simpla
-	
-	static func defaulta() -> UzantDatumaro {
-		UzantDatumaro(
-			elektitaLingvo: defaultajLingvoj.first!,
-			lingvoj: defaultajLingvoj,
-			historio: [],
-			konservitaj: [],
-			stilo: defaultaStilo
-		)
-	}
 }
 
 // MARK: - Equatable

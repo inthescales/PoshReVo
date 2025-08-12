@@ -13,7 +13,7 @@ final class V1UzantDatumoTenilo {
 	
 	private static var defaultaStilo: InterfacStilo = .defaulta
 	
-	/// Legas datumojn kiel skribitajn de v1 de la apo
+	/// Legas datumojn skribitajn de V1 de la apo
 	static func legiV1Datumaron() -> UzantDatumaro? {
 		let defaults = UserDefaults.standard
 		
@@ -48,7 +48,7 @@ final class V1UzantDatumoTenilo {
 		}
 		
 		// Kunigi lingvojn, forigi duoblaĵojn
-		// TODO: Kiam Lingvo estos denove strukto, plisimpligi senduoblajhigadon
+		// TODO: Kiam Lingvo estos denove strukto, plisimpligi senduoblaĵigadon
 		var chiujLingvoj: [Lingvo] = []
 		([serchLingvo] + oftajSerchLingvoj + tradukLingvoj)
 			.compactMap { $0 }
