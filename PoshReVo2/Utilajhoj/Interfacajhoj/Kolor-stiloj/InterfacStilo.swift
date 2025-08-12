@@ -14,10 +14,10 @@ class InterfacStilo {
 	let identigilo: String
 	
 	/// Hela variaĵo
-	private var hela: Koloraro
+	var hela: Koloraro
 	
 	/// Malhela variaĵo
-	private var malhela: Koloraro
+	var malhela: Koloraro
 	
 	// MARK: - Koloroj
 	

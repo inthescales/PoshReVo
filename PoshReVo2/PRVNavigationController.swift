@@ -20,8 +20,18 @@ final class PRVNavigationController: UINavigationController {
 		navigacejAspekto.backgroundColor = stilo.navigaciaFono
 		navigationBar.tintColor = stilo.navigaciaButono
 		
-		let veraVC = veraVC(de: vc) ?? UIViewController()
-		navigacejAspekto.shadowColor = chuMontriOmbron(por: veraVC) ? stilo.ombro : nil
+		let efektivaVC = efektivaVC(de: vc) ?? UIViewController()
+		
+		// Meti ombrokoloron se la koloraro bezonas ĝin.
+		// Por eviti situacion en kiu ŝanĝiĝo de aparat-heleco kaŭzus misan
+		// ombron (ĉar la koloraro de unu heleco bezonus ĝin kaj la alia ne)
+		// ni metas specialan dinamikan koloron
+		let chuHelaOmbro = chuMontriOmbron(por: efektivaVC, kun: stilo.hela)
+		let chuMalhelaOmbro = chuMontriOmbron(por: efektivaVC, kun: stilo.malhela)
+		navigacejAspekto.shadowColor =  UIColor(
+			hela: chuHelaOmbro ? stilo.hela.ombro : stilo.hela.navigaciaFono,
+			malhela: chuMalhelaOmbro ? stilo.malhela.ombro : stilo.malhela.navigaciaFono
+		)
 		
 		navigacejAspekto.titleTextAttributes = [
 			NSAttributedString.Key.foregroundColor : stilo.navigaciaTeksto
@@ -40,8 +50,8 @@ final class PRVNavigationController: UINavigationController {
 	
 	// MARK: - Helpiloj
 	
-	/// La vere montrata VCo, ignoranta ingojn
-	private func veraVC(de vc: UIViewController?) -> UIViewController? {
+	/// La efektive montrata VC, ignoranta ingojn
+	private func efektivaVC(de vc: UIViewController?) -> UIViewController? {
 		if let ingo = vc as? PaghingoViewController {
 			return ingo.chefpagho
 		} else {
@@ -49,12 +59,8 @@ final class PRVNavigationController: UINavigationController {
 		}
 	}
 	
-	/// Decidi ĉu ombro montriĝu sub la navigacitabulo.
-	private func chuMontriOmbron(por vc: UIViewController?) -> Bool {
-		// NOTO:
-		// Eta malsukcesa kazo: ŝanĝo de aparat-heleco povas kaŭzi misan staton,
-		// se la hela kaj malhela stiloj donus malsaman rezulton ĉi tie.
-		
+	/// Decidi ĉu ombro montriĝu sub la navigacitabulo en tiu VC, havanta tiun koloron.
+	private func chuMontriOmbron(por vc: UIViewController?, kun koloraro: Koloraro) -> Bool {
 		guard let vc else {
 			return true
 		}
@@ -69,7 +75,7 @@ final class PRVNavigationController: UINavigationController {
 			// Tio estas, menuo ĉe kiu la navigaciejo kaj la ĉefa fonoj estas samkoloraj
 			if let tabelo = suba as? UITableView,
 			   (tabelo.style == .insetGrouped || tabelo.style == .grouped)
-			   && tabelo.backgroundColor?.cgColor == UzantDatumaro.komuna.stilo.navigaciaFono.cgColor {
+				&& koloraro.menuoFono.cgColor == koloraro.navigaciaFono.cgColor {
 				return false
 			}
 		}
