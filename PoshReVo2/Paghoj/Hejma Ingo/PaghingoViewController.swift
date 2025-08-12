@@ -52,6 +52,8 @@ final class PaghingoViewController: UIViewController {
 	// MARK: - Paĝ-navigaciado
 	
 	@objc private func premisTripunkton() {
+		chefpagho.view.endEditing(true) // Kaŝi la klavaron
+		
 		let menuo = ShovMenuoViewController(
 			eroj: [
 				ShovMenuoViewController.Menuero(
