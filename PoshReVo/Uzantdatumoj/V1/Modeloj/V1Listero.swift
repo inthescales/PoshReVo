@@ -3,7 +3,7 @@ import Foundation
 // TODO: Kiam ni ne plu subtenas V1ajn uzantodatumojn, forigu ĉi-dosieron
 
 /// Klaso uzata en PoŝReVo V1 por reprezenti eron in listo da vortoj. Retenata por legi uzant-datumojn skribitajn en V1.
-final class Listero : NSObject, NSSecureCoding {
+final class V1Listero : NSObject, NSSecureCoding {
 	let nomo: String, indekso: String
 	
 	init(_ ennomo: String, _ enindekso: String) {
@@ -39,7 +39,7 @@ extension Konservitajho {
 		self.marko = nil
 	}
 	
-	static func el(v1Listero listero: Listero) -> Konservitajho {
+	static func el(v1Listero listero: V1Listero) -> Konservitajho {
 		Konservitajho(nomo: listero.nomo, indekso: listero.indekso)
 	}
 }

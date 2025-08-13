@@ -88,7 +88,7 @@ extension LingvoListoViewController: UITableViewDataSource {
 		
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "vortoListo")
 		novaChelo.textLabel?.text = lingvo.nomo
-		novaChelo.accessoryType = jamElektitaj.contains(where: { $0.kodo == lingvo.kodo }) ? .checkmark : .none // TODO: Ŝanĝi kiam Lingvoj estos denove strukt-ojn
+		novaChelo.accessoryType = jamElektitaj.contains(lingvo) ? .checkmark : .none
 		novaChelo.tintColor = stilo.navigaciaButono
 		novaChelo.meti(stilon: stilo)
 		
@@ -98,9 +98,7 @@ extension LingvoListoViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
 		// Lingvoj jam elektitaj ne estu elekteblaj
 		// TODO: Simple kompari lingvojn denove kiam Lingvo estos denove 'struct'
-		if jamElektitaj.contains(where: {
-			$0.kodo == lingvoj[indexPath.row].kodo
-		}) {
+		if jamElektitaj.contains(lingvoj[indexPath.row]) {
 			return nil
 		}
 		

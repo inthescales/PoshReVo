@@ -1,9 +1,7 @@
 import Foundation
 
-// TODO: Faru strukt-on anstatau class-on post kiam ni ne plu subtenos konservitajn uzantdatumojn el V1
-
 /// Lingvo en kiu tradukoj ekzistas
-public class Lingvo: NSObject, Codable, NSSecureCoding {
+public struct Lingvo: Codable {
     public let kodo: String
     public let nomo: String
     
@@ -29,7 +27,7 @@ public class Lingvo: NSObject, Codable, NSSecureCoding {
 
 	public static var supportsSecureCoding = true
 
-	public required convenience init?(coder aDecoder: NSCoder) {
+	public init?(coder aDecoder: NSCoder) {
 		if let enkodo = aDecoder.decodeObject(forKey: "kodo") as? String,
 		   let ennomo = aDecoder.decodeObject(forKey: "nomo") as? String {
 			self.init(kodo: enkodo, nomo: ennomo)

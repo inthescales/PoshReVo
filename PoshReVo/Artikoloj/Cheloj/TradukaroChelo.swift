@@ -60,9 +60,7 @@ final class TradukaroChelo: UITableViewCell {
 	) {
 		self.elekti = elekti
 		
-		// TODO: Ŝanĝu post kiam lingvo estos denove struct
-		let tradukKodoj = tradukLingvoj.map { $0.kodo }
-		let montrotaj = tradukoj.filter { tradukKodoj.contains($0.lingvo.kodo) }
+		let montrotaj = tradukoj.filter { tradukLingvoj.contains($0.lingvo) }
 		
 		// Ĉu la uzanto havas traduklingvojn
 		let neniujLingvoj = tradukLingvoj.isEmpty
