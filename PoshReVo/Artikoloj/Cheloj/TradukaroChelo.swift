@@ -66,7 +66,7 @@ final class TradukaroChelo: UITableViewCell {
 		
 		// Ĉu la uzanto havas traduklingvojn
 		let neniujLingvoj = tradukLingvoj.isEmpty
-			|| (tradukLingvoj.count == 1 && tradukLingvoj.first?.kodo == "eo")
+		|| (tradukLingvoj.count == 1 && tradukLingvoj.first?.kodo == Lingvo.esperantaKodo)
 		
 		// Forigi ĉiujn antaŭajn interfacerojn
 		contentView.subviews.forEach { $0.removeFromSuperview() }

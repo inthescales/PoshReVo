@@ -72,7 +72,7 @@ extension Destino: Comparable {
 			rhs.teksto,
 			options: .caseInsensitive,
 			range: nil,
-			locale: Locale(identifier: "eo")
+			locale: Locale(identifier: Lingvo.esperantaKodo)
 		) == .orderedAscending
     }
 }

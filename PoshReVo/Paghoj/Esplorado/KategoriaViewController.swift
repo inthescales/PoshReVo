@@ -20,18 +20,10 @@ final class KategoriaViewController: UIViewController {
 	}
 	
 	private lazy var tabelo: UITableView = {
-		let tabelo = UITableView(frame: .zero, style: tabelStilo)
+		let tabelo = UITableView(frame: .zero, style: .insetGrouped)
 		tabelo.delegate = self
 		tabelo.dataSource = self
-		
-		switch tabelStilo {
-		case .grouped, .insetGrouped:
-			tabelo.backgroundColor = stilo.menuoFono
-		case .plain:
-			tabelo.backgroundColor = stilo.dokumentaFono
-		default:
-			assert(false, "nekonata tabelstilo")
-		}
+		tabelo.backgroundColor = stilo.menuoFono
 		
 		return tabelo
 	}()
@@ -40,19 +32,10 @@ final class KategoriaViewController: UIViewController {
 	
 	private let sekcioj: [Sekcio]
 	
-	/// Ĉu la tabelo uzas "grouped" stilo
-	private lazy var chuGrupa = {
-		tabelStilo == .grouped
-		|| tabelStilo == .insetGrouped
-	}()
-	
 	// MARK: Agordoj
 	
 	/// Titolo aperonta ekransupre
 	private let titolo: String?
-	
-	/// La iOSa stilo kiun la tabelo uzu
-	private let tabelStilo: UITableView.Style
 	
 	private let stilo: InterfacStilo
 	
@@ -60,12 +43,10 @@ final class KategoriaViewController: UIViewController {
 	
 	init(
 		titolo: String?,
-		tabelStilo: UITableView.Style = .plain,
 		sekcioj: [Sekcio],
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.titolo = titolo
-		self.tabelStilo = tabelStilo
 		self.sekcioj = sekcioj
 		self.stilo = stilo
 		super.init(nibName: nil, bundle: nil)
@@ -73,13 +54,11 @@ final class KategoriaViewController: UIViewController {
 	
 	convenience init(
 		titolo: String?,
-		tabelStilo: UITableView.Style = .plain,
 		listeroj: [Listero],
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.init(
 			titolo: titolo,
-			tabelStilo: tabelStilo,
 			sekcioj:[Sekcio(titolo: nil, eroj: listeroj)],
 			stilo: stilo
 		)
@@ -140,7 +119,8 @@ extension KategoriaViewController: UITableViewDataSource {
 		
 		let novaChelo = UITableViewCell(style: .value1, reuseIdentifier: "Kategoria")
 		novaChelo.textLabel?.text = listero.teksto
-		novaChelo.meti(stilon: stilo, grupa: chuGrupa)
+		novaChelo.accessoryType = .disclosureIndicator
+		novaChelo.meti(stilon: stilo, grupa: true)
 		
 		return novaChelo
 	}

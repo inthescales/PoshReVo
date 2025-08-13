@@ -14,7 +14,7 @@ extension Mallongigo: Comparable {
 			rhs.kodo,
 			options: .caseInsensitive,
 			range: nil,
-			locale: Locale(identifier: "eo")
+			locale: Locale(identifier: Lingvo.EsperantaKodo)
 		) == .orderedAscending
 	}
 }

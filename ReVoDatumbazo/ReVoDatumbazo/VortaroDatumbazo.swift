@@ -26,7 +26,7 @@ public final class VortaroDatumbazo {
 			Lingvo.el(objekto)
 		}
 		.filter { lingvo in
-			lingvo.kodo != "eo"
+			lingvo.kodo != Lingvo.esperantaKodo
 		}
 		.sorted { (lhs, rhs) -> Bool in
 			return lhs < rhs
@@ -111,6 +111,27 @@ public final class VortaroDatumbazo {
             return lhs < rhs
         }
     }()
+	
+	/// Ĉiuj oficialigoj — tio estas, ĉiuj oficialecoj krom 'neoficiala'
+	public lazy var chiujOficialigoj: [Oficialeco] = {
+		alirilo.chiujOficialecoj().compactMap { objekto in
+			Oficialeco.el(objekto)
+		}.filter {
+			$0.kodo != Oficialeco.neoficialaKodo
+		}
+		.sorted { (lhs, rhs) -> Bool in
+			return lhs < rhs
+		}
+	}()
+	
+	/// Oficialeco por neoficialigitaj radikoj
+	public lazy var neoficialaj: Oficialeco? = {
+		alirilo.chiujOficialecoj().compactMap { objekto in
+			Oficialeco.el(objekto)
+		}.first {
+			$0.kodo == Oficialeco.neoficialaKodo
+		}
+	}()
     
     // MARK: - Vorto-serĉado
     

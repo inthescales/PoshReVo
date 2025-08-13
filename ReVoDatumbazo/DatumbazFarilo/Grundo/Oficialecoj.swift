@@ -27,7 +27,7 @@ enum Oficialecoj {
 	)
 	
 	static var neoficiala = Oficialeco(
-		kodo: "n",
+		kodo: Oficialeco.neoficialaKodo,
 		indikilo: nil,
 		nomo: "neoficialaj",
 		vico: oficialajAldonoj + 2

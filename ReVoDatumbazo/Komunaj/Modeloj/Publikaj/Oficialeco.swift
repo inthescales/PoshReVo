@@ -14,6 +14,12 @@ public struct Oficialeco: Codable {
 	public let vico: Int
 }
 
+// MARK: - Konstantoj
+
+extension Oficialeco {
+	static let neoficialaKodo = "n"
+}
+
 // MARK: - Hashable
 
 extension Oficialeco: Hashable {

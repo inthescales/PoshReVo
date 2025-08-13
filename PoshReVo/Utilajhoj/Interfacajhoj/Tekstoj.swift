@@ -38,6 +38,7 @@ enum Tekstoj {
 	static let kategorioj = "Kategorioj"
 	static let fakoj = "Fakoj"
 	static let oficialecoj = "Oficialecoj"
+	static let oficialigoj = "Oficialigoj"
 	static let hazardaArtikolo = "Hazarda Artikolo"
 	
 	// MARK: - Agordoj

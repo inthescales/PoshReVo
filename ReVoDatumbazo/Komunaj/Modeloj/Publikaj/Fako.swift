@@ -14,7 +14,7 @@ extension Fako: Comparable {
 			rhs.nomo,
 			options: .caseInsensitive,
 			range: nil,
-			locale: Locale(identifier: "eo")
+			locale: Locale(identifier: Lingvo.esperantaKodo)
 		) == .orderedAscending
     }
 }

@@ -51,7 +51,7 @@ extension KategoriaViewController {
 		vortaro: VortaroDatumbazo,
 		elektisArtikolon: @escaping (Destino) -> Void
 	) -> KategoriaViewController {
-		let listeroj = vortaro.chiujOficialecoj.map { ofc in
+		let oficialigoEroj = vortaro.chiujOficialigoj.map { ofc in
 			KategoriaViewController.Listero(
 				teksto: ofc.nomo,
 				celPagho: {
@@ -59,7 +59,36 @@ extension KategoriaViewController {
 				}
 			)
 		}
-		return KategoriaViewController(titolo: Tekstoj.oficialecoj, listeroj: listeroj)
+		
+		var sekcioj: [KategoriaViewController.Sekcio] = [
+			.init(
+				titolo: Tekstoj.oficialigoj,
+				eroj: oficialigoEroj
+			)
+		]
+		
+		if let neoficialaj = vortaro.neoficialaj {
+			let neoficialajEro = KategoriaViewController.Listero(
+				teksto: neoficialaj.nomo,
+				celPagho: {
+					Self.oficialecoVortoj(
+						ofc: neoficialaj,
+						vortaro: vortaro,
+						elektisArtikolon: elektisArtikolon
+					)
+				}
+			)
+			let neoficialajSekcio = KategoriaViewController.Sekcio(
+				titolo: nil,
+				eroj: [neoficialajEro]
+			)
+			sekcioj.append(neoficialajSekcio)
+		}
+
+		return KategoriaViewController(
+			titolo: Tekstoj.oficialecoj,
+			sekcioj: sekcioj
+		)
 	}
 	
 	/// Krei paĝon montranta liston da vortoj en oficialeco, per kiu uzanto povu navigacii al individuaj artikoloj

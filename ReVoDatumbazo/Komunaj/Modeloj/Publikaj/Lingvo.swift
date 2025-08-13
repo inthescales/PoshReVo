@@ -8,7 +8,7 @@ public class Lingvo: NSObject, Codable, NSSecureCoding {
     public let nomo: String
     
 	public static var esperanto: Lingvo {
-		return Lingvo(kodo: "eo", nomo: "Esperanto")
+		return Lingvo(kodo: Lingvo.esperantaKodo, nomo: "Esperanto")
 	}
 	
     public init(kodo: String, nomo: String) {
@@ -21,7 +21,7 @@ public class Lingvo: NSObject, Codable, NSSecureCoding {
 	}
 	
 	public var estasEsperanto: Bool {
-		self.kodo == "eo"
+		self.kodo == Lingvo.esperantaKodo
 	}
 	
 	// MARK: - NSSecureCoding
@@ -44,6 +44,12 @@ public class Lingvo: NSObject, Codable, NSSecureCoding {
 	}
 }
 
+// MARK: - Konstantoj
+
+extension Lingvo {
+	public static let esperantaKodo = "eo"
+}
+
 // MARK: - Comparable
 
 extension Lingvo: Comparable {
@@ -52,7 +58,7 @@ extension Lingvo: Comparable {
 			rhs.nomo,
 			options: .caseInsensitive,
 			range: nil,
-			locale: Locale(identifier: "eo")
+			locale: Locale(identifier: Lingvo.esperantaKodo)
 		) == .orderedAscending
     }
 }

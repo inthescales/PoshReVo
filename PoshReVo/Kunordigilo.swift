@@ -248,7 +248,6 @@ final class Kunordigilo {
 		
 		let vc = KategoriaViewController(
 			titolo: Tekstoj.esplori,
-			tabelStilo: .insetGrouped,
 			sekcioj: sekcioj
 		)
 		prezentilo.pushViewController(vc, animated: true)
@@ -329,7 +328,6 @@ final class Kunordigilo {
 		
 		let vc = KategoriaViewController(
 			titolo: Tekstoj.mallongigoj,
-			tabelStilo: .insetGrouped,
 			sekcioj: sekcioj
 		)
 		prezentilo.pushViewController(vc, animated: true)

@@ -155,6 +155,7 @@ extension AgordojViewController: UITableViewDataSource {
 			chelo = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
 			chelo.textLabel?.text = Tekstoj.viajLingvoj
 			chelo.detailTextLabel?.text = String(datumRegilo.datumaro.lingvoj.count) + Tekstoj._lingvoj
+			chelo.accessoryType = .disclosureIndicator
 		case (1, 0):
 			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			chelo.textLabel?.text = Tekstoj.nuligiHistorion
@@ -167,6 +168,7 @@ extension AgordojViewController: UITableViewDataSource {
 			chelo = UITableViewCell(style: .value1, reuseIdentifier: Konstantoj.chelidentigiloEtikeda)
 			chelo.textLabel?.text = Tekstoj.shanghiStilon
 			chelo.detailTextLabel?.text = stilo.nomo
+			chelo.accessoryType = .disclosureIndicator
 		default:
 			chelo = UITableViewCell(style: .default, reuseIdentifier: Konstantoj.chelidentigiloBaza)
 			break

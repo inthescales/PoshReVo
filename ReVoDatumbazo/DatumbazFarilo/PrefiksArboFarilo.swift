@@ -35,7 +35,9 @@ final class PrefiksArboFarilo {
 	
 	/// Konstrui prefiksarbon por ĉiuj lingvoj, kaj esperantaj derivaĵoj kaj nacilingvaj tradukoj
 	func kreiArbojn() {
-		let datumoj: [(String, [Serchebla])] = [("eo", serchVortoj)] + tradukaro.map { ($0, $1) }
+		let datumoj: [(String, [Serchebla])] =
+			[(Lingvo.EsperantaKodo, serchVortoj)]
+			+ tradukaro.map { ($0, $1) }
 		for (lingvoKodo, sercheblaj) in datumoj {
 			kreiArbon(por: lingvoKodo, enhavanta: sercheblaj)
 		}

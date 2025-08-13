@@ -27,7 +27,7 @@ extension Verko: Comparable {
 			rhs.mallongigo,
 			options: .caseInsensitive,
 			range: nil,
-			locale: Locale(identifier: "eo")
+			locale: Locale(identifier: Lingvo.EsperantaKodo)
 		) == .orderedAscending
 	}
 }
