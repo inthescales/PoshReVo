@@ -93,8 +93,8 @@ final class ArtikoloViewController: UIViewController {
 		}
 	}
 	
-	/// Ĉu la paĝo jam saltis al komenca marko dum apero
-	private var jamSaltis = false
+	/// Ĉu la paĝo jam aperis. Regas saltadon.
+	private var jamAperis = false
 	
 	// MARK: - Agordoj
 	
@@ -203,26 +203,17 @@ final class ArtikoloViewController: UIViewController {
 		)
 	}
 	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		
-		// Unuafoje ke la paĝo aperos, rulumu paŝupren por ke ĉio estu freŝa
-		if !jamSaltis {
-			tabelo.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
-		}
-	}
-	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
 		// Se ni havas komencan markon, kaj jam ne saltis al ĝi, saltu al ĝi
-		if let marko = komencaMarko,
-			!jamSaltis {
+		if !jamAperis,
+		   let marko = komencaMarko {
 			saltiAlMarko(marko, animacii: true)
-			jamSaltis = true
 		}
 		
 		aperis?()
+		jamAperis = true
 	}
 	
 	// MARK: - Uzantaj agoj
