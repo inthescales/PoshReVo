@@ -2,8 +2,10 @@ import Foundation
 
 import ReVoDatumbazo
 
+typealias UzantDatumaro = UzantDatumaro_V2_0
+
 /// La nuna stato de la uzantaj datumoj, agordoj, ktp.
-struct UzantDatumaro {
+struct UzantDatumaro_V2_0 {
 	static var komuna: UzantDatumaro {
 		UzantDatumoRegilo.komuna.datumaro
 	}
