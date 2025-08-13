@@ -4,15 +4,12 @@ import CoreData
 let komencTempo = Date()
 
 // Indikoj
-
-let radiko = "/Users/robin/Desktop"
-let fontIndiko = radiko + "/fontoj"
-let produktajhIndiko = radiko + "/produktajhoj"
+let fontIndiko = CommandLine.arguments[1]
+let produktajhIndiko = CommandLine.arguments[2]
 
 let grundIndiko = fontIndiko + "/grundo"
 let revoIndiko = fontIndiko + "/revo"
 let artikolIndiko = revoIndiko + "/revo/"
-
 
 // Datumbazaĵoj
 
