@@ -97,7 +97,10 @@ extension LingvoListoViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
 		// Lingvoj jam elektitaj ne estu elekteblaj
-		if jamElektitaj.contains(lingvoj[indexPath.row]) {
+		// TODO: Simple kompari lingvojn denove kiam Lingvo estos denove 'struct'
+		if jamElektitaj.contains(where: {
+			$0.kodo == lingvoj[indexPath.row].kodo
+		}) {
 			return nil
 		}
 		
