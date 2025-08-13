@@ -6,7 +6,7 @@ extension ArboAnalizilo {
 		stato: Stato
 	) -> String {
 		let numeroTeksto = numero.flatMap { " \($0)" } ?? ""
-		let titoleto = TekstAtributo.volvi("RIM" + numeroTeksto + ": ", per: .grasa)
+		let titoleto = TekstAtributo.volvi("RIM:" + numeroTeksto, per: .grasa) + " "
 		let teksto = titoleto + akumuliTekstojn(de: rimarko, montriFontojn: true, stato: stato).tondi()
 		
 		// Kutime rimarko aperas sekve de difinan aŭ alian tekston, kaj ni do deziras
