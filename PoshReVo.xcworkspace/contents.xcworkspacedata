@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PoshReVo2.xcodeproj">
+      location = "group:PoshReVo.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ReVoDatumbazo/ReVoDatumbazo.xcodeproj">

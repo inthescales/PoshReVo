@@ -1,0 +1,872 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000DA6D82D8F31CF0026CBA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */; };
+		000DA6EF2D8F33740026CBA0 /* ReVoDatumbazo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */; };
+		000DA6F02D8F33740026CBA0 /* ReVoDatumbazo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		000DA6F52D8F35FE0026CBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */; };
+		000DA6F92D906C6E0026CBA0 /* InterfacStilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */; };
+		000DA6FB2D90898C0026CBA0 /* SerchiloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FA2D90898C0026CBA0 /* SerchiloView.swift */; };
+		000DA6FD2D908F680026CBA0 /* PRVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000DA6FC2D908F680026CBA0 /* PRVNavigationController.swift */; };
+		00107E2D2E304C0A0010CECD /* AgoHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E2C2E304C070010CECD /* AgoHelpiloj.swift */; };
+		00107E352E3287580010CECD /* PaghingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E342E3287540010CECD /* PaghingoViewController.swift */; };
+		00107E372E328C3D0010CECD /* AgtabuloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E362E328C390010CECD /* AgtabuloView.swift */; };
+		00107E3E2E32CC770010CECD /* VortListoNulStatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */; };
+		003024D12E3A7659006D0C14 /* UITableViewCell+Helpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */; };
+		003024D32E3A7B2A006D0C14 /* MallongigoListoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */; };
+		003024D62E3A7E2C006D0C14 /* Ingito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D52E3A7E2A006D0C14 /* Ingito.swift */; };
+		003024DB2E3FAFCE006D0C14 /* UIColor+Helpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024DA2E3FAFC9006D0C14 /* UIColor+Helpiloj.swift */; };
+		003024DD2E401A27006D0C14 /* OmbroImitilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024DC2E401A21006D0C14 /* OmbroImitilo.swift */; };
+		003024E02E4264F7006D0C14 /* Koloraro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024DF2E4264F4006D0C14 /* Koloraro.swift */; };
+		003024E52E4265D9006D0C14 /* Simpla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024E42E4265D7006D0C14 /* Simpla.swift */; };
+		003024E72E4265F2006D0C14 /* Pergamena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024E62E4265F0006D0C14 /* Pergamena.swift */; };
+		003DC1B42E463ABD0053404F /* ReVo-a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC1B32E463AB90053404F /* ReVo-a.swift */; };
+		003DC1B62E46A34B0053404F /* KategoriaViewController+EsplorListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC1B52E46A3470053404F /* KategoriaViewController+EsplorListoj.swift */; };
+		003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A72E37D8300039AC2C /* Tiparo.swift */; };
+		003FC1AA2E3920FB0039AC2C /* AlirebloTekstoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */; };
+		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
+		00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B082DC17EB600526F82 /* SerchoViewController.swift */; };
+		00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */; };
+		00B27B0D2DC1813400526F82 /* UIView+AranghHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B0C2DC1813400526F82 /* UIView+AranghHelpiloj.swift */; };
+		00B27B0F2DC2648200526F82 /* LingvoElektiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B0E2DC2648200526F82 /* LingvoElektiloViewController.swift */; };
+		00B27B112DC264A100526F82 /* Tekstoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B102DC264A100526F82 /* Tekstoj.swift */; };
+		00B27B132DC2650800526F82 /* LingvoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B122DC2650800526F82 /* LingvoListoViewController.swift */; };
+		00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B142DC2682200526F82 /* TekstHelpiloj.swift */; };
+		00B27B172DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */; };
+		00B27B1A2DC2802700526F82 /* PoshReVoDatumbazo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 00B27B192DC2802700526F82 /* PoshReVoDatumbazo.sqlite */; };
+		00B27B1C2DC2B0DE00526F82 /* LingvaroRedaktiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B1B2DC2B0DE00526F82 /* LingvaroRedaktiloViewController.swift */; };
+		00B27B202DC3F9F700526F82 /* LingvoBretoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B1F2DC3F9F700526F82 /* LingvoBretoViewController.swift */; };
+		00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B252DC6B73F00526F82 /* Kunordigilo.swift */; };
+		00B27B282DC6B77A00526F82 /* UzantDatumaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */; };
+		00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */; };
+		00B27B332DC8212C00526F82 /* TekstAtributoHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */; };
+		00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3C2DCC040800526F82 /* Avizoj.swift */; };
+		00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */; };
+		00B27B442DCD281C00526F82 /* Konservitajho.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B432DCD281C00526F82 /* Konservitajho.swift */; };
+		00B27B472DCE636400526F82 /* Vortlistero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B462DCE636400526F82 /* Vortlistero.swift */; };
+		00B27B492DCE721600526F82 /* KonservitajViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B482DCE721600526F82 /* KonservitajViewController.swift */; };
+		00B27B4B2DCE758B00526F82 /* HistorioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */; };
+		00B27B4D2DCE792C00526F82 /* AgordojViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B4C2DCE792C00526F82 /* AgordojViewController.swift */; };
+		00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B4F2DE8D5F600526F82 /* StiloElektiloViewController.swift */; };
+		00B27B522DEA3ED300526F82 /* ShovMenuoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B512DEA3ED300526F82 /* ShovMenuoViewController.swift */; };
+		00B27B552DEF743500526F82 /* InformojViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B542DEF743500526F82 /* InformojViewController.swift */; };
+		00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */; };
+		00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */; };
+		00B27B5C2DF0A77500526F82 /* MallongigoListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5B2DF0A77500526F82 /* MallongigoListoj.swift */; };
+		00B27B5F2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B5E2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift */; };
+		00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */; };
+		00B27B632DF206D600526F82 /* V1UzantDatumoTenilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B622DF206D600526F82 /* V1UzantDatumoTenilo.swift */; };
+		00B27B692DF209EC00526F82 /* Listero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B682DF209EC00526F82 /* Listero.swift */; };
+		00B27B782DF74E5900526F82 /* TekstoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B772DF74E5900526F82 /* TekstoChelo.swift */; };
+		00B27B7A2DF7512F00526F82 /* DerivajhTitoloChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B792DF7512F00526F82 /* DerivajhTitoloChelo.swift */; };
+		00B27B7C2DF751FE00526F82 /* TradukaroChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B7B2DF751FE00526F82 /* TradukaroChelo.swift */; };
+		00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */; };
+		00B27B942DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B932DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift */; };
+		00B27B9C2E08889000526F82 /* StrekaroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B9B2E08889000526F82 /* StrekaroView.swift */; };
+		00B27BA12E099FFA00526F82 /* ShovMenueroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27BA02E099FFA00526F82 /* ShovMenueroView.swift */; };
+		00B27BA32E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27BA22E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift */; };
+		00E5D5F72E4A6BD8004877ED /* MallongigoListo+Chiuj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5F62E4A6BD5004877ED /* MallongigoListo+Chiuj.swift */; };
+		00E5D5FC2E4C020B004877ED /* Bildetoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D5FB2E4C0207004877ED /* Bildetoj.swift */; };
+		78E61E22DDBE93151463A2C9 /* Pods_PoshReVo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAEF79675BA2B6425FB8904 /* Pods_PoshReVo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		000DA6F12D8F33740026CBA0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				000DA6F02D8F33740026CBA0 /* ReVoDatumbazo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		000DA6D42D8F31CF0026CBA0 /* PoshReVo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoshReVo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoDatumbazo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfacStilo.swift; sourceTree = "<group>"; };
+		000DA6FA2D90898C0026CBA0 /* SerchiloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchiloView.swift; sourceTree = "<group>"; };
+		000DA6FC2D908F680026CBA0 /* PRVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRVNavigationController.swift; sourceTree = "<group>"; };
+		00107E2C2E304C070010CECD /* AgoHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoHelpiloj.swift; sourceTree = "<group>"; };
+		00107E342E3287540010CECD /* PaghingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaghingoViewController.swift; sourceTree = "<group>"; };
+		00107E362E328C390010CECD /* AgtabuloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgtabuloView.swift; sourceTree = "<group>"; };
+		00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortListoNulStatoView.swift; sourceTree = "<group>"; };
+		003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpiloj.swift"; sourceTree = "<group>"; };
+		003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoListoChelo.swift; sourceTree = "<group>"; };
+		003024D52E3A7E2A006D0C14 /* Ingito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingito.swift; sourceTree = "<group>"; };
+		003024DA2E3FAFC9006D0C14 /* UIColor+Helpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpiloj.swift"; sourceTree = "<group>"; };
+		003024DC2E401A21006D0C14 /* OmbroImitilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmbroImitilo.swift; sourceTree = "<group>"; };
+		003024DF2E4264F4006D0C14 /* Koloraro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koloraro.swift; sourceTree = "<group>"; };
+		003024E42E4265D7006D0C14 /* Simpla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simpla.swift; sourceTree = "<group>"; };
+		003024E62E4265F0006D0C14 /* Pergamena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pergamena.swift; sourceTree = "<group>"; };
+		003DC1B32E463AB90053404F /* ReVo-a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReVo-a.swift"; sourceTree = "<group>"; };
+		003DC1B52E46A3470053404F /* KategoriaViewController+EsplorListoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KategoriaViewController+EsplorListoj.swift"; sourceTree = "<group>"; };
+		003FC1A72E37D8300039AC2C /* Tiparo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiparo.swift; sourceTree = "<group>"; };
+		003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlirebloTekstoj.swift; sourceTree = "<group>"; };
+		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
+		00B27B082DC17EB600526F82 /* SerchoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchoViewController.swift; sourceTree = "<group>"; };
+		00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortoListoViewController.swift; sourceTree = "<group>"; };
+		00B27B0C2DC1813400526F82 /* UIView+AranghHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AranghHelpiloj.swift"; sourceTree = "<group>"; };
+		00B27B0E2DC2648200526F82 /* LingvoElektiloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoElektiloViewController.swift; sourceTree = "<group>"; };
+		00B27B102DC264A100526F82 /* Tekstoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tekstoj.swift; sourceTree = "<group>"; };
+		00B27B122DC2650800526F82 /* LingvoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoListoViewController.swift; sourceTree = "<group>"; };
+		00B27B142DC2682200526F82 /* TekstHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstHelpiloj.swift; sourceTree = "<group>"; };
+		00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VortaroDatumbazo+Komuna.swift"; sourceTree = "<group>"; };
+		00B27B192DC2802700526F82 /* PoshReVoDatumbazo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoshReVoDatumbazo.sqlite; sourceTree = "<group>"; };
+		00B27B1B2DC2B0DE00526F82 /* LingvaroRedaktiloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvaroRedaktiloViewController.swift; sourceTree = "<group>"; };
+		00B27B1F2DC3F9F700526F82 /* LingvoBretoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingvoBretoViewController.swift; sourceTree = "<group>"; };
+		00B27B252DC6B73F00526F82 /* Kunordigilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kunordigilo.swift; sourceTree = "<group>"; };
+		00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumaro.swift; sourceTree = "<group>"; };
+		00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikoloViewController.swift; sourceTree = "<group>"; };
+		00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstAtributoHelpiloj.swift; sourceTree = "<group>"; };
+		00B27B3C2DCC040800526F82 /* Avizoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avizoj.swift; sourceTree = "<group>"; };
+		00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriaViewController.swift; sourceTree = "<group>"; };
+		00B27B432DCD281C00526F82 /* Konservitajho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Konservitajho.swift; sourceTree = "<group>"; };
+		00B27B462DCE636400526F82 /* Vortlistero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vortlistero.swift; sourceTree = "<group>"; };
+		00B27B482DCE721600526F82 /* KonservitajViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonservitajViewController.swift; sourceTree = "<group>"; };
+		00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorioViewController.swift; sourceTree = "<group>"; };
+		00B27B4C2DCE792C00526F82 /* AgordojViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgordojViewController.swift; sourceTree = "<group>"; };
+		00B27B4F2DE8D5F600526F82 /* StiloElektiloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StiloElektiloViewController.swift; sourceTree = "<group>"; };
+		00B27B512DEA3ED300526F82 /* ShovMenuoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShovMenuoViewController.swift; sourceTree = "<group>"; };
+		00B27B542DEF743500526F82 /* InformojViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformojViewController.swift; sourceTree = "<group>"; };
+		00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformoSekcio.swift; sourceTree = "<group>"; };
+		00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoListoViewController.swift; sourceTree = "<group>"; };
+		00B27B5B2DF0A77500526F82 /* MallongigoListoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MallongigoListoj.swift; sourceTree = "<group>"; };
+		00B27B5E2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoTraktilo.swift; sourceTree = "<group>"; };
+		00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UzantDatumoRegilo.swift; sourceTree = "<group>"; };
+		00B27B622DF206D600526F82 /* V1UzantDatumoTenilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V1UzantDatumoTenilo.swift; sourceTree = "<group>"; };
+		00B27B682DF209EC00526F82 /* Listero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listero.swift; sourceTree = "<group>"; };
+		00B27B772DF74E5900526F82 /* TekstoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekstoChelo.swift; sourceTree = "<group>"; };
+		00B27B792DF7512F00526F82 /* DerivajhTitoloChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerivajhTitoloChelo.swift; sourceTree = "<group>"; };
+		00B27B7B2DF751FE00526F82 /* TradukaroChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradukaroChelo.swift; sourceTree = "<group>"; };
+		00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubartikoloTitoloChelo.swift; sourceTree = "<group>"; };
+		00B27B932DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigaciiloHelpiloj.swift; sourceTree = "<group>"; };
+		00B27B9B2E08889000526F82 /* StrekaroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrekaroView.swift; sourceTree = "<group>"; };
+		00B27BA02E099FFA00526F82 /* ShovMenueroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShovMenueroView.swift; sourceTree = "<group>"; };
+		00B27BA22E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AranghHelpiloj.swift"; sourceTree = "<group>"; };
+		00E5D5F62E4A6BD5004877ED /* MallongigoListo+Chiuj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MallongigoListo+Chiuj.swift"; sourceTree = "<group>"; };
+		00E5D5FB2E4C0207004877ED /* Bildetoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bildetoj.swift; sourceTree = "<group>"; };
+		5ABE2912D05EFC9F366FD700 /* Pods-PoshReVo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo/Pods-PoshReVo.release.xcconfig"; sourceTree = "<group>"; };
+		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
+		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
+		CCAEF79675BA2B6425FB8904 /* Pods_PoshReVo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92822826A7822C7C1C0F212 /* Pods-PoshReVo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo/Pods-PoshReVo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000DA6D12D8F31CF0026CBA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000DA6EF2D8F33740026CBA0 /* ReVoDatumbazo.framework in Frameworks */,
+				78E61E22DDBE93151463A2C9 /* Pods_PoshReVo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000DA6CB2D8F31CF0026CBA0 = {
+			isa = PBXGroup;
+			children = (
+				000DA6D62D8F31CF0026CBA0 /* PoshReVo */,
+				000DA6D52D8F31CF0026CBA0 /* Products */,
+				000DA6ED2D8F33740026CBA0 /* Frameworks */,
+				90F3C80E6330F4395B924C94 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		000DA6D52D8F31CF0026CBA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000DA6D42D8F31CF0026CBA0 /* PoshReVo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000DA6D62D8F31CF0026CBA0 /* PoshReVo */ = {
+			isa = PBXGroup;
+			children = (
+				000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */,
+				00B27B252DC6B73F00526F82 /* Kunordigilo.swift */,
+				000DA6FC2D908F680026CBA0 /* PRVNavigationController.swift */,
+				00107E3B2E3296020010CECD /* Paghoj */,
+				00B27B292DC7CF8B00526F82 /* Artikoloj */,
+				00B27B242DC3FD5800526F82 /* Interfaceroj */,
+				00B27B5D2DF0AF8400526F82 /* Uzantdatumoj */,
+				00107E3A2E3295CD0010CECD /* Utilajhoj */,
+				00B27B182DC2800500526F82 /* Risurcoj */,
+			);
+			path = PoshReVo;
+			sourceTree = "<group>";
+		};
+		000DA6ED2D8F33740026CBA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				000DA6EE2D8F33740026CBA0 /* ReVoDatumbazo.framework */,
+				CCAEF79675BA2B6425FB8904 /* Pods_PoshReVo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00107E392E3295BC0010CECD /* Datumbazajhoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B162DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift */,
+			);
+			path = Datumbazajhoj;
+			sourceTree = "<group>";
+		};
+		00107E3A2E3295CD0010CECD /* Utilajhoj */ = {
+			isa = PBXGroup;
+			children = (
+				00107E392E3295BC0010CECD /* Datumbazajhoj */,
+				00B27B232DC3FD2600526F82 /* Interfacajhoj */,
+				00B27B3C2DCC040800526F82 /* Avizoj.swift */,
+				00B27B142DC2682200526F82 /* TekstHelpiloj.swift */,
+				00B27B322DC8212C00526F82 /* TekstAtributoHelpiloj.swift */,
+			);
+			path = Utilajhoj;
+			sourceTree = "<group>";
+		};
+		00107E3B2E3296020010CECD /* Paghoj */ = {
+			isa = PBXGroup;
+			children = (
+				003024D42E3A7E1E006D0C14 /* Hejma Ingo */,
+				00B27B212DC3FCF700526F82 /* Serchado */,
+				00E5D5FA2E4A96F1004877ED /* Uzantaj Vortlistoj */,
+				00B27B3E2DCD0DD400526F82 /* Esplorado */,
+				00B27B4E2DE8D5E400526F82 /* Agordoj */,
+				00B27B582DEFA35600526F82 /* Mallongigoj */,
+				00B27B532DEF742900526F82 /* Informoj */,
+			);
+			path = Paghoj;
+			sourceTree = "<group>";
+		};
+		003024D42E3A7E1E006D0C14 /* Hejma Ingo */ = {
+			isa = PBXGroup;
+			children = (
+				00107E342E3287540010CECD /* PaghingoViewController.swift */,
+				003024D52E3A7E2A006D0C14 /* Ingito.swift */,
+			);
+			path = "Hejma Ingo";
+			sourceTree = "<group>";
+		};
+		003024DE2E4264E7006D0C14 /* Kolor-stiloj */ = {
+			isa = PBXGroup;
+			children = (
+				003024DF2E4264F4006D0C14 /* Koloraro.swift */,
+				000DA6F82D906C6E0026CBA0 /* InterfacStilo.swift */,
+				003024E32E4265CE006D0C14 /* Stiloj */,
+			);
+			path = "Kolor-stiloj";
+			sourceTree = "<group>";
+		};
+		003024E32E4265CE006D0C14 /* Stiloj */ = {
+			isa = PBXGroup;
+			children = (
+				003024E42E4265D7006D0C14 /* Simpla.swift */,
+				003DC1B32E463AB90053404F /* ReVo-a.swift */,
+				003024E62E4265F0006D0C14 /* Pergamena.swift */,
+			);
+			path = Stiloj;
+			sourceTree = "<group>";
+		};
+		00B27B182DC2800500526F82 /* Risurcoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B192DC2802700526F82 /* PoshReVoDatumbazo.sqlite */,
+				00B27B5B2DF0A77500526F82 /* MallongigoListoj.swift */,
+				000DA6F42D8F35FE0026CBA0 /* Assets.xcassets */,
+			);
+			path = Risurcoj;
+			sourceTree = "<group>";
+		};
+		00B27B212DC3FCF700526F82 /* Serchado */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B082DC17EB600526F82 /* SerchoViewController.swift */,
+				000DA6FA2D90898C0026CBA0 /* SerchiloView.swift */,
+				00B27B1F2DC3F9F700526F82 /* LingvoBretoViewController.swift */,
+			);
+			path = Serchado;
+			sourceTree = "<group>";
+		};
+		00B27B222DC3FD0600526F82 /* Lingvo-estrado */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B1B2DC2B0DE00526F82 /* LingvaroRedaktiloViewController.swift */,
+				00B27B0E2DC2648200526F82 /* LingvoElektiloViewController.swift */,
+				00B27B122DC2650800526F82 /* LingvoListoViewController.swift */,
+			);
+			path = "Lingvo-estrado";
+			sourceTree = "<group>";
+		};
+		00B27B232DC3FD2600526F82 /* Interfacajhoj */ = {
+			isa = PBXGroup;
+			children = (
+				003024DA2E3FAFC9006D0C14 /* UIColor+Helpiloj.swift */,
+				003024DE2E4264E7006D0C14 /* Kolor-stiloj */,
+				003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */,
+				00B27B0C2DC1813400526F82 /* UIView+AranghHelpiloj.swift */,
+				00B27BA22E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift */,
+				00B27B062DC17B6700526F82 /* AparatInformo.swift */,
+				003FC1A72E37D8300039AC2C /* Tiparo.swift */,
+				00B27B102DC264A100526F82 /* Tekstoj.swift */,
+				003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */,
+				00E5D5FB2E4C0207004877ED /* Bildetoj.swift */,
+				00B27B932DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift */,
+				00107E2C2E304C070010CECD /* AgoHelpiloj.swift */,
+			);
+			path = Interfacajhoj;
+			sourceTree = "<group>";
+		};
+		00B27B242DC3FD5800526F82 /* Interfaceroj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B452DCE633100526F82 /* Vortlisto */,
+				00B27B9F2E099FEF00526F82 /* Shovmenuo */,
+				00B27B9B2E08889000526F82 /* StrekaroView.swift */,
+				003024DC2E401A21006D0C14 /* OmbroImitilo.swift */,
+			);
+			path = Interfaceroj;
+			sourceTree = "<group>";
+		};
+		00B27B292DC7CF8B00526F82 /* Artikoloj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B2A2DC7CF9900526F82 /* ArtikoloViewController.swift */,
+				00B27B762DF74E4F00526F82 /* Cheloj */,
+				00107E362E328C390010CECD /* AgtabuloView.swift */,
+			);
+			path = Artikoloj;
+			sourceTree = "<group>";
+		};
+		00B27B3E2DCD0DD400526F82 /* Esplorado */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B3F2DCD0E9D00526F82 /* KategoriaViewController.swift */,
+				003DC1B52E46A3470053404F /* KategoriaViewController+EsplorListoj.swift */,
+			);
+			path = Esplorado;
+			sourceTree = "<group>";
+		};
+		00B27B452DCE633100526F82 /* Vortlisto */ = {
+			isa = PBXGroup;
+			children = (
+				00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */,
+				00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */,
+				00B27B462DCE636400526F82 /* Vortlistero.swift */,
+			);
+			path = Vortlisto;
+			sourceTree = "<group>";
+		};
+		00B27B4E2DE8D5E400526F82 /* Agordoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B222DC3FD0600526F82 /* Lingvo-estrado */,
+				00B27B4C2DCE792C00526F82 /* AgordojViewController.swift */,
+				00B27B4F2DE8D5F600526F82 /* StiloElektiloViewController.swift */,
+			);
+			path = Agordoj;
+			sourceTree = "<group>";
+		};
+		00B27B532DEF742900526F82 /* Informoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B542DEF743500526F82 /* InformojViewController.swift */,
+				00B27B562DEFA2CF00526F82 /* InformoSekcio.swift */,
+			);
+			path = Informoj;
+			sourceTree = "<group>";
+		};
+		00B27B582DEFA35600526F82 /* Mallongigoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B592DEFA37600526F82 /* MallongigoListoViewController.swift */,
+				003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */,
+				00E5D5F62E4A6BD5004877ED /* MallongigoListo+Chiuj.swift */,
+			);
+			path = Mallongigoj;
+			sourceTree = "<group>";
+		};
+		00B27B5D2DF0AF8400526F82 /* Uzantdatumoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B272DC6B77A00526F82 /* UzantDatumaro.swift */,
+				00B27B602DF0B43C00526F82 /* UzantDatumoRegilo.swift */,
+				00B27B5E2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift */,
+				00B27B432DCD281C00526F82 /* Konservitajho.swift */,
+				00B27B642DF208D800526F82 /* V1 */,
+			);
+			path = Uzantdatumoj;
+			sourceTree = "<group>";
+		};
+		00B27B642DF208D800526F82 /* V1 */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B672DF209D200526F82 /* Modeloj */,
+				00B27B622DF206D600526F82 /* V1UzantDatumoTenilo.swift */,
+			);
+			path = V1;
+			sourceTree = "<group>";
+		};
+		00B27B672DF209D200526F82 /* Modeloj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B682DF209EC00526F82 /* Listero.swift */,
+			);
+			path = Modeloj;
+			sourceTree = "<group>";
+		};
+		00B27B762DF74E4F00526F82 /* Cheloj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B7E2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift */,
+				00B27B792DF7512F00526F82 /* DerivajhTitoloChelo.swift */,
+				00B27B772DF74E5900526F82 /* TekstoChelo.swift */,
+				00B27B7B2DF751FE00526F82 /* TradukaroChelo.swift */,
+			);
+			path = Cheloj;
+			sourceTree = "<group>";
+		};
+		00B27B9F2E099FEF00526F82 /* Shovmenuo */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B512DEA3ED300526F82 /* ShovMenuoViewController.swift */,
+				00B27BA02E099FFA00526F82 /* ShovMenueroView.swift */,
+			);
+			path = Shovmenuo;
+			sourceTree = "<group>";
+		};
+		00E5D5FA2E4A96F1004877ED /* Uzantaj Vortlistoj */ = {
+			isa = PBXGroup;
+			children = (
+				00B27B4A2DCE758B00526F82 /* HistorioViewController.swift */,
+				00B27B482DCE721600526F82 /* KonservitajViewController.swift */,
+			);
+			path = "Uzantaj Vortlistoj";
+			sourceTree = "<group>";
+		};
+		90F3C80E6330F4395B924C94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */,
+				A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */,
+				E92822826A7822C7C1C0F212 /* Pods-PoshReVo.debug.xcconfig */,
+				5ABE2912D05EFC9F366FD700 /* Pods-PoshReVo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000DA6D32D8F31CF0026CBA0 /* PoshReVo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000DA6E22D8F31D10026CBA0 /* Build configuration list for PBXNativeTarget "PoshReVo" */;
+			buildPhases = (
+				17D2CA4DB9F876E8E22E58A2 /* [CP] Check Pods Manifest.lock */,
+				000DA6D02D8F31CF0026CBA0 /* Sources */,
+				000DA6D12D8F31CF0026CBA0 /* Frameworks */,
+				000DA6D22D8F31CF0026CBA0 /* Resources */,
+				000DA6F12D8F33740026CBA0 /* Embed Frameworks */,
+				BA1C72EEFEC023138B6C98B4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoshReVo;
+			productName = PoshReVo2;
+			productReference = 000DA6D42D8F31CF0026CBA0 /* PoshReVo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000DA6CC2D8F31CF0026CBA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				DefaultBuildSystemTypeForWorkspace = Latest;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					000DA6D32D8F31CF0026CBA0 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 000DA6CF2D8F31CF0026CBA0 /* Build configuration list for PBXProject "PoshReVo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000DA6CB2D8F31CF0026CBA0;
+			productRefGroup = 000DA6D52D8F31CF0026CBA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000DA6D32D8F31CF0026CBA0 /* PoshReVo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000DA6D22D8F31CF0026CBA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000DA6F52D8F35FE0026CBA0 /* Assets.xcassets in Resources */,
+				00B27B1A2DC2802700526F82 /* PoshReVoDatumbazo.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17D2CA4DB9F876E8E22E58A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoshReVo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA1C72EEFEC023138B6C98B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoshReVo/Pods-PoshReVo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoshReVo/Pods-PoshReVo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoshReVo/Pods-PoshReVo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000DA6D02D8F31CF0026CBA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B27BA32E09DA3A00526F82 /* UIViewController+AranghHelpiloj.swift in Sources */,
+				00B27B4B2DCE758B00526F82 /* HistorioViewController.swift in Sources */,
+				00B27B1C2DC2B0DE00526F82 /* LingvaroRedaktiloViewController.swift in Sources */,
+				00B27B782DF74E5900526F82 /* TekstoChelo.swift in Sources */,
+				003024D32E3A7B2A006D0C14 /* MallongigoListoChelo.swift in Sources */,
+				00107E2D2E304C0A0010CECD /* AgoHelpiloj.swift in Sources */,
+				00B27B0F2DC2648200526F82 /* LingvoElektiloViewController.swift in Sources */,
+				00B27B3D2DCC040800526F82 /* Avizoj.swift in Sources */,
+				00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */,
+				00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */,
+				003024E02E4264F7006D0C14 /* Koloraro.swift in Sources */,
+				00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */,
+				003024D12E3A7659006D0C14 /* UITableViewCell+Helpiloj.swift in Sources */,
+				00B27B442DCD281C00526F82 /* Konservitajho.swift in Sources */,
+				00E5D5FC2E4C020B004877ED /* Bildetoj.swift in Sources */,
+				000DA6D82D8F31CF0026CBA0 /* AppDelegate.swift in Sources */,
+				00B27B492DCE721600526F82 /* KonservitajViewController.swift in Sources */,
+				00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */,
+				00B27B5C2DF0A77500526F82 /* MallongigoListoj.swift in Sources */,
+				00B27B5F2DF0AF9A00526F82 /* UzantDatumoTraktilo.swift in Sources */,
+				00B27B2B2DC7CF9900526F82 /* ArtikoloViewController.swift in Sources */,
+				003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */,
+				003024E52E4265D9006D0C14 /* Simpla.swift in Sources */,
+				003DC1B62E46A34B0053404F /* KategoriaViewController+EsplorListoj.swift in Sources */,
+				00107E3E2E32CC770010CECD /* VortListoNulStatoView.swift in Sources */,
+				000DA6F92D906C6E0026CBA0 /* InterfacStilo.swift in Sources */,
+				003024D62E3A7E2C006D0C14 /* Ingito.swift in Sources */,
+				00B27B522DEA3ED300526F82 /* ShovMenuoViewController.swift in Sources */,
+				000DA6FB2D90898C0026CBA0 /* SerchiloView.swift in Sources */,
+				00B27BA12E099FFA00526F82 /* ShovMenueroView.swift in Sources */,
+				00B27B4D2DCE792C00526F82 /* AgordojViewController.swift in Sources */,
+				003FC1AA2E3920FB0039AC2C /* AlirebloTekstoj.swift in Sources */,
+				00B27B132DC2650800526F82 /* LingvoListoViewController.swift in Sources */,
+				00B27B942DFF8C3F00526F82 /* NavigaciiloHelpiloj.swift in Sources */,
+				00B27B472DCE636400526F82 /* Vortlistero.swift in Sources */,
+				00B27B552DEF743500526F82 /* InformojViewController.swift in Sources */,
+				00B27B112DC264A100526F82 /* Tekstoj.swift in Sources */,
+				00B27B502DE8D5F600526F82 /* StiloElektiloViewController.swift in Sources */,
+				003024DB2E3FAFCE006D0C14 /* UIColor+Helpiloj.swift in Sources */,
+				00B27B152DC2682200526F82 /* TekstHelpiloj.swift in Sources */,
+				00B27B7F2DF78D8E00526F82 /* SubartikoloTitoloChelo.swift in Sources */,
+				00B27B0D2DC1813400526F82 /* UIView+AranghHelpiloj.swift in Sources */,
+				00B27B402DCD0E9D00526F82 /* KategoriaViewController.swift in Sources */,
+				003DC1B42E463ABD0053404F /* ReVo-a.swift in Sources */,
+				00B27B572DEFA2CF00526F82 /* InformoSekcio.swift in Sources */,
+				00B27B692DF209EC00526F82 /* Listero.swift in Sources */,
+				00107E372E328C3D0010CECD /* AgtabuloView.swift in Sources */,
+				003024DD2E401A27006D0C14 /* OmbroImitilo.swift in Sources */,
+				00B27B632DF206D600526F82 /* V1UzantDatumoTenilo.swift in Sources */,
+				00B27B7A2DF7512F00526F82 /* DerivajhTitoloChelo.swift in Sources */,
+				00B27B172DC27F9400526F82 /* VortaroDatumbazo+Komuna.swift in Sources */,
+				00E5D5F72E4A6BD8004877ED /* MallongigoListo+Chiuj.swift in Sources */,
+				000DA6FD2D908F680026CBA0 /* PRVNavigationController.swift in Sources */,
+				00B27B202DC3F9F700526F82 /* LingvoBretoViewController.swift in Sources */,
+				00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */,
+				00B27B9C2E08889000526F82 /* StrekaroView.swift in Sources */,
+				00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */,
+				00B27B7C2DF751FE00526F82 /* TradukaroChelo.swift in Sources */,
+				003024E72E4265F2006D0C14 /* Pergamena.swift in Sources */,
+				00B27B332DC8212C00526F82 /* TekstAtributoHelpiloj.swift in Sources */,
+				00B27B282DC6B77A00526F82 /* UzantDatumaro.swift in Sources */,
+				00107E352E3287580010CECD /* PaghingoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000DA6E02D8F31D10026CBA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		000DA6E12D8F31D10026CBA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000DA6E32D8F31D10026CBA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E92822826A7822C7C1C0F212 /* Pods-PoshReVo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PoshReVo/Risurcoj/Assets.xcassets\"";
+				DEVELOPMENT_TEAM = WYZ8GHNKW7;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "PoŝReVo";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SinuousRill.PReVo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000DA6E42D8F31D10026CBA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ABE2912D05EFC9F366FD700 /* Pods-PoshReVo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PoshReVo/Risurcoj/Assets.xcassets\"";
+				DEVELOPMENT_TEAM = WYZ8GHNKW7;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "PoŝReVo";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SinuousRill.PReVo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000DA6CF2D8F31CF0026CBA0 /* Build configuration list for PBXProject "PoshReVo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000DA6E02D8F31D10026CBA0 /* Debug */,
+				000DA6E12D8F31D10026CBA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000DA6E22D8F31D10026CBA0 /* Build configuration list for PBXNativeTarget "PoshReVo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000DA6E32D8F31D10026CBA0 /* Debug */,
+				000DA6E42D8F31D10026CBA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000DA6CC2D8F31CF0026CBA0 /* Project object */;
+}

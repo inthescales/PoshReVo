@@ -1,38 +1,35 @@
 import CoreData
-
 import UIKit
-import iOS_Slide_Menu
 
 import ReVoDatumbazo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var fenestro: UIWindow?
+	private var fenestro: UIWindow?
 
 	/// Datumbaz-konteksto por ĉiuj datumbazaj operacioj
-	lazy var datumbazKonteksto: NSManagedObjectContext = {
+	private lazy var datumbazKonteksto: NSManagedObjectContext = {
 		let datumbazNomo = "PoshReVoDatumbazo"
 		let bundleUrl = Bundle.main.url(forResource: datumbazNomo, withExtension: "sqlite")!
 		return ReVoDatumbazo.legiDatumbazon(el: bundleUrl)
 	}()
 	
-    func application(
+	func application(
 		_ application: UIApplication,
 		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 	) -> Bool {
-        VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
-        
-        UzantDatumaro.starigi()
-        
-        let navilo = ChefaNavigationController()
-        
-        fenestro = UIWindow(frame: UIScreen.main.bounds)
-        fenestro?.rootViewController = navilo
-        fenestro?.makeKeyAndVisible()
-        
-        Stiloj.efektivigiStilon(UzantDatumaro.stilo)
-        
-        return true
-    }
+		// Starigi datumbazon
+		VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
+		
+		// Starigi hejmpaĝon
+		let serchPagho = Kunordigilo.komuna.fariSerchPaghon()
+		let vc = PaghingoViewController(chefpagho: serchPagho)
+		let navigaciilo = PRVNavigationController(rootViewController: vc)
+		fenestro = UIWindow(frame: UIScreen.main.bounds)
+		fenestro?.rootViewController = navigaciilo
+		fenestro?.makeKeyAndVisible()
+				
+		return true
+	}
 }
 
