@@ -6,13 +6,13 @@ let komencTempo = Date()
 // Indikoj
 
 let radiko = "/Users/robin/Desktop"
-
 let fontIndiko = radiko + "/fontoj"
+let produktajhIndiko = radiko + "/produktajhoj"
+
 let grundIndiko = fontIndiko + "/grundo"
 let revoIndiko = fontIndiko + "/revo"
 let artikolIndiko = revoIndiko + "/revo/"
 
-let produktajhIndiko = radiko + "/produktajhoj"
 
 // Datumbazaĵoj
 

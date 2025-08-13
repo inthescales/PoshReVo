@@ -32,7 +32,8 @@ enum Tiparo {
 	static let tradukaroEtikedoForta = tiparo(18.0, stilo: .graskursiva)
 	static let tradukaroEtikedoMalforta = tiparo(18.0, stilo: .kursiva)
 	static let tradukaElektiButono = tiparo(18.0, dinamika: false)
-	static let tradukaLingvoEtikedo = artikolaTeksto
+	static let tradukaLingvo = artikolaTeksto
+	static let tradukaSignifo = artikolaTeksto
 	
 	// MARK: Mallongigolistoj
 	

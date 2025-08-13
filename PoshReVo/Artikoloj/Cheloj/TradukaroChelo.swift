@@ -168,7 +168,7 @@ final class TradukaroChelo: UITableViewCell {
 		let staplo = fariTradukoStaplon(tradukoj: montrotaj, stilo: stilo)
 		contentView.addSubview(staplo)
 		staplo.snp.makeConstraints { make in
-			make.top.equalTo(avizo.snp.bottom).offset(Konstantoj.vertikalaMargheno - Tiparo.tradukaLingvoEtikedo.pointSize / 4)
+			make.top.equalTo(avizo.snp.bottom).offset(Konstantoj.vertikalaMargheno - Tiparo.tradukaLingvo.pointSize / 4)
 			make.left.right.equalToSuperview().inset(horizontalaMargheno)
 		}
 		return [avizo, staplo]
@@ -246,7 +246,7 @@ final class TradukaroChelo: UITableViewCell {
 			// Noto: Mi uzas TTTAttributedLabel-on ĉi tie ĉar, je grandaj tekstgrandoj, la altoj
 			// de UILabel kaj TTTAttributedLabel iomete malsamas.
 			let lingvoEtikedo = TTTAttributedLabel(frame: .zero)
-			lingvoEtikedo.font = Tiparo.tradukaLingvoEtikedo
+			lingvoEtikedo.font = Tiparo.tradukaLingvo
 			lingvoEtikedo.textColor = stilo.dokumentSencNumero
 			lingvoEtikedo.numberOfLines = 1
 			lingvoEtikedo.text = traduko.lingvo.adverbo + ":" // Faru FINE (pro TTTAttributedLabel sensencaĵo)
@@ -259,7 +259,7 @@ final class TradukaroChelo: UITableViewCell {
 			TekstAtributoHelpiloj.provizi(
 				etikedon: difinoEtikedo,
 				per: traduko.teksto,
-				tiparo: Tiparo.artikolaTeksto,
+				tiparo: Tiparo.tradukaSignifo,
 				stilo: stilo
 			)
 			difinoEtikedo.textColor = stilo.dokumentaTeksto
