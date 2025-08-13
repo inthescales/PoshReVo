@@ -17,6 +17,9 @@ final class V1UzantDatumoTenilo {
 	static func legiV1Datumaron() -> UzantDatumaro? {
 		let defaults = UserDefaults.standard
 		
+		NSKeyedUnarchiver.setClass(Lingvo.self, forClassName: "ReVoModeloj.Lingvo")
+		NSKeyedUnarchiver.setClass(Listero.self, forClassName: "PoshReVo.Listero")
+		
 		var serchLingvo: Lingvo?
 		if let datumoj = defaults.object(forKey: Klavoj.serchLingvo) as? Data,
 		   let trovo = try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [Lingvo.self, NSString.self], from: datumoj) as? Lingvo {
@@ -36,7 +39,7 @@ final class V1UzantDatumoTenilo {
 		}
 		
 		var historio: [Konservitajho] = []
-		if let datumoj = defaults.object(forKey: "historio") as? Data,
+		if let datumoj = defaults.object(forKey: Klavoj.historio) as? Data,
 			let trovo = NSKeyedUnarchiver.unarchiveObject(with: datumoj) as? [Listero] {
 			historio = trovo.map { Konservitajho(nomo: $0.nomo, indekso: $0.indekso) }
 		}

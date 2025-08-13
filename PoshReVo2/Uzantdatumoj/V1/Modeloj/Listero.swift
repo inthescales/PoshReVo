@@ -1,7 +1,8 @@
 import Foundation
 
+// TODO: Kiam ni ne plu subtenas V1ajn uzantodatumojn, forigu ĉi-dosieron
+
 /// Klaso uzata en PoŝReVo V1 por reprezenti eron in listo da vortoj. Retenata por legi uzant-datumojn skribitajn en V1.
-/// Kiam ni ne plu subtenas V1ajn uzantodatumojn, forigu ĉi-klason.
 final class Listero : NSObject, NSSecureCoding {
 	let nomo: String, indekso: String
 	
@@ -15,7 +16,7 @@ final class Listero : NSObject, NSSecureCoding {
 	static var supportsSecureCoding = true
 	
 	required convenience init?(coder aDecoder: NSCoder) {
-		if let ennomo = aDecoder.decodeObject(forKey: "teksto") as? String,
+		if let ennomo = aDecoder.decodeObject(forKey: "nomo") as? String,
 			let enindekso = aDecoder.decodeObject(forKey: "indekso") as? String {
 			self.init(ennomo, enindekso)
 		} else {
@@ -24,7 +25,7 @@ final class Listero : NSObject, NSSecureCoding {
 	}
 	
 	func encode(with aCoder: NSCoder) {
-		aCoder.encode(nomo, forKey: "teksto")
+		aCoder.encode(nomo, forKey: "nomo")
 		aCoder.encode(indekso, forKey: "indekso")
 	}
 }
