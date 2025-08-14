@@ -42,6 +42,11 @@ final class LingvoBretoViewController: UIViewController {
 		return ejo
 	}()
 	
+	private lazy var fadGradiento = FadGradientoView(
+		orientigho: .dekstren,
+		koloro: stilo.navigaciaFono
+	)
+	
 	/// Suba streko montranta la nune elektatan lingvon
 	private lazy var substreko: UIView = {
 		let strek = UIView()
@@ -161,7 +166,15 @@ final class LingvoBretoViewController: UIViewController {
 		pliButono.snp.makeConstraints { make in
 			make.top.bottom.equalToSuperview()
 			make.right.equalToSuperview().offset(-Konstantoj.butonoBufro)
-			make.left.equalTo(rulumejo.snp.right).offset(Konstantoj.butonoBufro)
+			make.left.equalTo(rulumejo.snp.right)//.offset(Konstantoj.butonoBufro)
+		}
+		
+		view.addSubview(fadGradiento)
+		fadGradiento.snp.makeConstraints { make in
+			make.top.equalToSuperview()
+			make.right.equalTo(pliButono.snp.left)
+			make.bottom.equalTo(substreko.snp.top)
+			make.width.equalTo(Konstantoj.butonoBufro)
 		}
 	}
 	

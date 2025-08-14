@@ -2,10 +2,12 @@ import UIKit
 
 /// Vido kiu montras gradienton fadante ekde koloro al travideblo
 final class FadGradientoView: UIView {
-	/// Orientiĝo de la gradiento
-	enum Orientigho {
-		case vertikala
-		case horizontala
+	/// Direkto en kiu la vido fadas
+	enum FadDirekto {
+		case dekstren
+		case maldekstren
+		case supren
+		case malsupren
 	}
 	
 	// MARK: - Interfaceroj
@@ -17,10 +19,16 @@ final class FadGradientoView: UIView {
 		tavolo.locations = [0.0, NSNumber(value: fadRegiono)]
 		
 		switch orientigho {
-		case .horizontala:
+		case .dekstren:
 			tavolo.startPoint = CGPoint(x: 0, y: 0)
 			tavolo.endPoint   = CGPoint(x: 1, y: 0)
-		case .vertikala:
+		case .maldekstren:
+			tavolo.startPoint = CGPoint(x: 1, y: 0)
+			tavolo.endPoint   = CGPoint(x: 0, y: 0)
+		case .supren:
+			tavolo.startPoint = CGPoint(x: 0, y: 1)
+			tavolo.endPoint   = CGPoint(x: 0, y: 0)
+		case .malsupren:
 			tavolo.startPoint = CGPoint(x: 0, y: 0)
 			tavolo.endPoint   = CGPoint(x: 0, y: 1)
 		}
@@ -31,7 +39,7 @@ final class FadGradientoView: UIView {
 	// MARK: - Agordoj
 	
 	/// Orientiĝo uzota
-	private let orientigho: Orientigho
+	private let orientigho: FadDirekto
 	
 	/// Koloro de la opaka flanko de la gradiento
 	private var koloro: UIColor
@@ -41,7 +49,7 @@ final class FadGradientoView: UIView {
 	
 	// MARK: - Valorizado
 	
-	init(orientigho: Orientigho, koloro: UIColor, fadRegiono: CGFloat) {
+	init(orientigho: FadDirekto, koloro: UIColor, fadRegiono: CGFloat = 1.0) {
 		self.koloro = koloro
 		self.orientigho = orientigho
 		self.fadRegiono = fadRegiono
@@ -57,7 +65,7 @@ final class FadGradientoView: UIView {
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
-		gradientTavolo.frame = frame
+		gradientTavolo.frame = bounds
 	}
 	
 	func meti(koloron koloro: UIColor) {

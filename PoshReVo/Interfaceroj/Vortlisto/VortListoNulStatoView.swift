@@ -10,7 +10,7 @@ final class VortListoNulStatoView: UIView {
 		static let larghoPorcio: CGFloat = 0.8
 		
 		/// Porcio de la falsa tabelo kiu estu videbla
-		static let falsTabeloPorcio: CGFloat = 0.6
+		static let falsTabeloPorcio: CGFloat = 0.7
 	}
 	
 	// MARK: - Interfaceroj
@@ -30,7 +30,7 @@ final class VortListoNulStatoView: UIView {
 	
 	/// Gradiento kiu kaŝos duonon de la falsa tabelo
 	private lazy var fadGradiento = FadGradientoView(
-		orientigho: .vertikala,
+		orientigho: .malsupren,
 		koloro: stilo.dokumentaFono,
 		fadRegiono: Konstantoj.falsTabeloPorcio
 	)
