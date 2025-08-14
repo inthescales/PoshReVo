@@ -124,25 +124,38 @@ extension ArboAnalizilo {
 		
 		/// Aldonas serĉtradukon
 		func aldoni(derivajhTradukon traduko: ArtikolTraduko, lingvo: String) {
-			if traduko.senco == nil {
-				if sensencajDerivajhTradukoj[lingvo] == nil { sensencajDerivajhTradukoj[lingvo] = [] }
-				sensencajDerivajhTradukoj[lingvo]?.append(traduko)
-			} else {
-				if sencajDerivajhTradukoj[lingvo] == nil { sencajDerivajhTradukoj[lingvo] = [] }
-
-				// Ĉi-strangaĵo certigas ke tradukoj ene de ekzemploj aperu POST ne-ekzemplaj
-				// tradukoj de la sama senco/subsenco
-				
-				var indekso = (sencajDerivajhTradukoj[lingvo]?.endIndex)!
-				while indekso > 0,
-					  let nuna = sencajDerivajhTradukoj[lingvo]?[indekso - 1],
-					  traduko.transpasNomo == false
-						&& nuna.transpasNomo == true
-						&& nuna.senco == traduko.senco
-						&& nuna.subsenco == traduko.subsenco {
-					indekso -= 1
+			// Trovi indekson ĉe kiu ni metu novan tradukon.
+			// Necesas por ke tradukoj ene de ekzemploj aperu POST ne-ekzemplaj tradukoj de
+			// la sama senco/subsenco/derivaĵo
+			func indekso(por traduko: ArtikolTraduko, en listo: [ArtikolTraduko]) -> Int {
+				guard listo.count > 0 else {
+					return 0
 				}
 				
+				guard traduko.transpasNomo == false else {
+					return listo.endIndex
+				}
+				
+				// Meti novan tradukon antaŭ samsencan havantan transpasnomon
+				if let indekso = listo.firstIndex(where: {
+					$0.transpasNomo == true
+					&& $0.senco == traduko.senco
+					&& $0.subsenco == traduko.subsenco
+				}) {
+					return indekso
+				}
+				
+				return listo.endIndex
+			}
+			
+			// Aranĝi tradukojn laŭ ĉu ili havas certan sencon aŭ ne
+			if traduko.senco == nil {
+				if sensencajDerivajhTradukoj[lingvo] == nil { sensencajDerivajhTradukoj[lingvo] = [] }
+				let indekso = indekso(por: traduko, en: sensencajDerivajhTradukoj[lingvo]!)
+				sensencajDerivajhTradukoj[lingvo]?.insert(traduko, at: indekso)
+			} else {
+				if sencajDerivajhTradukoj[lingvo] == nil { sencajDerivajhTradukoj[lingvo] = [] }
+				let indekso = indekso(por: traduko, en: sencajDerivajhTradukoj[lingvo]!)
 				sencajDerivajhTradukoj[lingvo]?.insert(traduko, at: indekso)
 			}
 		}
