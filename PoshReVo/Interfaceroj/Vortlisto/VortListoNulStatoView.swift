@@ -8,6 +8,9 @@ final class VortListoNulStatoView: UIView {
 		
 		/// Kiom de la horizontala larĝo de la patra vido ĉi tiu povu okupi
 		static let larghoPorcio: CGFloat = 0.8
+		
+		/// Porcio de la falsa tabelo kiu estu videbla
+		static let falsTabeloPorcio: CGFloat = 0.6
 	}
 	
 	// MARK: - Interfaceroj
@@ -22,19 +25,34 @@ final class VortListoNulStatoView: UIView {
 		return eti
 	}()
 	
+	/// Falsa tabelo ornamenta
+	private lazy var falsaTabelo = FalsaVortListoViewController(stilo: stilo)
+	
+	/// Gradiento kiu kaŝos duonon de la falsa tabelo
+	private lazy var fadGradiento = FadGradientoView(
+		orientigho: .vertikala,
+		koloro: stilo.dokumentaFono,
+		fadRegiono: Konstantoj.falsTabeloPorcio
+	)
+	
 	// MARK: - Agordoj
 	
 	/// Teksto montrota
 	private let teksto: String
 	
+	private var stilo: InterfacStilo
+	
 	// MARK: - Valorizado
 	
 	init(teksto: String, stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
 		self.teksto = teksto
-		
+		self.stilo = stilo
 		super.init(frame: .zero)
 		
 		backgroundColor = .clear
+		
+		addEdgeMatchedSubview(falsaTabelo.view)
+		addEdgeMatchedSubview(fadGradiento)
 		
 		addSubview(etikedo)
 		etikedo.snp.makeConstraints { make in
@@ -52,5 +70,7 @@ final class VortListoNulStatoView: UIView {
 	
 	func meti(stilon stilo: InterfacStilo) {
 		etikedo.textColor = stilo.dokumentaMalfortaTeksto
+		falsaTabelo.meti(stilon: stilo)
+		fadGradiento.meti(koloron: stilo.dokumentaFono)
 	}
 }

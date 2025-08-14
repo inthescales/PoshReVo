@@ -31,6 +31,8 @@
 		003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A72E37D8300039AC2C /* Tiparo.swift */; };
 		003FC1AA2E3920FB0039AC2C /* AlirebloTekstoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */; };
 		0098F3DE2E4D0305007429CE /* V1Lingvo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3DD2E4D0303007429CE /* V1Lingvo.swift */; };
+		0098F3E22E4D391B007429CE /* FalsaVortListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E12E4D3911007429CE /* FalsaVortListoViewController.swift */; };
+		0098F3E52E4D3B68007429CE /* FadGradientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E42E4D3B65007429CE /* FadGradientoView.swift */; };
 		00B27B072DC17B6700526F82 /* AparatInformo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B062DC17B6700526F82 /* AparatInformo.swift */; };
 		00B27B092DC17EB600526F82 /* SerchoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B082DC17EB600526F82 /* SerchoViewController.swift */; };
 		00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */; };
@@ -116,6 +118,8 @@
 		003FC1A72E37D8300039AC2C /* Tiparo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiparo.swift; sourceTree = "<group>"; };
 		003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlirebloTekstoj.swift; sourceTree = "<group>"; };
 		0098F3DD2E4D0303007429CE /* V1Lingvo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V1Lingvo.swift; sourceTree = "<group>"; };
+		0098F3E12E4D3911007429CE /* FalsaVortListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalsaVortListoViewController.swift; sourceTree = "<group>"; };
+		0098F3E42E4D3B65007429CE /* FadGradientoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadGradientoView.swift; sourceTree = "<group>"; };
 		00B27B062DC17B6700526F82 /* AparatInformo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AparatInformo.swift; sourceTree = "<group>"; };
 		00B27B082DC17EB600526F82 /* SerchoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchoViewController.swift; sourceTree = "<group>"; };
 		00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortoListoViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +345,7 @@
 				00B27B9F2E099FEF00526F82 /* Shovmenuo */,
 				00B27B9B2E08889000526F82 /* StrekaroView.swift */,
 				003024DC2E401A21006D0C14 /* OmbroImitilo.swift */,
+				0098F3E42E4D3B65007429CE /* FadGradientoView.swift */,
 			);
 			path = Interfaceroj;
 			sourceTree = "<group>";
@@ -367,9 +372,10 @@
 		00B27B452DCE633100526F82 /* Vortlisto */ = {
 			isa = PBXGroup;
 			children = (
-				00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */,
 				00B27B0A2DC17F1A00526F82 /* VortoListoViewController.swift */,
 				00B27B462DCE636400526F82 /* Vortlistero.swift */,
+				00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */,
+				0098F3E12E4D3911007429CE /* FalsaVortListoViewController.swift */,
 			);
 			path = Vortlisto;
 			sourceTree = "<group>";
@@ -605,6 +611,7 @@
 				00B27B262DC6B73F00526F82 /* Kunordigilo.swift in Sources */,
 				003024E02E4264F7006D0C14 /* Koloraro.swift in Sources */,
 				00B27B0B2DC17F1A00526F82 /* VortoListoViewController.swift in Sources */,
+				0098F3E22E4D391B007429CE /* FalsaVortListoViewController.swift in Sources */,
 				003024D12E3A7659006D0C14 /* UITableViewCell+Helpiloj.swift in Sources */,
 				00B27B442DCD281C00526F82 /* Konservitajho.swift in Sources */,
 				00E5D5FC2E4C020B004877ED /* Bildetoj.swift in Sources */,
@@ -651,6 +658,7 @@
 				00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */,
 				00B27B9C2E08889000526F82 /* StrekaroView.swift in Sources */,
 				00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */,
+				0098F3E52E4D3B68007429CE /* FadGradientoView.swift in Sources */,
 				00B27B7C2DF751FE00526F82 /* TradukaroChelo.swift in Sources */,
 				003024E72E4265F2006D0C14 /* Pergamena.swift in Sources */,
 				00B27B332DC8212C00526F82 /* TekstAtributoHelpiloj.swift in Sources */,
