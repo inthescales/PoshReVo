@@ -137,15 +137,12 @@ extension ArboAnalizilo {
 				}
 				
 				// Meti novan tradukon antaŭ samsencan havantan transpasnomon
-				if let indekso = listo.firstIndex(where: {
+				return listo.firstIndex(where: {
 					$0.transpasNomo == true
 					&& $0.senco == traduko.senco
 					&& $0.subsenco == traduko.subsenco
-				}) {
-					return indekso
-				}
-				
-				return listo.endIndex
+				})
+				?? listo.endIndex
 			}
 			
 			// Aranĝi tradukojn laŭ ĉu ili havas certan sencon aŭ ne

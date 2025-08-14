@@ -2,6 +2,17 @@ extension ArboAnalizilo {
 	static func trakti(uzon uzo: ArtikolNodo, tipo: String?, stato: Stato) -> String {
 		let teksto = akumuliTekstojn(de: uzo, stato: stato)
 		
+		let apartigilo: String
+		switch stato.cheno.last {
+		case .dif, .ekz, .rim, .snc, .subsnc:
+			apartigilo = " "
+		default:
+			// Mi volis ke kelkkaze uzojn en derivaĵo kaj sekva teksto en difino aperu
+			// en unusama linio. Tamen, la retejo apartigas ilin en malsamajn liniojn,
+			// kaj aperas kelkajn strangaĵojn se ni ne faras same ĉi tie.
+			apartigilo = "\n"
+		}
+		
 		switch tipo {
 		case "fak":
 			// Krei fakvortojn
@@ -19,7 +30,7 @@ extension ArboAnalizilo {
 			}
 			
 			let netaTeksto = Fako.netaKodo(por: teksto)
-			return "[\(netaTeksto)] "
+			return "[\(netaTeksto)]" + apartigilo
 		case "klr":
 			// Klarigo kutime havas parentezojn en sia fila teksto
 			
@@ -33,9 +44,10 @@ extension ArboAnalizilo {
 			}
 		case "stl":
 			let stilTeksto = stato.stiloj[teksto] ?? teksto
-			return "(\(stilTeksto)) "
+			return "(\(stilTeksto))" + apartigilo
 		case nil:
-			return teksto
+			// vd. 'hurli'
+			return teksto + apartigilo
 		default:
 			assert(false, "Neatendita stilo")
 			return ""
