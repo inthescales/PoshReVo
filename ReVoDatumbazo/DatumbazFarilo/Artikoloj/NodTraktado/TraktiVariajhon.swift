@@ -5,8 +5,9 @@ extension ArboAnalizilo {
 		traktiFilojn(de: variajho, stato: stato) { filo in
 			switch filo.tipo {
 			case .kap:
+				// Kunpremado necesas, vd. tranĉ-dent/o
 				let kapRezulto = trakti(kapon: filo, stato: stato)
-				rezulto = (kapRezulto.teksto, kapRezulto.tildTeksto)
+				rezulto = (kapRezulto.teksto.kunpremi(), kapRezulto.tildTeksto.kunpremi())
 			case .teksto:
 				break
 			case .uzo:
