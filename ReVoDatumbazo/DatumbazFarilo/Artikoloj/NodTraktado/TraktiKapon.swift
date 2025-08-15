@@ -108,7 +108,7 @@ extension ArboAnalizilo {
 				case .ofc:
 					oficialeco = trakti(oficialecon: filo, stato: stato)
 				case .rad(let vari):
-					let filTeksto = trakti(radikon: filo, variajho: vari, stato: stato)
+					let filTeksto = traktiVariajhan(radikon: filo, etikedo: vari, stato: stato)
 					teksto += filTeksto
 					tildTeksto += "~"
 				case .teksto(let filTeksto):
