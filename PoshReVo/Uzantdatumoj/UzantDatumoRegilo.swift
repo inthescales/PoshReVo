@@ -81,11 +81,16 @@ final class UzantDatumoRegilo {
 	/// Registri artikolon en la historio, kaj aliaj respondoj al artikollegado
 	func markiVizititan(artikolon artikolo: Artikolo) {
 		let vizitito = Konservitajho(el: artikolo)
-		guard !datumaro.historio.contains(vizitito) else {
-			return
+		
+		// Forigi antaŭa apero de la artikolo
+		if let antauaIndekso = datumaro.historio.firstIndex(of: vizitito) {
+			datumaro.historio.remove(at: antauaIndekso)
 		}
 		
+		// Aldoni ĝin kape
 		datumaro.historio.append(vizitito)
+		
+		// Forigi la plej malnovan, se necesas
 		while datumaro.historio.count > Konstantoj.historioLimo {
 			datumaro.historio.remove(at: 0)
 		}
