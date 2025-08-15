@@ -4,9 +4,23 @@ extension ArboAnalizilo {
 		
 		switch tipo {
 		case "fak":
+			// Ne aldoni fakvorton pro <uzo> ene de ekzemplo
+			// Ekz. <uzo tip="MIT"> en derivaĵo 'ido', kiu ne aperu en faklisto
+			let chuFariFakvorton: Bool
+			switch stato.cheno.last {
+			case .ekz:
+				chuFariFakvorton = false
+			default:
+				chuFariFakvorton = true
+			}
+			
 			// Krei fakvortojn
-			if let artikolIndekso = stato.artikolIndekso,
+			if chuFariFakvorton,
+			   let artikolIndekso = stato.artikolIndekso,
 			   let marko = stato.marko {
+				// NOTO: la reteja fakindekso inkluzivas nur la ĉefan formon
+				// de derivaĵo, ne variaĵojn. Ekz. vd. 'apolon/o', el kiu 'Apolono'
+				// aperas en la mitologia indekso, sed ne 'Apolo'
 				for formo in stato.derivajhFormoj {
 					let fakVorto = FakVorto(
 						teksto: formo,
