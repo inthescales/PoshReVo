@@ -25,7 +25,10 @@ final class VortoListoViewController<L: Vortlistero>: UIViewController, UITableV
 	
 	/// Mesaĝa vido aperanta kiam estas neniuj vortoj por montri
 	private lazy var nulStatoView: VortListoNulStatoView = {
-		return VortListoNulStatoView(teksto: nulaTeksto ?? "")
+		return VortListoNulStatoView(
+			teksto: nulaTeksto ?? "",
+			navigaciejAlto: navigaciAlto
+		)
 	}()
 	
 	// MARK: - Stato

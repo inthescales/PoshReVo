@@ -4,7 +4,7 @@ import UIKit
 final class VortListoNulStatoView: UIView {
 	private enum Konstantoj {
 		/// Kie en la vertikala spaco de la patra vido ĉi tiu estu, kiel porcio de ĝia alto
-		static let vertikalaCentroPorcio: CGFloat = 0.5
+		static let vertikalaCentroPorcio: CGFloat = 0.45
 		
 		/// Kiom de la horizontala larĝo de la patra vido ĉi tiu povu okupi
 		static let larghoPorcio: CGFloat = 0.8
@@ -21,6 +21,7 @@ final class VortListoNulStatoView: UIView {
 		eti.numberOfLines = 0
 		eti.text = teksto
 		eti.font = Tiparo.nulstato
+		eti.textAlignment = .center
 		
 		return eti
 	}()
@@ -44,7 +45,11 @@ final class VortListoNulStatoView: UIView {
 	
 	// MARK: - Valorizado
 	
-	init(teksto: String, stilo: InterfacStilo = UzantDatumaro.komuna.stilo) {
+	init(
+		teksto: String,
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo,
+		navigaciejAlto: CGFloat
+	) {
 		self.teksto = teksto
 		self.stilo = stilo
 		super.init(frame: .zero)
@@ -57,7 +62,9 @@ final class VortListoNulStatoView: UIView {
 		addSubview(etikedo)
 		etikedo.snp.makeConstraints { make in
 			make.centerX.equalToSuperview()
-			make.centerY.equalTo(self.snp.bottom).multipliedBy(Konstantoj.vertikalaCentroPorcio)
+			make.centerY.equalTo(self.snp.bottom)
+				.multipliedBy(Konstantoj.vertikalaCentroPorcio)
+				.offset(-navigaciejAlto / 2)
 			make.width.lessThanOrEqualToSuperview().multipliedBy(Konstantoj.larghoPorcio)
 		}
 		
