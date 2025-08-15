@@ -6,11 +6,16 @@ extension ArboAnalizilo {
 	) -> String {
 		var prefikso = ""
 		
+		// vd. noton en trakti(referencon:...) por ebla simpligo
 		switch stato.cheno.last {
 		case .drv, .snc, .subdrv, .subsnc:
-			switch stato.sibStako.last {
+			let lastaSibo = stato.sibStako.last ?? nil
+			switch lastaSibo {
 			case .fnt, .ref, .refgrp, .teksto, .uzo:
 				prefikso += " "
+				break
+			case nil:
+				// ekz. hejm/igi
 				break
 			default:
 				prefikso += "\n"
