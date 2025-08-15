@@ -60,7 +60,9 @@ extension ArboAnalizilo {
 				if sencKvanto > 1,
 				   let sencNombro = stato.lastaSenco {
 					if sencNombro > 1 {
-						akumulilo.aldoni(tekston:  "\n\n")
+						akumulilo.aldoni(tekston: "\n\n")
+					} else if !akumulilo.freshaLinio() {
+						akumulilo.aldoni(tekston: "\n")
 					}
 					let volvitaTeksto = TekstAtributo.volvi(String(sencNombro) + ". ", per: .sencNumero)
 					akumulilo.aldoni(tekston: volvitaTeksto)

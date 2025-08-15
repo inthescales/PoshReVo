@@ -33,7 +33,7 @@ extension ArboAnalizilo {
 				akumulilo.aldoni(tekston: trakti(referencGrupon: filo, tipo: tipo, stato: stato))
 			case .rim(let num):
 				// vd. premi
-				let filteksto = trakti(rimarkon: filo, numero: num, sekvasTekston: akumulilo.tenasTekston(), stato: stato)
+				let filteksto = trakti(rimarkon: filo, numero: num, sekvasTekston: !akumulilo.freshaLinio(), stato: stato)
 				akumulilo.aldoni(tekston: filteksto)
 			case .subart:
 				akumulilo.aldoni(blokojn: trakti(subartikolon: filo, numero: subartikoloNumero, stato: stato))

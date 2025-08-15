@@ -4,8 +4,9 @@ final class BlokAkumulilo {
 		
 	// MARK: - Demandado
 	
-	func tenasTekston() -> Bool {
-		return !teksto.isEmpty
+	/// Ĉu nove aldonitaj tekstaĵo aperos komence de nova linio
+	func freshaLinio() -> Bool {
+		return teksto.isEmpty || teksto.last == "\n"
 	}
 	
 	// MARK: - Akumulado
