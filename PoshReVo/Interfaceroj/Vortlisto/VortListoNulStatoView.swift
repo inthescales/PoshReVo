@@ -47,8 +47,7 @@ final class VortListoNulStatoView: UIView {
 	
 	init(
 		teksto: String,
-		stilo: InterfacStilo = UzantDatumaro.komuna.stilo,
-		navigaciejAlto: CGFloat
+		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		self.teksto = teksto
 		self.stilo = stilo
@@ -64,7 +63,6 @@ final class VortListoNulStatoView: UIView {
 			make.centerX.equalToSuperview()
 			make.centerY.equalTo(self.snp.bottom)
 				.multipliedBy(Konstantoj.vertikalaCentroPorcio)
-				.offset(-navigaciejAlto / 2)
 			make.width.lessThanOrEqualToSuperview().multipliedBy(Konstantoj.larghoPorcio)
 		}
 		
