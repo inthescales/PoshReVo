@@ -27,7 +27,7 @@ extension InterfacStilo {
 				dokumentLigilo: verda,
 				dokumentLigiloPremita: helverda,
 				dokumentSencNumero: .black,
-				dokumentEkzemplo: .black,
+				dokumentEkzemplo: malhelgriza,
 				dokumentRimarko: .black,
 				menuoFono: palgriza,
 				menuaTekstejo: .white,
@@ -42,7 +42,7 @@ extension InterfacStilo {
 			let malheletgriza = UIColor(deksesuma: 0x1F221F)
 			let mezgriza = UIColor(deksesuma: 0x222f22)
 			let helgriza = UIColor(deksesuma: 0x888f88)
-			let heleggriza = UIColor(deksesuma: 0xcfcfcf)
+			let heleggriza = UIColor(deksesuma: 0xe0e0e0)
 			
 			return Koloraro(
 				navigaciaFono: .black,
@@ -58,7 +58,7 @@ extension InterfacStilo {
 				dokumentLigilo: verda,
 				dokumentLigiloPremita: helverda,
 				dokumentSencNumero: .white,
-				dokumentEkzemplo: .white,
+				dokumentEkzemplo: heleggriza,
 				dokumentRimarko: .white,
 				menuoFono: .black,
 				menuaTekstejo: malhelgriza,
