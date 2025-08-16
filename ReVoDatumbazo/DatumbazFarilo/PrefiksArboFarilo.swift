@@ -61,7 +61,23 @@ final class PrefiksArboFarilo {
 				}
 			}
 			
-			nunaNodo?.destinoj.append(fariDestinon(el: serchebla, por: nunaNodo!))
+			// Se la nuna serĉebla havas saman tekston, subtekston, kaj markon kiel
+			// alian destinon en unu sama nodo, ne indas skribi ambaŭ.
+			// Tio povas okazi se pluraj sencoj ene de unu derivaĵo havas unu saman
+			// nacilingvan tradukon.
+			let duobla = nunaNodo?.destinoj.contains(where: {
+				$0.teksto == serchebla.videblaTeksto
+				&& $0.subteksto == serchebla.subteksto
+				&& $0.marko == serchebla.derivajhMarko
+			}) ?? false
+			
+			if !duobla {
+				nunaNodo?.destinoj.append(fariDestinon(el: serchebla, por: nunaNodo!))
+			} else {
+				if lingvoKodo == "en" {
+					print("Ignoras duoblaĵon: \(serchebla.videblaTeksto) (\(serchebla.subteksto ?? "nil")) -> \(serchebla.derivajhMarko ?? "nil")")
+				}
+			}
 		}
 	}
 	

@@ -81,6 +81,8 @@ extension ArboAnalizilo {
 		/// La plej proksima supera marko de la nuna trairad-loko
 		var marko: String? {
 			for tipo in cheno.reversed() {
+				// NOTU ke ĉi tio ekzkluzivas markojn en niveloj malsupre de <drv>
+				// (t.e., sencoj kaj subsencoj)
 				switch tipo {
 				case .art(let mrk):
 					return mrk
