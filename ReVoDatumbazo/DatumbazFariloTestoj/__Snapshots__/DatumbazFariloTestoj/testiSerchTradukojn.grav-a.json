@@ -78,14 +78,28 @@
       "videblaTeksto" : "значыць"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "gravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "значэньне",
       "videblaTeksto" : "надаваць значэньне"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "pligravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "значэньне",
+      "videblaTeksto" : "надаваць значэньне"
+    },
+    {
+      "esperantaNomo" : "gravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "важнасьць",
+      "videblaTeksto" : "падкрэсьліваць важнасьць"
+    },
+    {
+      "esperantaNomo" : "pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "важнасьць",
@@ -183,7 +197,14 @@
       "videblaTeksto" : "прымяншаць"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivgrava",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "жыцьцёва важны",
+      "videblaTeksto" : "жыцьцёва важны"
+    },
+    {
+      "esperantaNomo" : "vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "жыцьцёва важны",
@@ -388,7 +409,14 @@
       "videblaTeksto" : "bedeutend sein"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "gravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "verstärken",
+      "videblaTeksto" : "verstärken"
+    },
+    {
+      "esperantaNomo" : "pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "verstärken",
@@ -500,7 +528,7 @@
       "videblaTeksto" : "herunterspielen"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
@@ -508,7 +536,15 @@
       "videblaTeksto" : "lebenswichtig"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "senco" : 1,
+      "serchTeksto" : "lebenswichtig",
+      "videblaTeksto" : "lebenswichtig"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
@@ -516,7 +552,15 @@
       "videblaTeksto" : "überlebenswichtig"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "senco" : 1,
+      "serchTeksto" : "überlebenswichtig",
+      "videblaTeksto" : "überlebenswichtig"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
@@ -524,7 +568,23 @@
       "videblaTeksto" : "lebensnotwendig"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "senco" : 1,
+      "serchTeksto" : "lebensnotwendig",
+      "videblaTeksto" : "lebensnotwendig"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "senco" : 1,
+      "serchTeksto" : "existentiell",
+      "videblaTeksto" : "existentiell"
+    },
+    {
+      "esperantaNomo" : "vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
@@ -597,14 +657,28 @@
       "videblaTeksto" : "understate"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "existential",
       "videblaTeksto" : "existential"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "existential",
+      "videblaTeksto" : "existential"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "essential",
+      "videblaTeksto" : "essential"
+    },
+    {
+      "esperantaNomo" : "vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "essential",
@@ -807,21 +881,42 @@
       "videblaTeksto" : "minimiser (rendre moins important)"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "essentiel",
       "videblaTeksto" : "essentiel"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "essentiel",
+      "videblaTeksto" : "essentiel"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "existenciel",
       "videblaTeksto" : "existenciel"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "existenciel",
+      "videblaTeksto" : "existenciel"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "vital",
+      "videblaTeksto" : "vital"
+    },
+    {
+      "esperantaNomo" : "vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "vital",
@@ -982,7 +1077,14 @@
       "videblaTeksto" : "penting"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "gravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "mementingkan",
+      "videblaTeksto" : "mementingkan"
+    },
+    {
+      "esperantaNomo" : "pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "mementingkan",
@@ -1066,21 +1168,42 @@
       "videblaTeksto" : "meremehkan"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "esensial",
       "videblaTeksto" : "esensial"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "esensial",
+      "videblaTeksto" : "esensial"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "hakiki",
       "videblaTeksto" : "hakiki"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "hakiki",
+      "videblaTeksto" : "hakiki"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "vital",
+      "videblaTeksto" : "vital"
+    },
+    {
+      "esperantaNomo" : "vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "vital",
@@ -1138,14 +1261,28 @@
       "videblaTeksto" : "重要である"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "gravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "いっそう重大化する",
       "videblaTeksto" : "いっそう重大化する"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "pligravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "いっそう重大化する",
+      "videblaTeksto" : "いっそう重大化する"
+    },
+    {
+      "esperantaNomo" : "gravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "より深刻化する",
+      "videblaTeksto" : "より深刻化する"
+    },
+    {
+      "esperantaNomo" : "pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "より深刻化する",
@@ -1606,14 +1743,28 @@
       "videblaTeksto" : "marginalizować"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "życiowy",
       "videblaTeksto" : "życiowy"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "życiowy",
+      "videblaTeksto" : "życiowy"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "serchTeksto" : "egzystencjalny",
+      "videblaTeksto" : "egzystencjalny"
+    },
+    {
+      "esperantaNomo" : "vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "serchTeksto" : "egzystencjalny",
@@ -2080,35 +2231,70 @@
       "videblaTeksto" : "бути важливим"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "gravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "надавати значення",
       "videblaTeksto" : "надавати значення"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "pligravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "надавати значення",
+      "videblaTeksto" : "надавати значення"
+    },
+    {
+      "esperantaNomo" : "gravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "надавативажливості",
       "videblaTeksto" : "надавативажливості"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "pligravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "надавативажливості",
+      "videblaTeksto" : "надавативажливості"
+    },
+    {
+      "esperantaNomo" : "gravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "надаватизначущості",
       "videblaTeksto" : "надаватизначущості"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "pligravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "надаватизначущості",
+      "videblaTeksto" : "надаватизначущості"
+    },
+    {
+      "esperantaNomo" : "gravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "робити важливим",
       "videblaTeksto" : "робити важливим"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "pligravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "робити важливим",
+      "videblaTeksto" : "робити важливим"
+    },
+    {
+      "esperantaNomo" : "gravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "робити значущим",
+      "videblaTeksto" : "робити значущим"
+    },
+    {
+      "esperantaNomo" : "pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "робити значущим",
@@ -2243,14 +2429,28 @@
       "videblaTeksto" : "要"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "gravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "強調指出",
       "videblaTeksto" : "強調指出"
     },
     {
-      "esperantaNomo" : "gravigi, pligravigi",
+      "esperantaNomo" : "pligravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "強調指出",
+      "videblaTeksto" : "強調指出"
+    },
+    {
+      "esperantaNomo" : "gravigi",
+      "indekso" : "grav",
+      "marko" : "grav.0igi",
+      "serchTeksto" : "注重",
+      "videblaTeksto" : "注重"
+    },
+    {
+      "esperantaNomo" : "pligravigi",
       "indekso" : "grav",
       "marko" : "grav.0igi",
       "serchTeksto" : "注重",
@@ -2362,7 +2562,7 @@
       "videblaTeksto" : "貶低"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
@@ -2370,7 +2570,15 @@
       "videblaTeksto" : "生死攸关"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "senco" : 1,
+      "serchTeksto" : "生死攸关",
+      "videblaTeksto" : "生死攸关"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
@@ -2378,7 +2586,15 @@
       "videblaTeksto" : "极其重要"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "senco" : 1,
+      "serchTeksto" : "极其重要",
+      "videblaTeksto" : "极其重要"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,
@@ -2386,7 +2602,23 @@
       "videblaTeksto" : "生活必需"
     },
     {
-      "esperantaNomo" : "vivgrava, vivograva",
+      "esperantaNomo" : "vivograva",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "senco" : 1,
+      "serchTeksto" : "生活必需",
+      "videblaTeksto" : "生活必需"
+    },
+    {
+      "esperantaNomo" : "vivgrava",
+      "indekso" : "grav",
+      "marko" : "grav.vivo0a",
+      "senco" : 1,
+      "serchTeksto" : "基本",
+      "videblaTeksto" : "基本"
+    },
+    {
+      "esperantaNomo" : "vivograva",
       "indekso" : "grav",
       "marko" : "grav.vivo0a",
       "senco" : 1,

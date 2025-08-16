@@ -22,7 +22,15 @@
       "videblaTeksto" : "ом"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "омамэтар",
+      "videblaTeksto" : "омамэтар"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -46,7 +54,15 @@
       "videblaTeksto" : "ohm"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "ohm",
+      "videblaTeksto" : "ohm metre"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -87,7 +103,15 @@
       "videblaTeksto" : "Ohm"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "Ohmmeter",
+      "videblaTeksto" : "Ohmmeter"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -111,7 +135,15 @@
       "videblaTeksto" : "ohm"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "ohm-meter",
+      "videblaTeksto" : "ohm-meter (unit of measure)"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -135,7 +167,15 @@
       "videblaTeksto" : "ohm"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "ohm-mètre",
+      "videblaTeksto" : "ohm-mètre (unité de mesure)"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -175,7 +215,15 @@
       "videblaTeksto" : "ohm"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "ohm-meter",
+      "videblaTeksto" : "ohm-meter"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -199,7 +247,15 @@
       "videblaTeksto" : "ohm (unità di misura)"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "ohm",
+      "videblaTeksto" : "ohm per metro"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -232,7 +288,15 @@
       "videblaTeksto" : "ohm"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "ohm-meter",
+      "videblaTeksto" : "ohm-meter"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -256,7 +320,15 @@
       "videblaTeksto" : "om"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "omometr",
+      "videblaTeksto" : "omometr"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -374,7 +446,7 @@
       "videblaTeksto" : "歐姆"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "omometro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,
@@ -382,7 +454,23 @@
       "videblaTeksto" : "欧姆计"
     },
     {
-      "esperantaNomo" : "omometro, ommetro",
+      "esperantaNomo" : "ommetro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "欧姆计",
+      "videblaTeksto" : "欧姆计"
+    },
+    {
+      "esperantaNomo" : "omometro",
+      "indekso" : "om",
+      "marko" : "om.o0metro",
+      "senco" : 1,
+      "serchTeksto" : "歐姆計",
+      "videblaTeksto" : "歐姆計"
+    },
+    {
+      "esperantaNomo" : "ommetro",
       "indekso" : "om",
       "marko" : "om.o0metro",
       "senco" : 1,

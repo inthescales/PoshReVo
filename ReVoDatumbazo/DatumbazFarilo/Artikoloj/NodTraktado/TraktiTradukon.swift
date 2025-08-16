@@ -31,8 +31,7 @@ extension ArboAnalizilo {
 			rezultTeksto = tradukTeksto
 		}
 		
-		if let derivajhNomo = stato.derivajhNomo,
-		   let derivajhTildo = stato.derivajhTildo,
+		if let derivajhTildo = stato.derivajhTildo,
 		   let artikolIndekso = stato.artikolIndekso {
 			
 			let artikolTraduko = ArtikolTraduko(
@@ -44,16 +43,21 @@ extension ArboAnalizilo {
 				transpasNomo: transpasIndekso != nil
 			)
 			stato.aldoni(derivajhTradukon: artikolTraduko, lingvo: lingvo)
-			
-			let serchTraduko = SerchTraduko(
-				serchTeksto: serchTeksto,
-				videblaTeksto: rezultTeksto,
-				esperantaNomo: transpasIndekso?.serchTeksto ?? derivajhNomo,
-				indekso: artikolIndekso,
-				marko: marko,
-				senco: stato.nunaSenco
-			)
-			stato.aldoni(serchTradukon: serchTraduko, lingvo: lingvo)
+				
+			// Ni aldonu apartan serĉtradukon por ĉiu formo de la derivaĵo
+			// vd. premdevigi / premnecesigi / premtrudi – unu derivaĵo, unu traduko en artikolo,
+			// tri malsamaj serĉrezulteroj
+			for derivajhNomo in stato.derivajhFormoj {
+				let serchTraduko = SerchTraduko(
+					serchTeksto: serchTeksto,
+					videblaTeksto: rezultTeksto,
+					esperantaNomo: transpasIndekso?.serchTeksto ?? derivajhNomo,
+					indekso: artikolIndekso,
+					marko: marko,
+					senco: stato.nunaSenco
+				)
+				stato.aldoni(serchTradukon: serchTraduko, lingvo: lingvo)
+			}
 		}
 		
 		return kunigiTradukTekstojn(de: traduko, tipo: .artikolTeksta, stato: stato)

@@ -1,7 +1,14 @@
 {
   "be" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "большасьць",
+      "videblaTeksto" : "большасьць"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "большасьць",
@@ -10,14 +17,28 @@
   ],
   "bg" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "мнозинство",
       "videblaTeksto" : "мнозинство"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "мнозинство",
+      "videblaTeksto" : "мнозинство"
+    },
+    {
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "болшинство",
+      "videblaTeksto" : "болшинство"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "болшинство",
@@ -26,14 +47,28 @@
   ],
   "cs" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "majorita",
       "videblaTeksto" : "majorita"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "majorita",
+      "videblaTeksto" : "majorita"
+    },
+    {
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "většina",
+      "videblaTeksto" : "většina"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "většina",
@@ -42,7 +77,14 @@
   ],
   "de" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "Mehrheit",
+      "videblaTeksto" : "Mehrheit"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "Mehrheit",
@@ -51,7 +93,14 @@
   ],
   "en" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "majority",
+      "videblaTeksto" : "majority"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "majority",
@@ -60,7 +109,14 @@
   ],
   "es" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "mayoría",
+      "videblaTeksto" : "mayoría"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "mayoría",
@@ -69,7 +125,14 @@
   ],
   "fa" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "اکثریت",
+      "videblaTeksto" : "اکثریت"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "اکثریت",
@@ -78,7 +141,14 @@
   ],
   "fr" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "majorité",
+      "videblaTeksto" : "majorité"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "majorité",
@@ -87,7 +157,14 @@
   ],
   "he" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "רוב",
+      "videblaTeksto" : "רוב"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "רוב",
@@ -96,7 +173,14 @@
   ],
   "hu" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "többség",
+      "videblaTeksto" : "többség"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "többség",
@@ -105,14 +189,28 @@
   ],
   "ja" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "多数派",
       "videblaTeksto" : "多数派"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "多数派",
+      "videblaTeksto" : "多数派"
+    },
+    {
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "マジョリティー",
+      "videblaTeksto" : "マジョリティー"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "マジョリティー",
@@ -121,7 +219,14 @@
   ],
   "nl" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "meerderheid",
+      "videblaTeksto" : "meerderheid (ontr.)"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "meerderheid",
@@ -130,7 +235,14 @@
   ],
   "pl" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "większość",
+      "videblaTeksto" : "większość"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "większość",
@@ -139,7 +251,14 @@
   ],
   "pt" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "muito",
+      "videblaTeksto" : "muito (quantidade)"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "muito",
@@ -148,7 +267,14 @@
   ],
   "ru" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "большинство",
+      "videblaTeksto" : "большинство"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "большинство",
@@ -157,14 +283,28 @@
   ],
   "sk" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "majorita",
       "videblaTeksto" : "majorita"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "majorita",
+      "videblaTeksto" : "majorita"
+    },
+    {
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "väčšina",
+      "videblaTeksto" : "väčšina"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "väčšina",
@@ -173,14 +313,28 @@
   ],
   "uk" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "повноліття",
       "videblaTeksto" : "повноліття"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "повноліття",
+      "videblaTeksto" : "повноліття"
+    },
+    {
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "більшість",
+      "videblaTeksto" : "більшість"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "більшість",
@@ -189,42 +343,84 @@
   ],
   "zh" : [
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "大多数",
       "videblaTeksto" : "大多数"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "大多数",
+      "videblaTeksto" : "大多数"
+    },
+    {
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "大多數",
       "videblaTeksto" : "大多數"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "大多數",
+      "videblaTeksto" : "大多數"
+    },
+    {
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "多数",
       "videblaTeksto" : "多数"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "多数",
+      "videblaTeksto" : "多数"
+    },
+    {
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "多數",
       "videblaTeksto" : "多數"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "多數",
+      "videblaTeksto" : "多數"
+    },
+    {
+      "esperantaNomo" : "majoritato",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "大部份",
       "videblaTeksto" : "大部份"
     },
     {
-      "esperantaNomo" : "majoritato, maĵorio",
+      "esperantaNomo" : "maĵorio",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "大部份",
+      "videblaTeksto" : "大部份"
+    },
+    {
+      "esperantaNomo" : "majoritato",
+      "indekso" : "majoritat",
+      "marko" : "majoritat.0o",
+      "serchTeksto" : "大部分",
+      "videblaTeksto" : "大部分"
+    },
+    {
+      "esperantaNomo" : "maĵorio",
       "indekso" : "majoritat",
       "marko" : "majoritat.0o",
       "serchTeksto" : "大部分",

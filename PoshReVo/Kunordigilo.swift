@@ -74,7 +74,7 @@ final class Kunordigilo {
 			}
 		)
 		
-		let listeroj = destinoj.map { destino in
+		let listeroj: [Serchlistero] = destinoj.map { destino in
 			// Se mankas subteksto, disigi per artikol-titolo
 			// — aparte utila ĉe esperantaj vortoj ekz. 'far/ad/o' / 'farad/o'
 			let subteksto = destino.subteksto
