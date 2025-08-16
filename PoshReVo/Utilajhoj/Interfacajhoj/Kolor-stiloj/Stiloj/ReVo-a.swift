@@ -61,7 +61,7 @@ extension InterfacStilo {
 			let palblua = UIColor(deksesuma: 0x87CEEB)
 			let orangha = UIColor(deksesuma: 0xFFA500)
 			let shokolada = UIColor(deksesuma: 0xD2691E)
-			let premligilo = UIColor(deksesuma: 0xf76f0e)
+			let premligilo = UIColor(deksesuma: 0xfc8302)
 			let helgriza = UIColor(deksesuma: 0x888f88)
 			let mezgriza = UIColor(deksesuma: 0x222f22)
 			let malheletgriza = UIColor(deksesuma: 0x1F221F)

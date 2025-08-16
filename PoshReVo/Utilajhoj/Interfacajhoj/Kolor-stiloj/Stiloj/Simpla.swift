@@ -7,7 +7,7 @@ extension InterfacStilo {
 		identigilo: "simpla",
 		hela: {
 			let verda = UIColor(deksesuma: 0x0a9618)
-			let helverda = UIColor(deksesuma: 0x06dd1c)
+			let helverda = UIColor(deksesuma: 0x12c924)
 			let palgriza = UIColor(deksesuma: 0xf2f2f2)
 			let mezgriza = UIColor(deksesuma: 0x888888)
 			let fortgriza = UIColor(deksesuma: 0x555555)
