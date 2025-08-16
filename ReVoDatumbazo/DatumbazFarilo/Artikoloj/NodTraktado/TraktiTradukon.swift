@@ -35,12 +35,11 @@ extension ArboAnalizilo {
 		   let artikolIndekso = stato.artikolIndekso {
 			
 			let artikolTraduko = ArtikolTraduko(
-				nomo: transpasIndekso?.tradukTeksto ?? derivajhTildo,
+				apartaNomo: transpasIndekso?.tradukTeksto,
 				teksto: tradukTeksto,
 				marko: marko,
 				senco: stato.nunaSenco,
-				subsenco: stato.nunaSubsenco,
-				transpasNomo: transpasIndekso != nil
+				subsenco: stato.nunaSubsenco
 			)
 			stato.aldoni(derivajhTradukon: artikolTraduko, lingvo: lingvo)
 				

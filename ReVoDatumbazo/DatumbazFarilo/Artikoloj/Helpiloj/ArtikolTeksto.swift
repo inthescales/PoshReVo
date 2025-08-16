@@ -117,7 +117,8 @@ enum ArtikolTeksto {
 			// aŭ 2. la nuna traduko havas malsaman sencon ol iu ajn venonta.
 			// - 2. necesas por ke tradukoj de la unua senco montru senc-numeron,
 			// - 1. necesas por ke tradukoj sekvanta sensencan tradukon montru ĝin
-			if nuna.transpasNomo == true && lasta?.nomo != nuna.nomo {
+			if let apartaNomo = nuna.apartaNomo,
+			   apartaNomo != lasta?.apartaNomo {
 				montriNomon = true
 			} else if nuna.senco != nil {
 				if let lasta,
@@ -125,8 +126,8 @@ enum ArtikolTeksto {
 					montriSencon = true
 				} else {
 					for estonta in tradukoj[(i + 1)...] {
-						if nuna.nomo != estonta.nomo
-							&& !estonta.transpasNomo {
+						if nuna.apartaNomo != estonta.apartaNomo
+							&& !estonta.chuHavasApartanNomon {
 							break
 						}
 						else if nuna.senco != estonta.senco {
@@ -137,18 +138,19 @@ enum ArtikolTeksto {
 				}
 			}
 			
-			if montriNomon {
-				teksto += kolorEtikedi(" · " + nuna.nomo + ": ")
+			if let apartaNomo = nuna.apartaNomo,
+			   montriNomon {
+				teksto += kolorEtikedi(" · " + apartaNomo + ": ")
 			} else if let lasta,
-					  lasta.transpasNomo == true,
-					  lasta.nomo != nuna.nomo,
+					  let lastaNomo = lasta.apartaNomo,
+					  lastaNomo != nuna.apartaNomo,
 					  !montriSencon {
 				// Aldoni punkton se la antaŭa traduko montris transpasan nomon, kiuj estas
 				// alia ol la nuna nomo, kaj ni ne montros senc-numeron.
 				// Mi jam ne renkontis ekzemplon de ĉi-situacio, tamen jen mia preparaĵo
 				teksto += kolorEtikedi(" · ")
 			} else if let lasta,
-				lasta.nomo == nuna.nomo
+				lasta.apartaNomo == nuna.apartaNomo
 				&& lasta.senco == nuna.senco
 				&& lasta.subsenco == nuna.subsenco {
 				// Aldonu komon se la traduko apartenas al la sama grupo ol la antaŭa
@@ -158,7 +160,7 @@ enum ArtikolTeksto {
 					teksto += " "
 				}
 				
-				let montriSubsencon = nuna.subsenco != nil && !nuna.transpasNomo
+				let montriSubsencon = (nuna.subsenco != nil && !nuna.chuHavasApartanNomon)
 
 				if montriSencon || montriSubsencon,
 				   let senco = nuna.senco,

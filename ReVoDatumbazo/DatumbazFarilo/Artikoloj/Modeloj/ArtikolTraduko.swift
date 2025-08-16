@@ -1,12 +1,8 @@
 /// Traduko tiel kiel ĝi aperos en artikolo.
 /// Ne ĉiam egalas al tiuj kiuj aperas en serĉrezultoj.
 struct ArtikolTraduko {
-	// Ĉi tiu variablo estas postrestaĵo de V1a maniero de prezenti tradukojn.
-	// Nuntempe, tiuj nomoj nur vidiĝos se 'transpasNomo' estas 'true'. Do,
-	// mi proponas ke oni forigu 'transpasNomo' kaj fari 'nomo' nedeviga.
-	// TODO: Efektivigi ĉi tiun ideon
-	/// La esperanta termino tradukata. Uzas ~ojn en loko de kapvorto.
-	let nomo: String
+	/// La esperanta termino tradukata, se ĝi malsamas ol la derivaĵtermino
+	let apartaNomo: String?
 	
 	/// La nacilingva teksto de la traduko.
 	let teksto: String
@@ -20,6 +16,10 @@ struct ArtikolTraduko {
 	/// Subsenco al kiu la traduko apartenas, se estas.
 	let subsenco: Int?
 	
-	/// Ĉu transpasa nomo uziĝas (ekz. je tradukoj ene de ekzemploj).
-	let transpasNomo: Bool
+	// MARK: - Helpiloj
+	
+	/// Ĉu la traduko havas prezentotan nomon alian ol tiu de ĝia derivaĵo
+	var chuHavasApartanNomon: Bool {
+		apartaNomo != nil
+	}
 }

@@ -134,13 +134,13 @@ extension ArboAnalizilo {
 					return 0
 				}
 				
-				guard traduko.transpasNomo == false else {
+				guard traduko.apartaNomo == nil else {
 					return listo.endIndex
 				}
 				
 				// Meti novan tradukon antaŭ samsencan havantan transpasnomon
 				return listo.firstIndex(where: {
-					$0.transpasNomo == true
+					$0.chuHavasApartanNomon
 					&& $0.senco == traduko.senco
 					&& $0.subsenco == traduko.subsenco
 				})
