@@ -25,6 +25,8 @@
 		0049B21624B0E67000B81E15 /* SerchStato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21524B0E67000B81E15 /* SerchStato.swift */; };
 		0049B22124B154F000B81E15 /* PrefiksArboIteraciilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B22024B154F000B81E15 /* PrefiksArboIteraciilo.swift */; };
 		007983722D67C6B60021FD4C /* SerchRezulto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007983712D67C6B60021FD4C /* SerchRezulto.swift */; };
+		0098F3E72E50FE97007429CE /* TraktiMallongigonKapan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */; };
+		0098F3E82E50FE97007429CE /* TraktiMallongigonKapan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */; };
 		0099FC252D65058C0033EC11 /* PrefiksArboFarilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */; };
 		0099FC262D65058C0033EC11 /* VortListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBCE2D65058B0033EC11 /* VortListoj.swift */; };
 		0099FC282D65058C0033EC11 /* MallongigoListoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0099FBD02D65058B0033EC11 /* MallongigoListoj.swift */; };
@@ -346,6 +348,7 @@
 		0051A6C32309A2F90034DFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		005270EC24E9A9E2009E17AA /* ReVoModelojOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModelojOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		007983712D67C6B60021FD4C /* SerchRezulto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchRezulto.swift; sourceTree = "<group>"; };
+		0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiMallongigonKapan.swift; sourceTree = "<group>"; };
 		0099FBC52D6505330033EC11 /* DatumbazFarilo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatumbazFarilo; sourceTree = BUILT_PRODUCTS_DIR; };
 		0099FBCD2D65058B0033EC11 /* PrefiksArboFarilo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefiksArboFarilo.swift; sourceTree = "<group>"; };
 		0099FBCE2D65058B0033EC11 /* VortListoj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VortListoj.swift; sourceTree = "<group>"; };
@@ -679,6 +682,7 @@
 				0099FBF42D65058C0033EC11 /* TraktiKursivan.swift */,
 				0099FBF52D65058C0033EC11 /* TraktiListReferencon.swift */,
 				0099FBF62D65058C0033EC11 /* TraktiMallongigon.swift */,
+				0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */,
 				0099FBF72D65058C0033EC11 /* TraktiMisstilan.swift */,
 				0099FBF82D65058C0033EC11 /* TraktiNacilingvan.swift */,
 				0099FBF92D65058C0033EC11 /* TraktiNomon.swift */,
@@ -1146,9 +1150,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DatumbazFariloTestoj/Pods-DatumbazFariloTestoj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1302,6 +1310,7 @@
 				00E5D5F22E49BA16004877ED /* TraktiEldonon.swift in Sources */,
 				00B297552D662E0500264431 /* Oficialeco+Datumbazo.swift in Sources */,
 				00B27B722DF391B300526F82 /* Artikolo.swift in Sources */,
+				0098F3E72E50FE97007429CE /* TraktiMallongigonKapan.swift in Sources */,
 				0099FC6F2D65058C0033EC11 /* Oficialecoj.swift in Sources */,
 				0099FC252D65058C0033EC11 /* PrefiksArboFarilo.swift in Sources */,
 				0099FC702D65058C0033EC11 /* SignoAnalizilo.swift in Sources */,
@@ -1416,6 +1425,7 @@
 				00B2974C2D6625A300264431 /* Fako.swift in Sources */,
 				00E5D5F12E49BA16004877ED /* TraktiEldonon.swift in Sources */,
 				00E5D5DA2E49B458004877ED /* BibliografioNodTipo.swift in Sources */,
+				0098F3E82E50FE97007429CE /* TraktiMallongigonKapan.swift in Sources */,
 				0099FD152D65068E0033EC11 /* TraktiGramatikon.swift in Sources */,
 				0099FD162D65068E0033EC11 /* TraktiEscepton.swift in Sources */,
 				0099FD172D65068E0033EC11 /* TraktiDerivajhon.swift in Sources */,

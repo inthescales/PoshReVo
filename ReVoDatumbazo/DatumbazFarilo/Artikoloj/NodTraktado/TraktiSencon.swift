@@ -30,10 +30,7 @@ extension ArboAnalizilo {
 			case .lstref(let lst):
 				teksto += trakti(listReferencon: filo, listo: lst, stato: stato)
 			case .mlg:
-				// Teksto de mallongigo en senco aperu *post* ceterajn tekstojn.
-				// Mi ne scias tuje kiel efektivigi tion, kaj, pro tio ke la apo
-				// jam ne reprezentas tiajn mallongigojn, mi ne ŝanĝas tion nun.
-				break
+				teksto = ignoriKapanMallongigon(teksto: teksto, stato: stato)
 			case .ref(let tip, let cel):
 				teksto += trakti(referencon: filo, tipo: tip, celo: cel, stato: stato)
 			case .refgrp(let tip):

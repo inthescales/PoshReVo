@@ -60,6 +60,15 @@ extension ArboAnalizilo {
 	/// spacoj kaj novaj linioj, kiuj devos esti fortonditaj.
 	static func ignoriFonton(teksto: String, stato: Stato) -> String {
 		switch stato.sibStako.last {
+		case .fnt:
+			// Kaze de du apudaj <fnt>-oj, ni simple fidu ke la unua
+			// faris la neceso.
+			// vd. 'adiaŭi'
+			return teksto
+		case .mlg:
+			// <mlg> jam estos tondinta
+			// vd. 'Kipro'
+			return teksto
 		case .uzo(_):
 			// Lasu spacon post uzo
 			return teksto
@@ -72,6 +81,15 @@ extension ArboAnalizilo {
 	/// spacoj kaj novaj linioj, kiuj devos esti fortonditaj.
 	static func ignoriFonton(akumulilo: BlokAkumulilo, stato: Stato) {
 		switch stato.sibStako.last {
+		case .fnt:
+			// Kaze de du apudaj <fnt>-oj, ni simple fidu ke la unua
+			// faris la neceso.
+			// vd. 'adiaŭi'
+			break
+		case .mlg:
+			// <mlg> jam estos tondinta
+			// vd. Kipro
+			break
 		case .uzo(_):
 			// Lasu spacon post uzo
 			break

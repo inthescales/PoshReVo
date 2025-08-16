@@ -73,10 +73,6 @@ final class PrefiksArboFarilo {
 			
 			if !duobla {
 				nunaNodo?.destinoj.append(fariDestinon(el: serchebla, por: nunaNodo!))
-			} else {
-				if lingvoKodo == "en" {
-					print("Ignoras duoblaĵon: \(serchebla.videblaTeksto) (\(serchebla.subteksto ?? "nil")) -> \(serchebla.derivajhMarko ?? "nil")")
-				}
 			}
 		}
 	}
