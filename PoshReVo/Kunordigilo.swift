@@ -25,11 +25,13 @@ final class Kunordigilo {
 	
 	/// Forigas ĉiujn paĝoj sur la navigacia staplo ĝis la unua, kaj restarigas la hejman paĝon
 	func reveniHejmen(en navigaciilo: UINavigationController) {
-		navigaciilo.popToRootViewController(animated: true)
-		
+		// Ŝajnas ke, se ni aliras la VCojn tuj post kiam ni vokis 'popToRootViewController',
+		// la ordo de la VCoj estas neantaŭvidebla. Do ni faras ĉi tion unue.
 		if let paghingo = navigaciilo.viewControllers.first as? PaghingoViewController {
 			paghingo.restarigi()
 		}
+		
+		navigaciilo.popToRootViewController(animated: true)
 	}
 	
 	// MARK: - Artikoloj
