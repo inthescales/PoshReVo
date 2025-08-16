@@ -191,6 +191,7 @@ final class LingvoBretoViewController: UIViewController {
 		
 		view.backgroundColor = stilo.navigaciaFono
 		substreko.backgroundColor = aktivaKoloro
+		fadGradiento.meti(koloron: stilo.navigaciaFono)
 		pliButono.setTitleColor(stilo.navigaciaButono, for: .normal)
 		renovigiInterfacon()
 	}
