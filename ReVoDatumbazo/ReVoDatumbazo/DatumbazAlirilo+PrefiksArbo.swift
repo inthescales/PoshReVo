@@ -39,7 +39,7 @@ extension DatumbazAlirilo {
     private func komencaNodo(en lingvo: NSManagedObject, kun litero: String) -> NSManagedObject? {
 		let komencajNodoj = [NSManagedObject](lingvo.value(forKey: "komencajNodoj") as? Set ?? [])
 		return komencajNodoj.first {
-            $0.value(forKey: "litero") as? String == litero
+			$0.value(forKey: "litero") as? String == litero.lowercased()
         }
     }
 	
@@ -47,7 +47,7 @@ extension DatumbazAlirilo {
     private func sekvaNodo(el nodo: NSManagedObject, kun litero: String) -> NSManagedObject? {
         let sekvaj = [NSManagedObject](nodo.value(forKey: "sekvajNodoj") as? Set ?? [])
 		return sekvaj.first {
-			return $0.value(forKey: "litero") as? String == litero
+			return $0.value(forKey: "litero") as? String == litero.lowercased()
 		}
     }
 }

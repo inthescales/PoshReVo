@@ -15,7 +15,7 @@ extension ArboAnalizilo {
 				prefikso += " "
 				break
 			case nil:
-				// ekz. hejm/igi
+				// vc. hejm/igi
 				break
 			default:
 				prefikso += "\n"
