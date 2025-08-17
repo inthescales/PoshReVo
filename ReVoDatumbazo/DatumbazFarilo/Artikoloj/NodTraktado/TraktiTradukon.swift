@@ -31,8 +31,7 @@ extension ArboAnalizilo {
 			rezultTeksto = tradukTeksto
 		}
 		
-		if let derivajhTildo = stato.derivajhTildo,
-		   let artikolIndekso = stato.artikolIndekso {
+		if let artikolIndekso = stato.artikolIndekso {
 			
 			let artikolTraduko = ArtikolTraduko(
 				apartaNomo: transpasIndekso?.tradukTeksto,

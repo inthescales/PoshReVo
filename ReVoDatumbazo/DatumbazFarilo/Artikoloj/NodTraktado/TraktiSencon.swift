@@ -68,4 +68,23 @@ extension ArboAnalizilo {
 		
 		return teksto
 	}
+	
+	/// Liveras etikedtekston por senco laŭ ĝia numero kaj aliaj argumentoj
+	static func sencEtikedo(
+		numero: Int,
+		freshaLinio: Bool,
+		chiamDu: Bool = false,
+		stato: Stato
+	) -> String {
+		var prefikso: String?
+		// NOTO: en kelkaj situacioj ni permesas ke senco estus pli proksima al la supera linio,
+		// en kelkaj malpli. Pro tio, la argumento 'chiamDu'.
+		if numero > 1 || chiamDu {
+			prefikso = "\n\n"
+		} else if !freshaLinio {
+			prefikso = "\n"
+		}
+		
+		return (prefikso ?? "") + TekstAtributo.volvi(String(numero) + ". ", per: .sencNumero)
+	}
 }

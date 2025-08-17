@@ -1,5 +1,9 @@
 extension ArboAnalizilo {
-	static func trakti(subderivajhon subderivajho: ArtikolNodo, stato: Stato) -> String {
+	// Notu ke ĉiuj subderivaĵoj en derivaĵo prezentas unusolan serion de sencnumeroj
+	static func trakti(
+		subderivajhon subderivajho: ArtikolNodo,
+		stato: Stato
+	) -> String {
 		if stato.lastaSubderivajho == nil {
 			stato.lastaSubderivajho = 0
 		}
@@ -8,6 +12,7 @@ extension ArboAnalizilo {
 		stato.nunaSubderivajho = stato.lastaSubderivajho
 		
 		let sencKvanto = subderivajho.filoj.map { if case .snc = $0.tipo { return 1 } else { return 0 }}.reduce(0, +)
+		let numeriSencojn = sencKvanto > 1 || (stato.lastaSenco ?? 0) > 0
 		
 		var teksto = ""
 		traktiFilojn(de: subderivajho, stato: stato) { filo in
@@ -16,9 +21,6 @@ extension ArboAnalizilo {
 				break
 			case .dif:
 				teksto += trakti(difinon: filo, stato: stato)
-				if sencKvanto > 0 && stato.lastaSenco != sencKvanto {
-					teksto += "\n\n"
-				}
 			case .gra:
 				teksto += trakti(gramatikon: filo, stato: stato)
 			case .ref(let tip, let cel):
@@ -30,12 +32,10 @@ extension ArboAnalizilo {
 			case .snc(let mrk):
 				let filTeksto = trakti(sencon: filo, marko: mrk, stato: stato)
 				
-				if sencKvanto > 1,
-				   let sencNombro = stato.lastaSenco {
-					if sencNombro > 1 {
-						teksto += "\n\n"
-					}
-					teksto += String(sencNombro) + ". "
+				if let sencNumero = stato.lastaSenco,
+				   numeriSencojn {
+					let etikedo = sencEtikedo(numero: sencNumero, freshaLinio: teksto == "", chiamDu: true, stato: stato)
+					teksto += etikedo
 				}
 				
 				teksto += filTeksto
@@ -52,7 +52,6 @@ extension ArboAnalizilo {
 		
 		// Eliras sencon
 		stato.nunaSubderivajho = nil
-		stato.lastaSenco = nil
 		
 		return teksto
 	}

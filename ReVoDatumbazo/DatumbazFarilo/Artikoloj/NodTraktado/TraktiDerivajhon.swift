@@ -18,9 +18,6 @@ extension ArboAnalizilo {
 				break
 			case .dif:
 				akumulilo.aldoni(tekston: trakti(difinon: filo, stato: stato))
-				if sencKvanto > 0 && stato.lastaSenco != sencKvanto {
-					akumulilo.aldoni(tekston: "\n")
-				}
 			case .fnt:
 				ignoriFonton(akumulilo: akumulilo, stato: stato)
 			case .gra:
@@ -58,14 +55,9 @@ extension ArboAnalizilo {
 				let filTeksto = trakti(sencon: filo, marko: mrk, stato: stato)
 				
 				if sencKvanto > 1,
-				   let sencNombro = stato.lastaSenco {
-					if sencNombro > 1 {
-						akumulilo.aldoni(tekston: "\n\n")
-					} else if !akumulilo.freshaLinio() {
-						akumulilo.aldoni(tekston: "\n")
-					}
-					let volvitaTeksto = TekstAtributo.volvi(String(sencNombro) + ". ", per: .sencNumero)
-					akumulilo.aldoni(tekston: volvitaTeksto)
+				   let sencNumero = stato.lastaSenco {
+					let etikedo = sencEtikedo(numero: sencNumero, freshaLinio: akumulilo.freshaLinio(), stato: stato)
+					akumulilo.aldoni(tekston: etikedo)
 				}
 				
 				akumulilo.aldoni(tekston:  filTeksto)
@@ -73,9 +65,10 @@ extension ArboAnalizilo {
 				let filTeksto = trakti(subderivajhon: filo, stato: stato)
 				
 				if let subdrvNumero = stato.lastaSubderivajho {
-					if subdrvNumero > 1 {
-						akumulilo.aldoni(tekston:  "\n\n")
+					if subdrvNumero > 1 || !akumulilo.freshaLinio() {
+						akumulilo.aldoni(tekston: "\n\n")
 					}
+					
 					let volvitaTeksto = TekstAtributo.volvi(ArtikolTeksto.subdrvLitero(por: subdrvNumero)! + ". ", per: .sencNumero)
 					akumulilo.aldoni(tekston: volvitaTeksto)
 				}
