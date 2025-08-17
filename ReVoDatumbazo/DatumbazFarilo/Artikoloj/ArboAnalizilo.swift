@@ -64,7 +64,12 @@ enum ArboAnalizilo {
 	// MARK: - Helpiloj
 	
 	/// Akumulas tekston el teksto-nodoj, kaj alispecaj nodoj kiuj enhavas nur tekstojn
-	static func akumuliTekstojn(de nodo: ArtikolNodo, montriFontojn: Bool = false, stato: Stato) -> String {
+	static func akumuliTekstojn(
+		de nodo: ArtikolNodo,
+		montriFontojn: Bool = false,
+		ekzemploStilo: EkzemploStilo = .kursiva,
+		stato: Stato
+	) -> String {
 		var teksto = ""
 		traktiFilojn(de: nodo, stato: stato) { filo in
 			switch filo.tipo {
@@ -73,7 +78,7 @@ enum ArboAnalizilo {
 			case .ctl:
 				teksto += trakti(citilon: filo, stato: stato)
 			case .ekz:
-				teksto += trakti(ekzemplon: filo, stila: false, stato: stato)
+				teksto += trakti(ekzemplon: filo, stilo: ekzemploStilo, lista: false, stato: stato)
 			case .esc:
 				teksto += trakti(escepton: filo, stato: stato)
 			case .em:

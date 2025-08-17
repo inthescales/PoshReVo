@@ -1,5 +1,28 @@
 extension ArboAnalizilo {
-	static func trakti(ekzemplon ekzemplo: ArtikolNodo, stila: Bool = true, stato: Stato) -> String {
+	/// Kian stilon ekzemploj en la artikolo havu
+	enum EkzemploStilo {
+		/// Ĉiuj stilaĵoj uziĝu — uzata ĉe ekzemplolistoj
+		case plena
+		
+		/// Nur kursiva teksto aperu — uzata ekz. ene de rimarkoj
+		case kursiva
+		
+		var atributo: TekstAtributo {
+			switch self {
+			case .plena:
+				return .ekzemplo
+			case .kursiva:
+				return .kursiva
+			}
+		}
+	}
+	
+	static func trakti(
+		ekzemplon ekzemplo: ArtikolNodo,
+		stilo: EkzemploStilo = .plena,
+		lista: Bool = true,
+		stato: Stato
+	) -> String {
 		var teksto = ""
 		var indeksajho: IndeksRezulto?
 		
@@ -54,10 +77,10 @@ extension ArboAnalizilo {
 			}
 		}
 		
-		if stila {
-			return "\n" + TekstAtributo.volvi(" · " + teksto.kunpremi().tondi(), per: .ekzemplo)
+		if lista {
+			return "\n" + TekstAtributo.volvi(" · " + teksto.kunpremi().tondi(), per: stilo.atributo)
 		} else {
-			return teksto.kunpremi().tondi()
+			return TekstAtributo.volvi(teksto.kunpremi().tondi(), per: stilo.atributo)
 		}
 	}
 }

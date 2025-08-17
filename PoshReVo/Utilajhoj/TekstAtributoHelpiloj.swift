@@ -191,6 +191,10 @@ enum TekstAtributoHelpiloj {
 		stilo: InterfacStilo = UzantDatumaro.komuna.stilo
 	) {
 		// Agordi etikedon
+		// NOTO: En la retejo nuntempe, ne ĉiuj ligiloj havas saman koloron.
+		// Ligiloj en difino aŭ rimarko havas tiun saman koloron kiel la ceteran tekston.
+		// Ligiloj en <ref> kaj <refgrp> havas apartan koloron, kiel mi uzas ĉi tie.
+		// Mi elektas nun uzi unu solan koloron por ĉiuj ligiloj.
 		etikedo.linkAttributes = [
 			kCTForegroundColorAttributeName : stilo.dokumentLigilo,
 			kCTUnderlineStyleAttributeName : NSNumber(value: NSUnderlineStyle.single.rawValue)
