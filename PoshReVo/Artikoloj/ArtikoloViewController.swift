@@ -13,7 +13,11 @@ final class ArtikoloViewController: UIViewController {
 		static let tekstoIdentigilo = "tekstaIdentigilo"
 		static let tradukaroIdentigilo = "tradukaIdentigilo"
 		
-		static let margheno: CGFloat = 8
+		/// Marĝeno ĉe ambaŭ horizontalaj flankoj de la artikolaĵoj
+		static let flankaMargheno: CGFloat = 8.0
+		
+		/// Marĝeno inter tekstbloko kaj paĝsupro, paĝmalsupro, kaj aliaj malagrablaj elementoj
+		static let vertikalaTekstMargheno: CGFloat = 16.0
 	}
 	
 	// MARK: - Interfaceroj
@@ -320,27 +324,39 @@ extension ArtikoloViewController: UITableViewDataSource {
 		case .dividila(teksto: let teksto):
 			(chelo as? SubartikoloTitoloChelo)?.agordi(
 				teksto: teksto,
-				margheno: Konstantoj.margheno,
+				margheno: Konstantoj.flankaMargheno,
 				stilo: stilo
 			)
 		case .derivajhTitola(teksto: let teksto, _, _):
 			(chelo as? DerivajhTitoloChelo)?.agordi(
 				teksto: teksto, 
-				margheno: Konstantoj.margheno,
+				margheno: Konstantoj.flankaMargheno,
 				stilo: stilo
 			)
 		case .teksta(let teksto):
+			let spaciSupre = (indexPath.row == 0 || {
+				switch artikolo.blokoj[indexPath.row - 1] {
+				case .derivajhTitola:
+					return false
+				default:
+					return true
+				}
+			}())
+			let spaciMalsupre = (indexPath.row == tabelo.numberOfRows(inSection: indexPath.section) - 1)
+			
 			(chelo as? TekstoChelo)?.agordi(
 				teksto: teksto,
 				liganto: self,
-				margheno: Konstantoj.margheno,
+				supraMargheno: (spaciSupre) ? Konstantoj.vertikalaTekstMargheno : 0,
+				malsupraMargheno: (spaciMalsupre) ? Konstantoj.vertikalaTekstMargheno : 0,
+				horizontalaMargheno: Konstantoj.flankaMargheno,
 				stilo: stilo
 			)
 		case .traduka(let tradukoj):
 			(chelo as? TradukaroChelo)?.agordi(
 				tradukoj: tradukoj,
 				tradukLingvoj: tradukLingvoj,
-				margheno: Konstantoj.margheno,
+				margheno: Konstantoj.flankaMargheno,
 				elekti: { [weak self] in
 					guard let navigaciilo = self?.navigationController else { return }
 					self?.kunordigilo.prezentiLingvoRedaktilon(

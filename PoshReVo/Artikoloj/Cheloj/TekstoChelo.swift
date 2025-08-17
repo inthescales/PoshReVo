@@ -32,7 +32,9 @@ final class TekstoChelo: UITableViewCell {
 	func agordi(
 		teksto: String,
 		liganto: TTTAttributedLabelDelegate,
-		margheno: CGFloat,
+		supraMargheno: CGFloat = 0.0,
+		malsupraMargheno: CGFloat = 0.0,
+		horizontalaMargheno: CGFloat,
 		stilo: InterfacStilo
 	) {
 		etikedo.textColor = stilo.dokumentaTeksto
@@ -46,8 +48,9 @@ final class TekstoChelo: UITableViewCell {
 		)
 		
 		etikedo.snp.remakeConstraints { make in
-			make.top.bottom.equalToSuperview()
-			make.left.right.equalToSuperview().inset(margheno)
+			make.top.equalToSuperview().inset(supraMargheno)
+			make.bottom.equalToSuperview().inset(malsupraMargheno)
+			make.left.right.equalToSuperview().inset(horizontalaMargheno)
 		}
 	}
 }
