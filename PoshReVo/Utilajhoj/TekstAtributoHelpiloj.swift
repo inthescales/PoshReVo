@@ -115,6 +115,12 @@ enum TekstAtributoHelpiloj {
 					value: Konstantoj.subskriptMalsupreco,
 					range: regiono
 				)
+			case .trastrekita:
+				atributaTeksto.addAttribute(
+					.strikethroughStyle,
+					value: NSUnderlineStyle.single.rawValue,
+					range: regiono
+				)
 			case .ekzemplo:
 				novajTrajtoj = .traitItalic
 				atributaTeksto.addAttribute(

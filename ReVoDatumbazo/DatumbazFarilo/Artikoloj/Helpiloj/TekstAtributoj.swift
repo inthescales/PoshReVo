@@ -5,6 +5,7 @@ public enum TekstAtributo: CaseIterable, Equatable {
 	case grasa
 	case supera
 	case suba
+	case trastrekita
 	case ekzemplo
 	case rimarko
 	case sencNumero
@@ -17,7 +18,7 @@ public enum TekstAtributo: CaseIterable, Equatable {
 	
 	/// Ĉiuj atributoj. Uzata por provizi regulajn esprimojn.
 	public static var allCases: [TekstAtributo] {
-		[.ligo(celo: ""), .kursiva, .grasa, .supera, .suba, .ekzemplo, .rimarko, .sencNumero]
+		[.ligo(celo: ""), .kursiva, .grasa, .supera, .suba, .trastrekita, .ekzemplo, .rimarko, .sencNumero]
 	}
 	
 	/// Tekstan kodon de atributo
@@ -33,6 +34,8 @@ public enum TekstAtributo: CaseIterable, Equatable {
 			"sup"
 		case .suba:
 			"sub"
+		case .trastrekita:
+			"ts"
 		case .ekzemplo:
 			"ekzemplo"
 		case .rimarko:
@@ -53,6 +56,8 @@ public enum TekstAtributo: CaseIterable, Equatable {
 			self = .supera
 		case "sub":
 			self = .suba
+		case "ts":
+			self = .trastrekita
 		case "ekzemplo":
 			self = .ekzemplo
 		case "rimarko":
