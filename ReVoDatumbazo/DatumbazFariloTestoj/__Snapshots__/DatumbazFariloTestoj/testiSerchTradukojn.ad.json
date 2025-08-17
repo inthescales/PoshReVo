@@ -1,0 +1,100 @@
+{
+  "be" : [
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "афікс, які вызначае працяглае, сталае або паўторнае дзеяньне, у эспэранта",
+      "videblaTeksto" : "афікс, які вызначае працяглае, сталае або паўторнае дзеяньне, у эспэранта"
+    }
+  ],
+  "ca" : [
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "[sufixe de repetició o durada]",
+      "videblaTeksto" : "[sufixe de repetició o durada]"
+    }
+  ],
+  "es" : [
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "sufijo\/infijo de repetición o duración",
+      "videblaTeksto" : "sufijo\/infijo de repetición o duración"
+    },
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "-ación",
+      "videblaTeksto" : "-ación"
+    },
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "-ición",
+      "videblaTeksto" : "-ición"
+    },
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "-ada\/-ado",
+      "videblaTeksto" : "-ada\/-ado"
+    },
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "-(a)je",
+      "videblaTeksto" : "-(a)je"
+    }
+  ],
+  "fr" : [
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "-age",
+      "videblaTeksto" : "-age (suffixe d'action)"
+    },
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "-ation",
+      "videblaTeksto" : "-ation (suffixe d'action)"
+    }
+  ],
+  "sgn" : [
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "serchTeksto" : "t@10",
+      "videblaTeksto" : "t@10"
+    }
+  ],
+  "th" : [
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "senco" : 1,
+      "serchTeksto" : "แสดงการกระทำอย่างต่อเนื่อง",
+      "videblaTeksto" : "แสดงการกระทำอย่างต่อเนื่อง"
+    },
+    {
+      "esperantaNomo" : "-ad",
+      "indekso" : "ad",
+      "marko" : "ad.0",
+      "senco" : 2,
+      "serchTeksto" : "ทำคำกริยาให้เป็นคำนาม",
+      "videblaTeksto" : "ทำคำกริยาให้เป็นคำนาม"
+    }
+  ]
+}

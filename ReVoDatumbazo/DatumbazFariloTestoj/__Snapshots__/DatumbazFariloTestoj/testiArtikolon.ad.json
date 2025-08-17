@@ -1,0 +1,68 @@
+{
+  "blokoj" : [
+    {
+      "derivajhTitola" : {
+        "marko" : "ad.0",
+        "ofc" : "*",
+        "teksto" : "-ad"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Sufikso esprimanta ĝenerale la agon kaj uzata por derivi:\n\n<sencNumero>A. <\/sencNumero>substantivojn:\n\n<sencNumero>1. <\/sencNumero>el substantiva radiko por signifi pli malpli daŭran agon faritan per la ilo montrata de la radiko: \n<ekzemplo> · martel<g>ad<\/g>o; telefon<g>ad<\/g>o; bros<g>ad<\/g>o; kron<g>ad<\/g>o; afiŝ<g>ad<\/g>o.<\/ekzemplo>\n<rimarko><g>RIM 1:<\/g> La responda verbo estas sensufikse derivata de la substantivo: „marteli” (ne: „marteladi”), „kroni” ktp.<\/rimarko>\n\n<sencNumero>2. <\/sencNumero>el verba radiko por signifi:\n\n<sencNumero>a) <\/sencNumero>ĝeneralan kaj abstraktan ideon de la ago esprimata de la radiko: \n<ekzemplo> · la uz<g>ad<\/g>o de la artikolo estas tia sama, kiel en aliaj lingvoj (Kp „la <g>uzo<\/g> de l' artikolo <g>en tiu okazo<\/g> ne estas ĝusta”)<\/ekzemplo>; \n<ekzemplo> · oni aŭdis muzikon kaj kant<g>ad<\/g>on;<\/ekzemplo> \n<ekzemplo> · la ŝtel<g>ad<\/g>o estas via profesio;<\/ekzemplo> \n<ekzemplo> · venĝ<g>ad<\/g>o estas mia metio;<\/ekzemplo> \n<ekzemplo> · ĉiuj pozicioj de homa korpo, star<g>ad<\/g>o, ir<g>ad<\/g>o, salt<g>ad<\/g>o, kliniĝ<g>ad<\/g>o al ĉiuj flankoj, grimp<g>ad<\/g>o sur ĉiuj muroj, disdon<g>ad<\/g>o de salutoj, plenum<g>ad<\/g>o de plej diversaj gestoj<\/ekzemplo> \n<ekzemplo> · la natura ir<g>ad<\/g>o de la aferoj.<\/ekzemplo>\n<rimarko><g>RIM 2:<\/g> Pro ĉi tiu senco <g>-ad<\/g> servas por nomi la artojn, kapablojn ktp: la kant<g>ad<\/g>o estas tre agrabla okupo (ne: „okupado”, ĉar temas ne pri daŭra kanto, sed pri la scipovo kanti); la pentr<g>ad<\/g>o.<\/rimarko>\n\n<sencNumero>b) <\/sencNumero>longdaŭrecon aŭ ripetiĝon de la ago esprimata de la radiko: \n<ekzemplo> · lia hieraŭa parolo estis tre bela, sed la tro multa parol<g>ad<\/g>o lacigis lin;<\/ekzemplo> \n<ekzemplo> · la paf<g>ad<\/g>o daŭris tre longe;<\/ekzemplo> \n<ekzemplo> · parol<g>ad<\/g>o (oratoraĵo) elokventa;<\/ekzemplo> \n<ekzemplo> · malriĉigas ne nehav<g>ad<\/g>o, sed tro granda dezir<g>ad<\/g>o;<\/ekzemplo> \n<ekzemplo> · don<g>ad<\/g>o de almozoj neniam malriĉigas.<\/ekzemplo>\n\n<sencNumero>B. <\/sencNumero>verbojn:\n\n<sencNumero>3. <\/sencNumero>el verbaj aŭ substantivaj radikoj, por prezenti la agon en sia malvolviĝo kaj insisti pri ties daŭro aŭ ripetiĝo: \n<ekzemplo> · martel<g>ad<\/g>i (longe marteli);<\/ekzemplo> \n<ekzemplo> · vizit<g>ad<\/g>i (ofte viziti);<\/ekzemplo> \n<ekzemplo> · zorg<g>ad<\/g>i (konstante zorgi);<\/ekzemplo> \n<ekzemplo> · mi salt<g>ad<\/g>is la tutan tagon de loko al loko;<\/ekzemplo> \n<ekzemplo> · li kur<g>ad<\/g>is ĝis li falis;<\/ekzemplo> \n<ekzemplo> · ĉiun tagon tien ven<g>ad<\/g>as multaj fremduloj;<\/ekzemplo> \n<ekzemplo> · la unuaj esperantistoj pacience elmet<g>ad<\/g>is sin ne sola al konstanta mok<g>ad<\/g>o, sed eĉ al grandaj oferoj;<\/ekzemplo> \n<ekzemplo> · kugloj senĉese fal<g>ad<\/g>is;<\/ekzemplo> \n<ekzemplo> · almoze elpet<g>ad<\/g>i al si panon;<\/ekzemplo> \n<ekzemplo> · la mastrino renkont<g>ad<\/g>is lin ĉiam ĝentile;<\/ekzemplo> \n<ekzemplo> · mi esperas, ke la esperantistoj nun ofte kunven<g>ad<\/g>os kaj korespond<g>ad<\/g>os inter si.<\/ekzemplo>\n⇒ <a href=\"re.0.denove\">re-<\/a>\n<rimarko><g>RIM 3:<\/g> Tiu ĉi formo servas por traduki la imperfekton de la latinidaj lingvoj.<\/rimarko>\n<rimarko><g>RIM 4:<\/g> Kelkaj esperantistoj uzas -ad kiel memstaran vorteron: lumbrilo <g>ad<\/g>is kuŝi (plue kuŝis, daŭris kuŝante) sur tegmentoj; ni <g>ad<\/g>e (konstante) progresas; la ekonomia vivo de l' homaro <g>ad<\/g>e (senĉese, pli kaj pli) sennaciiĝas; <g>ad<\/g>e uzata vorto.<\/rimarko>\n➞ <a href=\"acx\">-aĉ<\/a>, <a href=\"ar\">-ar<\/a>, <a href=\"eg\">-eg<\/a>, <a href=\"et\">-et<\/a>, <a href=\"ul\">-ul<\/a>, ktp"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "афікс, які вызначае працяглае, сталае або паўторнае дзеяньне, у эспэранта"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "-age (suffixe d'action), -ation (suffixe d'action)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "sufijo\/infijo de repetición o duración, -ación, -ición, -ada\/-ado, -(a)je"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ca",
+              "nomo" : "kataluna"
+            },
+            "teksto" : "[sufixe de repetició o durada]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sgn",
+              "nomo" : "signuna"
+            },
+            "teksto" : "t@10"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "th",
+              "nomo" : "taja"
+            },
+            "teksto" : "<sencNumero>1.<\/sencNumero> แสดงการกระทำอย่างต่อเนื่อง <sencNumero>2.a<\/sencNumero> ทำคำกริยาให้เป็นคำนาม"
+          }
+        ]
+      }
+    }
+  ],
+  "indekso" : "ad",
+  "ofc" : "*",
+  "radiko" : "ad",
+  "titolo" : "-ad\/"
+}
