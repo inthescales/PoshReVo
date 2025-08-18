@@ -213,7 +213,7 @@ final class ArtikoloViewController: UIViewController {
 		// Se ni havas komencan markon, kaj jam ne saltis al ĝi, saltu al ĝi
 		if !jamAperis,
 		   let marko = komencaMarko {
-			saltiAlMarko(marko, animacii: true)
+			saltiAl(marko: marko, animacii: true)
 		}
 		
 		aperis?()
@@ -242,10 +242,16 @@ final class ArtikoloViewController: UIViewController {
 	/// Uzanto premis saltbutonon
 	/// Montri saltan menuon
 	private func premisSalti() {
+		// TODO: Eble alkroĉu indekson al la bloko mem
+		var subartikolNumero = -1
+		
 		let eroj: [ShovMenuoViewController.Menuero] = artikolo.blokoj.compactMap {
 			switch $0 {
 			case .dividila(let teksto):
-				return ShovMenuoViewController.Menuero(bildo: nil, teksto: teksto) {}
+				subartikolNumero += 1
+				return ShovMenuoViewController.Menuero(bildo: nil, teksto: teksto) { [subartikolNumero, weak self] in
+					self?.saltiAl(subartikolo: subartikolNumero)
+				}
 			case .derivajhTitola(let teksto, _, let marko):
 				return ShovMenuoViewController.Menuero(bildo: nil, teksto: teksto) { [weak self] in
 					guard let self,
@@ -253,7 +259,7 @@ final class ArtikoloViewController: UIViewController {
 						return
 					}
 					
-					saltiAlMarko(marko, animacii: true)
+					saltiAl(marko: marko, animacii: true)
 				}
 			default:
 				return nil
@@ -274,13 +280,30 @@ final class ArtikoloViewController: UIViewController {
 	}
 	
 	/// Haste rulumi al la celata marko
-	private func saltiAlMarko(_ marko: String, animacii: Bool) {
+	private func saltiAl(marko: String, animacii: Bool) {
 		for (i, bloko) in artikolo.blokoj.enumerated() {
 			switch bloko {
 			case .derivajhTitola(_, _, let blokMarko):
 				if blokMarko == marko {
 					tabelo.scrollToRow(at: IndexPath(row: i, section: 0), at: .top, animated: animacii)
 				}
+			default:
+				break
+			}
+		}
+	}
+	
+	/// Haste rulumi al subartikol-titolo havanta tiun numeron
+	private func saltiAl(subartikolo numero: Int) {
+		var nombrilo = 0
+		
+		for (i, bloko) in artikolo.blokoj.enumerated() {
+			switch bloko {
+			case .dividila:
+				if nombrilo == numero {
+					tabelo.scrollToRow(at: IndexPath(row: i, section: 0), at: .top, animated: true)
+				}
+				nombrilo += 1
 			default:
 				break
 			}
@@ -402,7 +425,7 @@ extension ArtikoloViewController: TTTAttributedLabelDelegate {
 		// Salti ene de ĉi tiu artikolo
 		if markeroj[0] == artikolo.indekso,
 		   let derivajhMarko {
-			saltiAlMarko(derivajhMarko, animacii: true)
+			saltiAl(marko: derivajhMarko, animacii: true)
 			return
 		}
 		
