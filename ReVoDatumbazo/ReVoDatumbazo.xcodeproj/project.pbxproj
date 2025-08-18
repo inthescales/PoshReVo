@@ -24,6 +24,12 @@
 		003DC1B22E4618950053404F /* Fako+KodNetigado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC1B02E46187D0053404F /* Fako+KodNetigado.swift */; };
 		0049B21624B0E67000B81E15 /* SerchStato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B21524B0E67000B81E15 /* SerchStato.swift */; };
 		0049B22124B154F000B81E15 /* PrefiksArboIteraciilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049B22024B154F000B81E15 /* PrefiksArboIteraciilo.swift */; };
+		006A0EE72E539E5500BDA06B /* pri.xml in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EE62E539E5500BDA06B /* pri.xml */; };
+		006A0EE92E539E7A00BDA06B /* testiArtikolon.pri.json in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EE82E539E7A00BDA06B /* testiArtikolon.pri.json */; };
+		006A0EEB2E539E8300BDA06B /* testiFakVortojn.pri.json in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EEA2E539E8300BDA06B /* testiFakVortojn.pri.json */; };
+		006A0EED2E539E8A00BDA06B /* testiOfcVortojn.pri.json in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EEC2E539E8A00BDA06B /* testiOfcVortojn.pri.json */; };
+		006A0EEF2E539E9800BDA06B /* testiSerchTradukojn.pri.json in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EEE2E539E9800BDA06B /* testiSerchTradukojn.pri.json */; };
+		006A0EF12E539E9E00BDA06B /* testiSerchVortojn.pri.json in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EF02E539E9E00BDA06B /* testiSerchVortojn.pri.json */; };
 		007983722D67C6B60021FD4C /* SerchRezulto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007983712D67C6B60021FD4C /* SerchRezulto.swift */; };
 		0098F3E72E50FE97007429CE /* TraktiMallongigonKapan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */; };
 		0098F3E82E50FE97007429CE /* TraktiMallongigonKapan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */; };
@@ -353,6 +359,12 @@
 		0051A6BF2309A2F90034DFF9 /* ReVoDatumbazo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReVoDatumbazo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0051A6C32309A2F90034DFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		005270EC24E9A9E2009E17AA /* ReVoModelojOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReVoModelojOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		006A0EE62E539E5500BDA06B /* pri.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = pri.xml; sourceTree = "<group>"; };
+		006A0EE82E539E7A00BDA06B /* testiArtikolon.pri.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testiArtikolon.pri.json; sourceTree = "<group>"; };
+		006A0EEA2E539E8300BDA06B /* testiFakVortojn.pri.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testiFakVortojn.pri.json; sourceTree = "<group>"; };
+		006A0EEC2E539E8A00BDA06B /* testiOfcVortojn.pri.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testiOfcVortojn.pri.json; sourceTree = "<group>"; };
+		006A0EEE2E539E9800BDA06B /* testiSerchTradukojn.pri.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testiSerchTradukojn.pri.json; sourceTree = "<group>"; };
+		006A0EF02E539E9E00BDA06B /* testiSerchVortojn.pri.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testiSerchVortojn.pri.json; sourceTree = "<group>"; };
 		007983712D67C6B60021FD4C /* SerchRezulto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchRezulto.swift; sourceTree = "<group>"; };
 		0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiMallongigonKapan.swift; sourceTree = "<group>"; };
 		0098F3E92E525BCB007429CE /* ad.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ad.xml; sourceTree = "<group>"; };
@@ -799,6 +811,7 @@
 				0099FC852D6506580033EC11 /* not.xml */,
 				0099FC862D6506580033EC11 /* om.xml */,
 				0099FC872D6506580033EC11 /* per.xml */,
+				006A0EE62E539E5500BDA06B /* pri.xml */,
 			);
 			path = Artikoloj;
 			sourceTree = "<group>";
@@ -826,6 +839,7 @@
 				0099FC922D6506580033EC11 /* testiArtikolon.not-i.json */,
 				0099FC932D6506580033EC11 /* testiArtikolon.Om-o.json */,
 				0099FC942D6506580033EC11 /* testiArtikolon.per.json */,
+				006A0EE82E539E7A00BDA06B /* testiArtikolon.pri.json */,
 				0099FC952D6506580033EC11 /* testiFakVortojn.abak-o.json */,
 				0098F3EC2E525BF4007429CE /* testiFakVortojn.ad.json */,
 				0099FC962D6506580033EC11 /* testiFakVortojn.elips-o.json */,
@@ -836,6 +850,7 @@
 				0099FC9A2D6506580033EC11 /* testiFakVortojn.not-i.json */,
 				0099FC9B2D6506580033EC11 /* testiFakVortojn.Om-o.json */,
 				0099FC9C2D6506580033EC11 /* testiFakVortojn.per.json */,
+				006A0EEA2E539E8300BDA06B /* testiFakVortojn.pri.json */,
 				0099FC9D2D6506580033EC11 /* testiOfcVortojn.abak-o.json */,
 				0098F3ED2E525BF4007429CE /* testiOfcVortojn.ad.json */,
 				0099FC9E2D6506580033EC11 /* testiOfcVortojn.elips-o.json */,
@@ -846,6 +861,7 @@
 				0099FCA22D6506580033EC11 /* testiOfcVortojn.not-i.json */,
 				0099FCA32D6506580033EC11 /* testiOfcVortojn.Om-o.json */,
 				0099FCA42D6506580033EC11 /* testiOfcVortojn.per.json */,
+				006A0EEC2E539E8A00BDA06B /* testiOfcVortojn.pri.json */,
 				0099FCA52D6506580033EC11 /* testiSerchTradukojn.abak-o.json */,
 				0098F3EE2E525BF4007429CE /* testiSerchTradukojn.ad.json */,
 				0099FCA62D6506580033EC11 /* testiSerchTradukojn.elips-o.json */,
@@ -856,6 +872,7 @@
 				0099FCAA2D6506580033EC11 /* testiSerchTradukojn.not-i.json */,
 				0099FCAB2D6506580033EC11 /* testiSerchTradukojn.Om-o.json */,
 				0099FCAC2D6506580033EC11 /* testiSerchTradukojn.per.json */,
+				006A0EEE2E539E9800BDA06B /* testiSerchTradukojn.pri.json */,
 				0099FCAD2D6506580033EC11 /* testiSerchVortojn.abak-o.json */,
 				0098F3EF2E525BF4007429CE /* testiSerchVortojn.ad.json */,
 				0099FCAE2D6506580033EC11 /* testiSerchVortojn.elips-o.json */,
@@ -866,6 +883,7 @@
 				0099FCB22D6506580033EC11 /* testiSerchVortojn.not-i.json */,
 				0099FCB32D6506580033EC11 /* testiSerchVortojn.Om-o.json */,
 				0099FCB42D6506580033EC11 /* testiSerchVortojn.per.json */,
+				006A0EF02E539E9E00BDA06B /* testiSerchVortojn.pri.json */,
 			);
 			path = DatumbazFariloTestoj;
 			sourceTree = "<group>";
@@ -1109,6 +1127,7 @@
 				0099FCD22D6506580033EC11 /* testiFakVortojn.per.json in Resources */,
 				0099FCBD2D6506580033EC11 /* ni.xml in Resources */,
 				0099FCD72D6506580033EC11 /* testiOfcVortojn.ni.json in Resources */,
+				006A0EEB2E539E8300BDA06B /* testiFakVortojn.pri.json in Resources */,
 				00E5D5B02E489E01004877ED /* modal.xml in Resources */,
 				00E5D5B62E489EA5004877ED /* testiOfcVortojn.modal-o.json in Resources */,
 				0099FCC82D6506580033EC11 /* testiArtikolon.not-i.json in Resources */,
@@ -1117,11 +1136,15 @@
 				0099FCD62D6506580033EC11 /* testiOfcVortojn.majoritat-o-maĵori-o.json in Resources */,
 				0099FCE12D6506580033EC11 /* testiSerchTradukojn.Om-o.json in Resources */,
 				0099FCE62D6506580033EC11 /* testiSerchVortojn.majoritat-o-maĵori-o.json in Resources */,
+				006A0EEF2E539E9800BDA06B /* testiSerchTradukojn.pri.json in Resources */,
 				0099FCCA2D6506580033EC11 /* testiArtikolon.per.json in Resources */,
+				006A0EE92E539E7A00BDA06B /* testiArtikolon.pri.json in Resources */,
 				0099FCC32D6506580033EC11 /* testiArtikolon.abak-o.json in Resources */,
 				0099FCC52D6506580033EC11 /* testiArtikolon.grav-a.json in Resources */,
 				0099FCE42D6506580033EC11 /* testiSerchVortojn.elips-o.json in Resources */,
 				0099FCD82D6506580033EC11 /* testiOfcVortojn.not-i.json in Resources */,
+				006A0EF12E539E9E00BDA06B /* testiSerchVortojn.pri.json in Resources */,
+				006A0EE72E539E5500BDA06B /* pri.xml in Resources */,
 				0099FCD12D6506580033EC11 /* testiFakVortojn.Om-o.json in Resources */,
 				0099FCDD2D6506580033EC11 /* testiSerchTradukojn.grav-a.json in Resources */,
 				0099FCC22D6506580033EC11 /* grundo.json in Resources */,
@@ -1149,6 +1172,7 @@
 				0099FCBE2D6506580033EC11 /* not.xml in Resources */,
 				0099FCCF2D6506580033EC11 /* testiFakVortojn.ni.json in Resources */,
 				0099FCE92D6506580033EC11 /* testiSerchVortojn.Om-o.json in Resources */,
+				006A0EED2E539E8A00BDA06B /* testiOfcVortojn.pri.json in Resources */,
 				0099FCCD2D6506580033EC11 /* testiFakVortojn.grav-a.json in Resources */,
 				0099FCD92D6506580033EC11 /* testiOfcVortojn.Om-o.json in Resources */,
 				0099FCC02D6506580033EC11 /* per.xml in Resources */,
