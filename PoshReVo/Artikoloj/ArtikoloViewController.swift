@@ -420,7 +420,7 @@ extension ArtikoloViewController: TTTAttributedLabelDelegate {
 		// indikanta certan sencon. Tamen, dum sencoj ĉi-ape estas kunigitaj simple el
 		// tekstoj, ne eblas salti rekte al senco. Do ni uzu ĉi tie nur la unuaj du
 		// markeroj, kiu indikos derivaĵon.
-		let derivajhMarko = (markeroj.count > 1) ? markeroj[0] + "." + markeroj[1] : nil
+		let derivajhMarko = (markeroj.count > 1) ? markeroj[0] + markeroj[1] : nil
 		
 		// Salti ene de ĉi tiu artikolo
 		if markeroj[0] == artikolo.indekso,
