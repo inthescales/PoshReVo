@@ -122,7 +122,6 @@ enum TekstAtributoHelpiloj {
 					range: regiono
 				)
 			case .ekzemplo:
-				novajTrajtoj = .traitItalic
 				atributaTeksto.addAttribute(
 					.foregroundColor,
 					value: stilo.dokumentEkzemplo,

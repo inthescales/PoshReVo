@@ -7,12 +7,13 @@ extension ArboAnalizilo {
 		/// Nur kursiva teksto aperu — uzata ekz. ene de rimarkoj
 		case kursiva
 		
-		var atributo: TekstAtributo {
+		/// Atributoj aldonindaj tiustile, en la ordo laŭ kiu oni per ili volvu
+		var atributoj: [TekstAtributo] {
 			switch self {
 			case .plena:
-				return .ekzemplo
+				return [.kursiva, .ekzemplo]
 			case .kursiva:
-				return .kursiva
+				return [.kursiva]
 			}
 		}
 	}
@@ -43,8 +44,8 @@ extension ArboAnalizilo {
 				teksto += indeksRezulto.teksto
 				indeksajho = indeksRezulto
 			case .klr:
-				// TODO: Klarigo ene de ekzemplo havu malkursivan tekston
-				teksto += trakti(klarigon: filo, stato: stato)
+				let filTeksto = trakti(klarigon: filo, stato: stato)
+				teksto += TekstAtributo.malvolvi(filTeksto, per: .kursiva)
 			case .mis:
 				teksto += trakti(misstilan: filo, stato: stato)
 			case .nac:
@@ -79,9 +80,18 @@ extension ArboAnalizilo {
 		}
 		
 		if lista {
-			return "\n" + TekstAtributo.volvi(" · " + teksto.kunpremi().tondi(), per: stilo.atributo)
+			return "\n" + volvi(" · " + teksto.kunpremi().tondi(), lau: stilo)
 		} else {
-			return TekstAtributo.volvi(teksto.kunpremi().tondi(), per: stilo.atributo)
+			return volvi(teksto.kunpremi().tondi(), lau: stilo)
 		}
+	}
+	
+	// MARK: - Helpiloj
+	
+	/// Serie volvas la tekston per la atributoj de la stilo
+	private static func volvi(_ teksto: String, lau stilo: EkzemploStilo) -> String {
+		stilo.atributoj.reduce(teksto, { teksto, atributo in
+			TekstAtributo.volvi(teksto, per: atributo)
+		})
 	}
 }

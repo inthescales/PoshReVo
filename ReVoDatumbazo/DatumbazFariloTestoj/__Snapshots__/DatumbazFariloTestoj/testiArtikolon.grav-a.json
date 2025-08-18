@@ -9,7 +9,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Atentinda pro sia granda influo aŭ siaj grandaj sekvoj: \n<ekzemplo> · ili foriris de li, lasinte lin en <g>grav<\/g>a malsano;<\/ekzemplo> \n<ekzemplo> · la plej <g>grav<\/g>aj plejaĝuloj;<\/ekzemplo> \n<ekzemplo> · [ili] staris ĉirkaŭe, akuzante lin pri […] <g>grav<\/g>aj kulpoj;<\/ekzemplo> \n<ekzemplo> · la plej <g>grav<\/g>aj krimuloj;<\/ekzemplo> \n<ekzemplo> · la homo estis tre riĉe vestita, li estis videble <g>grav<\/g>a persono;<\/ekzemplo> \n<ekzemplo> · li dancas belege, […] sed egale <g>grav<\/g>a demando estas, ĉu li estas sufiĉe instruita;<\/ekzemplo> \n<ekzemplo> · <g>grav<\/g>a festotago;<\/ekzemplo> \n<ekzemplo> · estis konfirmado […], tio estis ja <g>grav<\/g>a tago por ili, el infanoj ili subite fariĝis plenkreskaj homoj;<\/ekzemplo> \n<ekzemplo> · aŭskultu, ĉar mi parolos gravaĵon;<\/ekzemplo> \n<ekzemplo> · ofte de kaŭzo senenhava venas efiko plej <g>grav<\/g>a.<\/ekzemplo>\n➞ <a href=\"pez.0a.multe0a\">peza<\/a>, <a href=\"serioz.0a\">serioza<\/a>, <a href=\"signif.0a.FIG\">signifa<\/a>"
+        "teksto" : "Atentinda pro sia granda influo aŭ siaj grandaj sekvoj: \n<ekz><k> · ili foriris de li, lasinte lin en <g>grav<\/g>a malsano;<\/k><\/ekz> \n<ekz><k> · la plej <g>grav<\/g>aj plejaĝuloj;<\/k><\/ekz> \n<ekz><k> · <\/k>[ili]<k> staris ĉirkaŭe, akuzante lin pri <\/k>[…]<k> <g>grav<\/g>aj kulpoj;<\/k><\/ekz> \n<ekz><k> · la plej <g>grav<\/g>aj krimuloj;<\/k><\/ekz> \n<ekz><k> · la homo estis tre riĉe vestita, li estis videble <g>grav<\/g>a persono;<\/k><\/ekz> \n<ekz><k> · li dancas belege, <\/k>[…]<k> sed egale <g>grav<\/g>a demando estas, ĉu li estas sufiĉe instruita;<\/k><\/ekz> \n<ekz><k> · <g>grav<\/g>a festotago;<\/k><\/ekz> \n<ekz><k> · estis konfirmado <\/k>[…]<k>, tio estis ja <g>grav<\/g>a tago por ili, el infanoj ili subite fariĝis plenkreskaj homoj;<\/k><\/ekz> \n<ekz><k> · aŭskultu, ĉar mi parolos gravaĵon;<\/k><\/ekz> \n<ekz><k> · ofte de kaŭzo senenhava venas efiko plej <g>grav<\/g>a.<\/k><\/ekz>\n➞ <a href=\"pez.0a.multe0a\">peza<\/a>, <a href=\"serioz.0a\">serioza<\/a>, <a href=\"signif.0a.FIG\">signifa<\/a>"
       }
     },
     {
@@ -55,7 +55,7 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "important, grave, gros (important), marquant<sencNumero> · ~aĵo: <\/sencNumero>chose importante"
+            "teksto" : "important, grave, gros (important), marquant<snc> · ~aĵo: <\/snc>chose importante"
           },
           {
             "lingvo" : {
@@ -76,14 +76,14 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "fontos, súlyos (átv.)<sencNumero> · ~aĵo: <\/sencNumero>fontos dolog"
+            "teksto" : "fontos, súlyos (átv.)<snc> · ~aĵo: <\/snc>fontos dolog"
           },
           {
             "lingvo" : {
               "kodo" : "id",
               "nomo" : "indonezia"
             },
-            "teksto" : "penting<sencNumero> · ~aĵo: <\/sencNumero>hal penting"
+            "teksto" : "penting<snc> · ~aĵo: <\/snc>hal penting"
           },
           {
             "lingvo" : {
@@ -97,7 +97,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "belangrijk, gewichtig, aanzienlijk<sencNumero> · ~aĵo: <\/sencNumero>iets belangrijks"
+            "teksto" : "belangrijk, gewichtig, aanzienlijk<snc> · ~aĵo: <\/snc>iets belangrijks"
           },
           {
             "lingvo" : {
@@ -166,7 +166,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Laŭ grava maniero: \n<ekzemplo> · mi estas <g>grav<\/g>e vundita;<\/ekzemplo> \n<ekzemplo> · se mi jam tiel longe kuŝis, ne estas ja <g>grav<\/g>e kuŝi ankoraŭ iom pli!<\/ekzemplo> \n<ekzemplo> · por li estis <g>grav<\/g>e havi la lastan vorton;<\/ekzemplo> \n<ekzemplo> · <g>grav<\/g>e maloportuna;<\/ekzemplo> \n<ekzemplo> · ne <g>grav<\/g>e, ne <g>grav<\/g>e, diris Mefres.<\/ekzemplo>\n➞ <a href=\"fort.0e.multe\">forte<\/a>, <a href=\"mult.0e\">multe<\/a>, <a href=\"tre.0\">tre<\/a>"
+        "teksto" : "Laŭ grava maniero: \n<ekz><k> · mi estas <g>grav<\/g>e vundita;<\/k><\/ekz> \n<ekz><k> · se mi jam tiel longe kuŝis, ne estas ja <g>grav<\/g>e kuŝi ankoraŭ iom pli!<\/k><\/ekz> \n<ekz><k> · por li estis <g>grav<\/g>e havi la lastan vorton;<\/k><\/ekz> \n<ekz><k> · <g>grav<\/g>e maloportuna;<\/k><\/ekz> \n<ekz><k> · ne <g>grav<\/g>e, ne <g>grav<\/g>e, diris Mefres.<\/k><\/ekz>\n➞ <a href=\"fort.0e.multe\">forte<\/a>, <a href=\"mult.0e\">multe<\/a>, <a href=\"tre.0\">tre<\/a>"
       }
     },
     {
@@ -267,7 +267,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "<k>ntr<\/k>\nEsti grava: \n<ekzemplo> · sed tio ne gravas!<\/ekzemplo> \n<ekzemplo> · ne <g>grav<\/g>as, ne <g>grav<\/g>as, respondis la etulo;<\/ekzemplo> \n<ekzemplo> · tio ĉi neniel <g>grav<\/g>as;<\/ekzemplo> \n<ekzemplo> · la sumeto ne tre <g>grav<\/g>as;<\/ekzemplo> \n<ekzemplo> · por tiuj, kiuj suferis la militon, <g>grav<\/g>as haltigi ĝin.<\/ekzemplo>"
+        "teksto" : "<k>ntr<\/k>\nEsti grava: \n<ekz><k> · sed tio ne gravas!<\/k><\/ekz> \n<ekz><k> · ne <g>grav<\/g>as, ne <g>grav<\/g>as, respondis la etulo;<\/k><\/ekz> \n<ekz><k> · tio ĉi neniel <g>grav<\/g>as;<\/k><\/ekz> \n<ekz><k> · la sumeto ne tre <g>grav<\/g>as;<\/k><\/ekz> \n<ekz><k> · por tiuj, kiuj suferis la militon, <g>grav<\/g>as haltigi ĝin.<\/k><\/ekz>"
       }
     },
     {
@@ -299,14 +299,14 @@
               "kodo" : "fr",
               "nomo" : "franca"
             },
-            "teksto" : "importer, compter (importer), convenir (de), falloir, être grave, peser (importer)<sencNumero> · …ne ~as: <\/sencNumero>mais ça ne fait rien, mais peu importe"
+            "teksto" : "importer, compter (importer), convenir (de), falloir, être grave, peser (importer)<snc> · …ne ~as: <\/snc>mais ça ne fait rien, mais peu importe"
           },
           {
             "lingvo" : {
               "kodo" : "de",
               "nomo" : "germana"
             },
-            "teksto" : "wichtig sein, bedeutend sein<sencNumero> · …ne ~as: <\/sencNumero>aber das macht nichts"
+            "teksto" : "wichtig sein, bedeutend sein<snc> · …ne ~as: <\/snc>aber das macht nichts"
           },
           {
             "lingvo" : {
@@ -320,7 +320,7 @@
               "kodo" : "hu",
               "nomo" : "hungara"
             },
-            "teksto" : "fontos<sencNumero> · …ne ~as: <\/sencNumero>de ez egyáltalán nem fontos"
+            "teksto" : "fontos<snc> · …ne ~as: <\/snc>de ez egyáltalán nem fontos"
           },
           {
             "lingvo" : {
@@ -341,7 +341,7 @@
               "kodo" : "nl",
               "nomo" : "nederlanda"
             },
-            "teksto" : "belangrijk zijn, gewichtig zijn<sencNumero> · …ne ~as: <\/sencNumero>maar dat is niet erg"
+            "teksto" : "belangrijk zijn, gewichtig zijn<snc> · …ne ~as: <\/snc>maar dat is niet erg"
           },
           {
             "lingvo" : {
@@ -396,7 +396,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Igi pli grava, prezenti kiel grava: \n<ekzemplo> · la malfeliĉa virino estas enprofundigita en doloron, […] kiun hieraŭ via ĉeesto ankoraŭ pli<g>grav<\/g>igis;<\/ekzemplo> \n<ekzemplo> · la publiko […] per sia konduto <g>grav<\/g>igas aŭ mal<g>grav<\/g>igas la esprimitajn ideojn;<\/ekzemplo> \n<ekzemplo> · la diferencon [inter ili] <g>grav<\/g>igas ne nur aparta parolo, sed konkura kredo.<\/ekzemplo>\n➞ <a href=\"akcent.0i.KOMUNE\">akcenti<\/a>, <a href=\"star.el0igi\">elstarigi<\/a>, <a href=\"emfaz.0i.FIG\">emfazi<\/a>, <a href=\"fort.0igi\">plifortigi<\/a>"
+        "teksto" : "Igi pli grava, prezenti kiel grava: \n<ekz><k> · la malfeliĉa virino estas enprofundigita en doloron, <\/k>[…]<k> kiun hieraŭ via ĉeesto ankoraŭ pli<g>grav<\/g>igis;<\/k><\/ekz> \n<ekz><k> · la publiko <\/k>[…]<k> per sia konduto <g>grav<\/g>igas aŭ mal<g>grav<\/g>igas la esprimitajn ideojn;<\/k><\/ekz> \n<ekz><k> · la diferencon <\/k>[inter ili]<k> <g>grav<\/g>igas ne nur aparta parolo, sed konkura kredo.<\/k><\/ekz>\n➞ <a href=\"akcent.0i.KOMUNE\">akcenti<\/a>, <a href=\"star.el0igi\">elstarigi<\/a>, <a href=\"emfaz.0i.FIG\">emfazi<\/a>, <a href=\"fort.0igi\">plifortigi<\/a>"
       }
     },
     {
@@ -455,7 +455,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Eco de io grava: \n<ekzemplo> · al li tiuj figuroj ŝajnis […] havantaj la plej altan <g>grav<\/g>econ;<\/ekzemplo> \n<ekzemplo> · pompa parolado pri la <g>grav<\/g>eco de l' sciencoj;<\/ekzemplo> \n<ekzemplo> · tute specialan <g>grav<\/g>econ li atribuis al la historio;<\/ekzemplo> \n<ekzemplo> · tiu titolo donis al li <g>grav<\/g>econ, kiu kvazaŭ plifortigis lin en liaj altaj oficoj.<\/ekzemplo>"
+        "teksto" : "Eco de io grava: \n<ekz><k> · al li tiuj figuroj ŝajnis <\/k>[…]<k> havantaj la plej altan <g>grav<\/g>econ;<\/k><\/ekz> \n<ekz><k> · pompa parolado pri la <g>grav<\/g>eco de l' sciencoj;<\/k><\/ekz> \n<ekz><k> · tute specialan <g>grav<\/g>econ li atribuis al la historio;<\/k><\/ekz> \n<ekz><k> · tiu titolo donis al li <g>grav<\/g>econ, kiu kvazaŭ plifortigis lin en liaj altaj oficoj.<\/k><\/ekz>"
       }
     },
     {
@@ -591,7 +591,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Homo grava en iu socia medio pro distinga influo, decidpovo aŭ scio, alta posteno ks: \n<ekzemplo> · la negoco estis <g>grav<\/g>a kaj tre esperiga, la <g>grav<\/g>uloj interkonsiliĝis en la interna ĉambro;<\/ekzemplo> \n<ekzemplo> · multaj <g>grav<\/g>uloj, i.a. pluraj ministroj, venis ĉi tien;<\/ekzemplo> \n<ekzemplo> · <g>grav<\/g>uloj aŭ eminentuloj, ― preskaŭ ĉiam inter la aŭskultantoj troviĝas unu aŭ pluraj aparte <a href=\"star.el0a\">elstara<\/a>j personoj, kiuj ludas certan rolon en la urbo;<\/ekzemplo> \n<ekzemplo> · [iu] denuncis Patrikson kaj lin al iu <g>grav<\/g>ulo en la drogreto;<\/ekzemplo> \n<ekzemplo> · el <g>grav<\/g>uloj de la Esperanto-Movado kaj verkistoj, aperis […] Kalocsay kaj Baghy […], Grabowski kaj Kabe […], Hodler, […].<\/ekzemplo>\n⇒ <a href=\"distin.0ito\">distingito<\/a>, <a href=\"eminen1.0ulo\">eminentulo<\/a> ⇘ <a href=\"estr.0o\">estro<\/a>, <a href=\"kurato.0o.POL\">kuratoro<\/a>, <a href=\"mecena.0o\">mecenato<\/a>, <a href=\"patron.0o\">patrono<\/a>"
+        "teksto" : "Homo grava en iu socia medio pro distinga influo, decidpovo aŭ scio, alta posteno ks: \n<ekz><k> · la negoco estis <g>grav<\/g>a kaj tre esperiga, la <g>grav<\/g>uloj interkonsiliĝis en la interna ĉambro;<\/k><\/ekz> \n<ekz><k> · multaj <g>grav<\/g>uloj, i.a. pluraj ministroj, venis ĉi tien;<\/k><\/ekz> \n<ekz><k> · <g>grav<\/g>uloj aŭ eminentuloj, ― preskaŭ ĉiam inter la aŭskultantoj troviĝas unu aŭ pluraj aparte <a href=\"star.el0a\">elstara<\/a>j personoj, kiuj ludas certan rolon en la urbo;<\/k><\/ekz> \n<ekz><k> · <\/k>[iu]<k> denuncis Patrikson kaj lin al iu <g>grav<\/g>ulo en la drogreto;<\/k><\/ekz> \n<ekz><k> · el <g>grav<\/g>uloj de la Esperanto-Movado kaj verkistoj, aperis <\/k>[…]<k> Kalocsay kaj Baghy <\/k>[…]<k>, Grabowski kaj Kabe <\/k>[…]<k>, Hodler, <\/k>[…]<k>.<\/k><\/ekz>\n⇒ <a href=\"distin.0ito\">distingito<\/a>, <a href=\"eminen1.0ulo\">eminentulo<\/a> ⇘ <a href=\"estr.0o\">estro<\/a>, <a href=\"kurato.0o.POL\">kuratoro<\/a>, <a href=\"mecena.0o\">mecenato<\/a>, <a href=\"patron.0o\">patrono<\/a>"
       }
     },
     {
@@ -657,7 +657,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Bagatela, ne meritanta atenton: \n<ekzemplo> · ili fariĝis kiel herbo de kampo, kiel mal<g>grav<\/g>a verdaĵo;<\/ekzemplo> \n<ekzemplo> · trompi lin […] en mal<g>grav<\/g>aj aferoj;<\/ekzemplo> \n<ekzemplo> · li havas mienon, kvazaŭ lia trumpetado estas io <g>grav<\/g>a, sed ĝi estas tute mal<g>grav<\/g>a;<\/ekzemplo> \n<ekzemplo> · se mi eĉ havos la plej mal<g>grav<\/g>an pozicion, tamen se tio, kion mi faros, estos bona, ĝi ĉiam havos ian valoron;<\/ekzemplo> \n<ekzemplo> · malgranda, mal<g>grav<\/g>aspekta dometo.<\/ekzemplo>\n⇒ <a href=\"bagate.0a\">bagatela<\/a> ➞ <a href=\"banal.0a\">banala<\/a>"
+        "teksto" : "Bagatela, ne meritanta atenton: \n<ekz><k> · ili fariĝis kiel herbo de kampo, kiel mal<g>grav<\/g>a verdaĵo;<\/k><\/ekz> \n<ekz><k> · trompi lin <\/k>[…]<k> en mal<g>grav<\/g>aj aferoj;<\/k><\/ekz> \n<ekz><k> · li havas mienon, kvazaŭ lia trumpetado estas io <g>grav<\/g>a, sed ĝi estas tute mal<g>grav<\/g>a;<\/k><\/ekz> \n<ekz><k> · se mi eĉ havos la plej mal<g>grav<\/g>an pozicion, tamen se tio, kion mi faros, estos bona, ĝi ĉiam havos ian valoron;<\/k><\/ekz> \n<ekz><k> · malgranda, mal<g>grav<\/g>aspekta dometo.<\/k><\/ekz>\n⇒ <a href=\"bagate.0a\">bagatela<\/a> ➞ <a href=\"banal.0a\">banala<\/a>"
       }
     },
     {
@@ -793,7 +793,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Ne atentinda afero: \n<ekzemplo> · gloro, potenco – vanta fumo! mal<g>grav<\/g>aĵo!<\/ekzemplo> \n<ekzemplo> · la parolanto ne kapablas distingi mal<g>grav<\/g>aĵon de <g>grav<\/g>aĵo;<\/ekzemplo> \n<ekzemplo> · li rapide ekscitiĝas pro mal<g>grav<\/g>aĵoj.<\/ekzemplo>\n⇒ <a href=\"bagate.0o\">bagatelo<\/a>"
+        "teksto" : "Ne atentinda afero: \n<ekz><k> · gloro, potenco – vanta fumo! mal<g>grav<\/g>aĵo!<\/k><\/ekz> \n<ekz><k> · la parolanto ne kapablas distingi mal<g>grav<\/g>aĵon de <g>grav<\/g>aĵo;<\/k><\/ekz> \n<ekz><k> · li rapide ekscitiĝas pro mal<g>grav<\/g>aĵoj.<\/k><\/ekz>\n⇒ <a href=\"bagate.0o\">bagatelo<\/a>"
       }
     },
     {
@@ -908,7 +908,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "<k>tr<\/k>\nIgi malpli grava, rigardi, prezenti kiel ne tiom gravan: \n<ekzemplo> · tio ne estas menciita por mal<g>grav<\/g>igi [la] signifon;<\/ekzemplo> \n<ekzemplo> · la domvendisto, iom embarasita, provas mal<g>grav<\/g>igi la fenomenon: „vi sciu, oni aŭdas tiun bruon nur la unuajn du aŭ tri tagojn“;<\/ekzemplo> \n<ekzemplo> · li finis per supera gesto de mal<g>grav<\/g>igo;<\/ekzemplo> \n<ekzemplo> · la teknologia evoluo mal<g>grav<\/g>igas distancojn kaj oficialajn strukturojn.<\/ekzemplo>\n➞ <a href=\"bagate.0igi\">bagateligi<\/a>, <a href=\"redukt.0i.FIG\">redukti<\/a>, <a href=\"relati.0igi\">relativigi<\/a>, <a href=\"taks.sub0i\">subtaksi<\/a>"
+        "teksto" : "<k>tr<\/k>\nIgi malpli grava, rigardi, prezenti kiel ne tiom gravan: \n<ekz><k> · tio ne estas menciita por mal<g>grav<\/g>igi <\/k>[la]<k> signifon;<\/k><\/ekz> \n<ekz><k> · la domvendisto, iom embarasita, provas mal<g>grav<\/g>igi la fenomenon: „vi sciu, oni aŭdas tiun bruon nur la unuajn du aŭ tri tagojn“;<\/k><\/ekz> \n<ekz><k> · li finis per supera gesto de mal<g>grav<\/g>igo;<\/k><\/ekz> \n<ekz><k> · la teknologia evoluo mal<g>grav<\/g>igas distancojn kaj oficialajn strukturojn.<\/k><\/ekz>\n➞ <a href=\"bagate.0igi\">bagateligi<\/a>, <a href=\"redukt.0i.FIG\">redukti<\/a>, <a href=\"relati.0igi\">relativigi<\/a>, <a href=\"taks.sub0i\">subtaksi<\/a>"
       }
     },
     {
@@ -1002,7 +1002,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Fari malpli grava: \n<ekzemplo> · malpli<g>grav<\/g>igi sian kulpon per pento.<\/ekzemplo> \n<ekzemplo> · [la] ministro […] en masklisma maniero ne hezitis malpli<g>grav<\/g>igi la okazaĵon deklarante ke „nu, neniu mortis“;<\/ekzemplo> \n<ekzemplo> · estas malpermes[ita] vidigi aŭ porti religiajn signojn ene de registaraj konstruaĵoj aŭ lokoj, kie religio estas periferia aŭ malpli<g>grav<\/g>igita en la publika sfero.<\/ekzemplo>"
+        "teksto" : "Fari malpli grava: \n<ekz><k> · malpli<g>grav<\/g>igi sian kulpon per pento.<\/k><\/ekz> \n<ekz><k> · <\/k>[la]<k> ministro <\/k>[…]<k> en masklisma maniero ne hezitis malpli<g>grav<\/g>igi la okazaĵon deklarante ke „nu, neniu mortis“;<\/k><\/ekz> \n<ekz><k> · estas malpermes<\/k>[ita]<k> vidigi aŭ porti religiajn signojn ene de registaraj konstruaĵoj aŭ lokoj, kie religio estas periferia aŭ malpli<g>grav<\/g>igita en la publika sfero.<\/k><\/ekz>"
       }
     },
     {
@@ -1082,7 +1082,7 @@
     },
     {
       "teksta" : {
-        "teksto" : "Tre grava en ies vivo, por ies daŭra vivado: \n<ekzemplo> · la estraro de la banko ne konsideras la aferon viv<g>grav<\/g>a, eĉ se la banko pro tia malzorgemo devos ĉesigi sian funkcion;<\/ekzemplo> \n<ekzemplo> · li finfine laboris […] por trovi en tiu laboro iun kontentigan kaj vivo<g>grav<\/g>an;<\/ekzemplo> \n<ekzemplo> · li verkis bonegajn artikolojn pri la viv<g>grav<\/g>aj problemoj de la terlaboristoj.<\/ekzemplo>\n➞ <a href=\"esenc.0a\">esenca<\/a>"
+        "teksto" : "Tre grava en ies vivo, por ies daŭra vivado: \n<ekz><k> · la estraro de la banko ne konsideras la aferon viv<g>grav<\/g>a, eĉ se la banko pro tia malzorgemo devos ĉesigi sian funkcion;<\/k><\/ekz> \n<ekz><k> · li finfine laboris <\/k>[…]<k> por trovi en tiu laboro iun kontentigan kaj vivo<g>grav<\/g>an;<\/k><\/ekz> \n<ekz><k> · li verkis bonegajn artikolojn pri la viv<g>grav<\/g>aj problemoj de la terlaboristoj.<\/k><\/ekz>\n➞ <a href=\"esenc.0a\">esenca<\/a>"
       }
     },
     {

@@ -37,11 +37,11 @@ public enum TekstAtributo: CaseIterable, Equatable {
 		case .trastrekita:
 			"ts"
 		case .ekzemplo:
-			"ekzemplo"
+			"ekz"
 		case .rimarko:
-			"rimarko"
+			"rim"
 		case .sencNumero:
-			"sencNumero"
+			"snc"
 		}
 	}
 	
@@ -58,11 +58,11 @@ public enum TekstAtributo: CaseIterable, Equatable {
 			self = .suba
 		case "ts":
 			self = .trastrekita
-		case "ekzemplo":
+		case "ekz":
 			self = .ekzemplo
-		case "rimarko":
+		case "rim":
 			self = .rimarko
-		case "sencNumero":
+		case "snc":
 			self = .sencNumero
 		default:
 			return nil
@@ -106,6 +106,11 @@ public enum TekstAtributo: CaseIterable, Equatable {
 	/// Liveras novan ĉenon volvinte la tekston per la etikedoj de tiu atributo
 	public static func volvi(_ teksto: String, per atributo: TekstAtributo) -> String {
 		return atributo.malfermaEtikedo + teksto + atributo.fermaEtikedo
+	}
+	
+	/// Liveras novan ĉenon inverse volvinte la tekston per la etikedoj de tiu atributo
+	public static func malvolvi(_ teksto: String, per atributo: TekstAtributo) -> String {
+		return atributo.fermaEtikedo + teksto + atributo.malfermaEtikedo
 	}
 	
 	// MARK: - Aliaj helpiloj
