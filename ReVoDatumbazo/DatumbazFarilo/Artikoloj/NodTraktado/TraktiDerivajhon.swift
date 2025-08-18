@@ -54,14 +54,22 @@ extension ArboAnalizilo {
 			case .snc(let mrk):
 				let filTeksto = trakti(sencon: filo, marko: mrk, stato: stato)
 				
-				// TODO: provi ke 'chiamDu' estu 'true' se la lasta sibo estas <dif>
+				// TODO: Eble unuigi kun sama kodaĵo en trakti(subartikolon:...)
 				if sencKvanto > 1,
 				   let sencNumero = stato.lastaSenco {
-					let etikedo = sencEtikedo(numero: sencNumero, freshaLinio: akumulilo.freshaLinio(), stato: stato)
+					
+					let lastaSibo = stato.sibStako.last
+					let sekvasDifino = { switch lastaSibo { case .dif: return true; default: return false; } }()
+					let etikedo = sencEtikedo(
+						numero: sencNumero,
+						freshaLinio: akumulilo.freshaLinio(),
+						chiamDu: sekvasDifino,
+						stato: stato
+					)
 					akumulilo.aldoni(tekston: etikedo)
 				}
 				
-				akumulilo.aldoni(tekston:  filTeksto)
+				akumulilo.aldoni(tekston: filTeksto)
 			case .subdrv:
 				let filTeksto = trakti(subderivajhon: filo, stato: stato)
 				
