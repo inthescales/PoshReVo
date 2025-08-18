@@ -264,7 +264,7 @@ final class LingvoBretoViewController: UIViewController {
 			let butono = fariLingvoButonon(
 				indekso: i,
 				teksto: lingvo.nomo,
-				aktiva: elektita.kodo == lingvo.kodo
+				aktiva: elektita == lingvo
 			)
 			lingvoStaplo.addArrangedSubview(butono)
 		}
@@ -292,7 +292,7 @@ final class LingvoBretoViewController: UIViewController {
 	) -> UIButton {
 		let butono = UIButton()
 		butono.metiDinamikanTitolon(teksto, tiparo: Tiparo.lingvoBreto)
-		let koloro = (aktiva) ? aktivaKoloro : malaktivaKoloro // TODO: Lingva egaleco
+		let koloro = (aktiva) ? aktivaKoloro : malaktivaKoloro
 		butono.setTitleColor(koloro, for: .normal)
 		butono.addTarget(self, action: #selector(premisLingvon(sender:)), for: .touchUpInside)
 		butono.tag = indekso

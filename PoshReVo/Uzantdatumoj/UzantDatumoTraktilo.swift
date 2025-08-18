@@ -87,8 +87,6 @@ final class UserDefaultsUzantDatumoTraktilo: UzantDatumoTraktilo {
 	
 	// MARK: - Legado de individuaj versioj
 	
-	// TODO: Konstati ĉu eblos legi datumojn se la enhavoj de klaso 'UzantDatumaro' ŝanĝiĝis
-	
 	/// Malkodi datumojn de versio 2.0
 	private func malkodiDatumaron_v2_0(datumoj: Data, malkodigilo: JSONDecoder) -> UzantDatumaro? {
 		try? malkodigilo.decode(UzantDatumaro.self, from: datumoj)
