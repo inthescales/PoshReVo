@@ -1,0 +1,272 @@
+{
+  "cs" : [
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "serchTeksto" : "dělat \"něco\"",
+      "videblaTeksto" : "dělat \"něco\""
+    }
+  ],
+  "de" : [
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "serchTeksto" : "be-",
+      "videblaTeksto" : "be-"
+    },
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "serchTeksto" : "um-",
+      "videblaTeksto" : "um-"
+    },
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "senco" : 1,
+      "serchTeksto" : "rummachen",
+      "videblaTeksto" : "rummachen"
+    },
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "senco" : 1,
+      "serchTeksto" : "dingsen",
+      "videblaTeksto" : "dingsen"
+    },
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "senco" : 1,
+      "serchTeksto" : "herumlungern",
+      "videblaTeksto" : "herumlungern"
+    },
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "senco" : 1,
+      "serchTeksto" : "werkeln",
+      "videblaTeksto" : "werkeln"
+    },
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "senco" : 1,
+      "serchTeksto" : "abhängen",
+      "videblaTeksto" : "abhängen"
+    },
+    {
+      "esperantaNomo" : "umilo",
+      "indekso" : "um",
+      "marko" : "um.0ilo",
+      "senco" : 1,
+      "serchTeksto" : "Schnickschnack",
+      "videblaTeksto" : "Schnickschnack"
+    },
+    {
+      "esperantaNomo" : "umilo",
+      "indekso" : "um",
+      "marko" : "um.0ilo",
+      "senco" : 1,
+      "serchTeksto" : "Gadget",
+      "videblaTeksto" : "Gadget"
+    },
+    {
+      "esperantaNomo" : "umilo",
+      "indekso" : "um",
+      "marko" : "um.0ilo",
+      "senco" : 1,
+      "serchTeksto" : "Dingsbums",
+      "videblaTeksto" : "Dingsbums"
+    }
+  ],
+  "es" : [
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "serchTeksto" : "trastear",
+      "videblaTeksto" : "trastear"
+    },
+    {
+      "esperantaNomo" : "umilo",
+      "indekso" : "um",
+      "marko" : "um.0ilo",
+      "serchTeksto" : "chisme",
+      "videblaTeksto" : "chisme"
+    }
+  ],
+  "fr" : [
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "serchTeksto" : "farfouiller",
+      "videblaTeksto" : "farfouiller"
+    },
+    {
+      "esperantaNomo" : "umilo",
+      "indekso" : "um",
+      "marko" : "um.0ilo",
+      "serchTeksto" : "gadget",
+      "videblaTeksto" : "gadget"
+    },
+    {
+      "esperantaNomo" : "umilo",
+      "indekso" : "um",
+      "marko" : "um.0ilo",
+      "serchTeksto" : "truc",
+      "videblaTeksto" : "truc"
+    }
+  ],
+  "hu" : [
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 1,
+      "serchTeksto" : "izé",
+      "videblaTeksto" : "-izé (határozatlan jelentésű képző)"
+    },
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 1,
+      "serchTeksto" : "izél",
+      "videblaTeksto" : "-izél (határozatlan jelentésű képző)"
+    },
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 2,
+      "serchTeksto" : "es",
+      "videblaTeksto" : "-es (számrendszerképző)"
+    },
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 2,
+      "serchTeksto" : "as",
+      "videblaTeksto" : "-as (számrendszerképző)"
+    },
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 2,
+      "serchTeksto" : "os",
+      "videblaTeksto" : "-os (számrendszerképző)"
+    },
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 2,
+      "serchTeksto" : "ális",
+      "videblaTeksto" : "-ális (számrendszerképző)"
+    },
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 2,
+      "serchTeksto" : "alapú",
+      "videblaTeksto" : "… alapú (logaritmus)"
+    }
+  ],
+  "ja" : [
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "serchTeksto" : "あれこれする",
+      "videblaTeksto" : "あれこれする"
+    }
+  ],
+  "pl" : [
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "serchTeksto" : "przyrostek uniwersalny bez określonego znaczenia",
+      "videblaTeksto" : "przyrostek uniwersalny bez określonego znaczenia"
+    },
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "serchTeksto" : "ogarnąć",
+      "videblaTeksto" : "ogarnąć"
+    },
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "serchTeksto" : "gmerać",
+      "videblaTeksto" : "gmerać"
+    },
+    {
+      "esperantaNomo" : "umilo",
+      "indekso" : "um",
+      "marko" : "um.0ilo",
+      "serchTeksto" : "gadżet",
+      "videblaTeksto" : "gadżet"
+    }
+  ],
+  "ru" : [
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 2,
+      "serchTeksto" : "ичный",
+      "videblaTeksto" : "-ичный (двоичный, десятичный)"
+    },
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 2,
+      "serchTeksto" : "еричный",
+      "videblaTeksto" : "-еричный"
+    }
+  ],
+  "sgn" : [
+    {
+      "esperantaNomo" : "-um",
+      "indekso" : "um",
+      "marko" : "um.0",
+      "serchTeksto" : "m@14",
+      "videblaTeksto" : "m@14"
+    }
+  ],
+  "sk" : [
+    {
+      "esperantaNomo" : "umi",
+      "indekso" : "um",
+      "marko" : "um.0i",
+      "serchTeksto" : "robiť \"niečo\"",
+      "videblaTeksto" : "robiť \"niečo\""
+    }
+  ],
+  "zh" : [
+    {
+      "esperantaNomo" : "umilo",
+      "indekso" : "um",
+      "marko" : "um.0ilo",
+      "serchTeksto" : "玩意",
+      "videblaTeksto" : "玩意"
+    }
+  ]
+}

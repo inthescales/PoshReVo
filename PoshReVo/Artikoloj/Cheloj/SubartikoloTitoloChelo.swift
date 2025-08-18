@@ -36,7 +36,7 @@ final class SubartikoloTitoloChelo: UITableViewCell {
 		margheno: CGFloat,
 		stilo: InterfacStilo
 	) {
-		etikedo.text = teksto + "."
+		etikedo.text = teksto
 		etikedo.textColor = stilo.dokumentaTeksto
 		
 		etikedo.snp.remakeConstraints { make in

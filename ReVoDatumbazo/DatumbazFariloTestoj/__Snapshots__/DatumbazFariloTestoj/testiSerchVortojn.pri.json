@@ -1,0 +1,17 @@
+[
+  {
+    "indekso" : "pri",
+    "marko" : "pri.0",
+    "teksto" : "pri"
+  },
+  {
+    "indekso" : "pri",
+    "marko" : "pri.0a",
+    "teksto" : "pria"
+  },
+  {
+    "indekso" : "pri",
+    "marko" : "pri.0i",
+    "teksto" : "prii"
+  }
+]

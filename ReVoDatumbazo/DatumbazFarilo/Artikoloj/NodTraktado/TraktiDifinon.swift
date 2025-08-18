@@ -57,7 +57,14 @@ extension ArboAnalizilo {
 			case .sup:
 				teksto += trakti(altigitan: filo, stato: stato)
 			case .teksto(let filTeksto):
-				teksto += filTeksto.prepari()
+				// Foje plia teksto sekvas ekzemplojn
+				// vd. -um(1)
+				// TODO: Eble iel ĝeneraligi?
+				if !filTeksto.tondi().isEmpty && stato.sibStako.last == .ekz {
+					teksto = teksto + "\n" + filTeksto.tondi().prepari()
+				} else {
+					teksto += filTeksto.prepari()
+				}
 			case .tld(let lit, let vari):
 				teksto += traktiTildon(stato: stato, litero: lit, variajho: vari)
 			case .trd(let lng):

@@ -1,0 +1,34 @@
+{
+  "KOMP" : [
+    {
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 2,
+      "teksto" : "-um"
+    }
+  ],
+  "LIN" : [
+    {
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 1,
+      "teksto" : "-um"
+    }
+  ],
+  "MAT" : [
+    {
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 2,
+      "teksto" : "-um"
+    }
+  ],
+  "TEKS" : [
+    {
+      "indekso" : "um",
+      "marko" : "um.0",
+      "senco" : 1,
+      "teksto" : "-um"
+    }
+  ]
+}

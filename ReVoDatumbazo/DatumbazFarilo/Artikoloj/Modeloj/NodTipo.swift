@@ -1,6 +1,6 @@
 /// Tipo de elemento en artikola dokument-strukturo.
 /// Vidu priskribon de dokument-strukturo: https://revuloj.github.io/temoj/rnc
-enum NodTipo {
+enum NodTipo: Equatable {
 	case adm
 	case arbo
 	case art(mrk: String)

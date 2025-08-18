@@ -1,0 +1,1048 @@
+{
+  "af" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "oor",
+      "videblaTeksto" : "oor"
+    }
+  ],
+  "am" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ስለ",
+      "videblaTeksto" : "ስለ"
+    }
+  ],
+  "ar" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "حول",
+      "videblaTeksto" : "حول"
+    }
+  ],
+  "az" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "haqqında",
+      "videblaTeksto" : "haqqında"
+    }
+  ],
+  "be" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "аб",
+      "videblaTeksto" : "аб"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "аба",
+      "videblaTeksto" : "аба"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "пра",
+      "videblaTeksto" : "пра"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "наконт",
+      "videblaTeksto" : "наконт"
+    },
+    {
+      "esperantaNomo" : "pria",
+      "indekso" : "pri",
+      "marko" : "pri.0a",
+      "serchTeksto" : "датычны",
+      "videblaTeksto" : "датычны"
+    },
+    {
+      "esperantaNomo" : "pria",
+      "indekso" : "pri",
+      "marko" : "pri.0a",
+      "serchTeksto" : "зьвязаны",
+      "videblaTeksto" : "зьвязаны (напр. з тэмай)"
+    },
+    {
+      "esperantaNomo" : "pria",
+      "indekso" : "pri",
+      "marko" : "pri.0a",
+      "serchTeksto" : "адпаведны",
+      "videblaTeksto" : "адпаведны"
+    },
+    {
+      "esperantaNomo" : "prii",
+      "indekso" : "pri",
+      "marko" : "pri.0i",
+      "serchTeksto" : "датычыць",
+      "videblaTeksto" : "датычыць"
+    },
+    {
+      "esperantaNomo" : "prii",
+      "indekso" : "pri",
+      "marko" : "pri.0i",
+      "serchTeksto" : "датычыцца",
+      "videblaTeksto" : "датычыцца"
+    }
+  ],
+  "bn" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "সম্পর্কে",
+      "videblaTeksto" : "সম্পর্কে"
+    }
+  ],
+  "bs" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "oko",
+      "videblaTeksto" : "oko"
+    }
+  ],
+  "co" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "circa",
+      "videblaTeksto" : "circa"
+    }
+  ],
+  "cs" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "o",
+      "videblaTeksto" : "o"
+    }
+  ],
+  "cy" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "tua",
+      "videblaTeksto" : "tua"
+    }
+  ],
+  "da" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "om",
+      "videblaTeksto" : "om"
+    }
+  ],
+  "de" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "senco" : 1,
+      "serchTeksto" : "über",
+      "videblaTeksto" : "über"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "senco" : 1,
+      "serchTeksto" : "an",
+      "videblaTeksto" : "an"
+    }
+  ],
+  "es" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "sobre",
+      "videblaTeksto" : "sobre (respecto de)"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "relativo a",
+      "videblaTeksto" : "relativo a"
+    }
+  ],
+  "et" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "umbes",
+      "videblaTeksto" : "umbes"
+    }
+  ],
+  "eu" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "buruz",
+      "videblaTeksto" : "buruz"
+    }
+  ],
+  "fr" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "sujet",
+      "videblaTeksto" : "au sujet de"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "propos",
+      "videblaTeksto" : "à propos de"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "sur",
+      "videblaTeksto" : "sur(au sujet de)"
+    }
+  ],
+  "fy" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "oer",
+      "videblaTeksto" : "oer"
+    }
+  ],
+  "ga" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "faoi",
+      "videblaTeksto" : "faoi"
+    }
+  ],
+  "gd" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "mu dheidhinn",
+      "videblaTeksto" : "mu dheidhinn"
+    }
+  ],
+  "gl" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "sobre",
+      "videblaTeksto" : "sobre"
+    }
+  ],
+  "gu" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "વિશે",
+      "videblaTeksto" : "વિશે"
+    }
+  ],
+  "ha" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "game da",
+      "videblaTeksto" : "game da"
+    }
+  ],
+  "hi" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "के बारे में",
+      "videblaTeksto" : "के बारे में"
+    }
+  ],
+  "hmn" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "txog",
+      "videblaTeksto" : "txog"
+    }
+  ],
+  "hr" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "oko",
+      "videblaTeksto" : "oko"
+    }
+  ],
+  "ht" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "sou",
+      "videblaTeksto" : "sou"
+    }
+  ],
+  "hu" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ról",
+      "videblaTeksto" : "-ról (képes helyhatározó)"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ről",
+      "videblaTeksto" : "-ről (képes helyhatározó)"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "illetően",
+      "videblaTeksto" : "-tilletően"
+    }
+  ],
+  "hy" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "մոտ",
+      "videblaTeksto" : "մոտ"
+    }
+  ],
+  "id" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "tentang",
+      "videblaTeksto" : "tentang"
+    }
+  ],
+  "ig" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "banyere",
+      "videblaTeksto" : "banyere"
+    }
+  ],
+  "is" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "um",
+      "videblaTeksto" : "um"
+    }
+  ],
+  "ja" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "約",
+      "videblaTeksto" : "約"
+    }
+  ],
+  "jv" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "babagan",
+      "videblaTeksto" : "babagan"
+    }
+  ],
+  "ka" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "შესახებ",
+      "videblaTeksto" : "შესახებ"
+    }
+  ],
+  "kk" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "туралы",
+      "videblaTeksto" : "туралы"
+    }
+  ],
+  "km" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "អំពី",
+      "videblaTeksto" : "អំពី"
+    }
+  ],
+  "kn" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ಬಗ್ಗೆ",
+      "videblaTeksto" : "ಬಗ್ಗೆ"
+    }
+  ],
+  "ko" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "에 대한",
+      "videblaTeksto" : "에 대한"
+    }
+  ],
+  "ku" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ji dor",
+      "videblaTeksto" : "ji dor"
+    }
+  ],
+  "ky" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "жөнүндө",
+      "videblaTeksto" : "жөнүндө"
+    }
+  ],
+  "lat" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "de",
+      "videblaTeksto" : "de"
+    }
+  ],
+  "lo" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ກ່ຽວກັບ",
+      "videblaTeksto" : "ກ່ຽວກັບ"
+    }
+  ],
+  "lt" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "apie",
+      "videblaTeksto" : "apie"
+    }
+  ],
+  "lv" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "par",
+      "videblaTeksto" : "par"
+    }
+  ],
+  "mg" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ny",
+      "videblaTeksto" : "ny"
+    }
+  ],
+  "mi" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "e pā ana ki",
+      "videblaTeksto" : "e pā ana ki"
+    }
+  ],
+  "mk" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "за",
+      "videblaTeksto" : "за"
+    }
+  ],
+  "ml" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "കുറിച്ച്",
+      "videblaTeksto" : "കുറിച്ച്"
+    }
+  ],
+  "mn" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "тухай",
+      "videblaTeksto" : "тухай"
+    }
+  ],
+  "mr" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "बद्दल",
+      "videblaTeksto" : "बद्दल"
+    }
+  ],
+  "ms" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "mengenai",
+      "videblaTeksto" : "mengenai"
+    }
+  ],
+  "mt" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "dwar",
+      "videblaTeksto" : "dwar"
+    }
+  ],
+  "my" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "အကွောငျး",
+      "videblaTeksto" : "အကွောငျး"
+    }
+  ],
+  "ne" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "बारेमा",
+      "videblaTeksto" : "बारेमा"
+    }
+  ],
+  "nl" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "over",
+      "videblaTeksto" : "over"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "aangaande",
+      "videblaTeksto" : "aangaande"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "betreffende",
+      "videblaTeksto" : "betreffende"
+    }
+  ],
+  "ny" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "za",
+      "videblaTeksto" : "za"
+    }
+  ],
+  "pa" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ਬਾਰੇ",
+      "videblaTeksto" : "ਬਾਰੇ"
+    }
+  ],
+  "pl" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "o",
+      "videblaTeksto" : "o"
+    },
+    {
+      "esperantaNomo" : "pria",
+      "indekso" : "pri",
+      "marko" : "pri.0a",
+      "serchTeksto" : "w temacie",
+      "videblaTeksto" : "w temacie"
+    },
+    {
+      "esperantaNomo" : "pria",
+      "indekso" : "pri",
+      "marko" : "pri.0a",
+      "serchTeksto" : "w związku z",
+      "videblaTeksto" : "w związku z"
+    },
+    {
+      "esperantaNomo" : "prii",
+      "indekso" : "pri",
+      "marko" : "pri.0i",
+      "serchTeksto" : "dotyczyć",
+      "videblaTeksto" : "dotyczyć"
+    },
+    {
+      "esperantaNomo" : "prii",
+      "indekso" : "pri",
+      "marko" : "pri.0i",
+      "serchTeksto" : "odnosić się",
+      "videblaTeksto" : "odnosić się"
+    }
+  ],
+  "ps" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "په اړه",
+      "videblaTeksto" : "په اړه"
+    }
+  ],
+  "pt" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "sobre",
+      "videblaTeksto" : "sobre (a respeito de)"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "respeito",
+      "videblaTeksto" : "a respeito de"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "acerca de",
+      "videblaTeksto" : "acerca de"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "quanto a",
+      "videblaTeksto" : "quanto a"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "de",
+      "videblaTeksto" : "de (a respeito de)"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "em",
+      "videblaTeksto" : "em (a respeito de)"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "com",
+      "videblaTeksto" : "com (a respeito de)"
+    }
+  ],
+  "ru" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "о",
+      "videblaTeksto" : "о"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "об",
+      "videblaTeksto" : "об"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "про",
+      "videblaTeksto" : "про"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "насчёт",
+      "videblaTeksto" : "насчёт"
+    },
+    {
+      "esperantaNomo" : "pria",
+      "indekso" : "pri",
+      "marko" : "pri.0a",
+      "serchTeksto" : "по данной теме",
+      "videblaTeksto" : "по данной теме"
+    },
+    {
+      "esperantaNomo" : "pria",
+      "indekso" : "pri",
+      "marko" : "pri.0a",
+      "serchTeksto" : "в этой связи",
+      "videblaTeksto" : "в этой связи"
+    },
+    {
+      "esperantaNomo" : "prii",
+      "indekso" : "pri",
+      "marko" : "pri.0i",
+      "serchTeksto" : "касаться",
+      "videblaTeksto" : "касаться"
+    },
+    {
+      "esperantaNomo" : "prii",
+      "indekso" : "pri",
+      "marko" : "pri.0i",
+      "serchTeksto" : "относиться",
+      "videblaTeksto" : "относиться"
+    }
+  ],
+  "rw" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "hafi",
+      "videblaTeksto" : "hafi"
+    }
+  ],
+  "sd" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "جي باري ۾",
+      "videblaTeksto" : "جي باري ۾"
+    }
+  ],
+  "si" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ගැන",
+      "videblaTeksto" : "ගැන"
+    }
+  ],
+  "sl" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "o",
+      "videblaTeksto" : "o"
+    }
+  ],
+  "sm" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "e uiga i",
+      "videblaTeksto" : "e uiga i"
+    }
+  ],
+  "sn" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "pamusoro",
+      "videblaTeksto" : "pamusoro"
+    }
+  ],
+  "so" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ku saabsan",
+      "videblaTeksto" : "ku saabsan"
+    }
+  ],
+  "sq" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "për",
+      "videblaTeksto" : "për"
+    }
+  ],
+  "st" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "ka",
+      "videblaTeksto" : "ka"
+    }
+  ],
+  "su" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "kira-kira",
+      "videblaTeksto" : "kira-kira"
+    }
+  ],
+  "sw" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "kuhusu",
+      "videblaTeksto" : "kuhusu"
+    }
+  ],
+  "ta" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "பற்றி",
+      "videblaTeksto" : "பற்றி"
+    }
+  ],
+  "te" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "గురించి",
+      "videblaTeksto" : "గురించి"
+    }
+  ],
+  "tg" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "дар бораи",
+      "videblaTeksto" : "дар бораи"
+    }
+  ],
+  "th" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "เกี่ยวกับ",
+      "videblaTeksto" : "เกี่ยวกับ"
+    }
+  ],
+  "tl" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "tungkol sa",
+      "videblaTeksto" : "tungkol sa"
+    }
+  ],
+  "tt" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "турында",
+      "videblaTeksto" : "турында"
+    }
+  ],
+  "uk" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "про це",
+      "videblaTeksto" : "про це"
+    }
+  ],
+  "ur" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "کے بارے میں",
+      "videblaTeksto" : "کے بارے میں"
+    }
+  ],
+  "uz" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "atrofida",
+      "videblaTeksto" : "atrofida"
+    }
+  ],
+  "vi" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "về",
+      "videblaTeksto" : "về"
+    }
+  ],
+  "vo" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "dö",
+      "videblaTeksto" : "dö"
+    }
+  ],
+  "xh" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "malunga",
+      "videblaTeksto" : "malunga"
+    }
+  ],
+  "yi" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "וועגן",
+      "videblaTeksto" : "וועגן"
+    }
+  ],
+  "yo" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "nipa",
+      "videblaTeksto" : "nipa"
+    }
+  ],
+  "zh" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "关于",
+      "videblaTeksto" : "关于"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "關於",
+      "videblaTeksto" : "關於"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "对于",
+      "videblaTeksto" : "对于"
+    },
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "對於",
+      "videblaTeksto" : "對於"
+    }
+  ],
+  "zu" : [
+    {
+      "esperantaNomo" : "pri",
+      "indekso" : "pri",
+      "marko" : "pri.0",
+      "serchTeksto" : "mayelana",
+      "videblaTeksto" : "mayelana"
+    }
+  ]
+}

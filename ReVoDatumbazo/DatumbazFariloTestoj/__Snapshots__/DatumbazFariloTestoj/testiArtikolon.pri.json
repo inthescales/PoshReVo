@@ -1,0 +1,743 @@
+{
+  "blokoj" : [
+    {
+      "dividila" : {
+        "teksto" : "I."
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "pri.0",
+        "ofc" : "*",
+        "teksto" : "pri"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Prepozicio signifanta „<a href=\"koncer.0eal\">koncerne al<\/a>“, „<a href=\"rilat.0eal\">rilate al<\/a>“, „teme de“ kaj uzata:\n\n<snc>1. <\/snc>Post verbo, por montri la objekton, okaze de kiu fariĝas la ago: \n<ekz><k> · li pensis nur <g>pri<\/g> la mirinde bela reĝidino;<\/k><\/ekz> \n<ekz><k> · memori <g>pri<\/g> mezuro en laboro kaj plezuro;<\/k><\/ekz> \n<ekz><k> · rememorigi <g>pri<\/g> miaj pekoj;<\/k><\/ekz> \n<ekz><k> · paroli <g>pri<\/g> multaj aferoj;<\/k><\/ekz> \n<ekz><k> · kredi <g>pri<\/g> prospero;<\/k><\/ekz> \n<ekz><k> · kredi <g>pri<\/g> kaprica hazardo;<\/k><\/ekz> \n<ekz><k> · dubi <g>pri<\/g> la bona volo kaj intenco;<\/k><\/ekz> \n<ekz><k> · dubi <g>pri<\/g> tia ebleco;<\/k><\/ekz> \n<ekz><k> · aspiri <g>pri<\/g> edziĝo kun ŝi;<\/k><\/ekz> \n<ekz><k> · albana popolo de Kosovo, sopiranta <g>pri<\/g> propra ŝtato;<\/k><\/ekz> \n<ekz><k> · funebri <g>pri<\/g> Sara kaj plori <g>pri<\/g> ŝi;<\/k><\/ekz> \n<ekz><k> · zorgi <g>pri<\/g> la pano;<\/k><\/ekz> \n<ekz><k> · ĵuri <g>pri<\/g> ili;<\/k><\/ekz> \n<ekz><k> · trompi iun <g>pri<\/g> io;<\/k><\/ekz> \n<ekz><k> · kunlabori <g>pri<\/g> la sukceso de;<\/k><\/ekz> \n<ekz><k> · <\/k>[li]<k> rakontis al li <g>pri<\/g> la apero de la pastro;<\/k><\/ekz> \n<ekz><k> · vi aŭdis jam <g>pri<\/g> la metamorfozo de l' reĝido;<\/k><\/ekz> \n<ekz><k> · sed <g>pri<\/g> ŝia fratino, mi povas diri, ke <\/k>[…]<k>.<\/k><\/ekz>\n➞ <a href=\"je.0\">je<\/a>, <a href=\"pro.0\">pro<\/a>.\n\n<snc>2. <\/snc>Post adjektivo, por montri la kaŭzon aŭ okazon de la sento aŭ animstato: \n<ekz><k> · mi estas kontenta <g>pri<\/g> ĉaro da <\/k>[…]<k>;<\/k><\/ekz> \n<ekz><k> · <\/k>[li]<k> esprimis sin tre kontenta <g>pri<\/g> sia laboro;<\/k><\/ekz> \n<ekz><k> · mi estas malkontenta <g>pri<\/g> tia indiferenteco;<\/k><\/ekz> \n<ekz><k> · mi estas certa <g>pri<\/g> tio, kion mi diras;<\/k><\/ekz> \n<ekz><k> · la malnova jaro nun forpasis, mi ankaŭ estis tre ĝoja pri tio;<\/k><\/ekz> \n<ekz><k> · konscia <g>pri<\/g> la problemo;<\/k><\/ekz> \n<ekz><k> · konscia <g>pri<\/g> la danĝero;<\/k><\/ekz> \n<ekz><k> · <g>pri<\/g> havo najbara oni estas malavara.<\/k><\/ekz>\n➞ <a href=\"pro.0\">pro<\/a>, <a href=\"de\">de<\/a>.\n\n<snc>3. <\/snc>Post substantivo, por montri la temon koncernatan de la ideo: \n<ekz><k> · atesto <g>pri<\/g> la naskiĝo;<\/k><\/ekz> \n<ekz><k> · profesoro <g>pri<\/g> matematika logiko;<\/k><\/ekz> \n<ekz><k> · la problemo <g>pri<\/g> la rilatoj inter ŝtato kaj eklezio;<\/k><\/ekz> \n<ekz><k> · raporto <g>pri<\/g> la lando;<\/k><\/ekz> \n<ekz><k> · la demando <g>pri<\/g> lingvo internacia;<\/k><\/ekz> \n<ekz><k> · la deklaracio <g>pri<\/g> homaj rajtoj eldonita en 1948;<\/k><\/ekz> \n<ekz><k> · komisiono <g>pri<\/g> mediprotektado;<\/k><\/ekz> \n<ekz><k> · popola rajto <g>pri<\/g> memdecido;<\/k><\/ekz> \n<ekz><k> · traktato <g>pri<\/g> amikeco inter du ŝtatoj;<\/k><\/ekz> \n<ekz><k> · la internacia traktato <g>pri<\/g> protekto de intelektaj propraĵoj;<\/k><\/ekz> \n<ekz><k> · la ideo <g>pri<\/g> internacia kultura interŝanĝo ekestis en 1997 en la urbo Brno;<\/k><\/ekz> \n<ekz><k> · la ideo <g>pri<\/g> nacieco facile povas tiel etendiĝi, ke ĝi fariĝos afektaĵo;<\/k><\/ekz> \n<ekz><k> · la legendo <g>pri<\/g> la belulino Zobeido;<\/k><\/ekz> \n<ekz><k> · mi havis la senton <g>pri<\/g> io falanta;<\/k><\/ekz> \n<ekz><k> · <g>pri<\/g> la lupo rakonto kaj la lupo renkonte;<\/k><\/ekz> \n<ekz><k> · la modo <g>pri<\/g> tio pasis jam de longe.<\/k><\/ekz>\n➞ <a href=\"al\">al<\/a>, <a href=\"de\">de<\/a>."
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "af",
+              "nomo" : "afrikansa"
+            },
+            "teksto" : "oor"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sq",
+              "nomo" : "albana"
+            },
+            "teksto" : "për"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "am",
+              "nomo" : "amhara"
+            },
+            "teksto" : "ስለ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ar",
+              "nomo" : "araba"
+            },
+            "teksto" : "حول"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hy",
+              "nomo" : "armena"
+            },
+            "teksto" : "մոտ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "az",
+              "nomo" : "azerbajĝana"
+            },
+            "teksto" : "haqqında"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "аб, аба, пра, наконт"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "bn",
+              "nomo" : "bengala"
+            },
+            "teksto" : "সম্পর্কে"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "my",
+              "nomo" : "birma"
+            },
+            "teksto" : "အကွောငျး"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "bs",
+              "nomo" : "bosna"
+            },
+            "teksto" : "oko"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cs",
+              "nomo" : "ĉeĥa"
+            },
+            "teksto" : "o"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zh",
+              "nomo" : "ĉina"
+            },
+            "teksto" : "关于 [guānyú], 關於 [guānyú], 对于 [duìyú], 對於 [duìyú]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "da",
+              "nomo" : "dana"
+            },
+            "teksto" : "om"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "et",
+              "nomo" : "estona"
+            },
+            "teksto" : "umbes"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "eu",
+              "nomo" : "eŭska"
+            },
+            "teksto" : "buruz"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tl",
+              "nomo" : "filipina"
+            },
+            "teksto" : "tungkol sa"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fr",
+              "nomo" : "franca"
+            },
+            "teksto" : "au sujet de, à propos de, sur(au sujet de)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "gl",
+              "nomo" : "galega"
+            },
+            "teksto" : "sobre"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "de",
+              "nomo" : "germana"
+            },
+            "teksto" : "über, an"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "gu",
+              "nomo" : "guĝarata"
+            },
+            "teksto" : "વિશે"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ht",
+              "nomo" : "haitia"
+            },
+            "teksto" : "sou"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ha",
+              "nomo" : "haŭsa"
+            },
+            "teksto" : "game da"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hi",
+              "nomo" : "hinda"
+            },
+            "teksto" : "के बारे में"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "es",
+              "nomo" : "hispana"
+            },
+            "teksto" : "sobre (respecto de), relativo a"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hu",
+              "nomo" : "hungara"
+            },
+            "teksto" : "-ról (képes helyhatározó), -ről (képes helyhatározó), -tilletően"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ig",
+              "nomo" : "igba"
+            },
+            "teksto" : "banyere"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "id",
+              "nomo" : "indonezia"
+            },
+            "teksto" : "tentang"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ga",
+              "nomo" : "irlanda"
+            },
+            "teksto" : "faoi"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "is",
+              "nomo" : "islanda"
+            },
+            "teksto" : "um"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ja",
+              "nomo" : "japana"
+            },
+            "teksto" : "約 [やく]"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "jv",
+              "nomo" : "java"
+            },
+            "teksto" : "babagan"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "yi",
+              "nomo" : "jida"
+            },
+            "teksto" : "וועגן"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "yo",
+              "nomo" : "joruba"
+            },
+            "teksto" : "nipa"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "kn",
+              "nomo" : "kanara"
+            },
+            "teksto" : "ಬಗ್ಗೆ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ka",
+              "nomo" : "kartvela"
+            },
+            "teksto" : "შესახებ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "kk",
+              "nomo" : "kazaĥa"
+            },
+            "teksto" : "туралы"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "cy",
+              "nomo" : "kimra"
+            },
+            "teksto" : "tua"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ky",
+              "nomo" : "kirgiza"
+            },
+            "teksto" : "жөнүндө"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "km",
+              "nomo" : "kmera"
+            },
+            "teksto" : "អំពី"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ko",
+              "nomo" : "korea"
+            },
+            "teksto" : "에 대한"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "co",
+              "nomo" : "korsika"
+            },
+            "teksto" : "circa"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "xh",
+              "nomo" : "kosa"
+            },
+            "teksto" : "malunga"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hr",
+              "nomo" : "kroata"
+            },
+            "teksto" : "oko"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ku",
+              "nomo" : "kurda"
+            },
+            "teksto" : "ji dor"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "lat",
+              "nomo" : "latina"
+            },
+            "teksto" : "de"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "lv",
+              "nomo" : "latva"
+            },
+            "teksto" : "par"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "lo",
+              "nomo" : "laŭa"
+            },
+            "teksto" : "ກ່ຽວກັບ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "lt",
+              "nomo" : "litova"
+            },
+            "teksto" : "apie"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mk",
+              "nomo" : "makedona"
+            },
+            "teksto" : "за"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mg",
+              "nomo" : "malagasa"
+            },
+            "teksto" : "ny"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ms",
+              "nomo" : "malaja"
+            },
+            "teksto" : "mengenai"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ml",
+              "nomo" : "malajalama"
+            },
+            "teksto" : "കുറിച്ച്"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mt",
+              "nomo" : "malta"
+            },
+            "teksto" : "dwar"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mi",
+              "nomo" : "maoria"
+            },
+            "teksto" : "e pā ana ki"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mr",
+              "nomo" : "marata"
+            },
+            "teksto" : "बद्दल"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "hmn",
+              "nomo" : "monga"
+            },
+            "teksto" : "txog"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "mn",
+              "nomo" : "mongola"
+            },
+            "teksto" : "тухай"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "nl",
+              "nomo" : "nederlanda"
+            },
+            "teksto" : "over, aangaande, betreffende"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ne",
+              "nomo" : "nepala"
+            },
+            "teksto" : "बारेमा"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ny",
+              "nomo" : "njanĝa"
+            },
+            "teksto" : "za"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "fy",
+              "nomo" : "okcidentfrisa"
+            },
+            "teksto" : "oer"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pa",
+              "nomo" : "panĝaba"
+            },
+            "teksto" : "ਬਾਰੇ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ps",
+              "nomo" : "paŝtua"
+            },
+            "teksto" : "په اړه"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "o"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pt",
+              "nomo" : "portugala"
+            },
+            "teksto" : "sobre (a respeito de), a respeito de, acerca de, quanto a, de (a respeito de), em (a respeito de), com (a respeito de)"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "rw",
+              "nomo" : "ruanda"
+            },
+            "teksto" : "hafi"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "о, об, про, насчёт"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sm",
+              "nomo" : "samoa"
+            },
+            "teksto" : "e uiga i"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sd",
+              "nomo" : "sinda"
+            },
+            "teksto" : "جي باري ۾"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "si",
+              "nomo" : "sinhala"
+            },
+            "teksto" : "ගැන"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "gd",
+              "nomo" : "skotgaela"
+            },
+            "teksto" : "mu dheidhinn"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sl",
+              "nomo" : "slovena"
+            },
+            "teksto" : "o"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "so",
+              "nomo" : "somala"
+            },
+            "teksto" : "ku saabsan"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "st",
+              "nomo" : "sota"
+            },
+            "teksto" : "ka"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "su",
+              "nomo" : "sunda"
+            },
+            "teksto" : "kira-kira"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sw",
+              "nomo" : "svahila"
+            },
+            "teksto" : "kuhusu"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "sn",
+              "nomo" : "ŝona"
+            },
+            "teksto" : "pamusoro"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tg",
+              "nomo" : "taĝika"
+            },
+            "teksto" : "дар бораи"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "th",
+              "nomo" : "taja"
+            },
+            "teksto" : "เกี่ยวกับ"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ta",
+              "nomo" : "tamila"
+            },
+            "teksto" : "பற்றி"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "tt",
+              "nomo" : "tatara"
+            },
+            "teksto" : "турында"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "te",
+              "nomo" : "telugua"
+            },
+            "teksto" : "గురించి"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uk",
+              "nomo" : "ukraina"
+            },
+            "teksto" : "про це"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ur",
+              "nomo" : "urdua"
+            },
+            "teksto" : "کے بارے میں"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "uz",
+              "nomo" : "uzbeka"
+            },
+            "teksto" : "atrofida"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "vi",
+              "nomo" : "vjetnama"
+            },
+            "teksto" : "về"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "vo",
+              "nomo" : "volapuka"
+            },
+            "teksto" : "dö"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "zu",
+              "nomo" : "zulua"
+            },
+            "teksto" : "mayelana"
+          }
+        ]
+      }
+    },
+    {
+      "dividila" : {
+        "teksto" : "II."
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Radiko kun la senco „pri“:"
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "pri.0a",
+        "teksto" : "pria"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Tiutema, koncernanta tion aŭ tiun: \n<ekz><k> · oni kolektis centojn da tiuj insektoj kaj ja trovis la viruson en kelkaj el ili, laŭ <g>pri<\/g>a noto publikigita de la „Fondaĵo de Oswaldo Cruz”.<\/k><\/ekz>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "датычны, зьвязаны (напр. з тэмай), адпаведны"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "w temacie, w związku z"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "по данной теме, в этой связи"
+          }
+        ]
+      }
+    },
+    {
+      "derivajhTitola" : {
+        "marko" : "pri.0i",
+        "teksto" : "prii"
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "<k>tr<\/k>\nEsti pria; koncerni: \n<ekz><k> · la afero ne <g>pri<\/g>as min.<\/k><\/ekz>"
+      }
+    },
+    {
+      "traduka" : {
+        "tradukoj" : [
+          {
+            "lingvo" : {
+              "kodo" : "be",
+              "nomo" : "belorusa"
+            },
+            "teksto" : "датычыць, датычыцца"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "pl",
+              "nomo" : "pola"
+            },
+            "teksto" : "dotyczyć, odnosić się"
+          },
+          {
+            "lingvo" : {
+              "kodo" : "ru",
+              "nomo" : "rusa"
+            },
+            "teksto" : "касаться, относиться"
+          }
+        ]
+      }
+    },
+    {
+      "dividila" : {
+        "teksto" : "III."
+      }
+    },
+    {
+      "teksta" : {
+        "teksto" : "Prefikso signifanta:\n\n<snc>1. <\/snc>Ke temas pri la temo indikita de la radiko (precipe ĉe adjektivoj): \n<ekz><k> · <g>pri<\/g>lingva artikolo;<\/k><\/ekz> \n<ekz><k> · primora komedio.<\/k><\/ekz>\n\n<snc>2. <\/snc>Ke iun el la nerektaj komplementoj de verbo oni faras ties objekto (tiun el la komplementoj, kiu indikas koncernaton, do tiun aŭ tion, kion la ago celas aŭ koncernas):\n\n<snc>a) <\/snc>Regule, kiam oni faras el komplemento, enkondukata per la propozicio „pri“, rektan objekton: \n<ekz><k> · veti <g>pri<\/g> io → <g>pri<\/g>veti ion;<\/k><\/ekz> \n<ekz><k> · plori <g>pri<\/g> iu → priplori iun;<\/k><\/ekz> \n<ekz><k> · kanti kanton <g>pri<\/g> iu → prikanti heroon;<\/k><\/ekz> \n<ekz><k> · dubi <g>pri<\/g> io → <g>pri<\/g>dubi ion;<\/k><\/ekz> \n<ekz><k> · <g>pri<\/g>zorgi, <g>pri<\/g>respondi ion <\/k>(zorgi, respondi je la bezonoj pri io)<k>;<\/k><\/ekz> \n<ekz><k> · tiu kampo <\/k>[…]<k> estos konsekrita al la Eternulo, kiel kampo <g>pri<\/g>ĵurita <\/k>(forĵurita, ĵure oferdonita)<k>.<\/k><\/ekz>\n\n<snc>b) <\/snc>Pli ĝenerale, kiam temas pri alia nerekta komplemento trafata de la ago; netransitiva verbo iĝas transitiva, ĉe verbo transitiva okazas komuto de la komplementoj: \n<ekz><k> · <a href=\"pag.pri0i\">pripagi<\/a>;<\/k><\/ekz> \n<ekz><k> · <g>pri<\/g>servi;<\/k><\/ekz> \n<ekz><k> · <g>pri<\/g>ŝteli;<\/k><\/ekz> \n<ekz><k> · priŝteli la mastron <\/k>(kp ŝteli monujon)<k>;<\/k><\/ekz> \n<ekz><k> · prifajfi aktoron;<\/k><\/ekz>\n\n<snc>3. <\/snc>Ke la intenso kaj precipe la amplekso de la ago estas grandaj kaj ĉiuflankaj, ke ili koncernas la tuton de la koncerna objekto:\n\n<snc>a) <\/snc>(malofte) Sen ŝanĝo de la objekto: \n<ekz><k> · David <g>pri<\/g>kalkulis la popolon;<\/k><\/ekz> \n<ekz><k> · <g>pri<\/g>juĝi ion (kritiki);<\/k><\/ekz> \n<ekz><k> · pritrakti ion <\/k>(raporti pri)<k>;<\/k><\/ekz> \n<ekz><k> · <g>pri<\/g>tranĉi <\/k>(tondi)<k> vinberbranĉon;<\/k><\/ekz> \n<ekz><k> · ŝi ne <g>pri<\/g>kalkulis sian agon <\/k>(ne konsideris la konsekvencojn aŭ eblojn)<k>;<\/k><\/ekz> \n<ekz><k> · la pastro <g>pri<\/g>rigardu <\/k>(esplorekzamenu)<k> la infektaĵon kaj deklaru, ke ĝi estas malpura;<\/k><\/ekz> \n<ekz><k> · li ilin bone <g>pri<\/g>frapu <\/k>(mallaŭdu)<k> per la plumo.<\/k><\/ekz>\n\n<snc>b) <\/snc>Kun la ŝanĝo de la objekto, kiel ĉe pri-<sup>2<\/sup>:\n<ekz><k> · priparoli demandon <\/k>(paroli pri la demando kaj tuŝi ties diversajn aspektojn)<k>;<\/k><\/ekz>\n<ekz><k> · prisilenti temon <\/k>(nenion ajn diri)<k>;<\/k><\/ekz>\n<ekz><k> · priskribi pejzaĝon <\/k>(iom detale, pli ol mencii; kp skribi leteron)<k>;<\/k><\/ekz>\n<ekz><k> · pripensi;<\/k><\/ekz>\n<ekz><k> · <g>pri<\/g>mediti;<\/k><\/ekz>\n<ekz><k> · <g>pri<\/g>friponi la popolon;<\/k><\/ekz>\n<ekz><k> · prilabori teron;<\/k><\/ekz>\n<ekz><k> · prifalĉi kampon <\/k>(kp falĉi grenon)<k>;<\/k><\/ekz>\n<ekz><k> · <g>pri<\/g>planti ĝardenon <\/k>(kp planti rozujon)<k>;<\/k><\/ekz>\n<ekz><k> · priĵeti iun per ŝtonoj <\/k>(kp ĵeti ŝtonojn)<k>;<\/k><\/ekz>\n<ekz><k> · prikonstrui monton <\/k>(kp konstrui domon)<k>;<\/k><\/ekz>\n<ekz><k> · <g>pri<\/g>rabi la vojaĝantojn <\/k>(kp rabi brutojn)<k>;<\/k><\/ekz>\n<ekz><k> · priserĉi homon <\/k>(kp serĉi ies monon)<k>;<\/k><\/ekz>\n<ekz><k> · prisemi kampon <\/k>(kp semi hordeon)<k>;<\/k><\/ekz>\n<ekz><k> · mi ordonos al la lokustoj <g>pri<\/g>manĝi la teron <\/k>(kp manĝi rikoltojn)<k>;<\/k><\/ekz>\n<ekz><k> · li pritondis sian kapon <\/k>(kp tondi harojn)<k>;<\/k><\/ekz>\n<ekz><k> · ĉiun nokton mi <g>pri<\/g>verŝas mian liton <\/k>(kp verŝi larmojn)<k>;<\/k><\/ekz>\n<ekz><k> · fajra kolono prilumis al ili la vojon;<\/k><\/ekz>\n<ekz><k> · tian palan vizaĝon la luno <g>pri<\/g>lumis.<\/k><\/ekz>\n<rim><g>RIM:<\/g> Oni vidas per tiuj lastaj ekzemploj, ke la senco de <g>pri<\/g> kelkfoje similas, tamen ne egalvaloras tiun de <g>ig<\/g>. Prilumi povas nur io, kio estas mem lumanta; ekz-e „la lampo prilumis la ĉambron“, sed „mi lumigas la ĉambron per lampo“ ĉar mi ne lumas pri io, sed igas ion lumi pri io.<\/rim>"
+      }
+    }
+  ],
+  "indekso" : "pri",
+  "ofc" : "*",
+  "radiko" : "pri",
+  "titolo" : "pri"
+}

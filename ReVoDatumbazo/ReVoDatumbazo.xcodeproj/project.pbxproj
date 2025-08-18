@@ -30,6 +30,7 @@
 		006A0EED2E539E8A00BDA06B /* testiOfcVortojn.pri.json in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EEC2E539E8A00BDA06B /* testiOfcVortojn.pri.json */; };
 		006A0EEF2E539E9800BDA06B /* testiSerchTradukojn.pri.json in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EEE2E539E9800BDA06B /* testiSerchTradukojn.pri.json */; };
 		006A0EF12E539E9E00BDA06B /* testiSerchVortojn.pri.json in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EF02E539E9E00BDA06B /* testiSerchVortojn.pri.json */; };
+		006A0EF32E53C38B00BDA06B /* um.xml in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EF22E53C38B00BDA06B /* um.xml */; };
 		007983722D67C6B60021FD4C /* SerchRezulto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007983712D67C6B60021FD4C /* SerchRezulto.swift */; };
 		0098F3E72E50FE97007429CE /* TraktiMallongigonKapan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */; };
 		0098F3E82E50FE97007429CE /* TraktiMallongigonKapan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */; };
@@ -365,6 +366,7 @@
 		006A0EEC2E539E8A00BDA06B /* testiOfcVortojn.pri.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testiOfcVortojn.pri.json; sourceTree = "<group>"; };
 		006A0EEE2E539E9800BDA06B /* testiSerchTradukojn.pri.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testiSerchTradukojn.pri.json; sourceTree = "<group>"; };
 		006A0EF02E539E9E00BDA06B /* testiSerchVortojn.pri.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testiSerchVortojn.pri.json; sourceTree = "<group>"; };
+		006A0EF22E53C38B00BDA06B /* um.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = um.xml; sourceTree = "<group>"; };
 		007983712D67C6B60021FD4C /* SerchRezulto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchRezulto.swift; sourceTree = "<group>"; };
 		0098F3E62E50FE94007429CE /* TraktiMallongigonKapan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktiMallongigonKapan.swift; sourceTree = "<group>"; };
 		0098F3E92E525BCB007429CE /* ad.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ad.xml; sourceTree = "<group>"; };
@@ -812,6 +814,7 @@
 				0099FC862D6506580033EC11 /* om.xml */,
 				0099FC872D6506580033EC11 /* per.xml */,
 				006A0EE62E539E5500BDA06B /* pri.xml */,
+				006A0EF22E53C38B00BDA06B /* um.xml */,
 			);
 			path = Artikoloj;
 			sourceTree = "<group>";
@@ -1132,6 +1135,7 @@
 				00E5D5B62E489EA5004877ED /* testiOfcVortojn.modal-o.json in Resources */,
 				0099FCC82D6506580033EC11 /* testiArtikolon.not-i.json in Resources */,
 				0099FCC92D6506580033EC11 /* testiArtikolon.Om-o.json in Resources */,
+				006A0EF32E53C38B00BDA06B /* um.xml in Resources */,
 				0099FCDA2D6506580033EC11 /* testiOfcVortojn.per.json in Resources */,
 				0099FCD62D6506580033EC11 /* testiOfcVortojn.majoritat-o-maĵori-o.json in Resources */,
 				0099FCE12D6506580033EC11 /* testiSerchTradukojn.Om-o.json in Resources */,
