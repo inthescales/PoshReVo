@@ -4,6 +4,8 @@ extension ArboAnalizilo {
 		numero: Int,
 		stato: Stato
 	) -> [ArtikolBloko] {
+		let sencKvanto = subartikolo.filoj.map { if case .snc = $0.tipo { return 1 } else { return 0 }}.reduce(0, +)
+		
 		let akumulilo = BlokAkumulilo()
 		akumulilo.aldoni(blokojn: [
 			.dividila(teksto: ArtikolTeksto.romajCiferoj(por: numero + 1) + ".")
@@ -22,6 +24,14 @@ extension ArboAnalizilo {
 			case .rim(let num):
 				akumulilo.aldoni(tekston: trakti(rimarkon: filo, numero: num, stato: stato))
 			case .snc(let mrk):
+				// TODO: Aldoni sencnumeron (vd. 'pri' III)
+				
+				if sencKvanto > 1,
+				   let sencNumero = stato.lastaSenco {
+					let etikedo = sencEtikedo(numero: sencNumero, freshaLinio: akumulilo.freshaLinio(), stato: stato)
+					akumulilo.aldoni(tekston: etikedo)
+				}
+				
 				akumulilo.aldoni(tekston: trakti(sencon: filo, marko: mrk, stato: stato))
 			case .teksto:
 				break
@@ -35,6 +45,8 @@ extension ArboAnalizilo {
 				assert(false, "Neatendita filo")
 			}
 		}
+		
+		stato.lastaSenco = nil
 		
 		return akumulilo.fariBlokojn()
 	}

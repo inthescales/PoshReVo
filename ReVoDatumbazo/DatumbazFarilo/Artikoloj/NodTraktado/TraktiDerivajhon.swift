@@ -54,6 +54,7 @@ extension ArboAnalizilo {
 			case .snc(let mrk):
 				let filTeksto = trakti(sencon: filo, marko: mrk, stato: stato)
 				
+				// TODO: provi ke 'chiamDu' estu 'true' se la lasta sibo estas <dif>
 				if sencKvanto > 1,
 				   let sencNumero = stato.lastaSenco {
 					let etikedo = sencEtikedo(numero: sencNumero, freshaLinio: akumulilo.freshaLinio(), stato: stato)

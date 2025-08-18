@@ -43,6 +43,7 @@ extension ArboAnalizilo {
 				teksto += indeksRezulto.teksto
 				indeksajho = indeksRezulto
 			case .klr:
+				// TODO: Klarigo ene de ekzemplo havu malkursivan tekston
 				teksto += trakti(klarigon: filo, stato: stato)
 			case .mis:
 				teksto += trakti(misstilan: filo, stato: stato)
