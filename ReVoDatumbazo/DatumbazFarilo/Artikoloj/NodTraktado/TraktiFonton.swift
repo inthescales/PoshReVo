@@ -14,8 +14,10 @@ extension ArboAnalizilo {
 		/// Teksto aperanta en <bib>, se estas
 		var bibTeksto: String? = nil
 		
-		/// Ĉu <lok> aperas en la fonto
-		var havasLokon = false
+		/// Ĉu ni montru bibliografian mallongigon, se unu ĉeestas.
+		/// (Se certaj filaj elementoj ekzistas, ni do ne montru bibliografian mallongigon en la artikola teksto mem,
+		/// ĉar necesas ia aldona klarigo pri loko en teksto, ligilo, ks)
+		var chuMontriMlgon = true
 		
 		for filo in fonto.filoj {
 			switch filo.tipo {
@@ -27,11 +29,12 @@ extension ArboAnalizilo {
 				bibTeksto = akumuliTekstojn(de: filo, stato: stato)
 			case .lok:
 				// TODO: fontoj - aldoni metodon trakti(lokon:)
-				havasLokon = true
+				chuMontriMlgon = false
 			case .teksto(_):
 				break
 			case .vrk:
 				// TODO: fontoj - aldoni metodon trakti(verkon:) - notu ke tio enhavos <url>ojn
+				chuMontriMlgon = false
 				break
 			case .url(_):
 				break
@@ -43,7 +46,7 @@ extension ArboAnalizilo {
 		// TODO: fontoj - aldoni fonton al stato
 		
 		if let bibTeksto,
-		   !bibTeksto.isEmpty && !havasLokon {		
+		   !bibTeksto.isEmpty && chuMontriMlgon {
 			return bibTeksto
 		} else {
 			// TODO: fontoj
