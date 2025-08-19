@@ -58,7 +58,7 @@ extension ArboAnalizilo {
 				assert(false, "Neatendita filo")
 			}
 		}
-		teksto = teksto.tondi()
+		teksto = teksto.kunpremi().tondi()
 		
 		return prefikso + teksto
 	}
