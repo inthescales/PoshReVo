@@ -94,6 +94,9 @@ enum TekstAtributoHelpiloj {
 		
 		for atributo in atributoj.reversed() {
 			guard atributo.komenco >= 0 && atributo.fino <= atributaTeksto.length else { continue }
+			
+			// Malplenaj paroj kaŭzas problemojn se ili okazus ĉenfine. Forigi ilin.
+			guard atributo.fino > atributo.komenco else { continue }
 
 			let regiono = NSMakeRange(atributo.komenco, atributo.fino - atributo.komenco)
 			var novajTrajtoj: UIFontDescriptor.SymbolicTraits?

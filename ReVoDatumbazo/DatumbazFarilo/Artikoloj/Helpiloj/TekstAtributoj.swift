@@ -113,6 +113,14 @@ public enum TekstAtributo: CaseIterable, Equatable {
 		return atributo.fermaEtikedo + teksto + atributo.malfermaEtikedo
 	}
 	
+	/// Forigi malplenajn etikedparojn de tiu atributo el tiu teksto
+	public static func forigi(el teksto: String, malplenaj atributo: TekstAtributo) -> String {
+		teksto.replacingOccurrences(
+			of: atributo.malfermaEtikedo + atributo.fermaEtikedo,
+			with: ""
+		)
+	}
+	
 	// MARK: - Aliaj helpiloj
 	
 	/// Regula esprimo uzata por trovi etikedojn en artikolaj tekstoj

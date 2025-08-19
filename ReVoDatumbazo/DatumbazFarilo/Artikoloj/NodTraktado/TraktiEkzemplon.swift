@@ -79,6 +79,9 @@ extension ArboAnalizilo {
 			}
 		}
 		
+		// Purige forigi malplenajn parojn
+		teksto = TekstAtributo.forigi(el: teksto, malplenaj: .kursiva)
+		
 		if lista {
 			return "\n" + volvi(" · " + teksto.kunpremi().tondi(), lau: stilo)
 		} else {
