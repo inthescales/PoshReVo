@@ -38,7 +38,8 @@ extension ArboAnalizilo {
 			case .fnt:
 				teksto = ignoriFonton(teksto: teksto, stato: stato)
 			case .frm:
-				teksto += trakti(formulon: filo, stato: stato)
+				let filTeksto = trakti(formulon: filo, stato: stato)
+				teksto += TekstAtributo.malvolvi(filTeksto, per: .kursiva)
 			case .ind:
 				let indeksRezulto = trakti(indekson: filo, stato: stato)
 				teksto += indeksRezulto.teksto
