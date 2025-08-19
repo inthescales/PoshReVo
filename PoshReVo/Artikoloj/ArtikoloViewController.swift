@@ -417,10 +417,12 @@ extension ArtikoloViewController: TTTAttributedLabelDelegate {
 		let artikolMarko = markeroj[0]
 
 		// Markoj en ligiloj foje havas pli ol 2 segmentojn, ekz. 'margxe.0ulo.MOD',
-		// indikanta certan sencon. Tamen, dum sencoj ĉi-ape estas kunigitaj simple el
-		// tekstoj, ne eblas salti rekte al senco. Do ni uzu ĉi tie nur la unuaj du
+		// indikanta certan sencon aŭ rimarkon. Tamen, ĉiuj derivaĵeroj estas kunigitaj simple el
+		// tekstoj, ne eblas salti rekte al tia elemento. Do ni uzu ĉi tie nur la unuaj du
 		// markeroj, kiu indikos derivaĵon.
-		let derivajhMarko = (markeroj.count > 1) ? markeroj[0] + markeroj[1] : nil
+		// Notu ke foje, ĉi tiu traktado kaŭzas eraron. Ekz. en '-aĉ' estas ligilo al rimarko
+		// 'fi.0.RIM', kiu fakte ne estas en derivaĵo 'fi.0' sed en 'fi.0_'.
+		let derivajhMarko = (markeroj.count > 1) ?  [markeroj[0], markeroj[1]].joined(separator: ".") : nil
 		
 		// Salti ene de ĉi tiu artikolo
 		if markeroj[0] == artikolo.indekso,
