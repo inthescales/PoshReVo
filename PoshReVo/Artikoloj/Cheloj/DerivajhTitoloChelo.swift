@@ -51,7 +51,7 @@ final class DerivajhTitoloChelo: UITableViewCell {
 		etikedo.textColor = stilo.dokumentaTeksto
 		etikedo.snp.remakeConstraints { make in
 			make.top.equalToSuperview().inset(Konstantoj.supraMargheno)
-			make.left.right.equalToSuperview().offset(margheno)
+			make.left.right.equalToSuperview().inset(margheno)
 		}
 		
 		dividilo.backgroundColor = stilo.dokumentaDividilo
