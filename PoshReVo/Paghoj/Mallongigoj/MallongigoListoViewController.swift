@@ -118,7 +118,8 @@ extension MallongigoListoViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let ero = videblajEroj[indexPath.row]
 		guard let chelo = tableView.dequeueReusableCell(withIdentifier: Konstantoj.chelIdentigilo, for: indexPath) as? MallongigoListoChelo else {
-			fatalError("Ricevis malĝustan ĉelspecon")
+			print("ERARO: Ricevis malĝustan ĉelspecon")
+			return UITableViewCell()
 		}
 		
 		chelo.agordi(mallongigo: ero.mallongigo, signifo: ero.signifo, stilo: stilo)

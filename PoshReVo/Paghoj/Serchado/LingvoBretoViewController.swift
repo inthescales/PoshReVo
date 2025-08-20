@@ -356,7 +356,8 @@ final class LingvoBretoViewController: UIViewController {
 	/// Movas la aktivan substrekon por ke ĝi restu sub la nun-elektita lingvo
 	private func substreki(indekson indekso: Int, animacii: Bool) {
 		guard let butono = butono(por: indekso) else {
-			fatalError("Butono ne ekzistas")
+			print("ERARO: butono ne ekzistas")
+			return
 		}
 		
 		substreko.snp.remakeConstraints { make in

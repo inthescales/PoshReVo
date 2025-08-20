@@ -15,8 +15,8 @@ final class KategoriaViewController: UIViewController {
 		/// Teksto kiu estu videbla en listo
 		let teksto: String
 		
-		/// Fermo liveranta ekranon kiu montrighu se la listero estos elektata
-		let celPagho: () -> (UIViewController)
+		/// Fermo liveranta ekranon kiu montriĝu se la listero estos elektata, aŭ nulo se krei ekranon ne eblas
+		let celPagho: () -> (UIViewController?)
 	}
 	
 	private lazy var tabelo: UITableView = {
@@ -77,12 +77,13 @@ final class KategoriaViewController: UIViewController {
 
 extension KategoriaViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		guard let navigaciilo = navigationController else { return }
+		tabelo.deselectRow(at: indexPath, animated: true)
 		
-		let novaPagho = sekcioj[indexPath.section].eroj[indexPath.row].celPagho()
+		guard let navigaciilo = navigationController,
+			  let novaPagho = sekcioj[indexPath.section].eroj[indexPath.row].celPagho() else { return }
+		
 		navigaciilo.pushViewController(novaPagho, animated: true)
 		
-		tabelo.deselectRow(at: indexPath, animated: true)
 	}
 	
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -112,7 +113,8 @@ extension KategoriaViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard indexPath.section < sekcioj.count
 				&& indexPath.row < sekcioj[indexPath.section].eroj.count else {
-			fatalError("Listero ne ekzistas")
+			print("ERARO: Listero ne ekzistas")
+			return UITableViewCell()
 		}
 		
 		let listero = sekcioj[indexPath.section].eroj[indexPath.row]

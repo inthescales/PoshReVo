@@ -81,7 +81,8 @@ extension LingvoListoViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard indexPath.row < lingvoj.count else {
-			fatalError("Lingvo ne ekzistas")
+			print("ERARO: Lingvo ne ekzistas")
+			return UITableViewCell()
 		}
 		
 		let lingvo = lingvoj[indexPath.row]

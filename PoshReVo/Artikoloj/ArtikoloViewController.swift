@@ -340,7 +340,8 @@ extension ArtikoloViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let bloko = artikolo.blokoj[indexPath.row]
 		guard let chelo = tabelo.dequeueReusableCell(withIdentifier: chelIdentigilo(por: bloko)) else {
-			fatalError("Malsukcesis krei ĉelon")
+			print("ERARO: malsukcesis krei ĉelon")
+			return UITableViewCell()
 		}
 		
 		switch bloko {

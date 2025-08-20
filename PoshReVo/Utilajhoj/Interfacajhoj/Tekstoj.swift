@@ -76,4 +76,13 @@ enum Tekstoj {
 	
 	static let rezigni = "Rezigni"
 	static let nuligi = "Nuligi"
+	
+	// MARK: - Alarmoj
+	
+	static let eraro = "Eraro"
+	static let okej = "Okej"
+	
+	// MARK: Eraroj
+	
+	static let eraroArtikoloMankas = "Malsukcesis venigi artikolon"
 }

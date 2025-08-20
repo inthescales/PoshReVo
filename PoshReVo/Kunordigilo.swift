@@ -49,7 +49,8 @@ final class Kunordigilo {
 	/// Prezentas paĝon de la artikolo de la destino
 	func prezentiArtikoloPaghon(el destino: Destino, prezentilo: UINavigationController) {
 		guard let artikolo = vortaro.artikolo(de: destino) else {
-			fatalError("Artikolo ne ekzistas") // TODO: Montri eraron
+			Alarmo.montri(eraron: Tekstoj.eraroArtikoloMankas, prezentilo: prezentilo)
+			return
 		}
 		
 		let vc = fariArtikoloPaghon(el: artikolo, marko: destino.marko)
@@ -240,7 +241,11 @@ final class Kunordigilo {
 					.init(
 						teksto: Tekstoj.hazardaArtikolo,
 						celPagho: { [unowned self] in
-							let artikolo = vortaro.iuAjnArtikolo()! // TODO: Montri eraron se necesas
+							guard let artikolo = vortaro.iuAjnArtikolo() else {
+								Alarmo.montri(eraron: Tekstoj.eraroArtikoloMankas, prezentilo: prezentilo)
+								return nil
+							}
+							
 							return fariArtikoloPaghon(el: artikolo, marko: nil)
 						}
 					)
