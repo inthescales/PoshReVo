@@ -23,7 +23,6 @@ enum Tekstoj {
 	static let enViajLingvoj = "En viaj lingvoj:"
 	static let neniujLingvoj = "Elekti lingvojn por vidi tradukojn"
 	static let neniujTradukoj = "Neniuj tradukoj en viaj lingvoj"
-	static let elekti = "elekti"
 	static let konservi = "konservi"
 	static let malkonservi = "malkonservi"
 	static let saltiAl = "Salti al:"

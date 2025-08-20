@@ -204,8 +204,7 @@ final class TradukaroChelo: UITableViewCell {
 		// Fari butonon
 		
 		let butono = UIButton()
-		butono.setTitle(Tekstoj.elekti, for: .normal)
-		butono.metiDinamikanTitolon(Tekstoj.elekti, tiparo: Tiparo.tradukaElektiButono)
+		butono.metiDinamikanTitolon(Tekstoj.pli, tiparo: Tiparo.tradukaElektiButono)
 		butono.setTitleColor(stilo.dokumentLigilo, for: .normal)
 		butono.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 		butono.addTarget(self, action: #selector(premisElekti), for: .touchUpInside)
