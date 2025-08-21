@@ -31,6 +31,7 @@
 		003FC1A82E37D8320039AC2C /* Tiparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A72E37D8300039AC2C /* Tiparo.swift */; };
 		003FC1AA2E3920FB0039AC2C /* AlirebloTekstoj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */; };
 		006A0EF52E55AFB000BDA06B /* Alarmo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A0EF42E55AFAE00BDA06B /* Alarmo.swift */; };
+		006A0EFB2E56841F00BDA06B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006A0EFA2E56841F00BDA06B /* LaunchScreen.storyboard */; };
 		0098F3DE2E4D0305007429CE /* V1Lingvo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3DD2E4D0303007429CE /* V1Lingvo.swift */; };
 		0098F3E22E4D391B007429CE /* FalsaVortListoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E12E4D3911007429CE /* FalsaVortListoViewController.swift */; };
 		0098F3E52E4D3B68007429CE /* FadGradientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0098F3E42E4D3B65007429CE /* FadGradientoView.swift */; };
@@ -119,6 +120,8 @@
 		003FC1A72E37D8300039AC2C /* Tiparo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiparo.swift; sourceTree = "<group>"; };
 		003FC1A92E3920F90039AC2C /* AlirebloTekstoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlirebloTekstoj.swift; sourceTree = "<group>"; };
 		006A0EF42E55AFAE00BDA06B /* Alarmo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarmo.swift; sourceTree = "<group>"; };
+		006A0EFA2E56841F00BDA06B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		006A0EFC2E5685E600BDA06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0098F3DD2E4D0303007429CE /* V1Lingvo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V1Lingvo.swift; sourceTree = "<group>"; };
 		0098F3E12E4D3911007429CE /* FalsaVortListoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalsaVortListoViewController.swift; sourceTree = "<group>"; };
 		0098F3E42E4D3B65007429CE /* FadGradientoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadGradientoView.swift; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 		000DA6D62D8F31CF0026CBA0 /* PoshReVo */ = {
 			isa = PBXGroup;
 			children = (
+				006A0EFC2E5685E600BDA06B /* Info.plist */,
+				006A0EFA2E56841F00BDA06B /* LaunchScreen.storyboard */,
 				000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */,
 				00B27B252DC6B73F00526F82 /* Kunordigilo.swift */,
 				000DA6FC2D908F680026CBA0 /* PRVNavigationController.swift */,
@@ -544,6 +549,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006A0EFB2E56841F00BDA06B /* LaunchScreen.storyboard in Resources */,
 				000DA6F52D8F35FE0026CBA0 /* Assets.xcassets in Resources */,
 				00B27B1A2DC2802700526F82 /* PoshReVoDatumbazo.sqlite in Resources */,
 			);
@@ -807,10 +813,11 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PoshReVo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "PoŝReVo";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
@@ -843,10 +850,11 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PoshReVo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "PoŝReVo";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
