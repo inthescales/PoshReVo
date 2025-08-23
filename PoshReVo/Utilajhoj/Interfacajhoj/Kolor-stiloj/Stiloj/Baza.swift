@@ -3,8 +3,8 @@ import UIKit
 extension InterfacStilo {
 	/// Interfacstilo havanta plejparte ordinaran iOS-an aspekton
 	static let simpla = InterfacStilo(
-		nomo: "Simpla",
-		identigilo: "simpla",
+		nomo: "Baza",
+		identigilo: "baza",
 		hela: {
 			let verda = UIColor(deksesuma: 0x098916)
 			let helverda = UIColor(deksesuma: 0x0cb21d)
