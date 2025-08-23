@@ -60,7 +60,7 @@ extension InterfacStilo {
 			let mezflava = UIColor(deksesuma: 0xccccb3)
 			let palblua = UIColor(deksesuma: 0x87CEEB)
 			let orangha = UIColor(deksesuma: 0xFFA500)
-			let shokolada = UIColor(deksesuma: 0xD2691E)
+			let ligila = UIColor(deksesuma: 0xd86c1e) // 0xD2691E ĉe la retejo
 			let premligilo = UIColor(deksesuma: 0xf78331)
 			let helgriza = UIColor(deksesuma: 0x888f88)
 			let mezgriza = UIColor(deksesuma: 0x222f22)
@@ -71,14 +71,14 @@ extension InterfacStilo {
 				navigaciaFono: fortaNavigaciejo ? orangha : nigra,
 				navigaciaTeksto: fortaNavigaciejo ? nigra : palflava,
 				navigaciaSerchilo: malhelgriza,
-				navigaciaButono: shokolada,
+				navigaciaButono: ligila,
 				navigaciaButonoMalaktiva: helgriza,
 				dokumentaFono: nigra,
 				dokumentaAlternaFono: malheletgriza,
 				dokumentaTeksto: palflava,
 				dokumentaMalfortaTeksto: mezflava,
 				dokumentaDividilo: mezflava,
-				dokumentLigilo: shokolada,
+				dokumentLigilo: ligila,
 				dokumentLigiloPremita: premligilo,
 				dokumentSencNumero: orangha,
 				dokumentEkzemplo: orangha,
