@@ -58,11 +58,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/robin/Desktop/fontoj"
+            argument = "$(SRCROOT)/../konstrumaterialoj/fontoj"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "/Users/robin/Desktop/produktajhoj"
+            argument = "$(SRCROOT)/../konstrumaterialoj/produktajhoj"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
