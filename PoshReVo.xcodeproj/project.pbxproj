@@ -169,8 +169,6 @@
 		00E5D5F62E4A6BD5004877ED /* MallongigoListo+Chiuj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MallongigoListo+Chiuj.swift"; sourceTree = "<group>"; };
 		00E5D5FB2E4C0207004877ED /* Bildetoj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bildetoj.swift; sourceTree = "<group>"; };
 		5ABE2912D05EFC9F366FD700 /* Pods-PoshReVo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo/Pods-PoshReVo.release.xcconfig"; sourceTree = "<group>"; };
-		76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.debug.xcconfig"; sourceTree = "<group>"; };
-		A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo2.release.xcconfig"; path = "Target Support Files/Pods-PoshReVo2/Pods-PoshReVo2.release.xcconfig"; sourceTree = "<group>"; };
 		CCAEF79675BA2B6425FB8904 /* Pods_PoshReVo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoshReVo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92822826A7822C7C1C0F212 /* Pods-PoshReVo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoshReVo.debug.xcconfig"; path = "Target Support Files/Pods-PoshReVo/Pods-PoshReVo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -479,8 +477,6 @@
 		90F3C80E6330F4395B924C94 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				76CBCEF6EAFADBA8ECC8129D /* Pods-PoshReVo2.debug.xcconfig */,
-				A8F83BA8D6BA23C75F5EA229 /* Pods-PoshReVo2.release.xcconfig */,
 				E92822826A7822C7C1C0F212 /* Pods-PoshReVo.debug.xcconfig */,
 				5ABE2912D05EFC9F366FD700 /* Pods-PoshReVo.release.xcconfig */,
 			);
