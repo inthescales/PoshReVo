@@ -60,7 +60,7 @@ extension InterfacStilo {
 			let mezflava = UIColor(deksesuma: 0xccccb3)
 			let palblua = UIColor(deksesuma: 0x87CEEB)
 			let orangha = UIColor(deksesuma: 0xFFA500)
-			let ligila = UIColor(deksesuma: 0xd86c1e) // 0xD2691E ĉe la retejo
+			let ligila = UIColor(deksesuma: 0xd66a1d) // 0xD2691E ĉe la retejo
 			let premligilo = UIColor(deksesuma: 0xf78331)
 			let helgriza = UIColor(deksesuma: 0x888f88)
 			let mezgriza = UIColor(deksesuma: 0x222f22)
