@@ -4,6 +4,14 @@ import CoreData
 /// Analizas XMLan dosieron enhavantan liston da lingvoj, kaj aldonas ilin al la datumbazo
 /// Parses the XML file containing the list of languages, and adds them to the database
 class LingvoAnalizilo: NSObject, XMLParserDelegate {
+	private enum Konstantoj {
+		/// Kelkaj lingvoj estu ekzkluzivitaj pro tio ke ne eblas bone montri iliajn tradukojn.
+		static let ekzkluzivotajKodoj = [
+			"ils", // Internacia Signo-lingvo
+			"sgn"  // Signuno
+		]
+	}
+	
 	var lingvoj: [Lingvo] = []
 	
 	private var nunaKodo: String?
@@ -38,7 +46,8 @@ class LingvoAnalizilo: NSObject, XMLParserDelegate {
 	
 	func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
 		if elementName == "lingvo",
-		   let kodo = nunaKodo {
+		   let kodo = nunaKodo,
+			!Konstantoj.ekzkluzivotajKodoj.contains(kodo) {
 			lingvoj.append(Lingvo(kodo: kodo, nomo: teksto))
 			nunaKodo = nil
 		}

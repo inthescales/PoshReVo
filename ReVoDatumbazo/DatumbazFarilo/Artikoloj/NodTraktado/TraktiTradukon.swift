@@ -15,7 +15,8 @@ extension ArboAnalizilo {
 		transpasIndekso: IndeksRezulto? = nil,
 		stato: Stato
 	) -> String? {
-		guard let marko = stato.marko else {
+		guard stato.lingvoj[lingvo] != nil, // ignori ekskluzivitajn lingvojn
+			let marko = stato.marko else {
 			return nil
 		}
 		
