@@ -85,8 +85,8 @@ extension UIFont {
 }
 
 extension UIButton {
-	/// Metas titolon al la butono en certa tiparo.
-	/// Ĉi-kodo necesas por havi dinamikan tiparon en UIButton{
+	/// Metas tiun titoltekston al la butono en tiu tiparo.
+	/// Ĉi-kodo necesas por havi dinamikan tiparon en UIButton
 	func metiDinamikanTitolon(_ teksto: String, tiparo: UIFont) {
 		let atributoj = [
 			NSAttributedString.Key.font: UIFontMetrics.default.scaledFont(for: tiparo)
