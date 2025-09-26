@@ -44,11 +44,8 @@ final class UzantDatumoRegilo {
 		self.traktilo = traktilo
 		
 		// Unue, provu legi aktualan datumaron.
-		// Se mankas tio, provu legi V1an datumojn.
-		// Se mankas tio ankaŭ, uzu defaŭltan
-		// TODO: Ŝanĝu kiam ni ne plu subtenas V1ajn datumojn
+		// Se mankas tio, uzu defaŭltan
 		datumaro = traktilo.legiDatumaron()
-			?? V1UzantDatumoTenilo.legiV1Datumaron()
 			?? UzantDatumaro.defaulta()
 	}
 	
