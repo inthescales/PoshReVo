@@ -35,7 +35,7 @@ enum VortListoj {
 	) {
 		let alirilo = DatumbazAlirilo(konteksto: konteksto)
 		for (ofc, vortoListo) in ofcVortoj {
-			print("Skribas oficialecon \(ofc)")
+			print("Skribas oficialecon \(ofc.kodo)")
 			let oficialeco = alirilo.oficialeco(kodo: ofc.kodo)!
 			
 			for ofcVorto in vortoListo {
