@@ -36,16 +36,6 @@ extension ArboAnalizilo {
 				teksto += trakti(referencon: filo, tipo: tip, celo: cel, stato: stato)
 			case .refgrp(let tip):
 				teksto += trakti(referencGrupon: filo, tipo: tip, stato: stato)
-			case .snc:
-				// Mi ne scias kial, tamen ja eblas ke senco aperu ene de difino.
-				// Vidu artikolo 'nimb/o'. Tie, la artikolo aperas samkiel estus
-				// kelkaj sencoj vice. Aŭ tio estas eraro ReVo-e, aŭ mi devas serĉi
-				// maniero trakti ĝin.
-				// Ŝajnas ke la ununura artikolo havanta ĉi tian strukturon estas 'nimb/o',
-				// do plej verŝajne estos plej bone ŝanĝi ĝin. Tiukaze, eblos uzi 'akumuliTekstojn'
-				// ĉi-metode.
-				// TODO: Faru ion.
-				break
 			case .sncref(let ref):
 				if let ref = ref {
 					teksto += trakti(sencReferencon: filo, marko: ref, stato: stato)
