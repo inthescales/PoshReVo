@@ -45,13 +45,6 @@
           },
           {
             "lingvo" : {
-              "kodo" : "sgn",
-              "nomo" : "signuna"
-            },
-            "teksto" : "t@10"
-          },
-          {
-            "lingvo" : {
               "kodo" : "th",
               "nomo" : "taja"
             },
