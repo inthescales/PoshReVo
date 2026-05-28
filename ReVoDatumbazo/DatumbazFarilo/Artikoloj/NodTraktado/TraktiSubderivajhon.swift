@@ -34,7 +34,7 @@ extension ArboAnalizilo {
 				
 				if let sencNumero = stato.lastaSenco,
 				   numeriSencojn {
-					let etikedo = sencEtikedo(numero: sencNumero, freshaLinio: teksto == "", chiamDu: true, stato: stato)
+					let etikedo = sencEtikedo(numero: sencNumero, freshaLinio: teksto == "", stato: stato)
 					teksto += etikedo
 				}
 				

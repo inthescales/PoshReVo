@@ -29,13 +29,9 @@ extension ArboAnalizilo {
 				// TODO: Eble unuigi kun sama kodaĵo en trakti(derivajhon:...)
 				if sencKvanto > 1,
 				   let sencNumero = stato.lastaSenco {
-					
-					let lastaSibo = stato.sibStako.last
-					let sekvasDifino = { switch lastaSibo { case .dif: return true; default: return false; } }()
 					let etikedo = sencEtikedo(
 						numero: sencNumero,
 						freshaLinio: akumulilo.freshaLinio(),
-						chiamDu: sekvasDifino,
 						stato: stato
 					)
 					akumulilo.aldoni(tekston: etikedo)

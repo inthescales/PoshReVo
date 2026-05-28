@@ -73,16 +73,22 @@ extension ArboAnalizilo {
 	static func sencEtikedo(
 		numero: Int,
 		freshaLinio: Bool,
-		chiamDu: Bool = false,
 		stato: Stato
 	) -> String {
 		var prefikso: String?
-		// NOTO: en kelkaj situacioj ni permesas ke senco estus pli proksima al la supera linio,
-		// en kelkaj malpli. Pro tio, la argumento 'chiamDu'.
-		if numero > 1 || chiamDu {
+		if numero > 1 {
 			prefikso = "\n\n"
-		} else if !freshaLinio {
-			prefikso = "\n"
+		} else {
+			if !freshaLinio {
+				prefikso = "\n"
+			}
+			
+			// Senco ĉiam aperu en nova linio post difino.
+			let lastaSibo = stato.sibStako.last
+			let sekvasDifino = { switch lastaSibo { case .dif: return true; default: return false; } }()
+			if sekvasDifino {
+				prefikso? += "\n"
+			}
 		}
 		
 		return (prefikso ?? "") + TekstAtributo.volvi(String(numero) + ". ", per: .sencNumero)

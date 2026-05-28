@@ -27,6 +27,9 @@ extension ArboAnalizilo {
 				kapTeksto = kapRezulto.teksto
 				oficialeco = kapRezulto.oficialeco
 				
+				let lastaSibo = stato.sibStako.last
+				let sekvasDifino = { switch lastaSibo { case .dif: return true; default: return false; } }()
+				
 				if let indekso = stato.artikolIndekso,
 				   let marko = stato.marko {
 					for variajho in kapRezulto.formoj {
@@ -57,13 +60,9 @@ extension ArboAnalizilo {
 				// TODO: Eble unuigi kun sama kodaĵo en trakti(subartikolon:...)
 				if sencKvanto > 1,
 				   let sencNumero = stato.lastaSenco {
-					
-					let lastaSibo = stato.sibStako.last
-					let sekvasDifino = { switch lastaSibo { case .dif: return true; default: return false; } }()
 					let etikedo = sencEtikedo(
 						numero: sencNumero,
 						freshaLinio: akumulilo.freshaLinio(),
-						chiamDu: sekvasDifino,
 						stato: stato
 					)
 					akumulilo.aldoni(tekston: etikedo)
