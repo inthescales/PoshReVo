@@ -10,7 +10,7 @@ La XCode-a projekto `ReVoDatumbazo` enhavas komandlinian programon `DatumbazFari
 #### Argumentoj:
 1. Indiko de dosierujo enhavanta la ReVo-aj materialoj uzotaj. La programo serĉos dosierujojn `grundo` kaj `revo`.
   - `grundo`-dosieroj troviĝas [ĉi tie](https://github.com/revuloj/voko-grundo)
-  - `revo`-dosieroj troviĝas [ĉi tie](https://github.com/revuloj/revo-fonto/releases)
+  - `revo`-dosieroj troviĝas [ĉi tie](https://github.com/revuloj/revo-fonto/releases), sub "Source code"
 2. Indiko de dosierujo kien produktaĵoj estu metitaj.
 
 La produktaĵojn de la programo oni movu al la dosierujo `/PoshReVo/Risurcoj/` en la apo-projekto.
