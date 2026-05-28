@@ -24,18 +24,13 @@ extension ArboAnalizilo {
 			case .rim(let num):
 				akumulilo.aldoni(tekston: trakti(rimarkon: filo, numero: num, stato: stato))
 			case .snc(let mrk):
-				let filTeksto = trakti(sencon: filo, marko: mrk, stato: stato)
-				
-				// TODO: Eble unuigi kun sama kodaĵo en trakti(derivajhon:...)
-				if sencKvanto > 1,
-				   let sencNumero = stato.lastaSenco {
-					let etikedo = sencEtikedo(
-						numero: sencNumero,
-						freshaLinio: akumulilo.freshaLinio(),
-						stato: stato
-					)
-					akumulilo.aldoni(tekston: etikedo)
-				}
+				let filTeksto = trakti(
+					sencon: filo,
+					marko: mrk,
+					montriEtikedon: sencKvanto > 1,
+					freshaLinio: akumulilo.freshaLinio(),
+					stato: stato
+				)
 				
 				akumulilo.aldoni(tekston: filTeksto)
 			case .teksto:

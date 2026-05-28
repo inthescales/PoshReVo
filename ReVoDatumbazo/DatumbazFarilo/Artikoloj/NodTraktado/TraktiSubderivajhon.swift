@@ -30,13 +30,13 @@ extension ArboAnalizilo {
 			case .rim(let num):
 				teksto += trakti(rimarkon: filo, numero: num, stato: stato)
 			case .snc(let mrk):
-				let filTeksto = trakti(sencon: filo, marko: mrk, stato: stato)
-				
-				if let sencNumero = stato.lastaSenco,
-				   numeriSencojn {
-					let etikedo = sencEtikedo(numero: sencNumero, freshaLinio: teksto == "", stato: stato)
-					teksto += etikedo
-				}
+				let filTeksto = trakti(
+					sencon: filo,
+					marko: mrk,
+					montriEtikedon: numeriSencojn,
+					freshaLinio: teksto.last == "\n",
+					stato: stato
+				)
 				
 				teksto += filTeksto
 			case .teksto:

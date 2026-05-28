@@ -1,5 +1,11 @@
 extension ArboAnalizilo {
-	static func trakti(sencon senco: ArtikolNodo, marko: String?, stato: Stato) -> String {
+	static func trakti(
+		sencon senco: ArtikolNodo,
+		marko: String?,
+		montriEtikedon: Bool,
+		freshaLinio: Bool,
+		stato: Stato
+	) -> String {
 		if stato.lastaSenco == nil {
 			stato.lastaSenco = 0
 		}
@@ -13,6 +19,9 @@ extension ArboAnalizilo {
 		}
 		
 		var teksto = ""
+		if montriEtikedon {
+			teksto += sencEtikedo(numero: stato.nunaSenco ?? 0, freshaLinio: freshaLinio, stato: stato)
+		}
 		traktiFilojn(de: senco, stato: stato) { filo in
 			switch filo.tipo {
 			case .adm, .bld:
@@ -70,7 +79,7 @@ extension ArboAnalizilo {
 	}
 	
 	/// Liveras etikedtekston por senco laŭ ĝia numero kaj aliaj argumentoj
-	static func sencEtikedo(
+	private static func sencEtikedo(
 		numero: Int,
 		freshaLinio: Bool,
 		stato: Stato
