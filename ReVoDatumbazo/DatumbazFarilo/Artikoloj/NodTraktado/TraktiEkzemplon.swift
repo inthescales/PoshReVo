@@ -22,6 +22,7 @@ extension ArboAnalizilo {
 		ekzemplon ekzemplo: ArtikolNodo,
 		stilo: EkzemploStilo = .plena,
 		lista: Bool = true,
+		freshaLinio: Bool = false,
 		stato: Stato
 	) -> String {
 		var teksto = ""
@@ -84,7 +85,12 @@ extension ArboAnalizilo {
 		teksto = TekstAtributo.forigi(el: teksto, malplenaj: .kursiva)
 		
 		if lista {
-			return "\n" + volvi(" · " + teksto.kunpremi().tondi(), lau: stilo)
+			var linio = volvi(" · " + teksto.kunpremi().tondi(), lau: stilo)
+			if !freshaLinio {
+				// Se jam estas teksto en la nuna linio, faru novan
+				linio = "\n" + linio
+			}
+			return linio
 		} else {
 			return volvi(teksto.kunpremi().tondi(), lau: stilo)
 		}

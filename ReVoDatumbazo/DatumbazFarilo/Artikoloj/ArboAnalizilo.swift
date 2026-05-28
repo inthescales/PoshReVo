@@ -78,7 +78,13 @@ enum ArboAnalizilo {
 			case .ctl:
 				teksto += trakti(citilon: filo, stato: stato)
 			case .ekz:
-				teksto += trakti(ekzemplon: filo, stilo: ekzemploStilo, lista: false, stato: stato)
+				teksto += trakti(
+					ekzemplon: filo,
+					stilo: ekzemploStilo,
+					lista: false,
+					freshaLinio: teksto == "",
+					stato: stato
+				)
 			case .esc:
 				teksto += trakti(escepton: filo, stato: stato)
 			case .em:

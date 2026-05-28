@@ -36,7 +36,7 @@ extension ArboAnalizilo {
 			case .dif:
 				teksto += trakti(difinon: filo, stato: stato)
 			case .ekz:
-				teksto += trakti(ekzemplon: filo, stato: stato)
+				teksto += trakti(ekzemplon: filo, freshaLinio: teksto.last == "\n" || freshaLinio, stato: stato)
 			case .fnt:
 				teksto = ignoriFonton(teksto: teksto, stato: stato)
 			case .gra:
