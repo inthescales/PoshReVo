@@ -21,6 +21,13 @@ extension ArboAnalizilo {
 		var teksto = ""
 		if montriEtikedon {
 			teksto += sencEtikedo(numero: stato.nunaSenco ?? 0, freshaLinio: freshaLinio, stato: stato)
+		} else {
+			// Senco ĉiam aperu en nova linio post difino, sed ne aliaj (ekz. uzo).
+			let lastaSibo = stato.sibStako.last
+			let sekvasDifino = { switch lastaSibo { case .dif: return true; default: return false; } }()
+			if sekvasDifino {
+				teksto += "\n"
+			}
 		}
 		traktiFilojn(de: senco, stato: stato) { filo in
 			switch filo.tipo {
@@ -85,19 +92,8 @@ extension ArboAnalizilo {
 		stato: Stato
 	) -> String {
 		var prefikso: String?
-		if numero > 1 {
+		if numero > 1 || !freshaLinio {
 			prefikso = "\n\n"
-		} else {
-			if !freshaLinio {
-				prefikso = "\n"
-			}
-			
-			// Senco ĉiam aperu en nova linio post difino.
-			let lastaSibo = stato.sibStako.last
-			let sekvasDifino = { switch lastaSibo { case .dif: return true; default: return false; } }()
-			if sekvasDifino {
-				prefikso? += "\n"
-			}
 		}
 		
 		return (prefikso ?? "") + TekstAtributo.volvi(String(numero) + ". ", per: .sencNumero)
