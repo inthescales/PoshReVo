@@ -30,6 +30,14 @@ extension ArboAnalizilo {
 			case .rim(let num):
 				teksto += trakti(rimarkon: filo, numero: num, stato: stato)
 			case .snc(let mrk):
+				let antauSencaSpaco = antauSencaSpaco(
+					unuaSenco: stato.lastaSenco == nil,
+					montrosEtikedon: numeriSencojn,
+					freshaLinio: teksto.last == "\n",
+					stato: stato
+				) ?? ""
+				teksto += antauSencaSpaco
+				
 				let filTeksto = trakti(
 					sencon: filo,
 					marko: mrk,
@@ -37,7 +45,6 @@ extension ArboAnalizilo {
 					freshaLinio: teksto.last == "\n",
 					stato: stato
 				)
-				
 				teksto += filTeksto
 			case .teksto:
 				break

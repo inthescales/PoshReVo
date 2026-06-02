@@ -24,6 +24,14 @@ extension ArboAnalizilo {
 			case .rim(let num):
 				akumulilo.aldoni(tekston: trakti(rimarkon: filo, numero: num, stato: stato))
 			case .snc(let mrk):
+				let antauSencaSpaco = antauSencaSpaco(
+					unuaSenco: stato.lastaSenco == nil,
+					montrosEtikedon: sencKvanto > 1,
+					freshaLinio: akumulilo.freshaLinio(),
+					stato: stato
+				) ?? ""
+				akumulilo.aldoni(tekston: antauSencaSpaco)
+				
 				let filTeksto = trakti(
 					sencon: filo,
 					marko: mrk,
@@ -31,7 +39,6 @@ extension ArboAnalizilo {
 					freshaLinio: akumulilo.freshaLinio(),
 					stato: stato
 				)
-				
 				akumulilo.aldoni(tekston: filTeksto)
 			case .teksto:
 				break

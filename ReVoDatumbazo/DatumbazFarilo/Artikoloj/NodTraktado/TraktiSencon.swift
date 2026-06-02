@@ -20,14 +20,7 @@ extension ArboAnalizilo {
 		
 		var teksto = ""
 		if montriEtikedon {
-			teksto += sencEtikedo(numero: stato.nunaSenco ?? 0, freshaLinio: freshaLinio, stato: stato)
-		} else {
-			// Senco ĉiam aperu en nova linio post difino, sed ne aliaj (ekz. uzo).
-			let lastaSibo = stato.sibStako.last
-			let sekvasDifino = { switch lastaSibo { case .dif: return true; default: return false; } }()
-			if sekvasDifino {
-				teksto += "\n"
-			}
+			teksto += sencEtikedo(numero: stato.nunaSenco ?? 0)
 		}
 		traktiFilojn(de: senco, stato: stato) { filo in
 			switch filo.tipo {
@@ -36,7 +29,11 @@ extension ArboAnalizilo {
 			case .dif:
 				teksto += trakti(difinon: filo, stato: stato)
 			case .ekz:
-				teksto += trakti(ekzemplon: filo, freshaLinio: teksto.last == "\n" || freshaLinio, stato: stato)
+				teksto += trakti(
+					ekzemplon: filo,
+					freshaLinio: teksto.last == "\n" || (teksto.isEmpty && freshaLinio),
+					stato: stato
+				)
 			case .fnt:
 				teksto = ignoriFonton(teksto: teksto, stato: stato)
 			case .gra:
@@ -86,16 +83,24 @@ extension ArboAnalizilo {
 	}
 	
 	/// Liveras etikedtekston por senco laŭ ĝia numero kaj aliaj argumentoj
-	private static func sencEtikedo(
-		numero: Int,
-		freshaLinio: Bool,
-		stato: Stato
-	) -> String {
-		var prefikso: String?
-		if numero > 1 || !freshaLinio {
-			prefikso = "\n\n"
+	private static func sencEtikedo(numero: Int) -> String {
+		TekstAtributo.volvi(String(numero) + ". ", per: .sencNumero)
+	}
+	
+	static func antauSencaSpaco(unuaSenco: Bool, montrosEtikedon: Bool, freshaLinio: Bool, stato: Stato) -> String? {
+		if montrosEtikedon {
+			if !unuaSenco || !freshaLinio {
+				return "\n\n"
+			}
+		} else {
+			// Senco ĉiam aperu en nova linio post difino, sed ne aliaj (ekz. uzo).
+			let lastaSibo = stato.sibStako.last
+			let sekvasDifino = { switch lastaSibo { case .dif: return true; default: return false; } }()
+			if sekvasDifino {
+				return "\n"
+			}
 		}
 		
-		return (prefikso ?? "") + TekstAtributo.volvi(String(numero) + ". ", per: .sencNumero)
+		return nil
 	}
 }
