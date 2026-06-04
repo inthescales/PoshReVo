@@ -42,10 +42,17 @@ extension ArboAnalizilo {
 				akumulilo.aldoni(tekston: filTeksto)
 			case .teksto:
 				break
-			case .trd(let lng):
-				_ = trakti(tradukon: filo, lingvo: lng!, stato: stato)
-			case .trdgrp(let lng):
-				trakti(tradukGrupon: filo, lingvo: lng, stato: stato)
+			case .trd, .trdgrp:
+				/*
+					Ĉi tiuj estas senefikaj ĉar la apo nuntempe ne montras tradukojn ene de
+					subartikolo: la traduko-traktado kiel ĝi nun staras antaŭsupozas ke tradukoj apartenas
+					nur al derivaĵoj, kaj mi ne facile trovas taŭgan manieron prezenti ilin.
+				 
+					Cetere, ili estas tre malvaste uzataj en la ReVo-retejo, kaj post mallonga diskuto
+					Volframo kaj mi konsentis ke la plejmulto estu movitaj, kaj ke ĉi tie eblas nur ignori
+					la restantajn. Tamen, ili restas permesataj de la dokumentstrukturo.
+				 */
+				break
 			case .uzo(let tip):
 				akumulilo.aldoni(tekston:  trakti(uzon: filo, tipo: tip, stato: stato))
 			default:
