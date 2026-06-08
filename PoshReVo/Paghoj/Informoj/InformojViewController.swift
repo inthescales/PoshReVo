@@ -85,7 +85,7 @@ final class InformojViewController: UIViewController {
 			),
 			(
 				nil,
-				"<k>Poŝa Reta Vortaro, PoŝReVo © 2016-2025, Robin Hill</k>"
+				"<k>Poŝa Reta Vortaro, PoŝReVo © 2016-2026, Robin Hill</k>"
 			)
 		]
 		
