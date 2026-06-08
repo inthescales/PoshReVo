@@ -47,7 +47,7 @@ enum Tekstoj {
 	static let nuligiHistorionDemand = "Nuligi historion?"
 	static let nuligiKonservitajn = "Nuligi Konservitajn"
 	static let nuligiKonservitajnDemand = "Nuligi konservitajn artikolojn?"
-	static let shanghiStilon = "Ŝanĝi Stilon"
+	static let shanghiStilon = "Stilo"
 	
 	static let jes = "Jes"
 	static let ne = "Ne"
