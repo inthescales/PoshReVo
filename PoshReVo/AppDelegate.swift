@@ -5,8 +5,6 @@ import ReVoDatumbazo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-	private var fenestro: UIWindow?
-
 	/// Datumbaz-konteksto por ĉiuj datumbazaj operacioj
 	private lazy var datumbazKonteksto: NSManagedObjectContext = {
 		let datumbazNomo = "PoshReVoDatumbazo"
@@ -21,14 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Starigi datumbazon
 		VortaroDatumbazo.komuna = VortaroDatumbazo(konteksto: datumbazKonteksto)
 		
-		// Starigi hejmpaĝon
-		let serchPagho = Kunordigilo.komuna.fariSerchPaghon()
-		let vc = PaghingoViewController(chefpagho: serchPagho)
-		let navigaciilo = PRVNavigationController(rootViewController: vc)
-		fenestro = UIWindow(frame: UIScreen.main.bounds)
-		fenestro?.rootViewController = navigaciilo
-		fenestro?.makeKeyAndVisible()
-				
 		return true
 	}
 }

@@ -18,6 +18,7 @@
 		00107E352E3287580010CECD /* PaghingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E342E3287540010CECD /* PaghingoViewController.swift */; };
 		00107E372E328C3D0010CECD /* AgtabuloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E362E328C390010CECD /* AgtabuloView.swift */; };
 		00107E3E2E32CC770010CECD /* VortListoNulStatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */; };
+		001741992FD7247A009F8792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001741982FD72477009F8792 /* SceneDelegate.swift */; };
 		003024D12E3A7659006D0C14 /* UITableViewCell+Helpiloj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */; };
 		003024D32E3A7B2A006D0C14 /* MallongigoListoChelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */; };
 		003024D62E3A7E2C006D0C14 /* Ingito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003024D52E3A7E2A006D0C14 /* Ingito.swift */; };
@@ -104,6 +105,7 @@
 		00107E342E3287540010CECD /* PaghingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaghingoViewController.swift; sourceTree = "<group>"; };
 		00107E362E328C390010CECD /* AgtabuloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgtabuloView.swift; sourceTree = "<group>"; };
 		00107E3D2E32CC720010CECD /* VortListoNulStatoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortListoNulStatoView.swift; sourceTree = "<group>"; };
+		001741982FD72477009F8792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		003024D02E3A7655006D0C14 /* UITableViewCell+Helpiloj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpiloj.swift"; sourceTree = "<group>"; };
 		003024D22E3A7B26006D0C14 /* MallongigoListoChelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallongigoListoChelo.swift; sourceTree = "<group>"; };
 		003024D52E3A7E2A006D0C14 /* Ingito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingito.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				006A0EFC2E5685E600BDA06B /* Info.plist */,
 				006A0EFA2E56841F00BDA06B /* LaunchScreen.storyboard */,
 				000DA6D72D8F31CF0026CBA0 /* AppDelegate.swift */,
+				001741982FD72477009F8792 /* SceneDelegate.swift */,
 				00B27B252DC6B73F00526F82 /* Kunordigilo.swift */,
 				000DA6FC2D908F680026CBA0 /* PRVNavigationController.swift */,
 				00107E3B2E3296020010CECD /* Paghoj */,
@@ -634,6 +637,7 @@
 				000DA6FD2D908F680026CBA0 /* PRVNavigationController.swift in Sources */,
 				00B27B202DC3F9F700526F82 /* LingvoBretoViewController.swift in Sources */,
 				00B27B5A2DEFA37600526F82 /* MallongigoListoViewController.swift in Sources */,
+				001741992FD7247A009F8792 /* SceneDelegate.swift in Sources */,
 				00B27B9C2E08889000526F82 /* StrekaroView.swift in Sources */,
 				00B27B612DF0B43C00526F82 /* UzantDatumoRegilo.swift in Sources */,
 				0098F3E52E4D3B68007429CE /* FadGradientoView.swift in Sources */,
