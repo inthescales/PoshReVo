@@ -9,7 +9,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		options connectionOptions: UIScene.ConnectionOptions
 	) {
 		// Aserti ke la sceno estas fenestra sceno en iOS aŭ iPadOS
-		guard let windowScene = scene as? UIWindowScene else { assert(false) }
+		guard let windowScene = scene as? UIWindowScene else { assert(false); return }
 				
 		// Starigi hejmpaĝon
 		let serchPagho = Kunordigilo.komuna.fariSerchPaghon()
